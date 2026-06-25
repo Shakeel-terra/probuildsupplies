@@ -1,11 +1,8 @@
 // Pro Build Supplies — Snipcart Config
-// This file is auto-updated by the Admin Dashboard
-// To update: Admin → Settings → Snipcart API Key → Save → Publish
+// Auto-updated by Admin Dashboard
 
 (function() {
-  var key = 'YOUR_SNIPCART_PUBLIC_API_KEY'; // replaced by admin on publish
+  var key = "MDQ0ZDg2YTQtNGJjNi00OWYxLTkxNTctZmNlMWJkZjJkNDgyNjM5MTc5OTUyNDY0MDkyMDEw";
   var el = document.getElementById('snipcart');
-  if (el && key && key !== 'YOUR_SNIPCART_PUBLIC_API_KEY') {
-    el.setAttribute('data-api-key', key);
-  }
+  if (el && key) { el.setAttribute('data-api-key', key); }
 })();
