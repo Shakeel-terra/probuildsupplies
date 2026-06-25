@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0">
-<title>Delivery Information — Pro Build Supplies</title>
+<title>Handmade Bricks — Pro Build Supplies</title>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
@@ -426,24 +426,197 @@ footer{background:#111;padding:40px 20px 18px;color:#888;width:100%}
   .pp-layout{gap:18px}
 }
 
-<style id="snipcart-custom">
-/* Snipcart theme overrides to match Pro Build Supplies */
-:root {
-  --color-default: #F55C1B;
-  --color-alt: #1A1A1A;
-  --color-input-focus: #F55C1B;
-  --color-buttonPrimary: #F55C1B;
-  --color-buttonPrimary-hover: #d94d0f;
+
+<style id="snipcart-theme">
+/* ── FIX: Snipcart overlay above sticky header ── */
+#snipcart { z-index: 999999 !important; }
+.snip-layout { z-index: 999999 !important; }
+.snip-layout__col--right { z-index: 999999 !important; }
+
+/* ── Hide announcement bar when cart is open ── */
+body.snipcart-sidecart-opened .ann {
+  display: none !important;
 }
-.snip-layout__main-container { font-family: 'Barlow', sans-serif !important; }
-.snip-header { background: #1A1A1A !important; border-bottom: 3px solid #F55C1B !important; }
-.snip-header__title { font-family: 'Barlow Condensed', sans-serif !important; font-weight: 900 !important; letter-spacing: -0.5px !important; }
-.snip-btn--primary { background: #F55C1B !important; font-family: 'Barlow Condensed', sans-serif !important; font-weight: 700 !important; text-transform: uppercase !important; letter-spacing: 1px !important; border-radius: 4px !important; }
-.snip-btn--primary:hover { background: #d94d0f !important; }
-.snip-btn--secondary { font-family: 'Barlow Condensed', sans-serif !important; font-weight: 700 !important; text-transform: uppercase !important; border-radius: 4px !important; }
-.snip-product__name { font-family: 'Barlow Condensed', sans-serif !important; font-weight: 700 !important; }
-.snip-product__price { font-family: 'Barlow Condensed', sans-serif !important; font-weight: 900 !important; color: #1A1A1A !important; }
-.snip-order__total-price { font-family: 'Barlow Condensed', sans-serif !important; font-weight: 900 !important; }
+
+/* ── HEADER ── */
+.snip-header {
+  background: #1A1A1A !important;
+  border-bottom: 3px solid #F55C1B !important;
+  padding: 16px 24px !important;
+}
+.snip-header__title {
+  font-family: 'Barlow Condensed', sans-serif !important;
+  font-weight: 900 !important;
+  font-size: 1.4rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: -0.5px !important;
+  color: #FFFFFF !important;
+}
+.snip-header__close-button svg { stroke: #FFFFFF !important; }
+
+/* ── LAYOUT ── */
+.snip-layout__main-container {
+  font-family: 'Barlow', sans-serif !important;
+  background: #F5F3EF !important;
+}
+.snip-layout__col--right {
+  background: #F5F3EF !important;
+}
+
+/* ── CART ITEMS ── */
+.snip-product {
+  background: #FFFFFF !important;
+  border: 1px solid #E8E4DC !important;
+  border-radius: 6px !important;
+  margin-bottom: 10px !important;
+  padding: 14px !important;
+}
+.snip-product__name {
+  font-family: 'Barlow Condensed', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 1rem !important;
+  color: #1A1A1A !important;
+}
+.snip-product__price {
+  font-family: 'Barlow Condensed', sans-serif !important;
+  font-weight: 900 !important;
+  font-size: 1.1rem !important;
+  color: #1A1A1A !important;
+}
+.snip-product__quantity input {
+  border: 2px solid #E8E4DC !important;
+  border-radius: 4px !important;
+  font-family: 'Barlow Condensed', sans-serif !important;
+  font-weight: 700 !important;
+}
+.snip-product__remove button svg { stroke: #F55C1B !important; }
+
+/* ── TOTALS ── */
+.snip-order__total {
+  font-family: 'Barlow Condensed', sans-serif !important;
+  font-weight: 900 !important;
+  font-size: 1.4rem !important;
+  color: #1A1A1A !important;
+  border-top: 2px solid #E8E4DC !important;
+  padding-top: 14px !important;
+}
+.snip-order__total-price {
+  font-family: 'Barlow Condensed', sans-serif !important;
+  font-weight: 900 !important;
+  color: #1A1A1A !important;
+}
+.snip-order__subtotal-label,
+.snip-order__subtotal-price {
+  font-family: 'Barlow Condensed', sans-serif !important;
+  font-weight: 700 !important;
+}
+
+/* ── PRIMARY BUTTON (Proceed to checkout etc) ── */
+.snip-btn--primary,
+.snip-btn.snip-btn--primary {
+  background: #F55C1B !important;
+  color: #FFFFFF !important;
+  font-family: 'Barlow Condensed', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 1.05rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+  border-radius: 4px !important;
+  border: none !important;
+  padding: 14px 24px !important;
+  transition: background 0.2s !important;
+}
+.snip-btn--primary:hover,
+.snip-btn.snip-btn--primary:hover {
+  background: #d94d0f !important;
+}
+
+/* ── SECONDARY BUTTON ── */
+.snip-btn--secondary,
+.snip-btn.snip-btn--secondary {
+  font-family: 'Barlow Condensed', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 1rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: .5px !important;
+  border-radius: 4px !important;
+  border: 2px solid #E8E4DC !important;
+  color: #555 !important;
+  background: #FFFFFF !important;
+}
+.snip-btn--secondary:hover { border-color: #F55C1B !important; color: #F55C1B !important; }
+
+/* ── FORM FIELDS ── */
+.snip-form__field input,
+.snip-form__field select,
+.snip-input {
+  border: 2px solid #E8E4DC !important;
+  border-radius: 4px !important;
+  font-family: 'Barlow', sans-serif !important;
+  font-size: 0.9rem !important;
+  background: #F5F3EF !important;
+  color: #1A1A1A !important;
+  padding: 10px 13px !important;
+}
+.snip-form__field input:focus,
+.snip-form__field select:focus,
+.snip-input:focus {
+  border-color: #F55C1B !important;
+  background: #FFFFFF !important;
+  outline: none !important;
+}
+.snip-form__label {
+  font-family: 'Barlow Condensed', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 0.78rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+  color: #1A1A1A !important;
+}
+
+/* ── STEPS / TABS ── */
+.snip-tablist__tab {
+  font-family: 'Barlow Condensed', sans-serif !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+}
+.snip-tablist__tab--is-selected {
+  color: #F55C1B !important;
+  border-bottom-color: #F55C1B !important;
+}
+
+/* ── ORDER SUMMARY SECTION ── */
+.snip-order__title {
+  font-family: 'Barlow Condensed', sans-serif !important;
+  font-weight: 900 !important;
+  font-size: 1.1rem !important;
+  text-transform: uppercase !important;
+  color: #1A1A1A !important;
+}
+
+/* ── SUCCESS PAGE ── */
+.snip-order-confirmation__title {
+  font-family: 'Barlow Condensed', sans-serif !important;
+  font-weight: 900 !important;
+  font-size: 1.8rem !important;
+  text-transform: uppercase !important;
+  color: #1A1A1A !important;
+}
+
+
+/* ── SNIPCART STICKY FIX ── */
+body.snipcart-sidecart-opened .ann { display: none !important; }
+body.snipcart-sidecart-opened .hdr { z-index: 1 !important; }
+body.snipcart-sidecart-opened .nav { z-index: 1 !important; }
+
+/* ── EMPTY CART ── */
+.snip-cart__empty-message {
+  font-family: 'Barlow Condensed', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 1.1rem !important;
+  text-transform: uppercase !important;
+  color: #7F8C8D !important;
+}
 </style>
 </style>
 
@@ -466,7 +639,7 @@ footer{background:#111;padding:40px 20px 18px;color:#888;width:100%}
 <nav class="nav" id="nav"><div class="nav-i">
   <a href="index.html">Home</a>
   <a href="shop.html">🛍️ Shop All</a>
-  <div class="ni"><a href="bricks.html">🧱 Bricks</a><div class="dd">
+  <div class="ni"><a href="bricks.html" class="cur">🧱 Bricks</a><div class="dd">
     <a href="handmade-bricks.html">Handmade Bricks</a>
     <a href="reclaimed-bricks.html">Reclaimed Bricks</a>
   </div></div>
@@ -482,30 +655,14 @@ footer{background:#111;padding:40px 20px 18px;color:#888;width:100%}
   <a href="samples.html">🧱 Free Samples</a>
   <a href="contact.html">📞 Contact</a>
 </div></nav>
-<div class="bc"><div class="bc-i"><a href="index.html">Home</a> › Delivery Information</div></div>
+<div class="bc"><div class="bc-i"><a href="index.html">Home</a> › <a href="bricks.html">Bricks</a> › Handmade Bricks</div></div>
 <div class="chero"><div class="chero-i">
-  <h1>Delivery <em>Information</em></h1>
-  <p>Free delivery on all orders to UK mainland addresses. Here's everything you need to know.</p>
+  <h1>Handmade Bricks <em>🧱</em></h1>
+  <p>Traditional handmade facing bricks in a wide range of colours and finishes. All packs delivered free.</p>
 </div></div>
-<div class="sec-w">
-  <div class="icard">
-    <h2>Delivery Information</h2>
-    <h3>🚚 Free Delivery on All Orders</h3>
-    <p>We offer <strong>free delivery on every order</strong> to UK mainland addresses — no minimum order, no hidden charges.</p>
-    <h3>📦 Dispatch Times</h3>
-    <ul><li><strong>Next-day dispatch</strong> on most products — order before <strong>2pm Monday–Friday</strong></li><li>Orders after 2pm or at weekends dispatched the next working day</li><li>Pallet deliveries arrive within <strong>1–3 working days</strong> of dispatch</li></ul>
-    <h3>🏗️ How We Deliver</h3>
-    <ul><li>Bricks and paving delivered on <strong>pallets via national pallet network</strong></li><li>Deliveries are <strong>kerbside only</strong> — driver places pallet as close to your property as safely possible</li><li>Please ensure clear access for an 18-tonne lorry with tail lift</li><li>Smaller items sent via Royal Mail or courier</li></ul>
-    <h3>📍 Delivery Areas</h3>
-    <ul><li><strong>England, Wales &amp; Central Scotland</strong> — free standard delivery</li><li><strong>Scottish Highlands &amp; Islands</strong> — may be subject to surcharge; contact us first</li><li><strong>Northern Ireland, Isle of Man, Channel Islands</strong> — please contact us before ordering</li></ul>
-    <h3>⚠️ Checking Your Delivery</h3>
-    <p>Inspect carefully before signing. If there is visible damage, <strong>note it on the delivery paperwork</strong> and contact us within 24 hours.</p>
-  </div>
-  <div class="icard">
-    <h2>Need Help with a Delivery?</h2>
-    <p>📞 <a href="tel:08001234567"><strong>0800 123 4567</strong></a> &nbsp;|&nbsp; 💬 <a href="https://wa.me/447549809252" target="_blank"><strong>WhatsApp Us</strong></a> &nbsp;|&nbsp; 📧 <a href="mailto:info@probuildsupplies.uk"><strong>info@probuildsupplies.uk</strong></a></p>
-  </div>
-</div>
+<div class="trust"><div class="trust-i"><div class="ti"><span class="ic">🚚</span><div><strong>Free Delivery</strong><span>All orders, UK mainland</span></div></div><div class="ti"><span class="ic">📦</span><div><strong>Next-Day Dispatch</strong><span>Order before 2pm</span></div></div><div class="ti"><span class="ic">🏅</span><div><strong>Trade Quality</strong><span>Premium materials</span></div></div><div class="ti"><span class="ic">📞</span><div><strong>Expert Advice</strong><span>0800 123 4567</span></div></div></div></div>
+
+<div class="sec"><div class="pgrid"><a href="products/red-handmade-facing-bricks.html" class="pcard"><div class="pimg" style="background:linear-gradient(135deg,#C0392B20,#C0392B50)">🧱</div><div class="pinfo"><div class="pcat">Handmade Bricks</div><div class="pname">Red Handmade Facing Bricks</div><div class="pprice">£598.26</div><span class="pbtn">View Product</span></div></a><a href="products/city-blend-handmade-facing-bricks.html" class="pcard"><div class="pimg" style="background:linear-gradient(135deg,#C0392B20,#C0392B50)">🧱</div><div class="pinfo"><div class="pcat">Handmade Bricks</div><div class="pname">City Blend Handmade Facing Bricks</div><div class="pprice">£628.68</div><span class="pbtn">View Product</span></div></a><a href="products/cheshire-red-handmade.html" class="pcard"><div class="pimg" style="background:linear-gradient(135deg,#C0392B20,#C0392B50)">🧱</div><div class="pinfo"><div class="pcat">Handmade Bricks</div><div class="pname">Cheshire Red Multi Handmade Facing Bricks</div><div class="pprice">£648.96</div><span class="pbtn">View Product</span></div></a><a href="products/pulford-blend-handmade.html" class="pcard"><div class="pimg" style="background:linear-gradient(135deg,#C0392B20,#C0392B50)">🧱</div><div class="pinfo"><div class="pcat">Handmade Bricks</div><div class="pname">Pulford Blend Handmade Facing Bricks</div><div class="pprice">£648.96</div><span class="pbtn">View Product</span></div></a><a href="products/fulford-blend-handmade.html" class="pcard"><div class="pimg" style="background:linear-gradient(135deg,#C0392B20,#C0392B50)">🧱</div><div class="pinfo"><div class="pcat">Handmade Bricks</div><div class="pname">Fulford Blend Handmade Bricks</div><div class="pprice">£679.38</div><span class="pbtn">View Product</span></div></a><a href="products/renovation-multi-handmade-73mm.html" class="pcard"><div class="pimg" style="background:linear-gradient(135deg,#C0392B20,#C0392B50)">🧱</div><div class="pinfo"><div class="pcat">Handmade Bricks</div><div class="pname">Renovation Multi Handmade Facing Bricks</div><div class="pprice">£513.86</div><span class="pbtn">View Product</span></div></a><a href="products/weathered-yellow-facing-bricks.html" class="pcard"><div class="pimg" style="background:linear-gradient(135deg,#C0392B20,#C0392B50)">🧱</div><div class="pinfo"><div class="pcat">Handmade Bricks</div><div class="pname">Weathered Yellow Facing Bricks 68mm</div><div class="pprice">£505.44</div><span class="pbtn">View Product</span></div></a><a href="products/plain-yellow-facing-bricks.html" class="pcard"><div class="pimg" style="background:linear-gradient(135deg,#C0392B20,#C0392B50)">🧱</div><div class="pinfo"><div class="pcat">Handmade Bricks</div><div class="pname">Plain Yellow Facing Bricks 68mm</div><div class="pprice">£488.59</div><span class="pbtn">View Product</span></div></a><a href="products/thames-dean-stock-handmade.html" class="pcard"><div class="pimg" style="background:linear-gradient(135deg,#C0392B20,#C0392B50)">🧱</div><div class="pinfo"><div class="pcat">Handmade Bricks</div><div class="pname">Thames Dean Stock Handmade Brick</div><div class="pprice">POA</div><span class="pbtn">View Product</span></div></a><a href="products/ashgrove-orange-handmade.html" class="pcard"><div class="pimg" style="background:linear-gradient(135deg,#C0392B20,#C0392B50)">🧱</div><div class="pinfo"><div class="pcat">Handmade Bricks</div><div class="pname">Ashgrove Orange Handmade Brick</div><div class="pprice">POA</div><span class="pbtn">View Product</span></div></a><a href="products/heritage-blend-handmade.html" class="pcard"><div class="pimg" style="background:linear-gradient(135deg,#C0392B20,#C0392B50)">🧱</div><div class="pinfo"><div class="pcat">Handmade Bricks</div><div class="pname">Heritage Blend Handmade Brick</div><div class="pprice">POA</div><span class="pbtn">View Product</span></div></a><a href="products/rustic-farmhouse-handmade.html" class="pcard"><div class="pimg" style="background:linear-gradient(135deg,#C0392B20,#C0392B50)">🧱</div><div class="pinfo"><div class="pcat">Handmade Bricks</div><div class="pname">Rustic Farmhouse Handmade Brick</div><div class="pprice">POA</div><span class="pbtn">View Product</span></div></a><a href="products/tumbled-cheshire-handmade.html" class="pcard"><div class="pimg" style="background:linear-gradient(135deg,#C0392B20,#C0392B50)">🧱</div><div class="pinfo"><div class="pcat">Handmade Bricks</div><div class="pname">Tumbled Cheshire Handmade Brick</div><div class="pprice">POA</div><span class="pbtn">View Product</span></div></a><a href="products/village-multi-handmade.html" class="pcard"><div class="pimg" style="background:linear-gradient(135deg,#C0392B20,#C0392B50)">🧱</div><div class="pinfo"><div class="pcat">Handmade Bricks</div><div class="pname">Village Multi Handmade Brick</div><div class="pprice">POA</div><span class="pbtn">View Product</span></div></a><a href="products/barnstock-orange-handmade.html" class="pcard"><div class="pimg" style="background:linear-gradient(135deg,#C0392B20,#C0392B50)">🧱</div><div class="pinfo"><div class="pcat">Handmade Bricks</div><div class="pname">Barnstock Orange Handmade Brick</div><div class="pprice">POA</div><span class="pbtn">View Product</span></div></a><a href="products/renovation-multi-pressed.html" class="pcard"><div class="pimg" style="background:linear-gradient(135deg,#C0392B20,#C0392B50)">🧱</div><div class="pinfo"><div class="pcat">Handmade Bricks</div><div class="pname">Renovation Multi Pressed Brick</div><div class="pprice">POA</div><span class="pbtn">View Product</span></div></a></div></div>
 <footer><div class="ft-i">
   <div class="ftg">
     <div class="ft-brand"><a href="index.html" class="logo">Pro Build <b>Supplies</b></a><p>Premium building materials at trade prices, delivered direct to your door or site. Free delivery on every order.</p></div>

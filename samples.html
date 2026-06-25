@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0">
-<title>Returns Policy — Pro Build Supplies</title>
+<title>Free Brick Samples — Pro Build Supplies</title>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
@@ -426,24 +426,197 @@ footer{background:#111;padding:40px 20px 18px;color:#888;width:100%}
   .pp-layout{gap:18px}
 }
 
-<style id="snipcart-custom">
-/* Snipcart theme overrides to match Pro Build Supplies */
-:root {
-  --color-default: #F55C1B;
-  --color-alt: #1A1A1A;
-  --color-input-focus: #F55C1B;
-  --color-buttonPrimary: #F55C1B;
-  --color-buttonPrimary-hover: #d94d0f;
+
+<style id="snipcart-theme">
+/* ── FIX: Snipcart overlay above sticky header ── */
+#snipcart { z-index: 999999 !important; }
+.snip-layout { z-index: 999999 !important; }
+.snip-layout__col--right { z-index: 999999 !important; }
+
+/* ── Hide announcement bar when cart is open ── */
+body.snipcart-sidecart-opened .ann {
+  display: none !important;
 }
-.snip-layout__main-container { font-family: 'Barlow', sans-serif !important; }
-.snip-header { background: #1A1A1A !important; border-bottom: 3px solid #F55C1B !important; }
-.snip-header__title { font-family: 'Barlow Condensed', sans-serif !important; font-weight: 900 !important; letter-spacing: -0.5px !important; }
-.snip-btn--primary { background: #F55C1B !important; font-family: 'Barlow Condensed', sans-serif !important; font-weight: 700 !important; text-transform: uppercase !important; letter-spacing: 1px !important; border-radius: 4px !important; }
-.snip-btn--primary:hover { background: #d94d0f !important; }
-.snip-btn--secondary { font-family: 'Barlow Condensed', sans-serif !important; font-weight: 700 !important; text-transform: uppercase !important; border-radius: 4px !important; }
-.snip-product__name { font-family: 'Barlow Condensed', sans-serif !important; font-weight: 700 !important; }
-.snip-product__price { font-family: 'Barlow Condensed', sans-serif !important; font-weight: 900 !important; color: #1A1A1A !important; }
-.snip-order__total-price { font-family: 'Barlow Condensed', sans-serif !important; font-weight: 900 !important; }
+
+/* ── HEADER ── */
+.snip-header {
+  background: #1A1A1A !important;
+  border-bottom: 3px solid #F55C1B !important;
+  padding: 16px 24px !important;
+}
+.snip-header__title {
+  font-family: 'Barlow Condensed', sans-serif !important;
+  font-weight: 900 !important;
+  font-size: 1.4rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: -0.5px !important;
+  color: #FFFFFF !important;
+}
+.snip-header__close-button svg { stroke: #FFFFFF !important; }
+
+/* ── LAYOUT ── */
+.snip-layout__main-container {
+  font-family: 'Barlow', sans-serif !important;
+  background: #F5F3EF !important;
+}
+.snip-layout__col--right {
+  background: #F5F3EF !important;
+}
+
+/* ── CART ITEMS ── */
+.snip-product {
+  background: #FFFFFF !important;
+  border: 1px solid #E8E4DC !important;
+  border-radius: 6px !important;
+  margin-bottom: 10px !important;
+  padding: 14px !important;
+}
+.snip-product__name {
+  font-family: 'Barlow Condensed', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 1rem !important;
+  color: #1A1A1A !important;
+}
+.snip-product__price {
+  font-family: 'Barlow Condensed', sans-serif !important;
+  font-weight: 900 !important;
+  font-size: 1.1rem !important;
+  color: #1A1A1A !important;
+}
+.snip-product__quantity input {
+  border: 2px solid #E8E4DC !important;
+  border-radius: 4px !important;
+  font-family: 'Barlow Condensed', sans-serif !important;
+  font-weight: 700 !important;
+}
+.snip-product__remove button svg { stroke: #F55C1B !important; }
+
+/* ── TOTALS ── */
+.snip-order__total {
+  font-family: 'Barlow Condensed', sans-serif !important;
+  font-weight: 900 !important;
+  font-size: 1.4rem !important;
+  color: #1A1A1A !important;
+  border-top: 2px solid #E8E4DC !important;
+  padding-top: 14px !important;
+}
+.snip-order__total-price {
+  font-family: 'Barlow Condensed', sans-serif !important;
+  font-weight: 900 !important;
+  color: #1A1A1A !important;
+}
+.snip-order__subtotal-label,
+.snip-order__subtotal-price {
+  font-family: 'Barlow Condensed', sans-serif !important;
+  font-weight: 700 !important;
+}
+
+/* ── PRIMARY BUTTON (Proceed to checkout etc) ── */
+.snip-btn--primary,
+.snip-btn.snip-btn--primary {
+  background: #F55C1B !important;
+  color: #FFFFFF !important;
+  font-family: 'Barlow Condensed', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 1.05rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+  border-radius: 4px !important;
+  border: none !important;
+  padding: 14px 24px !important;
+  transition: background 0.2s !important;
+}
+.snip-btn--primary:hover,
+.snip-btn.snip-btn--primary:hover {
+  background: #d94d0f !important;
+}
+
+/* ── SECONDARY BUTTON ── */
+.snip-btn--secondary,
+.snip-btn.snip-btn--secondary {
+  font-family: 'Barlow Condensed', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 1rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: .5px !important;
+  border-radius: 4px !important;
+  border: 2px solid #E8E4DC !important;
+  color: #555 !important;
+  background: #FFFFFF !important;
+}
+.snip-btn--secondary:hover { border-color: #F55C1B !important; color: #F55C1B !important; }
+
+/* ── FORM FIELDS ── */
+.snip-form__field input,
+.snip-form__field select,
+.snip-input {
+  border: 2px solid #E8E4DC !important;
+  border-radius: 4px !important;
+  font-family: 'Barlow', sans-serif !important;
+  font-size: 0.9rem !important;
+  background: #F5F3EF !important;
+  color: #1A1A1A !important;
+  padding: 10px 13px !important;
+}
+.snip-form__field input:focus,
+.snip-form__field select:focus,
+.snip-input:focus {
+  border-color: #F55C1B !important;
+  background: #FFFFFF !important;
+  outline: none !important;
+}
+.snip-form__label {
+  font-family: 'Barlow Condensed', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 0.78rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+  color: #1A1A1A !important;
+}
+
+/* ── STEPS / TABS ── */
+.snip-tablist__tab {
+  font-family: 'Barlow Condensed', sans-serif !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+}
+.snip-tablist__tab--is-selected {
+  color: #F55C1B !important;
+  border-bottom-color: #F55C1B !important;
+}
+
+/* ── ORDER SUMMARY SECTION ── */
+.snip-order__title {
+  font-family: 'Barlow Condensed', sans-serif !important;
+  font-weight: 900 !important;
+  font-size: 1.1rem !important;
+  text-transform: uppercase !important;
+  color: #1A1A1A !important;
+}
+
+/* ── SUCCESS PAGE ── */
+.snip-order-confirmation__title {
+  font-family: 'Barlow Condensed', sans-serif !important;
+  font-weight: 900 !important;
+  font-size: 1.8rem !important;
+  text-transform: uppercase !important;
+  color: #1A1A1A !important;
+}
+
+
+/* ── SNIPCART STICKY FIX ── */
+body.snipcart-sidecart-opened .ann { display: none !important; }
+body.snipcart-sidecart-opened .hdr { z-index: 1 !important; }
+body.snipcart-sidecart-opened .nav { z-index: 1 !important; }
+
+/* ── EMPTY CART ── */
+.snip-cart__empty-message {
+  font-family: 'Barlow Condensed', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 1.1rem !important;
+  text-transform: uppercase !important;
+  color: #7F8C8D !important;
+}
 </style>
 </style>
 
@@ -479,32 +652,41 @@ footer{background:#111;padding:40px 20px 18px;color:#888;width:100%}
     <a href="trade-accounts.html">Trade Accounts</a>
     <a href="trade-accounts.html#bulk">Bulk Orders</a>
   </div></div>
-  <a href="samples.html">🧱 Free Samples</a>
+  <a href="samples.html" class="cur">🧱 Free Samples</a>
   <a href="contact.html">📞 Contact</a>
 </div></nav>
-<div class="bc"><div class="bc-i"><a href="index.html">Home</a> › Returns Policy</div></div>
+<div class="bc"><div class="bc-i"><a href="index.html">Home</a> › Free Brick Samples</div></div>
 <div class="chero"><div class="chero-i">
-  <h1>Returns <em>Policy</em></h1>
-  <p>30-day hassle-free returns on most items. Read our full returns policy below.</p>
+  <h1>Free Brick <em>Samples</em></h1>
+  <p>Request up to 3 free brick samples delivered to your door — completely free of charge.</p>
 </div></div>
 <div class="sec-w">
-  <div class="icard">
-    <h2>Returns Policy</h2>
-    <h3>✅ 30-Day Returns</h3>
-    <p>You can return most items within <strong>30 days of delivery</strong> for a full refund or exchange.</p>
-    <h3>📋 Conditions for Returns</h3>
-    <ul><li>Items must be <strong>unused and undamaged</strong> in their original packaging</li><li>Bricks and paving must be returned on the original pallet, securely wrapped</li><li>Proof of purchase must be provided</li></ul>
-    <h3>❌ Non-Returnable Items</h3>
-    <ul><li><strong>Cut or custom-sized materials</strong></li><li><strong>Opened MDF sheets</strong> showing signs of use</li><li><strong>Partial pallets</strong> — full pallet returns only</li></ul>
-    <h3>🔄 How to Return</h3>
-    <ul><li>Contact us to request a return and receive a <strong>Returns Authorisation Number</strong></li><li>Re-wrap goods securely on the original pallet</li><li>We'll arrange collection — <strong>return costs are the customer's responsibility</strong> unless item is faulty</li><li>Refunds processed within <strong>5–7 working days</strong></li></ul>
-    <h3>⚠️ Damaged or Incorrect Items</h3>
-    <p>Contact us within <strong>48 hours</strong> with photos. We'll arrange free collection and replacement or full refund.</p>
-  </div>
-  <div class="icard">
-    <h2>Start a Return</h2>
-    <p>📞 <a href="tel:08001234567"><strong>0800 123 4567</strong></a> &nbsp;|&nbsp; 📧 <a href="mailto:info@probuildsupplies.uk"><strong>info@probuildsupplies.uk</strong></a></p>
-    <p style="margin-top:13px"><a href="contact.html" class="btn-o">Contact Us to Return →</a></p>
+  <div class="fcard">
+    <h2>Request Free Brick Samples</h2>
+    <p>Not sure which brick is right for your project? Choose up to 3 brick types and we'll deliver samples free.</p>
+    <form onsubmit="pbsOk(event,'sok')">
+      <div class="frow"><div class="fg"><label>Your Name *</label><input type="text" required placeholder="First and last name"></div><div class="fg"><label>Phone</label><input type="tel" placeholder="07700 900000"></div></div>
+      <div class="fg"><label>Email Address *</label><input type="email" required placeholder="your@email.com"></div>
+      <div class="fg"><label>Delivery Address *</label><input type="text" required placeholder="House number and street"></div>
+      <div class="frow"><div class="fg"><label>Town / City *</label><input type="text" required placeholder="e.g. Manchester"></div><div class="fg"><label>Postcode *</label><input type="text" required placeholder="e.g. M1 1AA"></div></div>
+      <div class="fg"><label>Brick Sample 1 *</label><select required><option value="">Select a brick</option>
+        <optgroup label="Handmade Bricks"><option>Red Handmade Facing Brick</option><option>City Blend Handmade Brick</option><option>Cheshire Red Multi Handmade</option><option>Pulford Blend Handmade</option><option>Fulford Blend Handmade</option><option>Renovation Multi Handmade</option><option>Weathered Yellow 68mm</option><option>Plain Yellow 68mm</option><option>Ashgrove Orange Handmade</option><option>Barnstock Orange Handmade</option><option>Heritage Blend Handmade</option><option>Rustic Farmhouse Handmade</option><option>Thames Dean Stock</option><option>Tumbled Cheshire Handmade</option><option>Village Multi Handmade</option></optgroup>
+        <optgroup label="Reclaimed Bricks"><option>Alford Reclaimed Brick 60mm</option><option>Ashbourne Reclaimed Brick 60mm</option></optgroup>
+      </select></div>
+      <div class="fg"><label>Brick Sample 2 <span style="font-weight:400;text-transform:none;font-size:.73rem">(optional)</span></label><select><option value="">None</option>
+        <optgroup label="Handmade Bricks"><option>Red Handmade Facing Brick</option><option>City Blend Handmade Brick</option><option>Cheshire Red Multi Handmade</option><option>Pulford Blend Handmade</option><option>Fulford Blend Handmade</option><option>Heritage Blend Handmade</option><option>Rustic Farmhouse Handmade</option><option>Village Multi Handmade</option></optgroup>
+        <optgroup label="Reclaimed Bricks"><option>Alford Reclaimed Brick 60mm</option><option>Ashbourne Reclaimed Brick 60mm</option></optgroup>
+      </select></div>
+      <div class="fg"><label>Brick Sample 3 <span style="font-weight:400;text-transform:none;font-size:.73rem">(optional)</span></label><select><option value="">None</option>
+        <optgroup label="Handmade Bricks"><option>Red Handmade Facing Brick</option><option>City Blend Handmade Brick</option><option>Heritage Blend Handmade</option><option>Village Multi Handmade</option></optgroup>
+        <optgroup label="Reclaimed Bricks"><option>Alford Reclaimed Brick 60mm</option><option>Ashbourne Reclaimed Brick 60mm</option></optgroup>
+      </select></div>
+      <div class="fg"><label>Project Type</label><select><option value="">Select project type</option><option>New Build House</option><option>Extension / Renovation</option><option>Garden Wall / Landscaping</option><option>Commercial Project</option><option>Other</option></select></div>
+      <div class="fg"><label>Additional Notes</label><textarea placeholder="Any specific colour preferences or matching requirements..."></textarea></div>
+      <button type="submit" class="fsub">Request Free Samples</button>
+      <p class="fnote">🚚 Samples sent free via Royal Mail. Allow 2–3 working days for delivery.</p>
+      <div id="sok" class="fok">✅ Sample request received! Your samples will be dispatched within 1–2 working days.</div>
+    </form>
   </div>
 </div>
 <footer><div class="ft-i">
@@ -552,7 +734,14 @@ footer{background:#111;padding:40px 20px 18px;color:#888;width:100%}
   });
 })();
 </script>
-
+<script>
+function pbsOk(e,id){
+  e.preventDefault();
+  var m=document.getElementById(id);
+  if(m){m.style.display='block';e.target.reset();var s=e.target.querySelector('.fsub');if(s)s.style.display='none';}
+  return false;
+}
+</script>
 
 <!-- Snipcart init -->
 <div hidden id="snipcart" data-api-key="MDQ0ZDg2YTQtNGJjNi00OWYxLTkxNTctZmNlMWJkZjJkNDgyNjM5MTc5OTUyNDY0MDkyMDEw" data-currency="gbp"></div>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0">
-<title>MDF & Drylining — Pro Build Supplies</title>
+<title>Paving — Pro Build Supplies</title>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
@@ -426,24 +426,197 @@ footer{background:#111;padding:40px 20px 18px;color:#888;width:100%}
   .pp-layout{gap:18px}
 }
 
-<style id="snipcart-custom">
-/* Snipcart theme overrides to match Pro Build Supplies */
-:root {
-  --color-default: #F55C1B;
-  --color-alt: #1A1A1A;
-  --color-input-focus: #F55C1B;
-  --color-buttonPrimary: #F55C1B;
-  --color-buttonPrimary-hover: #d94d0f;
+
+<style id="snipcart-theme">
+/* ── FIX: Snipcart overlay above sticky header ── */
+#snipcart { z-index: 999999 !important; }
+.snip-layout { z-index: 999999 !important; }
+.snip-layout__col--right { z-index: 999999 !important; }
+
+/* ── Hide announcement bar when cart is open ── */
+body.snipcart-sidecart-opened .ann {
+  display: none !important;
 }
-.snip-layout__main-container { font-family: 'Barlow', sans-serif !important; }
-.snip-header { background: #1A1A1A !important; border-bottom: 3px solid #F55C1B !important; }
-.snip-header__title { font-family: 'Barlow Condensed', sans-serif !important; font-weight: 900 !important; letter-spacing: -0.5px !important; }
-.snip-btn--primary { background: #F55C1B !important; font-family: 'Barlow Condensed', sans-serif !important; font-weight: 700 !important; text-transform: uppercase !important; letter-spacing: 1px !important; border-radius: 4px !important; }
-.snip-btn--primary:hover { background: #d94d0f !important; }
-.snip-btn--secondary { font-family: 'Barlow Condensed', sans-serif !important; font-weight: 700 !important; text-transform: uppercase !important; border-radius: 4px !important; }
-.snip-product__name { font-family: 'Barlow Condensed', sans-serif !important; font-weight: 700 !important; }
-.snip-product__price { font-family: 'Barlow Condensed', sans-serif !important; font-weight: 900 !important; color: #1A1A1A !important; }
-.snip-order__total-price { font-family: 'Barlow Condensed', sans-serif !important; font-weight: 900 !important; }
+
+/* ── HEADER ── */
+.snip-header {
+  background: #1A1A1A !important;
+  border-bottom: 3px solid #F55C1B !important;
+  padding: 16px 24px !important;
+}
+.snip-header__title {
+  font-family: 'Barlow Condensed', sans-serif !important;
+  font-weight: 900 !important;
+  font-size: 1.4rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: -0.5px !important;
+  color: #FFFFFF !important;
+}
+.snip-header__close-button svg { stroke: #FFFFFF !important; }
+
+/* ── LAYOUT ── */
+.snip-layout__main-container {
+  font-family: 'Barlow', sans-serif !important;
+  background: #F5F3EF !important;
+}
+.snip-layout__col--right {
+  background: #F5F3EF !important;
+}
+
+/* ── CART ITEMS ── */
+.snip-product {
+  background: #FFFFFF !important;
+  border: 1px solid #E8E4DC !important;
+  border-radius: 6px !important;
+  margin-bottom: 10px !important;
+  padding: 14px !important;
+}
+.snip-product__name {
+  font-family: 'Barlow Condensed', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 1rem !important;
+  color: #1A1A1A !important;
+}
+.snip-product__price {
+  font-family: 'Barlow Condensed', sans-serif !important;
+  font-weight: 900 !important;
+  font-size: 1.1rem !important;
+  color: #1A1A1A !important;
+}
+.snip-product__quantity input {
+  border: 2px solid #E8E4DC !important;
+  border-radius: 4px !important;
+  font-family: 'Barlow Condensed', sans-serif !important;
+  font-weight: 700 !important;
+}
+.snip-product__remove button svg { stroke: #F55C1B !important; }
+
+/* ── TOTALS ── */
+.snip-order__total {
+  font-family: 'Barlow Condensed', sans-serif !important;
+  font-weight: 900 !important;
+  font-size: 1.4rem !important;
+  color: #1A1A1A !important;
+  border-top: 2px solid #E8E4DC !important;
+  padding-top: 14px !important;
+}
+.snip-order__total-price {
+  font-family: 'Barlow Condensed', sans-serif !important;
+  font-weight: 900 !important;
+  color: #1A1A1A !important;
+}
+.snip-order__subtotal-label,
+.snip-order__subtotal-price {
+  font-family: 'Barlow Condensed', sans-serif !important;
+  font-weight: 700 !important;
+}
+
+/* ── PRIMARY BUTTON (Proceed to checkout etc) ── */
+.snip-btn--primary,
+.snip-btn.snip-btn--primary {
+  background: #F55C1B !important;
+  color: #FFFFFF !important;
+  font-family: 'Barlow Condensed', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 1.05rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+  border-radius: 4px !important;
+  border: none !important;
+  padding: 14px 24px !important;
+  transition: background 0.2s !important;
+}
+.snip-btn--primary:hover,
+.snip-btn.snip-btn--primary:hover {
+  background: #d94d0f !important;
+}
+
+/* ── SECONDARY BUTTON ── */
+.snip-btn--secondary,
+.snip-btn.snip-btn--secondary {
+  font-family: 'Barlow Condensed', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 1rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: .5px !important;
+  border-radius: 4px !important;
+  border: 2px solid #E8E4DC !important;
+  color: #555 !important;
+  background: #FFFFFF !important;
+}
+.snip-btn--secondary:hover { border-color: #F55C1B !important; color: #F55C1B !important; }
+
+/* ── FORM FIELDS ── */
+.snip-form__field input,
+.snip-form__field select,
+.snip-input {
+  border: 2px solid #E8E4DC !important;
+  border-radius: 4px !important;
+  font-family: 'Barlow', sans-serif !important;
+  font-size: 0.9rem !important;
+  background: #F5F3EF !important;
+  color: #1A1A1A !important;
+  padding: 10px 13px !important;
+}
+.snip-form__field input:focus,
+.snip-form__field select:focus,
+.snip-input:focus {
+  border-color: #F55C1B !important;
+  background: #FFFFFF !important;
+  outline: none !important;
+}
+.snip-form__label {
+  font-family: 'Barlow Condensed', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 0.78rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+  color: #1A1A1A !important;
+}
+
+/* ── STEPS / TABS ── */
+.snip-tablist__tab {
+  font-family: 'Barlow Condensed', sans-serif !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+}
+.snip-tablist__tab--is-selected {
+  color: #F55C1B !important;
+  border-bottom-color: #F55C1B !important;
+}
+
+/* ── ORDER SUMMARY SECTION ── */
+.snip-order__title {
+  font-family: 'Barlow Condensed', sans-serif !important;
+  font-weight: 900 !important;
+  font-size: 1.1rem !important;
+  text-transform: uppercase !important;
+  color: #1A1A1A !important;
+}
+
+/* ── SUCCESS PAGE ── */
+.snip-order-confirmation__title {
+  font-family: 'Barlow Condensed', sans-serif !important;
+  font-weight: 900 !important;
+  font-size: 1.8rem !important;
+  text-transform: uppercase !important;
+  color: #1A1A1A !important;
+}
+
+
+/* ── SNIPCART STICKY FIX ── */
+body.snipcart-sidecart-opened .ann { display: none !important; }
+body.snipcart-sidecart-opened .hdr { z-index: 1 !important; }
+body.snipcart-sidecart-opened .nav { z-index: 1 !important; }
+
+/* ── EMPTY CART ── */
+.snip-cart__empty-message {
+  font-family: 'Barlow Condensed', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 1.1rem !important;
+  text-transform: uppercase !important;
+  color: #7F8C8D !important;
+}
 </style>
 </style>
 
@@ -470,11 +643,11 @@ footer{background:#111;padding:40px 20px 18px;color:#888;width:100%}
     <a href="handmade-bricks.html">Handmade Bricks</a>
     <a href="reclaimed-bricks.html">Reclaimed Bricks</a>
   </div></div>
-  <div class="ni"><a href="paving.html">🪨 Paving</a><div class="dd">
+  <div class="ni"><a href="paving.html" class="cur">🪨 Paving</a><div class="dd">
     <a href="porcelain-paving.html">Porcelain Paving</a>
     <a href="indian-sandstone.html">Indian Sandstone</a>
   </div></div>
-  <a href="mdf.html" class="cur">🪵 MDF</a>
+  <a href="mdf.html">🪵 MDF</a>
   <div class="ni"><a href="trade-accounts.html">🏗️ Trade &amp; Bulk</a><div class="dd">
     <a href="trade-accounts.html">Trade Accounts</a>
     <a href="trade-accounts.html#bulk">Bulk Orders</a>
@@ -482,20 +655,16 @@ footer{background:#111;padding:40px 20px 18px;color:#888;width:100%}
   <a href="samples.html">🧱 Free Samples</a>
   <a href="contact.html">📞 Contact</a>
 </div></nav>
-<div class="bc"><div class="bc-i"><a href="index.html">Home</a> › MDF</div></div>
+<div class="bc"><div class="bc-i"><a href="index.html">Home</a> › Paving</div></div>
 <div class="chero"><div class="chero-i">
-  <h1>MDF &amp; Drylining <em>🪵</em></h1>
-  <p>MDF sheets and drylining materials at trade prices. Contact us for current stock and pricing.</p>
+  <h1>Paving <em>🪨</em></h1>
+  <p>Premium porcelain paving and natural Indian sandstone. Free delivery on every order.</p>
 </div></div>
 <div class="trust"><div class="trust-i"><div class="ti"><span class="ic">🚚</span><div><strong>Free Delivery</strong><span>All orders, UK mainland</span></div></div><div class="ti"><span class="ic">📦</span><div><strong>Next-Day Dispatch</strong><span>Order before 2pm</span></div></div><div class="ti"><span class="ic">🏅</span><div><strong>Trade Quality</strong><span>Premium materials</span></div></div><div class="ti"><span class="ic">📞</span><div><strong>Expert Advice</strong><span>0800 123 4567</span></div></div></div></div>
-<div class="sec"><div style="background:var(--wh);border-radius:8px;border:2px dashed var(--bd);padding:72px 24px;text-align:center">
-  <div style="font-size:3.5rem;margin-bottom:18px">🪵</div>
-  <div style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.7rem;text-transform:uppercase;color:var(--dk);margin-bottom:11px">MDF Range Coming Soon</div>
-  <p style="color:var(--mid);font-size:.9rem;line-height:1.7;max-width:460px;margin:0 auto 26px">Our full MDF and drylining range is being added. In the meantime please contact our team for stock availability and trade pricing.</p>
-  <div style="display:flex;gap:11px;justify-content:center;flex-wrap:wrap">
-    <a href="https://wa.me/447549809252" class="btn-o" target="_blank">💬 WhatsApp for Pricing</a>
-    <a href="contact.html" class="btn-dk">📞 Contact Us</a>
-  </div>
+
+<div class="sec"><div class="scgrid">
+  <a href="porcelain-paving.html" class="sccard"><div class="scimg sc-pp">🪨</div><div class="scbody"><div class="scname">Porcelain Paving</div><div class="scdesc">Premium 20mm porcelain paving slabs in a wide range of colours and finishes. Low maintenance, frost resistant and incredibly durable.</div><span class="btn-o">Browse Porcelain Paving →</span></div></a>
+  <a href="indian-sandstone.html" class="sccard"><div class="scimg sc-ss">🌿</div><div class="scbody"><div class="scname">Indian Sandstone</div><div class="scdesc">Natural handcut Indian sandstone patio packs in a range of warm tones. All prices include free UK delivery.</div><span class="btn-o">Browse Indian Sandstone →</span></div></a>
 </div></div>
 <footer><div class="ft-i">
   <div class="ftg">

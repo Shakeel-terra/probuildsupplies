@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0">
-<title>Contact Us — Pro Build Supplies</title>
+<title>Delivery Information — Pro Build Supplies</title>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
@@ -426,24 +426,197 @@ footer{background:#111;padding:40px 20px 18px;color:#888;width:100%}
   .pp-layout{gap:18px}
 }
 
-<style id="snipcart-custom">
-/* Snipcart theme overrides to match Pro Build Supplies */
-:root {
-  --color-default: #F55C1B;
-  --color-alt: #1A1A1A;
-  --color-input-focus: #F55C1B;
-  --color-buttonPrimary: #F55C1B;
-  --color-buttonPrimary-hover: #d94d0f;
+
+<style id="snipcart-theme">
+/* ── FIX: Snipcart overlay above sticky header ── */
+#snipcart { z-index: 999999 !important; }
+.snip-layout { z-index: 999999 !important; }
+.snip-layout__col--right { z-index: 999999 !important; }
+
+/* ── Hide announcement bar when cart is open ── */
+body.snipcart-sidecart-opened .ann {
+  display: none !important;
 }
-.snip-layout__main-container { font-family: 'Barlow', sans-serif !important; }
-.snip-header { background: #1A1A1A !important; border-bottom: 3px solid #F55C1B !important; }
-.snip-header__title { font-family: 'Barlow Condensed', sans-serif !important; font-weight: 900 !important; letter-spacing: -0.5px !important; }
-.snip-btn--primary { background: #F55C1B !important; font-family: 'Barlow Condensed', sans-serif !important; font-weight: 700 !important; text-transform: uppercase !important; letter-spacing: 1px !important; border-radius: 4px !important; }
-.snip-btn--primary:hover { background: #d94d0f !important; }
-.snip-btn--secondary { font-family: 'Barlow Condensed', sans-serif !important; font-weight: 700 !important; text-transform: uppercase !important; border-radius: 4px !important; }
-.snip-product__name { font-family: 'Barlow Condensed', sans-serif !important; font-weight: 700 !important; }
-.snip-product__price { font-family: 'Barlow Condensed', sans-serif !important; font-weight: 900 !important; color: #1A1A1A !important; }
-.snip-order__total-price { font-family: 'Barlow Condensed', sans-serif !important; font-weight: 900 !important; }
+
+/* ── HEADER ── */
+.snip-header {
+  background: #1A1A1A !important;
+  border-bottom: 3px solid #F55C1B !important;
+  padding: 16px 24px !important;
+}
+.snip-header__title {
+  font-family: 'Barlow Condensed', sans-serif !important;
+  font-weight: 900 !important;
+  font-size: 1.4rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: -0.5px !important;
+  color: #FFFFFF !important;
+}
+.snip-header__close-button svg { stroke: #FFFFFF !important; }
+
+/* ── LAYOUT ── */
+.snip-layout__main-container {
+  font-family: 'Barlow', sans-serif !important;
+  background: #F5F3EF !important;
+}
+.snip-layout__col--right {
+  background: #F5F3EF !important;
+}
+
+/* ── CART ITEMS ── */
+.snip-product {
+  background: #FFFFFF !important;
+  border: 1px solid #E8E4DC !important;
+  border-radius: 6px !important;
+  margin-bottom: 10px !important;
+  padding: 14px !important;
+}
+.snip-product__name {
+  font-family: 'Barlow Condensed', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 1rem !important;
+  color: #1A1A1A !important;
+}
+.snip-product__price {
+  font-family: 'Barlow Condensed', sans-serif !important;
+  font-weight: 900 !important;
+  font-size: 1.1rem !important;
+  color: #1A1A1A !important;
+}
+.snip-product__quantity input {
+  border: 2px solid #E8E4DC !important;
+  border-radius: 4px !important;
+  font-family: 'Barlow Condensed', sans-serif !important;
+  font-weight: 700 !important;
+}
+.snip-product__remove button svg { stroke: #F55C1B !important; }
+
+/* ── TOTALS ── */
+.snip-order__total {
+  font-family: 'Barlow Condensed', sans-serif !important;
+  font-weight: 900 !important;
+  font-size: 1.4rem !important;
+  color: #1A1A1A !important;
+  border-top: 2px solid #E8E4DC !important;
+  padding-top: 14px !important;
+}
+.snip-order__total-price {
+  font-family: 'Barlow Condensed', sans-serif !important;
+  font-weight: 900 !important;
+  color: #1A1A1A !important;
+}
+.snip-order__subtotal-label,
+.snip-order__subtotal-price {
+  font-family: 'Barlow Condensed', sans-serif !important;
+  font-weight: 700 !important;
+}
+
+/* ── PRIMARY BUTTON (Proceed to checkout etc) ── */
+.snip-btn--primary,
+.snip-btn.snip-btn--primary {
+  background: #F55C1B !important;
+  color: #FFFFFF !important;
+  font-family: 'Barlow Condensed', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 1.05rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+  border-radius: 4px !important;
+  border: none !important;
+  padding: 14px 24px !important;
+  transition: background 0.2s !important;
+}
+.snip-btn--primary:hover,
+.snip-btn.snip-btn--primary:hover {
+  background: #d94d0f !important;
+}
+
+/* ── SECONDARY BUTTON ── */
+.snip-btn--secondary,
+.snip-btn.snip-btn--secondary {
+  font-family: 'Barlow Condensed', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 1rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: .5px !important;
+  border-radius: 4px !important;
+  border: 2px solid #E8E4DC !important;
+  color: #555 !important;
+  background: #FFFFFF !important;
+}
+.snip-btn--secondary:hover { border-color: #F55C1B !important; color: #F55C1B !important; }
+
+/* ── FORM FIELDS ── */
+.snip-form__field input,
+.snip-form__field select,
+.snip-input {
+  border: 2px solid #E8E4DC !important;
+  border-radius: 4px !important;
+  font-family: 'Barlow', sans-serif !important;
+  font-size: 0.9rem !important;
+  background: #F5F3EF !important;
+  color: #1A1A1A !important;
+  padding: 10px 13px !important;
+}
+.snip-form__field input:focus,
+.snip-form__field select:focus,
+.snip-input:focus {
+  border-color: #F55C1B !important;
+  background: #FFFFFF !important;
+  outline: none !important;
+}
+.snip-form__label {
+  font-family: 'Barlow Condensed', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 0.78rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+  color: #1A1A1A !important;
+}
+
+/* ── STEPS / TABS ── */
+.snip-tablist__tab {
+  font-family: 'Barlow Condensed', sans-serif !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+}
+.snip-tablist__tab--is-selected {
+  color: #F55C1B !important;
+  border-bottom-color: #F55C1B !important;
+}
+
+/* ── ORDER SUMMARY SECTION ── */
+.snip-order__title {
+  font-family: 'Barlow Condensed', sans-serif !important;
+  font-weight: 900 !important;
+  font-size: 1.1rem !important;
+  text-transform: uppercase !important;
+  color: #1A1A1A !important;
+}
+
+/* ── SUCCESS PAGE ── */
+.snip-order-confirmation__title {
+  font-family: 'Barlow Condensed', sans-serif !important;
+  font-weight: 900 !important;
+  font-size: 1.8rem !important;
+  text-transform: uppercase !important;
+  color: #1A1A1A !important;
+}
+
+
+/* ── SNIPCART STICKY FIX ── */
+body.snipcart-sidecart-opened .ann { display: none !important; }
+body.snipcart-sidecart-opened .hdr { z-index: 1 !important; }
+body.snipcart-sidecart-opened .nav { z-index: 1 !important; }
+
+/* ── EMPTY CART ── */
+.snip-cart__empty-message {
+  font-family: 'Barlow Condensed', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 1.1rem !important;
+  text-transform: uppercase !important;
+  color: #7F8C8D !important;
+}
 </style>
 </style>
 
@@ -480,33 +653,30 @@ footer{background:#111;padding:40px 20px 18px;color:#888;width:100%}
     <a href="trade-accounts.html#bulk">Bulk Orders</a>
   </div></div>
   <a href="samples.html">🧱 Free Samples</a>
-  <a href="contact.html" class="cur">📞 Contact</a>
+  <a href="contact.html">📞 Contact</a>
 </div></nav>
-<div class="bc"><div class="bc-i"><a href="index.html">Home</a> › Contact Us</div></div>
+<div class="bc"><div class="bc-i"><a href="index.html">Home</a> › Delivery Information</div></div>
 <div class="chero"><div class="chero-i">
-  <h1>Contact <em>Us</em></h1>
-  <p>We'd love to hear from you. Call, WhatsApp, email or fill in the form below.</p>
+  <h1>Delivery <em>Information</em></h1>
+  <p>Free delivery on all orders to UK mainland addresses. Here's everything you need to know.</p>
 </div></div>
-<div class="sec">
-  <div class="cgrid">
-    <div class="cdet"><div class="cic">📞</div><div><span class="clbl">Phone</span><div class="cval"><a href="tel:08001234567">0800 123 4567</a></div><div style="font-size:.78rem;color:var(--st);margin-top:3px">Mon–Fri 8am–5:30pm</div></div></div>
-    <div class="cdet"><div class="cic">💬</div><div><span class="clbl">WhatsApp</span><div class="cval"><a href="https://wa.me/447549809252" target="_blank">WhatsApp Us</a></div><div style="font-size:.78rem;color:var(--st);margin-top:3px">Quick responses 7 days</div></div></div>
-    <div class="cdet"><div class="cic">📧</div><div><span class="clbl">Email</span><div class="cval"><a href="mailto:info@probuildsupplies.uk">info@probuildsupplies.uk</a></div><div style="font-size:.78rem;color:var(--st);margin-top:3px">Response within 4 hours</div></div></div>
-    <div class="cdet"><div class="cic">📍</div><div><span class="clbl">Address</span><div class="cval" style="font-size:.97rem;line-height:1.5">Pro Build Supplies<br>United Kingdom</div></div></div>
+<div class="sec-w">
+  <div class="icard">
+    <h2>Delivery Information</h2>
+    <h3>🚚 Free Delivery on All Orders</h3>
+    <p>We offer <strong>free delivery on every order</strong> to UK mainland addresses — no minimum order, no hidden charges.</p>
+    <h3>📦 Dispatch Times</h3>
+    <ul><li><strong>Next-day dispatch</strong> on most products — order before <strong>2pm Monday–Friday</strong></li><li>Orders after 2pm or at weekends dispatched the next working day</li><li>Pallet deliveries arrive within <strong>1–3 working days</strong> of dispatch</li></ul>
+    <h3>🏗️ How We Deliver</h3>
+    <ul><li>Bricks and paving delivered on <strong>pallets via national pallet network</strong></li><li>Deliveries are <strong>kerbside only</strong> — driver places pallet as close to your property as safely possible</li><li>Please ensure clear access for an 18-tonne lorry with tail lift</li><li>Smaller items sent via Royal Mail or courier</li></ul>
+    <h3>📍 Delivery Areas</h3>
+    <ul><li><strong>England, Wales &amp; Central Scotland</strong> — free standard delivery</li><li><strong>Scottish Highlands &amp; Islands</strong> — may be subject to surcharge; contact us first</li><li><strong>Northern Ireland, Isle of Man, Channel Islands</strong> — please contact us before ordering</li></ul>
+    <h3>⚠️ Checking Your Delivery</h3>
+    <p>Inspect carefully before signing. If there is visible damage, <strong>note it on the delivery paperwork</strong> and contact us within 24 hours.</p>
   </div>
-  <div class="fcard">
-    <h2>Send Us a Message</h2>
-    <p>Have a question about a product, need a quote, or want to discuss a project?</p>
-    <form onsubmit="pbsOk(event,'cok')">
-      <div class="frow"><div class="fg"><label>Your Name *</label><input type="text" required placeholder="First and last name"></div><div class="fg"><label>Phone</label><input type="tel" placeholder="07700 900000"></div></div>
-      <div class="fg"><label>Email Address *</label><input type="email" required placeholder="your@email.com"></div>
-      <div class="fg"><label>Query Topic *</label><select required><option value="">Select a topic</option><option>Product Enquiry</option><option>Existing Order</option><option>Request a Quote</option><option>Trade Account</option><option>Delivery Question</option><option>Returns &amp; Refunds</option><option>Free Samples</option><option>Other</option></select></div>
-      <div class="fg"><label>Your Message *</label><textarea required placeholder="Tell us how we can help..." style="min-height:130px"></textarea></div>
-      <div class="fg"><label>Order Number <span style="font-weight:400;text-transform:none;font-size:.73rem">(if applicable)</span></label><input type="text" placeholder="e.g. PBS-12345"></div>
-      <button type="submit" class="fsub">Send Message</button>
-      <p class="fnote">We respond to all enquiries within 4 working hours (Mon–Fri 8am–5:30pm).</p>
-      <div id="cok" class="fok">✅ Message sent! We'll get back to you within 4 working hours.</div>
-    </form>
+  <div class="icard">
+    <h2>Need Help with a Delivery?</h2>
+    <p>📞 <a href="tel:08001234567"><strong>0800 123 4567</strong></a> &nbsp;|&nbsp; 💬 <a href="https://wa.me/447549809252" target="_blank"><strong>WhatsApp Us</strong></a> &nbsp;|&nbsp; 📧 <a href="mailto:info@probuildsupplies.uk"><strong>info@probuildsupplies.uk</strong></a></p>
   </div>
 </div>
 <footer><div class="ft-i">
@@ -554,14 +724,7 @@ footer{background:#111;padding:40px 20px 18px;color:#888;width:100%}
   });
 })();
 </script>
-<script>
-function pbsOk(e,id){
-  e.preventDefault();
-  var m=document.getElementById(id);
-  if(m){m.style.display='block';e.target.reset();var s=e.target.querySelector('.fsub');if(s)s.style.display='none';}
-  return false;
-}
-</script>
+
 
 <!-- Snipcart init -->
 <div hidden id="snipcart" data-api-key="MDQ0ZDg2YTQtNGJjNi00OWYxLTkxNTctZmNlMWJkZjJkNDgyNjM5MTc5OTUyNDY0MDkyMDEw" data-currency="gbp"></div>

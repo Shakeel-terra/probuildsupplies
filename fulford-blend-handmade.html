@@ -426,24 +426,197 @@ footer{background:#111;padding:40px 20px 18px;color:#888;width:100%}
   .pp-layout{gap:18px}
 }
 
-<style id="snipcart-custom">
-/* Snipcart theme overrides to match Pro Build Supplies */
-:root {
-  --color-default: #F55C1B;
-  --color-alt: #1A1A1A;
-  --color-input-focus: #F55C1B;
-  --color-buttonPrimary: #F55C1B;
-  --color-buttonPrimary-hover: #d94d0f;
+
+<style id="snipcart-theme">
+/* ── FIX: Snipcart overlay above sticky header ── */
+#snipcart { z-index: 999999 !important; }
+.snip-layout { z-index: 999999 !important; }
+.snip-layout__col--right { z-index: 999999 !important; }
+
+/* ── Hide announcement bar when cart is open ── */
+body.snipcart-sidecart-opened .ann {
+  display: none !important;
 }
-.snip-layout__main-container { font-family: 'Barlow', sans-serif !important; }
-.snip-header { background: #1A1A1A !important; border-bottom: 3px solid #F55C1B !important; }
-.snip-header__title { font-family: 'Barlow Condensed', sans-serif !important; font-weight: 900 !important; letter-spacing: -0.5px !important; }
-.snip-btn--primary { background: #F55C1B !important; font-family: 'Barlow Condensed', sans-serif !important; font-weight: 700 !important; text-transform: uppercase !important; letter-spacing: 1px !important; border-radius: 4px !important; }
-.snip-btn--primary:hover { background: #d94d0f !important; }
-.snip-btn--secondary { font-family: 'Barlow Condensed', sans-serif !important; font-weight: 700 !important; text-transform: uppercase !important; border-radius: 4px !important; }
-.snip-product__name { font-family: 'Barlow Condensed', sans-serif !important; font-weight: 700 !important; }
-.snip-product__price { font-family: 'Barlow Condensed', sans-serif !important; font-weight: 900 !important; color: #1A1A1A !important; }
-.snip-order__total-price { font-family: 'Barlow Condensed', sans-serif !important; font-weight: 900 !important; }
+
+/* ── HEADER ── */
+.snip-header {
+  background: #1A1A1A !important;
+  border-bottom: 3px solid #F55C1B !important;
+  padding: 16px 24px !important;
+}
+.snip-header__title {
+  font-family: 'Barlow Condensed', sans-serif !important;
+  font-weight: 900 !important;
+  font-size: 1.4rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: -0.5px !important;
+  color: #FFFFFF !important;
+}
+.snip-header__close-button svg { stroke: #FFFFFF !important; }
+
+/* ── LAYOUT ── */
+.snip-layout__main-container {
+  font-family: 'Barlow', sans-serif !important;
+  background: #F5F3EF !important;
+}
+.snip-layout__col--right {
+  background: #F5F3EF !important;
+}
+
+/* ── CART ITEMS ── */
+.snip-product {
+  background: #FFFFFF !important;
+  border: 1px solid #E8E4DC !important;
+  border-radius: 6px !important;
+  margin-bottom: 10px !important;
+  padding: 14px !important;
+}
+.snip-product__name {
+  font-family: 'Barlow Condensed', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 1rem !important;
+  color: #1A1A1A !important;
+}
+.snip-product__price {
+  font-family: 'Barlow Condensed', sans-serif !important;
+  font-weight: 900 !important;
+  font-size: 1.1rem !important;
+  color: #1A1A1A !important;
+}
+.snip-product__quantity input {
+  border: 2px solid #E8E4DC !important;
+  border-radius: 4px !important;
+  font-family: 'Barlow Condensed', sans-serif !important;
+  font-weight: 700 !important;
+}
+.snip-product__remove button svg { stroke: #F55C1B !important; }
+
+/* ── TOTALS ── */
+.snip-order__total {
+  font-family: 'Barlow Condensed', sans-serif !important;
+  font-weight: 900 !important;
+  font-size: 1.4rem !important;
+  color: #1A1A1A !important;
+  border-top: 2px solid #E8E4DC !important;
+  padding-top: 14px !important;
+}
+.snip-order__total-price {
+  font-family: 'Barlow Condensed', sans-serif !important;
+  font-weight: 900 !important;
+  color: #1A1A1A !important;
+}
+.snip-order__subtotal-label,
+.snip-order__subtotal-price {
+  font-family: 'Barlow Condensed', sans-serif !important;
+  font-weight: 700 !important;
+}
+
+/* ── PRIMARY BUTTON (Proceed to checkout etc) ── */
+.snip-btn--primary,
+.snip-btn.snip-btn--primary {
+  background: #F55C1B !important;
+  color: #FFFFFF !important;
+  font-family: 'Barlow Condensed', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 1.05rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+  border-radius: 4px !important;
+  border: none !important;
+  padding: 14px 24px !important;
+  transition: background 0.2s !important;
+}
+.snip-btn--primary:hover,
+.snip-btn.snip-btn--primary:hover {
+  background: #d94d0f !important;
+}
+
+/* ── SECONDARY BUTTON ── */
+.snip-btn--secondary,
+.snip-btn.snip-btn--secondary {
+  font-family: 'Barlow Condensed', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 1rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: .5px !important;
+  border-radius: 4px !important;
+  border: 2px solid #E8E4DC !important;
+  color: #555 !important;
+  background: #FFFFFF !important;
+}
+.snip-btn--secondary:hover { border-color: #F55C1B !important; color: #F55C1B !important; }
+
+/* ── FORM FIELDS ── */
+.snip-form__field input,
+.snip-form__field select,
+.snip-input {
+  border: 2px solid #E8E4DC !important;
+  border-radius: 4px !important;
+  font-family: 'Barlow', sans-serif !important;
+  font-size: 0.9rem !important;
+  background: #F5F3EF !important;
+  color: #1A1A1A !important;
+  padding: 10px 13px !important;
+}
+.snip-form__field input:focus,
+.snip-form__field select:focus,
+.snip-input:focus {
+  border-color: #F55C1B !important;
+  background: #FFFFFF !important;
+  outline: none !important;
+}
+.snip-form__label {
+  font-family: 'Barlow Condensed', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 0.78rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+  color: #1A1A1A !important;
+}
+
+/* ── STEPS / TABS ── */
+.snip-tablist__tab {
+  font-family: 'Barlow Condensed', sans-serif !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+}
+.snip-tablist__tab--is-selected {
+  color: #F55C1B !important;
+  border-bottom-color: #F55C1B !important;
+}
+
+/* ── ORDER SUMMARY SECTION ── */
+.snip-order__title {
+  font-family: 'Barlow Condensed', sans-serif !important;
+  font-weight: 900 !important;
+  font-size: 1.1rem !important;
+  text-transform: uppercase !important;
+  color: #1A1A1A !important;
+}
+
+/* ── SUCCESS PAGE ── */
+.snip-order-confirmation__title {
+  font-family: 'Barlow Condensed', sans-serif !important;
+  font-weight: 900 !important;
+  font-size: 1.8rem !important;
+  text-transform: uppercase !important;
+  color: #1A1A1A !important;
+}
+
+
+/* ── SNIPCART STICKY FIX ── */
+body.snipcart-sidecart-opened .ann { display: none !important; }
+body.snipcart-sidecart-opened .hdr { z-index: 1 !important; }
+body.snipcart-sidecart-opened .nav { z-index: 1 !important; }
+
+/* ── EMPTY CART ── */
+.snip-cart__empty-message {
+  font-family: 'Barlow Condensed', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 1.1rem !important;
+  text-transform: uppercase !important;
+  color: #7F8C8D !important;
+}
 </style>
 </style>
 
