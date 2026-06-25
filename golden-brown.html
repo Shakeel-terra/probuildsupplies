@@ -6,6 +6,42 @@
 <title>Thames Dean Stock Handmade Brick — Pro Build Supplies</title>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
 
+
+<style id="snip-vars">
+/* Snipcart v3 CSS Custom Properties — must be on :root */
+:root {
+  --color-default: #F55C1B;
+  --color-alt: #1A1A1A;
+  --color-success: #22C55E;
+  --color-danger: #EF4444;
+  --color-accent: #F55C1B;
+
+  --bg-color: #F5F3EF;
+  --bg-color-alt: #FFFFFF;
+
+  --color-link: #F55C1B;
+  --color-link-hover: #d94d0f;
+
+  --color-input: #1A1A1A;
+  --color-input-bg: #FFFFFF;
+  --color-input-bg-alt: #F5F3EF;
+  --color-input-border: #E8E4DC;
+  --color-input-focus: #F55C1B;
+  --color-input-placeholder: #888888;
+
+  --color-buttonPrimary: #F55C1B;
+  --color-buttonPrimary-text: #FFFFFF;
+  --color-buttonPrimary-hover: #d94d0f;
+  --color-buttonSecondary: #1A1A1A;
+  --color-buttonSecondary-text: #FFFFFF;
+  --color-buttonSecondary-hover: #333333;
+
+  --border-radius: 4px;
+  --font-family: 'Barlow', sans-serif;
+
+  --shadow: 0 8px 32px rgba(0,0,0,0.12);
+}
+</style>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -427,197 +463,7 @@ footer{background:#111;padding:40px 20px 18px;color:#888;width:100%}
 }
 
 
-<style id="snipcart-theme">
-/* ── FIX: Snipcart overlay above sticky header ── */
-#snipcart { z-index: 999999 !important; }
-.snip-layout { z-index: 999999 !important; }
-.snip-layout__col--right { z-index: 999999 !important; }
 
-/* ── Hide announcement bar when cart is open ── */
-body.snipcart-sidecart-opened .ann {
-  display: none !important;
-}
-
-/* ── HEADER ── */
-.snip-header {
-  background: #1A1A1A !important;
-  border-bottom: 3px solid #F55C1B !important;
-  padding: 16px 24px !important;
-}
-.snip-header__title {
-  font-family: 'Barlow Condensed', sans-serif !important;
-  font-weight: 900 !important;
-  font-size: 1.4rem !important;
-  text-transform: uppercase !important;
-  letter-spacing: -0.5px !important;
-  color: #FFFFFF !important;
-}
-.snip-header__close-button svg { stroke: #FFFFFF !important; }
-
-/* ── LAYOUT ── */
-.snip-layout__main-container {
-  font-family: 'Barlow', sans-serif !important;
-  background: #F5F3EF !important;
-}
-.snip-layout__col--right {
-  background: #F5F3EF !important;
-}
-
-/* ── CART ITEMS ── */
-.snip-product {
-  background: #FFFFFF !important;
-  border: 1px solid #E8E4DC !important;
-  border-radius: 6px !important;
-  margin-bottom: 10px !important;
-  padding: 14px !important;
-}
-.snip-product__name {
-  font-family: 'Barlow Condensed', sans-serif !important;
-  font-weight: 700 !important;
-  font-size: 1rem !important;
-  color: #1A1A1A !important;
-}
-.snip-product__price {
-  font-family: 'Barlow Condensed', sans-serif !important;
-  font-weight: 900 !important;
-  font-size: 1.1rem !important;
-  color: #1A1A1A !important;
-}
-.snip-product__quantity input {
-  border: 2px solid #E8E4DC !important;
-  border-radius: 4px !important;
-  font-family: 'Barlow Condensed', sans-serif !important;
-  font-weight: 700 !important;
-}
-.snip-product__remove button svg { stroke: #F55C1B !important; }
-
-/* ── TOTALS ── */
-.snip-order__total {
-  font-family: 'Barlow Condensed', sans-serif !important;
-  font-weight: 900 !important;
-  font-size: 1.4rem !important;
-  color: #1A1A1A !important;
-  border-top: 2px solid #E8E4DC !important;
-  padding-top: 14px !important;
-}
-.snip-order__total-price {
-  font-family: 'Barlow Condensed', sans-serif !important;
-  font-weight: 900 !important;
-  color: #1A1A1A !important;
-}
-.snip-order__subtotal-label,
-.snip-order__subtotal-price {
-  font-family: 'Barlow Condensed', sans-serif !important;
-  font-weight: 700 !important;
-}
-
-/* ── PRIMARY BUTTON (Proceed to checkout etc) ── */
-.snip-btn--primary,
-.snip-btn.snip-btn--primary {
-  background: #F55C1B !important;
-  color: #FFFFFF !important;
-  font-family: 'Barlow Condensed', sans-serif !important;
-  font-weight: 700 !important;
-  font-size: 1.05rem !important;
-  text-transform: uppercase !important;
-  letter-spacing: 1px !important;
-  border-radius: 4px !important;
-  border: none !important;
-  padding: 14px 24px !important;
-  transition: background 0.2s !important;
-}
-.snip-btn--primary:hover,
-.snip-btn.snip-btn--primary:hover {
-  background: #d94d0f !important;
-}
-
-/* ── SECONDARY BUTTON ── */
-.snip-btn--secondary,
-.snip-btn.snip-btn--secondary {
-  font-family: 'Barlow Condensed', sans-serif !important;
-  font-weight: 700 !important;
-  font-size: 1rem !important;
-  text-transform: uppercase !important;
-  letter-spacing: .5px !important;
-  border-radius: 4px !important;
-  border: 2px solid #E8E4DC !important;
-  color: #555 !important;
-  background: #FFFFFF !important;
-}
-.snip-btn--secondary:hover { border-color: #F55C1B !important; color: #F55C1B !important; }
-
-/* ── FORM FIELDS ── */
-.snip-form__field input,
-.snip-form__field select,
-.snip-input {
-  border: 2px solid #E8E4DC !important;
-  border-radius: 4px !important;
-  font-family: 'Barlow', sans-serif !important;
-  font-size: 0.9rem !important;
-  background: #F5F3EF !important;
-  color: #1A1A1A !important;
-  padding: 10px 13px !important;
-}
-.snip-form__field input:focus,
-.snip-form__field select:focus,
-.snip-input:focus {
-  border-color: #F55C1B !important;
-  background: #FFFFFF !important;
-  outline: none !important;
-}
-.snip-form__label {
-  font-family: 'Barlow Condensed', sans-serif !important;
-  font-weight: 700 !important;
-  font-size: 0.78rem !important;
-  text-transform: uppercase !important;
-  letter-spacing: 0.5px !important;
-  color: #1A1A1A !important;
-}
-
-/* ── STEPS / TABS ── */
-.snip-tablist__tab {
-  font-family: 'Barlow Condensed', sans-serif !important;
-  font-weight: 700 !important;
-  text-transform: uppercase !important;
-}
-.snip-tablist__tab--is-selected {
-  color: #F55C1B !important;
-  border-bottom-color: #F55C1B !important;
-}
-
-/* ── ORDER SUMMARY SECTION ── */
-.snip-order__title {
-  font-family: 'Barlow Condensed', sans-serif !important;
-  font-weight: 900 !important;
-  font-size: 1.1rem !important;
-  text-transform: uppercase !important;
-  color: #1A1A1A !important;
-}
-
-/* ── SUCCESS PAGE ── */
-.snip-order-confirmation__title {
-  font-family: 'Barlow Condensed', sans-serif !important;
-  font-weight: 900 !important;
-  font-size: 1.8rem !important;
-  text-transform: uppercase !important;
-  color: #1A1A1A !important;
-}
-
-
-/* ── SNIPCART STICKY FIX ── */
-body.snipcart-sidecart-opened .ann { display: none !important; }
-body.snipcart-sidecart-opened .hdr { z-index: 1 !important; }
-body.snipcart-sidecart-opened .nav { z-index: 1 !important; }
-
-/* ── EMPTY CART ── */
-.snip-cart__empty-message {
-  font-family: 'Barlow Condensed', sans-serif !important;
-  font-weight: 700 !important;
-  font-size: 1.1rem !important;
-  text-transform: uppercase !important;
-  color: #7F8C8D !important;
-}
-</style>
 </style>
 
   <!-- Snipcart -->
@@ -771,28 +617,52 @@ function szChange(s){
 <!-- Snipcart init -->
 <div hidden id="snipcart" data-api-key="MDQ0ZDg2YTQtNGJjNi00OWYxLTkxNTctZmNlMWJkZjJkNDgyNjM5MTc5OTUyNDY0MDkyMDEw" data-currency="gbp"></div>
 <script src="https://cdn.snipcart.com/themes/v3.3.3/default/snipcart.js"></script>
-<link rel="stylesheet" href="../snipcart-theme.css">
+
+
+
 
 <script>
-// Hide header when Snipcart cart opens to prevent overlap
-document.addEventListener('snipcart.ready', function() {
-  Snipcart.events.on('cart.opened', function() {
-    var ann = document.querySelector('.ann');
-    var hdr = document.querySelector('.hdr');
-    var nav = document.querySelector('.nav');
-    if (ann) ann.style.display = 'none';
-    if (hdr) { hdr.style.position = 'relative'; hdr.style.zIndex = '1'; }
-    if (nav) nav.style.zIndex = '1';
+(function() {
+  // Watch for Snipcart cart opening via class change on body
+  var observer = new MutationObserver(function(mutations) {
+    mutations.forEach(function(m) {
+      if (m.type === 'attributes' && m.attributeName === 'class') {
+        var body = document.body;
+        var hdr  = document.querySelector('.hdr');
+        var nav  = document.querySelector('.nav');
+        var ann  = document.querySelector('.ann');
+        var isOpen = body.classList.contains('snipcart-sidecart-opened') ||
+                     body.classList.contains('snipcart-checkout-opened') ||
+                     document.querySelector('#snipcart[class*="visible"]') !== null;
+        if (hdr) hdr.style.zIndex  = isOpen ? '0' : '9999';
+        if (hdr) hdr.style.position = isOpen ? 'relative' : 'sticky';
+        if (nav) nav.style.zIndex  = isOpen ? '0' : '9998';
+        if (ann) ann.style.display = isOpen ? 'none' : '';
+      }
+    });
   });
-  Snipcart.events.on('cart.closed', function() {
-    var ann = document.querySelector('.ann');
-    var hdr = document.querySelector('.hdr');
-    var nav = document.querySelector('.nav');
-    if (ann) ann.style.display = 'block';
-    if (hdr) { hdr.style.position = 'sticky'; hdr.style.zIndex = '9999'; }
-    if (nav) nav.style.zIndex = '9998';
+  observer.observe(document.body, { attributes: true });
+
+  // Also hook into Snipcart events if available
+  document.addEventListener('snipcart.ready', function() {
+    Snipcart.events.on('cart.opened', function() {
+      var hdr = document.querySelector('.hdr');
+      var nav = document.querySelector('.nav');
+      var ann = document.querySelector('.ann');
+      if (hdr) { hdr.style.position = 'relative'; hdr.style.zIndex = '0'; }
+      if (nav) nav.style.zIndex = '0';
+      if (ann) ann.style.display = 'none';
+    });
+    Snipcart.events.on('cart.closed', function() {
+      var hdr = document.querySelector('.hdr');
+      var nav = document.querySelector('.nav');
+      var ann = document.querySelector('.ann');
+      if (hdr) { hdr.style.position = 'sticky'; hdr.style.zIndex = '9999'; }
+      if (nav) nav.style.zIndex = '9998';
+      if (ann) ann.style.display = '';
+    });
   });
-});
+})();
 </script>
 </body>
 </html>
