@@ -1,419 +1,311 @@
 [
   {
-    "id": "p001",
+    "slug": "red-handmade-facing-bricks",
     "name": "Red Handmade Facing Bricks",
     "category": "Handmade Bricks",
     "price": "£598.26",
-    "priceNote": "Free delivery",
-    "slug": "red-handmade-facing-bricks",
-    "url": "https://www.probuildsupplies.uk/product/red-handmade-facing-bricks/",
-    "description": "Rustic genuine handmade bricks with natural shade variation.",
+    "price_note": "Pack of 512 | Free delivery",
+    "short": "Rustic genuine handmade bricks with natural shade variation and pale banding.",
+    "icon": "🧱",
+    "wp_url": "https://www.probuildsupplies.uk/product/red-handmade-facing-bricks/",
     "colour": "Red / Multi",
     "frost": "F2 — Fully frost resistant",
-    "visible": true,
     "badge": "Best Seller",
-    "sizeVariants": [
-      {
-        "size": "65mm",
-        "pack": "Pack of 512",
-        "price": "£598.26"
-      },
-      {
-        "size": "73mm",
-        "pack": "Pack of 464",
-        "price": ""
-      }
-    ],
     "image": "",
-    "createdAt": "2026-06-02T11:59:25.080Z"
+    "sizes": [
+      { "size": "65mm", "pack": "Pack of 512", "price": "£598.26" },
+      { "size": "73mm", "pack": "Pack of 464", "price": "" }
+    ]
   },
   {
-    "id": "p002",
+    "slug": "city-blend-handmade-facing-bricks",
     "name": "City Blend Handmade Facing Bricks",
     "category": "Handmade Bricks",
     "price": "£628.68",
-    "priceNote": "Free delivery",
-    "slug": "city-blend-handmade-facing-bricks",
-    "url": "https://www.probuildsupplies.uk/product/city-blend-handmade-facing-bricks/",
-    "description": "Multi-toned blend of warm reds, browns and charcoal flashes.",
+    "price_note": "Pack of 512 | Free delivery",
+    "short": "Sophisticated multi-toned blend of warm reds, browns and charcoal flashes.",
+    "icon": "🧱",
+    "wp_url": "https://www.probuildsupplies.uk/product/city-blend-handmade-facing-bricks/",
     "colour": "Red / Brown / Charcoal Multi",
     "frost": "F2 — Fully frost resistant",
-    "visible": true,
     "badge": "",
-    "sizeVariants": [
-      {
-        "size": "65mm",
-        "pack": "Pack of 512",
-        "price": "£628.68"
-      },
-      {
-        "size": "73mm",
-        "pack": "Pack of 464",
-        "price": ""
-      }
-    ],
     "image": "",
-    "createdAt": "2026-06-02T11:59:25.080Z"
+    "sizes": [
+      { "size": "65mm", "pack": "Pack of 512", "price": "£628.68" },
+      { "size": "73mm", "pack": "Pack of 464", "price": "" }
+    ]
   },
   {
-    "id": "p003",
+    "slug": "cheshire-red-handmade",
     "name": "Cheshire Red Multi Handmade Facing Bricks",
     "category": "Handmade Bricks",
     "price": "£648.96",
-    "priceNote": "Free delivery",
-    "slug": "cheshire-red-handmade",
-    "url": "https://www.probuildsupplies.uk/product/cheshire-red-multi-handmade/",
-    "description": "Classic Cheshire-style handmade brick in rich red and multi tones.",
-    "colour": "Red Multi",
+    "price_note": "Pack of 512 | Free delivery",
+    "short": "Classic Cheshire-style handmade brick in rich red and multi tones.",
+    "icon": "🧱",
+    "wp_url": "https://www.probuildsupplies.uk/product/cheshire-red-multi-handmade/",
+    "colour": "Red Multi — Cheshire tone",
     "frost": "F2 — Fully frost resistant",
-    "visible": true,
     "badge": "",
-    "sizeVariants": [
-      {
-        "size": "65mm",
-        "pack": "Pack of 512",
-        "price": "£648.96"
-      },
-      {
-        "size": "73",
-        "pack": "464",
-        "price": "650.00"
-      }
-    ],
     "image": "",
-    "updatedAt": "2026-06-25T14:25:14.637Z"
+    "sizes": [
+      { "size": "65mm", "pack": "Pack of 512", "price": "£648.96" }
+    ]
   },
   {
-    "id": "p004",
+    "slug": "pulford-blend-handmade",
     "name": "Pulford Blend Handmade Facing Bricks",
     "category": "Handmade Bricks",
     "price": "£648.96",
-    "priceNote": "Free delivery",
-    "slug": "pulford-blend-handmade",
-    "url": "https://www.probuildsupplies.uk/product/pulford-blend-handmade-facing-bricks/",
-    "description": "Warm earthy blend with sandy reds and browns.",
+    "price_note": "Pack of 512 | Free delivery",
+    "short": "Warm earthy blend with sandy reds and browns.",
+    "icon": "🧱",
+    "wp_url": "https://www.probuildsupplies.uk/product/pulford-blend-handmade-facing-bricks/",
     "colour": "Sandy Red / Brown Multi",
     "frost": "F2 — Fully frost resistant",
-    "visible": true,
     "badge": "",
-    "sizeVariants": [
-      {
-        "size": "65mm",
-        "pack": "Pack of 512",
-        "price": "£648.96"
-      },
-      {
-        "size": "73mm",
-        "pack": "Pack of 464",
-        "price": ""
-      }
-    ],
     "image": "",
-    "createdAt": "2026-06-02T11:59:25.080Z"
+    "sizes": [
+      { "size": "65mm", "pack": "Pack of 512", "price": "£648.96" },
+      { "size": "73mm", "pack": "Pack of 464", "price": "" }
+    ]
   },
   {
-    "id": "p005",
+    "slug": "fulford-blend-handmade",
     "name": "Fulford Blend Handmade Bricks",
     "category": "Handmade Bricks",
     "price": "£679.38",
-    "priceNote": "Free delivery",
-    "slug": "fulford-blend-handmade",
-    "url": "https://www.probuildsupplies.uk/product/fulford-blend-handmade-bricks/",
-    "description": "Premium richly toned handmade blend with deep reds and charcoal.",
+    "price_note": "Pack of 512 | Free delivery",
+    "short": "Premium richly toned handmade blend with deep reds and charcoal flashes.",
+    "icon": "🧱",
+    "wp_url": "https://www.probuildsupplies.uk/product/fulford-blend-handmade-bricks/",
     "colour": "Deep Red / Charcoal Multi",
     "frost": "F2 — Fully frost resistant",
-    "visible": true,
     "badge": "",
-    "sizeVariants": [
-      {
-        "size": "65mm",
-        "pack": "Pack of 512",
-        "price": "£679.38"
-      },
-      {
-        "size": "73mm",
-        "pack": "Pack of 464",
-        "price": ""
-      }
-    ],
     "image": "",
-    "createdAt": "2026-06-02T11:59:25.080Z"
+    "sizes": [
+      { "size": "65mm", "pack": "Pack of 512", "price": "£679.38" },
+      { "size": "73mm", "pack": "Pack of 464", "price": "" }
+    ]
   },
   {
-    "id": "p006",
-    "name": "Renovation Multi Handmade Facing Bricks",
-    "category": "Handmade Bricks",
-    "price": "£513.86",
-    "priceNote": "Free delivery",
-    "slug": "renovation-multi-handmade-73mm",
-    "url": "https://www.probuildsupplies.uk/product/renovation-multi-handmade-facing-bricks/",
-    "description": "Imperial handmade bricks ideal for Victorian and Edwardian properties.",
-    "colour": "Red / Brown Renovation Multi",
-    "frost": "F2 — Fully frost resistant",
-    "visible": true,
-    "badge": "",
-    "sizeVariants": [
-      {
-        "size": "65mm",
-        "pack": "Pack of 512",
-        "price": ""
-      },
-      {
-        "size": "73mm",
-        "pack": "Pack of 464",
-        "price": "£513.86"
-      }
-    ],
-    "image": "",
-    "createdAt": "2026-06-02T11:59:25.080Z"
-  },
-  {
-    "id": "p007",
-    "name": "Weathered Yellow Facing Bricks",
+    "slug": "weathered-yellow-facing-bricks",
+    "name": "Weathered Yellow Facing Bricks 68mm",
     "category": "Handmade Bricks",
     "price": "£505.44",
-    "priceNote": "Free delivery",
-    "slug": "weathered-yellow-facing-bricks-73mm",
-    "url": "https://www.probuildsupplies.uk/product/weathered-yellow-facing-bricks/",
-    "description": "Yellow/buff handmade bricks with naturally weathered appearance.",
+    "price_note": "Pack of 464 | Free delivery",
+    "short": "Imperial 68mm yellow/buff handmade bricks. Perfect for matching London stock brick.",
+    "icon": "🧱",
+    "wp_url": "https://www.probuildsupplies.uk/product/weathered-yellow-facing-bricks/",
     "colour": "Yellow / Buff / Weathered",
     "frost": "F2 — Fully frost resistant",
-    "visible": true,
     "badge": "",
-    "sizeVariants": [
-      {
-        "size": "68mm",
-        "pack": "Pack of 464",
-        "price": "£505.44"
-      }
-    ],
     "image": "",
-    "createdAt": "2026-06-02T11:59:25.080Z"
+    "sizes": [
+      { "size": "68mm", "pack": "Pack of 464", "price": "£505.44" }
+    ]
   },
   {
-    "id": "p008",
-    "name": "Plain Yellow Facing Bricks",
+    "slug": "plain-yellow-facing-bricks",
+    "name": "Plain Yellow Facing Bricks 68mm",
     "category": "Handmade Bricks",
     "price": "£488.59",
-    "priceNote": "Free delivery",
-    "slug": "plain-yellow-facing-bricks-73mm",
-    "url": "https://www.probuildsupplies.uk/product/plain-yellow-facing-bricks/",
-    "description": "Clean uniform yellow/buff imperial brick.",
+    "price_note": "Pack of 464 | Free delivery",
+    "short": "Cleaner more uniform yellow/buff imperial brick. Available in 68mm only.",
+    "icon": "🧱",
+    "wp_url": "https://www.probuildsupplies.uk/product/plain-yellow-facing-bricks/",
     "colour": "Yellow / Buff",
     "frost": "F2 — Fully frost resistant",
-    "visible": true,
     "badge": "",
-    "sizeVariants": [
-      {
-        "size": "68mm",
-        "pack": "Pack of 464",
-        "price": "£488.59"
-      }
-    ],
     "image": "",
-    "createdAt": "2026-06-02T11:59:25.080Z"
+    "sizes": [
+      { "size": "68mm", "pack": "Pack of 464", "price": "£488.59" }
+    ]
   },
   {
-    "id": "p009",
-    "name": "Ashgrove Orange Handmade Brick",
-    "category": "Handmade Bricks",
-    "price": "POA",
-    "priceNote": "Contact for pricing",
-    "slug": "ashgrove-orange-handmade",
-    "url": "https://www.probuildsupplies.uk/contact/",
-    "description": "Warm vibrant orange handmade brick.",
-    "colour": "Warm Orange",
-    "frost": "F2 — Fully frost resistant",
-    "visible": true,
-    "badge": "",
-    "sizeVariants": [
-      {
-        "size": "65mm",
-        "pack": "Pack of 512",
-        "price": "POA"
-      },
-      {
-        "size": "73mm",
-        "pack": "Pack of 464",
-        "price": "POA"
-      }
-    ],
-    "image": "",
-    "createdAt": "2026-06-02T11:59:25.080Z"
-  },
-  {
-    "id": "p010",
+    "slug": "thames-dean-stock-handmade",
     "name": "Thames Dean Stock Handmade Brick",
     "category": "Handmade Bricks",
     "price": "POA",
-    "priceNote": "Contact for pricing",
-    "slug": "thames-dean-stock-handmade",
-    "url": "https://www.probuildsupplies.uk/contact/",
-    "description": "Thames Dean-style stock brick with authentic buff/brown tones.",
+    "price_note": "Contact us for pricing",
+    "short": "Thames Dean-style stock brick in classic buff/brown tones. Available in 65mm and 68mm.",
+    "icon": "🧱",
+    "wp_url": "https://www.probuildsupplies.uk/contact/",
     "colour": "Buff / Brown Stock",
     "frost": "F2 — Fully frost resistant",
-    "visible": true,
     "badge": "",
-    "sizeVariants": [
-      {
-        "size": "65mm",
-        "pack": "Pack of 512",
-        "price": "POA"
-      },
-      {
-        "size": "68mm",
-        "pack": "Pack of 464",
-        "price": "POA"
-      }
-    ],
     "image": "",
-    "createdAt": "2026-06-02T11:59:25.080Z"
+    "sizes": [
+      { "size": "65mm", "pack": "Pack of 512", "price": "POA" },
+      { "size": "68mm", "pack": "Pack of 464", "price": "POA" }
+    ]
   },
   {
-    "id": "p011",
+    "slug": "heritage-blend-handmade",
     "name": "Heritage Blend Handmade Brick",
     "category": "Handmade Bricks",
     "price": "POA",
-    "priceNote": "Contact for pricing",
-    "slug": "heritage-blend-handmade",
-    "url": "https://www.probuildsupplies.uk/contact/",
-    "description": "Rich traditional heritage blend.",
+    "price_note": "Contact us for pricing",
+    "short": "Rich traditional heritage blend. Ideal for conservation and period restoration.",
+    "icon": "🧱",
+    "wp_url": "https://www.probuildsupplies.uk/contact/",
     "colour": "Heritage Multi",
     "frost": "F2 — Fully frost resistant",
-    "visible": true,
     "badge": "",
-    "sizeVariants": [
-      {
-        "size": "65mm",
-        "pack": "Pack of 512",
-        "price": "POA"
-      },
-      {
-        "size": "73mm",
-        "pack": "Pack of 464",
-        "price": "POA"
-      }
-    ],
     "image": "",
-    "createdAt": "2026-06-02T11:59:25.080Z"
+    "sizes": [
+      { "size": "65mm", "pack": "Pack of 512", "price": "POA" },
+      { "size": "73mm", "pack": "Pack of 464", "price": "POA" }
+    ]
   },
   {
-    "id": "p012",
+    "slug": "alford-reclaimed-bricks",
     "name": "Alford Reclaimed Bricks – 60mm",
     "category": "Reclaimed Bricks",
     "price": "£386.10",
-    "priceNote": "Pack of 450 | Free delivery",
-    "slug": "alford-reclaimed-bricks",
-    "url": "https://www.probuildsupplies.uk/product/alford-reclaimed-bricks/",
-    "description": "Genuine reclaimed bricks with authentic aged patina.",
+    "price_note": "Pack of 450 | Free delivery",
+    "short": "Genuine reclaimed bricks with authentic aged patina. Cleaned and graded.",
+    "icon": "♻️",
+    "wp_url": "https://www.probuildsupplies.uk/product/alford-reclaimed-bricks/",
     "colour": "Red / Multi — aged",
     "frost": "F2 — Fully frost resistant",
-    "visible": true,
     "badge": "In Stock",
-    "sizeVariants": [],
     "image": "",
-    "createdAt": "2026-06-02T11:59:25.080Z"
+    "sizes": []
   },
   {
-    "id": "p013",
+    "slug": "ashbourne-reclaimed-bricks",
     "name": "Ashbourne Reclaimed Bricks – 60mm",
     "category": "Reclaimed Bricks",
     "price": "£386.10",
-    "priceNote": "Pack of 450 | Free delivery",
-    "slug": "ashbourne-reclaimed-bricks",
-    "url": "https://www.probuildsupplies.uk/product/ashbourne-reclaimed-bricks/",
-    "description": "Authentic Ashbourne-style reclaimed bricks.",
+    "price_note": "Pack of 450 | Free delivery",
+    "short": "Authentic Ashbourne-style reclaimed bricks with genuine aged character.",
+    "icon": "♻️",
+    "wp_url": "https://www.probuildsupplies.uk/product/ashbourne-reclaimed-bricks/",
     "colour": "Red / Multi — aged",
     "frost": "F2 — Fully frost resistant",
-    "visible": true,
     "badge": "In Stock",
-    "sizeVariants": [],
     "image": "",
-    "createdAt": "2026-06-02T11:59:25.080Z"
+    "sizes": []
   },
   {
-    "id": "p014",
+    "slug": "anthracite-black-20mm",
     "name": "Anthracite Black Porcelain Paving 20mm",
     "category": "Porcelain Paving",
     "price": "£421.00+",
-    "priceNote": "Per pallet | Free delivery",
-    "slug": "anthracite-black-20mm",
-    "url": "https://www.probuildsupplies.uk/product/anthracite-black-sawn-edges/",
-    "description": "Bold anthracite black porcelain with precision sawn edges.",
+    "price_note": "Per pallet | Free delivery",
+    "short": "Bold contemporary anthracite black porcelain with precision sawn edges.",
+    "icon": "🪨",
+    "wp_url": "https://www.probuildsupplies.uk/product/anthracite-black-sawn-edges/",
     "colour": "Anthracite Black",
     "frost": "Yes",
-    "visible": true,
     "badge": "Best Seller",
-    "sizeVariants": [],
     "image": "",
-    "createdAt": "2026-06-02T11:59:25.080Z"
+    "sizes": []
   },
   {
-    "id": "p015",
+    "slug": "county-lgy-light-grey-20mm",
     "name": "County LGY Light Grey Porcelain Paving 20mm",
     "category": "Porcelain Paving",
     "price": "£421.20",
-    "priceNote": "Per pallet | Free delivery",
-    "slug": "county-lgy-light-grey-20mm",
-    "url": "https://www.probuildsupplies.uk/product/county-lgy-light-grey-20mm/",
-    "description": "Clean light grey porcelain with subtle natural stone markings.",
+    "price_note": "Per pallet | Free delivery",
+    "short": "Clean light grey porcelain with subtle natural stone markings.",
+    "icon": "🪨",
+    "wp_url": "https://www.probuildsupplies.uk/product/county-lgy-light-grey-20mm/",
     "colour": "Light Grey",
     "frost": "Yes",
-    "visible": true,
     "badge": "",
-    "sizeVariants": [],
     "image": "",
-    "createdAt": "2026-06-02T11:59:25.080Z"
+    "sizes": []
   },
   {
-    "id": "p016",
+    "slug": "everest-pearl-20mm",
+    "name": "Everest Pearl Porcelain Paving 20mm",
+    "category": "Porcelain Paving",
+    "price": "£421.20",
+    "price_note": "Per pallet | Free delivery",
+    "short": "Soft creamy pearl-toned porcelain with elegant natural stone markings.",
+    "icon": "🪨",
+    "wp_url": "https://www.probuildsupplies.uk/product/everest-pearl-sawn-edges/",
+    "colour": "Pearl / Cream",
+    "frost": "Yes",
+    "badge": "",
+    "image": "",
+    "sizes": []
+  },
+  {
+    "slug": "crossover-grey-20mm",
+    "name": "Crossover Grey Porcelain Paving 20mm",
+    "category": "Porcelain Paving",
+    "price": "£421.20",
+    "price_note": "Per pallet | Free delivery",
+    "short": "Mid-tone grey porcelain with subtle brushed concrete look.",
+    "icon": "🪨",
+    "wp_url": "https://www.probuildsupplies.uk/product/crossover-grey-sawn-edges/",
+    "colour": "Mid Grey",
+    "frost": "Yes",
+    "badge": "",
+    "image": "",
+    "sizes": []
+  },
+  {
+    "slug": "autumn-brown",
     "name": "Autumn Brown Indian Sandstone 22mm",
     "category": "Indian Sandstone",
     "price": "£347.92",
-    "priceNote": "Mix patio pack | Delivery included",
-    "slug": "autumn-brown",
-    "url": "https://www.probuildsupplies.uk/product/autumn-brown/",
-    "description": "Warm earthy mix of brown and russet tones.",
+    "price_note": "Mix patio pack | Delivery included",
+    "short": "Warm earthy mix of brown and russet tones.",
+    "icon": "🌿",
+    "wp_url": "https://www.probuildsupplies.uk/product/autumn-brown/",
     "colour": "Brown / Russet",
     "frost": "Yes",
-    "visible": true,
     "badge": "Best Seller",
-    "sizeVariants": [],
     "image": "",
-    "createdAt": "2026-06-02T11:59:25.080Z"
+    "sizes": []
   },
   {
-    "id": "p017",
+    "slug": "raj-blend",
     "name": "Raj Blend Indian Sandstone 22mm",
     "category": "Indian Sandstone",
     "price": "£381.52",
-    "priceNote": "Mix patio pack | Delivery included",
-    "slug": "raj-blend",
-    "url": "https://www.probuildsupplies.uk/product/raj-blend/",
-    "description": "Beautiful multi-toned blend of pinks, buffs and greys with purple veining.",
-    "colour": "Pink / Buff / Grey Multi",
+    "price_note": "Mix patio pack | Delivery included",
+    "short": "Beautiful multi-toned blend of pinks, buffs and greys with subtle purple veining.",
+    "icon": "🌿",
+    "wp_url": "https://www.probuildsupplies.uk/product/raj-blend/",
+    "colour": "Pink / Buff / Grey with purple veining",
     "frost": "Yes",
-    "visible": true,
     "badge": "",
-    "sizeVariants": [],
     "image": "",
-    "createdAt": "2026-06-02T11:59:25.080Z"
+    "sizes": []
   },
   {
-    "id": "p018",
+    "slug": "fossil-mint",
     "name": "Fossil Mint Indian Sandstone 22mm",
     "category": "Indian Sandstone",
     "price": "£435.68",
-    "priceNote": "Mix patio pack | Delivery included",
-    "slug": "fossil-mint",
-    "url": "https://www.probuildsupplies.uk/product/fossil-mint/",
-    "description": "Premium white/cream sandstone with distinctive green fossil markings.",
-    "colour": "White / Cream with green markings",
+    "price_note": "Mix patio pack | Delivery included",
+    "short": "Premium white/cream sandstone with distinctive green fossil markings.",
+    "icon": "🌿",
+    "wp_url": "https://www.probuildsupplies.uk/product/fossil-mint/",
+    "colour": "White / Cream with green fossil markings",
     "frost": "Yes",
-    "visible": true,
     "badge": "",
-    "sizeVariants": [],
     "image": "",
-    "createdAt": "2026-06-02T11:59:25.080Z"
+    "sizes": []
+  },
+  {
+    "slug": "kandla-grey",
+    "name": "Kandla Grey Indian Sandstone 22mm",
+    "category": "Indian Sandstone",
+    "price": "£390.50",
+    "price_note": "Mix patio pack | Delivery included",
+    "short": "Cool contemporary grey sandstone bridging natural stone and modern porcelain.",
+    "icon": "🌿",
+    "wp_url": "https://www.probuildsupplies.uk/product/kandla-grey-sandstone/",
+    "colour": "Grey / Blue-Grey",
+    "frost": "Yes",
+    "badge": "",
+    "image": "",
+    "sizes": []
   }
 ]

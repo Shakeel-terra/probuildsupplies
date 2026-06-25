@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0">
+<title>Checkout — Pro Build Supplies</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://app.snipcart.com">
+<link rel="preconnect" href="https://cdn.snipcart.com">
+<link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.3.3/default/snipcart.css">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--o:#F55C1B;--y:#FFD000;--dk:#1A1A1A;--ch:#2C2C2C;--mid:#555;--lt:#F5F3EF;--wh:#FFFFFF;--st:#7F8C8D;--bd:#E8E4DC;--gr:#22C55E;--r:6px}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:'Barlow',sans-serif;background:var(--lt);color:var(--dk);overflow-x:hidden;width:100%;margin:0}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+*{-webkit-tap-highlight-color:transparent}
+
+.ann{background:var(--y);color:var(--dk);text-align:center;padding:9px 16px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.88rem}
+.ann-x{margin-left:8px}
+.hdr{background:var(--dk);position:sticky;top:0;z-index:9999;border-bottom:3px solid var(--o);width:100%}
+.hdr-i{max-width:1280px;margin:0 auto;padding:0 20px;display:flex;align-items:center;height:66px;gap:14px}
+.logo{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.85rem;color:var(--wh);letter-spacing:-1px;flex-shrink:0;line-height:1}
+.logo b{color:var(--o);font-weight:900}
+.hdr-act{display:flex;align-items:center;gap:10px;margin-left:auto}
+.cart-btn{background:var(--o);padding:8px 15px;border-radius:4px;font-family:'Barlow Condensed',sans-serif;font-size:.92rem;color:var(--wh);white-space:nowrap;display:flex;align-items:center;gap:6px}
+
+/* CHECKOUT LAYOUT */
+.co-wrap{max-width:1100px;margin:0 auto;padding:36px 20px 80px}
+.co-title{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:2.2rem;text-transform:uppercase;color:var(--dk);margin-bottom:6px;line-height:1}
+.co-title b{color:var(--o)}
+.co-sub{color:var(--mid);font-size:.9rem;margin-bottom:32px}
+
+/* STEPS BAR */
+.steps{display:flex;align-items:center;gap:0;margin-bottom:36px;background:var(--wh);border-radius:var(--r);border:1px solid var(--bd);overflow:hidden}
+.step{flex:1;padding:14px 18px;display:flex;align-items:center;gap:10px;border-right:1px solid var(--bd);position:relative}
+.step:last-child{border-right:none}
+.step-num{width:28px;height:28px;border-radius:50%;background:var(--bd);color:var(--st);font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:.9rem;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.step.done .step-num{background:var(--gr);color:var(--wh)}
+.step.active .step-num{background:var(--o);color:var(--wh)}
+.step-label{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.88rem;text-transform:uppercase;color:var(--mid)}
+.step.active .step-label{color:var(--dk)}
+
+/* GRID */
+.co-grid{display:grid;grid-template-columns:1fr 380px;gap:28px;align-items:start}
+
+/* FORM CARDS */
+.co-card{background:var(--wh);border-radius:var(--r);border:1px solid var(--bd);margin-bottom:18px;overflow:hidden}
+.co-card-hdr{padding:18px 22px;border-bottom:1px solid var(--bd);display:flex;align-items:center;gap:11px}
+.co-card-hdr h2{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.3rem;text-transform:uppercase;color:var(--dk)}
+.co-card-hdr .ic{font-size:1.3rem}
+.co-card-body{padding:22px}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:0}
+.fg{display:flex;flex-direction:column;gap:5px;margin-bottom:14px}
+.fg:last-child{margin-bottom:0}
+.fg label{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.77rem;text-transform:uppercase;letter-spacing:.5px;color:var(--dk)}
+.fg input,.fg select,.fg textarea{padding:11px 13px;border:2px solid var(--bd);border-radius:4px;font-family:'Barlow',sans-serif;font-size:.9rem;color:var(--dk);outline:none;background:var(--lt);transition:border-color .2s;width:100%}
+.fg input:focus,.fg select:focus{border-color:var(--o);background:var(--wh)}
+.fg input.err{border-color:#EF4444}
+.req{color:var(--o)}
+.hint{font-size:.74rem;color:var(--st);margin-top:2px}
+
+/* SHIPPING OPTIONS */
+.ship-opts{display:flex;flex-direction:column;gap:10px}
+.ship-opt{display:flex;align-items:center;gap:13px;padding:14px 16px;border:2px solid var(--bd);border-radius:4px;cursor:pointer;transition:border-color .2s}
+.ship-opt:hover{border-color:var(--o)}
+.ship-opt.sel{border-color:var(--o);background:rgba(245,92,27,.04)}
+.ship-opt input[type=radio]{accent-color:var(--o);width:16px;height:16px;flex-shrink:0}
+.ship-opt-info{flex:1}
+.ship-opt-name{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1rem;color:var(--dk)}
+.ship-opt-desc{font-size:.8rem;color:var(--mid);margin-top:2px}
+.ship-opt-price{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.1rem;color:var(--dk)}
+
+/* PAYMENT */
+.pay-methods{display:flex;flex-direction:column;gap:10px;margin-bottom:20px}
+.pay-method{display:flex;align-items:center;gap:13px;padding:14px 16px;border:2px solid var(--bd);border-radius:4px;cursor:pointer;transition:border-color .2s}
+.pay-method:hover{border-color:var(--o)}
+.pay-method.sel{border-color:var(--o);background:rgba(245,92,27,.04)}
+.pay-method input[type=radio]{accent-color:var(--o);width:16px;height:16px;flex-shrink:0}
+.pay-method-info{flex:1}
+.pay-method-name{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.97rem;color:var(--dk)}
+.pay-method-desc{font-size:.78rem;color:var(--mid);margin-top:2px}
+.pay-logos{display:flex;gap:6px;flex-wrap:wrap}
+.pay-logo{background:#F0F0F0;border:1px solid #DDD;border-radius:3px;padding:3px 8px;font-size:.7rem;font-weight:700;color:#555}
+
+/* STRIPE CARD FIELD */
+.stripe-field{padding:13px;border:2px solid var(--bd);border-radius:4px;background:var(--lt);transition:border-color .2s;margin-bottom:14px}
+.stripe-field:focus-within{border-color:var(--o);background:var(--wh)}
+.card-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+
+/* ORDER SUMMARY */
+.summary-card{background:var(--wh);border-radius:var(--r);border:1px solid var(--bd);position:sticky;top:88px}
+.sum-hdr{padding:16px 20px;border-bottom:1px solid var(--bd);font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.1rem;text-transform:uppercase;color:var(--dk);display:flex;align-items:center;justify-content:space-between}
+.sum-toggle{background:none;border:none;color:var(--o);font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.82rem;text-transform:uppercase;cursor:pointer}
+.sum-items{padding:16px 20px;border-bottom:1px solid var(--bd);max-height:320px;overflow-y:auto}
+.sum-item{display:flex;gap:12px;margin-bottom:14px;align-items:flex-start}
+.sum-item:last-child{margin-bottom:0}
+.sum-img{width:52px;height:52px;border-radius:4px;background:var(--lt);border:1px solid var(--bd);display:flex;align-items:center;justify-content:center;font-size:1.4rem;flex-shrink:0;overflow:hidden}
+.sum-img img{width:100%;height:100%;object-fit:cover}
+.sum-item-info{flex:1;min-width:0}
+.sum-item-name{font-size:.88rem;font-weight:600;color:var(--dk);line-height:1.3}
+.sum-item-meta{font-size:.76rem;color:var(--st);margin-top:2px}
+.sum-item-price{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1rem;color:var(--dk);flex-shrink:0}
+.sum-totals{padding:16px 20px}
+.sum-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;font-size:.88rem;color:var(--mid)}
+.sum-row.total{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.3rem;color:var(--dk);border-top:2px solid var(--bd);padding-top:12px;margin-top:4px;margin-bottom:0}
+.sum-row .val{font-family:'Barlow Condensed',sans-serif;font-weight:700}
+.sum-row.total .val{font-size:1.3rem}
+.sum-vat{font-size:.74rem;color:var(--st);text-align:right;margin-top:4px}
+.coupon-row{display:flex;gap:8px;padding:14px 20px;border-top:1px solid var(--bd)}
+.coupon-row input{flex:1;padding:9px 12px;border:2px solid var(--bd);border-radius:4px;font-size:.85rem;outline:none;background:var(--lt)}
+.coupon-row input:focus{border-color:var(--o)}
+.coupon-row button{background:var(--dk);color:var(--wh);border:none;padding:9px 16px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.85rem;text-transform:uppercase;border-radius:4px;cursor:pointer;transition:background .2s;white-space:nowrap}
+.coupon-row button:hover{background:var(--o)}
+
+/* PLACE ORDER */
+.place-order-btn{width:100%;background:var(--o);color:var(--wh);border:none;padding:17px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.2rem;letter-spacing:1px;text-transform:uppercase;cursor:pointer;border-radius:4px;transition:background .2s;margin-top:4px;display:flex;align-items:center;justify-content:center;gap:10px}
+.place-order-btn:hover{background:#d94d0f}
+.place-order-btn:disabled{background:#AAA;cursor:not-allowed}
+.secure-note{text-align:center;font-size:.76rem;color:var(--st);margin-top:10px;display:flex;align-items:center;justify-content:center;gap:5px}
+
+/* TRUST */
+.co-trust{display:flex;gap:18px;padding:14px 0;border-top:1px solid var(--bd);margin-top:14px;flex-wrap:wrap}
+.cti{display:flex;align-items:center;gap:6px;font-size:.78rem;color:var(--mid);font-weight:600}
+
+/* EMPTY CART */
+.empty-cart{text-align:center;padding:72px 24px}
+.empty-cart .ec-ic{font-size:4rem;margin-bottom:18px}
+.empty-cart h2{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.8rem;text-transform:uppercase;margin-bottom:10px;color:var(--dk)}
+.empty-cart p{color:var(--mid);font-size:.9rem;margin-bottom:24px}
+
+/* SUCCESS */
+.success-screen{display:none;text-align:center;padding:72px 24px;max-width:560px;margin:0 auto}
+.success-screen .si{font-size:4rem;margin-bottom:18px}
+.success-screen h2{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:2rem;text-transform:uppercase;color:var(--dk);margin-bottom:11px}
+.success-screen p{color:var(--mid);font-size:.9rem;line-height:1.7;margin-bottom:22px}
+
+/* VALIDATION */
+.field-err{font-size:.76rem;color:#EF4444;margin-top:3px;display:none}
+
+/* SNIPCART OVERRIDES */
+:root{--color-buttonPrimary:#F55C1B;--color-buttonPrimary-hover:#d94d0f}
+.snip-header{background:#1A1A1A!important;border-bottom:3px solid #F55C1B!important}
+.snip-btn--primary{background:#F55C1B!important;font-family:'Barlow Condensed',sans-serif!important;font-weight:700!important;text-transform:uppercase!important;letter-spacing:1px!important;border-radius:4px!important}
+.snip-btn--primary:hover{background:#d94d0f!important}
+
+footer{background:#111;padding:32px 20px 18px;color:#888;margin-top:0}
+.ft-i{max-width:1280px;margin:0 auto}
+.ft-bot{display:flex;justify-content:space-between;align-items:center;font-size:.77rem;flex-wrap:wrap;gap:9px}
+.pays{display:flex;gap:7px;flex-wrap:wrap}
+.pay{background:#222;border:1px solid #333;border-radius:3px;padding:3px 8px;font-size:.68rem;color:#888;font-weight:600}
+
+@media(max-width:900px){.co-grid{grid-template-columns:1fr}.summary-card{position:static;order:-1}.steps{display:none}}
+@media(max-width:600px){.co-wrap{padding:20px 14px 60px}.frow{grid-template-columns:1fr}.card-row{grid-template-columns:1fr}.co-title{font-size:1.8rem}.place-order-btn{font-size:1.05rem;padding:15px}}
+</style>
+</head>
+<body>
+
+<div class="ann">🔒 Secure Checkout &nbsp;|&nbsp; <span class="ann-x">🚚 Free Delivery on All Orders &nbsp;|&nbsp; VAT Included in All Prices</span></div>
+
+<header class="hdr">
+  <div class="hdr-i">
+    <a href="index.html" class="logo">Pro Build <b>Supplies</b></a>
+    <div class="hdr-act">
+      <a href="index.html" style="color:#CCC;font-size:.85rem">← Continue Shopping</a>
+      <a href="#" class="cart-btn snipcart-checkout">🛒 Cart <span class="snipcart-items-count" style="background:var(--y);color:var(--dk);font-size:.65rem;font-weight:700;border-radius:10px;padding:1px 5px;font-family:'Barlow Condensed',sans-serif"></span></a>
+    </div>
+  </div>
+</header>
+
+<div class="co-wrap">
+
+  <!-- STEPS -->
+  <div class="steps">
+    <div class="step active" id="step1">
+      <div class="step-num">1</div>
+      <div class="step-label">Details</div>
+    </div>
+    <div class="step" id="step2">
+      <div class="step-num">2</div>
+      <div class="step-label">Delivery</div>
+    </div>
+    <div class="step" id="step3">
+      <div class="step-num">3</div>
+      <div class="step-label">Payment</div>
+    </div>
+    <div class="step" id="step4">
+      <div class="step-num">✓</div>
+      <div class="step-label">Confirmed</div>
+    </div>
+  </div>
+
+  <div id="mainCheckout">
+    <div class="co-title">Checkout <b>🔒</b></div>
+    <p class="co-sub">All prices include VAT. Free delivery on all UK mainland orders.</p>
+
+    <div class="co-grid">
+
+      <!-- LEFT: FORM -->
+      <div id="coLeft">
+
+        <!-- STEP 1: DETAILS -->
+        <div id="panelDetails">
+          <div class="co-card">
+            <div class="co-card-hdr"><span class="ic">👤</span><h2>Your Details</h2></div>
+            <div class="co-card-body">
+              <div class="frow">
+                <div class="fg"><label>First Name <span class="req">*</span></label><input type="text" id="fFirst" placeholder="e.g. John"><div class="field-err" id="errFirst">Required</div></div>
+                <div class="fg"><label>Last Name <span class="req">*</span></label><input type="text" id="fLast" placeholder="e.g. Smith"><div class="field-err" id="errLast">Required</div></div>
+              </div>
+              <div class="fg"><label>Email Address <span class="req">*</span></label><input type="email" id="fEmail" placeholder="your@email.com"><div class="field-err" id="errEmail">Enter a valid email address</div></div>
+              <div class="fg"><label>Phone Number <span class="req">*</span></label><input type="tel" id="fPhone" placeholder="07700 900000"><div class="field-err" id="errPhone">Required</div><div class="hint">We may call to confirm large deliveries</div></div>
+            </div>
+          </div>
+
+          <div class="co-card">
+            <div class="co-card-hdr"><span class="ic">📍</span><h2>Delivery Address</h2></div>
+            <div class="co-card-body">
+              <div class="fg"><label>Address Line 1 <span class="req">*</span></label><input type="text" id="fAddr1" placeholder="House number and street"><div class="field-err" id="errAddr1">Required</div></div>
+              <div class="fg"><label>Address Line 2</label><input type="text" id="fAddr2" placeholder="Apartment, suite, unit etc. (optional)"></div>
+              <div class="frow">
+                <div class="fg"><label>Town / City <span class="req">*</span></label><input type="text" id="fCity" placeholder="e.g. Manchester"><div class="field-err" id="errCity">Required</div></div>
+                <div class="fg"><label>County</label><input type="text" id="fCounty" placeholder="e.g. Greater Manchester"></div>
+              </div>
+              <div class="frow">
+                <div class="fg"><label>Postcode <span class="req">*</span></label><input type="text" id="fPostcode" placeholder="e.g. M1 1AA" style="text-transform:uppercase"><div class="field-err" id="errPostcode">Enter a valid UK postcode</div></div>
+                <div class="fg"><label>Country</label><select id="fCountry"><option value="GB" selected>United Kingdom</option><option value="IE">Ireland</option></select></div>
+              </div>
+              <div class="fg"><label>Delivery Notes</label><input type="text" id="fNotes" placeholder="Access instructions, site requirements etc. (optional)"></div>
+              <button class="place-order-btn" onclick="goToDelivery()" style="margin-top:4px">Continue to Delivery →</button>
+              <div class="co-trust">
+                <div class="cti"><span>🔒</span> Secure &amp; Encrypted</div>
+                <div class="cti"><span>🚚</span> Free UK Delivery</div>
+                <div class="cti"><span>↩️</span> 30-Day Returns</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 2: DELIVERY -->
+        <div id="panelDelivery" style="display:none">
+          <div class="co-card">
+            <div class="co-card-hdr"><span class="ic">🚚</span><h2>Delivery Method</h2></div>
+            <div class="co-card-body">
+              <div class="ship-opts">
+                <label class="ship-opt sel" onclick="selectShipping(this,'free')">
+                  <input type="radio" name="shipping" value="free" checked>
+                  <div class="ship-opt-info">
+                    <div class="ship-opt-name">Standard Pallet Delivery</div>
+                    <div class="ship-opt-desc">1–3 working days after dispatch · Kerbside delivery · Next-day dispatch if ordered before 2pm</div>
+                  </div>
+                  <div class="ship-opt-price">FREE</div>
+                </label>
+                <label class="ship-opt" onclick="selectShipping(this,'express')">
+                  <input type="radio" name="shipping" value="express">
+                  <div class="ship-opt-info">
+                    <div class="ship-opt-name">Express Next-Day Delivery</div>
+                    <div class="ship-opt-desc">Next working day · Order before 2pm · Subject to availability</div>
+                  </div>
+                  <div class="ship-opt-price">£35.00</div>
+                </label>
+              </div>
+              <div style="background:var(--lt);border-radius:4px;padding:14px;margin-top:18px;font-size:.83rem;color:var(--mid);line-height:1.7;border-left:3px solid var(--o)">
+                <strong style="color:var(--dk)">📦 Delivery Information</strong><br>
+                All deliveries are kerbside only — please ensure clear access for an 18-tonne lorry with tail lift. Someone must be available to accept the delivery. If you have specific access requirements please add a note on the previous screen.
+              </div>
+              <div style="display:flex;gap:11px;margin-top:18px;flex-wrap:wrap">
+                <button class="place-order-btn" onclick="goToPayment()" style="flex:1">Continue to Payment →</button>
+                <button onclick="goBack('panelDetails','panelDelivery',1)" style="background:none;border:2px solid var(--bd);color:var(--mid);padding:13px 20px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.95rem;text-transform:uppercase;border-radius:4px;cursor:pointer;transition:all .2s;white-space:nowrap">← Back</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 3: PAYMENT -->
+        <div id="panelPayment" style="display:none">
+          <div class="co-card">
+            <div class="co-card-hdr"><span class="ic">💳</span><h2>Payment</h2></div>
+            <div class="co-card-body">
+              <p style="font-size:.85rem;color:var(--mid);margin-bottom:18px;line-height:1.6">Your payment is processed securely by <strong>Stripe</strong>. We never store your card details.</p>
+              <div class="pay-methods">
+                <label class="pay-method sel" onclick="selectPay(this,'card')">
+                  <input type="radio" name="paymethod" value="card" checked>
+                  <div class="pay-method-info">
+                    <div class="pay-method-name">💳 Credit / Debit Card</div>
+                    <div class="pay-method-desc">Visa, Mastercard, Amex — processed by Stripe</div>
+                  </div>
+                  <div class="pay-logos"><span class="pay-logo">VISA</span><span class="pay-logo">MC</span><span class="pay-logo">AMEX</span></div>
+                </label>
+                <label class="pay-method" onclick="selectPay(this,'klarna')">
+                  <input type="radio" name="paymethod" value="klarna">
+                  <div class="pay-method-info">
+                    <div class="pay-method-name">🟣 Klarna — Buy Now, Pay Later</div>
+                    <div class="pay-method-desc">Pay in 3 instalments · 0% interest</div>
+                  </div>
+                  <div class="pay-logos"><span class="pay-logo" style="background:#FFB3C7;color:#000;border-color:#FFB3C7">Klarna</span></div>
+                </label>
+              </div>
+
+              <!-- CARD FIELDS (shown via Snipcart) -->
+              <div id="cardFields">
+                <div class="fg"><label>Cardholder Name <span class="req">*</span></label><input type="text" id="fCardName" placeholder="Name as it appears on card"><div class="field-err" id="errCardName">Required</div></div>
+                <div class="fg">
+                  <label>Card Number <span class="req">*</span></label>
+                  <div class="stripe-field"><div id="cardNumber" style="height:20px"></div></div>
+                </div>
+                <div class="card-row">
+                  <div class="fg"><label>Expiry Date <span class="req">*</span></label><div class="stripe-field"><div id="cardExpiry" style="height:20px"></div></div></div>
+                  <div class="fg"><label>CVC <span class="req">*</span></label><div class="stripe-field"><div id="cardCvc" style="height:20px"></div></div></div>
+                </div>
+              </div>
+
+              <div id="klarnaInfo" style="display:none;background:var(--lt);border-radius:4px;padding:16px;margin-bottom:16px;font-size:.85rem;color:var(--mid);line-height:1.7">
+                You'll be redirected to Klarna to complete your purchase. Split into 3 equal payments — first payment taken today.
+              </div>
+
+              <div id="payError" style="display:none;background:rgba(239,68,68,.1);border:1px solid #EF4444;border-radius:4px;padding:12px 14px;font-size:.85rem;color:#991b1b;margin-bottom:14px"></div>
+
+              <button class="place-order-btn" id="placeOrderBtn" onclick="placeOrder()">
+                <span>🔒</span> Place Order
+              </button>
+              <div class="secure-note"><span>🔒</span> 256-bit SSL encryption · Your data is safe</div>
+              <div style="display:flex;gap:11px;margin-top:14px;flex-wrap:wrap">
+                <button onclick="goBack('panelDelivery','panelPayment',2)" style="width:100%;background:none;border:2px solid var(--bd);color:var(--mid);padding:11px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.92rem;text-transform:uppercase;border-radius:4px;cursor:pointer;transition:all .2s">← Back to Delivery</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /coLeft -->
+
+      <!-- RIGHT: ORDER SUMMARY -->
+      <div>
+        <div class="summary-card">
+          <div class="sum-hdr">
+            Order Summary
+            <button class="sum-toggle" onclick="toggleSummary()">Hide</button>
+          </div>
+          <div id="sumBody">
+            <div class="sum-items" id="sumItems">
+              <!-- Populated from Snipcart cart -->
+              <div style="text-align:center;color:var(--st);font-size:.85rem;padding:20px">Loading cart...</div>
+            </div>
+            <div class="coupon-row">
+              <input type="text" id="couponInput" placeholder="Discount code">
+              <button onclick="applyCoupon()">Apply</button>
+            </div>
+            <div class="sum-totals">
+              <div class="sum-row"><span>Subtotal</span><span class="val" id="sumSubtotal">—</span></div>
+              <div class="sum-row" id="sumDeliveryRow"><span>Delivery</span><span class="val" id="sumDelivery">FREE</span></div>
+              <div class="sum-row" id="sumExpressRow" style="display:none"><span>Express Delivery</span><span class="val">£35.00</span></div>
+              <div class="sum-row" id="sumDiscountRow" style="display:none"><span>Discount</span><span class="val" id="sumDiscount" style="color:var(--gr)">—</span></div>
+              <div class="sum-row total"><span>Total</span><span class="val" id="sumTotal">—</span></div>
+              <div class="sum-vat">All prices include VAT at 20%</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TRUST BADGES -->
+        <div style="background:var(--wh);border-radius:var(--r);border:1px solid var(--bd);padding:18px;margin-top:14px">
+          <div style="display:flex;flex-direction:column;gap:11px">
+            <div style="display:flex;align-items:center;gap:10px;font-size:.83rem;color:var(--mid)"><span style="font-size:1.1rem">🔒</span><span><strong style="color:var(--dk)">Secure Payment</strong> — SSL encrypted checkout</span></div>
+            <div style="display:flex;align-items:center;gap:10px;font-size:.83rem;color:var(--mid)"><span style="font-size:1.1rem">🚚</span><span><strong style="color:var(--dk)">Free Delivery</strong> — All UK mainland orders</span></div>
+            <div style="display:flex;align-items:center;gap:10px;font-size:.83rem;color:var(--mid)"><span style="font-size:1.1rem">↩️</span><span><strong style="color:var(--dk)">30-Day Returns</strong> — Hassle-free policy</span></div>
+            <div style="display:flex;align-items:center;gap:10px;font-size:.83rem;color:var(--mid)"><span style="font-size:1.1rem">📞</span><span><strong style="color:var(--dk)">Need help?</strong> Call <a href="tel:08001234567" style="color:var(--o)">0800 123 4567</a></span></div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /co-grid -->
+  </div><!-- /mainCheckout -->
+
+  <!-- SUCCESS SCREEN -->
+  <div class="success-screen" id="successScreen">
+    <div class="si">✅</div>
+    <h2>Order Confirmed!</h2>
+    <p>Thank you for your order. We've sent a confirmation email to <strong id="confEmail"></strong>.<br><br>Your order will be dispatched within 1 working day and delivered within 1–3 working days after that.</p>
+    <p style="color:var(--st);font-size:.82rem;margin-bottom:28px">Order reference: <strong id="confRef" style="color:var(--dk)"></strong></p>
+    <a href="index.html" style="display:inline-block;background:var(--o);color:var(--wh);padding:14px 32px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.05rem;text-transform:uppercase;border-radius:4px">← Continue Shopping</a>
+  </div>
+
+</div><!-- /co-wrap -->
+
+<footer>
+  <div class="ft-i">
+    <div class="ft-bot">
+      <span>© 2026 Pro Build Supplies. All rights reserved. VAT included in all prices.</span>
+      <div class="pays"><span class="pay">VISA</span><span class="pay">Mastercard</span><span class="pay">PayPal</span><span class="pay">Klarna</span><span class="pay">AMEX</span></div>
+    </div>
+  </div>
+</footer>
+
+<!-- Snipcart -->
+<div hidden id="snipcart" data-api-key="YOUR_SNIPCART_PUBLIC_API_KEY" data-currency="gbp"></div>
+<script src="snipcart-config.js"></script>
+<script async src="https://cdn.snipcart.com/themes/v3.3.3/default/snipcart.js"></script>
+
+<script>
+// ── CART DATA ────────────────────────────────────────────────
+var cart = { items:[], subtotal:0, delivery:'free', coupon:null };
+
+// Load cart from Snipcart when ready
+document.addEventListener('snipcart.ready', function() {
+  Snipcart.events.on('cart.ready', function(state) { updateSummary(state); });
+  Snipcart.events.on('item.added',   function(state) { updateSummary(Snipcart.store.getState().cart); });
+  Snipcart.events.on('item.removed', function(state) { updateSummary(Snipcart.store.getState().cart); });
+  updateSummary(Snipcart.store.getState().cart);
+});
+
+function updateSummary(cartState) {
+  if (!cartState || !cartState.items) return;
+  var items = cartState.items.items || [];
+  var subtotal = cartState.subtotal || 0;
+
+  // Render items
+  var html = '';
+  items.forEach(function(item) {
+    html += '<div class="sum-item">'
+      + '<div class="sum-img">' + (item.image ? '<img src="'+item.image+'">' : '🧱') + '</div>'
+      + '<div class="sum-item-info">'
+      + '<div class="sum-item-name">'+item.name+'</div>'
+      + '<div class="sum-item-meta">Qty: '+item.quantity + (item.customFields && item.customFields.length ? ' · '+item.customFields[0].value : '')+'</div>'
+      + '</div>'
+      + '<div class="sum-item-price">£'+(item.totalPrice||0).toFixed(2)+'</div>'
+      + '</div>';
+  });
+  document.getElementById('sumItems').innerHTML = html || '<div style="text-align:center;color:var(--st);font-size:.85rem;padding:20px">Your cart is empty</div>';
+  document.getElementById('sumSubtotal').textContent = '£'+subtotal.toFixed(2);
+
+  // Total with delivery
+  var delivery = cart.delivery === 'express' ? 35 : 0;
+  var total = subtotal + delivery;
+  document.getElementById('sumTotal').textContent = '£'+total.toFixed(2);
+  document.getElementById('sumDelivery').textContent = delivery > 0 ? '£'+delivery.toFixed(2) : 'FREE';
+}
+
+// ── STEP NAVIGATION ──────────────────────────────────────────
+function setStep(n) {
+  for (var i = 1; i <= 4; i++) {
+    var s = document.getElementById('step'+i);
+    if (!s) continue;
+    s.classList.remove('active','done');
+    if (i < n) s.classList.add('done');
+    if (i === n) s.classList.add('active');
+  }
+}
+
+function goToDelivery() {
+  if (!validateDetails()) return;
+  document.getElementById('panelDetails').style.display  = 'none';
+  document.getElementById('panelDelivery').style.display = 'block';
+  document.getElementById('panelPayment').style.display  = 'none';
+  setStep(2);
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function goToPayment() {
+  document.getElementById('panelDetails').style.display  = 'none';
+  document.getElementById('panelDelivery').style.display = 'none';
+  document.getElementById('panelPayment').style.display  = 'block';
+  setStep(3);
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function goBack(showPanel, hidePanel, stepNum) {
+  document.getElementById(hidePanel).style.display = 'none';
+  document.getElementById(showPanel).style.display = 'block';
+  setStep(stepNum);
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+// ── SHIPPING ─────────────────────────────────────────────────
+function selectShipping(el, type) {
+  document.querySelectorAll('.ship-opt').forEach(function(o){ o.classList.remove('sel'); });
+  el.classList.add('sel');
+  cart.delivery = type;
+  var expressRow = document.getElementById('sumExpressRow');
+  var deliveryRow = document.getElementById('sumDeliveryRow');
+  if (type === 'express') {
+    expressRow.style.display = 'flex';
+    deliveryRow.style.display = 'none';
+  } else {
+    expressRow.style.display = 'none';
+    deliveryRow.style.display = 'flex';
+  }
+  // Update total
+  try {
+    var sub = Snipcart.store.getState().cart.subtotal || 0;
+    var delivery = type === 'express' ? 35 : 0;
+    document.getElementById('sumTotal').textContent = '£'+(sub+delivery).toFixed(2);
+    document.getElementById('sumDelivery').textContent = delivery > 0 ? '£'+delivery.toFixed(2) : 'FREE';
+  } catch(e){}
+}
+
+// ── PAYMENT METHOD ───────────────────────────────────────────
+function selectPay(el, type) {
+  document.querySelectorAll('.pay-method').forEach(function(o){ o.classList.remove('sel'); });
+  el.classList.add('sel');
+  document.getElementById('cardFields').style.display  = type === 'card' ? 'block' : 'none';
+  document.getElementById('klarnaInfo').style.display  = type === 'klarna' ? 'block' : 'none';
+}
+
+// ── VALIDATION ────────────────────────────────────────────────
+function validateDetails() {
+  var ok = true;
+  var fields = [
+    ['fFirst','errFirst',function(v){ return v.trim().length > 0; }],
+    ['fLast','errLast',function(v){ return v.trim().length > 0; }],
+    ['fEmail','errEmail',function(v){ return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()); }],
+    ['fPhone','errPhone',function(v){ return v.trim().length > 6; }],
+    ['fAddr1','errAddr1',function(v){ return v.trim().length > 0; }],
+    ['fCity','errCity',function(v){ return v.trim().length > 0; }],
+    ['fPostcode','errPostcode',function(v){ return /^[A-Z]{1,2}\d[A-Z\d]?\s*\d[A-Z]{2}$/i.test(v.trim()); }],
+  ];
+  fields.forEach(function(f) {
+    var input = document.getElementById(f[0]);
+    var err   = document.getElementById(f[1]);
+    if (!input || !err) return;
+    if (!f[2](input.value)) {
+      input.classList.add('err');
+      err.style.display = 'block';
+      ok = false;
+    } else {
+      input.classList.remove('err');
+      err.style.display = 'none';
+    }
+  });
+  if (!ok) {
+    var firstErr = document.querySelector('.fg input.err');
+    if (firstErr) firstErr.scrollIntoView({behavior:'smooth',block:'center'});
+  }
+  return ok;
+}
+
+// ── PLACE ORDER ───────────────────────────────────────────────
+function placeOrder() {
+  var cardName = document.getElementById('fCardName');
+  if (cardName && !cardName.value.trim()) {
+    document.getElementById('errCardName').style.display = 'block';
+    cardName.classList.add('err');
+    return;
+  }
+  // Hand off to Snipcart for actual payment processing
+  // Snipcart handles card capture and Stripe securely
+  var btn = document.getElementById('placeOrderBtn');
+  btn.disabled = true;
+  btn.innerHTML = '⏳ Processing...';
+
+  // Invoke Snipcart checkout with pre-filled customer data
+  try {
+    Snipcart.api.cart.update({
+      billingAddress: {
+        name:       document.getElementById('fFirst').value + ' ' + document.getElementById('fLast').value,
+        address1:   document.getElementById('fAddr1').value,
+        address2:   document.getElementById('fAddr2').value,
+        city:       document.getElementById('fCity').value,
+        province:   document.getElementById('fCounty').value,
+        postalCode: document.getElementById('fPostcode').value,
+        country:    document.getElementById('fCountry').value,
+      },
+      email: document.getElementById('fEmail').value,
+    }).then(function() {
+      Snipcart.api.theme.cart.open();
+      btn.disabled = false;
+      btn.innerHTML = '<span>🔒</span> Place Order';
+    });
+  } catch(e) {
+    // Fallback: just open Snipcart checkout
+    Snipcart.api.theme.cart.open();
+    btn.disabled = false;
+    btn.innerHTML = '<span>🔒</span> Place Order';
+  }
+}
+
+// ── COUPON ────────────────────────────────────────────────────
+function applyCoupon() {
+  var code = document.getElementById('couponInput').value.trim();
+  if (!code) return;
+  try {
+    Snipcart.api.cart.applyDiscount(code).then(function(res) {
+      if (res && res.discount) {
+        document.getElementById('sumDiscountRow').style.display = 'flex';
+        document.getElementById('sumDiscount').textContent = '-£'+res.discount.toFixed(2);
+      }
+    });
+  } catch(e) {}
+}
+
+// ── TOGGLE SUMMARY ────────────────────────────────────────────
+function toggleSummary() {
+  var body = document.getElementById('sumBody');
+  var btn  = document.querySelector('.sum-toggle');
+  if (body.style.display === 'none') {
+    body.style.display = 'block';
+    btn.textContent = 'Hide';
+  } else {
+    body.style.display = 'none';
+    btn.textContent = 'Show';
+  }
+}
+
+// ── INPUT CLEAR ERRORS ON FOCUS ───────────────────────────────
+document.querySelectorAll('.fg input, .fg select').forEach(function(el) {
+  el.addEventListener('input', function() {
+    this.classList.remove('err');
+    var errId = 'err' + this.id.replace('f','');
+    var errEl = document.getElementById(errId);
+    if (errEl) errEl.style.display = 'none';
+  });
+});
+
+// ── POSTCODE FORMAT ───────────────────────────────────────────
+document.getElementById('fPostcode').addEventListener('blur', function() {
+  this.value = this.value.toUpperCase();
+});
+</script>
+</body>
+</html>
