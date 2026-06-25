@@ -762,5 +762,28 @@ document.querySelectorAll('.ptb').forEach(function(b){
 <!-- Snipcart init -->
 <div hidden id="snipcart" data-api-key="MDQ0ZDg2YTQtNGJjNi00OWYxLTkxNTctZmNlMWJkZjJkNDgyNjM5MTc5OTUyNDY0MDkyMDEw" data-currency="gbp"></div>
 <script src="https://cdn.snipcart.com/themes/v3.3.3/default/snipcart.js"></script>
+<link rel="stylesheet" href="../snipcart-theme.css">
+
+<script>
+// Hide header when Snipcart cart opens to prevent overlap
+document.addEventListener('snipcart.ready', function() {
+  Snipcart.events.on('cart.opened', function() {
+    var ann = document.querySelector('.ann');
+    var hdr = document.querySelector('.hdr');
+    var nav = document.querySelector('.nav');
+    if (ann) ann.style.display = 'none';
+    if (hdr) { hdr.style.position = 'relative'; hdr.style.zIndex = '1'; }
+    if (nav) nav.style.zIndex = '1';
+  });
+  Snipcart.events.on('cart.closed', function() {
+    var ann = document.querySelector('.ann');
+    var hdr = document.querySelector('.hdr');
+    var nav = document.querySelector('.nav');
+    if (ann) ann.style.display = 'block';
+    if (hdr) { hdr.style.position = 'sticky'; hdr.style.zIndex = '9999'; }
+    if (nav) nav.style.zIndex = '9998';
+  });
+});
+</script>
 </body>
 </html>
