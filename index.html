@@ -2,656 +2,1074 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0">
-<title>Pro Build Supplies — Premium Building Materials — Pro Build Supplies</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Pro Build Supplies — Admin</title>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
-
-
-<style id="snip-vars">
-/* Snipcart v3 CSS Custom Properties — must be on :root */
-:root {
-  --color-default: #F55C1B;
-  --color-alt: #1A1A1A;
-  --color-success: #22C55E;
-  --color-danger: #EF4444;
-  --color-accent: #F55C1B;
-
-  --bg-color: #F5F3EF;
-  --bg-color-alt: #FFFFFF;
-
-  --color-link: #F55C1B;
-  --color-link-hover: #d94d0f;
-
-  --color-input: #1A1A1A;
-  --color-input-bg: #FFFFFF;
-  --color-input-bg-alt: #F5F3EF;
-  --color-input-border: #E8E4DC;
-  --color-input-focus: #F55C1B;
-  --color-input-placeholder: #888888;
-
-  --color-buttonPrimary: #F55C1B;
-  --color-buttonPrimary-text: #FFFFFF;
-  --color-buttonPrimary-hover: #d94d0f;
-  --color-buttonSecondary: #1A1A1A;
-  --color-buttonSecondary-text: #FFFFFF;
-  --color-buttonSecondary-hover: #333333;
-
-  --border-radius: 4px;
-  --font-family: 'Barlow', sans-serif;
-
-  --shadow: 0 8px 32px rgba(0,0,0,0.12);
-}
-</style>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --o:#F55C1B;--y:#FFD000;--dk:#1A1A1A;--ch:#2C2C2C;
-  --mid:#555;--lt:#F5F3EF;--wh:#FFFFFF;--st:#7F8C8D;
-  --bd:#E8E4DC;--gr:#22C55E;--r:6px;
+  --o:#F55C1B;--dk:#0F0F0F;--ch:#1A1A1A;--pn:#1E1E1E;
+  --bd:#2E2E2E;--mid:#888;--wh:#FFF;--gr:#22C55E;
+  --rd:#EF4444;--yl:#FFD000;--tx:#E8E8E8;--t2:#AAA;--bl:#3B82F6
 }
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{font-family:'Barlow',sans-serif;background:var(--lt);color:var(--dk);overflow-x:hidden;width:100%;margin:0}
+html,body{height:100%;font-family:'Barlow',sans-serif;background:var(--dk);color:var(--tx);overflow-x:hidden}
 a{text-decoration:none;color:inherit}
-img{max-width:100%;display:block;height:auto}
-*{-webkit-tap-highlight-color:transparent}
+button{cursor:pointer;font-family:'Barlow',sans-serif}
 
-/* ANNOUNCE */
-.ann{background:var(--y);color:var(--dk);text-align:center;padding:9px 16px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.88rem;letter-spacing:.3px;line-height:1.4}
-.ann-x{margin-left:8px}
+/* ── LOGIN ── */
+#loginScreen{min-height:100vh;display:flex;align-items:center;justify-content:center;background:var(--dk);padding:20px}
+.lbox{width:100%;max-width:420px;padding:44px 36px;background:var(--pn);border:1px solid var(--bd);border-radius:8px;box-shadow:0 24px 64px rgba(0,0,0,.6)}
+.llogo{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.7rem;color:var(--wh);margin-bottom:2px}
+.llogo span{color:var(--o)}
+.lsub{font-size:.75rem;color:var(--mid);margin-bottom:28px;text-transform:uppercase;letter-spacing:2px}
+.lfg{margin-bottom:14px}
+.lfg label{display:block;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.75rem;text-transform:uppercase;letter-spacing:1px;color:var(--mid);margin-bottom:5px}
+.lfg input{width:100%;padding:11px 13px;background:var(--dk);border:1px solid var(--bd);border-radius:4px;color:var(--tx);font-size:.92rem;outline:none;transition:border-color .2s}
+.lfg input:focus{border-color:var(--o)}
+.lbtn{width:100%;background:var(--o);color:var(--wh);border:none;padding:13px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.05rem;text-transform:uppercase;cursor:pointer;border-radius:4px;transition:background .2s;margin-top:6px}
+.lbtn:hover{background:#d94d0f}
+.lbtn:disabled{background:#888;cursor:not-allowed}
+.lerr{background:rgba(239,68,68,.12);border:1px solid var(--rd);border-radius:4px;padding:10px 13px;font-size:.83rem;color:#fca5a5;margin-top:10px;display:none}
+.linfo{margin-top:16px;padding:11px 13px;background:rgba(59,130,246,.08);border:1px solid rgba(59,130,246,.25);border-radius:4px;font-size:.78rem;color:#93c5fd;line-height:1.6}
 
-/* HEADER */
-.hdr{background:var(--dk);position:sticky;top:0;z-index:9999;border-bottom:3px solid var(--o);width:100%}
-.hdr-i{max-width:1280px;margin:0 auto;padding:0 20px;display:flex;align-items:center;height:66px;gap:14px}
-.logo{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.85rem;color:var(--wh);letter-spacing:-1px;flex-shrink:0;line-height:1}
-.logo b{color:var(--o);font-weight:900}
-.srch{flex:1;max-width:460px;display:flex;min-width:0}
-.srch form,.srch>div{display:flex;width:100%}
-.srch input{flex:1;padding:9px 12px;border:none;background:#333;color:var(--wh);font-family:'Barlow',sans-serif;font-size:.88rem;border-radius:4px 0 0 4px;outline:none;min-width:0}
-.srch input::placeholder{color:#888}
-.srch button{background:var(--o);border:none;padding:0 13px;color:var(--wh);cursor:pointer;border-radius:0 4px 4px 0;font-size:.95rem;flex-shrink:0}
-.hdr-act{display:flex;align-items:center;gap:10px;flex-shrink:0;margin-left:auto}
-.hdr-act a{color:var(--wh);font-size:.83rem;opacity:.85;white-space:nowrap}
-.hdr-act a:hover{opacity:1}
-.cart-btn{background:var(--o)!important;padding:8px 15px;border-radius:4px;font-family:'Barlow Condensed',sans-serif;font-size:.92rem!important;opacity:1!important;white-space:nowrap}
-.hbtn{display:none;background:none;border:none;cursor:pointer;padding:6px;flex-direction:column;gap:5px;flex-shrink:0}
-.hbtn span{display:block;width:22px;height:2px;background:var(--wh);transition:all .3s;border-radius:2px}
-.hbtn.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
-.hbtn.open span:nth-child(2){opacity:0}
-.hbtn.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+/* ── APP ── */
+#adminApp{display:none;min-height:100vh;flex-direction:column}
 
-/* NAV */
-.nav{background:var(--ch);border-bottom:1px solid #444;position:relative;z-index:9998;width:100%}
-.nav-i{max-width:1280px;margin:0 auto;padding:0 20px;display:flex;overflow-x:auto}
-.nav-i::-webkit-scrollbar{height:0}
-.nav a{color:#CCC;font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:.97rem;padding:11px 15px;display:block;border-bottom:3px solid transparent;text-transform:uppercase;white-space:nowrap;transition:color .2s}
-.nav a:hover,.nav a.cur{color:var(--o);border-bottom-color:var(--o)}
-.ni{position:relative}
-.ni>a::after{content:' ▾';font-size:.68rem;opacity:.6}
-.dd{display:none;position:absolute;top:100%;left:0;background:#1E1E1E;border:1px solid #444;border-top:3px solid var(--o);min-width:200px;z-index:9999;box-shadow:0 8px 24px rgba(0,0,0,.5)}
-.ni:hover .dd{display:block}
-.dd a{display:block;padding:11px 18px;color:#BBB;font-size:.9rem;border-bottom:1px solid #333;border-left:3px solid transparent;text-transform:none;white-space:nowrap}
-.dd a:last-child{border-bottom:none}
-.dd a:hover{color:var(--wh);border-left-color:var(--o);border-bottom-color:#333}
+/* ── TOPBAR ── */
+.topbar{background:var(--ch);border-bottom:2px solid var(--o);padding:0 24px;height:56px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:200;flex-shrink:0}
+.tlogo{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.4rem;color:var(--wh)}
+.tlogo span{color:var(--o)}
+.tright{display:flex;align-items:center;gap:10px}
+.tuser{font-size:.78rem;color:var(--mid);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:200px}
+.tbadge{background:var(--o);color:var(--wh);font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.7rem;padding:3px 9px;border-radius:2px;text-transform:uppercase;letter-spacing:1px}
+.tout{background:none;border:1px solid var(--bd);color:var(--mid);padding:6px 13px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.78rem;text-transform:uppercase;cursor:pointer;border-radius:3px;transition:all .2s}
+.tout:hover{border-color:var(--rd);color:var(--rd)}
 
-/* BREADCRUMB */
-.bc{background:var(--dk);padding:11px 20px}
-.bc-i{max-width:1280px;margin:0 auto;color:#888;font-size:.83rem}
-.bc-i a{color:var(--o)}
+/* ── LAYOUT ── */
+.layout{display:flex;min-height:calc(100vh - 56px)}
 
-/* TRUST BAR */
-.trust{background:var(--o);padding:15px 20px}
-.trust-i{max-width:1280px;margin:0 auto;display:flex;justify-content:space-around;align-items:center;gap:10px;flex-wrap:wrap}
-.ti{display:flex;align-items:center;gap:9px;color:var(--wh);min-width:0}
-.ti .ic{font-size:1.25rem;flex-shrink:0}
-.ti strong{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.97rem;display:block;white-space:nowrap}
-.ti span{font-size:.72rem;opacity:.85;white-space:nowrap}
+/* ── SIDEBAR ── */
+.sidebar{width:220px;background:var(--ch);border-right:1px solid var(--bd);padding:16px 0;flex-shrink:0;overflow-y:auto}
+.slabel{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.66rem;text-transform:uppercase;letter-spacing:2px;color:var(--mid);padding:0 16px;margin:18px 0 6px;display:block}
+.slabel:first-of-type{margin-top:4px}
+.snav{display:flex;flex-direction:column}
+.sbtn{display:flex;align-items:center;gap:9px;background:none;border:none;color:var(--t2);padding:10px 16px;font-size:.88rem;cursor:pointer;transition:all .15s;text-align:left;width:100%;white-space:nowrap}
+.sbtn:hover{background:rgba(255,255,255,.05);color:var(--wh)}
+.sbtn.on{background:rgba(245,92,27,.15);color:var(--o);border-right:2px solid var(--o)}
+.scount{margin-left:auto;background:rgba(255,255,255,.08);color:var(--mid);font-size:.68rem;padding:2px 6px;border-radius:8px;font-family:'Barlow Condensed',sans-serif;font-weight:700}
 
-/* CAT HERO */
-.chero{background:var(--dk);padding:48px 20px;border-bottom:4px solid var(--o)}
-.chero-i{max-width:1280px;margin:0 auto}
-.chero h1{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(2.2rem,5vw,3.8rem);color:var(--wh);text-transform:uppercase;letter-spacing:-1px;line-height:1}
-.chero h1 em{color:var(--o);font-style:normal}
-.chero p{color:#AAA;margin-top:11px;font-size:.95rem;max-width:580px;line-height:1.7}
+/* ── MAIN ── */
+.main{flex:1;padding:24px;overflow-y:auto;min-width:0}
+.pg{display:none}.pg.on{display:block}
+.pghdr{display:flex;align-items:center;justify-content:space-between;margin-bottom:22px;flex-wrap:wrap;gap:12px}
+.pgtitle{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.85rem;text-transform:uppercase;color:var(--wh);line-height:1}
+.pgtitle span{color:var(--o)}
 
-/* SEC TITLE */
-.st{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(1.7rem,4vw,2.6rem);text-transform:uppercase;color:var(--dk);line-height:1}
-.st b{color:var(--o);font-weight:900}
-.ss{color:var(--mid);font-size:.92rem;margin-top:7px}
+/* ── LOADING ── */
+.loading{display:flex;align-items:center;justify-content:center;padding:60px;color:var(--mid);flex-direction:column;gap:14px}
+.spinner{width:32px;height:32px;border:3px solid var(--bd);border-top-color:var(--o);border-radius:50%;animation:spin .8s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
 
-/* BUTTONS */
-.btn-o{background:var(--o);color:var(--wh);padding:13px 26px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.8px;text-transform:uppercase;border-radius:4px;display:inline-block;border:none;transition:background .2s;cursor:pointer;text-align:center}
-.btn-o:hover{background:#d94d0f;color:var(--wh)}
-.btn-dk{background:var(--dk);color:var(--wh);padding:13px 26px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1rem;text-transform:uppercase;border-radius:4px;display:inline-block;border:none;transition:background .2s;cursor:pointer;text-align:center}
-.btn-dk:hover{background:#333;color:var(--wh)}
-.btn-out{background:transparent;color:var(--wh);padding:13px 26px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1rem;text-transform:uppercase;border:2px solid rgba(255,255,255,.4);border-radius:4px;display:inline-block;transition:border-color .2s;text-align:center}
-.btn-out:hover{border-color:var(--wh);color:var(--wh)}
-.btn-wh{background:var(--wh);color:var(--o);padding:13px 32px;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1.05rem;letter-spacing:.8px;text-transform:uppercase;border-radius:4px;display:inline-block;transition:transform .2s;text-align:center}
-.btn-wh:hover{transform:translateY(-2px);color:var(--o)}
+/* ── BUTTONS ── */
+.btn{display:inline-flex;align-items:center;gap:6px;padding:9px 18px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.88rem;text-transform:uppercase;cursor:pointer;border-radius:4px;border:none;transition:all .2s;letter-spacing:.3px;white-space:nowrap}
+.btn-o{background:var(--o);color:var(--wh)}.btn-o:hover{background:#d94d0f}
+.btn-s{background:var(--pn);color:var(--tx);border:1px solid var(--bd)}.btn-s:hover{border-color:var(--o);color:var(--o)}
+.btn-g{background:rgba(34,197,94,.15);color:var(--gr);border:1px solid rgba(34,197,94,.3)}.btn-g:hover{background:var(--gr);color:var(--wh);border-color:var(--gr)}
+.btn-d{background:rgba(239,68,68,.1);color:var(--rd);border:1px solid rgba(239,68,68,.2)}.btn-d:hover{background:var(--rd);color:var(--wh);border-color:var(--rd)}
+.btn-sm{padding:6px 12px;font-size:.78rem}
+.btn:disabled{opacity:.5;cursor:not-allowed}
 
-/* PROD GRID */
-.pgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:22px}
-.pcard{background:var(--wh);border-radius:var(--r);overflow:hidden;border:1px solid var(--bd);transition:box-shadow .25s,transform .25s;display:block}
-.pcard:hover{box-shadow:0 10px 32px rgba(0,0,0,.11);transform:translateY(-4px)}
-.pimg{aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;font-size:2.8rem;position:relative;overflow:hidden}
-.pimg img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
-.bg-b{background:linear-gradient(135deg,#C0392B20,#C0392B50)}
-.bg-p{background:linear-gradient(135deg,#62656720,#62656750)}
-.bg-s{background:linear-gradient(135deg,#C8A45A20,#C8A45A50)}
-.bg-m{background:linear-gradient(135deg,#A0522D20,#A0522D50)}
-.pinfo{padding:14px}
-.pcat{font-size:.7rem;color:var(--st);text-transform:uppercase;letter-spacing:1px;font-weight:600;margin-bottom:4px}
-.pname{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.05rem;color:var(--dk);margin-bottom:7px;line-height:1.2}
-.pprice{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.3rem;color:var(--dk);margin-bottom:10px}
-.pbtn{display:block;width:100%;background:var(--dk);color:var(--wh);border:none;padding:10px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.88rem;letter-spacing:.8px;text-transform:uppercase;cursor:pointer;border-radius:3px;text-align:center;transition:background .2s}
-.pbtn:hover{background:var(--o);color:var(--wh)}
+/* ── STATS ── */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:24px}
+.scard{background:var(--pn);border:1px solid var(--bd);border-radius:6px;padding:18px}
+.sclbl{font-size:.7rem;color:var(--mid);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;font-family:'Barlow Condensed',sans-serif;font-weight:700}
+.scval{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:2rem;color:var(--wh);line-height:1}
+.scsub{font-size:.7rem;color:var(--mid);margin-top:3px}
 
-/* SUBCAT CARDS */
-.scgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
-.sccard{display:block;border-radius:8px;overflow:hidden;border:2px solid var(--bd);background:var(--wh);transition:box-shadow .25s,transform .25s,border-color .25s}
-.sccard:hover{box-shadow:0 14px 44px rgba(0,0,0,.11);transform:translateY(-5px);border-color:var(--o)}
-.scimg{height:190px;display:flex;align-items:center;justify-content:center;font-size:5.5rem}
-.sc-hm{background:linear-gradient(145deg,#C0392B,#8B1A1A)}
-.sc-rc{background:linear-gradient(145deg,#8B6914,#5C3D10)}
-.sc-pp{background:linear-gradient(145deg,#626567,#2C3233)}
-.sc-ss{background:linear-gradient(145deg,#C8A45A,#8B6914)}
-.scbody{padding:24px}
-.scname{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.65rem;text-transform:uppercase;color:var(--dk);margin-bottom:7px}
-.scdesc{font-size:.88rem;color:var(--mid);line-height:1.7;margin-bottom:18px}
+/* ── TABLE ── */
+.twrap{background:var(--pn);border:1px solid var(--bd);border-radius:6px;overflow:hidden}
+.tbl{width:100%;border-collapse:collapse}
+.tbl th{background:var(--ch);padding:11px 14px;text-align:left;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.74rem;text-transform:uppercase;letter-spacing:1px;color:var(--mid);border-bottom:1px solid var(--bd);white-space:nowrap}
+.tbl td{padding:12px 14px;border-bottom:1px solid var(--bd);font-size:.88rem;vertical-align:middle}
+.tbl tr:last-child td{border-bottom:none}
+.tbl tr:hover td{background:rgba(255,255,255,.02)}
+.namecell{font-weight:600;color:var(--wh);max-width:280px}
+.namecell small{display:block;color:var(--mid);font-size:.74rem;font-weight:400;margin-top:2px}
+.nrow{display:flex;align-items:center;gap:10px}
+.thumb{width:40px;height:40px;border-radius:4px;object-fit:cover;border:1px solid var(--bd);flex-shrink:0}
+.thumbph{width:40px;height:40px;border-radius:4px;background:var(--dk);border:1px solid var(--bd);display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0}
+.cbadge{display:inline-block;padding:3px 8px;border-radius:3px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.7rem;text-transform:uppercase}
+.cb-hm{background:rgba(192,57,43,.2);color:#f87171}
+.cb-rc{background:rgba(139,105,20,.2);color:#fbbf24}
+.cb-pp{background:rgba(98,101,103,.2);color:#94a3b8}
+.cb-ss{background:rgba(200,164,90,.2);color:#fcd34d}
+.cb-mdf{background:rgba(160,82,45,.2);color:#d97706}
+.pcell{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:.97rem;color:var(--wh)}
+.pcell.poa{color:var(--mid);font-weight:400;font-size:.83rem}
+.vison{color:var(--gr);font-size:.76rem;font-family:'Barlow Condensed',sans-serif;font-weight:700}
+.visoff{color:var(--rd);font-size:.76rem;font-family:'Barlow Condensed',sans-serif;font-weight:700}
+.acell{display:flex;gap:6px}
 
-/* FORMS */
-.fcard{background:var(--wh);border-radius:8px;padding:28px;border:1px solid var(--bd);margin-bottom:20px}
-.fcard h2{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.7rem;text-transform:uppercase;color:var(--dk);margin-bottom:5px}
-.fcard>p{color:var(--mid);font-size:.88rem;line-height:1.7;margin-bottom:22px}
-.frow{display:grid;grid-template-columns:1fr 1fr;gap:13px;margin-bottom:13px}
-.fg{display:flex;flex-direction:column;gap:5px;margin-bottom:13px}
-.fg label{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.77rem;text-transform:uppercase;letter-spacing:.5px;color:var(--dk)}
-.fg input,.fg select,.fg textarea{padding:10px 13px;border:2px solid var(--bd);border-radius:4px;font-family:'Barlow',sans-serif;font-size:.88rem;color:var(--dk);outline:none;background:var(--lt);transition:border-color .2s;width:100%}
-.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--o);background:var(--wh)}
-.fg textarea{resize:vertical;min-height:100px}
-.fsub{background:var(--o);color:var(--wh);border:none;padding:13px 32px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.05rem;letter-spacing:.8px;text-transform:uppercase;cursor:pointer;border-radius:4px;width:100%;transition:background .2s;margin-top:5px}
-.fsub:hover{background:#d94d0f}
-.fnote{font-size:.76rem;color:#999;margin-top:6px;line-height:1.5}
-.fok{display:none;background:#E8F5E9;border:2px solid var(--gr);border-radius:6px;padding:14px;text-align:center;margin-top:12px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.95rem;color:#166534;text-transform:uppercase}
+/* ── TOOLBAR ── */
+.toolbar{display:flex;gap:10px;margin-bottom:16px;flex-wrap:wrap;align-items:center}
+.sbox{flex:1;min-width:180px;position:relative}
+.sbox input{width:100%;padding:9px 13px 9px 32px;background:var(--pn);border:1px solid var(--bd);border-radius:4px;color:var(--tx);font-size:.88rem;outline:none;transition:border-color .2s}
+.sbox input:focus{border-color:var(--o)}
+.sbox::before{content:'🔍';position:absolute;left:10px;top:50%;transform:translateY(-50%);font-size:.78rem;pointer-events:none}
+.fsel{padding:9px 12px;background:var(--pn);border:1px solid var(--bd);border-radius:4px;color:var(--tx);font-size:.88rem;outline:none;cursor:pointer}
+.fsel:focus{border-color:var(--o)}
 
-/* INFO CARDS */
-.icard{background:var(--wh);border-radius:8px;padding:28px;border:1px solid var(--bd);margin-bottom:18px}
-.icard h2{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.7rem;text-transform:uppercase;color:var(--dk);margin-bottom:13px;border-bottom:3px solid var(--o);padding-bottom:9px}
-.icard h3{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1.05rem;text-transform:uppercase;color:var(--dk);margin:16px 0 7px}
-.icard p{color:var(--mid);font-size:.88rem;line-height:1.8;margin-bottom:9px}
-.icard ul{color:var(--mid);font-size:.88rem;line-height:1.8;padding-left:17px;margin-bottom:9px}
-.icard ul li{margin-bottom:4px}
-.icard a{color:var(--o)}
+/* ── MODAL ── */
+.moverlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.8);z-index:9000;align-items:flex-start;justify-content:center;padding:20px;overflow-y:auto}
+.moverlay.on{display:flex}
+.modal{background:var(--pn);border:1px solid var(--bd);border-radius:8px;width:100%;max-width:640px;box-shadow:0 24px 64px rgba(0,0,0,.8);margin:auto}
+.mhdr{padding:20px 24px;border-bottom:1px solid var(--bd);display:flex;align-items:center;justify-content:space-between}
+.mtitle{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.3rem;text-transform:uppercase;color:var(--wh)}
+.mclose{background:none;border:none;color:var(--mid);font-size:1.3rem;cursor:pointer;line-height:1;padding:4px;transition:color .2s}
+.mclose:hover{color:var(--wh)}
+.mbody{padding:22px 24px}
+.mfoot{padding:0 24px 20px;display:flex;gap:10px;justify-content:flex-end}
 
-/* CONTACT */
-.cgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:22px}
-.cdet{display:flex;align-items:flex-start;gap:13px;padding:16px;background:var(--lt);border-radius:6px;border:1px solid var(--bd)}
-.cic{font-size:1.5rem;flex-shrink:0}
-.clbl{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.77rem;text-transform:uppercase;letter-spacing:1px;color:var(--st);margin-bottom:3px;display:block}
-.cval{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1.05rem;color:var(--dk)}
-.cval a{color:var(--o)}
+/* ── FORM ── */
+.fgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.fg{display:flex;flex-direction:column;gap:5px}
+.fg.full{grid-column:1/-1}
+.fg label{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.74rem;text-transform:uppercase;letter-spacing:.5px;color:var(--mid)}
+.fg input,.fg select,.fg textarea{padding:9px 11px;background:var(--dk);border:1px solid var(--bd);border-radius:4px;color:var(--tx);font-family:'Barlow',sans-serif;font-size:.88rem;outline:none;transition:border-color .2s;width:100%}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--o)}
+.fg textarea{resize:vertical;min-height:80px}
+.fhint{font-size:.72rem;color:var(--mid)}
+.fsep{grid-column:1/-1;border:none;border-top:1px solid var(--bd);margin:4px 0}
 
-/* BENEFITS */
-.bgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:13px;margin-bottom:26px}
-.bcard{background:var(--wh);border-radius:6px;padding:16px;border-left:4px solid var(--o)}
-.btitle{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:.97rem;text-transform:uppercase;color:var(--dk);margin-bottom:5px}
-.bcard p{font-size:.83rem;color:var(--mid);line-height:1.6}
+/* ── SIZE VARIANTS ── */
+.svwrap{grid-column:1/-1;background:var(--dk);border:1px solid var(--bd);border-radius:6px;padding:14px}
+.svrow{display:grid;grid-template-columns:80px 140px 1fr 32px;gap:8px;align-items:end;margin-bottom:8px}
+.svrow input{padding:8px 10px;background:var(--pn);border:1px solid var(--bd);border-radius:3px;color:var(--tx);font-size:.85rem;outline:none;width:100%}
+.svrow input:focus{border-color:var(--o)}
+.svrm{background:none;border:none;color:var(--mid);cursor:pointer;font-size:.95rem;padding:4px;transition:color .2s;align-self:center}
+.svrm:hover{color:var(--rd)}
+.svadd{width:100%;background:var(--pn);border:1px dashed var(--bd);color:var(--mid);padding:8px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.8rem;text-transform:uppercase;cursor:pointer;border-radius:4px;transition:all .2s;margin-top:4px}
+.svadd:hover{border-color:var(--o);color:var(--o)}
 
-/* PRODUCT PAGE */
-.pp-layout{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start;margin-bottom:52px}
-.pp-imgbox{background:var(--lt);border-radius:8px;border:2px solid var(--bd);aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;font-size:7rem;overflow:hidden}
-.pp-imgbox img{width:100%;height:100%;object-fit:cover}
-.pp-tag{display:inline-block;background:var(--o);color:var(--wh);font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.76rem;padding:4px 11px;letter-spacing:1.5px;text-transform:uppercase;border-radius:2px;margin-bottom:12px}
-.pp-title{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(1.7rem,3vw,2.4rem);line-height:1.05;text-transform:uppercase;color:var(--dk);margin-bottom:14px}
-.pp-pricebox{background:var(--lt);border-radius:6px;padding:16px;margin-bottom:18px;border-left:4px solid var(--o)}
-.pp-price{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:2.2rem;color:var(--dk);line-height:1}
-.pp-pnote{font-size:.8rem;color:var(--st);margin-top:3px}
-.pp-short{color:var(--mid);font-size:.9rem;line-height:1.75;margin-bottom:22px}
-.pp-acts{display:flex;gap:11px;margin-bottom:18px;flex-wrap:wrap}
-.pp-acts a{flex:1;min-width:130px}
-.pp-trust{display:flex;flex-wrap:wrap;gap:9px;padding:13px 0;border-top:1px solid var(--bd)}
-.pti{display:flex;align-items:center;gap:6px;font-size:.79rem;color:var(--mid);font-weight:600}
-/* TABS */
-.pp-tabs{border-bottom:2px solid var(--bd);display:flex;margin-bottom:22px;overflow-x:auto}
-.pp-tabs::-webkit-scrollbar{height:0}
-.ptb{background:none;border:none;border-bottom:3px solid transparent;margin-bottom:-2px;padding:11px 19px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.95rem;text-transform:uppercase;cursor:pointer;color:var(--mid);white-space:nowrap;transition:color .2s}
-.ptb.on{color:var(--o);border-bottom-color:var(--o)}
-.ptab{display:none}.ptab.on{display:block}
-.ptab h3{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1.05rem;text-transform:uppercase;color:var(--dk);margin:14px 0 7px}
-.ptab h3:first-child{margin-top:0}
-.ptab p,.ptab li{color:var(--mid);font-size:.88rem;line-height:1.8;margin-bottom:7px}
-.ptab ul{padding-left:17px;margin-bottom:9px}
-.ptab a{color:var(--o)}
-.stbl{width:100%;border-collapse:collapse;margin-top:7px}
-.stbl th{background:var(--dk);color:var(--wh);padding:9px 13px;text-align:left;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.82rem;text-transform:uppercase}
-.stbl td{padding:9px 13px;border-bottom:1px solid var(--bd);font-size:.85rem;color:var(--mid)}
-.stbl tr:nth-child(even) td{background:var(--lt)}
-/* SIZE SELECT */
-.sz-wrap{margin-bottom:18px}
-.sz-wrap label{display:block;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.77rem;text-transform:uppercase;letter-spacing:.5px;color:var(--dk);margin-bottom:6px}
-.sz-wrap select{width:100%;padding:11px 13px;background:var(--lt);border:2px solid var(--bd);border-radius:4px;font-family:'Barlow',sans-serif;font-size:.9rem;color:var(--dk);outline:none;cursor:pointer;transition:border-color .2s}
-.sz-wrap select:focus{border-color:var(--o)}
-/* RELATED */
-.rel-sec{background:var(--lt);padding:44px 20px;border-top:4px solid var(--y)}
-.rel-inner{max-width:1280px;margin:0 auto}
-.rgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:22px}
+/* ── IMAGE ── */
+.imgarea{grid-column:1/-1;border:2px dashed var(--bd);border-radius:6px;padding:14px;cursor:pointer;transition:all .2s}
+.imgarea:hover,.imgarea.has{border-color:var(--o)}
+.imgarea.has{border-style:solid;border-color:var(--gr)}
+.imgrow{display:flex;align-items:flex-start;gap:13px}
+.imgbox{width:100px;height:75px;border-radius:4px;border:1px solid var(--bd);background:var(--dk);display:flex;align-items:center;justify-content:center;font-size:1.8rem;flex-shrink:0;overflow:hidden}
+.imgbox img{width:100%;height:100%;object-fit:cover}
+.imginfo p{font-size:.8rem;color:var(--t2);line-height:1.6;margin-bottom:6px}
+.imgname{font-size:.74rem;color:var(--mid);margin-top:4px;word-break:break-all}
+.imgbtns{display:flex;gap:7px;margin-top:8px}
+.ibtn{padding:6px 12px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.74rem;text-transform:uppercase;cursor:pointer;border-radius:3px;border:none;transition:all .2s}
+.ibtn-up{background:var(--o);color:var(--wh)}.ibtn-up:hover{background:#d94d0f}
+.ibtn-cl{background:var(--pn);color:var(--mid);border:1px solid var(--bd)}.ibtn-cl:hover{border-color:var(--rd);color:var(--rd)}
 
-/* HOMEPAGE */
-.hero{background:var(--dk);display:grid;grid-template-columns:1fr 1fr;min-height:460px}
-.hero-c{padding:60px 44px 60px 36px;display:flex;flex-direction:column;justify-content:center}
-.hero-tag{display:inline-block;background:var(--o);color:var(--wh);font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.83rem;padding:4px 13px;letter-spacing:1.8px;text-transform:uppercase;margin-bottom:18px;width:fit-content}
-.hero h1{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(2.6rem,4.5vw,4.6rem);line-height:.95;color:var(--wh);text-transform:uppercase;letter-spacing:-1px;margin-bottom:16px}
-.hero h1 em{color:var(--y);font-style:normal}
-.hero-p{color:#AAA;font-size:.97rem;line-height:1.65;margin-bottom:26px;max-width:390px}
-.hero-btns{display:flex;gap:11px;flex-wrap:wrap}
-.hero-v{overflow:hidden}
-.htgrid{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;height:100%;gap:3px}
-.ht{display:flex;align-items:center;justify-content:center;flex-direction:column;gap:7px;transition:transform .3s}
-.ht:hover{transform:scale(1.03)}
-.ht-ic{font-size:2.3rem}
-.ht-nm{color:var(--wh);font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1.05rem;text-transform:uppercase}
-.ht1{background:linear-gradient(135deg,#C0392B,#8B1A1A)}
-.ht2{background:linear-gradient(135deg,#7F8C8D,#4A5568)}
-.ht3{background:linear-gradient(135deg,#8B5E3C,#5C3D1E)}
-.ht4{background:linear-gradient(135deg,#F55C1B,#C0392B)}
+/* ── CONFIRM ── */
+.cov{display:none;position:fixed;inset:0;background:rgba(0,0,0,.8);z-index:9500;align-items:center;justify-content:center}
+.cov.on{display:flex}
+.cbox{background:var(--pn);border:1px solid var(--bd);border-radius:8px;padding:28px;max-width:360px;width:calc(100% - 40px);text-align:center}
+.cbox h3{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.3rem;text-transform:uppercase;color:var(--wh);margin-bottom:8px}
+.cbox p{color:var(--mid);font-size:.87rem;line-height:1.6;margin-bottom:20px}
+.cbtns{display:flex;gap:10px;justify-content:center}
 
-/* CAT CARDS (homepage) */
-.csec{max-width:1280px;margin:52px auto;padding:0 20px}
-.chdr{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:26px;gap:11px;flex-wrap:wrap}
-.chdr a{color:var(--o);font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.97rem;text-transform:uppercase}
-.ccgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.cccard{position:relative;border-radius:var(--r);overflow:hidden;aspect-ratio:4/3;display:block}
-.ccbg{width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:4.2rem;transition:transform .4s}
-.cccard:hover .ccbg{transform:scale(1.05)}
-.bg-br{background:linear-gradient(145deg,#C0392B,#6B1E17)}
-.bg-pv{background:linear-gradient(145deg,#626567,#2C3233)}
-.bg-mf{background:linear-gradient(145deg,#A0522D,#5C2710)}
-.ccov{position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.75) 0%,rgba(0,0,0,.1) 60%);display:flex;flex-direction:column;justify-content:flex-end;padding:18px}
-.cclbl{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.6rem;color:var(--wh);text-transform:uppercase;display:block}
-.ccsub{color:rgba(255,255,255,.75);font-size:.8rem;margin-top:3px;display:block}
-.ccarr{color:var(--y);font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.88rem;text-transform:uppercase;margin-top:7px;display:inline-block;transition:transform .2s}
-.cccard:hover .ccarr{transform:translateX(6px)}
+/* ── INFO CARDS ── */
+.icard{background:var(--pn);border:1px solid var(--bd);border-radius:6px;padding:22px;margin-bottom:14px}
+.icard h3{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1.05rem;text-transform:uppercase;color:var(--wh);margin-bottom:7px}
+.icard p,.icard li{color:var(--mid);font-size:.86rem;line-height:1.7;margin-bottom:6px}
+.icard ol{padding-left:18px;margin-bottom:10px}
+.icard code{background:var(--dk);padding:2px 6px;border-radius:3px;font-size:.82rem;color:#a5f3fc}
+.btn-row{display:flex;gap:9px;flex-wrap:wrap;margin-top:12px}
+.codepre{background:var(--dk);border:1px solid var(--bd);border-radius:4px;padding:12px;font-family:monospace;font-size:.76rem;color:#a5f3fc;overflow-x:auto;white-space:pre;line-height:1.6;max-height:160px;overflow-y:auto;margin-top:10px}
+.smsg{padding:10px 13px;border-radius:4px;font-size:.84rem;font-weight:600;margin-top:10px;display:none}
+.smsg.ok{background:rgba(34,197,94,.12);border:1px solid var(--gr);color:#86efac}
+.smsg.er{background:rgba(239,68,68,.12);border:1px solid var(--rd);color:#fca5a5}
+.smsg.info{background:rgba(255,255,255,.06);border:1px solid var(--bd);color:var(--mid)}
 
-/* PROMO */
-.promo{background:var(--dk);padding:52px 20px}
-.promo-i{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:18px}
-.pc{padding:32px;border-radius:var(--r);position:relative;overflow:hidden;min-height:190px;display:flex;flex-direction:column;justify-content:flex-end;text-decoration:none}
-.pc-o{background:var(--o)}.pc-y{background:var(--y)}
-.pc-d{position:absolute;top:-18px;right:-18px;font-size:6.5rem;opacity:.15;line-height:1}
-.pc-e{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.8rem;letter-spacing:1.8px;text-transform:uppercase;color:rgba(255,255,255,.7);margin-bottom:7px}
-.pc-y .pc-e{color:rgba(0,0,0,.55)}
-.pc h3{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.85rem;line-height:1.05;text-transform:uppercase;color:var(--wh);margin-bottom:11px}
-.pc-y h3{color:var(--dk)}
-.pc-l{color:var(--wh);font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.92rem;text-transform:uppercase;border-bottom:2px solid rgba(255,255,255,.4);padding-bottom:2px;display:inline-block}
-.pc-y .pc-l{color:var(--dk)}
+/* ── IMAGES PAGE ── */
+.igrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:14px;margin-top:18px}
+.icard2{background:var(--pn);border:1px solid var(--bd);border-radius:6px;overflow:hidden}
+.icard2-img{width:100%;aspect-ratio:4/3;background:var(--dk);display:flex;align-items:center;justify-content:center;font-size:2.5rem;overflow:hidden}
+.icard2-img img{width:100%;height:100%;object-fit:cover}
+.icard2-body{padding:10px}
+.icard2-name{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.87rem;color:var(--wh);margin-bottom:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.icard2-cat{font-size:.72rem;color:var(--mid);margin-bottom:8px}
+.icard2-acts{display:flex;gap:6px}
 
-/* WHY */
-.why{background:var(--lt);padding:52px 20px;border-top:4px solid var(--o)}
-.why-i{max-width:1280px;margin:0 auto}
-.wgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:28px}
-.wi{text-align:center;padding:22px 14px;background:var(--wh);border-radius:var(--r);border-bottom:4px solid transparent;transition:border-color .25s,transform .25s}
-.wi:hover{border-bottom-color:var(--o);transform:translateY(-4px)}
-.wi-ic{font-size:2.1rem;margin-bottom:11px;display:block}
-.wi-t{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1.05rem;text-transform:uppercase;margin-bottom:7px;color:var(--dk)}
-.wi p{font-size:.82rem;color:var(--mid);line-height:1.6}
+/* ── ACTIVITY LOG ── */
+.logrow{display:flex;gap:12px;padding:11px 0;border-bottom:1px solid var(--bd);align-items:flex-start}
+.logrow:last-child{border-bottom:none}
+.log-time{font-size:.74rem;color:var(--mid);white-space:nowrap;flex-shrink:0;margin-top:2px}
+.log-user{font-size:.78rem;color:var(--o);font-weight:600;flex-shrink:0;white-space:nowrap}
+.log-action{font-size:.85rem;color:var(--tx);flex:1}
 
-/* REVIEWS */
-.revs{background:var(--ch);padding:52px 20px}
-.revs-i{max-width:1280px;margin:0 auto}
-.rgvgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}
-.rv{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:var(--r);padding:22px}
-.stars{color:var(--y);font-size:.97rem;letter-spacing:2px;margin-bottom:11px}
-.rv p{color:#CCC;font-size:.88rem;line-height:1.65;margin-bottom:14px}
-.rvr{display:flex;align-items:center;gap:11px}
-.av{width:36px;height:36px;border-radius:50%;background:var(--o);display:flex;align-items:center;justify-content:center;font-family:'Barlow Condensed',sans-serif;font-weight:800;color:var(--wh);font-size:.9rem;flex-shrink:0}
-.rvn{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.92rem;color:var(--wh);display:block}
-.rvl{font-size:.73rem;color:#888}
+/* ── PUBLISH ── */
+.pub-box{background:var(--pn);border:2px solid var(--gr);border-radius:6px;padding:22px;margin-bottom:14px}
+.pub-box h3{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.2rem;text-transform:uppercase;color:var(--wh);margin-bottom:7px}
+.pub-box p{color:var(--mid);font-size:.86rem;line-height:1.6;margin-bottom:14px}
+.pub-last{font-size:.76rem;color:var(--mid);margin-top:10px}
 
-/* CTA */
-.cta{background:var(--o);padding:52px 20px;text-align:center}
-.cta h2{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(1.7rem,5vw,3rem);color:var(--wh);text-transform:uppercase;margin-bottom:11px}
-.cta p{color:rgba(255,255,255,.85);font-size:.97rem;margin-bottom:22px}
+/* ── TOAST ── */
+.twrap{position:fixed;bottom:20px;right:20px;z-index:99999;display:flex;flex-direction:column;gap:8px;pointer-events:none}
+.toast{background:var(--pn);border:1px solid var(--bd);border-radius:6px;padding:11px 15px;font-size:.86rem;min-width:220px;display:flex;align-items:center;gap:8px;box-shadow:0 8px 24px rgba(0,0,0,.4);animation:tin .25s ease;pointer-events:all}
+.toast.ok{border-color:var(--gr)}.toast.er{border-color:var(--rd)}
+@keyframes tin{from{transform:translateX(100%);opacity:0}to{transform:translateX(0);opacity:1}}
 
-/* SHOP FILTER */
-.sfbar{background:var(--wh);border-bottom:2px solid var(--bd);padding:16px 20px;position:sticky;top:69px;z-index:100}
-.sf-i{max-width:1280px;margin:0 auto;display:flex;align-items:center;gap:13px;flex-wrap:wrap}
-.sflbl{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.92rem;text-transform:uppercase;color:var(--mid);white-space:nowrap}
-.sfbtns{display:flex;gap:7px;flex-wrap:wrap}
-.sfb{background:var(--lt);border:2px solid var(--bd);color:var(--mid);padding:7px 13px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.83rem;text-transform:uppercase;cursor:pointer;border-radius:3px;transition:all .2s;white-space:nowrap}
-.sfb:hover{border-color:var(--o);color:var(--o)}
-.sfb.on{background:var(--o);border-color:var(--o);color:var(--wh)}
-.sfsec{max-width:1280px;margin:32px auto 72px;padding:0 20px}
-.sfcnt{font-family:'Barlow Condensed',sans-serif;font-size:.88rem;color:var(--st);text-transform:uppercase;letter-spacing:1px;margin-bottom:16px}
-.pcard.hid{display:none}
-.no-res{grid-column:1/-1;text-align:center;padding:48px;color:var(--mid);font-family:'Barlow Condensed',sans-serif;font-size:1.05rem;text-transform:uppercase}
-
-/* FOOTER */
-footer{background:#111;padding:40px 20px 18px;color:#888;width:100%}
-.ft-i{max-width:1280px;margin:0 auto}
-.ftg{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px;padding-bottom:26px;border-bottom:1px solid #2A2A2A;margin-bottom:16px}
-.ft-brand p{font-size:.82rem;color:#666;line-height:1.7;max-width:230px;margin-top:9px}
-.fc h4{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.92rem;text-transform:uppercase;color:var(--wh);margin-bottom:11px;letter-spacing:1px}
-.fc a{display:block;color:#666;font-size:.82rem;margin-bottom:7px;transition:color .2s}
-.fc a:hover{color:var(--o)}
-.ft-bot{display:flex;justify-content:space-between;align-items:center;font-size:.77rem;flex-wrap:wrap;gap:9px}
-.pays{display:flex;gap:7px;flex-wrap:wrap}
-.pay{background:#222;border:1px solid #333;border-radius:3px;padding:3px 8px;font-size:.68rem;color:#888;font-weight:600}
-
-/* LAYOUT HELPERS */
-.wrap{max-width:1280px;margin:0 auto;padding:0 20px}
-.sec{max-width:1280px;margin:44px auto 80px;padding:0 20px}
-.sec-w{max-width:880px;margin:44px auto 80px;padding:0 20px}
-
-/* ═══ MOBILE RESPONSIVE ═══════════════════════════════════════ */
-@media(max-width:1024px){
-  .pgrid{grid-template-columns:repeat(3,1fr)}
-  .wgrid{grid-template-columns:repeat(2,1fr)}
-  .ftg{grid-template-columns:1fr 1fr;gap:22px}
-  .rgrid{grid-template-columns:repeat(2,1fr)}
-}
-@media(max-width:860px){
-  .hero{grid-template-columns:1fr;min-height:auto}
-  .hero-c{padding:38px 20px 28px}
-  .hero-v{height:230px}
-  .htgrid{grid-template-columns:1fr 1fr 1fr 1fr;grid-template-rows:1fr}
-  .ccgrid{grid-template-columns:1fr 1fr}
-  .promo-i{grid-template-columns:1fr}
-  .rgvgrid{grid-template-columns:1fr}
-  .pp-layout{grid-template-columns:1fr;gap:24px}
-  .bgrid{grid-template-columns:1fr 1fr}
-}
-@media(max-width:768px){
-  /* Header */
-  .hdr-i{height:56px;padding:0 14px;gap:9px}
-  .logo{font-size:1.35rem}
-  .srch{display:none}
-  .hph{display:none}
-  .cart-btn{padding:7px 11px;font-size:.85rem!important}
-  .hbtn{display:flex!important}
-  /* Nav mobile */
-  .nav{display:none}
-  .nav.mob-open{display:block}
-  .nav-i{flex-direction:column;padding:0;overflow:visible;width:100%}
-  .nav a{padding:13px 18px;border-bottom:1px solid #333;font-size:1.02rem;width:100%}
-  .ni>a::after{float:right}
-  .dd{display:none!important;position:static;box-shadow:none;border:none;background:#161616;min-width:unset;width:100%}
-  .ni.mob-open .dd{display:block!important}
-  .dd a{padding:11px 28px;font-size:.97rem;border-bottom:1px solid #222}
-  /* Announce */
-  .ann{font-size:.75rem;padding:7px 12px}
-  .ann-x{display:none}
-  /* Hero */
-  .hero h1{font-size:2.4rem}
-  .hero-p{font-size:.9rem;margin-bottom:18px}
-  .hero-btns{flex-direction:column;gap:9px}
-  .hero-btns a{display:block;text-align:center;padding:13px 18px;font-size:.97rem;width:100%}
-  .hero-v{height:180px}
-  .ht-ic{font-size:1.7rem}
-  .ht-nm{font-size:.88rem}
-  /* Trust */
-  .trust{padding:13px 16px}
-  .trust-i{display:grid;grid-template-columns:1fr 1fr;gap:9px;justify-items:start}
-  .ti strong{font-size:.88rem}
-  .ti span{font-size:.68rem}
-  /* Cat section */
-  .csec{margin:36px auto}
-  .chdr{flex-direction:column;align-items:flex-start;gap:7px;margin-bottom:18px}
-  .ccgrid{grid-template-columns:1fr;gap:12px}
-  /* Promo */
-  .promo{padding:36px 16px}
-  .pc{padding:24px 20px;min-height:auto}
-  .pc h3{font-size:1.55rem}
-  /* Why */
-  .why{padding:40px 16px}
-  .wgrid{grid-template-columns:1fr 1fr;gap:11px}
-  .wi{padding:18px 11px}
-  .wi-ic{font-size:1.85rem;margin-bottom:8px}
-  .wi-t{font-size:.97rem}
-  /* Reviews */
-  .revs{padding:40px 16px}
-  .rgvgrid{grid-template-columns:1fr}
-  /* CTA */
-  .cta{padding:40px 16px}
-  /* Cat hero */
-  .chero{padding:32px 16px}
-  .chero h1{font-size:2rem}
-  /* Subcat */
-  .scgrid{grid-template-columns:1fr}
-  .scimg{height:155px;font-size:4.5rem}
-  /* Product grid */
-  .pgrid{grid-template-columns:repeat(2,1fr);gap:12px}
-  /* Product page */
-  .pp-acts{flex-direction:column;gap:9px}
-  .pp-acts a{width:100%;display:block;text-align:center}
-  .pp-price{font-size:1.9rem}
-  /* Forms */
-  .frow{grid-template-columns:1fr}
-  .fcard{padding:20px 16px}
-  .icard{padding:20px 16px}
-  /* Contact */
-  .cgrid{grid-template-columns:1fr}
-  /* Benefits */
-  .bgrid{grid-template-columns:1fr 1fr;gap:11px}
-  /* Shop filter */
-  .sfbar{padding:12px 16px;top:56px}
-  .sfbtns{gap:5px}
-  .sfb{padding:6px 10px;font-size:.78rem}
-  /* Footer */
-  .ftg{grid-template-columns:1fr 1fr;gap:18px}
-  .ft-bot{flex-direction:column;align-items:flex-start;gap:9px}
-  footer{padding:34px 16px 18px}
-  /* Rel grid */
-  .rgrid{grid-template-columns:1fr 1fr;gap:12px}
-  /* Sections */
-  .sec,.sec-w{margin:36px auto 60px;padding:0 16px}
-  .wrap{padding:0 16px}
-  .sfsec{padding:0 16px;margin:26px auto 56px}
-}
-@media(max-width:480px){
-  .logo{font-size:1.15rem}
-  .hero h1{font-size:2rem}
-  .hero-v{height:155px}
-  .pgrid{grid-template-columns:1fr}
-  .trust-i{grid-template-columns:1fr}
-  .wgrid{grid-template-columns:1fr}
-  .ftg{grid-template-columns:1fr}
-  .ann{display:none}
-  .sfbtns{display:grid;grid-template-columns:1fr 1fr;gap:5px}
-  .sfb{text-align:center}
-  .bgrid{grid-template-columns:1fr}
-  .rgrid{grid-template-columns:1fr}
-  .pp-layout{gap:18px}
-}
-
-
-
+/* ── RESPONSIVE ── */
+@media(max-width:900px){.stats{grid-template-columns:1fr 1fr}}
+@media(max-width:700px){.sidebar{display:none}.fgrid{grid-template-columns:1fr}.svrow{grid-template-columns:1fr 1fr}.stats{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.stats{grid-template-columns:1fr}}
 </style>
-
-  <!-- Snipcart -->
-  <link rel="preconnect" href="https://app.snipcart.com">
-  <link rel="preconnect" href="https://cdn.snipcart.com">
-  <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.3.3/default/snipcart.css">
 </head>
 <body>
-<div class="ann">🚚 FREE Delivery on ALL Orders<span class="ann-x"> &nbsp;|&nbsp; 🧱 Free Brick Samples &nbsp;|&nbsp; 🏗️ Trade Accounts Available</span></div>
-<header class="hdr"><div class="hdr-i">
-  <a href="index.html" class="logo">Pro Build <b>Supplies</b></a>
-  <div class="srch"><div><input type="text" placeholder="Search bricks, paving, MDF..."><button>🔍</button></div></div>
-  <div class="hdr-act">
-    <a href="tel:08001234567" class="hph">📞 0800 123 4567</a>
-    <a href="#" class="cart-btn snipcart-checkout">🛒 Cart <span class="snipcart-items-count" style="background:var(--y);color:var(--dk);font-size:.65rem;font-weight:700;border-radius:10px;padding:1px 5px;margin-left:3px;font-family:'Barlow Condensed',sans-serif;vertical-align:middle"></span></a>
-    <button class="hbtn" id="hbt" aria-label="Menu"><span></span><span></span><span></span></button>
-  </div>
-</div></header>
-<nav class="nav" id="nav"><div class="nav-i">
-  <a href="index.html" class="cur">Home</a>
-  <a href="shop.html">🛍️ Shop All</a>
-  <div class="ni"><a href="bricks.html">🧱 Bricks</a><div class="dd">
-    <a href="handmade-bricks.html">Handmade Bricks</a>
-    <a href="reclaimed-bricks.html">Reclaimed Bricks</a>
-  </div></div>
-  <div class="ni"><a href="paving.html">🪨 Paving</a><div class="dd">
-    <a href="porcelain-paving.html">Porcelain Paving</a>
-    <a href="indian-sandstone.html">Indian Sandstone</a>
-  </div></div>
-  <a href="mdf.html">🪵 MDF</a>
-  <div class="ni"><a href="trade-accounts.html">🏗️ Trade &amp; Bulk</a><div class="dd">
-    <a href="trade-accounts.html">Trade Accounts</a>
-    <a href="trade-accounts.html#bulk">Bulk Orders</a>
-  </div></div>
-  <a href="samples.html">🧱 Free Samples</a>
-  <a href="contact.html">📞 Contact</a>
-</div></nav>
 
-<section class="hero">
-  <div class="hero-c">
-    <div class="hero-tag">⚡ New Season Stock — Just Arrived</div>
-    <h1>Your Build.<br><em>Our Supply.</em></h1>
-    <p class="hero-p">Premium bricks, paving slabs and MDF at trade-beating prices. Delivered direct to site — free on every order.</p>
-    <div class="hero-btns">
-      <a href="shop.html" class="btn-o">Shop All Products</a>
-      <a href="samples.html" class="btn-out">Request Samples</a>
+<!-- LOGIN -->
+<div id="loginScreen">
+  <div class="lbox">
+    <div class="llogo">Pro Build <span>Supplies</span></div>
+    <div class="lsub">Admin Dashboard</div>
+    <div class="lfg"><label>Email Address</label><input type="email" id="lEmail" placeholder="your@email.com" autocomplete="email"></div>
+    <div class="lfg"><label>Password</label><input type="password" id="lPass" placeholder="Your password" autocomplete="current-password"></div>
+    <button class="lbtn" id="lbtnEl">Login →</button>
+    <div class="lerr" id="lerr"></div>
+    <div class="linfo">
+      <strong>First time?</strong> Ask your admin to invite you via <strong>Supabase → Authentication → Users → Invite User</strong>, or use the email + password they set up for you.
     </div>
   </div>
-  <div class="hero-v">
-    <div class="htgrid">
-      <a href="bricks.html" class="ht ht1"><div class="ht-ic">🧱</div><div class="ht-nm">Bricks</div></a>
-      <a href="paving.html" class="ht ht2"><div class="ht-ic">🪨</div><div class="ht-nm">Paving</div></a>
-      <a href="mdf.html" class="ht ht3"><div class="ht-ic">🪵</div><div class="ht-nm">MDF</div></a>
-      <a href="trade-accounts.html" class="ht ht4"><div class="ht-ic">🏗️</div><div class="ht-nm">Trade</div></a>
+</div>
+
+<!-- APP -->
+<div id="adminApp" style="display:none;flex-direction:column;min-height:100vh">
+  <div class="topbar">
+    <div class="tlogo">Pro Build <span>Supplies</span></div>
+    <div class="tright">
+      <span class="tuser" id="tUser"></span>
+      <span class="tbadge">Admin</span>
+      <button class="tout" id="loutBtn">Logout</button>
     </div>
   </div>
-</section>
-<div class="trust"><div class="trust-i"><div class="ti"><span class="ic">🚚</span><div><strong>Free Delivery</strong><span>All orders, UK mainland</span></div></div><div class="ti"><span class="ic">📦</span><div><strong>Next-Day Dispatch</strong><span>Order before 2pm</span></div></div><div class="ti"><span class="ic">🏅</span><div><strong>Trade Quality</strong><span>Premium materials</span></div></div><div class="ti"><span class="ic">🧱</span><div><strong>Free Brick Samples</strong><span>Try before you buy</span></div></div><div class="ti"><span class="ic">⭐</span><div><strong>4.9/5 Reviews</strong><span>2,000+ customers</span></div></div></div></div>
-<section class="csec">
-  <div class="chdr">
-    <div><div class="st">Shop by <b>Category</b></div><p class="ss">Quality materials for every project</p></div>
-    <a href="shop.html">View all →</a>
-  </div>
-  <div class="ccgrid">
-    <a href="bricks.html" class="cccard"><div class="ccbg bg-br">🧱</div><div class="ccov"><span class="cclbl">Bricks</span><span class="ccsub">Handmade &amp; Reclaimed</span><span class="ccarr">Browse →</span></div></a>
-    <a href="paving.html" class="cccard"><div class="ccbg bg-pv">🪨</div><div class="ccov"><span class="cclbl">Paving</span><span class="ccsub">Porcelain &amp; Sandstone</span><span class="ccarr">Browse →</span></div></a>
-    <a href="mdf.html" class="cccard"><div class="ccbg bg-mf">🪵</div><div class="ccov"><span class="cclbl">MDF</span><span class="ccsub">Standard &amp; moisture-resistant</span><span class="ccarr">Browse →</span></div></a>
-  </div>
-</section>
-<div class="promo"><div class="promo-i">
-  <a href="trade-accounts.html" class="pc pc-o"><div class="pc-d">🧱</div><div class="pc-e">Trade &amp; Bulk Orders</div><h3>Open a Trade Account for Exclusive Pricing</h3><span class="pc-l">Apply Now →</span></a>
-  <a href="samples.html" class="pc pc-y"><div class="pc-d">🎨</div><div class="pc-e">Try Before You Buy</div><h3>Free Brick Sample Service — Delivered Free</h3><span class="pc-l">Order Samples →</span></a>
-</div></div>
-<section class="why"><div class="why-i">
-  <div class="st">Why Choose <b>Pro Build Supplies</b></div>
-  <div class="wgrid">
-    <div class="wi"><span class="wi-ic">🏭</span><div class="wi-t">Direct from Manufacturer</div><p>We source direct, cutting out the middleman for better prices on every order.</p></div>
-    <div class="wi"><span class="wi-ic">⚡</span><div class="wi-t">Next-Day Delivery</div><p>Order before 2pm Monday–Friday for same-day dispatch to UK mainland.</p></div>
-    <div class="wi"><span class="wi-ic">📋</span><div class="wi-t">Expert Advice</div><p>Our specialists are on hand to help you spec the right product for your project.</p></div>
-    <div class="wi"><span class="wi-ic">🔒</span><div class="wi-t">Secure Checkout</div><p>Klarna, card and PayPal — plus a 30-day returns policy on all orders.</p></div>
-  </div>
-</div></section>
-<section class="revs"><div class="revs-i">
-  <div class="st" style="color:var(--wh)">What Our <b style="color:var(--y)">Customers Say</b></div>
-  <p class="ss" style="color:#888;margin-top:7px">Over 2,000 verified reviews</p>
-  <div class="rgvgrid">
-    <div class="rv"><div class="stars">★★★★★</div><p>"Ordered a pallet of facing bricks for a garden wall. Arrived on time, well-packaged and the colour matched the sample exactly."</p><div class="rvr"><div class="av">JT</div><div><span class="rvn">James T.</span><span class="rvl">Manchester</span></div></div></div>
-    <div class="rv"><div class="stars">★★★★★</div><p>"Excellent MDF quality at an unbeatable price. Fast delivery and great communication throughout."</p><div class="rvr"><div class="av">SR</div><div><span class="rvn">Sarah R.</span><span class="rvl">Bristol</span></div></div></div>
-    <div class="rv"><div class="stars">★★★★★</div><p>"Stunning porcelain paving — our patio looks completely transformed. Delivery was fast and the driver was brilliant."</p><div class="rvr"><div class="av">DK</div><div><span class="rvn">Daniel K.</span><span class="rvl">Leeds</span></div></div></div>
-  </div>
-</div></section>
-<div class="cta"><h2>Ready to Start Your Project?</h2><p>Browse our full range or talk to our team for a bespoke quote.</p><a href="shop.html" class="btn-wh">Shop Now</a></div>
-<footer><div class="ft-i">
-  <div class="ftg">
-    <div class="ft-brand"><a href="index.html" class="logo">Pro Build <b>Supplies</b></a><p>Premium building materials at trade prices, delivered direct to your door or site. Free delivery on every order.</p></div>
-    <div class="fc"><h4>Products</h4>
-      <a href="handmade-bricks.html">Handmade Bricks</a>
-      <a href="reclaimed-bricks.html">Reclaimed Bricks</a>
-      <a href="porcelain-paving.html">Porcelain Paving</a>
-      <a href="indian-sandstone.html">Indian Sandstone</a>
-      <a href="mdf.html">MDF Sheets</a>
+  <div class="layout">
+    <div class="sidebar">
+      <div class="snav">
+        <span class="slabel">Main</span>
+        <button class="sbtn on" data-pg="dashboard">📊 Dashboard</button>
+        <button class="sbtn" data-pg="products">📦 All Products <span class="scount" id="sc-all">0</span></button>
+        <span class="slabel">Categories</span>
+        <button class="sbtn" data-pg="cat-handmade">🧱 Handmade Bricks <span class="scount" id="sc-hm">0</span></button>
+        <button class="sbtn" data-pg="cat-reclaimed">♻️ Reclaimed Bricks <span class="scount" id="sc-rc">0</span></button>
+        <button class="sbtn" data-pg="cat-porcelain">🪨 Porcelain Paving <span class="scount" id="sc-pp">0</span></button>
+        <button class="sbtn" data-pg="cat-sandstone">🌿 Indian Sandstone <span class="scount" id="sc-ss">0</span></button>
+        <button class="sbtn" data-pg="cat-mdf">🪵 MDF <span class="scount" id="sc-mdf">0</span></button>
+        <span class="slabel">Tools</span>
+        <button class="sbtn" data-pg="images">🖼️ Product Images</button>
+        <button class="sbtn" data-pg="publish">🚀 Publish to Site</button>
+        <button class="sbtn" data-pg="activity">📋 Activity Log</button>
+        <button class="sbtn" data-pg="settings">⚙️ Settings</button>
+      </div>
     </div>
-    <div class="fc"><h4>Help &amp; Info</h4>
-      <a href="delivery.html">Delivery Info</a>
-      <a href="returns.html">Returns Policy</a>
-      <a href="samples.html">Free Samples</a>
-      <a href="trade-accounts.html">Trade Accounts</a>
-      <a href="contact.html">Contact Us</a>
-    </div>
-    <div class="fc"><h4>Company</h4>
-      <a href="https://www.probuildsupplies.uk/about/">About Us</a>
-      <a href="https://www.probuildsupplies.uk/blog/">Blog</a>
-      <a href="https://www.probuildsupplies.uk/privacy-policy/">Privacy Policy</a>
-      <a href="https://www.probuildsupplies.uk/terms/">Terms &amp; Conditions</a>
+    <div class="main">
+
+      <!-- DASHBOARD -->
+      <div class="pg on" id="pg-dashboard">
+        <div class="pghdr"><div class="pgtitle">Dashboard <span>Overview</span></div><button class="btn btn-o" id="dashAddBtn">+ Add Product</button></div>
+        <div class="stats" id="statsGrid"><div class="loading"><div class="spinner"></div></div></div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px">
+          <div class="twrap">
+            <div style="padding:13px 16px;border-bottom:1px solid var(--bd);font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:.92rem;text-transform:uppercase;color:var(--tx)">Recent Products</div>
+            <table class="tbl"><thead><tr><th>Name</th><th>Price</th><th>Action</th></tr></thead><tbody id="recentTbl"><tr><td colspan="3"><div class="loading"><div class="spinner"></div></div></td></tr></tbody></table>
+          </div>
+          <div class="twrap">
+            <div style="padding:13px 16px;border-bottom:1px solid var(--bd);font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:.92rem;text-transform:uppercase;color:var(--tx)">By Category</div>
+            <div style="padding:14px" id="catBreak"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ALL PRODUCTS -->
+      <div class="pg" id="pg-products">
+        <div class="pghdr"><div class="pgtitle">All <span>Products</span></div><button class="btn btn-o" id="allAddBtn">+ Add Product</button></div>
+        <div class="toolbar">
+          <div class="sbox"><input type="text" placeholder="Search products..." id="searchInput"></div>
+          <select class="fsel" id="catFilterSel">
+            <option value="">All Categories</option>
+            <option>Handmade Bricks</option><option>Reclaimed Bricks</option>
+            <option>Porcelain Paving</option><option>Indian Sandstone</option><option>MDF</option>
+          </select>
+        </div>
+        <div class="twrap"><table class="tbl"><thead><tr><th>Product</th><th>Category</th><th>Price</th><th>Visible</th><th>Actions</th></tr></thead><tbody id="allTbl"></tbody></table></div>
+      </div>
+
+      <!-- CATEGORY PAGES -->
+      <div class="pg" id="pg-cat-handmade"><div class="pghdr"><div class="pgtitle">Handmade <span>Bricks</span></div><button class="btn btn-o cat-add" data-cat="Handmade Bricks">+ Add</button></div><div class="twrap"><table class="tbl"><thead><tr><th>Product</th><th>Price</th><th>Visible</th><th>Actions</th></tr></thead><tbody id="tbl-handmade"></tbody></table></div></div>
+      <div class="pg" id="pg-cat-reclaimed"><div class="pghdr"><div class="pgtitle">Reclaimed <span>Bricks</span></div><button class="btn btn-o cat-add" data-cat="Reclaimed Bricks">+ Add</button></div><div class="twrap"><table class="tbl"><thead><tr><th>Product</th><th>Price</th><th>Visible</th><th>Actions</th></tr></thead><tbody id="tbl-reclaimed"></tbody></table></div></div>
+      <div class="pg" id="pg-cat-porcelain"><div class="pghdr"><div class="pgtitle">Porcelain <span>Paving</span></div><button class="btn btn-o cat-add" data-cat="Porcelain Paving">+ Add</button></div><div class="twrap"><table class="tbl"><thead><tr><th>Product</th><th>Price</th><th>Visible</th><th>Actions</th></tr></thead><tbody id="tbl-porcelain"></tbody></table></div></div>
+      <div class="pg" id="pg-cat-sandstone"><div class="pghdr"><div class="pgtitle">Indian <span>Sandstone</span></div><button class="btn btn-o cat-add" data-cat="Indian Sandstone">+ Add</button></div><div class="twrap"><table class="tbl"><thead><tr><th>Product</th><th>Price</th><th>Visible</th><th>Actions</th></tr></thead><tbody id="tbl-sandstone"></tbody></table></div></div>
+      <div class="pg" id="pg-cat-mdf"><div class="pghdr"><div class="pgtitle">MDF &amp; <span>Drylining</span></div><button class="btn btn-o cat-add" data-cat="MDF">+ Add</button></div><div class="twrap"><table class="tbl"><thead><tr><th>Product</th><th>Price</th><th>Visible</th><th>Actions</th></tr></thead><tbody id="tbl-mdf"></tbody></table></div></div>
+
+      <!-- IMAGES -->
+      <div class="pg" id="pg-images">
+        <div class="pghdr"><div class="pgtitle">Product <span>Images</span></div></div>
+        <div class="icard"><p>Upload images by editing a product. Images are stored in Supabase and included when you publish.</p></div>
+        <div class="igrid" id="imgGallery"></div>
+        <div id="imgEmpty" style="display:none;text-align:center;padding:60px;color:var(--mid)"><div style="font-size:2.5rem;margin-bottom:12px">🖼️</div><div style="font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.05rem;text-transform:uppercase">No images yet — edit a product to upload one</div></div>
+      </div>
+
+      <!-- PUBLISH -->
+      <div class="pg" id="pg-publish">
+        <div class="pghdr"><div class="pgtitle">Publish <span>to Site</span></div></div>
+        <div class="pub-box">
+          <h3>🚀 One-Click Publish</h3>
+          <p>Pushes all product data from Supabase to GitHub. Your Netlify site updates automatically within 60 seconds.</p>
+          <div id="pubStatus" class="smsg"></div>
+          <button class="btn btn-g" id="publishBtn" style="font-size:.95rem;padding:13px 28px;margin-top:8px">🚀 Publish to Live Site</button>
+          <div class="pub-last">Last published: <span id="lastPub">—</span></div>
+        </div>
+        <div class="icard">
+          <h3>⬇️ Manual Export</h3>
+          <p>Download <code>products.json</code> and upload it to your GitHub repo manually if needed.</p>
+          <div class="btn-row"><button class="btn btn-s" id="dlBtn">⬇️ Download products.json</button></div>
+        </div>
+      </div>
+
+      <!-- ACTIVITY LOG -->
+      <div class="pg" id="pg-activity">
+        <div class="pghdr"><div class="pgtitle">Activity <span>Log</span></div><button class="btn btn-s" id="refreshLogBtn">↻ Refresh</button></div>
+        <div class="twrap" style="padding:18px" id="activityLog"><div class="loading"><div class="spinner"></div></div></div>
+      </div>
+
+      <!-- SETTINGS -->
+      <div class="pg" id="pg-settings">
+        <div class="pghdr"><div class="pgtitle">Settings <span>⚙️</span></div></div>
+
+        <div class="icard" style="border-color:rgba(245,92,27,.4)">
+          <h3>🛒 Snipcart API Key</h3>
+          <p>Get your Public API Key from <strong style="color:var(--tx)">app.snipcart.com → Account → API Keys</strong>. Saved to Supabase — shared across all devices.</p>
+          <div class="fg full" style="margin-top:12px"><label>Snipcart Public API Key</label><input type="password" id="snipKey" placeholder="Paste your key here" autocomplete="off"></div>
+          <div class="btn-row"><button class="btn btn-o" id="saveSnipBtn">Save Key</button><button class="btn btn-d" id="clearSnipBtn">Clear Key</button></div>
+          <div class="smsg" id="snipStatus"></div>
+        </div>
+
+        <div class="icard" style="border-color:rgba(34,197,94,.3)">
+          <h3>🔗 GitHub Connection</h3>
+          <p>Token is stored in your browser only. Username and repo are saved to Supabase.</p>
+          <div class="fgrid" style="margin-top:12px">
+            <div class="fg"><label>GitHub Username</label><input type="text" id="ghUser" placeholder="shakeel-terra"></div>
+            <div class="fg"><label>Repository Name</label><input type="text" id="ghRepo" placeholder="probuildsupplies"></div>
+            <div class="fg full"><label>Personal Access Token <span style="text-transform:none;font-weight:400;font-size:.7rem;color:var(--mid)">(stored in this browser only)</span></label><input type="password" id="ghToken" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx" autocomplete="off"></div>
+          </div>
+          <div class="btn-row"><button class="btn btn-o" id="saveGhBtn">Save</button><button class="btn btn-s" id="testGhBtn">Test Connection</button><button class="btn btn-d" id="clearGhBtn">Clear Token</button></div>
+          <div class="smsg" id="ghStatus"></div>
+        </div>
+
+        <div class="icard">
+          <h3>👥 Team Access</h3>
+          <p>To give someone access to this admin, invite them in Supabase:</p>
+          <ol><li>Go to your <strong style="color:var(--tx)">Supabase project dashboard</strong></li><li>Click <strong style="color:var(--tx)">Authentication → Users</strong></li><li>Click <strong style="color:var(--tx)">Invite User</strong></li><li>Enter their email — they'll receive a link to set their password</li><li>They can then log in at this admin URL with their email and password</li></ol>
+          <div style="margin-top:12px;padding:11px 13px;background:rgba(59,130,246,.08);border:1px solid rgba(59,130,246,.25);border-radius:4px;font-size:.8rem;color:#93c5fd;line-height:1.6">
+            All team members share the same product data in real time — changes made by one person are instantly visible to everyone.
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
-  <div class="ft-bot">
-    <span>&copy; 2026 Pro Build Supplies. All rights reserved.</span>
-    <div class="pays"><span class="pay">VISA</span><span class="pay">Mastercard</span><span class="pay">PayPal</span><span class="pay">Klarna</span><span class="pay">AMEX</span></div>
+</div>
+
+<!-- PRODUCT MODAL -->
+<div class="moverlay" id="prodModal">
+  <div class="modal">
+    <div class="mhdr"><div class="mtitle" id="modalTitle">Add Product</div><button class="mclose" id="mcloseBtn">✕</button></div>
+    <div class="mbody">
+      <div class="fgrid">
+        <div class="fg full"><label>Product Name *</label><input type="text" id="fName" placeholder="e.g. Red Handmade Facing Bricks"></div>
+        <div class="fg"><label>Category *</label>
+          <select id="fCat">
+            <option value="Handmade Bricks">🧱 Handmade Bricks</option>
+            <option value="Reclaimed Bricks">♻️ Reclaimed Bricks</option>
+            <option value="Porcelain Paving">🪨 Porcelain Paving</option>
+            <option value="Indian Sandstone">🌿 Indian Sandstone</option>
+            <option value="MDF">🪵 MDF</option>
+          </select>
+        </div>
+        <div class="fg"><label>Base Price</label><input type="text" id="fPrice" placeholder="£598.26 or POA"></div>
+        <div class="fg"><label>Price Note</label><input type="text" id="fPriceNote" placeholder="Pack of 512 | Free delivery"></div>
+        <div class="fg"><label>URL Slug</label><input type="text" id="fSlug" placeholder="red-handmade-facing-bricks"><span class="fhint">Auto-generated if blank</span></div>
+        <div class="fg"><label>Buy Link</label><input type="text" id="fUrl" placeholder="https://..."></div>
+        <div class="fg full"><label>Short Description</label><textarea id="fDesc" placeholder="Brief description..."></textarea></div>
+        <div class="fg"><label>Colour</label><input type="text" id="fColour" placeholder="Red / Multi"></div>
+        <div class="fg"><label>Frost Resistance</label>
+          <select id="fFrost"><option value="F2 — Fully frost resistant">F2 — Fully frost resistant</option><option value="F1 — Moderate">F1 — Moderate</option><option value="Yes">Yes</option><option value="N/A">N/A</option></select>
+        </div>
+        <div class="fg"><label>Visible on Site</label>
+          <select id="fVisible"><option value="true">✅ Visible</option><option value="false">🚫 Hidden</option></select>
+        </div>
+        <div class="fg"><label>Badge</label>
+          <select id="fBadge"><option value="">None</option><option>Best Seller</option><option>New</option><option>Sale</option><option>In Stock</option></select>
+        </div>
+        <div class="fg"><label>Delivery</label>
+          <select id="fDelivery"><option value="included">✅ Included in price</option><option value="extra">🚚 Charged separately</option></select>
+        </div>
+        <hr class="fsep">
+        <div class="fg full" id="svSection">
+          <label>Size Variants <span style="text-transform:none;font-weight:400;font-size:.7rem;color:var(--mid)">— bricks only</span></label>
+          <div class="svwrap">
+            <div style="display:grid;grid-template-columns:80px 140px 1fr 32px;gap:8px;margin-bottom:6px;padding:0 2px">
+              <span style="font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.66rem;text-transform:uppercase;color:var(--mid)">Size</span>
+              <span style="font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.66rem;text-transform:uppercase;color:var(--mid)">Pack Size</span>
+              <span style="font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.66rem;text-transform:uppercase;color:var(--mid)">Price</span>
+              <span></span>
+            </div>
+            <div id="svList"></div>
+            <button type="button" class="svadd" id="svAddBtn">+ Add Size Option</button>
+          </div>
+          <span class="fhint">e.g. 65mm / Pack of 512 / £598.26</span>
+        </div>
+        <hr class="fsep">
+        <div class="fg full">
+          <label>Product Image</label>
+          <div class="imgarea" id="imgArea">
+            <div class="imgrow">
+              <div class="imgbox" id="imgBox">📷</div>
+              <div class="imginfo">
+                <p>JPG or PNG, max 5MB. Auto-compressed to 800×600px.</p>
+                <div class="imgname" id="imgName">No image uploaded</div>
+                <div class="imgbtns">
+                  <button type="button" class="ibtn ibtn-up" id="imgUpBtn">📁 Choose Image</button>
+                  <button type="button" class="ibtn ibtn-cl" id="imgClrBtn" style="display:none">✕ Remove</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <input type="file" id="imgFile" accept="image/jpeg,image/png,image/webp" style="display:none">
+        </div>
+      </div>
+    </div>
+    <div class="mfoot">
+      <button class="btn btn-s" id="mcancelBtn">Cancel</button>
+      <button class="btn btn-o" id="msaveBtn">Save Product</button>
+    </div>
   </div>
-</div></footer>
+</div>
+
+<!-- CONFIRM -->
+<div class="cov" id="confOverlay">
+  <div class="cbox">
+    <h3 id="confTitle">Are you sure?</h3>
+    <p id="confMsg">This cannot be undone.</p>
+    <div class="cbtns">
+      <button class="btn btn-s" id="confCancelBtn">Cancel</button>
+      <button class="btn btn-d" id="confOkBtn">Confirm</button>
+    </div>
+  </div>
+</div>
+
+<div class="twrap" id="toastWrap"></div>
+
 <script>
-(function(){
-  var t=document.getElementById('hbt'),n=document.getElementById('nav');
-  if(!t||!n)return;
-  t.addEventListener('click',function(){t.classList.toggle('open');n.classList.toggle('mob-open');});
-  n.querySelectorAll('.ni').forEach(function(ni){
-    ni.querySelector('a').addEventListener('click',function(e){
-      if(window.innerWidth<=768){
-        e.preventDefault();
-        n.querySelectorAll('.ni').forEach(function(x){if(x!==ni)x.classList.remove('mob-open')});
-        ni.classList.toggle('mob-open');
-      }
+'use strict';
+
+// ═══════════════════════════════════════════════════
+// SUPABASE INIT
+// ═══════════════════════════════════════════════════
+var SUPA_URL = 'https://kiifrcsqsxlumteoyenf.supabase.co';
+var SUPA_KEY = 'sb_publishable_cgEIv028aTATK1dKiv-q1A_NIc6WmaP';
+var sb = supabase.createClient(SUPA_URL, SUPA_KEY);
+
+// ═══════════════════════════════════════════════════
+// STATE
+// ═══════════════════════════════════════════════════
+var products  = [];
+var editingId = null;
+var imgData   = '';
+var svCount   = 0;
+var currentUser = null;
+
+// ═══════════════════════════════════════════════════
+// AUTH
+// ═══════════════════════════════════════════════════
+document.getElementById('lpass') && document.getElementById('lpass').addEventListener && null;
+document.getElementById('lEmail').addEventListener('keydown', function(e){ if(e.key==='Enter') document.getElementById('lPass').focus(); });
+document.getElementById('lPass').addEventListener('keydown',  function(e){ if(e.key==='Enter') doLogin(); });
+document.getElementById('lbtnEl').addEventListener('click', doLogin);
+document.getElementById('loutBtn').addEventListener('click', doLogout);
+
+async function doLogin() {
+  var email = document.getElementById('lEmail').value.trim();
+  var pass  = document.getElementById('lPass').value;
+  var btn   = document.getElementById('lbtnEl');
+  var err   = document.getElementById('lerr');
+  if (!email || !pass) { showErr('Please enter your email and password.'); return; }
+  btn.disabled = true; btn.textContent = 'Logging in...';
+  err.style.display = 'none';
+  var res = await sb.auth.signInWithPassword({ email: email, password: pass });
+  if (res.error) {
+    showErr(res.error.message || 'Login failed. Check your email and password.');
+    btn.disabled = false; btn.textContent = 'Login →';
+  } else {
+    currentUser = res.data.user;
+    showApp();
+  }
+}
+
+async function doLogout() {
+  await sb.auth.signOut();
+  currentUser = null;
+  document.getElementById('loginScreen').style.display = 'flex';
+  document.getElementById('adminApp').style.display = 'none';
+  document.getElementById('lEmail').value = '';
+  document.getElementById('lPass').value  = '';
+  document.getElementById('lbtnEl').disabled = false;
+  document.getElementById('lbtnEl').textContent = 'Login →';
+}
+
+function showErr(msg) {
+  var el = document.getElementById('lerr');
+  el.textContent = msg; el.style.display = 'block';
+}
+
+async function checkSession() {
+  var res = await sb.auth.getSession();
+  if (res.data && res.data.session && res.data.session.user) {
+    currentUser = res.data.session.user;
+    showApp();
+  }
+}
+
+async function showApp() {
+  document.getElementById('loginScreen').style.display = 'none';
+  document.getElementById('adminApp').style.display = 'flex';
+  document.getElementById('tUser').textContent = currentUser ? currentUser.email : '';
+  await loadProducts();
+  renderAll();
+  goPage('dashboard');
+  loadSettingsData();
+}
+
+// Check existing session on load
+checkSession();
+
+// ═══════════════════════════════════════════════════
+// SUPABASE DATA
+// ═══════════════════════════════════════════════════
+async function loadProducts() {
+  var res = await sb.from('products').select('*').order('created_at', {ascending: true});
+  if (res.error) { toast('Failed to load products: '+res.error.message,'er'); return; }
+  products = (res.data || []).map(dbToProduct);
+}
+
+async function saveProduct(data) {
+  var row = productToDb(data);
+  if (editingId) {
+    var res = await sb.from('products').update(row).eq('id', editingId);
+    if (res.error) { toast('Save failed: '+res.error.message,'er'); return false; }
+    await logActivity('Updated product: '+data.name);
+  } else {
+    var res2 = await sb.from('products').insert(row);
+    if (res2.error) { toast('Save failed: '+res2.error.message,'er'); return false; }
+    await logActivity('Added product: '+data.name);
+  }
+  return true;
+}
+
+async function deleteProduct(id, name) {
+  var res = await sb.from('products').delete().eq('id', id);
+  if (res.error) { toast('Delete failed: '+res.error.message,'er'); return; }
+  await logActivity('Deleted product: '+name);
+  await loadProducts(); renderAll(); toast('Product deleted','ok');
+}
+
+function dbToProduct(row) {
+  return {
+    id:           row.id,
+    name:         row.name || '',
+    category:     row.category || '',
+    price:        row.price || '',
+    priceNote:    row.price_note || '',
+    slug:         row.slug || '',
+    url:          row.url || '',
+    description:  row.description || '',
+    colour:       row.colour || '',
+    frost:        row.frost || 'F2 — Fully frost resistant',
+    visible:      row.visible !== false,
+    badge:        row.badge || '',
+    delivery:     row.delivery || 'extra',
+    sizeVariants: row.size_variants || [],
+    image:        row.image || '',
+    createdAt:    row.created_at,
+    updatedAt:    row.updated_at
+  };
+}
+
+function productToDb(p) {
+  return {
+    id:            p.id,
+    name:          p.name,
+    category:      p.category,
+    price:         p.price,
+    price_note:    p.priceNote,
+    slug:          p.slug,
+    url:           p.url,
+    description:   p.description,
+    colour:        p.colour,
+    frost:         p.frost,
+    visible:       p.visible,
+    badge:         p.badge,
+    delivery:      p.delivery,
+    size_variants: p.sizeVariants,
+    image:         p.image,
+    updated_at:    new Date().toISOString()
+  };
+}
+
+async function logActivity(action) {
+  if (!currentUser) return;
+  await sb.from('activity_log').insert({
+    user_email: currentUser.email,
+    action:     action,
+    details:    ''
+  });
+}
+
+// ═══════════════════════════════════════════════════
+// NAVIGATION
+// ═══════════════════════════════════════════════════
+document.querySelectorAll('.sbtn[data-pg]').forEach(function(btn) {
+  btn.addEventListener('click', function() { goPage(this.dataset.pg); });
+});
+
+function goPage(id) {
+  document.querySelectorAll('.pg').forEach(function(p) { p.classList.remove('on'); });
+  document.querySelectorAll('.sbtn').forEach(function(b) { b.classList.remove('on'); });
+  var pg = document.getElementById('pg-'+id);
+  if (pg) pg.classList.add('on');
+  var sb2 = document.querySelector('.sbtn[data-pg="'+id+'"]');
+  if (sb2) sb2.classList.add('on');
+  if (id === 'publish')  renderPublish();
+  if (id === 'images')   renderImages();
+  if (id === 'activity') loadActivityLog();
+  if (id.startsWith('cat-')) renderCat(id.replace('cat-',''));
+  if (id === 'products') renderAllTable();
+  if (id === 'dashboard') renderDash();
+}
+
+// ═══════════════════════════════════════════════════
+// ADD BUTTONS
+// ═══════════════════════════════════════════════════
+document.getElementById('dashAddBtn').addEventListener('click', function(){ openModal(null,''); });
+document.getElementById('allAddBtn').addEventListener('click',  function(){ openModal(null,''); });
+document.querySelectorAll('.cat-add').forEach(function(btn){
+  btn.addEventListener('click', function(){ openModal(null, this.dataset.cat); });
+});
+document.getElementById('searchInput').addEventListener('input', renderAllTable);
+document.getElementById('catFilterSel').addEventListener('change', renderAllTable);
+
+// ═══════════════════════════════════════════════════
+// HELPERS
+// ═══════════════════════════════════════════════════
+function catClass(c){
+  if(!c)return'';
+  if(c.includes('Handmade'))return'cb-hm';
+  if(c.includes('Reclaimed'))return'cb-rc';
+  if(c.includes('Porcelain'))return'cb-pp';
+  if(c.includes('Sandstone'))return'cb-ss';
+  if(c.includes('MDF'))return'cb-mdf';
+  return'cb-hm';
+}
+function catIcon(c){var m={'Handmade Bricks':'🧱','Reclaimed Bricks':'♻️','Porcelain Paving':'🪨','Indian Sandstone':'🌿','MDF':'🪵'};return m[c]||'📦';}
+function esc(s){return(s||'').replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;');}
+function mkSlug(s){return s.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'');}
+function sf(id,v){var el=document.getElementById(id);if(el)el.value=v||'';}
+
+// ═══════════════════════════════════════════════════
+// RENDER
+// ═══════════════════════════════════════════════════
+function renderAll(){ updateCounts(); renderDash(); renderAllTable(); renderCatAll(); }
+
+function makeRow(p, showCat) {
+  var isPoa = !p.price || p.price === 'POA';
+  var thumb = p.image ? '<img src="'+p.image+'" class="thumb" alt="">' : '<div class="thumbph">'+catIcon(p.category)+'</div>';
+  var vis   = p.visible !== false ? '<span class="vison">✓ Visible</span>' : '<span class="visoff">✗ Hidden</span>';
+  var catTd = showCat ? '<td><span class="cbadge '+catClass(p.category)+'">'+p.category+'</span></td>' : '';
+  return '<tr>'
+    +'<td class="namecell"><div class="nrow">'+thumb+'<div>'+esc(p.name)+'<small>'+(p.slug||'')+'</small></div></div></td>'
+    +catTd
+    +'<td class="pcell'+(isPoa?' poa':'')+'">'+esc(p.price||'POA')+'</td>'
+    +'<td>'+vis+'</td>'
+    +'<td class="acell">'
+    +'<button class="btn btn-s btn-sm edit-btn" data-id="'+p.id+'">✏️ Edit</button>'
+    +'<button class="btn btn-d btn-sm del-btn" data-id="'+p.id+'" data-name="'+esc(p.name)+'">🗑️</button>'
+    +'</td></tr>';
+}
+
+function attachEvents(tbodyId){
+  var el=document.getElementById(tbodyId); if(!el)return;
+  el.querySelectorAll('.edit-btn').forEach(function(b){ b.addEventListener('click',function(){ openModal(this.dataset.id,null); }); });
+  el.querySelectorAll('.del-btn').forEach(function(b){
+    b.addEventListener('click',function(){
+      var id=this.dataset.id,name=this.dataset.name;
+      showConfirm('Delete Product?','"'+name+'" will be permanently deleted.','Delete',function(){ deleteProduct(id,name); });
     });
   });
-})();
-</script>
+}
 
+function renderDash(){
+  var total=products.length,vis=products.filter(function(p){return p.visible!==false;}).length;
+  var imgs=products.filter(function(p){return p.image;}).length,poa=products.filter(function(p){return!p.price||p.price==='POA';}).length;
+  document.getElementById('statsGrid').innerHTML=sc('Total Products',total,'#fff','all products')+sc('Visible',vis,'var(--gr)','live on site')+sc('With Images',imgs,'var(--bl)','of '+total)+sc('POA Prices',poa,'var(--yl)','contact for price');
+  var recent=products.slice().reverse().slice(0,6);
+  document.getElementById('recentTbl').innerHTML=recent.length
+    ?recent.map(function(p){return'<tr><td class="namecell">'+esc(p.name)+'</td><td class="pcell'+((!p.price||p.price==='POA')?' poa':'')+'">'+esc(p.price||'POA')+'</td><td><button class="btn btn-s btn-sm edit-btn" data-id="'+p.id+'">✏️ Edit</button></td></tr>';}).join('')
+    :'<tr><td colspan="3" style="text-align:center;color:var(--mid);padding:20px">No products yet</td></tr>';
+  attachEvents('recentTbl');
+  var counts={};products.forEach(function(p){counts[p.category]=(counts[p.category]||0)+1;});
+  document.getElementById('catBreak').innerHTML=Object.entries(counts).map(function(e){
+    return'<div style="display:flex;align-items:center;justify-content:space-between;padding:9px 0;border-bottom:1px solid var(--bd)"><span style="font-size:.86rem;display:flex;align-items:center;gap:7px">'+catIcon(e[0])+' '+esc(e[0])+'</span><span style="font-family:\'Barlow Condensed\',sans-serif;font-weight:900;font-size:1.05rem;color:var(--wh)">'+e[1]+'</span></div>';
+  }).join('')||'<div style="color:var(--mid);padding:14px;text-align:center;font-size:.84rem">No products</div>';
+}
+function sc(l,v,c,s){return'<div class="scard"><div class="sclbl">'+l+'</div><div class="scval" style="color:'+c+'">'+v+'</div><div class="scsub">'+s+'</div></div>';}
 
-<!-- Snipcart init -->
-<div hidden id="snipcart" data-api-key="MDQ0ZDg2YTQtNGJjNi00OWYxLTkxNTctZmNlMWJkZjJkNDgyNjM5MTc5OTUyNDY0MDkyMDEw" data-currency="gbp"></div>
-<script src="https://cdn.snipcart.com/themes/v3.3.3/default/snipcart.js"></script>
+function renderAllTable(){
+  var search=(document.getElementById('searchInput').value||'').toLowerCase();
+  var cf=document.getElementById('catFilterSel').value;
+  var filtered=products.filter(function(p){var nm=((p.name||'')+' '+(p.slug||'')).toLowerCase();return(!search||nm.includes(search))&&(!cf||p.category===cf);});
+  document.getElementById('allTbl').innerHTML=filtered.length?filtered.map(function(p){return makeRow(p,true);}).join(''):'<tr><td colspan="5" style="text-align:center;color:var(--mid);padding:28px">No products found</td></tr>';
+  attachEvents('allTbl');
+}
 
+function renderCatAll(){var m={handmade:'Handmade Bricks',reclaimed:'Reclaimed Bricks',porcelain:'Porcelain Paving',sandstone:'Indian Sandstone',mdf:'MDF'};Object.keys(m).forEach(renderCat);}
+function renderCat(key){
+  var m={handmade:'Handmade Bricks',reclaimed:'Reclaimed Bricks',porcelain:'Porcelain Paving',sandstone:'Indian Sandstone',mdf:'MDF'};
+  var cat=m[key],tbId='tbl-'+key,el=document.getElementById(tbId);if(!el)return;
+  var f=products.filter(function(p){return p.category===cat;});
+  el.innerHTML=f.length?f.map(function(p){return makeRow(p,false);}).join(''):'<tr><td colspan="4" style="text-align:center;color:var(--mid);padding:28px">No products in this category yet</td></tr>';
+  attachEvents(tbId);
+}
 
+function updateCounts(){
+  document.getElementById('sc-all').textContent=products.length;
+  ['hm','rc','pp','ss','mdf'].forEach(function(k,i){
+    var cats=['Handmade Bricks','Reclaimed Bricks','Porcelain Paving','Indian Sandstone','MDF'];
+    document.getElementById('sc-'+k).textContent=products.filter(function(p){return p.category===cats[i];}).length;
+  });
+}
 
+// ═══════════════════════════════════════════════════
+// MODAL
+// ═══════════════════════════════════════════════════
+document.getElementById('mcloseBtn').addEventListener('click', closeModal);
+document.getElementById('mcancelBtn').addEventListener('click', closeModal);
+document.getElementById('msaveBtn').addEventListener('click', saveAndClose);
+document.getElementById('prodModal').addEventListener('click', function(e){if(e.target===this)closeModal();});
+document.getElementById('fCat').addEventListener('change', function(){toggleSvSection(this.value);});
 
-<script>
-(function() {
-  // Watch for Snipcart cart opening via class change on body
-  var observer = new MutationObserver(function(mutations) {
-    mutations.forEach(function(m) {
-      if (m.type === 'attributes' && m.attributeName === 'class') {
-        var body = document.body;
-        var hdr  = document.querySelector('.hdr');
-        var nav  = document.querySelector('.nav');
-        var ann  = document.querySelector('.ann');
-        var isOpen = body.classList.contains('snipcart-sidecart-opened') ||
-                     body.classList.contains('snipcart-checkout-opened') ||
-                     document.querySelector('#snipcart[class*="visible"]') !== null;
-        if (hdr) hdr.style.zIndex  = isOpen ? '0' : '9999';
-        if (hdr) hdr.style.position = isOpen ? 'relative' : 'sticky';
-        if (nav) nav.style.zIndex  = isOpen ? '0' : '9998';
-        if (ann) ann.style.display = isOpen ? 'none' : '';
-      }
+function openModal(id, defaultCat){
+  editingId=id||null; imgData=''; svCount=0;
+  document.getElementById('svList').innerHTML='';
+  if(id){
+    var p=products.find(function(x){return x.id===id;});
+    if(!p){toast('Product not found','er');return;}
+    document.getElementById('modalTitle').textContent='Edit Product';
+    document.getElementById('msaveBtn').textContent='Save Changes';
+    sf('fName',p.name);sf('fCat',p.category);sf('fPrice',p.price);
+    sf('fPriceNote',p.priceNote);sf('fSlug',p.slug);sf('fUrl',p.url);
+    sf('fDesc',p.description);sf('fColour',p.colour);
+    sf('fFrost',p.frost||'F2 — Fully frost resistant');
+    sf('fVisible',p.visible===false?'false':'true');
+    sf('fBadge',p.badge||'');sf('fDelivery',p.delivery||'extra');
+    toggleSvSection(p.category);
+    if((p.category||'').includes('Bricks')){if(p.sizeVariants&&p.sizeVariants.length)p.sizeVariants.forEach(function(v){addSv(v.size,v.pack,v.price);});else autoSv(p.name);}
+    if(p.image){imgData=p.image;setImgUI(p.image,'Existing image');}else resetImgUI();
+  } else {
+    var cat=defaultCat||'Handmade Bricks';
+    document.getElementById('modalTitle').textContent='Add Product';
+    document.getElementById('msaveBtn').textContent='Add Product';
+    ['fName','fPrice','fPriceNote','fSlug','fUrl','fDesc','fColour'].forEach(function(i){sf(i,'');});
+    sf('fCat',cat);sf('fFrost','F2 — Fully frost resistant');sf('fVisible','true');sf('fBadge','');sf('fDelivery','extra');
+    toggleSvSection(cat);
+    if(cat.includes('Bricks'))autoSv('');
+    resetImgUI();
+  }
+  document.getElementById('prodModal').classList.add('on');
+  setTimeout(function(){document.getElementById('fName').focus();},60);
+}
+
+function closeModal(){document.getElementById('prodModal').classList.remove('on');editingId=null;}
+
+async function saveAndClose(){
+  var name=(document.getElementById('fName').value||'').trim();
+  if(!name){toast('Product name is required','er');return;}
+  var btn=document.getElementById('msaveBtn');
+  btn.disabled=true;btn.textContent='Saving...';
+  var cat=document.getElementById('fCat').value;
+  var existing=editingId?products.find(function(p){return p.id===editingId;}):null;
+  var data={
+    id:          editingId||'p'+Date.now(),
+    name:        name,category:cat,
+    price:       (document.getElementById('fPrice').value||'').trim(),
+    priceNote:   (document.getElementById('fPriceNote').value||'').trim(),
+    slug:        (document.getElementById('fSlug').value||'').trim()||mkSlug(name),
+    url:         (document.getElementById('fUrl').value||'').trim(),
+    description: (document.getElementById('fDesc').value||'').trim(),
+    colour:      (document.getElementById('fColour').value||'').trim(),
+    frost:       document.getElementById('fFrost').value,
+    visible:     document.getElementById('fVisible').value==='true',
+    badge:       document.getElementById('fBadge').value,
+    delivery:    document.getElementById('fDelivery').value,
+    sizeVariants:cat.includes('Bricks')?collectSv():[],
+    image:       imgData||(existing?existing.image||'':'')
+  };
+  var ok=await saveProduct(data);
+  btn.disabled=false;btn.textContent=editingId?'Save Changes':'Add Product';
+  if(!ok)return;
+  toast(editingId?'Product updated!':'Product added!','ok');
+  closeModal();
+  await loadProducts();
+  renderAll();
+}
+
+// ═══════════════════════════════════════════════════
+// SIZE VARIANTS
+// ═══════════════════════════════════════════════════
+document.getElementById('svAddBtn').addEventListener('click',function(){addSv('','','');});
+function toggleSvSection(cat){document.getElementById('svSection').style.display=(cat||'').includes('Bricks')?'flex':'none';}
+function addSv(size,pack,price){
+  svCount++;var id=svCount;
+  var row=document.createElement('div');row.className='svrow';row.id='sv'+id;
+  row.innerHTML='<div><input type="text" id="svs'+id+'" value="'+esc(size)+'" placeholder="65mm"></div><div><input type="text" id="svp'+id+'" value="'+esc(pack)+'" placeholder="Pack of 512"></div><div><input type="text" id="svpr'+id+'" value="'+esc(price)+'" placeholder="£598.26"></div><button type="button" class="svrm" data-id="'+id+'">✕</button>';
+  document.getElementById('svList').appendChild(row);
+  row.querySelector('.svrm').addEventListener('click',function(){var el=document.getElementById('sv'+this.dataset.id);if(el)el.remove();});
+}
+function autoSv(name){
+  var n=(name||'').toLowerCase();
+  if(n.includes('weathered yellow')||n.includes('plain yellow')){addSv('68mm','Pack of 464','');return;}
+  if(n.includes('cheshire red')){addSv('65mm','Pack of 512','');return;}
+  if(n.includes('thames dean')){addSv('65mm','Pack of 512','');addSv('68mm','Pack of 464','');return;}
+  addSv('65mm','Pack of 512','');addSv('73mm','Pack of 464','');
+}
+function collectSv(){
+  var out=[];
+  document.querySelectorAll('#svList .svrow').forEach(function(row){
+    var id=row.id.replace('sv','');
+    var s=(document.getElementById('svs'+id)||{value:''}).value.trim();
+    var p=(document.getElementById('svp'+id)||{value:''}).value.trim();
+    var pr=(document.getElementById('svpr'+id)||{value:''}).value.trim();
+    if(s)out.push({size:s,pack:p,price:pr});
+  });
+  return out;
+}
+
+// ═══════════════════════════════════════════════════
+// IMAGE UPLOAD
+// ═══════════════════════════════════════════════════
+document.getElementById('imgArea').addEventListener('click',function(){document.getElementById('imgFile').click();});
+document.getElementById('imgUpBtn').addEventListener('click',function(e){e.stopPropagation();document.getElementById('imgFile').click();});
+document.getElementById('imgClrBtn').addEventListener('click',function(e){e.stopPropagation();imgData='';resetImgUI();toast('Image removed','ok');});
+document.getElementById('imgFile').addEventListener('change',function(e){
+  var file=e.target.files[0];if(!file)return;
+  if(file.size>5*1024*1024){toast('Image too large — max 5MB','er');return;}
+  var reader=new FileReader();
+  reader.onload=function(ev){var d=ev.target.result;if(d.length>500000)compress(d,function(c){imgData=c;setImgUI(c,file.name);});else{imgData=d;setImgUI(d,file.name);}};
+  reader.readAsDataURL(file);e.target.value='';
+});
+function compress(src,cb){var img=new Image();img.onload=function(){var w=img.width,h=img.height;if(w>800){h=Math.round(h*800/w);w=800;}if(h>600){w=Math.round(w*600/h);h=600;}var c=document.createElement('canvas');c.width=w;c.height=h;c.getContext('2d').drawImage(img,0,0,w,h);cb(c.toDataURL('image/jpeg',0.82));};img.src=src;}
+function setImgUI(src,name){document.getElementById('imgBox').innerHTML='<img src="'+src+'" alt="">';document.getElementById('imgName').textContent=name||'Image uploaded';document.getElementById('imgArea').classList.add('has');document.getElementById('imgClrBtn').style.display='inline-block';}
+function resetImgUI(){imgData='';document.getElementById('imgBox').innerHTML='📷';document.getElementById('imgName').textContent='No image uploaded';document.getElementById('imgArea').classList.remove('has');document.getElementById('imgClrBtn').style.display='none';}
+
+// ═══════════════════════════════════════════════════
+// IMAGES PAGE
+// ═══════════════════════════════════════════════════
+function renderImages(){
+  var withImg=products.filter(function(p){return p.image;});
+  var g=document.getElementById('imgGallery'),e=document.getElementById('imgEmpty');
+  if(!withImg.length){g.innerHTML='';e.style.display='block';return;}
+  e.style.display='none';
+  g.innerHTML=withImg.map(function(p){
+    return'<div class="icard2"><div class="icard2-img"><img src="'+p.image+'" alt="'+esc(p.name)+'" style="width:100%;height:100%;object-fit:cover"></div><div class="icard2-body"><div class="icard2-name" title="'+esc(p.name)+'">'+esc(p.name)+'</div><div class="icard2-cat">'+esc(p.category)+'</div><div class="icard2-acts"><button class="btn btn-s btn-sm img-edit" data-id="'+p.id+'">✏️ Edit</button><button class="btn btn-d btn-sm img-rm" data-id="'+p.id+'">🗑️</button></div></div></div>';
+  }).join('');
+  g.querySelectorAll('.img-edit').forEach(function(b){b.addEventListener('click',function(){openModal(this.dataset.id,null);});});
+  g.querySelectorAll('.img-rm').forEach(function(b){
+    b.addEventListener('click',async function(){
+      var id=this.dataset.id,p=products.find(function(x){return x.id===id;});if(!p)return;
+      var res=await sb.from('products').update({image:'',updated_at:new Date().toISOString()}).eq('id',id);
+      if(res.error){toast('Failed to remove image','er');return;}
+      await loadProducts();renderImages();toast('Image removed','ok');
     });
   });
-  observer.observe(document.body, { attributes: true });
+}
 
-  // Also hook into Snipcart events if available
-  document.addEventListener('snipcart.ready', function() {
-    Snipcart.events.on('cart.opened', function() {
-      var hdr = document.querySelector('.hdr');
-      var nav = document.querySelector('.nav');
-      var ann = document.querySelector('.ann');
-      if (hdr) { hdr.style.position = 'relative'; hdr.style.zIndex = '0'; }
-      if (nav) nav.style.zIndex = '0';
-      if (ann) ann.style.display = 'none';
+// ═══════════════════════════════════════════════════
+// ACTIVITY LOG
+// ═══════════════════════════════════════════════════
+document.getElementById('refreshLogBtn').addEventListener('click', loadActivityLog);
+async function loadActivityLog(){
+  var el=document.getElementById('activityLog');
+  el.innerHTML='<div class="loading"><div class="spinner"></div></div>';
+  var res=await sb.from('activity_log').select('*').order('created_at',{ascending:false}).limit(50);
+  if(res.error||!res.data||!res.data.length){el.innerHTML='<div style="text-align:center;color:var(--mid);padding:28px">No activity yet</div>';return;}
+  el.innerHTML=res.data.map(function(r){
+    var d=new Date(r.created_at);
+    var time=d.toLocaleDateString('en-GB')+' '+d.toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit'});
+    return'<div class="logrow"><span class="log-time">'+time+'</span><span class="log-user">'+esc(r.user_email||'Unknown')+'</span><span class="log-action">'+esc(r.action||'')+'</span></div>';
+  }).join('');
+}
+
+// ═══════════════════════════════════════════════════
+// PUBLISH
+// ═══════════════════════════════════════════════════
+document.getElementById('publishBtn').addEventListener('click', publishToSite);
+document.getElementById('dlBtn').addEventListener('click', function(){
+  var blob=new Blob([buildJson()],{type:'application/json'});
+  var a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='products.json';a.click();
+  toast('products.json downloaded!','ok');
+});
+
+function renderPublish(){
+  var lp=localStorage.getItem('pbs3_last_pub');
+  document.getElementById('lastPub').textContent=lp||'Never';
+  if(!getGh().token)setPubStatus('⚠️ GitHub token not set — go to Settings first.','info');
+}
+
+function buildJson(){
+  return JSON.stringify(products.filter(function(p){return p.visible!==false;}),null,2);
+}
+
+async function publishToSite(){
+  var gh=getGh();
+  if(!gh.token){setPubStatus('⚠️ GitHub token not set — go to Settings → GitHub Connection.','er');return;}
+  var btn=document.getElementById('publishBtn');
+  btn.disabled=true;btn.textContent='⏳ Publishing...';
+  setPubStatus('Uploading product data...','info');
+  var ok1=await pushFile(gh,'products.json',buildJson(),'🛒 Update products — '+new Date().toLocaleString('en-GB'));
+  if(!ok1.ok){setPubStatus('❌ Failed: '+ok1.err,'er');btn.disabled=false;btn.textContent='🚀 Publish to Live Site';toast('Publish failed','er');return;}
+  var snipRes=await sb.from('settings').select('value').eq('key','snipcart_key').single();
+  var snipKey=snipRes.data?snipRes.data.value:'';
+  if(snipKey){
+    var cfg='(function(){var k="'+snipKey+'",e=document.getElementById("snipcart");if(e&&k)e.setAttribute("data-api-key",k);})();\n';
+    await pushFile(gh,'snipcart-config.js',cfg,'🔑 Update Snipcart config');
+  }
+  var now=new Date().toLocaleString('en-GB');
+  localStorage.setItem('pbs3_last_pub',now);
+  document.getElementById('lastPub').textContent=now;
+  await logActivity('Published site to GitHub');
+  setPubStatus('✅ Published! Site will update within 60 seconds.','ok');
+  toast('Published to live site!','ok');
+  btn.disabled=false;btn.textContent='🚀 Publish to Live Site';
+}
+
+async function pushFile(c,filename,content,message){
+  var url='https://api.github.com/repos/'+c.user+'/'+c.repo+'/contents/'+filename;
+  var enc=btoa(unescape(encodeURIComponent(content)));
+  try{
+    var sha=null;
+    var gr=await fetch(url,{headers:{'Authorization':'token '+c.token,'Accept':'application/vnd.github.v3+json'}});
+    if(gr.ok){var ex=await gr.json();sha=ex.sha;}
+    var body={message:message,content:enc};if(sha)body.sha=sha;
+    var pr=await fetch(url,{method:'PUT',headers:{'Authorization':'token '+c.token,'Accept':'application/vnd.github.v3+json','Content-Type':'application/json'},body:JSON.stringify(body)});
+    if(pr.ok)return{ok:true};
+    var er=await pr.json();return{ok:false,err:er.message||pr.status};
+  }catch(e){return{ok:false,err:'Network error'};}
+}
+
+function getGh(){return{user:localStorage.getItem('pbs3_gh_user')||'shakeel-terra',repo:localStorage.getItem('pbs3_gh_repo')||'probuildsupplies',token:localStorage.getItem('pbs3_gh_token')||''};}
+function setPubStatus(msg,type){var el=document.getElementById('pubStatus');el.textContent=msg;el.style.display='block';el.className='smsg '+type;}
+
+// ═══════════════════════════════════════════════════
+// SETTINGS
+// ═══════════════════════════════════════════════════
+async function loadSettingsData(){
+  var gh=getGh();
+  sf('ghUser',gh.user);sf('ghRepo',gh.repo);
+  sf('ghToken',gh.token?'••••••••••••••••••••':'');
+  var res=await sb.from('settings').select('*');
+  if(res.data){
+    res.data.forEach(function(row){
+      if(row.key==='snipcart_key')sf('snipKey',row.value?'••••••••••••••••••••':'');
+      if(row.key==='github_user')sf('ghUser',row.value);
+      if(row.key==='github_repo')sf('ghRepo',row.value);
     });
-    Snipcart.events.on('cart.closed', function() {
-      var hdr = document.querySelector('.hdr');
-      var nav = document.querySelector('.nav');
-      var ann = document.querySelector('.ann');
-      if (hdr) { hdr.style.position = 'sticky'; hdr.style.zIndex = '9999'; }
-      if (nav) nav.style.zIndex = '9998';
-      if (ann) ann.style.display = '';
-    });
-  });
-})();
+  }
+}
+
+document.getElementById('saveSnipBtn').addEventListener('click',async function(){
+  var k=document.getElementById('snipKey').value.trim();
+  if(!k){showSt('snipStatus','Please enter your Snipcart API key','er');return;}
+  if(k.startsWith('•')){showSt('snipStatus','Key unchanged — paste new key to update','er');return;}
+  var res=await sb.from('settings').upsert({key:'snipcart_key',value:k});
+  if(res.error){showSt('snipStatus','Failed to save: '+res.error.message,'er');return;}
+  document.getElementById('snipKey').value='••••••••••••••••••••';
+  showSt('snipStatus','✅ API key saved to Supabase — shared across all devices.','ok');
+  toast('Snipcart key saved','ok');
+});
+
+document.getElementById('clearSnipBtn').addEventListener('click',async function(){
+  await sb.from('settings').upsert({key:'snipcart_key',value:''});
+  sf('snipKey','');showSt('snipStatus','Key cleared','ok');toast('Snipcart key cleared','ok');
+});
+
+document.getElementById('saveGhBtn').addEventListener('click',async function(){
+  var u=document.getElementById('ghUser').value.trim();
+  var r=document.getElementById('ghRepo').value.trim();
+  var t=document.getElementById('ghToken').value.trim();
+  if(!u||!r||!t){showSt('ghStatus','Please fill in all three fields','er');return;}
+  if(t.startsWith('•')){showSt('ghStatus','Token unchanged — paste new token to update','er');return;}
+  localStorage.setItem('pbs3_gh_user',u);
+  localStorage.setItem('pbs3_gh_repo',r);
+  localStorage.setItem('pbs3_gh_token',t);
+  await sb.from('settings').upsert([{key:'github_user',value:u},{key:'github_repo',value:r}]);
+  sf('ghToken','••••••••••••••••••••');
+  showSt('ghStatus','✅ Saved! Click Test Connection to verify.','ok');
+  toast('GitHub connection saved','ok');
+});
+
+document.getElementById('testGhBtn').addEventListener('click',async function(){
+  var g=getGh();
+  if(!g.token){showSt('ghStatus','No token saved — fill in the form and save first','er');return;}
+  showSt('ghStatus','Testing...','info');
+  try{
+    var res=await fetch('https://api.github.com/repos/'+g.user+'/'+g.repo,{headers:{'Authorization':'token '+g.token,'Accept':'application/vnd.github.v3+json'}});
+    if(res.ok){var d=await res.json();showSt('ghStatus','✅ Connected! Repo: '+d.full_name,'ok');}
+    else if(res.status===401)showSt('ghStatus','❌ Invalid token','er');
+    else if(res.status===404)showSt('ghStatus','❌ Repo not found — check username and repo name','er');
+    else showSt('ghStatus','❌ Error '+res.status,'er');
+  }catch(e){showSt('ghStatus','❌ Network error','er');}
+});
+
+document.getElementById('clearGhBtn').addEventListener('click',function(){
+  ['pbs3_gh_user','pbs3_gh_repo','pbs3_gh_token'].forEach(function(k){localStorage.removeItem(k);});
+  sf('ghUser','');sf('ghRepo','');sf('ghToken','');
+  showSt('ghStatus','Token cleared','ok');toast('GitHub token cleared','ok');
+});
+
+function showSt(id,msg,type){var el=document.getElementById(id);if(!el)return;el.textContent=msg;el.style.display='block';el.className='smsg '+type;}
+
+// ═══════════════════════════════════════════════════
+// CONFIRM
+// ═══════════════════════════════════════════════════
+document.getElementById('confCancelBtn').addEventListener('click',closeConfirm);
+document.getElementById('confOverlay').addEventListener('click',function(e){if(e.target===this)closeConfirm();});
+var confCb=null;
+function showConfirm(title,msg,okLabel,cb){
+  document.getElementById('confTitle').textContent=title;
+  document.getElementById('confMsg').textContent=msg;
+  document.getElementById('confOkBtn').textContent=okLabel||'Confirm';
+  confCb=cb;
+  document.getElementById('confOkBtn').onclick=function(){if(confCb)confCb();closeConfirm();};
+  document.getElementById('confOverlay').classList.add('on');
+}
+function closeConfirm(){document.getElementById('confOverlay').classList.remove('on');confCb=null;}
+
+// ═══════════════════════════════════════════════════
+// TOAST
+// ═══════════════════════════════════════════════════
+function toast(msg,type){
+  var w=document.getElementById('toastWrap');
+  var el=document.createElement('div');
+  el.className='toast '+(type==='ok'?'ok':'er');
+  el.innerHTML='<span>'+(type==='ok'?'✅':'❌')+'</span> '+msg;
+  w.appendChild(el);
+  setTimeout(function(){el.style.opacity='0';el.style.transition='opacity .3s';setTimeout(function(){el.remove();},300);},3000);
+}
 </script>
 </body>
 </html>
