@@ -6,6 +6,42 @@
 <title>Earthcore Grey Porcelain Paving 20mm — Pro Build Supplies</title>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
 
+
+<style id="snip-vars">
+/* Snipcart v3 CSS Custom Properties — must be on :root */
+:root {
+  --color-default: #F55C1B;
+  --color-alt: #1A1A1A;
+  --color-success: #22C55E;
+  --color-danger: #EF4444;
+  --color-accent: #F55C1B;
+
+  --bg-color: #F5F3EF;
+  --bg-color-alt: #FFFFFF;
+
+  --color-link: #F55C1B;
+  --color-link-hover: #d94d0f;
+
+  --color-input: #1A1A1A;
+  --color-input-bg: #FFFFFF;
+  --color-input-bg-alt: #F5F3EF;
+  --color-input-border: #E8E4DC;
+  --color-input-focus: #F55C1B;
+  --color-input-placeholder: #888888;
+
+  --color-buttonPrimary: #F55C1B;
+  --color-buttonPrimary-text: #FFFFFF;
+  --color-buttonPrimary-hover: #d94d0f;
+  --color-buttonSecondary: #1A1A1A;
+  --color-buttonSecondary-text: #FFFFFF;
+  --color-buttonSecondary-hover: #333333;
+
+  --border-radius: 4px;
+  --font-family: 'Barlow', sans-serif;
+
+  --shadow: 0 8px 32px rgba(0,0,0,0.12);
+}
+</style>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -426,25 +462,8 @@ footer{background:#111;padding:40px 20px 18px;color:#888;width:100%}
   .pp-layout{gap:18px}
 }
 
-<style id="snipcart-custom">
-/* Snipcart theme overrides to match Pro Build Supplies */
-:root {
-  --color-default: #F55C1B;
-  --color-alt: #1A1A1A;
-  --color-input-focus: #F55C1B;
-  --color-buttonPrimary: #F55C1B;
-  --color-buttonPrimary-hover: #d94d0f;
-}
-.snip-layout__main-container { font-family: 'Barlow', sans-serif !important; }
-.snip-header { background: #1A1A1A !important; border-bottom: 3px solid #F55C1B !important; }
-.snip-header__title { font-family: 'Barlow Condensed', sans-serif !important; font-weight: 900 !important; letter-spacing: -0.5px !important; }
-.snip-btn--primary { background: #F55C1B !important; font-family: 'Barlow Condensed', sans-serif !important; font-weight: 700 !important; text-transform: uppercase !important; letter-spacing: 1px !important; border-radius: 4px !important; }
-.snip-btn--primary:hover { background: #d94d0f !important; }
-.snip-btn--secondary { font-family: 'Barlow Condensed', sans-serif !important; font-weight: 700 !important; text-transform: uppercase !important; border-radius: 4px !important; }
-.snip-product__name { font-family: 'Barlow Condensed', sans-serif !important; font-weight: 700 !important; }
-.snip-product__price { font-family: 'Barlow Condensed', sans-serif !important; font-weight: 900 !important; color: #1A1A1A !important; }
-.snip-order__total-price { font-family: 'Barlow Condensed', sans-serif !important; font-weight: 900 !important; }
-</style>
+
+
 </style>
 
   <!-- Snipcart -->
@@ -589,5 +608,53 @@ document.querySelectorAll('.ptb').forEach(function(b){
 <!-- Snipcart init -->
 <div hidden id="snipcart" data-api-key="MDQ0ZDg2YTQtNGJjNi00OWYxLTkxNTctZmNlMWJkZjJkNDgyNjM5MTc5OTUyNDY0MDkyMDEw" data-currency="gbp"></div>
 <script src="https://cdn.snipcart.com/themes/v3.3.3/default/snipcart.js"></script>
+
+
+
+
+<script>
+(function() {
+  // Watch for Snipcart cart opening via class change on body
+  var observer = new MutationObserver(function(mutations) {
+    mutations.forEach(function(m) {
+      if (m.type === 'attributes' && m.attributeName === 'class') {
+        var body = document.body;
+        var hdr  = document.querySelector('.hdr');
+        var nav  = document.querySelector('.nav');
+        var ann  = document.querySelector('.ann');
+        var isOpen = body.classList.contains('snipcart-sidecart-opened') ||
+                     body.classList.contains('snipcart-checkout-opened') ||
+                     document.querySelector('#snipcart[class*="visible"]') !== null;
+        if (hdr) hdr.style.zIndex  = isOpen ? '0' : '9999';
+        if (hdr) hdr.style.position = isOpen ? 'relative' : 'sticky';
+        if (nav) nav.style.zIndex  = isOpen ? '0' : '9998';
+        if (ann) ann.style.display = isOpen ? 'none' : '';
+      }
+    });
+  });
+  observer.observe(document.body, { attributes: true });
+
+  // Also hook into Snipcart events if available
+  document.addEventListener('snipcart.ready', function() {
+    Snipcart.events.on('cart.opened', function() {
+      var hdr = document.querySelector('.hdr');
+      var nav = document.querySelector('.nav');
+      var ann = document.querySelector('.ann');
+      if (hdr) { hdr.style.position = 'relative'; hdr.style.zIndex = '0'; }
+      if (nav) nav.style.zIndex = '0';
+      if (ann) ann.style.display = 'none';
+    });
+    Snipcart.events.on('cart.closed', function() {
+      var hdr = document.querySelector('.hdr');
+      var nav = document.querySelector('.nav');
+      var ann = document.querySelector('.ann');
+      if (hdr) { hdr.style.position = 'sticky'; hdr.style.zIndex = '9999'; }
+      if (nav) nav.style.zIndex = '9998';
+      if (ann) ann.style.display = '';
+    });
+  });
+})();
+</script>
+<script src="../pbs-products.js"></script>
 </body>
 </html>
