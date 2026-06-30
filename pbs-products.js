@@ -8,6 +8,35 @@
   var isProductPage = window.location.pathname.includes('/products/');
   if (isProductPage) BASE = '../';
 
+  // ── ANTI-FLASH: hide the static grid immediately so the old hardcoded
+  // products never appear on screen (or get clicked) before the real
+  // dashboard data has loaded in ─────────────────────────────────────
+  var __hideEl = null;
+  (function(){
+    var path = window.location.pathname;
+    if (isProductPage) return;
+    var isDynamicListPage =
+      path.includes('shop.html') || path.endsWith('/shop') ||
+      path.includes('handmade-bricks.html') || path.endsWith('/handmade-bricks') ||
+      path.includes('reclaimed-bricks.html') || path.endsWith('/reclaimed-bricks') ||
+      path.includes('porcelain-paving.html') || path.endsWith('/porcelain-paving') ||
+      path.includes('indian-sandstone.html') || path.endsWith('/indian-sandstone') ||
+      path.includes('mdf.html') || path.endsWith('/mdf');
+    if (!isDynamicListPage) return;
+    __hideEl = document.getElementById('sfgrid') || document.querySelector('.pgrid');
+    if (__hideEl) {
+      __hideEl.style.opacity = '0';
+      __hideEl.style.pointerEvents = 'none';
+      __hideEl.style.transition = 'opacity .15s ease';
+    }
+  })();
+  function __reveal() {
+    if (__hideEl) {
+      __hideEl.style.opacity = '1';
+      __hideEl.style.pointerEvents = '';
+    }
+  }
+
   // ── LOAD PRODUCTS.JSON ────────────────────────────────────
   function loadProducts(cb) {
     var url = BASE + 'products.json?v=' + Date.now();
@@ -66,6 +95,7 @@
     var vis = products.filter(function(p){ return p.visible !== false; });
     grid.innerHTML = vis.map(function(p){ return makeCard(p, ''); }).join('');
     if (cnt) cnt.textContent = 'Showing all ' + vis.length + ' products';
+    __reveal();
 
     // Filter buttons
     document.querySelectorAll('.sfb').forEach(function(btn) {
@@ -92,8 +122,9 @@
     var filtered = products.filter(function(p){
       return p.visible !== false && (!categoryFilter || p.category === categoryFilter);
     });
-    if (!filtered.length) return;
+    if (!filtered.length) { __reveal(); return; }
     grid.innerHTML = filtered.map(function(p){ return makeCard(p, ''); }).join('');
+    __reveal();
   }
 
   // ── PRODUCT PAGE ──────────────────────────────────────────
@@ -198,7 +229,7 @@
 
   // ── INIT ──────────────────────────────────────────────────
   loadProducts(function(err, products) {
-    if (err || !products.length) return;
+    if (err || !products.length) { __reveal(); return; }
 
     var path = window.location.pathname;
 
