@@ -47,8 +47,8 @@
       : catIcon(p.category);
     var buyBtn = (price === 'POA' || !price)
       ? '<a href="'+prefix+'contact.html" class="pbtn">📞 Enquire</a>'
-      : '<a href="'+prefix+'products/'+(p.slug||'')+'.html" class="pbtn">View Product</a>';
-    return '<a href="'+prefix+'products/'+(p.slug||'')+'.html" class="pcard">'
+      : '<a href="'+prefix+'product.html?slug='+encodeURIComponent(p.slug||'')+'" class="pbtn">View Product</a>';
+    return '<a href="'+prefix+'product.html?slug='+encodeURIComponent(p.slug||'')+'" class="pcard">'
       + '<div class="pimg" style="'+catBg(p.category)+'">'+img+'</div>'
       + '<div class="pinfo">'
       + '<div class="pcat">'+esc(p.category)+'</div>'
