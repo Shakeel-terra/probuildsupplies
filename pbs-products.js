@@ -210,19 +210,19 @@
     if (path.includes('shop.html') || path.endsWith('/shop')) {
       initShop(products); return;
     }
-    if (path.includes('handmade-bricks.html')) {
+    if (path.includes('handmade-bricks.html') || path.endsWith('/handmade-bricks')) {
       initCategoryPage(products, 'Handmade Bricks'); return;
     }
-    if (path.includes('reclaimed-bricks.html')) {
+    if (path.includes('reclaimed-bricks.html') || path.endsWith('/reclaimed-bricks')) {
       initCategoryPage(products, 'Reclaimed Bricks'); return;
     }
-    if (path.includes('porcelain-paving.html')) {
+    if (path.includes('porcelain-paving.html') || path.endsWith('/porcelain-paving')) {
       initCategoryPage(products, 'Porcelain Paving'); return;
     }
-    if (path.includes('indian-sandstone.html')) {
+    if (path.includes('indian-sandstone.html') || path.endsWith('/indian-sandstone')) {
       initCategoryPage(products, 'Indian Sandstone'); return;
     }
-    if (path.includes('mdf.html')) {
+    if (path.includes('mdf.html') || path.endsWith('/mdf')) {
       initCategoryPage(products, 'MDF'); return;
     }
     if (path.endsWith('/') || path.includes('index.html')) {
