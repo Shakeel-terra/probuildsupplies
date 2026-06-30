@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0">
+<title id="pp-pagetitle">Product — Pro Build Supplies</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style id="snip-vars">
+:root {
+  --color-default: #F55C1B;
+  --color-alt: #1A1A1A;
+  --color-success: #22C55E;
+  --color-danger: #EF4444;
+  --color-accent: #F55C1B;
+  --bg-color: #F5F3EF;
+  --bg-color-alt: #FFFFFF;
+  --color-link: #F55C1B;
+  --color-link-hover: #d94d0f;
+  --color-input: #1A1A1A;
+  --color-input-bg: #FFFFFF;
+  --color-input-bg-alt: #F5F3EF;
+  --color-input-border: #E8E4DC;
+  --color-input-focus: #F55C1B;
+  --color-input-placeholder: #888888;
+  --color-buttonPrimary: #F55C1B;
+  --color-buttonPrimary-text: #FFFFFF;
+  --color-buttonPrimary-hover: #d94d0f;
+  --color-buttonSecondary: #1A1A1A;
+  --color-buttonSecondary-text: #FFFFFF;
+  --color-buttonSecondary-hover: #333333;
+  --border-radius: 4px;
+  --font-family: 'Barlow', sans-serif;
+  --shadow: 0 8px 32px rgba(0,0,0,0.12);
+}
+</style>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --o:#F55C1B;--y:#FFD000;--dk:#1A1A1A;--ch:#2C2C2C;
+  --mid:#555;--lt:#F5F3EF;--wh:#FFFFFF;--st:#7F8C8D;
+  --bd:#E8E4DC;--gr:#22C55E;--r:6px;
+}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:'Barlow',sans-serif;background:var(--lt);color:var(--dk);overflow-x:hidden;width:100%;margin:0}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block;height:auto}
+*{-webkit-tap-highlight-color:transparent}
+.ann{background:var(--y);color:var(--dk);text-align:center;padding:9px 16px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.88rem;letter-spacing:.3px;line-height:1.4}
+.ann-x{margin-left:8px}
+.hdr{background:var(--dk);position:sticky;top:0;z-index:9999;border-bottom:3px solid var(--o);width:100%}
+.hdr-i{max-width:1280px;margin:0 auto;padding:0 20px;display:flex;align-items:center;height:66px;gap:14px}
+.logo{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.85rem;color:var(--wh);letter-spacing:-1px;flex-shrink:0;line-height:1}
+.logo b{color:var(--o);font-weight:900}
+.srch{flex:1;max-width:460px;display:flex;min-width:0}
+.srch form,.srch>div{display:flex;width:100%}
+.srch input{flex:1;padding:9px 12px;border:none;background:#333;color:var(--wh);font-family:'Barlow',sans-serif;font-size:.88rem;border-radius:4px 0 0 4px;outline:none;min-width:0}
+.srch input::placeholder{color:#888}
+.srch button{background:var(--o);border:none;padding:0 13px;color:var(--wh);cursor:pointer;border-radius:0 4px 4px 0;font-size:.95rem;flex-shrink:0}
+.hdr-act{display:flex;align-items:center;gap:10px;flex-shrink:0;margin-left:auto}
+.hdr-act a{color:var(--wh);font-size:.83rem;opacity:.85;white-space:nowrap}
+.hdr-act a:hover{opacity:1}
+.cart-btn{background:var(--o)!important;padding:8px 15px;border-radius:4px;font-family:'Barlow Condensed',sans-serif;font-size:.92rem!important;opacity:1!important;white-space:nowrap}
+.hbtn{display:none;background:none;border:none;cursor:pointer;padding:6px;flex-direction:column;gap:5px;flex-shrink:0}
+.hbtn span{display:block;width:22px;height:2px;background:var(--wh);transition:all .3s;border-radius:2px}
+.hbtn.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hbtn.open span:nth-child(2){opacity:0}
+.hbtn.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.nav{background:var(--ch);border-bottom:1px solid #444;position:relative;z-index:9998;width:100%}
+.nav-i{max-width:1280px;margin:0 auto;padding:0 20px;display:flex;overflow-x:auto}
+.nav-i::-webkit-scrollbar{height:0}
+.nav a{color:#CCC;font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:.97rem;padding:11px 15px;display:block;border-bottom:3px solid transparent;text-transform:uppercase;white-space:nowrap;transition:color .2s}
+.nav a:hover,.nav a.cur{color:var(--o);border-bottom-color:var(--o)}
+.ni{position:relative}
+.ni>a::after{content:' ▾';font-size:.68rem;opacity:.6}
+.dd{display:none;position:absolute;top:100%;left:0;background:#1E1E1E;border:1px solid #444;border-top:3px solid var(--o);min-width:200px;z-index:9999;box-shadow:0 8px 24px rgba(0,0,0,.5)}
+.ni:hover .dd{display:block}
+.dd a{display:block;padding:11px 18px;color:#BBB;font-size:.9rem;border-bottom:1px solid #333;border-left:3px solid transparent;text-transform:none;white-space:nowrap}
+.dd a:last-child{border-bottom:none}
+.dd a:hover{color:var(--wh);border-left-color:var(--o);border-bottom-color:#333}
+.bc{background:var(--dk);padding:11px 20px}
+.bc-i{max-width:1280px;margin:0 auto;color:#888;font-size:.83rem}
+.bc-i a{color:var(--o)}
+.btn-o{background:var(--o);color:var(--wh);padding:13px 26px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.8px;text-transform:uppercase;border-radius:4px;display:inline-block;border:none;transition:background .2s;cursor:pointer;text-align:center}
+.btn-o:hover{background:#d94d0f;color:var(--wh)}
+.btn-dk{background:var(--dk);color:var(--wh);padding:13px 26px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1rem;text-transform:uppercase;border-radius:4px;display:inline-block;border:none;transition:background .2s;cursor:pointer;text-align:center}
+.btn-dk:hover{background:#333;color:var(--wh)}
+.pimg{aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;font-size:2.8rem;position:relative;overflow:hidden}
+.pimg img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+.pinfo{padding:14px}
+.pcat{font-size:.7rem;color:var(--st);text-transform:uppercase;letter-spacing:1px;font-weight:600;margin-bottom:4px}
+.pname{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.05rem;color:var(--dk);margin-bottom:7px;line-height:1.2}
+.pprice{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.3rem;color:var(--dk);margin-bottom:10px}
+.pbtn{display:block;width:100%;background:var(--dk);color:var(--wh);border:none;padding:10px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.88rem;letter-spacing:.8px;text-transform:uppercase;cursor:pointer;border-radius:3px;text-align:center;transition:background .2s}
+.pbtn:hover{background:var(--o);color:var(--wh)}
+.pcard{background:var(--wh);border-radius:var(--r);overflow:hidden;border:1px solid var(--bd);transition:box-shadow .25s,transform .25s;display:block}
+.pcard:hover{box-shadow:0 10px 32px rgba(0,0,0,.11);transform:translateY(-4px)}
+.pp-layout{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start;margin-bottom:52px}
+.pp-imgbox{background:var(--lt);border-radius:8px;border:2px solid var(--bd);aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;font-size:7rem;overflow:hidden}
+.pp-imgbox img{width:100%;height:100%;object-fit:cover}
+.pp-tag{display:inline-block;background:var(--o);color:var(--wh);font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.76rem;padding:4px 11px;letter-spacing:1.5px;text-transform:uppercase;border-radius:2px;margin-bottom:12px}
+.pp-title{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(1.7rem,3vw,2.4rem);line-height:1.05;text-transform:uppercase;color:var(--dk);margin-bottom:14px}
+.pp-pricebox{background:var(--lt);border-radius:6px;padding:16px;margin-bottom:18px;border-left:4px solid var(--o)}
+.pp-price{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:2.2rem;color:var(--dk);line-height:1}
+.pp-pnote{font-size:.8rem;color:var(--st);margin-top:3px}
+.pp-short{color:var(--mid);font-size:.9rem;line-height:1.75;margin-bottom:22px}
+.pp-acts{display:flex;gap:11px;margin-bottom:18px;flex-wrap:wrap}
+.pp-acts a,.pp-acts button{flex:1;min-width:130px}
+.pp-trust{display:flex;flex-wrap:wrap;gap:9px;padding:13px 0;border-top:1px solid var(--bd)}
+.pti{display:flex;align-items:center;gap:6px;font-size:.79rem;color:var(--mid);font-weight:600}
+.pp-tabs{border-bottom:2px solid var(--bd);display:flex;margin-bottom:22px;overflow-x:auto}
+.pp-tabs::-webkit-scrollbar{height:0}
+.ptb{background:none;border:none;border-bottom:3px solid transparent;margin-bottom:-2px;padding:11px 19px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.95rem;text-transform:uppercase;cursor:pointer;color:var(--mid);white-space:nowrap;transition:color .2s}
+.ptb.on{color:var(--o);border-bottom-color:var(--o)}
+.ptab{display:none}.ptab.on{display:block}
+.ptab h3{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1.05rem;text-transform:uppercase;color:var(--dk);margin:14px 0 7px}
+.ptab h3:first-child{margin-top:0}
+.ptab p,.ptab li{color:var(--mid);font-size:.88rem;line-height:1.8;margin-bottom:7px}
+.ptab ul{padding-left:17px;margin-bottom:9px}
+.ptab a{color:var(--o)}
+.stbl{width:100%;border-collapse:collapse;margin-top:7px}
+.stbl th{background:var(--dk);color:var(--wh);padding:9px 13px;text-align:left;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.82rem;text-transform:uppercase}
+.stbl td{padding:9px 13px;border-bottom:1px solid var(--bd);font-size:.85rem;color:var(--mid)}
+.stbl tr:nth-child(even) td{background:var(--lt)}
+.sz-wrap{margin-bottom:18px}
+.sz-wrap label{display:block;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.77rem;text-transform:uppercase;letter-spacing:.5px;color:var(--dk);margin-bottom:6px}
+.sz-wrap select{width:100%;padding:11px 13px;background:var(--lt);border:2px solid var(--bd);border-radius:4px;font-family:'Barlow',sans-serif;font-size:.9rem;color:var(--dk);outline:none;cursor:pointer;transition:border-color .2s}
+.sz-wrap select:focus{border-color:var(--o)}
+.rel-sec{background:var(--lt);padding:44px 20px;border-top:4px solid var(--y)}
+.rel-inner{max-width:1280px;margin:0 auto}
+.rgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:22px}
+.st{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(1.7rem,4vw,2.6rem);text-transform:uppercase;color:var(--dk);line-height:1}
+.st b{color:var(--o);font-weight:900}
+footer{background:#111;padding:40px 20px 18px;color:#888;width:100%}
+.ft-i{max-width:1280px;margin:0 auto}
+.ftg{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px;padding-bottom:26px;border-bottom:1px solid #2A2A2A;margin-bottom:16px}
+.ft-brand p{font-size:.82rem;color:#666;line-height:1.7;max-width:230px;margin-top:9px}
+.fc h4{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.92rem;text-transform:uppercase;color:var(--wh);margin-bottom:11px;letter-spacing:1px}
+.fc a{display:block;color:#666;font-size:.82rem;margin-bottom:7px;transition:color .2s}
+.fc a:hover{color:var(--o)}
+.ft-bot{display:flex;justify-content:space-between;align-items:center;font-size:.77rem;flex-wrap:wrap;gap:9px}
+.pays{display:flex;gap:7px;flex-wrap:wrap}
+.pay{background:#222;border:1px solid #333;border-radius:3px;padding:3px 8px;font-size:.68rem;color:#888;font-weight:600}
+.wrap{max-width:1280px;margin:0 auto;padding:0 20px}
+@media(max-width:1024px){.rgrid{grid-template-columns:repeat(2,1fr)}.ftg{grid-template-columns:1fr 1fr;gap:22px}}
+@media(max-width:860px){.pp-layout{grid-template-columns:1fr;gap:24px}}
+@media(max-width:768px){
+  .hdr-i{height:56px;padding:0 14px;gap:9px}
+  .logo{font-size:1.35rem}
+  .srch{display:none}
+  .hph{display:none}
+  .cart-btn{padding:7px 11px;font-size:.85rem!important}
+  .hbtn{display:flex!important}
+  .nav{display:none}
+  .nav.mob-open{display:block}
+  .nav-i{flex-direction:column;padding:0;overflow:visible;width:100%}
+  .nav a{padding:13px 18px;border-bottom:1px solid #333;font-size:1.02rem;width:100%}
+  .ni>a::after{float:right}
+  .dd{display:none!important;position:static;box-shadow:none;border:none;background:#161616;min-width:unset;width:100%}
+  .ni.mob-open .dd{display:block!important}
+  .dd a{padding:11px 28px;font-size:.97rem;border-bottom:1px solid #222}
+  .ann{font-size:.75rem;padding:7px 12px}
+  .ann-x{display:none}
+  .pp-acts{flex-direction:column;gap:9px}
+  .pp-acts a,.pp-acts button{width:100%;display:block;text-align:center}
+  .pp-price{font-size:1.9rem}
+  .ftg{grid-template-columns:1fr 1fr;gap:18px}
+  .ft-bot{flex-direction:column;align-items:flex-start;gap:9px}
+  footer{padding:34px 16px 18px}
+  .rgrid{grid-template-columns:1fr 1fr;gap:12px}
+  .wrap{padding:0 16px}
+}
+@media(max-width:480px){
+  .logo{font-size:1.15rem}
+  .ftg{grid-template-columns:1fr}
+  .ann{display:none}
+  .rgrid{grid-template-columns:1fr}
+  .pp-layout{gap:18px}
+}
+</style>
+
+<link rel="preconnect" href="https://app.snipcart.com">
+<link rel="preconnect" href="https://cdn.snipcart.com">
+<link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.3.3/default/snipcart.css">
+</head>
+<body>
+<div class="ann">🚚 FREE Delivery on ALL Orders<span class="ann-x"> &nbsp;|&nbsp; 🧱 Free Brick Samples &nbsp;|&nbsp; 🏗️ Trade Accounts Available</span></div>
+<header class="hdr"><div class="hdr-i">
+<a href="index.html" class="logo">Pro Build <b>Supplies</b></a>
+<div class="srch"><div><input type="text" placeholder="Search bricks, paving, MDF..."><button>🔍</button></div></div>
+<div class="hdr-act">
+<a href="tel:08001234567" class="hph">📞 0800 123 4567</a>
+<a href="#" class="cart-btn snipcart-checkout">🛒 Cart <span class="snipcart-items-count" style="background:var(--y);color:var(--dk);font-size:.65rem;font-weight:700;border-radius:10px;padding:1px 5px;margin-left:3px;font-family:'Barlow Condensed',sans-serif;vertical-align:middle"></span></a>
+<button class="hbtn" id="hbt" aria-label="Menu"><span></span><span></span><span></span></button>
+</div>
+</div></header>
+<nav class="nav" id="nav"><div class="nav-i">
+<a href="index.html">Home</a>
+<a href="shop.html">🛍️ Shop All</a>
+<div class="ni"><a href="bricks.html">🧱 Bricks</a><div class="dd">
+<a href="handmade-bricks.html">Handmade Bricks</a>
+<a href="reclaimed-bricks.html">Reclaimed Bricks</a>
+</div></div>
+<div class="ni"><a href="paving.html">🪨 Paving</a><div class="dd">
+<a href="porcelain-paving.html">Porcelain Paving</a>
+<a href="indian-sandstone.html">Indian Sandstone</a>
+</div></div>
+<a href="mdf.html">🪵 MDF</a>
+<div class="ni"><a href="trade-accounts.html">🏗️ Trade &amp; Bulk</a><div class="dd">
+<a href="trade-accounts.html">Trade Accounts</a>
+<a href="trade-accounts.html#bulk">Bulk Orders</a>
+</div></div>
+<a href="samples.html">🧱 Free Samples</a>
+<a href="contact.html">📞 Contact</a>
+</div></nav>
+<div class="bc"><div class="bc-i" id="pp-breadcrumb"><a href="index.html">Home</a> › <a href="shop.html">Shop</a> › <span id="pp-bc-name">Product</span></div></div>
+
+<div style="max-width:1280px;margin:0 auto;padding:34px 20px 72px">
+  <div class="pp-layout">
+    <div class="pp-imgbox" id="pp-imgbox">📦</div>
+    <div>
+      <span class="pp-tag" id="pp-tag">Category</span>
+      <h1 class="pp-title" id="pp-title">Loading…</h1>
+      <div class="pp-pricebox">
+        <div class="pp-price" id="pp-price">—</div>
+        <div class="pp-pnote" id="pp-pnote"></div>
+      </div>
+      <p class="pp-short" id="pp-short"></p>
+
+      <div class="sz-wrap" id="pp-szwrap" style="display:none">
+        <label>Choose Size</label>
+        <select id="szSel"></select>
+      </div>
+
+      <div class="pp-acts">
+        <button class="btn-o snipcart-add-item" id="pp-addbtn"
+          data-item-id=""
+          data-item-name=""
+          data-item-price=""
+          data-item-url=""
+          data-item-description=""
+          data-item-has-taxes-included="true"
+          data-item-shippable="true"
+        >🛒 Add to Cart</button>
+        <a href="samples.html" class="btn-dk">🧱 Free Sample</a>
+      </div>
+      <div class="pp-trust">
+        <div class="pti"><span>🚚</span> Free Delivery</div>
+        <div class="pti"><span>📦</span> Next-Day Dispatch</div>
+        <div class="pti"><span>🧱</span> Free Samples</div>
+        <div class="pti"><span>📞</span> 0800 123 4567</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="pp-tabs">
+    <button class="ptb on" data-t="d">Description</button>
+    <button class="ptb" data-t="s">Specifications</button>
+    <button class="ptb" data-t="del">Delivery</button>
+  </div>
+  <div class="ptab on" id="pt-d"><p id="pp-desc-full">Loading description…</p></div>
+  <div class="ptab" id="pt-s"><table class="stbl" id="pp-spec-table"><thead><tr><th>Specification</th><th>Details</th></tr></thead><tbody id="pp-spec-body"></tbody></table></div>
+  <div class="ptab" id="pt-del"><h3>Free Delivery on All Orders</h3>
+<p>All orders delivered <strong>free</strong> to UK mainland. No minimum order, no surcharges.</p>
+<h3>Dispatch Times</h3>
+<ul><li>Order before <strong>2pm Mon–Fri</strong> for next-day dispatch</li>
+<li>Pallet deliveries within <strong>1–3 working days</strong></li>
+<li>Weekend orders dispatched the following Monday</li></ul>
+<p>See our <a href="delivery.html">full delivery page</a> for details.</p></div>
+</div>
+
+<div class="rel-sec"><div class="rel-inner">
+  <div class="st">You Might Also <b>Like</b></div>
+  <div class="rgrid" id="pp-related"></div>
+</div></div>
+
+<footer><div class="ft-i">
+<div class="ftg">
+<div class="ft-brand"><a href="index.html" class="logo">Pro Build <b>Supplies</b></a><p>Premium building materials at trade prices, delivered direct to your door or site. Free delivery on every order.</p></div>
+<div class="fc"><h4>Products</h4>
+<a href="handmade-bricks.html">Handmade Bricks</a>
+<a href="reclaimed-bricks.html">Reclaimed Bricks</a>
+<a href="porcelain-paving.html">Porcelain Paving</a>
+<a href="indian-sandstone.html">Indian Sandstone</a>
+<a href="mdf.html">MDF Sheets</a>
+</div>
+<div class="fc"><h4>Help &amp; Info</h4>
+<a href="delivery.html">Delivery Info</a>
+<a href="returns.html">Returns Policy</a>
+<a href="samples.html">Free Samples</a>
+<a href="trade-accounts.html">Trade Accounts</a>
+<a href="contact.html">Contact Us</a>
+</div>
+<div class="fc"><h4>Company</h4>
+<a href="https://www.probuildsupplies.uk/about/">About Us</a>
+<a href="https://www.probuildsupplies.uk/blog/">Blog</a>
+<a href="https://www.probuildsupplies.uk/privacy-policy/">Privacy Policy</a>
+<a href="https://www.probuildsupplies.uk/terms/">Terms &amp; Conditions</a>
+</div>
+</div>
+<div class="ft-bot">
+<span>&copy; 2026 Pro Build Supplies. All rights reserved.</span>
+<div class="pays"><span class="pay">VISA</span><span class="pay">Mastercard</span><span class="pay">PayPal</span><span class="pay">Klarna</span><span class="pay">AMEX</span></div>
+</div>
+</div></footer>
+
+<script>
+(function(){
+  var t=document.getElementById('hbt'),n=document.getElementById('nav');
+  if(!t||!n)return;
+  t.addEventListener('click',function(){t.classList.toggle('open');n.classList.toggle('mob-open');});
+  n.querySelectorAll('.ni').forEach(function(ni){
+    ni.querySelector('a').addEventListener('click',function(e){
+      if(window.innerWidth<=768){
+        e.preventDefault();
+        n.querySelectorAll('.ni').forEach(function(x){if(x!==ni)x.classList.remove('mob-open')});
+        ni.classList.toggle('mob-open');
+      }
+    });
+  });
+})();
+</script>
+<script>
+document.querySelectorAll('.ptb').forEach(function(b){
+  b.addEventListener('click',function(){
+    document.querySelectorAll('.ptb').forEach(function(x){x.classList.remove('on')});
+    document.querySelectorAll('.ptab').forEach(function(x){x.classList.remove('on')});
+    b.classList.add('on');
+    document.getElementById('pt-'+b.dataset.t).classList.add('on');
+  });
+});
+</script>
+
+<!-- Snipcart init -->
+<div hidden id="snipcart" data-api-key="MDQ0ZDg2YTQtNGJjNi00OWYxLTkxNTctZmNlMWJkZjJkNDgyNjM5MTc5OTUyNDY0MDkyMDEw" data-currency="gbp"></div>
+<script src="https://cdn.snipcart.com/themes/v3.3.3/default/snipcart.js"></script>
+<script>
+(function() {
+  var observer = new MutationObserver(function(mutations) {
+    mutations.forEach(function(m) {
+      if (m.type === 'attributes' && m.attributeName === 'class') {
+        var body = document.body;
+        var hdr = document.querySelector('.hdr');
+        var nav = document.querySelector('.nav');
+        var ann = document.querySelector('.ann');
+        var isOpen = body.classList.contains('snipcart-sidecart-opened') ||
+                     body.classList.contains('snipcart-checkout-opened') ||
+                     document.querySelector('#snipcart[class*="visible"]') !== null;
+        if (hdr) hdr.style.zIndex = isOpen ? '0' : '9999';
+        if (hdr) hdr.style.position = isOpen ? 'relative' : 'sticky';
+        if (nav) nav.style.zIndex = isOpen ? '0' : '9998';
+        if (ann) ann.style.display = isOpen ? 'none' : '';
+      }
+    });
+  });
+  observer.observe(document.body, { attributes: true });
+  document.addEventListener('snipcart.ready', function() {
+    Snipcart.events.on('cart.opened', function() {
+      var hdr = document.querySelector('.hdr');
+      var nav = document.querySelector('.nav');
+      var ann = document.querySelector('.ann');
+      if (hdr) { hdr.style.position = 'relative'; hdr.style.zIndex = '0'; }
+      if (nav) nav.style.zIndex = '0';
+      if (ann) ann.style.display = 'none';
+    });
+    Snipcart.events.on('cart.closed', function() {
+      var hdr = document.querySelector('.hdr');
+      var nav = document.querySelector('.nav');
+      var ann = document.querySelector('.ann');
+      if (hdr) { hdr.style.position = 'sticky'; hdr.style.zIndex = '9999'; }
+      if (nav) nav.style.zIndex = '9998';
+      if (ann) ann.style.display = '';
+    });
+  });
+})();
+</script>
+
+<!-- Dynamic product loader: reads ?slug= from the URL and fills in this page from products.json -->
+<script>
+(function(){
+  'use strict';
+
+  function esc(s){ return (s||'').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+  function catIcon(c){
+    var m={'Handmade Bricks':'🧱','Reclaimed Bricks':'♻️','Porcelain Paving':'🪨','Indian Sandstone':'🌿','MDF':'🪵'};
+    return m[c]||'📦';
+  }
+  function catBg(c){
+    if(!c) return 'background:linear-gradient(135deg,#C0392B20,#C0392B50)';
+    if(c.indexOf('Brick')>-1) return 'background:linear-gradient(135deg,#C0392B20,#C0392B50)';
+    if(c.indexOf('Porcelain')>-1) return 'background:linear-gradient(135deg,#62656720,#62656750)';
+    if(c.indexOf('Sandstone')>-1) return 'background:linear-gradient(135deg,#C8A45A20,#C8A45A50)';
+    return 'background:linear-gradient(135deg,#A0522D20,#A0522D50)';
+  }
+  function getPrice(p){
+    if (p.sizeVariants && p.sizeVariants.length){
+      var first = p.sizeVariants.find(function(v){return v.price && v.price !== 'POA';});
+      return first ? first.price : (p.price || 'POA');
+    }
+    return p.price || 'POA';
+  }
+  function fmtPrice(v){
+    if (!v || v === 'POA') return 'POA';
+    var n = parseFloat(String(v).replace(/[^0-9.]/g,''));
+    if (isNaN(n)) return v;
+    return '£' + n.toFixed(2);
+  }
+
+  function makeCard(p){
+    var price = getPrice(p);
+    var img = p.image
+      ? '<img src="'+p.image+'" alt="'+esc(p.name)+'" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0">'
+      : catIcon(p.category);
+    return '<a href="product.html?slug='+encodeURIComponent(p.slug||'')+'" class="pcard">'
+      + '<div class="pimg" style="'+catBg(p.category)+'">'+img+'</div>'
+      + '<div class="pinfo">'
+      + '<div class="pcat">'+esc(p.category)+'</div>'
+      + '<div class="pname">'+esc(p.name)+'</div>'
+      + '<div class="pprice">'+esc(fmtPrice(price))+'</div>'
+      + '</div></a>';
+  }
+
+  var params = new URLSearchParams(window.location.search);
+  var slug = params.get('slug');
+
+  if (!slug) {
+    document.getElementById('pp-title').textContent = 'Product not found';
+    document.getElementById('pp-short').textContent = 'No product was specified.';
+    return;
+  }
+
+  fetch('products.json?v=' + Date.now())
+    .then(function(r){ return r.json(); })
+    .then(function(products){
+      var prod = (products || []).find(function(p){ return p.slug === slug; });
+      if (!prod) {
+        document.getElementById('pp-title').textContent = 'Product not found';
+        document.getElementById('pp-short').textContent = "We couldn't find that product. It may have been removed.";
+        return;
+      }
+
+      document.title = prod.name + ' — Pro Build Supplies';
+      document.getElementById('pp-pagetitle').textContent = prod.name + ' — Pro Build Supplies';
+      document.getElementById('pp-tag').textContent = prod.category || '';
+      document.getElementById('pp-title').textContent = prod.name;
+      document.getElementById('pp-bc-name').textContent = prod.name;
+      document.getElementById('pp-short').textContent = prod.description || '';
+      document.getElementById('pp-desc-full').textContent = prod.description || 'No further description available.';
+
+      // Image
+      var imgbox = document.getElementById('pp-imgbox');
+      if (prod.image) {
+        imgbox.innerHTML = '<img src="'+prod.image+'" alt="'+esc(prod.name)+'">';
+      } else {
+        imgbox.textContent = catIcon(prod.category);
+      }
+
+      var priceEl = document.getElementById('pp-price');
+      var noteEl  = document.getElementById('pp-pnote');
+      var addBtn  = document.getElementById('pp-addbtn');
+
+      function setAddButton(priceStr, sizeLabel){
+        var num = parseFloat(String(priceStr||'').replace(/[^0-9.]/g,''));
+        if (!isNaN(num) && num > 0) {
+          addBtn.dataset.itemId = prod.slug;
+          addBtn.dataset.itemName = prod.name + (sizeLabel ? ' (' + sizeLabel + ')' : '');
+          addBtn.dataset.itemPrice = num.toFixed(2);
+          addBtn.dataset.itemUrl = '/product.html?slug=' + encodeURIComponent(prod.slug);
+          addBtn.dataset.itemDescription = prod.description || '';
+          if (prod.image) addBtn.dataset.itemImage = prod.image;
+          addBtn.dataset.itemShippable = prod.delivery === 'included' ? 'false' : 'true';
+          addBtn.style.display = '';
+        } else {
+          addBtn.style.display = 'none';
+        }
+      }
+
+      if (prod.sizeVariants && prod.sizeVariants.length > 0) {
+        var wrap = document.getElementById('pp-szwrap');
+        var sel = document.getElementById('szSel');
+        wrap.style.display = '';
+        sel.innerHTML = prod.sizeVariants.map(function(v,i){
+          return '<option value=\'' + JSON.stringify({p:v.price,n:v.pack,s:v.size}) + '\' ' + (i===0?'selected':'') + '>' +
+            (v.size||'') + ' — ' + (v.pack||'') + (v.price ? ' — ' + fmtPrice(v.price) : '') + '</option>';
+        }).join('');
+        var first = prod.sizeVariants[0];
+        priceEl.textContent = fmtPrice(first.price);
+        noteEl.textContent = '📦 ' + (first.pack||'') + (prod.delivery === 'included' ? ' | Free delivery' : '');
+        setAddButton(first.price, (first.size||'') + ' / ' + (first.pack||''));
+        sel.addEventListener('change', function(){
+          try {
+            var v = JSON.parse(this.value);
+            priceEl.textContent = fmtPrice(v.p);
+            noteEl.textContent = '📦 ' + (v.n||'') + (prod.delivery === 'included' ? ' | Free delivery' : '');
+            setAddButton(v.p, (v.s||'') + ' / ' + (v.n||''));
+          } catch(e){}
+        });
+      } else {
+        var price = prod.price || 'POA';
+        priceEl.textContent = fmtPrice(price);
+        noteEl.textContent = (prod.priceNote ? '📦 ' + prod.priceNote : '') + (prod.delivery === 'included' ? ' | Free delivery' : '');
+        setAddButton(price, '');
+      }
+
+      // Specs table — built from whatever fields are available
+      var specBody = document.getElementById('pp-spec-body');
+      var specs = [];
+      if (prod.colour) specs.push(['Colour', prod.colour]);
+      if (prod.frost) specs.push(['Frost Resistance', prod.frost]);
+      if (prod.category) specs.push(['Category', prod.category]);
+      if (prod.sizeVariants && prod.sizeVariants.length) {
+        prod.sizeVariants.forEach(function(v){
+          specs.push([(v.size||'Size'), (v.pack||'') + (v.price ? ' — ' + fmtPrice(v.price) : '')]);
+        });
+      }
+      if (prod.delivery) specs.push(['Delivery', prod.delivery === 'included' ? 'Included in price' : 'Charged separately']);
+      specBody.innerHTML = specs.length
+        ? specs.map(function(s){ return '<tr><td><strong>'+esc(s[0])+'</strong></td><td>'+esc(s[1])+'</td></tr>'; }).join('')
+        : '<tr><td colspan="2">No specification details available.</td></tr>';
+
+      // Related products — same category, excluding this one
+      var relGrid = document.getElementById('pp-related');
+      var related = (products || []).filter(function(p){
+        return p.visible !== false && p.slug !== prod.slug && p.category === prod.category;
+      }).slice(0, 4);
+      relGrid.innerHTML = related.length
+        ? related.map(makeCard).join('')
+        : '<p style="color:var(--mid);font-size:.9rem">No related products yet.</p>';
+
+      // Breadcrumb category link
+      var catSlugMap = {
+        'Handmade Bricks':'handmade-bricks.html','Reclaimed Bricks':'reclaimed-bricks.html',
+        'Porcelain Paving':'porcelain-paving.html','Indian Sandstone':'indian-sandstone.html','MDF':'mdf.html'
+      };
+      var catHref = catSlugMap[prod.category] || 'shop.html';
+      document.getElementById('pp-breadcrumb').innerHTML =
+        '<a href="index.html">Home</a> › <a href="'+catHref+'">'+esc(prod.category||'Shop')+'</a> › <span id="pp-bc-name">'+esc(prod.name)+'</span>';
+    })
+    .catch(function(){
+      document.getElementById('pp-title').textContent = 'Could not load product';
+      document.getElementById('pp-short').textContent = 'Something went wrong loading product data. Please try again.';
+    });
+})();
+</script>
+</body>
+</html>
