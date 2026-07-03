@@ -1,6 +1,70 @@
 // Pro Build Supplies — Dynamic Product Loader
 // Reads products.json and updates the page content automatically
 
+// ── GLOBAL SITE FIXES (runs on every page) ───────────────────
+(function() {
+
+  // 1. Update phone number sitewide
+  document.querySelectorAll('a[href*="tel:"]').forEach(function(a) {
+    a.href = 'tel:01772287622';
+  });
+  document.querySelectorAll('.hph').forEach(function(el) {
+    el.href = 'tel:01772287622';
+    el.textContent = '📞 01772 287622';
+  });
+  // Also update any visible phone number text in trust strips etc
+  document.querySelectorAll('a[href*="tel:"]').forEach(function(a) {
+    if (a.textContent.match(/0800|123 4567/)) {
+      a.textContent = a.textContent.replace(/0800 123 4567/g, '01772 287622');
+    }
+  });
+
+  // 2. Center search bar + center & space nav links
+  var layoutStyle = document.createElement('style');
+  layoutStyle.textContent =
+    // Center search bar in header
+    '.hdr-i{position:relative}' +
+    '.srch{position:absolute!important;left:50%;transform:translateX(-50%);width:420px;max-width:calc(100% - 380px);flex:none!important;margin:0!important}' +
+    // Center and evenly space nav
+    '.nav-i{justify-content:center!important}' +
+    '.nav a{padding:11px 20px!important}' +
+    // Keep logo and cart visible above search on mobile
+    '@media(max-width:768px){.srch{position:static!important;transform:none!important;width:100%!important;max-width:100%!important;display:none!important}}';
+  document.head.appendChild(layoutStyle);
+
+  // 3. Fix dropdown triggering on scroll
+  // Inject CSS: disable CSS :hover dropdowns, use JS class instead
+  var ddStyle = document.createElement('style');
+  ddStyle.textContent =
+    '.ni .dd{display:none!important}' +
+    '.ni.ni-open .dd{display:block!important}';
+  document.head.appendChild(ddStyle);
+
+  var isScrolling = false;
+  var scrollTimer;
+
+  window.addEventListener('scroll', function() {
+    isScrolling = true;
+    // Close all dropdowns immediately when scrolling starts
+    document.querySelectorAll('.ni.ni-open').forEach(function(ni) {
+      ni.classList.remove('ni-open');
+    });
+    clearTimeout(scrollTimer);
+    scrollTimer = setTimeout(function() { isScrolling = false; }, 200);
+  }, { passive: true });
+
+  document.querySelectorAll('.ni').forEach(function(ni) {
+    ni.addEventListener('mouseenter', function() {
+      if (!isScrolling) ni.classList.add('ni-open');
+    });
+    ni.addEventListener('mouseleave', function() {
+      ni.classList.remove('ni-open');
+    });
+  });
+
+})();
+// ─────────────────────────────────────────────────────────────
+
 (function() {
   'use strict';
 
