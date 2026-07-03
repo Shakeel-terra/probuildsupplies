@@ -35,6 +35,22 @@
     '@media(max-width:768px){.srch{position:static!important;transform:none!important;width:100%!important;max-width:100%!important;display:none!important}}';
   document.head.appendChild(layoutStyle);
 
+  // Add Plasterboards nav item after MDF
+  (function() {
+    var navI = document.querySelector('.nav-i');
+    if (!navI) return;
+    var mdfLink = navI.querySelector('a[href="mdf.html"]');
+    if (!mdfLink) return;
+    var pb = document.createElement('a');
+    pb.href = 'plasterboards.html';
+    pb.textContent = '📋 Plasterboards';
+    // Mark active if on plasterboards page
+    if (window.location.pathname.endsWith('/plasterboards') || window.location.pathname.includes('plasterboards')) {
+      pb.classList.add('cur');
+    }
+    mdfLink.parentNode.insertBefore(pb, mdfLink.nextSibling);
+  })();
+
   // 3. Fix dropdown triggering on scroll
   // Override CSS :hover with JS class-based approach
   var ddStyle = document.createElement('style');
@@ -95,7 +111,8 @@
       path.includes('reclaimed-bricks.html') || path.endsWith('/reclaimed-bricks') ||
       path.includes('porcelain-paving.html') || path.endsWith('/porcelain-paving') ||
       path.includes('indian-sandstone.html') || path.endsWith('/indian-sandstone') ||
-      path.includes('mdf.html') || path.endsWith('/mdf');
+      path.includes('mdf.html') || path.endsWith('/mdf') ||
+      path.includes('plasterboards.html') || path.endsWith('/plasterboards');
     if (!isDynamicListPage) return;
     __hideEl = document.getElementById('sfgrid') || document.querySelector('.pgrid');
     if (__hideEl) {
@@ -122,7 +139,7 @@
 
   // ── HELPERS ───────────────────────────────────────────────
   function catIcon(c) {
-    var m = {'Handmade Bricks':'🧱','Reclaimed Bricks':'♻️','Porcelain Paving':'🪨','Indian Sandstone':'🌿','MDF':'🪵'};
+    var m = {'Handmade Bricks':'🧱','Reclaimed Bricks':'♻️','Porcelain Paving':'🪨','Indian Sandstone':'🌿','MDF':'🪵','Plasterboards':'📋'};
     return m[c] || '📦';
   }
   function catBg(c) {
@@ -329,6 +346,9 @@
     }
     if (path.includes('mdf.html') || path.endsWith('/mdf')) {
       initCategoryPage(products, 'MDF'); return;
+    }
+    if (path.includes('plasterboards.html') || path.endsWith('/plasterboards')) {
+      initCategoryPage(products, 'Plasterboards'); return;
     }
     if (path.endsWith('/') || path.includes('index.html')) {
       initHomepage(products); return;
