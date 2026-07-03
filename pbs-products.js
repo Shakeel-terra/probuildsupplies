@@ -33,29 +33,36 @@
   document.head.appendChild(layoutStyle);
 
   // 3. Fix dropdown triggering on scroll
-  // Inject CSS: disable CSS :hover dropdowns, use JS class instead
+  // Override CSS :hover with JS class-based approach
   var ddStyle = document.createElement('style');
   ddStyle.textContent =
     '.ni .dd{display:none!important}' +
     '.ni.ni-open .dd{display:block!important}';
-  document.head.appendChild(ddStyle);
+  (document.head || document.documentElement).appendChild(ddStyle);
 
-  var isScrolling = false;
+  // Disable pointer-events on the entire nav during scroll —
+  // this stops the browser from activating CSS :hover on nav items at all
+  var navEl = document.getElementById('nav');
   var scrollTimer;
 
   window.addEventListener('scroll', function() {
-    isScrolling = true;
-    // Close all dropdowns immediately when scrolling starts
+    // Freeze the nav — no hover events possible while scrolling
+    if (navEl) navEl.style.pointerEvents = 'none';
+    // Close any open dropdowns
     document.querySelectorAll('.ni.ni-open').forEach(function(ni) {
       ni.classList.remove('ni-open');
     });
     clearTimeout(scrollTimer);
-    scrollTimer = setTimeout(function() { isScrolling = false; }, 200);
+    scrollTimer = setTimeout(function() {
+      // Re-enable nav after scroll stops
+      if (navEl) navEl.style.pointerEvents = '';
+    }, 150);
   }, { passive: true });
 
+  // JS-controlled hover for dropdowns
   document.querySelectorAll('.ni').forEach(function(ni) {
     ni.addEventListener('mouseenter', function() {
-      if (!isScrolling) ni.classList.add('ni-open');
+      ni.classList.add('ni-open');
     });
     ni.addEventListener('mouseleave', function() {
       ni.classList.remove('ni-open');
