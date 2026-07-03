@@ -39,16 +39,27 @@
   (function() {
     var navI = document.querySelector('.nav-i');
     if (!navI) return;
-    var mdfLink = navI.querySelector('a[href="mdf.html"]');
-    if (!mdfLink) return;
+    // Don't add twice
+    if (navI.querySelector('a[href="plasterboards.html"]')) return;
     var pb = document.createElement('a');
     pb.href = 'plasterboards.html';
     pb.textContent = '📋 Plasterboards';
-    // Mark active if on plasterboards page
-    if (window.location.pathname.endsWith('/plasterboards') || window.location.pathname.includes('plasterboards')) {
+    if (window.location.pathname.endsWith('/plasterboards') ||
+        window.location.pathname.includes('plasterboards')) {
       pb.classList.add('cur');
     }
-    mdfLink.parentNode.insertBefore(pb, mdfLink.nextSibling);
+    // Try to insert after MDF, otherwise just append to nav
+    var mdfLink = navI.querySelector('a[href="mdf.html"]') ||
+                  Array.from(navI.querySelectorAll('a')).find(function(a) {
+                    return a.textContent.trim().includes('MDF');
+                  });
+    if (mdfLink && mdfLink.nextSibling) {
+      navI.insertBefore(pb, mdfLink.nextSibling);
+    } else if (mdfLink) {
+      mdfLink.parentNode.appendChild(pb);
+    } else {
+      navI.appendChild(pb);
+    }
   })();
 
   // 3. Fix dropdown triggering on scroll
