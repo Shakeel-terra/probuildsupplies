@@ -28,6 +28,9 @@
     // Center and evenly space nav
     '.nav-i{justify-content:center!important}' +
     '.nav a{padding:11px 20px!important}' +
+    // Fix dropdown clipping — nav container must not clip overflow
+    '.nav{overflow:visible!important}' +
+    '.nav-i{overflow:visible!important}' +
     // Keep logo and cart visible above search on mobile
     '@media(max-width:768px){.srch{position:static!important;transform:none!important;width:100%!important;max-width:100%!important;display:none!important}}';
   document.head.appendChild(layoutStyle);
