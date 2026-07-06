@@ -242,7 +242,7 @@ footer{background:#111;padding:40px 20px 18px;color:#888;width:100%}
           data-item-has-taxes-included="true"
           data-item-shippable="true"
         >🛒 Add to Cart</button>
-        <a href="samples.html" class="btn-dk" id="pp-sample-btn">🧱 Free Sample</a>
+        <a href="samples.html" class="btn-dk" id="pp-sample-btn" style="display:none">🧱 Free Sample</a>
       </div>
       <div class="pp-trust">
         <div class="pti"><span>🚚</span> Free Delivery</div>
@@ -567,15 +567,11 @@ document.querySelectorAll('.ptb').forEach(function(b){
           '<p style="margin-top:14px">See our <a href="delivery.html">full delivery page</a> for details.</p>';
       }
 
-      // Hide Free Sample button for categories that don't offer samples
-      var noSampleCategories = ['Plasterboards', 'Porcelain Paving'];
+      // Show Free Sample button only for brick categories
+      var sampleCategories = ['Handmade Bricks', 'Reclaimed Bricks'];
       var sampleBtn = document.getElementById('pp-sample-btn');
-      if (sampleBtn) {
-        if (noSampleCategories.indexOf(prod.category) !== -1) {
-          sampleBtn.style.display = 'none';
-        } else {
-          sampleBtn.style.display = '';
-        }
+      if (sampleBtn && sampleCategories.indexOf(prod.category) !== -1) {
+        sampleBtn.style.display = '';
       }
 
       // Related products — same category, excluding this one
