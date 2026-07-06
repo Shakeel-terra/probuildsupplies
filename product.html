@@ -528,13 +528,41 @@ document.querySelectorAll('.ptb').forEach(function(b){
           : '<tr><td colspan="2">No specification details available.</td></tr>';
       }
 
-      // Delivery tab — use per-product notes if set, otherwise show generic text
+      // ── MARKDOWN PARSER (for delivery notes) ──────────────
+      function parseMarkdown(text) {
+        if (!text || !text.trim()) return '';
+        var lines = text.trim().split('\n');
+        var html = '';
+        var inUl = false;
+        lines.forEach(function(rawLine) {
+          var line = rawLine.trim();
+          if (!line) {
+            if (inUl) { html += '</ul>'; inUl = false; }
+            return;
+          }
+          // Inline bold: **text**
+          function boldify(s) {
+            return s.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+          }
+          if (line.startsWith('## ')) {
+            if (inUl) { html += '</ul>'; inUl = false; }
+            html += '<h3>' + boldify(line.substring(3)) + '</h3>';
+          } else if (line.startsWith('- ')) {
+            if (!inUl) { html += '<ul>'; inUl = true; }
+            html += '<li>' + boldify(line.substring(2)) + '</li>';
+          } else {
+            if (inUl) { html += '</ul>'; inUl = false; }
+            html += '<p>' + boldify(line) + '</p>';
+          }
+        });
+        if (inUl) html += '</ul>';
+        return html;
+      }
+
+      // Delivery tab — use per-product notes if set, replacing generic content entirely
+      var delTab = document.getElementById('pt-del');
       if (prod.deliveryNotes && prod.deliveryNotes.trim()) {
-        var delTab = document.getElementById('pt-del');
-        delTab.innerHTML = '<h3>Delivery Information</h3>' +
-          prod.deliveryNotes.trim().split('\n').filter(Boolean).map(function(line) {
-            return '<p>' + esc(line) + '</p>';
-          }).join('') +
+        delTab.innerHTML = parseMarkdown(prod.deliveryNotes) +
           '<p style="margin-top:14px">See our <a href="delivery.html">full delivery page</a> for details.</p>';
       }
 
