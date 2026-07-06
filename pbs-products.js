@@ -4,7 +4,7 @@
 // ── GLOBAL SITE FIXES (runs on every page) ───────────────────
 (function() {
 
-  // 1. Update phone number sitewide
+  // 1. Update phone number sitewide — covers links, trust strips, Expert Advice, footer
   document.querySelectorAll('a[href*="tel:"]').forEach(function(a) {
     a.href = 'tel:01772287622';
   });
@@ -12,12 +12,18 @@
     el.href = 'tel:01772287622';
     el.textContent = '📞 01772 287622';
   });
-  // Also update any visible phone number text in trust strips etc
-  document.querySelectorAll('a[href*="tel:"]').forEach(function(a) {
-    if (a.textContent.match(/0800|123 4567/)) {
-      a.textContent = a.textContent.replace(/0800 123 4567/g, '01772 287622');
-    }
-  });
+  // Scan ALL text nodes on the page and replace the old number wherever it appears
+  (function replacePhoneText(el) {
+    el.childNodes.forEach(function(node) {
+      if (node.nodeType === 3) { // text node
+        if (node.textContent.includes('0800 123 4567')) {
+          node.textContent = node.textContent.replace(/0800 123 4567/g, '01772 287622');
+        }
+      } else if (node.nodeType === 1 && node.tagName !== 'SCRIPT' && node.tagName !== 'STYLE') {
+        replacePhoneText(node);
+      }
+    });
+  })(document.body);
 
   // 2. Center search bar + center & space nav links
   var layoutStyle = document.createElement('style');
