@@ -68,7 +68,57 @@
     }
   })();
 
-  // 3. Fix dropdown triggering on scroll
+  // 4. Fix Snipcart cart being covered by sticky navbar
+  // When cart opens, drop the header behind it; restore when cart closes
+  (function() {
+    // CSS approach — most reliable, zero flash
+    var snipStyle = document.createElement('style');
+    snipStyle.textContent =
+      'body.snipcart-sidecart--opened .hdr,' +
+      'body.snipcart-checkout--opened .hdr,' +
+      'body.snipcart--sidecart-opened .hdr {' +
+        'position:relative!important;z-index:0!important}' +
+      'body.snipcart-sidecart--opened #nav,' +
+      'body.snipcart-checkout--opened #nav,' +
+      'body.snipcart--sidecart-opened #nav {z-index:0!important}' +
+      'body.snipcart-sidecart--opened .ann,' +
+      'body.snipcart-checkout--opened .ann,' +
+      'body.snipcart--sidecart-opened .ann {display:none!important}';
+    document.head.appendChild(snipStyle);
+
+    var hdr = document.querySelector('.hdr');
+    var navEl2 = document.getElementById('nav');
+    var ann = document.querySelector('.ann');
+
+    function cartOpen() {
+      if (hdr) { hdr.style.position = 'relative'; hdr.style.zIndex = '0'; }
+      if (navEl2) navEl2.style.zIndex = '0';
+      if (ann) ann.style.display = 'none';
+    }
+    function cartClose() {
+      if (hdr) { hdr.style.position = 'sticky'; hdr.style.zIndex = '9999'; }
+      if (navEl2) navEl2.style.zIndex = '9998';
+      if (ann) ann.style.display = '';
+    }
+
+    // JS events as backup
+    document.addEventListener('snipcart.ready', function() {
+      if (typeof Snipcart !== 'undefined') {
+        Snipcart.events.on('cart.opened', cartOpen);
+        Snipcart.events.on('cart.closed', cartClose);
+      }
+    });
+
+    // MutationObserver as final fallback
+    var snipObserver = new MutationObserver(function() {
+      var b = document.body.classList;
+      var open = b.contains('snipcart-sidecart--opened') ||
+                 b.contains('snipcart-checkout--opened') ||
+                 b.contains('snipcart--sidecart-opened');
+      open ? cartOpen() : cartClose();
+    });
+    snipObserver.observe(document.body, { attributes: true, attributeFilter: ['class'] });
+  })();
   // Override CSS :hover with JS class-based approach
   var ddStyle = document.createElement('style');
   ddStyle.textContent =
