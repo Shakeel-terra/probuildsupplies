@@ -37,9 +37,46 @@
     // Fix dropdown clipping — nav container must not clip overflow
     '.nav{overflow:visible!important}' +
     '.nav-i{overflow:visible!important}' +
+    // Snipcart — always above sticky header
+    '#snipcart{z-index:99999!important}' +
+    '#snipcart .snipcart-sidecart{z-index:99999!important}' +
     // Keep logo and cart visible above search on mobile
     '@media(max-width:768px){.srch{position:static!important;transform:none!important;width:100%!important;max-width:100%!important;display:none!important}}';
   document.head.appendChild(layoutStyle);
+
+  // Snipcart cart fix — drop sticky header when cart opens so it cannot cover the cart
+  (function() {
+    var hdr = document.querySelector('.hdr');
+    var navEl2 = document.getElementById('nav');
+    var ann = document.querySelector('.ann');
+    function cartOpen() {
+      if (hdr) { hdr.style.position = 'relative'; hdr.style.zIndex = '0'; }
+      if (navEl2) navEl2.style.zIndex = '0';
+      if (ann) ann.style.display = 'none';
+    }
+    function cartClose() {
+      if (hdr) { hdr.style.position = 'sticky'; hdr.style.zIndex = '9999'; }
+      if (navEl2) navEl2.style.zIndex = '9998';
+      if (ann) ann.style.display = '';
+    }
+    document.addEventListener('snipcart.ready', function() {
+      if (typeof Snipcart !== 'undefined') {
+        Snipcart.events.on('cart.opened', cartOpen);
+        Snipcart.events.on('cart.closed', cartClose);
+        try {
+          if (Snipcart.store.getState().cart.isOpen) cartOpen();
+        } catch(e) {}
+      }
+    });
+    // MutationObserver as fallback — watches body class for any snipcart open state
+    new MutationObserver(function() {
+      var bc = document.body.className || '';
+      var open = bc.indexOf('snipcart') !== -1 && (
+        bc.indexOf('opened') !== -1 || bc.indexOf('sidecart') !== -1
+      );
+      open ? cartOpen() : cartClose();
+    }).observe(document.body, { attributes: true, attributeFilter: ['class'] });
+  })();
 
   // Add Plasterboards nav item after MDF
   (function() {
@@ -68,57 +105,7 @@
     }
   })();
 
-  // 4. Fix Snipcart cart being covered by sticky navbar
-  // When cart opens, drop the header behind it; restore when cart closes
-  (function() {
-    // CSS approach — most reliable, zero flash
-    var snipStyle = document.createElement('style');
-    snipStyle.textContent =
-      'body.snipcart-sidecart--opened .hdr,' +
-      'body.snipcart-checkout--opened .hdr,' +
-      'body.snipcart--sidecart-opened .hdr {' +
-        'position:relative!important;z-index:0!important}' +
-      'body.snipcart-sidecart--opened #nav,' +
-      'body.snipcart-checkout--opened #nav,' +
-      'body.snipcart--sidecart-opened #nav {z-index:0!important}' +
-      'body.snipcart-sidecart--opened .ann,' +
-      'body.snipcart-checkout--opened .ann,' +
-      'body.snipcart--sidecart-opened .ann {display:none!important}';
-    document.head.appendChild(snipStyle);
-
-    var hdr = document.querySelector('.hdr');
-    var navEl2 = document.getElementById('nav');
-    var ann = document.querySelector('.ann');
-
-    function cartOpen() {
-      if (hdr) { hdr.style.position = 'relative'; hdr.style.zIndex = '0'; }
-      if (navEl2) navEl2.style.zIndex = '0';
-      if (ann) ann.style.display = 'none';
-    }
-    function cartClose() {
-      if (hdr) { hdr.style.position = 'sticky'; hdr.style.zIndex = '9999'; }
-      if (navEl2) navEl2.style.zIndex = '9998';
-      if (ann) ann.style.display = '';
-    }
-
-    // JS events as backup
-    document.addEventListener('snipcart.ready', function() {
-      if (typeof Snipcart !== 'undefined') {
-        Snipcart.events.on('cart.opened', cartOpen);
-        Snipcart.events.on('cart.closed', cartClose);
-      }
-    });
-
-    // MutationObserver as final fallback
-    var snipObserver = new MutationObserver(function() {
-      var b = document.body.classList;
-      var open = b.contains('snipcart-sidecart--opened') ||
-                 b.contains('snipcart-checkout--opened') ||
-                 b.contains('snipcart--sidecart-opened');
-      open ? cartOpen() : cartClose();
-    });
-    snipObserver.observe(document.body, { attributes: true, attributeFilter: ['class'] });
-  })();
+  // 3. Fix dropdown triggering on scroll
   // Override CSS :hover with JS class-based approach
   var ddStyle = document.createElement('style');
   ddStyle.textContent =
