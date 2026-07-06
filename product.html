@@ -567,6 +567,13 @@ document.querySelectorAll('.ptb').forEach(function(b){
           '<p style="margin-top:14px">See our <a href="delivery.html">full delivery page</a> for details.</p>';
       }
 
+      // Hide Free Sample button for categories that don't offer samples
+      var noSampleCategories = ['Plasterboards', 'Porcelain Paving'];
+      if (noSampleCategories.indexOf(prod.category) !== -1) {
+        var sampleBtn = document.querySelector('a[href="samples.html"].btn-dk');
+        if (sampleBtn) sampleBtn.style.display = 'none';
+      }
+
       // Related products — same category, excluding this one
       var relGrid = document.getElementById('pp-related');
       var related = (products || []).filter(function(p){
