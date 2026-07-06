@@ -502,21 +502,41 @@ document.querySelectorAll('.ptb').forEach(function(b){
         setAddButton(price, '');
       }
 
-      // Specs table — built from whatever fields are available
+      // Specs table — use custom specs if entered in dashboard, otherwise auto-generate
       var specBody = document.getElementById('pp-spec-body');
-      var specs = [];
-      if (prod.colour) specs.push(['Colour', prod.colour]);
-      if (prod.frost) specs.push(['Frost Resistance', prod.frost]);
-      if (prod.category) specs.push(['Category', prod.category]);
-      if (prod.sizeVariants && prod.sizeVariants.length) {
-        prod.sizeVariants.forEach(function(v){
-          specs.push([(v.size||'Size'), (v.pack||'') + (v.price ? ' — ' + fmtPrice(v.price) : '')]);
+      if (prod.customSpecs && prod.customSpecs.trim()) {
+        // Parse "Label | Value" lines entered in the dashboard
+        var rows = prod.customSpecs.trim().split('\n').filter(Boolean).map(function(line) {
+          var parts = line.split('|');
+          return '<tr><td><strong>' + esc((parts[0]||'').trim()) + '</strong></td><td>' + esc((parts[1]||'').trim()) + '</td></tr>';
         });
+        specBody.innerHTML = rows.join('');
+      } else {
+        // Auto-generate from product fields
+        var specs = [];
+        if (prod.colour) specs.push(['Colour', prod.colour]);
+        if (prod.frost) specs.push(['Frost Resistance', prod.frost]);
+        if (prod.category) specs.push(['Category', prod.category]);
+        if (prod.sizeVariants && prod.sizeVariants.length) {
+          prod.sizeVariants.forEach(function(v){
+            specs.push([(v.size||'Size'), (v.pack||'') + (v.price ? ' — ' + fmtPrice(v.price) : '')]);
+          });
+        }
+        if (prod.delivery) specs.push(['Delivery', prod.delivery === 'included' ? 'Included in price' : 'Charged separately']);
+        specBody.innerHTML = specs.length
+          ? specs.map(function(s){ return '<tr><td><strong>'+esc(s[0])+'</strong></td><td>'+esc(s[1])+'</td></tr>'; }).join('')
+          : '<tr><td colspan="2">No specification details available.</td></tr>';
       }
-      if (prod.delivery) specs.push(['Delivery', prod.delivery === 'included' ? 'Included in price' : 'Charged separately']);
-      specBody.innerHTML = specs.length
-        ? specs.map(function(s){ return '<tr><td><strong>'+esc(s[0])+'</strong></td><td>'+esc(s[1])+'</td></tr>'; }).join('')
-        : '<tr><td colspan="2">No specification details available.</td></tr>';
+
+      // Delivery tab — use per-product notes if set, otherwise show generic text
+      if (prod.deliveryNotes && prod.deliveryNotes.trim()) {
+        var delTab = document.getElementById('pt-del');
+        delTab.innerHTML = '<h3>Delivery Information</h3>' +
+          prod.deliveryNotes.trim().split('\n').filter(Boolean).map(function(line) {
+            return '<p>' + esc(line) + '</p>';
+          }).join('') +
+          '<p style="margin-top:14px">See our <a href="delivery.html">full delivery page</a> for details.</p>';
+      }
 
       // Related products — same category, excluding this one
       var relGrid = document.getElementById('pp-related');
