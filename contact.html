@@ -509,19 +509,21 @@ footer{background:#111;padding:40px 20px 18px;color:#888;width:100%}
 <div class="sec">
   <div class="cgrid">
     <div class="cdet"><div class="cic">📞</div><div><span class="clbl">Phone</span><div class="cval"><a href="tel:01772287622">01772 287622</a></div><div style="font-size:.78rem;color:var(--st);margin-top:3px">Mon–Fri 8am–5:30pm</div></div></div>
-    <div class="cdet"><div class="cic">💬</div><div><span class="clbl">WhatsApp</span><div class="cval"><a href="https://wa.me/447549809252" target="_blank">WhatsApp Us</a></div><div style="font-size:.78rem;color:var(--st);margin-top:3px">Quick responses 7 days</div></div></div>
+    <div class="cdet"><div class="cic">💬</div><div><span class="clbl">WhatsApp</span><div class="cval"><a href="https://wa.me/447549809252" target="_blank">WhatsApp Us</a></div><div style="font-size:.78rem;color:var(--st);margin-top:3px">Quick responses within 1 hour</div></div></div>
     <div class="cdet"><div class="cic">📧</div><div><span class="clbl">Email</span><div class="cval"><a href="mailto:info@probuildsupplies.uk">info@probuildsupplies.uk</a></div><div style="font-size:.78rem;color:var(--st);margin-top:3px">Response within 4 hours</div></div></div>
-    <div class="cdet"><div class="cic">📍</div><div><span class="clbl">Address</span><div class="cval" style="font-size:.97rem;line-height:1.5">Pro Build Supplies<br>United Kingdom</div></div></div>
+    <div class="cdet"><div class="cic">📍</div><div><span class="clbl">Address</span><div class="cval" style="font-size:.97rem;line-height:1.5">Pro Build Supplies<br>Suite 23, Derby House<br>Lytham Rd, Preston<br>PR2 8JE</div></div></div>
   </div>
   <div class="fcard">
     <h2>Send Us a Message</h2>
     <p>Have a question about a product, need a quote, or want to discuss a project?</p>
-    <form onsubmit="pbsOk(event,'cok')">
-      <div class="frow"><div class="fg"><label>Your Name *</label><input type="text" required placeholder="First and last name"></div><div class="fg"><label>Phone</label><input type="tel" placeholder="07700 900000"></div></div>
-      <div class="fg"><label>Email Address *</label><input type="email" required placeholder="your@email.com"></div>
-      <div class="fg"><label>Query Topic *</label><select required><option value="">Select a topic</option><option>Product Enquiry</option><option>Existing Order</option><option>Request a Quote</option><option>Trade Account</option><option>Delivery Question</option><option>Returns &amp; Refunds</option><option>Free Samples</option><option>Other</option></select></div>
-      <div class="fg"><label>Your Message *</label><textarea required placeholder="Tell us how we can help..." style="min-height:130px"></textarea></div>
-      <div class="fg"><label>Order Number <span style="font-weight:400;text-transform:none;font-size:.73rem">(if applicable)</span></label><input type="text" placeholder="e.g. PBS-12345"></div>
+    <form name="contact" data-netlify="true" netlify-honeypot="bot-field" method="post" onsubmit="pbsOk(event,'cok')">
+      <input type="hidden" name="form-name" value="contact">
+      <input type="hidden" name="bot-field" style="display:none">
+      <div class="frow"><div class="fg"><label>Your Name *</label><input type="text" name="full-name" required placeholder="First and last name"></div><div class="fg"><label>Phone</label><input type="tel" name="phone" placeholder="07700 900000"></div></div>
+      <div class="fg"><label>Email Address *</label><input type="email" name="email" required placeholder="your@email.com"></div>
+      <div class="fg"><label>Query Topic *</label><select name="topic" required><option value="">Select a topic</option><option>Product Enquiry</option><option>Existing Order</option><option>Request a Quote</option><option>Trade Account</option><option>Delivery Question</option><option>Returns &amp; Refunds</option><option>Free Samples</option><option>Other</option></select></div>
+      <div class="fg"><label>Your Message *</label><textarea name="message" required placeholder="Tell us how we can help..." style="min-height:130px"></textarea></div>
+      <div class="fg"><label>Order Number <span style="font-weight:400;text-transform:none;font-size:.73rem">(if applicable)</span></label><input type="text" name="order-number" placeholder="e.g. PBS-12345"></div>
       <button type="submit" class="fsub">Send Message</button>
       <p class="fnote">We respond to all enquiries within 4 working hours (Mon–Fri 8am–5:30pm).</p>
       <div id="cok" class="fok">✅ Message sent! We'll get back to you within 4 working hours.</div>
@@ -576,9 +578,18 @@ footer{background:#111;padding:40px 20px 18px;color:#888;width:100%}
 <script>
 function pbsOk(e,id){
   e.preventDefault();
-  var m=document.getElementById(id);
-  if(m){m.style.display='block';e.target.reset();var s=e.target.querySelector('.fsub');if(s)s.style.display='none';}
-  return false;
+  var form=e.target;
+  var data=new URLSearchParams(new FormData(form)).toString();
+  fetch(window.location.pathname,{
+    method:'POST',
+    headers:{'Content-Type':'application/x-www-form-urlencoded'},
+    body:data
+  }).then(function(){
+    var m=document.getElementById(id);
+    if(m){m.style.display='block';form.reset();var s=form.querySelector('.fsub');if(s)s.style.display='none';}
+  }).catch(function(){
+    alert('Sorry, there was an error. Please call us on 01772 287622.');
+  });
 }
 </script>
 
