@@ -39,61 +39,16 @@
     '.nav-i{overflow:visible!important}' +
     // Snipcart — always above everything
     '#snipcart{z-index:99999!important}' +
-    // Hide header AND nav when cart is open
-    '.cart-open .hdr{display:none!important}' +
-    '.cart-open .ann{display:none!important}' +
-    '.cart-open .nav{display:none!important}' +
+    // Hide header + nav when Snipcart cart is open (Snipcart adds these body classes automatically)
+    'body.snipcart-sidecart-opened .hdr,' +
+    'body.snipcart-checkout-opened .hdr,' +
+    'body.snipcart-sidecart-opened .nav,' +
+    'body.snipcart-checkout-opened .nav,' +
+    'body.snipcart-sidecart-opened .ann,' +
+    'body.snipcart-checkout-opened .ann{display:none!important}' +
     // Keep logo and cart visible above search on mobile
     '@media(max-width:768px){.srch{position:static!important;transform:none!important;width:100%!important;max-width:100%!important;display:none!important}}';
   document.head.appendChild(layoutStyle);
-
-  // Hide header when Snipcart cart opens, restore when it closes
-  (function() {
-    function cartOpen() { document.body.classList.add('cart-open'); }
-    function cartClose() { document.body.classList.remove('cart-open'); }
-
-    // Snipcart events (primary)
-    document.addEventListener('snipcart.ready', function() {
-      if (typeof Snipcart !== 'undefined') {
-        Snipcart.events.on('cart.opened', cartOpen);
-        Snipcart.events.on('cart.closed', cartClose);
-      }
-    });
-
-    // Cart button clicks (immediate fallback)
-    document.addEventListener('click', function(e) {
-      var btn = e.target.closest('.snipcart-checkout, .cart-btn, [class*="snipcart-checkout"], .snipcart-add-item, [class*="snipcart-add-item"]');
-      if (btn) { setTimeout(cartOpen, 300); }
-    });
-
-    // Close on Escape key
-    document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape') cartClose();
-    });
-
-    // Watch body class - fires on both open AND close
-    new MutationObserver(function() {
-      var bc = document.body.className;
-      var snipOpen = bc.indexOf('snipcart') !== -1 && bc.indexOf('opened') !== -1;
-      if (snipOpen) {
-        cartOpen();
-      } else if (document.body.classList.contains('cart-open')) {
-        // Snipcart class gone but our class still there — cart closed
-        cartClose();
-      }
-    }).observe(document.body, { attributes: true, attributeFilter: ['class'] });
-
-    // Polling fallback — checks every 300ms if cart is still open
-    setInterval(function() {
-      if (!document.body.classList.contains('cart-open')) return;
-      var stillOpen = false;
-      try { stillOpen = Snipcart.store.getState().cart.isOpen; } catch(e) {}
-      // Also check if any snipcart-opened class on body
-      if (!stillOpen && document.body.className.indexOf('opened') === -1) {
-        cartClose();
-      }
-    }, 300);
-  })();
 
   // Add Plasterboards nav item after MDF
   (function() {
