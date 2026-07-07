@@ -39,9 +39,10 @@
     '.nav-i{overflow:visible!important}' +
     // Snipcart — always above everything
     '#snipcart{z-index:99999!important}' +
-    // Hide header when cart is open
+    // Hide header AND nav when cart is open
     '.cart-open .hdr{display:none!important}' +
     '.cart-open .ann{display:none!important}' +
+    '.cart-open .nav{display:none!important}' +
     // Keep logo and cart visible above search on mobile
     '@media(max-width:768px){.srch{position:static!important;transform:none!important;width:100%!important;max-width:100%!important;display:none!important}}';
   document.head.appendChild(layoutStyle);
@@ -61,8 +62,8 @@
 
     // Cart button clicks (immediate fallback)
     document.addEventListener('click', function(e) {
-      var btn = e.target.closest('.snipcart-checkout, .cart-btn, [class*="snipcart-checkout"]');
-      if (btn) { setTimeout(cartOpen, 50); }
+      var btn = e.target.closest('.snipcart-checkout, .cart-btn, [class*="snipcart-checkout"], .snipcart-add-item, [class*="snipcart-add-item"]');
+      if (btn) { setTimeout(cartOpen, 300); }
     });
 
     // Close on Escape key
