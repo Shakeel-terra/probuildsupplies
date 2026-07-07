@@ -510,25 +510,27 @@ footer{background:#111;padding:40px 20px 18px;color:#888;width:100%}
   <div class="fcard">
     <h2>Request Free Brick Samples</h2>
     <p>Not sure which brick is right for your project? Choose up to 3 brick types and we'll deliver samples free.</p>
-    <form onsubmit="pbsOk(event,'sok')">
-      <div class="frow"><div class="fg"><label>Your Name *</label><input type="text" required placeholder="First and last name"></div><div class="fg"><label>Phone</label><input type="tel" placeholder="07700 900000"></div></div>
-      <div class="fg"><label>Email Address *</label><input type="email" required placeholder="your@email.com"></div>
-      <div class="fg"><label>Delivery Address *</label><input type="text" required placeholder="House number and street"></div>
-      <div class="frow"><div class="fg"><label>Town / City *</label><input type="text" required placeholder="e.g. Manchester"></div><div class="fg"><label>Postcode *</label><input type="text" required placeholder="e.g. M1 1AA"></div></div>
-      <div class="fg"><label>Brick Sample 1 *</label><select required><option value="">Select a brick</option>
+    <form name="free-samples" data-netlify="true" netlify-honeypot="bot-field" method="post" onsubmit="pbsOk(event,'sok')">
+      <input type="hidden" name="form-name" value="free-samples">
+      <input type="hidden" name="bot-field" style="display:none">
+      <div class="frow"><div class="fg"><label>Your Name *</label><input type="text" name="full-name" required placeholder="First and last name"></div><div class="fg"><label>Phone</label><input type="tel" name="phone" placeholder="07700 900000"></div></div>
+      <div class="fg"><label>Email Address *</label><input type="email" name="email" required placeholder="your@email.com"></div>
+      <div class="fg"><label>Delivery Address *</label><input type="text" name="address" required placeholder="House number and street"></div>
+      <div class="frow"><div class="fg"><label>Town / City *</label><input type="text" name="town" required placeholder="e.g. Manchester"></div><div class="fg"><label>Postcode *</label><input type="text" name="postcode" required placeholder="e.g. M1 1AA"></div></div>
+      <div class="fg"><label>Brick Sample 1 *</label><select name="sample-1" required><option value="">Select a brick</option>
         <optgroup label="Handmade Bricks"><option>Red Handmade Facing Brick</option><option>City Blend Handmade Brick</option><option>Cheshire Red Multi Handmade</option><option>Pulford Blend Handmade</option><option>Fulford Blend Handmade</option><option>Renovation Multi Handmade</option><option>Weathered Yellow 68mm</option><option>Plain Yellow 68mm</option><option>Ashgrove Orange Handmade</option><option>Barnstock Orange Handmade</option><option>Heritage Blend Handmade</option><option>Rustic Farmhouse Handmade</option><option>Thames Dean Stock</option><option>Tumbled Cheshire Handmade</option><option>Village Multi Handmade</option></optgroup>
         <optgroup label="Reclaimed Bricks"><option>Alford Reclaimed Brick 60mm</option><option>Ashbourne Reclaimed Brick 60mm</option></optgroup>
       </select></div>
-      <div class="fg"><label>Brick Sample 2 <span style="font-weight:400;text-transform:none;font-size:.73rem">(optional)</span></label><select><option value="">None</option>
+      <div class="fg"><label>Brick Sample 2 <span style="font-weight:400;text-transform:none;font-size:.73rem">(optional)</span></label><select name="sample-2"><option value="">None</option>
         <optgroup label="Handmade Bricks"><option>Red Handmade Facing Brick</option><option>City Blend Handmade Brick</option><option>Cheshire Red Multi Handmade</option><option>Pulford Blend Handmade</option><option>Fulford Blend Handmade</option><option>Heritage Blend Handmade</option><option>Rustic Farmhouse Handmade</option><option>Village Multi Handmade</option></optgroup>
         <optgroup label="Reclaimed Bricks"><option>Alford Reclaimed Brick 60mm</option><option>Ashbourne Reclaimed Brick 60mm</option></optgroup>
       </select></div>
-      <div class="fg"><label>Brick Sample 3 <span style="font-weight:400;text-transform:none;font-size:.73rem">(optional)</span></label><select><option value="">None</option>
+      <div class="fg"><label>Brick Sample 3 <span style="font-weight:400;text-transform:none;font-size:.73rem">(optional)</span></label><select name="sample-3"><option value="">None</option>
         <optgroup label="Handmade Bricks"><option>Red Handmade Facing Brick</option><option>City Blend Handmade Brick</option><option>Heritage Blend Handmade</option><option>Village Multi Handmade</option></optgroup>
         <optgroup label="Reclaimed Bricks"><option>Alford Reclaimed Brick 60mm</option><option>Ashbourne Reclaimed Brick 60mm</option></optgroup>
       </select></div>
-      <div class="fg"><label>Project Type</label><select><option value="">Select project type</option><option>New Build House</option><option>Extension / Renovation</option><option>Garden Wall / Landscaping</option><option>Commercial Project</option><option>Other</option></select></div>
-      <div class="fg"><label>Additional Notes</label><textarea placeholder="Any specific colour preferences or matching requirements..."></textarea></div>
+      <div class="fg"><label>Project Type</label><select name="project-type"><option value="">Select project type</option><option>New Build House</option><option>Extension / Renovation</option><option>Garden Wall / Landscaping</option><option>Commercial Project</option><option>Other</option></select></div>
+      <div class="fg"><label>Additional Notes</label><textarea name="notes" placeholder="Any specific colour preferences or matching requirements..."></textarea></div>
       <button type="submit" class="fsub">Request Free Samples</button>
       <p class="fnote">🚚 Samples sent free via Royal Mail. Allow 2–3 working days for delivery.</p>
       <div id="sok" class="fok">✅ Sample request received! Your samples will be dispatched within 1–2 working days.</div>
@@ -583,9 +585,18 @@ footer{background:#111;padding:40px 20px 18px;color:#888;width:100%}
 <script>
 function pbsOk(e,id){
   e.preventDefault();
-  var m=document.getElementById(id);
-  if(m){m.style.display='block';e.target.reset();var s=e.target.querySelector('.fsub');if(s)s.style.display='none';}
-  return false;
+  var form=e.target;
+  var data=new URLSearchParams(new FormData(form)).toString();
+  fetch(window.location.pathname,{
+    method:'POST',
+    headers:{'Content-Type':'application/x-www-form-urlencoded'},
+    body:data
+  }).then(function(){
+    var m=document.getElementById(id);
+    if(m){m.style.display='block';form.reset();var s=form.querySelector('.fsub');if(s)s.style.display='none';}
+  }).catch(function(){
+    alert('Sorry, there was an error. Please call us on 01772 287622.');
+  });
 }
 </script>
 
