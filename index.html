@@ -258,13 +258,29 @@ img{max-width:100%;display:block;height:auto}
 .csec{max-width:1280px;margin:52px auto;padding:0 20px}
 .chdr{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:26px;gap:11px;flex-wrap:wrap}
 .chdr a{color:var(--o);font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.97rem;text-transform:uppercase}
-.ccgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.ccgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
 .cccard{position:relative;border-radius:var(--r);overflow:hidden;aspect-ratio:4/3;display:block}
 .ccbg{width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:4.2rem;transition:transform .4s}
 .cccard:hover .ccbg{transform:scale(1.05)}
 .bg-br{background:linear-gradient(145deg,#C0392B,#6B1E17)}
 .bg-pv{background:linear-gradient(145deg,#626567,#2C3233)}
 .bg-mf{background:linear-gradient(145deg,#A0522D,#5C2710)}
+.bg-pb{background:linear-gradient(145deg,#5D7D9A,#2C4A63);position:relative;overflow:hidden}
+.bg-pb::after{content:'';position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent,transparent 10px,rgba(255,255,255,.06) 10px,rgba(255,255,255,.06) 11px)}
+.pb-promo{background:#1A1A1A;border-top:3px solid var(--o);border-bottom:3px solid var(--o);padding:18px 20px}
+.pb-promo-i{max-width:1280px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.pb-promo-left{display:flex;align-items:center;gap:14px}
+.pb-promo-icon{font-size:2rem;flex-shrink:0}
+.pb-promo-text{}
+.pb-promo-title{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.25rem;color:var(--wh);text-transform:uppercase;letter-spacing:.5px;line-height:1.1}
+.pb-promo-title span{color:var(--o)}
+.pb-promo-sub{font-size:.82rem;color:#aaa;margin-top:3px}
+.pb-promo-right{display:flex;gap:10px;flex-wrap:wrap;flex-shrink:0}
+.pb-promo-btn{display:inline-flex;align-items:center;gap:7px;padding:9px 18px;border-radius:4px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.9rem;text-transform:uppercase;letter-spacing:.5px;text-decoration:none;white-space:nowrap;transition:opacity .2s}
+.pb-promo-btn:hover{opacity:.85}
+.pb-promo-wa{background:#25D366;color:#fff}
+.pb-promo-ph{background:#2C2C2C;color:#fff;border:1px solid #444}
+@media(max-width:768px){.pb-promo-i{flex-direction:column;align-items:flex-start;gap:14px}.pb-promo-right{width:100%}.pb-promo-btn{flex:1;justify-content:center}}
 .ccov{position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.75) 0%,rgba(0,0,0,.1) 60%);display:flex;flex-direction:column;justify-content:flex-end;padding:18px}
 .cclbl{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.6rem;color:var(--wh);text-transform:uppercase;display:block}
 .ccsub{color:rgba(255,255,255,.75);font-size:.8rem;margin-top:3px;display:block}
@@ -287,7 +303,7 @@ img{max-width:100%;display:block;height:auto}
 /* WHY */
 .why{background:var(--lt);padding:52px 20px;border-top:4px solid var(--o)}
 .why-i{max-width:1280px;margin:0 auto}
-.wgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:28px}
+.wgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}
 .wi{text-align:center;padding:22px 14px;background:var(--wh);border-radius:var(--r);border-bottom:4px solid transparent;transition:border-color .25s,transform .25s}
 .wi:hover{border-bottom-color:var(--o);transform:translateY(-4px)}
 .wi-ic{font-size:2.1rem;margin-bottom:11px;display:block}
@@ -522,6 +538,19 @@ footer{background:#111;padding:40px 20px 18px;color:#888;width:100%}
   </div>
 </section>
 <div class="trust"><div class="trust-i"><div class="ti"><span class="ic">🚚</span><div><strong>Free Delivery</strong><span>All orders, UK mainland</span></div></div><div class="ti"><span class="ic">📦</span><div><strong>Next-Day Dispatch</strong><span>Order before 2pm</span></div></div><div class="ti"><span class="ic">🏅</span><div><strong>Trade Quality</strong><span>Premium materials</span></div></div><div class="ti"><span class="ic">🧱</span><div><strong>Free Brick Samples</strong><span>Try before you buy</span></div></div><div class="ti"><span class="ic">⭐</span><div><strong>4.9/5 Reviews</strong><span>2,000+ customers</span></div></div></div></div>
+<div class="pb-promo"><div class="pb-promo-i">
+  <div class="pb-promo-left">
+    <div class="pb-promo-icon">🚛</div>
+    <div class="pb-promo-text">
+      <div class="pb-promo-title">We Offer Lower Delivery Rates on Plasterboards Across the <span>North West of England</span></div>
+      <div class="pb-promo-sub">Cheaper than most online retailers &nbsp;•&nbsp; Trade &amp; bulk quantities welcome &nbsp;•&nbsp; Get in touch for a quote today</div>
+    </div>
+  </div>
+  <div class="pb-promo-right">
+    <a href="https://wa.me/447549809252" target="_blank" class="pb-promo-btn pb-promo-wa">💬 WhatsApp Us</a>
+    <a href="tel:01772287622" class="pb-promo-btn pb-promo-ph">📞 01772 287622</a>
+  </div>
+</div></div>
 <section class="csec">
   <div class="chdr">
     <div><div class="st">Shop by <b>Category</b></div><p class="ss">Quality materials for every project</p></div>
@@ -531,6 +560,7 @@ footer{background:#111;padding:40px 20px 18px;color:#888;width:100%}
     <a href="bricks.html" class="cccard"><div class="ccbg bg-br">🧱</div><div class="ccov"><span class="cclbl">Bricks</span><span class="ccsub">Handmade &amp; Reclaimed</span><span class="ccarr">Browse →</span></div></a>
     <a href="paving.html" class="cccard"><div class="ccbg bg-pv">🪨</div><div class="ccov"><span class="cclbl">Paving</span><span class="ccsub">Porcelain &amp; Sandstone</span><span class="ccarr">Browse →</span></div></a>
     <a href="mdf.html" class="cccard"><div class="ccbg bg-mf">🪵</div><div class="ccov"><span class="cclbl">MDF</span><span class="ccsub">Standard &amp; moisture-resistant</span><span class="ccarr">Browse →</span></div></a>
+    <a href="plasterboards.html" class="cccard"><div class="ccbg bg-pb" id="pb-cat-bg">📋</div><div class="ccov"><span class="cclbl">Plasterboards</span><span class="ccsub">Standard &amp; fireline boards</span><span class="ccarr">Browse →</span></div></a>
   </div>
 </section>
 <div class="promo"><div class="promo-i">
@@ -555,7 +585,6 @@ footer{background:#111;padding:40px 20px 18px;color:#888;width:100%}
   <div class="st">Why Choose <b>Pro Build Supplies</b></div>
   <div class="wgrid">
     <div class="wi"><span class="wi-ic">🏭</span><div class="wi-t">Direct from Manufacturer</div><p>We source direct, cutting out the middleman for better prices on every order.</p></div>
-    <div class="wi"><span class="wi-ic">⚡</span><div class="wi-t">Next-Day Delivery</div><p>Order before 2pm Monday–Friday for same-day dispatch to UK mainland.</p></div>
     <div class="wi"><span class="wi-ic">📋</span><div class="wi-t">Expert Advice</div><p>Our specialists are on hand to help you spec the right product for your project.</p></div>
     <div class="wi"><span class="wi-ic">🔒</span><div class="wi-t">Secure Checkout</div><p>Klarna, card and PayPal — plus a 30-day returns policy on all orders.</p></div>
   </div>
@@ -668,5 +697,17 @@ footer{background:#111;padding:40px 20px 18px;color:#888;width:100%}
 })();
 </script>
 <script src="pbs-products.js"></script>
+<script>
+// Pull first plasterboard product image for category card
+fetch('products.json?v=' + Date.now())
+  .then(function(r){return r.json();})
+  .then(function(products){
+    var pb = (products||[]).find(function(p){return p.category==='Plasterboards' && p.image && p.visible!==false;});
+    if(pb && pb.image){
+      var el = document.getElementById('pb-cat-bg');
+      if(el){el.innerHTML='<img src="'+pb.image+'" alt="Plasterboards" style="width:100%;height:100%;object-fit:cover">';el.style.fontSize='0';}
+    }
+  }).catch(function(){});
+</script>
 </body>
 </html>
