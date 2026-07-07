@@ -54,7 +54,7 @@
 
     var ss = document.createElement('style');
     ss.textContent =
-      '.srch{position:relative!important}' +
+      '.srch > div, .srch > form{position:relative}' +
       '.search-drop{position:absolute;top:calc(100% + 4px);left:0;right:0;background:#1E1E1E;border:1px solid #444;border-top:3px solid #F55C1B;border-radius:0 0 6px 6px;z-index:99998;box-shadow:0 12px 32px rgba(0,0,0,.5);max-height:400px;overflow-y:auto;display:none}' +
       '.search-drop.open{display:block}' +
       '.sd-item{display:flex;align-items:center;gap:12px;padding:10px 14px;cursor:pointer;border-bottom:1px solid #2a2a2a;text-decoration:none}' +
