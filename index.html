@@ -369,7 +369,8 @@ footer{background:#111;padding:40px 20px 18px;color:#888;width:100%}
   .hero{grid-template-columns:1fr;min-height:auto}
   .hero-c{padding:38px 20px 28px}
   .hero-v{height:230px}
-  .htgrid{grid-template-columns:1fr 1fr 1fr 1fr;grid-template-rows:1fr}
+  .htgrid{grid-template-columns:1fr 1fr 1fr 1fr;grid-template-rows:1fr auto}
+  #ht-pb{grid-column:1 / -1!important}
   .ccgrid{grid-template-columns:1fr 1fr}
   .promo-i{grid-template-columns:1fr}
   .rgvgrid{grid-template-columns:1fr}
@@ -535,7 +536,7 @@ footer{background:#111;padding:40px 20px 18px;color:#888;width:100%}
       <a href="paving.html" class="ht ht2"><div class="ht-ic">🪨</div><div class="ht-nm">Paving</div></a>
       <a href="mdf.html" class="ht ht3"><div class="ht-ic">🪵</div><div class="ht-nm">MDF</div></a>
       <a href="trade-accounts.html" class="ht ht4"><div class="ht-ic">🏗️</div><div class="ht-nm">Trade</div></a>
-      <a href="plasterboards.html" class="ht ht5" style="grid-column:span 2;padding:14px 0"><div class="ht-ic">📋</div><div class="ht-nm">Plasterboards</div></a>
+      <a href="plasterboards.html" class="ht ht5" id="ht-pb" style="grid-column:1 / -1;padding:14px 0;position:relative;overflow:hidden"><div class="ht-ic" id="ht-pb-icon">📋</div><div class="ht-nm">Plasterboards</div></a>
     </div>
   </div>
 </section>
@@ -700,14 +701,26 @@ footer{background:#111;padding:40px 20px 18px;color:#888;width:100%}
 </script>
 <script src="pbs-products.js"></script>
 <script>
-// Pull first plasterboard product image for category card
+// Pull first plasterboard product image for category card AND hero tile
 fetch('products.json?v=' + Date.now())
   .then(function(r){return r.json();})
   .then(function(products){
     var pb = (products||[]).find(function(p){return p.category==='Plasterboards' && p.image && p.visible!==false;});
     if(pb && pb.image){
+      // Category card
       var el = document.getElementById('pb-cat-bg');
       if(el){el.innerHTML='<img src="'+pb.image+'" alt="Plasterboards" style="width:100%;height:100%;object-fit:cover">';el.style.fontSize='0';}
+      // Hero tile
+      var hero = document.getElementById('ht-pb');
+      if(hero){
+        var img = document.createElement('img');
+        img.src = pb.image;
+        img.alt = 'Plasterboards';
+        img.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.5';
+        hero.insertBefore(img, hero.firstChild);
+        var icon = document.getElementById('ht-pb-icon');
+        if(icon) icon.style.display = 'none';
+      }
     }
   }).catch(function(){});
 </script>
