@@ -39,16 +39,28 @@
     '.nav-i{overflow:visible!important}' +
     // Snipcart — always above everything
     '#snipcart{z-index:99999!important}' +
-    // Hide header + nav when Snipcart cart is open (Snipcart adds these body classes automatically)
-    'body.snipcart-sidecart-opened .hdr,' +
-    'body.snipcart-checkout-opened .hdr,' +
-    'body.snipcart-sidecart-opened .nav,' +
-    'body.snipcart-checkout-opened .nav,' +
-    'body.snipcart-sidecart-opened .ann,' +
-    'body.snipcart-checkout-opened .ann{display:none!important}' +
+    // Hide header + nav when Snipcart modal is visible
+    '.cart-open .hdr{display:none!important}' +
+    '.cart-open .nav{display:none!important}' +
+    '.cart-open .ann{display:none!important}' +
     // Keep logo and cart visible above search on mobile
     '@media(max-width:768px){.srch{position:static!important;transform:none!important;width:100%!important;max-width:100%!important;display:none!important}}';
   document.head.appendChild(layoutStyle);
+
+  // Hide header/nav when Snipcart cart opens, restore when it closes
+  // Watches for .snipcart-modal element appearing/disappearing in the DOM
+  (function() {
+    function check() {
+      var modal = document.querySelector('.snipcart-modal');
+      if (modal) {
+        document.body.classList.add('cart-open');
+      } else {
+        document.body.classList.remove('cart-open');
+      }
+    }
+    new MutationObserver(check)
+      .observe(document.body, { childList: true, subtree: true });
+  })();
 
   // Add Plasterboards nav item after MDF
   (function() {
