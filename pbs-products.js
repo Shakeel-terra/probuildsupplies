@@ -178,6 +178,51 @@
     });
   })();
 
+  // 4. Update footer sitewide
+  (function() {
+    var footer = document.querySelector('footer .ft-i');
+    if (!footer) return;
+    footer.innerHTML =
+      '<div class="ftg">' +
+        '<div class="ft-brand">' +
+          '<a href="index.html" class="logo">Pro Build <b>Supplies</b></a>' +
+          '<p>Premium building materials at trade prices, delivered direct to your door or site. Free delivery on every order.</p>' +
+          '<p style="margin-top:12px;font-size:.78rem;color:#555;line-height:1.9">' +
+            'Pro Build Supplies Preston Ltd<br>' +
+            'Suite 23, Derby House<br>' +
+            'Lytham Road, Preston, PR2 8JE<br>' +
+            'Company No: 16777639 &nbsp;|&nbsp; VAT: 347928163' +
+          '</p>' +
+        '</div>' +
+        '<div class="fc"><h4>Products</h4>' +
+          '<a href="handmade-bricks.html">Handmade Bricks</a>' +
+          '<a href="reclaimed-bricks.html">Reclaimed Bricks</a>' +
+          '<a href="porcelain-paving.html">Porcelain Paving</a>' +
+          '<a href="indian-sandstone.html">Indian Sandstone</a>' +
+          '<a href="mdf.html">MDF Sheets</a>' +
+          '<a href="plasterboards.html">Plasterboards</a>' +
+        '</div>' +
+        '<div class="fc"><h4>Help &amp; Info</h4>' +
+          '<a href="delivery.html">Delivery Info</a>' +
+          '<a href="returns.html">Returns Policy</a>' +
+          '<a href="samples.html">Free Samples</a>' +
+          '<a href="trade-accounts.html">Trade Accounts</a>' +
+          '<a href="contact.html">Contact Us</a>' +
+        '</div>' +
+        '<div class="fc"><h4>Company</h4>' +
+          '<a href="about.html">About Us</a>' +
+          '<a href="privacy-policy.html">Privacy Policy</a>' +
+          '<a href="terms.html">Terms &amp; Conditions</a>' +
+          '<a href="mailto:tradecounter@probuildsupplies.uk" style="margin-top:10px;word-break:break-all">📧 tradecounter@probuildsupplies.uk</a>' +
+          '<a href="tel:01772287622">📞 01772 287622</a>' +
+        '</div>' +
+      '</div>' +
+      '<div class="ft-bot">' +
+        '<span>&copy; 2026 Pro Build Supplies Preston Ltd. All rights reserved.</span>' +
+        '<div class="pays"><span class="pay">VISA</span><span class="pay">Mastercard</span><span class="pay">PayPal</span><span class="pay">Klarna</span><span class="pay">AMEX</span></div>' +
+      '</div>';
+  })();
+
   // Hide header/nav when Snipcart cart opens, restore when it closes
   // Watches for .snipcart-modal element appearing/disappearing in the DOM
   (function() {
