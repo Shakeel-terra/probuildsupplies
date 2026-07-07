@@ -37,45 +37,46 @@
     // Fix dropdown clipping — nav container must not clip overflow
     '.nav{overflow:visible!important}' +
     '.nav-i{overflow:visible!important}' +
-    // Snipcart — always above sticky header
+    // Snipcart — always above everything
     '#snipcart{z-index:99999!important}' +
-    '#snipcart .snipcart-sidecart{z-index:99999!important}' +
     // Keep logo and cart visible above search on mobile
     '@media(max-width:768px){.srch{position:static!important;transform:none!important;width:100%!important;max-width:100%!important;display:none!important}}';
   document.head.appendChild(layoutStyle);
 
-  // Snipcart cart fix — drop sticky header when cart opens so it cannot cover the cart
+  // Snipcart cart fix — directly measure header height and push cart below it
   (function() {
-    var hdr = document.querySelector('.hdr');
-    var navEl2 = document.getElementById('nav');
-    var ann = document.querySelector('.ann');
-    function cartOpen() {
-      if (hdr) { hdr.style.position = 'relative'; hdr.style.zIndex = '0'; }
-      if (navEl2) navEl2.style.zIndex = '0';
-      if (ann) ann.style.display = 'none';
+    function getHdrBottom() {
+      var hdr = document.querySelector('.hdr');
+      return hdr ? Math.round(hdr.getBoundingClientRect().bottom) : 69;
     }
-    function cartClose() {
-      if (hdr) { hdr.style.position = 'sticky'; hdr.style.zIndex = '9999'; }
-      if (navEl2) navEl2.style.zIndex = '9998';
-      if (ann) ann.style.display = '';
+    function applyFix() {
+      var h = getHdrBottom();
+      if (h <= 0) h = 69;
+      var cart = document.querySelector('.snipcart-sidecart');
+      if (cart) {
+        cart.style.setProperty('top', h + 'px', 'important');
+        cart.style.setProperty('height', 'calc(100vh - ' + h + 'px)', 'important');
+        cart.style.setProperty('max-height', 'none', 'important');
+      }
     }
+    // Watch #snipcart for the cart panel to render
+    function watchForCart() {
+      var snipEl = document.getElementById('snipcart');
+      if (!snipEl) { setTimeout(watchForCart, 300); return; }
+      new MutationObserver(function() { applyFix(); })
+        .observe(snipEl, { childList: true, subtree: true, attributes: true });
+    }
+    watchForCart();
+    // Also hook Snipcart events
     document.addEventListener('snipcart.ready', function() {
       if (typeof Snipcart !== 'undefined') {
-        Snipcart.events.on('cart.opened', cartOpen);
-        Snipcart.events.on('cart.closed', cartClose);
-        try {
-          if (Snipcart.store.getState().cart.isOpen) cartOpen();
-        } catch(e) {}
+        Snipcart.events.on('cart.opened', function() {
+          applyFix();
+          setTimeout(applyFix, 100);
+        });
       }
     });
-    // MutationObserver as fallback — watches body class for any snipcart open state
-    new MutationObserver(function() {
-      var bc = document.body.className || '';
-      var open = bc.indexOf('snipcart') !== -1 && (
-        bc.indexOf('opened') !== -1 || bc.indexOf('sidecart') !== -1
-      );
-      open ? cartOpen() : cartClose();
-    }).observe(document.body, { attributes: true, attributeFilter: ['class'] });
+    window.addEventListener('resize', applyFix);
   })();
 
   // Add Plasterboards nav item after MDF
