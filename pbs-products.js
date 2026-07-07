@@ -47,6 +47,137 @@
     '@media(max-width:768px){.srch{position:static!important;transform:none!important;width:100%!important;max-width:100%!important;display:none!important}}';
   document.head.appendChild(layoutStyle);
 
+  // 3. Live search with dropdown
+  (function() {
+    var input = document.querySelector('.srch input');
+    if (!input) return;
+
+    var ss = document.createElement('style');
+    ss.textContent =
+      '.srch{position:relative!important}' +
+      '.search-drop{position:absolute;top:calc(100% + 4px);left:0;right:0;background:#1E1E1E;border:1px solid #444;border-top:3px solid #F55C1B;border-radius:0 0 6px 6px;z-index:99998;box-shadow:0 12px 32px rgba(0,0,0,.5);max-height:400px;overflow-y:auto;display:none}' +
+      '.search-drop.open{display:block}' +
+      '.sd-item{display:flex;align-items:center;gap:12px;padding:10px 14px;cursor:pointer;border-bottom:1px solid #2a2a2a;text-decoration:none}' +
+      '.sd-item:last-child{border-bottom:none}' +
+      '.sd-item:hover,.sd-item.active{background:#2a2a2a}' +
+      '.sd-img{width:44px;height:44px;flex-shrink:0;background:#2a2a2a;border-radius:3px;overflow:hidden;display:flex;align-items:center;justify-content:center;font-size:1.2rem}' +
+      '.sd-img img{width:44px;height:44px;object-fit:cover}' +
+      '.sd-info{flex:1;min-width:0}' +
+      '.sd-name{color:#fff;font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:.95rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}' +
+      '.sd-cat{color:#888;font-size:.75rem;margin-top:1px}' +
+      '.sd-price{color:#F55C1B;font-family:"Barlow Condensed",sans-serif;font-weight:900;font-size:1rem;flex-shrink:0}' +
+      '.sd-none{padding:14px;color:#888;font-size:.85rem;text-align:center}' +
+      '.sd-all{display:block;padding:10px 14px;text-align:center;color:#F55C1B;font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:.82rem;letter-spacing:.5px;text-transform:uppercase;border-top:1px solid #333;text-decoration:none}' +
+      '.sd-all:hover{background:#2a2a2a}';
+    document.head.appendChild(ss);
+
+    var drop = document.createElement('div');
+    drop.className = 'search-drop';
+    input.parentNode.appendChild(drop);
+
+    var allProducts = [];
+    var loaded = false;
+
+    function loadAndSearch() {
+      if (loaded) { doSearch(); return; }
+      fetch('products.json?v=' + Date.now())
+        .then(function(r){ return r.json(); })
+        .then(function(data){
+          allProducts = (data || []).filter(function(p){ return p.visible !== false; });
+          loaded = true;
+          doSearch();
+        }).catch(function(){});
+    }
+
+    function getPrice(p) {
+      if (p.sizeVariants && p.sizeVariants.length) {
+        var f = p.sizeVariants.find(function(v){ return v.price && v.price !== 'POA'; });
+        return f ? f.price : (p.price || 'POA');
+      }
+      return p.price || 'POA';
+    }
+
+    var activeIdx = -1;
+
+    function doSearch() {
+      var q = input.value.trim().toLowerCase();
+      drop.innerHTML = '';
+      if (q.length < 2) { drop.classList.remove('open'); return; }
+
+      var results = allProducts.filter(function(p) {
+        return (p.name||'').toLowerCase().includes(q) ||
+               (p.category||'').toLowerCase().includes(q) ||
+               (p.description||'').toLowerCase().includes(q);
+      }).slice(0, 8);
+
+      if (!results.length) {
+        drop.innerHTML = '<div class="sd-none">No products found for "' + q + '"</div>';
+        drop.classList.add('open');
+        return;
+      }
+
+      results.forEach(function(p) {
+        var a = document.createElement('a');
+        a.className = 'sd-item';
+        a.href = 'product.html?slug=' + encodeURIComponent(p.slug || '');
+        a.innerHTML =
+          '<div class="sd-img">' + (p.image ? '<img src="' + p.image + '" alt="">' : '📦') + '</div>' +
+          '<div class="sd-info">' +
+            '<div class="sd-name">' + (p.name||'') + '</div>' +
+            '<div class="sd-cat">' + (p.category||'') + '</div>' +
+          '</div>' +
+          '<div class="sd-price">' + getPrice(p) + '</div>';
+        drop.appendChild(a);
+      });
+
+      if (results.length === 8) {
+        var all = document.createElement('a');
+        all.className = 'sd-all';
+        all.href = 'shop.html?q=' + encodeURIComponent(q);
+        all.textContent = 'View all results →';
+        drop.appendChild(all);
+      }
+
+      drop.classList.add('open');
+      activeIdx = -1;
+    }
+
+    input.addEventListener('input', loadAndSearch);
+    input.addEventListener('focus', function(){ if (input.value.length >= 2) drop.classList.add('open'); });
+
+    input.addEventListener('keydown', function(e) {
+      var items = drop.querySelectorAll('.sd-item, .sd-all');
+      if (e.key === 'ArrowDown') {
+        e.preventDefault();
+        activeIdx = Math.min(activeIdx + 1, items.length - 1);
+        items.forEach(function(el, i){ el.classList.toggle('active', i === activeIdx); });
+      } else if (e.key === 'ArrowUp') {
+        e.preventDefault();
+        activeIdx = Math.max(activeIdx - 1, -1);
+        items.forEach(function(el, i){ el.classList.toggle('active', i === activeIdx); });
+      } else if (e.key === 'Enter') {
+        if (activeIdx >= 0 && items[activeIdx]) {
+          window.location = items[activeIdx].href;
+        } else {
+          window.location = 'shop.html?q=' + encodeURIComponent(input.value.trim());
+        }
+      } else if (e.key === 'Escape') {
+        drop.classList.remove('open');
+      }
+    });
+
+    var btn = input.parentNode.querySelector('button');
+    if (btn) {
+      btn.addEventListener('click', function() {
+        if (input.value.trim()) window.location = 'shop.html?q=' + encodeURIComponent(input.value.trim());
+      });
+    }
+
+    document.addEventListener('click', function(e) {
+      if (!input.parentNode.contains(e.target)) drop.classList.remove('open');
+    });
+  })();
+
   // Hide header/nav when Snipcart cart opens, restore when it closes
   // Watches for .snipcart-modal element appearing/disappearing in the DOM
   (function() {
