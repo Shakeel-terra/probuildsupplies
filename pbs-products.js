@@ -71,27 +71,28 @@
       if (e.key === 'Escape') cartClose();
     });
 
-    // Watch body class for any Snipcart open state
+    // Watch body class - fires on both open AND close
     new MutationObserver(function() {
       var bc = document.body.className;
-      if (bc.indexOf('snipcart') !== -1 && bc.indexOf('opened') !== -1) {
+      var snipOpen = bc.indexOf('snipcart') !== -1 && bc.indexOf('opened') !== -1;
+      if (snipOpen) {
         cartOpen();
+      } else if (document.body.classList.contains('cart-open')) {
+        // Snipcart class gone but our class still there — cart closed
+        cartClose();
       }
     }).observe(document.body, { attributes: true, attributeFilter: ['class'] });
 
-    // Also watch for clicks anywhere that might close the cart (overlay click)
-    document.addEventListener('click', function(e) {
-      if (document.body.classList.contains('cart-open')) {
-        setTimeout(function() {
-          // Check if cart is still visible
-          if (typeof Snipcart !== 'undefined') {
-            try {
-              if (!Snipcart.store.getState().cart.isOpen) cartClose();
-            } catch(e) {}
-          }
-        }, 100);
+    // Polling fallback — checks every 300ms if cart is still open
+    setInterval(function() {
+      if (!document.body.classList.contains('cart-open')) return;
+      var stillOpen = false;
+      try { stillOpen = Snipcart.store.getState().cart.isOpen; } catch(e) {}
+      // Also check if any snipcart-opened class on body
+      if (!stillOpen && document.body.className.indexOf('opened') === -1) {
+        cartClose();
       }
-    });
+    }, 300);
   })();
 
   // Add Plasterboards nav item after MDF
