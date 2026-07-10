@@ -758,6 +758,10 @@
 
     // Also inject our own badge into every cart button in case span is missing
     document.querySelectorAll('.cart-btn').forEach(function(btn) {
+      // Hide the old snipcart span to avoid duplicates
+      var old = btn.querySelector('.snipcart-items-count');
+      if (old) old.style.display = 'none';
+
       var badge = btn.querySelector('.pbs-badge');
       if (!badge) {
         badge = document.createElement('span');
