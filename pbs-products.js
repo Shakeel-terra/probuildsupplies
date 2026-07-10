@@ -749,9 +749,24 @@
   function updateCount() {
     var cart = getCart();
     var total = cart.reduce(function(s,c){ return s+(c.quantity||1); }, 0);
-    document.querySelectorAll('.snipcart-items-count, #pbs-count').forEach(function(el){
+
+    // Update any existing snipcart-items-count spans
+    document.querySelectorAll('.snipcart-items-count').forEach(function(el){
       el.textContent = total;
-      el.style.display = total ? '' : 'none';
+      el.style.cssText = 'background:#FFD000;color:#1A1A1A;font-size:.65rem;font-weight:700;border-radius:10px;padding:1px 5px;margin-left:3px;font-family:"Barlow Condensed",sans-serif;vertical-align:middle;display:' + (total ? 'inline' : 'none');
+    });
+
+    // Also inject our own badge into every cart button in case span is missing
+    document.querySelectorAll('.cart-btn').forEach(function(btn) {
+      var badge = btn.querySelector('.pbs-badge');
+      if (!badge) {
+        badge = document.createElement('span');
+        badge.className = 'pbs-badge';
+        badge.style.cssText = 'background:#FFD000;color:#1A1A1A;font-size:.65rem;font-weight:700;border-radius:10px;padding:1px 6px;margin-left:4px;font-family:"Barlow Condensed",sans-serif;vertical-align:middle;display:none';
+        btn.appendChild(badge);
+      }
+      badge.textContent = total;
+      badge.style.display = total ? 'inline' : 'none';
     });
   }
 
