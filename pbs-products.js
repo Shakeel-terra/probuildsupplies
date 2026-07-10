@@ -774,7 +774,7 @@
       body: JSON.stringify({
         items: cart,
         successUrl: base + '/success.html?session_id={CHECKOUT_SESSION_ID}',
-        cancelUrl: base + window.location.pathname,
+        cancelUrl: base + window.location.pathname + window.location.search,
       })
     })
     .then(function(r){ return r.json(); })
