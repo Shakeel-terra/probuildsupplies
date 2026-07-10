@@ -37,12 +37,6 @@
     // Fix dropdown clipping — nav container must not clip overflow
     '.nav{overflow:visible!important}' +
     '.nav-i{overflow:visible!important}' +
-    // Snipcart — always above everything
-    '#snipcart{z-index:99999!important}' +
-    // Hide header + nav when Snipcart modal is visible
-    '.cart-open .hdr{display:none!important}' +
-    '.cart-open .nav{display:none!important}' +
-    '.cart-open .ann{display:none!important}' +
     // Keep logo and cart visible above search on mobile
     '@media(max-width:768px){.srch{position:static!important;transform:none!important;width:100%!important;max-width:100%!important;display:none!important}}';
   document.head.appendChild(layoutStyle);
@@ -221,21 +215,6 @@
         '<span>&copy; 2026 Pro Build Supplies Preston Ltd. All rights reserved.</span>' +
         '<div class="pays"><span class="pay">VISA</span><span class="pay">Mastercard</span><span class="pay">PayPal</span><span class="pay">Klarna</span><span class="pay">AMEX</span></div>' +
       '</div>';
-  })();
-
-  // Hide header/nav when Snipcart cart opens, restore when it closes
-  // Watches for .snipcart-modal element appearing/disappearing in the DOM
-  (function() {
-    function check() {
-      var modal = document.querySelector('.snipcart-modal');
-      if (modal) {
-        document.body.classList.add('cart-open');
-      } else {
-        document.body.classList.remove('cart-open');
-      }
-    }
-    new MutationObserver(check)
-      .observe(document.body, { childList: true, subtree: true });
   })();
 
   // Add Plasterboards nav item after MDF
@@ -568,5 +547,273 @@
       initHomepage(products); return;
     }
   });
+
+})();
+
+// ── PBS CART SYSTEM (replaces Snipcart) ──────────────────────
+(function() {
+  'use strict';
+
+  // ── STORAGE ──────────────────────────────────────────────────
+  function getCart() {
+    try { return JSON.parse(localStorage.getItem('pbs_cart') || '[]'); }
+    catch(e) { return []; }
+  }
+  function saveCart(cart) {
+    try { localStorage.setItem('pbs_cart', JSON.stringify(cart)); }
+    catch(e) {}
+  }
+
+  // ── CSS ───────────────────────────────────────────────────────
+  var css = document.createElement('style');
+  css.textContent = [
+    '.pbs-overlay{position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:99990;opacity:0;pointer-events:none;transition:opacity .3s}',
+    '.pbs-overlay.on{opacity:1;pointer-events:auto}',
+    '.pbs-drawer{position:fixed;top:0;right:0;width:420px;max-width:100vw;height:100vh;background:#fff;z-index:99999;transform:translateX(100%);transition:transform .35s cubic-bezier(.4,0,.2,1);display:flex;flex-direction:column;box-shadow:-8px 0 40px rgba(0,0,0,.2)}',
+    '.pbs-drawer.on{transform:translateX(0)}',
+    '.pbs-dh{background:#1A1A1A;padding:16px 20px;display:flex;align-items:center;justify-content:space-between;flex-shrink:0}',
+    '.pbs-dh span{font-family:"Barlow Condensed",sans-serif;font-weight:900;font-size:1.2rem;color:#fff;letter-spacing:.5px;text-transform:uppercase}',
+    '.pbs-dclose{background:none;border:none;color:#888;font-size:1.4rem;cursor:pointer;padding:4px;line-height:1;transition:color .2s}',
+    '.pbs-dclose:hover{color:#fff}',
+    '.pbs-items{flex:1;overflow-y:auto;padding:16px}',
+    '.pbs-empty{text-align:center;padding:60px 20px;color:#888}',
+    '.pbs-empty p{font-size:.9rem;margin-top:8px}',
+    '.pbs-item{display:flex;gap:12px;padding:14px 0;border-bottom:1px solid #eee}',
+    '.pbs-item:last-child{border-bottom:none}',
+    '.pbs-iimg{width:70px;height:70px;object-fit:cover;border-radius:4px;flex-shrink:0;background:#f0ede8}',
+    '.pbs-iimg-ph{width:70px;height:70px;border-radius:4px;flex-shrink:0;background:#f0ede8;display:flex;align-items:center;justify-content:center;font-size:1.8rem}',
+    '.pbs-iinfo{flex:1;min-width:0}',
+    '.pbs-iname{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:.95rem;color:#1A1A1A;line-height:1.2;margin-bottom:3px}',
+    '.pbs-isize{font-size:.75rem;color:#888;margin-bottom:8px}',
+    '.pbs-iqty{display:flex;align-items:center;gap:8px}',
+    '.pbs-iqbtn{background:#f0ede8;border:none;width:28px;height:28px;border-radius:4px;font-size:1rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s}',
+    '.pbs-iqbtn:hover{background:#F55C1B;color:#fff}',
+    '.pbs-iqnum{font-weight:700;font-size:.9rem;min-width:20px;text-align:center}',
+    '.pbs-irem{background:none;border:none;color:#ccc;cursor:pointer;font-size:.8rem;margin-left:auto;padding:4px;transition:color .2s}',
+    '.pbs-irem:hover{color:#e53e3e}',
+    '.pbs-iprice{font-family:"Barlow Condensed",sans-serif;font-weight:900;font-size:1rem;color:#1A1A1A;text-align:right;flex-shrink:0}',
+    '.pbs-foot{padding:16px 20px;border-top:2px solid #f0ede8;background:#fff;flex-shrink:0}',
+    '.pbs-subtotal{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}',
+    '.pbs-subtotal span:first-child{font-size:.85rem;color:#888}',
+    '.pbs-subtotal span:last-child{font-family:"Barlow Condensed",sans-serif;font-weight:900;font-size:1.3rem;color:#1A1A1A}',
+    '.pbs-note{font-size:.75rem;color:#888;margin-bottom:14px;line-height:1.5}',
+    '.pbs-checkout{display:block;width:100%;background:#F55C1B;color:#fff;border:none;padding:15px;font-family:"Barlow Condensed",sans-serif;font-weight:900;font-size:1.1rem;letter-spacing:.8px;text-transform:uppercase;border-radius:4px;cursor:pointer;transition:background .2s}',
+    '.pbs-checkout:hover{background:#d94d0f}',
+    '.pbs-checkout:disabled{background:#ccc;cursor:not-allowed}',
+    '.pbs-secure{text-align:center;font-size:.73rem;color:#888;margin-top:10px}',
+    '.pbs-poa-note{background:#fff8e1;border:1px solid #FFD000;border-radius:4px;padding:10px 12px;font-size:.78rem;color:#555;margin-top:10px;line-height:1.5}',
+  ].join('');
+  document.head.appendChild(css);
+
+  // ── HTML ──────────────────────────────────────────────────────
+  var overlay = document.createElement('div');
+  overlay.className = 'pbs-overlay';
+  overlay.id = 'pbs-overlay';
+  document.body.appendChild(overlay);
+
+  var drawer = document.createElement('div');
+  drawer.className = 'pbs-drawer';
+  drawer.id = 'pbs-drawer';
+  drawer.innerHTML =
+    '<div class="pbs-dh"><span>🛒 Your Cart</span><button class="pbs-dclose" id="pbs-close">✕</button></div>' +
+    '<div class="pbs-items" id="pbs-items"></div>' +
+    '<div class="pbs-foot" id="pbs-foot" style="display:none">' +
+      '<div class="pbs-subtotal"><span>Subtotal (ex. delivery)</span><span id="pbs-total">£0.00</span></div>' +
+      '<p class="pbs-note">Free delivery on all orders to UK mainland. Shipping will be confirmed at checkout.</p>' +
+      '<button class="pbs-checkout" id="pbs-checkout">Pay Securely with Stripe →</button>' +
+      '<p class="pbs-secure">🔒 Secured by Stripe &nbsp;|&nbsp; Visa, Mastercard, Apple Pay, Google Pay</p>' +
+    '</div>';
+  document.body.appendChild(drawer);
+
+  // ── OPEN / CLOSE ──────────────────────────────────────────────
+  function openCart() {
+    renderCart();
+    overlay.classList.add('on');
+    drawer.classList.add('on');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeCart() {
+    overlay.classList.remove('on');
+    drawer.classList.remove('on');
+    document.body.style.overflow = '';
+  }
+
+  overlay.addEventListener('click', closeCart);
+  document.getElementById('pbs-close').addEventListener('click', closeCart);
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeCart(); });
+
+  // ── CART OPERATIONS ───────────────────────────────────────────
+  function addItem(item) {
+    var cart = getCart();
+    var key = item.id + '|' + (item.size || '');
+    var existing = cart.find(function(c){ return (c.id+'|'+(c.size||'')) === key; });
+    if (existing) {
+      existing.quantity = (existing.quantity || 1) + 1;
+    } else {
+      item.quantity = 1;
+      cart.push(item);
+    }
+    saveCart(cart);
+    updateCount();
+    openCart();
+  }
+
+  function removeItem(id, size) {
+    var cart = getCart().filter(function(c){ return !(c.id===id && (c.size||'')===(size||'')); });
+    saveCart(cart);
+    updateCount();
+    renderCart();
+  }
+
+  function changeQty(id, size, delta) {
+    var cart = getCart();
+    var item = cart.find(function(c){ return c.id===id && (c.size||'')===(size||''); });
+    if (!item) return;
+    item.quantity = Math.max(1, (item.quantity||1) + delta);
+    saveCart(cart);
+    updateCount();
+    renderCart();
+  }
+
+  function calcTotal(cart) {
+    return cart.reduce(function(sum, item) {
+      var p = parseFloat(String(item.price || '0').replace(/[^0-9.]/g,''));
+      return sum + (isNaN(p) ? 0 : p * (item.quantity || 1));
+    }, 0);
+  }
+
+  // ── RENDER ────────────────────────────────────────────────────
+  function renderCart() {
+    var cart = getCart();
+    var itemsEl = document.getElementById('pbs-items');
+    var footEl = document.getElementById('pbs-foot');
+    var totalEl = document.getElementById('pbs-total');
+    if (!itemsEl) return;
+
+    if (!cart.length) {
+      itemsEl.innerHTML =
+        '<div class="pbs-empty">🛒<br><p>Your cart is empty</p>' +
+        '<p style="margin-top:16px"><a href="shop.html" style="color:#F55C1B;font-weight:600">Browse products →</a></p></div>';
+      if (footEl) footEl.style.display = 'none';
+      return;
+    }
+
+    var hasPOA = cart.some(function(c){ return !c.price || c.price==='POA'; });
+    var buyable = cart.filter(function(c){ return c.price && c.price!=='POA'; });
+
+    itemsEl.innerHTML = cart.map(function(item) {
+      var imgHtml = item.image
+        ? '<img class="pbs-iimg" src="'+item.image+'" alt="'+esc(item.name)+'">'
+        : '<div class="pbs-iimg-ph">📦</div>';
+      var priceEach = parseFloat(String(item.price||'0').replace(/[^0-9.]/g,''));
+      var linePrice = isNaN(priceEach) ? 'POA' : '£'+(priceEach*(item.quantity||1)).toFixed(2);
+      var safeId = esc(item.id);
+      var safeSize = esc(item.size||'');
+      return '<div class="pbs-item">' +
+        imgHtml +
+        '<div class="pbs-iinfo">' +
+          '<div class="pbs-iname">'+esc(item.name)+'</div>' +
+          (item.size ? '<div class="pbs-isize">'+esc(item.size)+'</div>' : '') +
+          (item.price && item.price!=='POA'
+            ? '<div class="pbs-iqty">' +
+                '<button class="pbs-iqbtn" onclick="pbsQty(\''+safeId+'\',\''+safeSize+'\',-1)">−</button>' +
+                '<span class="pbs-iqnum">'+(item.quantity||1)+'</span>' +
+                '<button class="pbs-iqbtn" onclick="pbsQty(\''+safeId+'\',\''+safeSize+'\',1)">+</button>' +
+              '</div>'
+            : '<div style="font-size:.75rem;color:#888;margin-top:4px">Price on application</div>'
+          ) +
+        '</div>' +
+        '<div style="display:flex;flex-direction:column;align-items:flex-end;gap:8px">' +
+          '<div class="pbs-iprice">'+linePrice+'</div>' +
+          '<button class="pbs-irem" onclick="pbsRem(\''+safeId+'\',\''+safeSize+'\')">✕ Remove</button>' +
+        '</div>' +
+      '</div>';
+    }).join('');
+
+    if (hasPOA) {
+      itemsEl.innerHTML += '<div class="pbs-poa-note">⚠️ Some items are priced on application. To enquire, please <a href="contact.html" style="color:#F55C1B">contact us</a> or call 01772 287622.</div>';
+    }
+
+    if (footEl) {
+      var total = calcTotal(buyable.length ? buyable.map(function(c){
+        return cart.find(function(x){ return x.id===c.id && (x.size||'')===(c.size||''); })||c;
+      }) : []);
+      if (totalEl) totalEl.textContent = '£'+total.toFixed(2);
+      footEl.style.display = buyable.length ? '' : 'none';
+    }
+  }
+
+  // ── COUNT ─────────────────────────────────────────────────────
+  function esc(s){ return String(s||'').replace(/"/g,'&quot;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+
+  function updateCount() {
+    var cart = getCart();
+    var total = cart.reduce(function(s,c){ return s+(c.quantity||1); }, 0);
+    document.querySelectorAll('.snipcart-items-count, #pbs-count').forEach(function(el){
+      el.textContent = total;
+      el.style.display = total ? '' : 'none';
+    });
+  }
+
+  // ── GLOBAL HELPERS (called from inline onclick) ───────────────
+  window.pbsRem = removeItem;
+  window.pbsQty = changeQty;
+
+  // ── CHECKOUT ─────────────────────────────────────────────────
+  document.getElementById('pbs-checkout').addEventListener('click', function() {
+    var cart = getCart().filter(function(c){ return c.price && c.price!=='POA'; });
+    if (!cart.length) return;
+    var btn = this;
+    btn.disabled = true;
+    btn.textContent = 'Redirecting to Stripe…';
+
+    var base = window.location.origin;
+    fetch('/.netlify/functions/create-checkout', {
+      method: 'POST',
+      headers: {'Content-Type':'application/json'},
+      body: JSON.stringify({
+        items: cart,
+        successUrl: base + '/success.html?session_id={CHECKOUT_SESSION_ID}',
+        cancelUrl: base + window.location.pathname,
+      })
+    })
+    .then(function(r){ return r.json(); })
+    .then(function(data){
+      if (data.url) {
+        window.location = data.url;
+      } else {
+        alert('Sorry, there was a problem starting checkout. Please call us on 01772 287622.');
+        btn.disabled = false;
+        btn.textContent = 'Pay Securely with Stripe →';
+      }
+    })
+    .catch(function(){
+      alert('Sorry, there was a problem. Please call us on 01772 287622.');
+      btn.disabled = false;
+      btn.textContent = 'Pay Securely with Stripe →';
+    });
+  });
+
+  // ── INTERCEPT CART BUTTON IN HEADER ──────────────────────────
+  document.addEventListener('click', function(e) {
+    var cartBtn = e.target.closest('.cart-btn, .snipcart-checkout');
+    if (cartBtn) { e.preventDefault(); e.stopPropagation(); openCart(); return; }
+
+    var addBtn = e.target.closest('.snipcart-add-item, #pp-addbtn, .pbs-add');
+    if (addBtn) {
+      e.preventDefault(); e.stopPropagation();
+      var id = addBtn.dataset.itemId || addBtn.dataset.productSlug || '';
+      var name = addBtn.dataset.itemName || addBtn.dataset.productName || '';
+      var price = addBtn.dataset.itemPrice || '';
+      var image = addBtn.dataset.itemImage || addBtn.dataset.productImage || '';
+      var size = addBtn.dataset.itemCustom1Value || addBtn.dataset.itemSize || '';
+      if (!name || !id) return;
+      if (price) price = '£' + parseFloat(price).toFixed(2);
+      addItem({ id: id, name: name, price: price, image: image, size: size });
+    }
+  }, true);
+
+  // ── INIT ─────────────────────────────────────────────────────
+  updateCount();
 
 })();
