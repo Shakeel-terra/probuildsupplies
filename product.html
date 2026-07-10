@@ -179,9 +179,6 @@ footer{background:#111;padding:40px 20px 18px;color:#888;width:100%}
 }
 </style>
 
-<link rel="preconnect" href="https://app.snipcart.com">
-<link rel="preconnect" href="https://cdn.snipcart.com">
-<link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.3.3/default/snipcart.css">
 </head>
 <body>
 <div class="ann">🚚 FREE Delivery on ALL Orders<span class="ann-x"> &nbsp;|&nbsp; 🧱 Free Brick Samples &nbsp;|&nbsp; 🏗️ Trade Accounts Available</span></div>
@@ -331,51 +328,7 @@ document.querySelectorAll('.ptb').forEach(function(b){
 });
 </script>
 
-<!-- Snipcart init -->
-<div hidden id="snipcart" data-api-key="MDQ0ZDg2YTQtNGJjNi00OWYxLTkxNTctZmNlMWJkZjJkNDgyNjM5MTc5OTUyNDY0MDkyMDEw" data-currency="gbp"></div>
-<script src="https://cdn.snipcart.com/themes/v3.3.3/default/snipcart.js"></script>
 <script src="pbs-products.js"></script>
-<script>
-(function() {
-  var observer = new MutationObserver(function(mutations) {
-    mutations.forEach(function(m) {
-      if (m.type === 'attributes' && m.attributeName === 'class') {
-        var body = document.body;
-        var hdr = document.querySelector('.hdr');
-        var nav = document.querySelector('.nav');
-        var ann = document.querySelector('.ann');
-        var isOpen = body.classList.contains('snipcart-sidecart-opened') ||
-                     body.classList.contains('snipcart-checkout-opened') ||
-                     document.querySelector('#snipcart[class*="visible"]') !== null;
-        if (hdr) hdr.style.zIndex = isOpen ? '0' : '9999';
-        if (hdr) hdr.style.position = isOpen ? 'relative' : 'sticky';
-        if (nav) nav.style.zIndex = isOpen ? '0' : '9998';
-        if (ann) ann.style.display = isOpen ? 'none' : '';
-      }
-    });
-  });
-  observer.observe(document.body, { attributes: true });
-  document.addEventListener('snipcart.ready', function() {
-    Snipcart.events.on('cart.opened', function() {
-      var hdr = document.querySelector('.hdr');
-      var nav = document.querySelector('.nav');
-      var ann = document.querySelector('.ann');
-      if (hdr) { hdr.style.position = 'relative'; hdr.style.zIndex = '0'; }
-      if (nav) nav.style.zIndex = '0';
-      if (ann) ann.style.display = 'none';
-    });
-    Snipcart.events.on('cart.closed', function() {
-      var hdr = document.querySelector('.hdr');
-      var nav = document.querySelector('.nav');
-      var ann = document.querySelector('.ann');
-      if (hdr) { hdr.style.position = 'sticky'; hdr.style.zIndex = '9999'; }
-      if (nav) nav.style.zIndex = '9998';
-      if (ann) ann.style.display = '';
-    });
-  });
-})();
-</script>
-
 <!-- Dynamic product loader: reads ?slug= from the URL and fills in this page from products.json -->
 <script>
 (function(){
