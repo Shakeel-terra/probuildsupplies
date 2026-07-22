@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://probuildsupplies.uk/sitemap.xml
