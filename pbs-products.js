@@ -406,7 +406,40 @@
     var filtered = products.filter(function(p){
       return p.visible !== false && (!categoryFilter || p.category === categoryFilter);
     });
-    if (!filtered.length) { __reveal(); return; }
+    if (!filtered.length) {
+      grid.innerHTML =
+        '<div style="grid-column:1/-1;text-align:center;padding:60px 20px;max-width:520px;margin:0 auto">'
+        + '<div style="font-size:2.4rem;margin-bottom:14px">📦</div>'
+        + '<h3 style="font-family:\'Barlow Condensed\',sans-serif;font-size:1.4rem;margin-bottom:10px">'
+        + (categoryFilter || 'This category') + ' is currently out of stock</h3>'
+        + '<p style="color:var(--mid);margin-bottom:22px">We\'re between deliveries on this range. Leave your email and we\'ll let you know the moment it\'s back — or call us and we\'ll give you a restock estimate.</p>'
+        + '<form id="restock-form" name="restock-notify" style="display:flex;gap:8px;max-width:380px;margin:0 auto 16px;flex-wrap:wrap;justify-content:center">'
+        + '<input type="hidden" name="form-name" value="restock-notify">'
+        + '<input type="hidden" name="bot-field" style="display:none">'
+        + '<input type="hidden" name="category" value="' + (categoryFilter || '') + '">'
+        + '<input type="email" name="email" required placeholder="you@example.com" style="flex:1;min-width:200px;padding:12px 14px;border:1px solid var(--bd);border-radius:4px;font-family:\'Barlow\',sans-serif">'
+        + '<button type="submit" class="btn-o">🔔 Notify Me</button>'
+        + '</form>'
+        + '<div id="restock-ok" style="display:none;color:var(--gr);font-weight:600;margin-bottom:10px">✅ Thanks — we\'ll email you as soon as it\'s back in stock.</div>'
+        + '<a href="contact.html" class="btn-dk" style="display:inline-block">📞 Or Call 01772 287622</a>'
+        + '</div>';
+      var rf = document.getElementById('restock-form');
+      if (rf) {
+        rf.addEventListener('submit', function(e){
+          e.preventDefault();
+          var data = new URLSearchParams(new FormData(rf)).toString();
+          fetch('/', { method: 'POST', headers: {'Content-Type':'application/x-www-form-urlencoded'}, body: data })
+            .then(function(){
+              rf.style.display = 'none';
+              var ok = document.getElementById('restock-ok');
+              if (ok) ok.style.display = 'block';
+            })
+            .catch(function(){ window.location.href = 'contact.html'; });
+        });
+      }
+      __reveal();
+      return;
+    }
     grid.innerHTML = filtered.map(function(p){ return makeCard(p, ''); }).join('');
     __reveal();
   }
