@@ -113,7 +113,7 @@
       results.forEach(function(p) {
         var a = document.createElement('a');
         a.className = 'sd-item';
-        a.href = 'product.html?slug=' + encodeURIComponent(p.slug || '');
+        a.href = productUrl(p);
         a.innerHTML =
           '<div class="sd-img">' + (p.image ? '<img src="' + p.image + '" alt="">' : '📦') + '</div>' +
           '<div class="sd-info">' +
@@ -342,6 +342,35 @@
     if (c.includes('Sandstone'))return 'background:linear-gradient(135deg,#C8A45A20,#C8A45A50)';
     return 'background:linear-gradient(135deg,#A0522D20,#A0522D50)';
   }
+
+  // ── SLUG -> STATIC PAGE MAP ────────────────────────────────
+  // Products that have a proper pre-built static page (real content baked
+  // into the HTML, good for SEO/AI crawlers) should link straight to it
+  // instead of the JS-only product.html?slug= template.
+  var STATIC_PAGE_MAP = {
+    'city-blend': 'city-blend-handmade-facing-bricks.html',
+    'heritage-blend': 'heritage-blend-handmade.html',
+    'village-multi-handmade': 'village-multi-handmade.html',
+    'barnstock-orange': 'barnstock-orange-handmade.html',
+    'thames-dean-stock': 'thames-dean-stock-handmade.html',
+    'renovation-multi': 'renovation-multi-pressed.html',
+    'tumbled-cheshire': 'tumbled-cheshire-handmade.html',
+    'rustic-farmhouse': 'rustic-farmhouse-handmade.html',
+    'ashgrove-orange': 'ashgrove-orange-handmade.html',
+    'weathered-yellow': 'weathered-yellow-facing-bricks.html',
+    'ashbourne-genuine-reclaimed': 'ashbourne-reclaimed-bricks.html',
+    'alford-genuine-reclaimed': 'alford-reclaimed-bricks.html',
+    'cottage-blend': 'cottage-blend-handmade.html',
+    'standard-plasterboard-2400x1200x12-5mm-pallet': 'standard-plasterboard.html',
+    'fireline-plasterboard-2400x1200x12-5mm-pallet': 'fireline-plasterboard.html'
+  };
+  function productUrl(p, prefix) {
+    prefix = prefix || '';
+    var staticPage = STATIC_PAGE_MAP[p.slug];
+    if (staticPage) return prefix + 'products/' + staticPage;
+    return prefix + 'product.html?slug=' + encodeURIComponent(p.slug || '');
+  }
+
   function esc(s) { return (s||'').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
   function getPrice(p) {
     if (p.sizeVariants && p.sizeVariants.length) {
@@ -360,8 +389,8 @@
       : catIcon(p.category);
     var buyBtn = (price === 'POA' || !price)
       ? '<a href="'+prefix+'contact.html" class="pbtn">📞 Enquire</a>'
-      : '<a href="'+prefix+'product.html?slug='+encodeURIComponent(p.slug||'')+'" class="pbtn">View Product</a>';
-    return '<a href="'+prefix+'product.html?slug='+encodeURIComponent(p.slug||'')+'" class="pcard">'
+      : '<a href="'+productUrl(p, prefix)+'" class="pbtn">View Product</a>';
+    return '<a href="'+productUrl(p, prefix)+'" class="pcard">'
       + '<div class="pimg" style="'+catBg(p.category)+'">'+img+'</div>'
       + '<div class="pinfo">'
       + '<div class="pcat">'+esc(p.category)+'</div>'

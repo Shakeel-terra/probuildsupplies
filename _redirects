@@ -35,3 +35,20 @@
 /weathered-yellow-facing-bricks.html  /products/weathered-yellow-facing-bricks.html  301!
 /yellow-mint.html  /products/yellow-mint.html  301!
 /york-buff.html  /products/york-buff.html  301!
+
+# Redirect dashboard product query-string URLs to their proper static pages
+/product.html slug=city-blend  /products/city-blend-handmade-facing-bricks.html  301
+/product.html slug=heritage-blend  /products/heritage-blend-handmade.html  301
+/product.html slug=village-multi-handmade  /products/village-multi-handmade.html  301
+/product.html slug=barnstock-orange  /products/barnstock-orange-handmade.html  301
+/product.html slug=thames-dean-stock  /products/thames-dean-stock-handmade.html  301
+/product.html slug=renovation-multi  /products/renovation-multi-pressed.html  301
+/product.html slug=tumbled-cheshire  /products/tumbled-cheshire-handmade.html  301
+/product.html slug=rustic-farmhouse  /products/rustic-farmhouse-handmade.html  301
+/product.html slug=ashgrove-orange  /products/ashgrove-orange-handmade.html  301
+/product.html slug=weathered-yellow  /products/weathered-yellow-facing-bricks.html  301
+/product.html slug=ashbourne-genuine-reclaimed  /products/ashbourne-reclaimed-bricks.html  301
+/product.html slug=alford-genuine-reclaimed  /products/alford-reclaimed-bricks.html  301
+/product.html slug=cottage-blend  /products/cottage-blend-handmade.html  301
+/product.html slug=standard-plasterboard-2400x1200x12-5mm-pallet  /products/standard-plasterboard.html  301
+/product.html slug=fireline-plasterboard-2400x1200x12-5mm-pallet  /products/fireline-plasterboard.html  301
