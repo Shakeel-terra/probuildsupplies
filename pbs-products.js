@@ -371,6 +371,29 @@
     return prefix + 'product.html?slug=' + encodeURIComponent(p.slug || '');
   }
 
+  // ── STATIC PAGE FILENAME -> REAL PRODUCT SLUG ──────────────
+  // The 15 static pages above were built with SEO-friendly filenames that
+  // don't match the actual product "slug" stored in products.json. This
+  // reverse map lets initProductPage() find the right product record (and
+  // therefore the right photo) even though the filename doesn't match.
+  var FILENAME_TO_SLUG = {
+    'city-blend-handmade-facing-bricks': 'city-blend',
+    'heritage-blend-handmade': 'heritage-blend',
+    'village-multi-handmade': 'village-multi-handmade',
+    'barnstock-orange-handmade': 'barnstock-orange',
+    'thames-dean-stock-handmade': 'thames-dean-stock',
+    'renovation-multi-pressed': 'renovation-multi',
+    'tumbled-cheshire-handmade': 'tumbled-cheshire',
+    'rustic-farmhouse-handmade': 'rustic-farmhouse',
+    'ashgrove-orange-handmade': 'ashgrove-orange',
+    'weathered-yellow-facing-bricks': 'weathered-yellow',
+    'ashbourne-reclaimed-bricks': 'ashbourne-genuine-reclaimed',
+    'alford-reclaimed-bricks': 'alford-genuine-reclaimed',
+    'cottage-blend-handmade': 'cottage-blend',
+    'standard-plasterboard': 'standard-plasterboard-2400x1200x12-5mm-pallet',
+    'fireline-plasterboard': 'fireline-plasterboard-2400x1200x12-5mm-pallet'
+  };
+
   function esc(s) { return (s||'').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
   function getPrice(p) {
     if (p.sizeVariants && p.sizeVariants.length) {
@@ -475,7 +498,8 @@
 
   // ── PRODUCT PAGE ──────────────────────────────────────────
   function initProductPage(products) {
-    var slug = window.location.pathname.split('/').pop().replace('.html','');
+    var filenameSlug = window.location.pathname.split('/').pop().replace('.html','');
+    var slug = FILENAME_TO_SLUG[filenameSlug] || filenameSlug;
     var prod = products.find(function(p){ return p.slug === slug; });
     if (!prod) return;
 
