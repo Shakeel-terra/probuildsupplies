@@ -224,7 +224,7 @@
     // Don't add twice
     if (navI.querySelector('a[href="plasterboards.html"]')) return;
     var pb = document.createElement('a');
-    pb.href = 'plasterboards.html';
+    pb.href = (window.location.pathname.includes('/products/') ? '../' : '') + 'plasterboards.html';
     pb.textContent = '📋 Plasterboards';
     if (window.location.pathname.endsWith('/plasterboards') ||
         window.location.pathname.includes('plasterboards')) {
@@ -554,16 +554,33 @@
       if (!isNaN(rawPrice) && rawPrice > 0) {
         // Update snipcart button data
         var atcBtn = document.querySelector('.snipcart-add-item');
-        if (atcBtn) {
-          atcBtn.dataset.itemPrice = rawPrice.toFixed(2);
-          atcBtn.dataset.itemName  = prod.name;
-          if (prod.image) atcBtn.dataset.itemImage = prod.image;
-          if (prod.delivery === 'included') atcBtn.dataset.itemShippable = 'false';
-          // Set size custom field if variants exist
-          if (prod.sizeVariants && prod.sizeVariants.length) {
-            atcBtn.dataset.itemCustom1Name  = 'Size';
-            atcBtn.dataset.itemCustom1Value = prod.sizeVariants[0].size + ' — ' + prod.sizeVariants[0].pack;
+        if (!atcBtn) {
+          // This page was originally built before pricing was confirmed, so
+          // it has a static "Enquire for Price" link instead of a real cart
+          // button. Now that we have a real price, build the button and
+          // swap it in so Add to Cart actually works.
+          atcBtn = document.createElement('button');
+          atcBtn.className = 'btn-o snipcart-add-item';
+          atcBtn.id = 'atcBtn';
+          atcBtn.innerHTML = '🛒 Add to Cart';
+          atcBtn.dataset.itemHasTaxesIncluded = 'true';
+          var enquireLink = actDiv.querySelector('a.btn-o');
+          if (enquireLink) {
+            actDiv.insertBefore(atcBtn, enquireLink);
+            enquireLink.remove();
+          } else {
+            actDiv.insertBefore(atcBtn, actDiv.firstChild);
           }
+        }
+        atcBtn.dataset.itemId = prod.slug;
+        atcBtn.dataset.itemPrice = rawPrice.toFixed(2);
+        atcBtn.dataset.itemName  = prod.name;
+        if (prod.image) atcBtn.dataset.itemImage = prod.image;
+        atcBtn.dataset.itemShippable = prod.delivery === 'included' ? 'false' : 'true';
+        // Set size custom field if variants exist
+        if (prod.sizeVariants && prod.sizeVariants.length) {
+          atcBtn.dataset.itemCustom1Name  = 'Size';
+          atcBtn.dataset.itemCustom1Value = prod.sizeVariants[0].size + ' — ' + prod.sizeVariants[0].pack;
         }
       }
     }
