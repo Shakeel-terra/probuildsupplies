@@ -1,6 +1,33 @@
 // Pro Build Supplies — Dynamic Product Loader
 // Reads products.json and updates the page content automatically
 
+// ── SHARED HELPERS (must be global — used by both the search dropdown
+// below AND the product-listing code further down, which are separate
+// closures) ───────────────────────────────────────────────────────
+var STATIC_PAGE_MAP = {
+  'city-blend': 'city-blend-handmade-facing-bricks.html',
+  'heritage-blend': 'heritage-blend-handmade.html',
+  'village-multi-handmade': 'village-multi-handmade.html',
+  'barnstock-orange': 'barnstock-orange-handmade.html',
+  'thames-dean-stock': 'thames-dean-stock-handmade.html',
+  'renovation-multi': 'renovation-multi-pressed.html',
+  'tumbled-cheshire': 'tumbled-cheshire-handmade.html',
+  'rustic-farmhouse': 'rustic-farmhouse-handmade.html',
+  'ashgrove-orange': 'ashgrove-orange-handmade.html',
+  'weathered-yellow': 'weathered-yellow-facing-bricks.html',
+  'ashbourne-genuine-reclaimed': 'ashbourne-reclaimed-bricks.html',
+  'alford-genuine-reclaimed': 'alford-reclaimed-bricks.html',
+  'cottage-blend': 'cottage-blend-handmade.html',
+  'standard-plasterboard-2400x1200x12-5mm-pallet': 'standard-plasterboard.html',
+  'fireline-plasterboard-2400x1200x12-5mm-pallet': 'fireline-plasterboard.html'
+};
+function productUrl(p, prefix) {
+  prefix = prefix || '';
+  var staticPage = STATIC_PAGE_MAP[p.slug];
+  if (staticPage) return prefix + 'products/' + staticPage;
+  return prefix + 'product.html?slug=' + encodeURIComponent(p.slug || '');
+}
+
 // ── GLOBAL SITE FIXES (runs on every page) ───────────────────
 (function() {
 
