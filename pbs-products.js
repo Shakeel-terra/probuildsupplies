@@ -203,10 +203,12 @@ function productUrl(p, prefix) {
   (function() {
     var footer = document.querySelector('footer .ft-i');
     if (!footer) return;
+    // Pages inside /products/ need "../" prepended to every root-relative link
+    var fp = (window.location.pathname.includes('/products/') || window.location.pathname.includes('/blog/')) ? '../' : '';
     footer.innerHTML =
       '<div class="ftg">' +
         '<div class="ft-brand">' +
-          '<a href="index.html" class="logo">Pro Build <b>Supplies</b></a>' +
+          '<a href="' + fp + 'index.html" class="logo">Pro Build <b>Supplies</b></a>' +
           '<p>Premium building materials at trade prices, delivered direct to your door or site. Free delivery on every order.</p>' +
           '<p style="margin-top:12px;font-size:.78rem;color:#555;line-height:1.9">' +
             'Pro Build Supplies Preston Ltd<br>' +
@@ -216,24 +218,25 @@ function productUrl(p, prefix) {
           '</p>' +
         '</div>' +
         '<div class="fc"><h4>Products</h4>' +
-          '<a href="handmade-bricks.html">Handmade Bricks</a>' +
-          '<a href="reclaimed-bricks.html">Reclaimed Bricks</a>' +
-          '<a href="porcelain-paving.html">Porcelain Paving</a>' +
-          '<a href="indian-sandstone.html">Indian Sandstone</a>' +
-          '<a href="mdf.html">MDF Sheets</a>' +
-          '<a href="plasterboards.html">Plasterboards</a>' +
+          '<a href="' + fp + 'handmade-bricks.html">Handmade Bricks</a>' +
+          '<a href="' + fp + 'reclaimed-bricks.html">Reclaimed Bricks</a>' +
+          '<a href="' + fp + 'porcelain-paving.html">Porcelain Paving</a>' +
+          '<a href="' + fp + 'indian-sandstone.html">Indian Sandstone</a>' +
+          '<a href="' + fp + 'mdf.html">MDF Sheets</a>' +
+          '<a href="' + fp + 'plasterboards.html">Plasterboards</a>' +
         '</div>' +
         '<div class="fc"><h4>Help &amp; Info</h4>' +
-          '<a href="delivery.html">Delivery Info</a>' +
-          '<a href="returns.html">Returns Policy</a>' +
-          '<a href="samples.html">Free Samples</a>' +
-          '<a href="trade-accounts.html">Trade Accounts</a>' +
-          '<a href="contact.html">Contact Us</a>' +
+          '<a href="' + fp + 'delivery.html">Delivery Info</a>' +
+          '<a href="' + fp + 'returns.html">Returns Policy</a>' +
+          '<a href="' + fp + 'samples.html">Free Samples</a>' +
+          '<a href="' + fp + 'trade-accounts.html">Trade Accounts</a>' +
+          '<a href="' + fp + 'contact.html">Contact Us</a>' +
         '</div>' +
         '<div class="fc"><h4>Company</h4>' +
-          '<a href="about.html">About Us</a>' +
-          '<a href="privacy-policy.html">Privacy Policy</a>' +
-          '<a href="terms.html">Terms &amp; Conditions</a>' +
+          '<a href="' + fp + 'about.html">About Us</a>' +
+          '<a href="' + fp + 'blog/index.html">Blog</a>' +
+          '<a href="' + fp + 'privacy-policy.html">Privacy Policy</a>' +
+          '<a href="' + fp + 'terms.html">Terms &amp; Conditions</a>' +
           '<a href="mailto:tradecounter@probuildsupplies.uk" style="margin-top:10px;word-break:break-all">📧 tradecounter@probuildsupplies.uk</a>' +
           '<a href="tel:01772287622">📞 01772 287622</a>' +
         '</div>' +
@@ -249,9 +252,10 @@ function productUrl(p, prefix) {
     var navI = document.querySelector('.nav-i');
     if (!navI) return;
     // Don't add twice
-    if (navI.querySelector('a[href="plasterboards.html"]')) return;
+    if (navI.querySelector('a[href="plasterboards.html"]') || navI.querySelector('a[href="../plasterboards.html"]')) return;
     var pb = document.createElement('a');
-    pb.href = (window.location.pathname.includes('/products/') ? '../' : '') + 'plasterboards.html';
+    var navPrefix = (window.location.pathname.includes('/products/') || window.location.pathname.includes('/blog/')) ? '../' : '';
+    pb.href = navPrefix + 'plasterboards.html';
     pb.textContent = '📋 Plasterboards';
     if (window.location.pathname.endsWith('/plasterboards') ||
         window.location.pathname.includes('plasterboards')) {
