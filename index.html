@@ -3,6 +3,40 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0">
+<title>Building Materials Supplier Preston &amp; Lancashire | Pro Build Supplies</title>
+<meta name="description" content="Trade-quality bricks, paving and MDF delivered fast across Preston, Lancashire and the North West — plus free delivery UK-wide. Family-run, based in Preston.">
+<link rel="canonical" href="https://probuildsupplies.uk/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HomeAndConstructionBusiness",
+  "name": "Pro Build Supplies",
+  "url": "https://probuildsupplies.uk/",
+  "telephone": "+441772287622",
+  "email": "info@probuildsupplies.uk",
+  "priceRange": "££",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Suite 23, Derby House, Lytham Road",
+    "addressLocality": "Preston",
+    "postalCode": "PR2 8JE",
+    "addressCountry": "GB"
+  },
+  "areaServed": [
+    {"@type": "City", "name": "Preston"},
+    {"@type": "City", "name": "Blackburn"},
+    {"@type": "City", "name": "Blackpool"},
+    {"@type": "City", "name": "Lancaster"},
+    {"@type": "City", "name": "Chorley"},
+    {"@type": "City", "name": "Burnley"},
+    {"@type": "AdministrativeArea", "name": "Lancashire"},
+    {"@type": "AdministrativeArea", "name": "North West England"},
+    {"@type": "Country", "name": "United Kingdom"}
+  ],
+  "sameAs": []
+}
+</script>
+
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
 
 
@@ -243,7 +277,7 @@ img{max-width:100%;display:block;height:auto}
 .hero-p{color:#AAA;font-size:.97rem;line-height:1.65;margin-bottom:26px;max-width:390px}
 .hero-btns{display:flex;gap:11px;flex-wrap:wrap}
 .hero-v{overflow:hidden}
-.htgrid{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;height:100%;gap:3px}
+.htgrid{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr auto;height:100%;gap:3px}
 .ht{display:flex;align-items:center;justify-content:center;flex-direction:column;gap:7px;transition:transform .3s}
 .ht:hover{transform:scale(1.03)}
 .ht-ic{font-size:2.3rem}
@@ -252,18 +286,35 @@ img{max-width:100%;display:block;height:auto}
 .ht2{background:linear-gradient(135deg,#7F8C8D,#4A5568)}
 .ht3{background:linear-gradient(135deg,#8B5E3C,#5C3D1E)}
 .ht4{background:linear-gradient(135deg,#F55C1B,#C0392B)}
+.ht5{background:linear-gradient(135deg,#4A6B82,#2C4A63)}
 
 /* CAT CARDS (homepage) */
 .csec{max-width:1280px;margin:52px auto;padding:0 20px}
 .chdr{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:26px;gap:11px;flex-wrap:wrap}
 .chdr a{color:var(--o);font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.97rem;text-transform:uppercase}
-.ccgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.ccgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
 .cccard{position:relative;border-radius:var(--r);overflow:hidden;aspect-ratio:4/3;display:block}
 .ccbg{width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:4.2rem;transition:transform .4s}
 .cccard:hover .ccbg{transform:scale(1.05)}
 .bg-br{background:linear-gradient(145deg,#C0392B,#6B1E17)}
 .bg-pv{background:linear-gradient(145deg,#626567,#2C3233)}
 .bg-mf{background:linear-gradient(145deg,#A0522D,#5C2710)}
+.bg-pb{background:linear-gradient(145deg,#5D7D9A,#2C4A63);position:relative;overflow:hidden}
+.bg-pb::after{content:'';position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent,transparent 10px,rgba(255,255,255,.06) 10px,rgba(255,255,255,.06) 11px)}
+.pb-promo{background:#1A1A1A;border-top:3px solid var(--o);border-bottom:3px solid var(--o);padding:18px 20px}
+.pb-promo-i{max-width:1280px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.pb-promo-left{display:flex;align-items:center;gap:14px}
+.pb-promo-icon{font-size:2rem;flex-shrink:0}
+.pb-promo-text{}
+.pb-promo-title{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.25rem;color:var(--wh);text-transform:uppercase;letter-spacing:.5px;line-height:1.1}
+.pb-promo-title span{color:var(--o)}
+.pb-promo-sub{font-size:.82rem;color:#aaa;margin-top:3px}
+.pb-promo-right{display:flex;gap:10px;flex-wrap:wrap;flex-shrink:0}
+.pb-promo-btn{display:inline-flex;align-items:center;gap:7px;padding:9px 18px;border-radius:4px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.9rem;text-transform:uppercase;letter-spacing:.5px;text-decoration:none;white-space:nowrap;transition:opacity .2s}
+.pb-promo-btn:hover{opacity:.85}
+.pb-promo-wa{background:#25D366;color:#fff}
+.pb-promo-ph{background:#2C2C2C;color:#fff;border:1px solid #444}
+@media(max-width:768px){.pb-promo-i{flex-direction:column;align-items:flex-start;gap:14px}.pb-promo-right{width:100%}.pb-promo-btn{flex:1;justify-content:center}}
 .ccov{position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.75) 0%,rgba(0,0,0,.1) 60%);display:flex;flex-direction:column;justify-content:flex-end;padding:18px}
 .cclbl{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.6rem;color:var(--wh);text-transform:uppercase;display:block}
 .ccsub{color:rgba(255,255,255,.75);font-size:.8rem;margin-top:3px;display:block}
@@ -286,7 +337,7 @@ img{max-width:100%;display:block;height:auto}
 /* WHY */
 .why{background:var(--lt);padding:52px 20px;border-top:4px solid var(--o)}
 .why-i{max-width:1280px;margin:0 auto}
-.wgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:28px}
+.wgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}
 .wi{text-align:center;padding:22px 14px;background:var(--wh);border-radius:var(--r);border-bottom:4px solid transparent;transition:border-color .25s,transform .25s}
 .wi:hover{border-bottom-color:var(--o);transform:translateY(-4px)}
 .wi-ic{font-size:2.1rem;margin-bottom:11px;display:block}
@@ -351,7 +402,8 @@ footer{background:#111;padding:40px 20px 18px;color:#888;width:100%}
   .hero{grid-template-columns:1fr;min-height:auto}
   .hero-c{padding:38px 20px 28px}
   .hero-v{height:230px}
-  .htgrid{grid-template-columns:1fr 1fr 1fr 1fr;grid-template-rows:1fr}
+  .htgrid{grid-template-columns:1fr 1fr 1fr 1fr;grid-template-rows:1fr auto}
+  #ht-pb{grid-column:1 / -1!important}
   .ccgrid{grid-template-columns:1fr 1fr}
   .promo-i{grid-template-columns:1fr}
   .rgvgrid{grid-template-columns:1fr}
@@ -469,14 +521,11 @@ footer{background:#111;padding:40px 20px 18px;color:#888;width:100%}
   <link rel="preconnect" href="https://app.snipcart.com">
   <link rel="preconnect" href="https://cdn.snipcart.com">
   <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.3.3/default/snipcart.css">
-<title>Blog | Building Materials Advice & Guides | Pro Build Supplies</title>
-<meta name="description" content="Practical advice on bricks, paving and building materials from Pro Build Supplies — buying guides, comparisons and project tips.">
-<link rel="canonical" href="https://probuildsupplies.uk/blog/">
 </head>
 <body>
 <div class="ann">🚚 FREE Delivery on ALL Orders<span class="ann-x"> &nbsp;|&nbsp; 🧱 Free Brick Samples &nbsp;|&nbsp; 🏗️ Trade Accounts Available</span></div>
 <header class="hdr"><div class="hdr-i">
-  <a href="../index.html" class="logo">Pro Build <b>Supplies</b></a>
+  <a href="index.html" class="logo">Pro Build <b>Supplies</b></a>
   <div class="srch"><div><input type="text" placeholder="Search bricks, paving, MDF..."><button>🔍</button></div></div>
   <div class="hdr-act">
     <a href="tel:01772287622" class="hph">📞 01772 287622</a>
@@ -485,58 +534,124 @@ footer{background:#111;padding:40px 20px 18px;color:#888;width:100%}
   </div>
 </div></header>
 <nav class="nav" id="nav"><div class="nav-i">
-  <a href="../index.html">Home</a>
-  <a href="../shop.html">🛍️ Shop All</a>
-  <div class="ni"><a href="../bricks.html">🧱 Bricks</a><div class="dd">
-    <a href="../handmade-bricks.html">Handmade Bricks</a>
-    <a href="../reclaimed-bricks.html">Reclaimed Bricks</a>
+  <a href="index.html" class="cur">Home</a>
+  <a href="shop.html">🛍️ Shop All</a>
+  <div class="ni"><a href="bricks.html">🧱 Bricks</a><div class="dd">
+    <a href="handmade-bricks.html">Handmade Bricks</a>
+    <a href="reclaimed-bricks.html">Reclaimed Bricks</a>
   </div></div>
-  <div class="ni"><a href="../paving.html">🪨 Paving</a><div class="dd">
-    <a href="../porcelain-paving.html">Porcelain Paving</a>
-    <a href="../indian-sandstone.html">Indian Sandstone</a>
+  <div class="ni"><a href="paving.html">🪨 Paving</a><div class="dd">
+    <a href="porcelain-paving.html">Porcelain Paving</a>
+    <a href="indian-sandstone.html">Indian Sandstone</a>
   </div></div>
-  <a href="../mdf.html">🪵 MDF</a>
-  <div class="ni"><a href="../trade-accounts.html">🏗️ Trade &amp; Bulk</a><div class="dd">
-    <a href="../trade-accounts.html">Trade Accounts</a>
-    <a href="../trade-accounts.html#bulk">Bulk Orders</a>
+  <a href="mdf.html">🪵 MDF</a>
+  <div class="ni"><a href="trade-accounts.html">🏗️ Trade &amp; Bulk</a><div class="dd">
+    <a href="trade-accounts.html">Trade Accounts</a>
+    <a href="trade-accounts.html#bulk">Bulk Orders</a>
   </div></div>
-  <a href="../samples.html">🧱 Free Samples</a>
-  <a href="../contact.html">📞 Contact</a>
+  <a href="samples.html">🧱 Free Samples</a>
+  <a href="contact.html">📞 Contact</a>
 </div></nav>
-<div class="bc"><div class="bc-i"><a href="../index.html">Home</a> &rsaquo; Blog</div></div>
-<div class="chero"><div class="chero-i">
-  <h1>The Pro Build <em>Blog</em></h1>
-  <p>Practical advice on bricks, paving and building materials — buying guides, comparisons and project tips from our team.</p>
-</div></div>
-<div class="sec-w">
-  <div class="bgrid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px">
-    <a href="handmade-vs-machine-made-bricks.html" class="sccard">
-      <div class="scimg" style="background:linear-gradient(135deg,#F55C1B20,#F55C1B50)">🧱</div>
-      <div class="scbody">
-        <div class="scname">Handmade vs Machine-Made Bricks</div>
-        <div class="scdesc">What's actually different, what it costs, and which one is right for your project — our full comparison guide.</div>
-        <span class="btn-o">Read the Guide &rarr;</span>
-      </div>
-    </a>
+
+<section class="hero">
+  <div class="hero-c">
+    <div class="hero-tag">⚡ New Season Stock — Just Arrived</div>
+    <h1>Your Build.<br><em>Our Supply.</em></h1>
+    <p class="hero-p">Premium bricks, paving slabs and MDF at trade-beating prices. Delivered direct to site — free on every order.</p>
+    <div class="hero-btns">
+      <a href="shop.html" class="btn-o">Shop All Products</a>
+      <a href="samples.html" class="btn-out">Request Samples</a>
+    </div>
   </div>
-</div>
+  <div class="hero-v">
+    <div class="htgrid">
+      <a href="bricks.html" class="ht ht1"><div class="ht-ic">🧱</div><div class="ht-nm">Bricks</div></a>
+      <a href="paving.html" class="ht ht2"><div class="ht-ic">🪨</div><div class="ht-nm">Paving</div></a>
+      <a href="mdf.html" class="ht ht3"><div class="ht-ic">🪵</div><div class="ht-nm">MDF</div></a>
+      <a href="trade-accounts.html" class="ht ht4"><div class="ht-ic">🏗️</div><div class="ht-nm">Trade</div></a>
+      <a href="plasterboards.html" class="ht ht5" id="ht-pb" style="grid-column:1 / -1;padding:14px 0;position:relative;overflow:hidden"><div class="ht-ic" id="ht-pb-icon">📋</div><div class="ht-nm">Plasterboards</div></a>
+    </div>
+  </div>
+</section>
+<div class="trust"><div class="trust-i"><div class="ti"><span class="ic">🚚</span><div><strong>Free Delivery</strong><span>All orders, UK mainland</span></div></div><div class="ti"><span class="ic">📦</span><div><strong>Next-Day Dispatch</strong><span>Order before 2pm</span></div></div><div class="ti"><span class="ic">🏅</span><div><strong>Trade Quality</strong><span>Premium materials</span></div></div><div class="ti"><span class="ic">🧱</span><div><strong>Free Brick Samples</strong><span>Try before you buy</span></div></div><div class="ti"><span class="ic">⭐</span><div><strong>4.9/5 Reviews</strong><span>2,000+ customers</span></div></div></div></div>
+<div class="pb-promo"><div class="pb-promo-i">
+  <div class="pb-promo-left">
+    <div class="pb-promo-icon">🚛</div>
+    <div class="pb-promo-text">
+      <div class="pb-promo-title">We Offer Lower Delivery Rates on Plasterboards Across the <a href="delivery-areas.html" style="color:inherit"><span>North West of England</span></a></div>
+      <div class="pb-promo-sub">Cheaper than most online retailers &nbsp;•&nbsp; Trade &amp; bulk quantities welcome &nbsp;•&nbsp; Get in touch for a quote today</div>
+    </div>
+  </div>
+  <div class="pb-promo-right">
+    <a href="https://wa.me/447549809252" target="_blank" class="pb-promo-btn pb-promo-wa">💬 WhatsApp Us</a>
+    <a href="tel:01772287622" class="pb-promo-btn pb-promo-ph">📞 01772 287622</a>
+  </div>
+</div></div>
+<section class="csec">
+  <div class="chdr">
+    <div><div class="st">Shop by <b>Category</b></div><p class="ss">Quality materials for every project</p></div>
+    <a href="shop.html">View all →</a>
+  </div>
+  <div class="ccgrid">
+    <a href="bricks.html" class="cccard"><div class="ccbg bg-br">🧱</div><div class="ccov"><span class="cclbl">Bricks</span><span class="ccsub">Handmade &amp; Reclaimed</span><span class="ccarr">Browse →</span></div></a>
+    <a href="paving.html" class="cccard"><div class="ccbg bg-pv">🪨</div><div class="ccov"><span class="cclbl">Paving</span><span class="ccsub">Porcelain &amp; Sandstone</span><span class="ccarr">Browse →</span></div></a>
+    <a href="mdf.html" class="cccard"><div class="ccbg bg-mf">🪵</div><div class="ccov"><span class="cclbl">MDF</span><span class="ccsub">Standard &amp; moisture-resistant</span><span class="ccarr">Browse →</span></div></a>
+    <a href="plasterboards.html" class="cccard"><div class="ccbg bg-pb" id="pb-cat-bg">📋</div><div class="ccov"><span class="cclbl">Plasterboards</span><span class="ccsub">Standard &amp; fireline boards</span><span class="ccarr">Browse →</span></div></a>
+  </div>
+</section>
+<div class="promo"><div class="promo-i">
+  <a href="trade-accounts.html" class="pc pc-o"><div class="pc-d">🧱</div><div class="pc-e">Trade &amp; Bulk Orders</div><h3>Open a Trade Account for Exclusive Pricing</h3><span class="pc-l">Apply Now →</span></a>
+  <a href="samples.html" class="pc pc-y"><div class="pc-d">🎨</div><div class="pc-e">Try Before You Buy</div><h3>Free Brick Sample Service — Delivered Free</h3><span class="pc-l">Order Samples →</span></a>
+</div></div>
+
+<!-- FEATURED PRODUCTS -->
+<section style="background:var(--wh);padding:52px 0;border-top:4px solid var(--y)">
+  <div style="max-width:1280px;margin:0 auto;padding:0 20px">
+    <div class="st">Featured <b>Products</b></div>
+    <p class="ss">Our most popular lines — trade prices, free delivery</p>
+    <div class="pgrid" id="featuredGrid" style="margin-top:22px">
+      <!-- Populated dynamically from products.json -->
+    </div>
+    <div style="text-align:center;margin-top:28px">
+      <a href="shop.html" class="btn-o">View All Products →</a>
+    </div>
+  </div>
+</section>
+<section class="why"><div class="why-i">
+  <div class="st">Why Choose <b>Pro Build Supplies</b></div>
+  <div class="wgrid">
+    <div class="wi"><span class="wi-ic">🏭</span><div class="wi-t">Direct from Manufacturer</div><p>We source direct, cutting out the middleman for better prices on every order.</p></div>
+    <div class="wi"><span class="wi-ic">📋</span><div class="wi-t">Expert Advice</div><p>Our specialists are on hand to help you spec the right product for your project.</p></div>
+    <div class="wi"><span class="wi-ic">🔒</span><div class="wi-t">Secure Checkout</div><p>Klarna, card and PayPal — plus a 30-day returns policy on all orders.</p></div>
+  </div>
+</div></section>
+<section class="revs"><div class="revs-i">
+  <div class="st" style="color:var(--wh)">What Our <b style="color:var(--y)">Customers Say</b></div>
+  <p class="ss" style="color:#888;margin-top:7px">Over 2,000 verified reviews</p>
+  <div class="rgvgrid">
+    <div class="rv"><div class="stars">★★★★★</div><p>"Ordered a pallet of facing bricks for a garden wall. Arrived on time, well-packaged and the colour matched the sample exactly."</p><div class="rvr"><div class="av">JT</div><div><span class="rvn">James T.</span><span class="rvl">Manchester</span></div></div></div>
+    <div class="rv"><div class="stars">★★★★★</div><p>"Excellent MDF quality at an unbeatable price. Fast delivery and great communication throughout."</p><div class="rvr"><div class="av">SR</div><div><span class="rvn">Sarah R.</span><span class="rvl">Bristol</span></div></div></div>
+    <div class="rv"><div class="stars">★★★★★</div><p>"Stunning porcelain paving — our patio looks completely transformed. Delivery was fast and the driver was brilliant."</p><div class="rvr"><div class="av">DK</div><div><span class="rvn">Daniel K.</span><span class="rvl">Leeds</span></div></div></div>
+  </div>
+</div></section>
+<div class="cta"><h2>Ready to Start Your Project?</h2><p>Browse our full range or talk to our team for a bespoke quote.</p><a href="shop.html" class="btn-wh">Shop Now</a></div>
 <footer><div class="ft-i">
   <div class="ftg">
-    <div class="ft-brand"><a href="../index.html" class="logo">Pro Build <b>Supplies</b></a><p>Premium building materials at trade prices, delivered direct to your door or site. Free delivery on every order.</p></div>
+    <div class="ft-brand"><a href="index.html" class="logo">Pro Build <b>Supplies</b></a><p>Premium building materials at trade prices, delivered direct to your door or site. Free delivery on every order.</p></div>
     <div class="fc"><h4>Products</h4>
-      <a href="../handmade-bricks.html">Handmade Bricks</a>
-      <a href="../reclaimed-bricks.html">Reclaimed Bricks</a>
-      <a href="../porcelain-paving.html">Porcelain Paving</a>
-      <a href="../indian-sandstone.html">Indian Sandstone</a>
-      <a href="../mdf.html">MDF Sheets</a>
+      <a href="handmade-bricks.html">Handmade Bricks</a>
+      <a href="reclaimed-bricks.html">Reclaimed Bricks</a>
+      <a href="porcelain-paving.html">Porcelain Paving</a>
+      <a href="indian-sandstone.html">Indian Sandstone</a>
+      <a href="mdf.html">MDF Sheets</a>
     </div>
     <div class="fc"><h4>Help &amp; Info</h4>
-      <a href="../delivery-areas.html">Delivery Areas</a>
-      <a href="../delivery.html">Delivery Info</a>
-      <a href="../returns.html">Returns Policy</a>
-      <a href="../samples.html">Free Samples</a>
-      <a href="../trade-accounts.html">Trade Accounts</a>
-      <a href="../contact.html">Contact Us</a>
+      <a href="delivery-areas.html">Delivery Areas</a>
+      <a href="delivery.html">Delivery Info</a>
+      <a href="returns.html">Returns Policy</a>
+      <a href="samples.html">Free Samples</a>
+      <a href="trade-accounts.html">Trade Accounts</a>
+      <a href="contact.html">Contact Us</a>
     </div>
     <div class="fc"><h4>Company</h4>
       <a href="https://www.probuildsupplies.uk/about/">About Us</a>
@@ -618,6 +733,30 @@ footer{background:#111;padding:40px 20px 18px;color:#888;width:100%}
   });
 })();
 </script>
-<script src="../pbs-products.js"></script>
+<script src="pbs-products.js"></script>
+<script>
+// Pull first plasterboard product image for category card AND hero tile
+fetch('products.json?v=' + Date.now())
+  .then(function(r){return r.json();})
+  .then(function(products){
+    var pb = (products||[]).find(function(p){return p.category==='Plasterboards' && p.image && p.visible!==false;});
+    if(pb && pb.image){
+      // Category card
+      var el = document.getElementById('pb-cat-bg');
+      if(el){el.innerHTML='<img src="'+pb.image+'" alt="Plasterboards" style="width:100%;height:100%;object-fit:cover">';el.style.fontSize='0';}
+      // Hero tile
+      var hero = document.getElementById('ht-pb');
+      if(hero){
+        var img = document.createElement('img');
+        img.src = pb.image;
+        img.alt = 'Plasterboards';
+        img.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.5';
+        hero.insertBefore(img, hero.firstChild);
+        var icon = document.getElementById('ht-pb-icon');
+        if(icon) icon.style.display = 'none';
+      }
+    }
+  }).catch(function(){});
+</script>
 </body>
 </html>
