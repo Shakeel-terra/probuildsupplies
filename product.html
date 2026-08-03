@@ -326,7 +326,7 @@ footer{background:#111;padding:40px 20px 18px;color:#888;width:100%}
     <button class="ptb on" data-t="d">Description</button>
     <button class="ptb" data-t="del">Delivery</button>
   </div>
-  <div class="ptab on" id="pt-d"><p id="pp-desc-full">Loading description…</p></div>
+  <div class="ptab on" id="pt-d"><div id="pp-desc-full"><p>Loading description…</p></div></div>
   <div class="ptab" id="pt-del"><h3>Free Delivery on All Orders</h3>
 <p>All orders delivered <strong>free</strong> to UK mainland. No minimum order, no surcharges.</p>
 <h3>Dispatch Times</h3>
@@ -488,8 +488,15 @@ document.querySelectorAll('.ptb').forEach(function(b){
       document.getElementById('pp-tag').textContent = prod.category || '';
       document.getElementById('pp-title').textContent = prod.name;
       document.getElementById('pp-bc-name').textContent = prod.name;
-      document.getElementById('pp-short').textContent = prod.description || '';
-      document.getElementById('pp-desc-full').textContent = prod.description || 'No further description available.';
+      // Description — supports the same lightweight markdown as Delivery Notes:
+      // "## Heading" for a subheading, "- " for a bullet, "**bold**" for bold text.
+      // The short teaser under the price box always stays plain text (first line only).
+      var descRaw = (prod.description || '').trim();
+      var descFirstLine = (descRaw.split('\n').map(function(l){ return l.trim(); }).find(function(l){
+        return l && l.indexOf('##') !== 0 && l.indexOf('- ') !== 0;
+      }) || descRaw).replace(/\*\*([^*]+)\*\*/g, '$1');
+      document.getElementById('pp-short').textContent = descFirstLine;
+      document.getElementById('pp-desc-full').innerHTML = descRaw ? parseMarkdown(descRaw) : '<p>No further description available.</p>';
 
       // Image gallery — uses prod.images[] if present, falls back to prod.image
       var imgbox = document.getElementById('pp-imgbox');
