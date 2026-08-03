@@ -777,14 +777,16 @@ function productUrl(p, prefix) {
   document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeCart(); });
 
   // ── CART OPERATIONS ───────────────────────────────────────────
-  function addItem(item) {
+  function addItem(item, qty) {
+    qty = parseInt(qty, 10);
+    if (isNaN(qty) || qty < 1) qty = 1;
     var cart = getCart();
     var key = item.id + '|' + (item.size || '');
     var existing = cart.find(function(c){ return (c.id+'|'+(c.size||'')) === key; });
     if (existing) {
-      existing.quantity = (existing.quantity || 1) + 1;
+      existing.quantity = (existing.quantity || 1) + qty;
     } else {
-      item.quantity = 1;
+      item.quantity = qty;
       cart.push(item);
     }
     saveCart(cart);
@@ -962,7 +964,24 @@ function productUrl(p, prefix) {
       var size = addBtn.dataset.itemCustom1Value || addBtn.dataset.itemSize || '';
       if (!name || !id) return;
       if (price) price = '£' + parseFloat(price).toFixed(2);
-      addItem({ id: id, name: name, price: price, image: image, size: size });
+
+      // Product page has its own quantity stepper (#pp-qty-input) — respect it.
+      var qty = 1;
+      if (addBtn.id === 'pp-addbtn') {
+        var qtyInput = document.getElementById('pp-qty-input');
+        if (qtyInput) {
+          qty = parseInt(qtyInput.value, 10);
+          if (isNaN(qty) || qty < 1) qty = 1;
+        }
+      }
+
+      addItem({ id: id, name: name, price: price, image: image, size: size }, qty);
+
+      // Reset the quantity stepper back to 1 after adding.
+      if (addBtn.id === 'pp-addbtn') {
+        var qtyInputReset = document.getElementById('pp-qty-input');
+        if (qtyInputReset) qtyInputReset.value = 1;
+      }
     }
   }, true);
 
