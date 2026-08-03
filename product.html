@@ -124,6 +124,23 @@ img{max-width:100%;display:block;height:auto}
 .pp-layout{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start;margin-bottom:52px}
 .pp-imgbox{background:var(--lt);border-radius:8px;border:2px solid var(--bd);aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;font-size:7rem;overflow:hidden}
 .pp-imgbox img{width:100%;height:100%;object-fit:cover}
+.pp-thumbs{display:flex;gap:9px;margin-top:11px;overflow-x:auto;padding-bottom:2px}
+.pp-thumbs::-webkit-scrollbar{height:5px}
+.pp-thumb{width:68px;height:68px;flex-shrink:0;border-radius:6px;border:2px solid var(--bd);overflow:hidden;cursor:pointer;background:var(--wh);transition:border-color .2s}
+.pp-thumb img{width:100%;height:100%;object-fit:cover}
+.pp-thumb.on{border-color:var(--o)}
+.pp-thumb:hover{border-color:var(--o)}
+.pp-specs-inline{margin-bottom:20px}
+.pp-specs-inline .stbl{margin-top:0}
+.pp-calc{background:var(--wh);border:2px solid var(--o);border-radius:6px;padding:16px 18px;margin-bottom:18px}
+.pp-calc-lbl{display:block;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.85rem;text-transform:uppercase;letter-spacing:.4px;color:var(--dk);margin-bottom:9px}
+.pp-calc-row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.pp-calc-row input{flex:1;min-width:110px;padding:11px 13px;background:var(--lt);border:2px solid var(--bd);border-radius:4px;font-family:'Barlow',sans-serif;font-size:.95rem;color:var(--dk);outline:none}
+.pp-calc-row input:focus{border-color:var(--o)}
+.pp-calc-unit{font-size:.85rem;color:var(--mid);font-weight:600}
+.pp-calc-result{margin-top:12px;padding-top:12px;border-top:1px dashed var(--bd);font-size:.88rem;color:var(--mid);line-height:1.7}
+.pp-calc-result b{color:var(--dk)}
+.pp-calc-result .pp-calc-total{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.4rem;color:var(--o)}
 .pp-tag{display:inline-block;background:var(--o);color:var(--wh);font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.76rem;padding:4px 11px;letter-spacing:1.5px;text-transform:uppercase;border-radius:2px;margin-bottom:12px}
 .pp-title{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(1.7rem,3vw,2.4rem);line-height:1.05;text-transform:uppercase;color:var(--dk);margin-bottom:14px}
 .pp-pricebox{background:var(--lt);border-radius:6px;padding:16px;margin-bottom:18px;border-left:4px solid var(--o)}
@@ -240,14 +257,32 @@ footer{background:#111;padding:40px 20px 18px;color:#888;width:100%}
 
 <div style="max-width:1280px;margin:0 auto;padding:34px 20px 72px">
   <div class="pp-layout">
-    <div class="pp-imgbox" id="pp-imgbox">📦</div>
+    <div>
+      <div class="pp-imgbox" id="pp-imgbox">📦</div>
+      <div class="pp-thumbs" id="pp-thumbs" style="display:none"></div>
+    </div>
     <div>
       <span class="pp-tag" id="pp-tag">Category</span>
       <h1 class="pp-title" id="pp-title">Loading…</h1>
+
+      <div class="pp-specs-inline" id="pp-specs-inline" style="display:none">
+        <table class="stbl"><tbody id="pp-spec-body"></tbody></table>
+      </div>
+
       <div class="pp-pricebox">
         <div class="pp-price" id="pp-price">—</div>
         <div class="pp-pnote" id="pp-pnote"></div>
       </div>
+
+      <div class="pp-calc" id="pp-calc" style="display:none">
+        <label class="pp-calc-lbl">📐 How many m² do you need?</label>
+        <div class="pp-calc-row">
+          <input type="number" id="pp-calc-input" min="0" step="0.1" placeholder="e.g. 25">
+          <span class="pp-calc-unit">m²</span>
+        </div>
+        <div class="pp-calc-result" id="pp-calc-result"></div>
+      </div>
+
       <p class="pp-short" id="pp-short"></p>
 
       <div class="sz-wrap" id="pp-szwrap" style="display:none">
@@ -278,11 +313,9 @@ footer{background:#111;padding:40px 20px 18px;color:#888;width:100%}
 
   <div class="pp-tabs">
     <button class="ptb on" data-t="d">Description</button>
-    <button class="ptb" data-t="s">Specifications</button>
     <button class="ptb" data-t="del">Delivery</button>
   </div>
   <div class="ptab on" id="pt-d"><p id="pp-desc-full">Loading description…</p></div>
-  <div class="ptab" id="pt-s"><table class="stbl" id="pp-spec-table"><thead><tr><th>Specification</th><th>Details</th></tr></thead><tbody id="pp-spec-body"></tbody></table></div>
   <div class="ptab" id="pt-del"><h3>Free Delivery on All Orders</h3>
 <p>All orders delivered <strong>free</strong> to UK mainland. No minimum order, no surcharges.</p>
 <h3>Dispatch Times</h3>
@@ -428,17 +461,41 @@ document.querySelectorAll('.ptb').forEach(function(b){
       document.getElementById('pp-short').textContent = prod.description || '';
       document.getElementById('pp-desc-full').textContent = prod.description || 'No further description available.';
 
-      // Image
+      // Image gallery — uses prod.images[] if present, falls back to prod.image
       var imgbox = document.getElementById('pp-imgbox');
-      if (prod.image) {
-        imgbox.innerHTML = '<img src="'+prod.image+'" alt="'+esc(prod.name)+'">';
+      var thumbsEl = document.getElementById('pp-thumbs');
+      var gallery = (prod.images && prod.images.length) ? prod.images.slice() : (prod.image ? [prod.image] : []);
+
+      function showMainImage(src){
+        imgbox.innerHTML = '<img src="'+src+'" alt="'+esc(prod.name)+'">';
+      }
+
+      if (gallery.length) {
+        showMainImage(gallery[0]);
+        if (gallery.length > 1) {
+          thumbsEl.style.display = '';
+          thumbsEl.innerHTML = gallery.map(function(src, i){
+            return '<div class="pp-thumb'+(i===0?' on':'')+'" data-i="'+i+'"><img src="'+src+'" alt="'+esc(prod.name)+' photo '+(i+1)+'"></div>';
+          }).join('');
+          thumbsEl.querySelectorAll('.pp-thumb').forEach(function(t){
+            t.addEventListener('click', function(){
+              thumbsEl.querySelectorAll('.pp-thumb').forEach(function(x){x.classList.remove('on');});
+              t.classList.add('on');
+              showMainImage(gallery[parseInt(t.dataset.i,10)]);
+            });
+          });
+        } else {
+          thumbsEl.style.display = 'none';
+        }
       } else {
         imgbox.textContent = catIcon(prod.category);
+        thumbsEl.style.display = 'none';
       }
 
       var priceEl = document.getElementById('pp-price');
       var noteEl  = document.getElementById('pp-pnote');
       var addBtn  = document.getElementById('pp-addbtn');
+      var currentPackPrice = 0;
 
       function setAddButton(priceStr, sizeLabel){
         var num = parseFloat(String(priceStr||'').replace(/[^0-9.]/g,''));
@@ -468,12 +525,15 @@ document.querySelectorAll('.ptb').forEach(function(b){
         priceEl.textContent = fmtPrice(first.price);
         noteEl.textContent = '📦 ' + (first.pack||'') + (prod.delivery === 'included' ? ' | Free delivery' : '');
         setAddButton(first.price, (first.size||'') + ' / ' + (first.pack||''));
+        currentPackPrice = parseFloat(String(first.price||'').replace(/[^0-9.]/g,'')) || 0;
         sel.addEventListener('change', function(){
           try {
             var v = JSON.parse(this.value);
             priceEl.textContent = fmtPrice(v.p);
             noteEl.textContent = '📦 ' + (v.n||'') + (prod.delivery === 'included' ? ' | Free delivery' : '');
             setAddButton(v.p, (v.s||'') + ' / ' + (v.n||''));
+            currentPackPrice = parseFloat(String(v.p||'').replace(/[^0-9.]/g,'')) || 0;
+            updateCalc();
           } catch(e){}
         });
       } else {
@@ -481,17 +541,30 @@ document.querySelectorAll('.ptb').forEach(function(b){
         priceEl.textContent = fmtPrice(price);
         noteEl.textContent = (prod.priceNote ? '📦 ' + prod.priceNote : '') + (prod.delivery === 'included' ? ' | Free delivery' : '');
         setAddButton(price, '');
+        currentPackPrice = parseFloat(String(price||'').replace(/[^0-9.]/g,'')) || 0;
       }
 
-      // Specs table — use custom specs if entered in dashboard, otherwise auto-generate
+      // Specs — use custom specs if entered in dashboard, otherwise auto-generate.
+      // Rendered directly under the title (not in a hidden tab).
       var specBody = document.getElementById('pp-spec-body');
+      var specsInline = document.getElementById('pp-specs-inline');
+      var coveragePerPack = 0;
       if (prod.customSpecs && prod.customSpecs.trim()) {
         // Parse "Label | Value" lines entered in the dashboard
-        var rows = prod.customSpecs.trim().split('\n').filter(Boolean).map(function(line) {
+        var specLines = prod.customSpecs.trim().split('\n').filter(Boolean);
+        var rows = specLines.map(function(line) {
           var parts = line.split('|');
-          return '<tr><td><strong>' + esc((parts[0]||'').trim()) + '</strong></td><td>' + esc((parts[1]||'').trim()) + '</td></tr>';
+          var label = (parts[0]||'').trim();
+          var value = (parts[1]||'').trim();
+          // "Coverage per pack" line powers the m² calculator below — pull the number out
+          if (/coverage/i.test(label)) {
+            var n = parseFloat(String(value).replace(/[^0-9.]/g,''));
+            if (!isNaN(n) && n > 0) coveragePerPack = n;
+          }
+          return '<tr><td><strong>' + esc(label) + '</strong></td><td>' + esc(value) + '</td></tr>';
         });
         specBody.innerHTML = rows.join('');
+        specsInline.style.display = rows.length ? '' : 'none';
       } else {
         // Auto-generate from product fields
         var specs = [];
@@ -507,6 +580,31 @@ document.querySelectorAll('.ptb').forEach(function(b){
         specBody.innerHTML = specs.length
           ? specs.map(function(s){ return '<tr><td><strong>'+esc(s[0])+'</strong></td><td>'+esc(s[1])+'</td></tr>'; }).join('')
           : '<tr><td colspan="2">No specification details available.</td></tr>';
+        specsInline.style.display = specs.length ? '' : 'none';
+      }
+
+      // ── COVERAGE CALCULATOR ────────────────────────────────
+      // Shown only when the dashboard's Specifications field includes a
+      // "Coverage per pack | <m²>" line (see admin dashboard hint text).
+      var calcBox = document.getElementById('pp-calc');
+      var calcInput = document.getElementById('pp-calc-input');
+      var calcResult = document.getElementById('pp-calc-result');
+      function updateCalc(){
+        if (!calcResult) return;
+        if (!coveragePerPack || !calcInput.value) { calcResult.innerHTML = ''; return; }
+        var area = parseFloat(calcInput.value);
+        if (isNaN(area) || area <= 0) { calcResult.innerHTML = ''; return; }
+        var packs = Math.ceil(area / coveragePerPack);
+        var totalCoverage = (packs * coveragePerPack);
+        var totalPrice = currentPackPrice ? (packs * currentPackPrice) : 0;
+        calcResult.innerHTML =
+          'You\'ll need <b>' + packs + ' pack' + (packs === 1 ? '' : 's') + '</b>' +
+          ' (' + totalCoverage.toFixed(1) + ' m² total coverage)' +
+          (totalPrice ? '<div class="pp-calc-total">£' + totalPrice.toFixed(2) + '</div>' : '');
+      }
+      if (coveragePerPack > 0) {
+        calcBox.style.display = '';
+        calcInput.addEventListener('input', updateCalc);
       }
 
       // ── MARKDOWN PARSER (for delivery notes) ──────────────
