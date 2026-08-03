@@ -149,6 +149,12 @@ img{max-width:100%;display:block;height:auto}
 .pp-short{color:var(--mid);font-size:.9rem;line-height:1.75;margin-bottom:22px}
 .pp-acts{display:flex;gap:11px;margin-bottom:18px;flex-wrap:wrap}
 .pp-acts a,.pp-acts button{flex:1;min-width:130px}
+.pp-qty{display:flex;align-items:stretch;border:2px solid var(--bd);border-radius:4px;overflow:hidden;flex-shrink:0;height:48px}
+.pp-qty-btn{background:var(--lt);border:none;width:40px;font-size:1.1rem;font-weight:700;color:var(--dk);cursor:pointer;transition:background .2s}
+.pp-qty-btn:hover{background:var(--o);color:var(--wh)}
+.pp-qty input{width:48px;border:none;border-left:2px solid var(--bd);border-right:2px solid var(--bd);text-align:center;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.05rem;color:var(--dk);outline:none;-moz-appearance:textfield}
+.pp-qty input::-webkit-outer-spin-button,.pp-qty input::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
+@media(max-width:768px){.pp-qty{height:44px}}
 .pp-trust{display:flex;flex-wrap:wrap;gap:9px;padding:13px 0;border-top:1px solid var(--bd)}
 .pti{display:flex;align-items:center;gap:6px;font-size:.79rem;color:var(--mid);font-weight:600}
 .pp-tabs{border-bottom:2px solid var(--bd);display:flex;margin-bottom:22px;overflow-x:auto}
@@ -291,6 +297,11 @@ footer{background:#111;padding:40px 20px 18px;color:#888;width:100%}
       </div>
 
       <div class="pp-acts">
+        <div class="pp-qty">
+          <button type="button" class="pp-qty-btn" id="pp-qty-minus" aria-label="Decrease quantity">−</button>
+          <input type="number" id="pp-qty-input" value="1" min="1" step="1" inputmode="numeric">
+          <button type="button" class="pp-qty-btn" id="pp-qty-plus" aria-label="Increase quantity">+</button>
+        </div>
         <button class="btn-o snipcart-add-item" id="pp-addbtn"
           data-item-id=""
           data-item-name=""
@@ -375,6 +386,25 @@ footer{background:#111;padding:40px 20px 18px;color:#888;width:100%}
       }
     });
   });
+})();
+</script>
+<script>
+(function(){
+  var input = document.getElementById('pp-qty-input');
+  var minus = document.getElementById('pp-qty-minus');
+  var plus  = document.getElementById('pp-qty-plus');
+  if (!input || !minus || !plus) return;
+  function clamp(){
+    var n = parseInt(input.value, 10);
+    if (isNaN(n) || n < 1) n = 1;
+    if (n > 999) n = 999;
+    input.value = n;
+    return n;
+  }
+  minus.addEventListener('click', function(){ input.value = clamp() - 1; clamp(); });
+  plus.addEventListener('click', function(){ input.value = clamp() + 1; clamp(); });
+  input.addEventListener('change', clamp);
+  input.addEventListener('blur', clamp);
 })();
 </script>
 <script>
