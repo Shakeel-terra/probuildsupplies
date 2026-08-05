@@ -582,12 +582,18 @@ document.querySelectorAll('.ptb').forEach(function(b){
         return n.trim();
       }
       var baseTitleName = stripSizeAndPriceSuffix(prod.name);
+      // If a variant's own Size text already starts with a thickness (e.g. "16mm x 600 x 900"),
+      // drop any leading thickness baked into the product name (e.g. "20mm - ...") so the title
+      // doesn't show two conflicting thicknesses at once ("20mm ... 16mm x 600 x 900").
+      var baseTitleNameNoThickness = baseTitleName.replace(/^\d+\s*mm\s*-\s*/i, '').trim();
       var currentTitleText = baseTitleName;
       function updateTitleForVariant(v){
         // "coverage" here holds the price-per-m² figure entered directly on the
         // dashboard for this size (not an area) — used as-is, no division.
         var perM2 = parseFloat(String((v&&v.coverage)||'').replace(/[^0-9.]/g,'')) || null;
-        var titleText = baseTitleName
+        var sizeHasOwnThickness = v && v.size && /^\s*\d+\s*mm\b/i.test(v.size);
+        var nameForTitle = sizeHasOwnThickness ? baseTitleNameNoThickness : baseTitleName;
+        var titleText = nameForTitle
           + (v && v.size ? ' - ' + v.size : '');
         currentTitleText = titleText;
         document.title = titleText + ' — Pro Build Supplies';
