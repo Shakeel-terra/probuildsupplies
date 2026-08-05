@@ -584,9 +584,9 @@ document.querySelectorAll('.ptb').forEach(function(b){
       var baseTitleName = stripSizeAndPriceSuffix(prod.name);
       var currentTitleText = baseTitleName;
       function updateTitleForVariant(v){
-        var priceNum = parseFloat(String((v&&v.price)||'').replace(/[^0-9.]/g,''));
-        var covNum = parseFloat(String((v&&v.coverage)||'').replace(/[^0-9.]/g,''));
-        var perM2 = (priceNum && covNum) ? (priceNum/covNum) : null;
+        // "coverage" here holds the price-per-m² figure entered directly on the
+        // dashboard for this size (not an area) — used as-is, no division.
+        var perM2 = parseFloat(String((v&&v.coverage)||'').replace(/[^0-9.]/g,'')) || null;
         var titleText = baseTitleName
           + (v && v.size ? ' - ' + v.size : '');
         currentTitleText = titleText;
