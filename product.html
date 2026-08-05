@@ -136,6 +136,8 @@ img{max-width:100%;display:block;height:auto}
 .pp-title{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(1.7rem,3vw,2.4rem);line-height:1.05;text-transform:uppercase;color:var(--dk);margin-bottom:14px}
 .pp-pricebox{background:var(--lt);border-radius:6px;padding:16px;margin-bottom:18px;border-left:4px solid var(--o)}
 .pp-price{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:2.2rem;color:var(--dk);line-height:1}
+.pp-price-row{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.pp-price-pm2{font-size:.85rem;font-weight:600;color:var(--st);background:#fff;border-radius:4px;padding:2px 8px}
 .pp-pnote{font-size:.8rem;color:var(--st);margin-top:3px}
 .pp-short{color:var(--mid);font-size:.9rem;line-height:1.75;margin-bottom:22px}
 .pp-acts{display:flex;gap:11px;margin-bottom:18px;flex-wrap:wrap}
@@ -267,7 +269,7 @@ footer{background:#111;padding:40px 20px 18px;color:#888;width:100%}
       </div>
 
       <div class="pp-pricebox">
-        <div class="pp-price" id="pp-price">—</div>
+        <div class="pp-price-row"><div class="pp-price" id="pp-price">—</div><span class="pp-price-pm2" id="pp-price-pm2"></span></div>
         <div class="pp-pnote" id="pp-pnote"></div>
       </div>
 
@@ -580,17 +582,21 @@ document.querySelectorAll('.ptb').forEach(function(b){
         return n.trim();
       }
       var baseTitleName = stripSizeAndPriceSuffix(prod.name);
+      var currentTitleText = baseTitleName;
       function updateTitleForVariant(v){
         var priceNum = parseFloat(String((v&&v.price)||'').replace(/[^0-9.]/g,''));
         var covNum = parseFloat(String((v&&v.coverage)||'').replace(/[^0-9.]/g,''));
         var perM2 = (priceNum && covNum) ? (priceNum/covNum) : null;
         var titleText = baseTitleName
-          + (v && v.size ? ' - ' + v.size : '')
-          + (perM2 ? ' (£' + perM2.toFixed(2) + ' per m²)' : '');
+          + (v && v.size ? ' - ' + v.size : '');
+        currentTitleText = titleText;
         document.title = titleText + ' — Pro Build Supplies';
         document.getElementById('pp-pagetitle').textContent = titleText + ' — Pro Build Supplies';
         document.getElementById('pp-title').textContent = titleText;
-        document.getElementById('pp-bc-name').textContent = titleText;
+        var bcNameEl = document.getElementById('pp-bc-name');
+        if (bcNameEl) bcNameEl.textContent = titleText;
+        var pm2El = document.getElementById('pp-price-pm2');
+        if (pm2El) pm2El.textContent = perM2 ? '£' + perM2.toFixed(2) + ' per m²' : '';
       }
 
       // Price / size selector — each size variant carries its own price and pack
@@ -705,7 +711,7 @@ document.querySelectorAll('.ptb').forEach(function(b){
       };
       var catHref = catSlugMap[prod.category] || 'shop.html';
       document.getElementById('pp-breadcrumb').innerHTML =
-        '<a href="index.html">Home</a> › <a href="'+catHref+'">'+esc(prod.category||'Shop')+'</a> › <span id="pp-bc-name">'+esc(prod.name)+'</span>';
+        '<a href="index.html">Home</a> › <a href="'+catHref+'">'+esc(prod.category||'Shop')+'</a> › <span id="pp-bc-name">'+esc(currentTitleText)+'</span>';
     })
     .catch(function(){
       document.getElementById('pp-title').textContent = 'Could not load product';
