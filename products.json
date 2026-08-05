@@ -1020,5 +1020,30 @@
     ],
     "createdAt": "2026-08-05T09:12:37.441476+00:00",
     "updatedAt": "2026-08-05T09:12:37.355+00:00"
+  },
+  {
+    "id": "p1785921541428",
+    "name": "20mm - COPPER RUSTIC SLATE - PORCELAIN PAVING - 600x900mm (£22.95 per m²)",
+    "category": "Porcelain Paving",
+    "price": "£495.72",
+    "priceNote": "Pack of 40 Pieces | 600 x 900mm",
+    "slug": "20mm-copper-rustic-slate-porcelain-paving-600x900mm-22-95-per-m",
+    "url": "",
+    "description": "•  Frost-Proof & Weatherproof — fully vitrified porcelain built to handle UK rain, frost and freeze-thaw cycles without cracking, fading or staining. \n•  Slip-Resistant Surface — textured, anti-slip finish rated R11 for safe footing all year round, indoors and out. \n•  Rectified Edges — precision-cut for sharp, straight edges and tight, uniform joints for a clean, professional finish. \n•  Low-Maintenance & Algae-Resistant — resists moss and algae build-up, so there's no sealing and minimal cleaning required. \n•  Indoor & Outdoor Versatility — suitable for gardens, patios, driveways and interior flooring, for a seamless look between spaces. \n•  20mm Thickness — built for outdoor durability, strong enough for foot traffic, furniture and everyday garden use.\nCE certified and delivered free across the UK. As with any natural-finish porcelain, slight shade variation between batches is normal and part of its character.",
+    "colour": "",
+    "frost": "F2 — Fully frost resistant",
+    "customSpecs": "Size 21.6m2 Coverage\n20mm Thickness\nR11 Matt anti-slip\nVitrified Porcelain / CE Certified",
+    "deliveryNotes": "",
+    "visible": true,
+    "badge": "",
+    "delivery": "included",
+    "sizeVariants": [],
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1785921536366-zs0jnp.jpg",
+    "images": [
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1785921536366-zs0jnp.jpg",
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1785921536363-ahvz9m.jpg"
+    ],
+    "createdAt": "2026-08-05T09:19:01.632593+00:00",
+    "updatedAt": "2026-08-05T09:19:01.429+00:00"
   }
 ]
