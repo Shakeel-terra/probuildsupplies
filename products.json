@@ -508,7 +508,14 @@
     "visible": true,
     "badge": "Best Seller",
     "delivery": "included",
-    "sizeVariants": [],
+    "sizeVariants": [
+      {
+        "pack": "Pack of 60 Pieces | 600 x 900mm",
+        "size": "20mm - 600x600mm",
+        "price": "£507.60",
+        "coverage": "23.5"
+      }
+    ],
     "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1785856187707-cbu6e3.jpg",
     "images": [
       "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1785856187707-cbu6e3.jpg",
@@ -516,7 +523,7 @@
       "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1785856188554-v4yogp.jpg"
     ],
     "createdAt": "2026-08-03T11:04:03.368192+00:00",
-    "updatedAt": "2026-08-04T15:24:19.134+00:00"
+    "updatedAt": "2026-08-05T13:01:46.778+00:00"
   },
   {
     "id": "p1785769941768",
