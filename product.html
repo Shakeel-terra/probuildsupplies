@@ -132,15 +132,6 @@ img{max-width:100%;display:block;height:auto}
 .pp-thumb:hover{border-color:var(--o)}
 .pp-specs-inline{margin-bottom:20px}
 .pp-specs-inline .stbl{margin-top:0}
-.pp-calc{background:var(--wh);border:2px solid var(--o);border-radius:6px;padding:16px 18px;margin-bottom:18px}
-.pp-calc-lbl{display:block;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.85rem;text-transform:uppercase;letter-spacing:.4px;color:var(--dk);margin-bottom:9px}
-.pp-calc-row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
-.pp-calc-row input{flex:1;min-width:110px;padding:11px 13px;background:var(--lt);border:2px solid var(--bd);border-radius:4px;font-family:'Barlow',sans-serif;font-size:.95rem;color:var(--dk);outline:none}
-.pp-calc-row input:focus{border-color:var(--o)}
-.pp-calc-unit{font-size:.85rem;color:var(--mid);font-weight:600}
-.pp-calc-result{margin-top:12px;padding-top:12px;border-top:1px dashed var(--bd);font-size:.88rem;color:var(--mid);line-height:1.7}
-.pp-calc-result b{color:var(--dk)}
-.pp-calc-result .pp-calc-total{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.4rem;color:var(--o)}
 .pp-tag{display:inline-block;background:var(--o);color:var(--wh);font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.76rem;padding:4px 11px;letter-spacing:1.5px;text-transform:uppercase;border-radius:2px;margin-bottom:12px}
 .pp-title{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(1.7rem,3vw,2.4rem);line-height:1.05;text-transform:uppercase;color:var(--dk);margin-bottom:14px}
 .pp-pricebox{background:var(--lt);border-radius:6px;padding:16px;margin-bottom:18px;border-left:4px solid var(--o)}
@@ -278,15 +269,6 @@ footer{background:#111;padding:40px 20px 18px;color:#888;width:100%}
       <div class="pp-pricebox">
         <div class="pp-price" id="pp-price">—</div>
         <div class="pp-pnote" id="pp-pnote"></div>
-      </div>
-
-      <div class="pp-calc" id="pp-calc" style="display:none">
-        <label class="pp-calc-lbl">📐 How many m² do you need?</label>
-        <div class="pp-calc-row">
-          <input type="number" id="pp-calc-input" min="0" step="0.1" placeholder="e.g. 25">
-          <span class="pp-calc-unit">m²</span>
-        </div>
-        <div class="pp-calc-result" id="pp-calc-result"></div>
       </div>
 
       <p class="pp-short" id="pp-short"></p>
@@ -554,12 +536,9 @@ document.querySelectorAll('.ptb').forEach(function(b){
       var sel = document.getElementById('szSel');
 
       // Specs — use custom specs if entered in dashboard, otherwise auto-generate.
-      // Rendered directly under the title (not in a hidden tab). Also works out a
-      // fallback "coverage per pack" value from a "Coverage... | <m²>" spec line,
-      // used by the calculator below when the selected size variant has no coverage of its own.
+      // Rendered directly under the title (not in a hidden tab).
       var specBody = document.getElementById('pp-spec-body');
       var specsInline = document.getElementById('pp-specs-inline');
-      var specsCoverageFallback = 0;
       if (prod.customSpecs && prod.customSpecs.trim()) {
         // Parse "Label | Value" lines entered in the dashboard
         var specLines = prod.customSpecs.trim().split('\n').filter(Boolean);
@@ -567,10 +546,6 @@ document.querySelectorAll('.ptb').forEach(function(b){
           var parts = line.split('|');
           var label = (parts[0]||'').trim();
           var value = (parts[1]||'').trim();
-          if (/coverage/i.test(label)) {
-            var n = parseFloat(String(value).replace(/[^0-9.]/g,''));
-            if (!isNaN(n) && n > 0) specsCoverageFallback = n;
-          }
           return '<tr><td><strong>' + esc(label) + '</strong></td><td>' + esc(value) + '</td></tr>';
         });
         specBody.innerHTML = rows.join('');
@@ -593,37 +568,33 @@ document.querySelectorAll('.ptb').forEach(function(b){
         specsInline.style.display = specs.length ? '' : 'none';
       }
 
-      // ── COVERAGE CALCULATOR ────────────────────────────────
-      // Shown when we know a coverage-per-pack value — either from the selected
-      // size variant's own "Coverage m²" field, or (if that's blank) from a
-      // "Coverage... | <m²>" line in Specifications.
-      var coveragePerPack = 0;
-      var calcBox = document.getElementById('pp-calc');
-      var calcInput = document.getElementById('pp-calc-input');
-      var calcResult = document.getElementById('pp-calc-result');
-      function updateCalc(){
-        if (!calcResult) return;
-        if (!coveragePerPack || !calcInput.value) { calcResult.innerHTML = ''; return; }
-        var area = parseFloat(calcInput.value);
-        if (isNaN(area) || area <= 0) { calcResult.innerHTML = ''; return; }
-        var packs = Math.ceil(area / coveragePerPack);
-        var totalCoverage = (packs * coveragePerPack);
-        var totalPrice = currentPackPrice ? (packs * currentPackPrice) : 0;
-        calcResult.innerHTML =
-          'You\'ll need <b>' + packs + ' pack' + (packs === 1 ? '' : 's') + '</b>' +
-          ' (' + totalCoverage.toFixed(1) + ' m² total coverage)' +
-          (totalPrice ? '<div class="pp-calc-total">£' + totalPrice.toFixed(2) + '</div>' : '');
+      // ── DYNAMIC TITLE FOR SIZE VARIANTS ────────────────────
+      // For products with more than one size, the title updates to show the
+      // selected size and its price-per-m² (that size's own price ÷ its own
+      // coverage), instead of staying fixed to whichever size was typed into
+      // the product name in the dashboard.
+      function stripSizeAndPriceSuffix(name){
+        var n = name || '';
+        n = n.replace(/\s*\(£?[\d.,]+\s*(per\s*m²?|\/\s*m²?)\)\s*$/i, '');
+        n = n.replace(/\s*-\s*\d+\s*[x×]\s*\d+\s*mm\s*$/i, '');
+        return n.trim();
       }
-      function setCoverage(variantCoverageStr){
-        var v = parseFloat(String(variantCoverageStr||'').replace(/[^0-9.]/g,''));
-        coveragePerPack = (!isNaN(v) && v > 0) ? v : specsCoverageFallback;
-        calcBox.style.display = coveragePerPack > 0 ? '' : 'none';
-        updateCalc();
+      var baseTitleName = stripSizeAndPriceSuffix(prod.name);
+      function updateTitleForVariant(v){
+        var priceNum = parseFloat(String((v&&v.price)||'').replace(/[^0-9.]/g,''));
+        var covNum = parseFloat(String((v&&v.coverage)||'').replace(/[^0-9.]/g,''));
+        var perM2 = (priceNum && covNum) ? (priceNum/covNum) : null;
+        var titleText = baseTitleName
+          + (v && v.size ? ' - ' + v.size : '')
+          + (perM2 ? ' (£' + perM2.toFixed(2) + ' per m²)' : '');
+        document.title = titleText + ' — Pro Build Supplies';
+        document.getElementById('pp-pagetitle').textContent = titleText + ' — Pro Build Supplies';
+        document.getElementById('pp-title').textContent = titleText;
+        document.getElementById('pp-bc-name').textContent = titleText;
       }
-      calcInput.addEventListener('input', updateCalc);
 
-      // Price / size selector — each size variant can carry its own price AND its
-      // own coverage (m²), so switching size updates price, add-to-cart AND the calculator.
+      // Price / size selector — each size variant carries its own price and pack
+      // size, so switching size updates price, pack info, add-to-cart AND the title.
       if (prod.sizeVariants && prod.sizeVariants.length > 0) {
         wrap.style.display = '';
         sel.innerHTML = prod.sizeVariants.map(function(v,i){
@@ -635,7 +606,7 @@ document.querySelectorAll('.ptb').forEach(function(b){
         noteEl.textContent = '📦 ' + (first.pack||'') + (prod.delivery === 'included' ? ' | Free delivery' : '');
         setAddButton(first.price, (first.size||'') + ' / ' + (first.pack||''));
         currentPackPrice = parseFloat(String(first.price||'').replace(/[^0-9.]/g,'')) || 0;
-        setCoverage(first.coverage);
+        updateTitleForVariant(first);
         sel.addEventListener('change', function(){
           try {
             var v = JSON.parse(this.value);
@@ -643,7 +614,7 @@ document.querySelectorAll('.ptb').forEach(function(b){
             noteEl.textContent = '📦 ' + (v.n||'') + (prod.delivery === 'included' ? ' | Free delivery' : '');
             setAddButton(v.p, (v.s||'') + ' / ' + (v.n||''));
             currentPackPrice = parseFloat(String(v.p||'').replace(/[^0-9.]/g,'')) || 0;
-            setCoverage(v.c);
+            updateTitleForVariant({price:v.p, coverage:v.c, size:v.s});
           } catch(e){}
         });
       } else {
@@ -652,7 +623,6 @@ document.querySelectorAll('.ptb').forEach(function(b){
         noteEl.textContent = (prod.priceNote ? '📦 ' + prod.priceNote : '') + (prod.delivery === 'included' ? ' | Free delivery' : '');
         setAddButton(price, '');
         currentPackPrice = parseFloat(String(price||'').replace(/[^0-9.]/g,'')) || 0;
-        setCoverage('');
       }
 
       // ── MARKDOWN PARSER (for delivery notes) ──────────────
