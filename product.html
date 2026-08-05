@@ -604,8 +604,9 @@ document.querySelectorAll('.ptb').forEach(function(b){
       if (prod.sizeVariants && prod.sizeVariants.length > 0) {
         wrap.style.display = '';
         sel.innerHTML = prod.sizeVariants.map(function(v,i){
+          var pm2Num = parseFloat(String(v.coverage||'').replace(/[^0-9.]/g,''));
           return '<option value=\'' + JSON.stringify({p:v.price,n:v.pack,s:v.size,c:v.coverage||''}) + '\' ' + (i===0?'selected':'') + '>' +
-            (v.size||'') + ' — ' + (v.pack||'') + (v.price ? ' — ' + fmtPrice(v.price) : '') + '</option>';
+            (v.size||'') + ' — ' + (v.pack||'') + (v.price ? ' — ' + fmtPrice(v.price) : '') + (pm2Num ? ' (£' + pm2Num.toFixed(2) + '/m²)' : '') + '</option>';
         }).join('');
         var first = prod.sizeVariants[0];
         priceEl.textContent = fmtPrice(first.price);
