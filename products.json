@@ -520,6 +520,12 @@
         "size": "600x600mm",
         "price": "£507.60",
         "coverage": "£23.50"
+      },
+      {
+        "pack": "Pack of 72 Pieces",
+        "size": "MIX PATIO PACKS",
+        "price": "£513.86",
+        "coverage": "£24.40"
       }
     ],
     "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1785856187707-cbu6e3.jpg",
@@ -529,7 +535,7 @@
       "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1785856188554-v4yogp.jpg"
     ],
     "createdAt": "2026-08-03T11:04:03.368192+00:00",
-    "updatedAt": "2026-08-05T13:36:56.464+00:00"
+    "updatedAt": "2026-08-05T13:53:51.548+00:00"
   },
   {
     "id": "p1785769941768",
