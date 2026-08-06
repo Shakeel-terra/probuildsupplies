@@ -749,13 +749,26 @@
     "visible": true,
     "badge": "",
     "delivery": "included",
-    "sizeVariants": [],
+    "sizeVariants": [
+      {
+        "pack": "Pack of 40 Pieces",
+        "size": "600 x 900mm",
+        "price": "£495.72",
+        "coverage": "£22.95"
+      },
+      {
+        "pack": "Pack of 60 Pieces",
+        "size": "600 x 600mm",
+        "price": "£507.60",
+        "coverage": "£23.50"
+      }
+    ],
     "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1785856192532-wbianp.jpg",
     "images": [
       "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1785856192532-wbianp.jpg"
     ],
     "createdAt": "2026-08-04T12:18:12.397463+00:00",
-    "updatedAt": "2026-08-04T15:09:52.752+00:00"
+    "updatedAt": "2026-08-06T11:55:33.33+00:00"
   },
   {
     "id": "p1785847450504",
@@ -943,7 +956,26 @@
     "visible": true,
     "badge": "",
     "delivery": "included",
-    "sizeVariants": [],
+    "sizeVariants": [
+      {
+        "pack": "Pack of 40 Pieces",
+        "size": "600 x 900mm",
+        "price": "£495.72",
+        "coverage": "£22.95"
+      },
+      {
+        "pack": "Pack of 60 Pieces",
+        "size": "600 x 600mm",
+        "price": "£507.60",
+        "coverage": "£23.50"
+      },
+      {
+        "pack": "Pack of 72",
+        "size": "MIX PATIO PACKS",
+        "price": "£513.86",
+        "coverage": "£24.40"
+      }
+    ],
     "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1785856196304-hsc4jb.jpg",
     "images": [
       "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1785856196304-hsc4jb.jpg",
@@ -951,7 +983,7 @@
       "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1785856196780-qthduo.jpg"
     ],
     "createdAt": "2026-08-04T14:13:17.97804+00:00",
-    "updatedAt": "2026-08-04T15:25:42.197+00:00"
+    "updatedAt": "2026-08-06T12:01:01.359+00:00"
   },
   {
     "id": "p1785853658708",
