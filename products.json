@@ -610,7 +610,20 @@
     "visible": true,
     "badge": "Best Seller",
     "delivery": "included",
-    "sizeVariants": [],
+    "sizeVariants": [
+      {
+        "pack": "Pack of 40 Pieces",
+        "size": "600 x 900mm",
+        "price": "£495.72",
+        "coverage": "£22.95"
+      },
+      {
+        "pack": "Pack of 60 Pieces",
+        "size": "600 x 600mm",
+        "price": "£507.60",
+        "coverage": "£23.50"
+      }
+    ],
     "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1785856190012-h7mfyl.jpg",
     "images": [
       "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1785856190012-h7mfyl.jpg",
@@ -619,7 +632,7 @@
       "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1785856190705-zj760h.jpg"
     ],
     "createdAt": "2026-08-04T10:11:57.562942+00:00",
-    "updatedAt": "2026-08-04T15:24:26.896+00:00"
+    "updatedAt": "2026-08-06T11:24:02.507+00:00"
   },
   {
     "id": "p1785839433181",
@@ -637,7 +650,32 @@
     "visible": true,
     "badge": "In Stock",
     "delivery": "included",
-    "sizeVariants": [],
+    "sizeVariants": [
+      {
+        "pack": "Pack of 40 Pieces",
+        "size": "600 x 900mm",
+        "price": "£495.72",
+        "coverage": "£22.95"
+      },
+      {
+        "pack": "Pack of 60 Pieces",
+        "size": "600 x 600mm",
+        "price": "£507.60",
+        "coverage": "£23.50"
+      },
+      {
+        "pack": "Pack of 72 Pieces",
+        "size": "MIX PATIO PACKS",
+        "price": "£513.86",
+        "coverage": "£24.40"
+      },
+      {
+        "pack": "Pack of 52 Pieces",
+        "size": "16mm x 600 x 900",
+        "price": "£536.05",
+        "coverage": "£19.09"
+      }
+    ],
     "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1785856191043-npu9vm.jpg",
     "images": [
       "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1785856191043-npu9vm.jpg",
@@ -645,7 +683,7 @@
       "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1785856191511-xigwbu.jpg"
     ],
     "createdAt": "2026-08-04T10:30:34.024517+00:00",
-    "updatedAt": "2026-08-04T15:24:30.483+00:00"
+    "updatedAt": "2026-08-06T11:29:56.308+00:00"
   },
   {
     "id": "p1785840151615",
@@ -735,7 +773,26 @@
     "visible": true,
     "badge": "",
     "delivery": "included",
-    "sizeVariants": [],
+    "sizeVariants": [
+      {
+        "pack": "Pack of 40 Pieces",
+        "size": "600 x 900mm",
+        "price": "£495.72",
+        "coverage": "£22.95"
+      },
+      {
+        "pack": "Pack of 72 Pieces",
+        "size": "MIX PATIO PACKS",
+        "price": "£513.86",
+        "coverage": "£24.40"
+      },
+      {
+        "pack": "Pack of 52 Pieces",
+        "size": "16mm x 600 x 900",
+        "price": "£536.05",
+        "coverage": "£19.09"
+      }
+    ],
     "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1785856192858-er46ol.jpg",
     "images": [
       "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1785856192858-er46ol.jpg",
@@ -743,7 +800,7 @@
       "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1785856193363-n6jgil.jpg"
     ],
     "createdAt": "2026-08-04T12:44:11.229793+00:00",
-    "updatedAt": "2026-08-04T15:24:58.997+00:00"
+    "updatedAt": "2026-08-06T11:26:17.968+00:00"
   },
   {
     "id": "p1785847667860",
@@ -835,7 +892,32 @@
     "visible": true,
     "badge": "",
     "delivery": "included",
-    "sizeVariants": [],
+    "sizeVariants": [
+      {
+        "pack": "Pack of 40 Pieces",
+        "size": "600 x 900mm",
+        "price": "£495.72",
+        "coverage": "£22.95"
+      },
+      {
+        "pack": "Pack of 60 Pieces",
+        "size": "600 x 600mm",
+        "price": "£507.60",
+        "coverage": "£23.50"
+      },
+      {
+        "pack": "Pack of 72 Pieces",
+        "size": "MIX PATIO PACKS",
+        "price": "£513.86",
+        "coverage": "£24.40"
+      },
+      {
+        "pack": "Pack of 52 Pieces",
+        "size": "16mm x 600 x 900",
+        "price": "£536.05",
+        "coverage": "£19.09"
+      }
+    ],
     "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1785856195389-u57zxl.jpg",
     "images": [
       "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1785856195389-u57zxl.jpg",
@@ -843,7 +925,7 @@
       "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1785856195910-4or14m.jpg"
     ],
     "createdAt": "2026-08-04T13:46:21.052287+00:00",
-    "updatedAt": "2026-08-04T15:25:26.073+00:00"
+    "updatedAt": "2026-08-06T11:33:01.925+00:00"
   },
   {
     "id": "p1785852797121",
