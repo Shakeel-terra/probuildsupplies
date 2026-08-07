@@ -752,13 +752,20 @@ document.querySelectorAll('.ptb').forEach(function(b){
       // ── SEO: meta description, canonical link, and structured data ──
       // Runs once the product is loaded, using data already fetched above.
       var canonicalUrl = window.location.origin + window.location.pathname + '?slug=' + encodeURIComponent(prod.slug);
-      var metaDescText = descFirstLine || (prod.name + ' — quality building materials from Pro Build Supplies, Preston.');
-      if (metaDescText.length > 160) {
-        var cut = metaDescText.slice(0, 157);
+      // Every meta description ends with the same local phrase so Preston/Lancashire/
+      // North West always appear in search snippets, even if the product's own
+      // description text doesn't happen to mention a location in its first line.
+      var localPhrase = 'Delivered across Preston, Lancashire & the North West.';
+      var descPart = descFirstLine || (prod.name + ' — quality building materials from Pro Build Supplies.');
+      var maxDescLen = 160 - localPhrase.length - 1;
+      if (descPart.length > maxDescLen) {
+        var cut = descPart.slice(0, maxDescLen);
         var lastSpace = cut.lastIndexOf(' ');
-        if (lastSpace > 100) cut = cut.slice(0, lastSpace);
-        metaDescText = cut.trim() + '...';
+        if (lastSpace > 40) cut = cut.slice(0, lastSpace);
+        descPart = cut.trim();
+        if (!/[.!?]$/.test(descPart)) descPart += '...';
       }
+      var metaDescText = (descPart + ' ' + localPhrase).trim();
       var metaDescEl = document.getElementById('pp-metadesc');
       if (metaDescEl) metaDescEl.setAttribute('content', metaDescText);
       var canonEl = document.getElementById('pp-canonical');
