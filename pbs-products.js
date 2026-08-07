@@ -142,7 +142,7 @@ function productUrl(p, prefix) {
         a.className = 'sd-item';
         a.href = productUrl(p);
         a.innerHTML =
-          '<div class="sd-img">' + (p.image ? '<img src="' + p.image + '" alt="">' : '📦') + '</div>' +
+          '<div class="sd-img">' + (p.image ? '<img src="' + p.image + '" alt="' + esc(p.name||'') + '">' : '📦') + '</div>' +
           '<div class="sd-info">' +
             '<div class="sd-name">' + (p.name||'') + '</div>' +
             '<div class="sd-cat">' + (p.category||'') + '</div>' +
@@ -625,7 +625,7 @@ function productUrl(p, prefix) {
       if (related.length) {
         relGrid.innerHTML = related.map(function(r) {
           var img2 = r.image
-            ? '<img src="'+r.image+'" alt="" style="width:100%;height:100%;object-fit:cover">'
+            ? '<img src="'+r.image+'" alt="'+esc(r.name||'')+'" style="width:100%;height:100%;object-fit:cover">'
             : catIcon(r.category);
           return '<a href="'+r.slug+'.html" class="pcard">'
             +'<div class="pimg" style="'+catBg(r.category)+'">'+img2+'</div>'
