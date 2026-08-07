@@ -585,6 +585,17 @@ document.querySelectorAll('.ptb').forEach(function(b){
         n = n.replace(/\s*-\s*\d+\s*[x×]\s*\d+\s*mm\s*$/i, '');
         return n.trim();
       }
+      // For products with only ONE size (no dropdown), the per-m² figure was
+      // typed straight into the product name in the dashboard, e.g. "... (£22.95
+      // per m²)". Strip just that bit (keep the size) and read the number back
+      // out so it can be shown next to the price instead of in the title.
+      function stripPriceSuffixOnly(name){
+        return (name || '').replace(/\s*\(£?[\d.,]+\s*(per\s*m²?|\/\s*m²?)\)\s*$/i, '').trim();
+      }
+      function extractPerM2FromName(name){
+        var m = String(name || '').match(/\(£?([\d.,]+)\s*(?:per\s*m²?|\/\s*m²?)\)/i);
+        return m ? parseFloat(m[1].replace(/,/g, '')) : null;
+      }
       var baseTitleName = stripSizeAndPriceSuffix(prod.name);
       // If a variant's own Size text already starts with a thickness (e.g. "16mm x 600 x 900"),
       // drop any leading thickness baked into the product name (e.g. "20mm - ...") so the title
@@ -640,6 +651,19 @@ document.querySelectorAll('.ptb').forEach(function(b){
         noteEl.textContent = (prod.priceNote ? '📦 ' + prod.priceNote : '') + (prod.delivery === 'included' ? ' | Free delivery' : '');
         setAddButton(price, '');
         currentPackPrice = parseFloat(String(price||'').replace(/[^0-9.]/g,'')) || 0;
+
+        // No size dropdown here, but still clean up the title and move any
+        // "(£X per m²)" baked into the name to sit next to the price instead.
+        var singleTitleText = stripPriceSuffixOnly(prod.name);
+        currentTitleText = singleTitleText;
+        document.title = singleTitleText + ' — Pro Build Supplies';
+        document.getElementById('pp-pagetitle').textContent = singleTitleText + ' — Pro Build Supplies';
+        document.getElementById('pp-title').textContent = singleTitleText;
+        var bcNameSingleEl = document.getElementById('pp-bc-name');
+        if (bcNameSingleEl) bcNameSingleEl.textContent = singleTitleText;
+        var singlePerM2 = extractPerM2FromName(prod.name);
+        var pm2SingleEl = document.getElementById('pp-price-pm2');
+        if (pm2SingleEl) pm2SingleEl.textContent = singlePerM2 ? '£' + singlePerM2.toFixed(2) + ' per m²' : '';
       }
 
       // ── MARKDOWN PARSER (for delivery notes) ──────────────
@@ -729,7 +753,12 @@ document.querySelectorAll('.ptb').forEach(function(b){
       // Runs once the product is loaded, using data already fetched above.
       var canonicalUrl = window.location.origin + window.location.pathname + '?slug=' + encodeURIComponent(prod.slug);
       var metaDescText = descFirstLine || (prod.name + ' — quality building materials from Pro Build Supplies, Preston.');
-      if (metaDescText.length > 160) metaDescText = metaDescText.slice(0, 157).trim() + '...';
+      if (metaDescText.length > 160) {
+        var cut = metaDescText.slice(0, 157);
+        var lastSpace = cut.lastIndexOf(' ');
+        if (lastSpace > 100) cut = cut.slice(0, lastSpace);
+        metaDescText = cut.trim() + '...';
+      }
       var metaDescEl = document.getElementById('pp-metadesc');
       if (metaDescEl) metaDescEl.setAttribute('content', metaDescText);
       var canonEl = document.getElementById('pp-canonical');
