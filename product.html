@@ -661,7 +661,7 @@ document.querySelectorAll('.ptb').forEach(function(b){
         document.getElementById('pp-title').textContent = singleTitleText;
         var bcNameSingleEl = document.getElementById('pp-bc-name');
         if (bcNameSingleEl) bcNameSingleEl.textContent = singleTitleText;
-        var singlePerM2 = extractPerM2FromName(prod.name);
+        var singlePerM2 = parseFloat(String(prod.pricePerM2 || '').replace(/[^0-9.]/g, '')) || extractPerM2FromName(prod.name);
         var pm2SingleEl = document.getElementById('pp-price-pm2');
         if (pm2SingleEl) pm2SingleEl.textContent = singlePerM2 ? '£' + singlePerM2.toFixed(2) + ' per m²' : '';
       }
