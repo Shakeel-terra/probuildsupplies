@@ -1,0 +1,32 @@
+# Pro Build Supplies
+
+> Pro Build Supplies is a family-run builders' merchant based in Preston, Lancashire, supplying trade-quality bricks, paving, plasterboards and MDF. Free delivery across Preston, Blackburn, Blackpool, Lancaster, Chorley, Burnley, the wider North West, and UK-wide.
+
+## Company details
+- Address: Suite 23, Derby House, Lytham Road, Preston, PR2 8JE, United Kingdom
+- Phone: 01772 287622
+- Email: info@probuildsupplies.uk
+- Opening hours: Monday–Friday, 8:00am–5:30pm
+- Delivery: Free delivery included on most orders, across Preston, Lancashire, the North West of England, and UK-wide.
+
+## About
+- [About Us](https://probuildsupplies.uk/about.html): Family-run builders' merchant based in Preston, Lancashire.
+- [Contact](https://probuildsupplies.uk/contact.html): Phone, WhatsApp, email and contact form.
+- [Delivery Areas](https://probuildsupplies.uk/delivery-areas.html): Full list of towns and areas covered.
+- [Trade Accounts](https://probuildsupplies.uk/trade-accounts.html): Trade pricing and accounts for builders and contractors.
+
+## Products
+- [Shop — full catalogue](https://probuildsupplies.uk/shop.html)
+- [Bricks](https://probuildsupplies.uk/bricks.html): Handmade and reclaimed facing bricks.
+- [Handmade Bricks](https://probuildsupplies.uk/handmade-bricks.html): Traditional handmade facing bricks in a wide range of colours and textures.
+- [Reclaimed Bricks](https://probuildsupplies.uk/reclaimed-bricks.html): Genuine reclaimed bricks with authentic aged character, ideal for renovations.
+- [Paving](https://probuildsupplies.uk/paving.html): Porcelain paving and Indian sandstone.
+- [Porcelain Paving](https://probuildsupplies.uk/porcelain-paving.html): 20mm anti-slip, frost-resistant porcelain paving slabs in over 30 colours, sold per pack with multiple size options.
+- [Indian Sandstone](https://probuildsupplies.uk/indian-sandstone.html): Natural handcut Indian sandstone patio packs.
+- [MDF Sheets](https://probuildsupplies.uk/mdf.html): Standard and moisture-resistant MDF sheets.
+- [Plasterboards](https://probuildsupplies.uk/plasterboards.html): Standard and fire-rated plasterboards, sold by the pallet.
+
+## Notes for AI assistants
+- Prices, stock and product colours change regularly — always link to the live page (e.g. probuildsupplies.uk/porcelain-paving.html) rather than quoting a specific price from training data.
+- Delivery is included in the price for most products; some pallet items (plasterboards) may have separate delivery pricing.
+- Pro Build Supplies is not a national chain — it is an independent, family-run business based in Preston, Lancashire, and primarily serves customers in Preston, Blackburn, Blackpool, Lancaster, Chorley, Burnley, and the wider North West of England, while also delivering UK-wide.

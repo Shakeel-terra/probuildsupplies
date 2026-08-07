@@ -32,8 +32,19 @@
 <title id="pp-pagetitle">Product — Pro Build Supplies</title>
 <meta name="description" id="pp-metadesc" content="Trade-quality building materials from Pro Build Supplies, Preston.">
 <link rel="canonical" id="pp-canonical" href="https://probuildsupplies.uk/product.html">
+<meta property="og:type" content="product">
+<meta property="og:site_name" content="Pro Build Supplies">
+<meta property="og:title" id="pp-og-title" content="Pro Build Supplies">
+<meta property="og:description" id="pp-og-desc" content="Trade-quality building materials from Pro Build Supplies, Preston.">
+<meta property="og:image" id="pp-og-image" content="">
+<meta property="og:url" id="pp-og-url" content="https://probuildsupplies.uk/product.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" id="pp-twitter-title" content="Pro Build Supplies">
+<meta name="twitter:description" id="pp-twitter-desc" content="Trade-quality building materials from Pro Build Supplies, Preston.">
+<meta name="twitter:image" id="pp-twitter-image" content="">
 <script type="application/ld+json" id="pp-schema-product"></script>
 <script type="application/ld+json" id="pp-schema-breadcrumb"></script>
+<script type="application/ld+json" id="pp-schema-faq"></script>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style id="snip-vars">
@@ -824,6 +835,62 @@ document.querySelectorAll('.ptb').forEach(function(b){
       };
       var schemaBcEl = document.getElementById('pp-schema-breadcrumb');
       if (schemaBcEl) schemaBcEl.textContent = JSON.stringify(breadcrumbSchema);
+
+      // ── Open Graph / Twitter Card tags ──
+      // Controls how the page looks when shared on Facebook, Facebook Marketplace,
+      // WhatsApp, Twitter/X, etc. — a proper preview card instead of a blank link.
+      var ogImage = gallery.length ? gallery[0] : '';
+      var ogTitleEl = document.getElementById('pp-og-title');
+      var ogDescEl = document.getElementById('pp-og-desc');
+      var ogImageEl = document.getElementById('pp-og-image');
+      var ogUrlEl = document.getElementById('pp-og-url');
+      var twTitleEl = document.getElementById('pp-twitter-title');
+      var twDescEl = document.getElementById('pp-twitter-desc');
+      var twImageEl = document.getElementById('pp-twitter-image');
+      if (ogTitleEl) ogTitleEl.setAttribute('content', currentTitleText);
+      if (ogDescEl) ogDescEl.setAttribute('content', metaDescText);
+      if (ogImageEl) ogImageEl.setAttribute('content', ogImage);
+      if (ogUrlEl) ogUrlEl.setAttribute('content', canonicalUrl);
+      if (twTitleEl) twTitleEl.setAttribute('content', currentTitleText);
+      if (twDescEl) twDescEl.setAttribute('content', metaDescText);
+      if (twImageEl) twImageEl.setAttribute('content', ogImage);
+
+      // ── FAQ schema ──
+      // Many product descriptions already end with a "FAQs" section written as
+      // plain Q&A text (e.g. "Is HS Grey slip resistant?\nYes..."). Reuse that
+      // content as FAQPage schema instead of asking for it to be entered again.
+      function extractFaqs(description){
+        var text = String(description || '');
+        var m = text.match(/\n\s*FAQs\s*\n/i);
+        if (!m) return [];
+        var after = text.slice(m.index + m[0].length);
+        var blocks = after.split(/\n\s*\n/).map(function(b){ return b.trim(); }).filter(Boolean);
+        var faqs = [];
+        blocks.forEach(function(block){
+          var lines = block.split('\n').map(function(l){ return l.trim(); }).filter(Boolean);
+          if (lines.length < 2) return;
+          var question = lines[0];
+          var answer = lines.slice(1).join(' ');
+          if (question && answer) faqs.push({ question: question, answer: answer });
+        });
+        return faqs;
+      }
+      var faqs = extractFaqs(prod.description);
+      if (faqs.length) {
+        var faqSchema = {
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: faqs.map(function(f){
+            return {
+              '@type': 'Question',
+              name: f.question,
+              acceptedAnswer: { '@type': 'Answer', text: f.answer }
+            };
+          })
+        };
+        var schemaFaqEl = document.getElementById('pp-schema-faq');
+        if (schemaFaqEl) schemaFaqEl.textContent = JSON.stringify(faqSchema);
+      }
     })
     .catch(function(){
       document.getElementById('pp-title').textContent = 'Could not load product';
