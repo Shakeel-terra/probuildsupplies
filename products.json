@@ -725,13 +725,32 @@
     "visible": true,
     "badge": "",
     "delivery": "included",
-    "sizeVariants": [],
+    "sizeVariants": [
+      {
+        "pack": "Pack of 40 Pieces",
+        "size": "600 x 900mm",
+        "price": "£495.72",
+        "coverage": "£22.95"
+      },
+      {
+        "pack": "Pack of 60 Pieces",
+        "size": "600 x 600mm",
+        "price": "£507.60",
+        "coverage": "£23.50"
+      },
+      {
+        "pack": "Pack of 52 Pieces",
+        "size": "16mm x 600 x 900",
+        "price": "£536.05",
+        "coverage": "£19.09"
+      }
+    ],
     "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1785856192197-sv8x6p.jpg",
     "images": [
       "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1785856192197-sv8x6p.jpg"
     ],
     "createdAt": "2026-08-04T11:41:14.883134+00:00",
-    "updatedAt": "2026-08-06T12:34:16.54+00:00"
+    "updatedAt": "2026-08-07T09:14:40.206+00:00"
   },
   {
     "id": "p1785845891773",
@@ -880,14 +899,27 @@
     "visible": true,
     "badge": "",
     "delivery": "included",
-    "sizeVariants": [],
+    "sizeVariants": [
+      {
+        "pack": "Pack of 40 Pieces",
+        "size": "600 x 900mm",
+        "price": "£495.72",
+        "coverage": "£22.95"
+      },
+      {
+        "pack": "Pack of 52 Pieces",
+        "size": "16mm x 600 x 900",
+        "price": "£536.05",
+        "coverage": "£19.09"
+      }
+    ],
     "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1785856194731-w21g61.jpg",
     "images": [
       "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1785856194731-w21g61.jpg",
       "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1785856194995-cpyz09.jpg"
     ],
     "createdAt": "2026-08-04T13:19:50.573721+00:00",
-    "updatedAt": "2026-08-06T12:37:09.264+00:00"
+    "updatedAt": "2026-08-07T08:58:47.091+00:00"
   },
   {
     "id": "p1785851180289",
@@ -974,6 +1006,12 @@
         "size": "MIX PATIO PACKS",
         "price": "£513.86",
         "coverage": "£24.40"
+      },
+      {
+        "pack": "Pack of 52 Pieces",
+        "size": "16mm x 600 x 900",
+        "price": "£536.05",
+        "coverage": "£19.09"
       }
     ],
     "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1785856196304-hsc4jb.jpg",
@@ -983,7 +1021,7 @@
       "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1785856196780-qthduo.jpg"
     ],
     "createdAt": "2026-08-04T14:13:17.97804+00:00",
-    "updatedAt": "2026-08-06T12:37:51.237+00:00"
+    "updatedAt": "2026-08-07T08:59:51.529+00:00"
   },
   {
     "id": "p1785853658708",
@@ -1026,7 +1064,26 @@
     "visible": true,
     "badge": "",
     "delivery": "included",
-    "sizeVariants": [],
+    "sizeVariants": [
+      {
+        "pack": "Pack of 40 Pieces",
+        "size": "600 x 900mm",
+        "price": "£495.72",
+        "coverage": "£22.95"
+      },
+      {
+        "pack": "Pack of 72 Pieces",
+        "size": "MIX PATIO PACKS",
+        "price": "£513.86",
+        "coverage": "£24.40"
+      },
+      {
+        "pack": "Pack of 52 Pieces",
+        "size": "16mm x 600 x 900",
+        "price": "£536.05",
+        "coverage": "£19.09"
+      }
+    ],
     "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1785856197934-8n4cu5.jpg",
     "images": [
       "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1785856197934-8n4cu5.jpg",
@@ -1034,7 +1091,7 @@
       "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1785856198619-g4nwo5.jpg"
     ],
     "createdAt": "2026-08-04T14:37:21.605844+00:00",
-    "updatedAt": "2026-08-06T12:39:42.15+00:00"
+    "updatedAt": "2026-08-07T09:00:38.038+00:00"
   },
   {
     "id": "p1785920203835",
@@ -1127,14 +1184,27 @@
     "visible": true,
     "badge": "",
     "delivery": "included",
-    "sizeVariants": [],
+    "sizeVariants": [
+      {
+        "pack": "Pack of 40 Pieces",
+        "size": "600 x 900mm",
+        "price": "£495.72",
+        "coverage": "£22.95"
+      },
+      {
+        "pack": "Pack of 52 Pieces",
+        "size": "16mm x 600 x 900",
+        "price": "£536.05",
+        "coverage": "£19.09"
+      }
+    ],
     "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1785920604477-s3prym.jpg",
     "images": [
       "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1785920604477-s3prym.jpg",
       "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1785920604481-2afibd.jpg"
     ],
     "createdAt": "2026-08-05T09:03:31.249381+00:00",
-    "updatedAt": "2026-08-06T12:42:15.19+00:00"
+    "updatedAt": "2026-08-07T09:05:33.529+00:00"
   },
   {
     "id": "p1785920918718",
@@ -1176,14 +1246,27 @@
     "visible": true,
     "badge": "",
     "delivery": "included",
-    "sizeVariants": [],
+    "sizeVariants": [
+      {
+        "pack": "Pack of 40 Pieces",
+        "size": "600 x 900mm",
+        "price": "£495.72",
+        "coverage": "£22.95"
+      },
+      {
+        "pack": "Pack of 52 Pieces",
+        "size": "16mm x 600 x 900",
+        "price": "£536.05",
+        "coverage": "£19.09"
+      }
+    ],
     "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1785921112816-1eogjr.jpg",
     "images": [
       "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1785921112816-1eogjr.jpg",
       "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1785921150882-jude9o.jpg"
     ],
     "createdAt": "2026-08-05T09:12:37.441476+00:00",
-    "updatedAt": "2026-08-06T12:43:46.051+00:00"
+    "updatedAt": "2026-08-07T09:06:49.871+00:00"
   },
   {
     "id": "p1785921541428",
@@ -1201,14 +1284,27 @@
     "visible": true,
     "badge": "",
     "delivery": "included",
-    "sizeVariants": [],
+    "sizeVariants": [
+      {
+        "pack": "Pack of 40 Pieces",
+        "size": "600 x 900mm",
+        "price": "£495.72",
+        "coverage": "£22.95"
+      },
+      {
+        "pack": "Pack of 72 Pieces",
+        "size": "MIX PATIO PACKS",
+        "price": "£513.86",
+        "coverage": "£24.40"
+      }
+    ],
     "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1785921536366-zs0jnp.jpg",
     "images": [
       "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1785921536366-zs0jnp.jpg",
       "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1785921536363-ahvz9m.jpg"
     ],
     "createdAt": "2026-08-05T09:19:01.632593+00:00",
-    "updatedAt": "2026-08-06T12:44:03.808+00:00"
+    "updatedAt": "2026-08-07T08:56:42+00:00"
   },
   {
     "id": "p1785922138718",
@@ -1226,13 +1322,26 @@
     "visible": true,
     "badge": "",
     "delivery": "included",
-    "sizeVariants": [],
+    "sizeVariants": [
+      {
+        "pack": "Pack of 40 Pieces",
+        "size": "600 x 900mm",
+        "price": "£495.72",
+        "coverage": "£22.95"
+      },
+      {
+        "pack": "Pack of 52 Pieces",
+        "size": "16mm x 600 x 900",
+        "price": "£536.05",
+        "coverage": "£19.09"
+      }
+    ],
     "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1785922134251-6w2a83.jpg",
     "images": [
       "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1785922134251-6w2a83.jpg"
     ],
     "createdAt": "2026-08-05T09:28:58.83492+00:00",
-    "updatedAt": "2026-08-06T12:45:00.997+00:00"
+    "updatedAt": "2026-08-07T09:08:39.529+00:00"
   },
   {
     "id": "p1785922273650",
@@ -1250,23 +1359,36 @@
     "visible": true,
     "badge": "",
     "delivery": "included",
-    "sizeVariants": [],
+    "sizeVariants": [
+      {
+        "pack": "Pack of 40 Pieces",
+        "size": "600 x 900mm",
+        "price": "£495.72",
+        "coverage": "£22.95"
+      },
+      {
+        "pack": "Pack of 52 Pieces",
+        "size": "16mm x 600 x 900",
+        "price": "£536.05",
+        "coverage": "£19.09"
+      }
+    ],
     "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1785922268789-1ofjb9.jpg",
     "images": [
       "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1785922268789-1ofjb9.jpg"
     ],
     "createdAt": "2026-08-05T09:31:13.750813+00:00",
-    "updatedAt": "2026-08-06T12:45:29.458+00:00"
+    "updatedAt": "2026-08-07T09:09:39.607+00:00"
   },
   {
     "id": "p1785922450279",
-    "name": "20mm - COUNTRY LIGHT GREY - PORCELAIN PAVING - 600x900mm (£22.95 per m²)",
+    "name": "20mm - COUNTY LIGHT GREY - PORCELAIN PAVING - 600x900mm (£22.95 per m²)",
     "category": "Porcelain Paving",
     "price": "£495.72",
     "priceNote": "Pack of 40 Pieces | 600 x 900mm",
     "slug": "20mm-country-light-grey-porcelain-paving-600x900mm-22-95-per-m",
     "url": "",
-    "description": "Country Light Grey porcelain paving offers a soft, cool grey tone with a natural stone effect finish, giving patios and garden spaces a fresh, contemporary look that suits both new builds and traditional properties. Manufactured at 20mm thick, these slabs are frost proof, low porosity and highly resistant to staining, providing a durable surface that copes well with the British climate throughout the year.\n\nThe textured surface delivers dependable slip resistance in wet and dry conditions, making Country Light Grey a versatile choice for patios, pathways, driveways and garden borders. Its light, even tone works beautifully alongside lawns, artificial grass and brickwork, helping create a clean, well finished outdoor space. Low maintenance and simple to clean, it needs no sealing and holds its finish for years to come.\n\nAt just £22.95 per m², Country Light Grey offers a timeless, adaptable finish without the higher cost of natural stone. Searching for porcelain paving near me? We supply and deliver Country Light Grey porcelain paving slabs across Preston, Lancashire and throughout the UK, with fast turnaround for trade and DIY projects alike.\n\nFAQs\n\nIs Country Light Grey porcelain paving slip resistant?\nYes. The textured surface provides reliable grip underfoot, even when wet, making it a safe choice for patios and paths.\n\nDoes Country Light Grey porcelain paving pair well with artificial grass?\nYes, its light, even tone creates a clean contrast against artificial or natural lawns, making it popular for new garden landscaping.\n\nIs Country Light Grey porcelain paving suitable for driveways?\nYes, at 20mm thick it's suitable for domestic driveways as well as patios and paths, when laid on a properly prepared sub base.",
+    "description": "County Light Grey porcelain paving offers a soft, cool grey tone with a natural stone effect finish, giving patios and garden spaces a fresh, contemporary look that suits both new builds and traditional properties. Manufactured at 20mm thick, these slabs are frost proof, low porosity and highly resistant to staining, providing a durable surface that copes well with the British climate throughout the year.\n\nThe textured surface delivers dependable slip resistance in wet and dry conditions, making Country Light Grey a versatile choice for patios, pathways, driveways and garden borders. Its light, even tone works beautifully alongside lawns, artificial grass and brickwork, helping create a clean, well finished outdoor space. Low maintenance and simple to clean, it needs no sealing and holds its finish for years to come.\n\nAt just £22.95 per m², County Light Grey offers a timeless, adaptable finish without the higher cost of natural stone. Searching for porcelain paving near me? We supply and deliver County Light Grey porcelain paving slabs across Preston, Lancashire and throughout the UK, with fast turnaround for trade and DIY projects alike.\n\nFAQs\n\nIs County Light Grey porcelain paving slip resistant?\nYes. The textured surface provides reliable grip underfoot, even when wet, making it a safe choice for patios and paths.\n\nDoes County Light Grey porcelain paving pair well with artificial grass?\nYes, its light, even tone creates a clean contrast against artificial or natural lawns, making it popular for new garden landscaping.\n\nIs County Light Grey porcelain paving suitable for driveways?\nYes, at 20mm thick it's suitable for domestic driveways as well as patios and paths, when laid on a properly prepared sub base.",
     "colour": "",
     "frost": "F2 — Fully frost resistant",
     "customSpecs": "Size 21.6m2 Coverage\n20mm Thickness\nR11 Matt anti-slip\nVitrified Porcelain / CE Certified",
@@ -1274,7 +1396,20 @@
     "visible": true,
     "badge": "",
     "delivery": "included",
-    "sizeVariants": [],
+    "sizeVariants": [
+      {
+        "pack": "Pack of 40 Pieces",
+        "size": "600 x 900mm",
+        "price": "£495.72",
+        "coverage": "£22.95"
+      },
+      {
+        "pack": "Pack of 52 Pieces",
+        "size": "16mm x 600 x 900",
+        "price": "£536.05",
+        "coverage": "£19.09"
+      }
+    ],
     "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1785922439957-hh71fn.jpg",
     "images": [
       "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1785922439957-hh71fn.jpg",
@@ -1283,7 +1418,7 @@
       "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1785922446030-2wfifi.jpg"
     ],
     "createdAt": "2026-08-05T09:34:10.566937+00:00",
-    "updatedAt": "2026-08-06T12:46:12.442+00:00"
+    "updatedAt": "2026-08-07T09:13:53.004+00:00"
   },
   {
     "id": "p1785922921159",
