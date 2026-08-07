@@ -30,6 +30,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0">
 <title id="pp-pagetitle">Product — Pro Build Supplies</title>
+<meta name="description" id="pp-metadesc" content="Trade-quality building materials from Pro Build Supplies, Preston.">
+<link rel="canonical" id="pp-canonical" href="https://probuildsupplies.uk/product.html">
+<script type="application/ld+json" id="pp-schema-product"></script>
+<script type="application/ld+json" id="pp-schema-breadcrumb"></script>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style id="snip-vars">
@@ -714,11 +718,76 @@ document.querySelectorAll('.ptb').forEach(function(b){
       // Breadcrumb category link
       var catSlugMap = {
         'Handmade Bricks':'handmade-bricks.html','Reclaimed Bricks':'reclaimed-bricks.html',
-        'Porcelain Paving':'porcelain-paving.html','Indian Sandstone':'indian-sandstone.html','MDF':'mdf.html'
+        'Porcelain Paving':'porcelain-paving.html','Indian Sandstone':'indian-sandstone.html','MDF':'mdf.html',
+        'Plasterboards':'plasterboards.html'
       };
       var catHref = catSlugMap[prod.category] || 'shop.html';
       document.getElementById('pp-breadcrumb').innerHTML =
         '<a href="index.html">Home</a> › <a href="'+catHref+'">'+esc(prod.category||'Shop')+'</a> › <span id="pp-bc-name">'+esc(currentTitleText)+'</span>';
+
+      // ── SEO: meta description, canonical link, and structured data ──
+      // Runs once the product is loaded, using data already fetched above.
+      var canonicalUrl = window.location.origin + window.location.pathname + '?slug=' + encodeURIComponent(prod.slug);
+      var metaDescText = descFirstLine || (prod.name + ' — quality building materials from Pro Build Supplies, Preston.');
+      if (metaDescText.length > 160) metaDescText = metaDescText.slice(0, 157).trim() + '...';
+      var metaDescEl = document.getElementById('pp-metadesc');
+      if (metaDescEl) metaDescEl.setAttribute('content', metaDescText);
+      var canonEl = document.getElementById('pp-canonical');
+      if (canonEl) canonEl.setAttribute('href', canonicalUrl);
+
+      var offers;
+      if (prod.sizeVariants && prod.sizeVariants.length > 0) {
+        var variantPrices = prod.sizeVariants.map(function(v){
+          return parseFloat(String(v.price || '').replace(/[^0-9.]/g, ''));
+        }).filter(function(n){ return !isNaN(n) && n > 0; });
+        if (variantPrices.length) {
+          offers = {
+            '@type': 'AggregateOffer',
+            priceCurrency: 'GBP',
+            lowPrice: Math.min.apply(null, variantPrices).toFixed(2),
+            highPrice: Math.max.apply(null, variantPrices).toFixed(2),
+            offerCount: variantPrices.length,
+            availability: 'https://schema.org/InStock',
+            url: canonicalUrl
+          };
+        }
+      } else {
+        var singlePrice = parseFloat(String(prod.price || '').replace(/[^0-9.]/g, ''));
+        if (singlePrice) {
+          offers = {
+            '@type': 'Offer',
+            priceCurrency: 'GBP',
+            price: singlePrice.toFixed(2),
+            availability: 'https://schema.org/InStock',
+            url: canonicalUrl
+          };
+        }
+      }
+      var productSchema = {
+        '@context': 'https://schema.org',
+        '@type': 'Product',
+        name: prod.name,
+        description: metaDescText,
+        sku: prod.slug,
+        brand: { '@type': 'Brand', name: 'Pro Build Supplies' }
+      };
+      if (prod.category) productSchema.category = prod.category;
+      if (gallery.length) productSchema.image = gallery.slice();
+      if (offers) productSchema.offers = offers;
+      var schemaProductEl = document.getElementById('pp-schema-product');
+      if (schemaProductEl) schemaProductEl.textContent = JSON.stringify(productSchema);
+
+      var breadcrumbSchema = {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: window.location.origin + '/' },
+          { '@type': 'ListItem', position: 2, name: prod.category || 'Shop', item: window.location.origin + '/' + catHref },
+          { '@type': 'ListItem', position: 3, name: currentTitleText }
+        ]
+      };
+      var schemaBcEl = document.getElementById('pp-schema-breadcrumb');
+      if (schemaBcEl) schemaBcEl.textContent = JSON.stringify(breadcrumbSchema);
     })
     .catch(function(){
       document.getElementById('pp-title').textContent = 'Could not load product';
