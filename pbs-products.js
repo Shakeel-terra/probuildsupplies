@@ -222,7 +222,7 @@ function productUrl(p, prefix) {
           '<a href="' + fp + 'reclaimed-bricks.html">Reclaimed Bricks</a>' +
           '<a href="' + fp + 'porcelain-paving.html">Porcelain Paving</a>' +
           '<a href="' + fp + 'indian-sandstone.html">Indian Sandstone</a>' +
-          '<a href="' + fp + 'mdf.html">MDF Sheets</a>' +
+          '<a href="' + fp + 'insulation.html">Insulation</a>' +
           '<a href="' + fp + 'plasterboards.html">Plasterboards</a>' +
         '</div>' +
         '<div class="fc"><h4>Help &amp; Info</h4>' +
@@ -247,7 +247,7 @@ function productUrl(p, prefix) {
       '</div>';
   })();
 
-  // Add Plasterboards nav item after MDF
+  // Add Plasterboards nav item after Insulation
   (function() {
     var navI = document.querySelector('.nav-i');
     if (!navI) return;
@@ -261,15 +261,15 @@ function productUrl(p, prefix) {
         window.location.pathname.includes('plasterboards')) {
       pb.classList.add('cur');
     }
-    // Try to insert after MDF, otherwise just append to nav
-    var mdfLink = navI.querySelector('a[href="mdf.html"]') ||
+    // Try to insert after Insulation, otherwise just append to nav
+    var insulationLink = navI.querySelector('a[href="insulation.html"]') ||
                   Array.from(navI.querySelectorAll('a')).find(function(a) {
-                    return a.textContent.trim().includes('MDF');
+                    return a.textContent.trim().includes('Insulation');
                   });
-    if (mdfLink && mdfLink.nextSibling) {
-      navI.insertBefore(pb, mdfLink.nextSibling);
-    } else if (mdfLink) {
-      mdfLink.parentNode.appendChild(pb);
+    if (insulationLink && insulationLink.nextSibling) {
+      navI.insertBefore(pb, insulationLink.nextSibling);
+    } else if (insulationLink) {
+      insulationLink.parentNode.appendChild(pb);
     } else {
       navI.appendChild(pb);
     }
@@ -335,7 +335,7 @@ function productUrl(p, prefix) {
       path.includes('reclaimed-bricks.html') || path.endsWith('/reclaimed-bricks') ||
       path.includes('porcelain-paving.html') || path.endsWith('/porcelain-paving') ||
       path.includes('indian-sandstone.html') || path.endsWith('/indian-sandstone') ||
-      path.includes('mdf.html') || path.endsWith('/mdf') ||
+      path.includes('insulation.html') || path.endsWith('/insulation') ||
       path.includes('plasterboards.html') || path.endsWith('/plasterboards');
     if (!isDynamicListPage) return;
     __hideEl = document.getElementById('sfgrid') || document.querySelector('.pgrid');
@@ -363,7 +363,7 @@ function productUrl(p, prefix) {
 
   // ── HELPERS ───────────────────────────────────────────────
   function catIcon(c) {
-    var m = {'Handmade Bricks':'🧱','Reclaimed Bricks':'♻️','Porcelain Paving':'🪨','Indian Sandstone':'🌿','MDF':'🪵','Plasterboards':'📋'};
+    var m = {'Handmade Bricks':'🧱','Reclaimed Bricks':'♻️','Porcelain Paving':'🪨','Indian Sandstone':'🌿','Insulation':'❄️','Plasterboards':'📋'};
     return m[c] || '📦';
   }
   function catBg(c) {
@@ -671,8 +671,8 @@ function productUrl(p, prefix) {
     if (path.includes('indian-sandstone.html') || path.endsWith('/indian-sandstone')) {
       initCategoryPage(products, 'Indian Sandstone'); return;
     }
-    if (path.includes('mdf.html') || path.endsWith('/mdf')) {
-      initCategoryPage(products, 'MDF'); return;
+    if (path.includes('insulation.html') || path.endsWith('/insulation')) {
+      initCategoryPage(products, 'Insulation'); return;
     }
     if (path.includes('plasterboards.html') || path.endsWith('/plasterboards')) {
       initCategoryPage(products, 'Plasterboards'); return;
