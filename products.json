@@ -1614,5 +1614,343 @@
     ],
     "createdAt": "2026-08-05T10:57:44.968372+00:00",
     "updatedAt": "2026-08-07T09:50:10.509+00:00"
+  },
+  {
+    "id": "p1786364463827",
+    "name": "KANLDA GREY SANDSTONE",
+    "category": "Indian Sandstone",
+    "price": "£439.72",
+    "priceNote": "Pack of 60 Pieces |  22mm CAL MIX",
+    "slug": "kanlda-grey-sandstone",
+    "url": "",
+    "description": "",
+    "colour": "",
+    "frost": "F2 — Fully frost resistant",
+    "customSpecs": "Thickness: 22mm Calibrated\nSurface: Natural",
+    "deliveryNotes": "",
+    "visible": true,
+    "badge": "New",
+    "delivery": "included",
+    "sizeVariants": [
+      {
+        "pack": "Pack of 60 Pieces",
+        "size": "22mm CAL  MIX",
+        "price": "£439.72",
+        "coverage": "£23.95"
+      },
+      {
+        "pack": "Pack of 56 Pieces",
+        "size": "22mm CAL 600x600mm",
+        "price": "£439.72",
+        "coverage": "£23.95"
+      }
+    ],
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1786364452443-62y466.jpg",
+    "images": [
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1786364452443-62y466.jpg",
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1786364458789-v8q32e.jpg",
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1786364458788-b7gt7l.jpg"
+    ],
+    "createdAt": "2026-08-10T12:21:04.48546+00:00",
+    "updatedAt": "2026-08-10T12:21:03.828+00:00"
+  },
+  {
+    "id": "p1786366518498",
+    "name": "AUTUMN BROWN",
+    "category": "Indian Sandstone",
+    "price": "£439.72",
+    "priceNote": "Pack of 60 Pieces",
+    "slug": "autumn-brown",
+    "url": "",
+    "description": "",
+    "colour": "",
+    "frost": "F2 — Fully frost resistant",
+    "customSpecs": "Thickness: 22mm Calibrated\nSurface: Natural",
+    "deliveryNotes": "",
+    "visible": true,
+    "badge": "Best Seller",
+    "delivery": "included",
+    "sizeVariants": [
+      {
+        "pack": "Pack of 60 Pieces",
+        "size": "MIX",
+        "price": "£439.72",
+        "coverage": "£23.95"
+      },
+      {
+        "pack": "Pack of 35 Pieces",
+        "size": "600x900mm",
+        "price": "£471.60",
+        "coverage": "£24.95"
+      }
+    ],
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1786368715555-sof42m.jpg",
+    "images": [
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1786368715555-sof42m.jpg"
+    ],
+    "createdAt": "2026-08-10T12:55:18.553373+00:00",
+    "updatedAt": "2026-08-10T13:35:32.422+00:00"
+  },
+  {
+    "id": "p1786366532260",
+    "name": "FOSSIL MINT",
+    "category": "Indian Sandstone",
+    "price": "",
+    "priceNote": "",
+    "slug": "fossil-mint",
+    "url": "",
+    "description": "",
+    "colour": "",
+    "frost": "F2 — Fully frost resistant",
+    "customSpecs": "",
+    "deliveryNotes": "",
+    "visible": true,
+    "badge": "New",
+    "delivery": "included",
+    "sizeVariants": [
+      {
+        "pack": "Pack of 60 Pieces",
+        "size": "MIX",
+        "price": "£421.36",
+        "coverage": "£22.95"
+      },
+      {
+        "pack": "Pack of 35 Pieces",
+        "size": "900x600mm",
+        "price": "£485.03",
+        "coverage": "£24.95"
+      }
+    ],
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1786371048051-pckrvg.jpg",
+    "images": [
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1786371048051-pckrvg.jpg",
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1786371050636-4o64uy.jpg",
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1786371053632-r17zmp.jpg"
+    ],
+    "createdAt": "2026-08-10T12:55:32.395399+00:00",
+    "updatedAt": "2026-08-10T14:10:56.078+00:00"
+  },
+  {
+    "id": "p1786366539170",
+    "name": "YELLOW MINT",
+    "category": "Indian Sandstone",
+    "price": "£421.36",
+    "priceNote": "",
+    "slug": "yellow-mint",
+    "url": "",
+    "description": "",
+    "colour": "",
+    "frost": "F2 — Fully frost resistant",
+    "customSpecs": "Cut: Sawn Honed\nMultiple Sizes",
+    "deliveryNotes": "",
+    "visible": true,
+    "badge": "In Stock",
+    "delivery": "included",
+    "sizeVariants": [
+      {
+        "pack": "Pack of 60 Pieces",
+        "size": "MIX",
+        "price": "£421.36",
+        "coverage": "£22.95"
+      },
+      {
+        "pack": "Pack of 36 Pieces",
+        "size": "600x900mm",
+        "price": "£421.36",
+        "coverage": "£22.95"
+      }
+    ],
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1786371265029-x19yps.jpg",
+    "images": [
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1786371265029-x19yps.jpg"
+    ],
+    "createdAt": "2026-08-10T12:55:39.23261+00:00",
+    "updatedAt": "2026-08-10T14:14:27.496+00:00"
+  },
+  {
+    "id": "p1786366566919",
+    "name": "RIPPON BUFF",
+    "category": "Indian Sandstone",
+    "price": "",
+    "priceNote": "",
+    "slug": "rippon-buff",
+    "url": "",
+    "description": "",
+    "colour": "",
+    "frost": "F2 — Fully frost resistant",
+    "customSpecs": "Cut: Sawn Honed",
+    "deliveryNotes": "",
+    "visible": true,
+    "badge": "Best Seller",
+    "delivery": "included",
+    "sizeVariants": [
+      {
+        "pack": "Pack of 60 Pieces",
+        "size": "MIX",
+        "price": "£494.80",
+        "coverage": "£26.95"
+      },
+      {
+        "pack": "Pack of 33 Pieces",
+        "size": "600x900mm",
+        "price": "£494.80",
+        "coverage": "£26.95"
+      }
+    ],
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1786371361382-64jn46.jpg",
+    "images": [
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1786371361382-64jn46.jpg",
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1786371361314-vzd970.jpg"
+    ],
+    "createdAt": "2026-08-10T12:56:06.99898+00:00",
+    "updatedAt": "2026-08-10T14:18:01.268+00:00"
+  },
+  {
+    "id": "p1786366575550",
+    "name": "YORK BUFF",
+    "category": "Indian Sandstone",
+    "price": "",
+    "priceNote": "",
+    "slug": "york-buff",
+    "url": "",
+    "description": "",
+    "colour": "",
+    "frost": "F2 — Fully frost resistant",
+    "customSpecs": "Cut: Handcut",
+    "deliveryNotes": "",
+    "visible": true,
+    "badge": "",
+    "delivery": "included",
+    "sizeVariants": [
+      {
+        "pack": "Pack of 60 Pieces",
+        "size": "MIX",
+        "price": "£421.36",
+        "coverage": "£22.95"
+      }
+    ],
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1786371634093-b4mup5.jpg",
+    "images": [
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1786371634093-b4mup5.jpg",
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1786371634123-kwv2f7.jpg"
+    ],
+    "createdAt": "2026-08-10T12:56:15.626113+00:00",
+    "updatedAt": "2026-08-10T14:20:36.994+00:00"
+  },
+  {
+    "id": "p1786366583713",
+    "name": "CAMEL DUST",
+    "category": "Indian Sandstone",
+    "price": "",
+    "priceNote": "",
+    "slug": "camel-dust",
+    "url": "",
+    "description": "",
+    "colour": "",
+    "frost": "F2 — Fully frost resistant",
+    "customSpecs": "Cut: Handcut",
+    "deliveryNotes": "",
+    "visible": true,
+    "badge": "Best Seller",
+    "delivery": "included",
+    "sizeVariants": [
+      {
+        "pack": "Pack of 60 Pieces",
+        "size": "Mix",
+        "price": "£421.36",
+        "coverage": "£22.95"
+      }
+    ],
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1786371718216-xos3fk.jpg",
+    "images": [
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1786371718216-xos3fk.jpg",
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1786371722700-meg5ts.jpg",
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1786371722850-2l88a0.jpg"
+    ],
+    "createdAt": "2026-08-10T12:56:23.774148+00:00",
+    "updatedAt": "2026-08-10T14:22:05.583+00:00"
+  },
+  {
+    "id": "p1786366694815",
+    "name": "RAJ GREEN",
+    "category": "Indian Sandstone",
+    "price": "£458.08",
+    "priceNote": "Pack of 60 Pieces",
+    "slug": "raj-green",
+    "url": "",
+    "description": "",
+    "colour": "",
+    "frost": "F2 — Fully frost resistant",
+    "customSpecs": "",
+    "deliveryNotes": "",
+    "visible": true,
+    "badge": "New",
+    "delivery": "included",
+    "sizeVariants": [
+      {
+        "pack": "Pack of 60 Pieces",
+        "size": "MIX",
+        "price": "£458.08",
+        "coverage": "£24.95"
+      },
+      {
+        "pack": "Pack of 60 Pieces",
+        "size": "CAL&TUMB - MIXLED",
+        "price": "£439.72",
+        "coverage": "£23.95"
+      },
+      {
+        "pack": "Pack of 33 Pieces",
+        "size": "600X900mm",
+        "price": "£458.02",
+        "coverage": "£24.95"
+      }
+    ],
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1786366742988-7g68n3.jpg",
+    "images": [
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1786366742988-7g68n3.jpg",
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1786366749915-qwu4bt.jpg",
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1786366754925-tbwpjm.jpg"
+    ],
+    "createdAt": "2026-08-10T12:58:15.020713+00:00",
+    "updatedAt": "2026-08-10T13:09:14.723+00:00"
+  },
+  {
+    "id": "p1786371919698",
+    "name": "ANTIQUE BLACK SANDSTONE",
+    "category": "Indian Sandstone",
+    "price": "£568.24",
+    "priceNote": "",
+    "slug": "black-sandstone",
+    "url": "",
+    "description": "",
+    "colour": "",
+    "frost": "F2 — Fully frost resistant",
+    "customSpecs": "Thickness: 22mm\nCut: Handcut\nMixed Sizes",
+    "deliveryNotes": "",
+    "visible": true,
+    "badge": "",
+    "delivery": "included",
+    "sizeVariants": [
+      {
+        "pack": "Pack of 60 Pieces",
+        "size": "MIX",
+        "price": "£568.24",
+        "coverage": "£30.95"
+      },
+      {
+        "pack": "Pack of 60 Pieces",
+        "size": "CAL & TUMBLED - MIX",
+        "price": "£604.96",
+        "coverage": "£32.95"
+      }
+    ],
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1786371916213-fhu2w0.jpg",
+    "images": [
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1786371916213-fhu2w0.jpg",
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1786371916159-hj35cl.jpg"
+    ],
+    "createdAt": "2026-08-10T14:25:20.032825+00:00",
+    "updatedAt": "2026-08-10T14:28:24.37+00:00"
   }
 ]
