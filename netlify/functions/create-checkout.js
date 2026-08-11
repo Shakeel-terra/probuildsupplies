@@ -41,7 +41,7 @@ exports.handler = async function(event) {
   try { body = JSON.parse(event.body); }
   catch(e) { return { statusCode: 400, body: JSON.stringify({ error: 'Invalid request' }) }; }
 
-  const { items, successUrl, cancelUrl } = body;
+  const { items, successUrl, cancelUrl, userId, customerEmail } = body;
   if (!items || !items.length) {
     return { statusCode: 400, body: JSON.stringify({ error: 'No items in cart' }) };
   }
@@ -54,6 +54,8 @@ exports.handler = async function(event) {
   params.append('shipping_address_collection[allowed_countries][]', 'GB');
   params.append('payment_method_types[]', 'card');
   params.append('customer_creation', 'always');
+  if (userId) params.append('client_reference_id', String(userId));
+  if (customerEmail) params.append('customer_email', String(customerEmail));
 
   let itemIndex = 0;
   items.forEach(function(item) {
