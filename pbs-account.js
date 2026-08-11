@@ -34,7 +34,13 @@
   }
 
   function signUp(email, password) {
-    return sb.auth.signUp({ email: email, password: password });
+    return sb.auth.signUp({
+      email: email,
+      password: password,
+      options: {
+        emailRedirectTo: window.location.origin + pathPrefix() + 'account.html',
+      },
+    });
   }
 
   function signIn(email, password) {

@@ -557,7 +557,12 @@ footer{background:#111;padding:40px 20px 18px;color:#888;width:100%}
 
       <form id="registerForm" style="display:none">
         <div class="fg"><label>Email Address *</label><input type="email" id="rEmail" required placeholder="your@email.com"></div>
-        <div class="fg"><label>Password *</label><input type="password" id="rPass" required minlength="6" placeholder="At least 6 characters"></div>
+        <div class="fg">
+          <label>Password *</label>
+          <input type="password" id="rPass" required minlength="8" placeholder="At least 8 characters">
+          <p class="fnote" style="margin-top:0">Must be at least 8 characters.</p>
+        </div>
+        <div class="fg"><label>Confirm Password *</label><input type="password" id="rPass2" required minlength="8" placeholder="Re-enter your password"></div>
         <button type="submit" class="fsub">Create Account</button>
         <p class="fnote">Already placed an order as a guest? Use the same email here and we'll automatically link your past orders.</p>
         <div id="rErr" class="acct-err" style="display:none"></div>
@@ -846,7 +851,19 @@ function pbsOk(e,id){
   $('registerForm').addEventListener('submit', async function (e) {
     e.preventDefault();
     $('rErr').style.display = 'none';
-    var email = $('rEmail').value.trim(), pass = $('rPass').value;
+    $('rErr').style.background = '';
+    $('rErr').style.color = '';
+    var email = $('rEmail').value.trim(), pass = $('rPass').value, pass2 = $('rPass2').value;
+    if (pass.length < 8) {
+      $('rErr').textContent = 'Password must be at least 8 characters.';
+      $('rErr').style.display = 'block';
+      return;
+    }
+    if (pass !== pass2) {
+      $('rErr').textContent = 'Passwords do not match.';
+      $('rErr').style.display = 'block';
+      return;
+    }
     var res = await window.pbsAccount.signUp(email, pass);
     if (res.error) {
       $('rErr').textContent = res.error.message || 'Could not create account.';
