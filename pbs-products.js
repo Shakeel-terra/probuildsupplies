@@ -915,12 +915,22 @@ function productUrl(p, prefix) {
   window.pbsQty = changeQty;
 
   // ── CHECKOUT ─────────────────────────────────────────────────
-  document.getElementById('pbs-checkout').addEventListener('click', function() {
+  document.getElementById('pbs-checkout').addEventListener('click', async function() {
     var cart = getCart().filter(function(c){ return c.price && c.price!=='POA'; });
     if (!cart.length) return;
     var btn = this;
     btn.disabled = true;
     btn.textContent = 'Redirecting to Stripe…';
+
+    // If the customer is logged into their account, tie this order to it
+    // so it shows up automatically in their order history.
+    var userId = null, customerEmail = null;
+    if (window.pbsAccount) {
+      try {
+        var user = await window.pbsAccount.getUser();
+        if (user) { userId = user.id; customerEmail = user.email; }
+      } catch (e) { /* not logged in / Supabase unreachable — proceed as guest */ }
+    }
 
     var base = window.location.origin;
     fetch('/.netlify/functions/create-checkout', {
@@ -930,6 +940,8 @@ function productUrl(p, prefix) {
         items: cart,
         successUrl: base + '/success.html?session_id={CHECKOUT_SESSION_ID}',
         cancelUrl: base + window.location.pathname + window.location.search,
+        userId: userId,
+        customerEmail: customerEmail,
       })
     })
     .then(function(r){ return r.json(); })
