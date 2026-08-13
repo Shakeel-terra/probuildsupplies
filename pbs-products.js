@@ -641,7 +641,14 @@ function productUrl(p, prefix) {
     // Look for a featured products grid on the homepage
     var featGrid = document.getElementById('featuredGrid');
     if (!featGrid) return;
-    var featured = products.filter(function(p){ return p.visible !== false; }).slice(0, 8);
+    var visible = products.filter(function(p){ return p.visible !== false; });
+    // 2 products from each category, in this fixed order
+    var categoryOrder = ['Handmade Bricks', 'Plasterboards', 'Porcelain Paving', 'Indian Sandstone'];
+    var featured = [];
+    categoryOrder.forEach(function(cat){
+      var fromCat = visible.filter(function(p){ return p.category === cat; }).slice(0, 2);
+      featured = featured.concat(fromCat);
+    });
     featGrid.innerHTML = featured.map(function(p){ return makeCard(p, ''); }).join('');
   }
 
