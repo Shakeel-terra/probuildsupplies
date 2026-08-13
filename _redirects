@@ -9,22 +9,22 @@
 /black-slate-20mm.html  /products/black-slate-20mm.html  301!
 /bodo-white-20mm.html  /products/bodo-white-20mm.html  301!
 /camel-dust.html  /products/camel-dust.html  301!
-/cheshire-red-handmade.html  /products/cheshire-red-handmade.html  301!
+/cheshire-red-handmade.html  /handmade-bricks.html  301!
 /city-blend-handmade-facing-bricks.html  /products/city-blend-handmade-facing-bricks.html  301!
 /county-lgy-light-grey-20mm.html  /products/county-lgy-light-grey-20mm.html  301!
 /earthcore-grey-20mm.html  /products/earthcore-grey-20mm.html  301!
 /everest-pearl-20mm.html  /products/everest-pearl-20mm.html  301!
 /fossil-mint.html  /products/fossil-mint.html  301!
-/fulford-blend-handmade.html  /products/fulford-blend-handmade.html  301!
-/golden-brown.html  /products/golden-brown.html  301!
+/fulford-blend-handmade.html  /handmade-bricks.html  301!
+/golden-brown.html  /indian-sandstone.html  301!
 /heritage-blend-handmade.html  /products/heritage-blend-handmade.html  301!
 /kandla-grey.html  /products/kandla-grey.html  301!
-/modak.html  /products/modak.html  301!
-/plain-yellow-facing-bricks.html  /products/plain-yellow-facing-bricks.html  301!
-/pulford-blend-handmade.html  /products/pulford-blend-handmade.html  301!
-/raj-blend.html  /products/raj-blend.html  301!
+/modak.html  /indian-sandstone.html  301!
+/plain-yellow-facing-bricks.html  /handmade-bricks.html  301!
+/pulford-blend-handmade.html  /handmade-bricks.html  301!
+/raj-blend.html  /indian-sandstone.html  301!
 /raj-green.html  /products/raj-green.html  301!
-/red-handmade-facing-bricks.html  /products/red-handmade-facing-bricks.html  301!
+/red-handmade-facing-bricks.html  /handmade-bricks.html  301!
 /renovation-multi-handmade-73mm.html  /products/renovation-multi-handmade-73mm.html  301!
 /renovation-multi-pressed.html  /products/renovation-multi-pressed.html  301!
 /rippon-buff.html  /products/rippon-buff.html  301!
@@ -52,3 +52,13 @@
 /product.html slug=cottage-blend  /products/cottage-blend-handmade.html  301
 /product.html slug=standard-plasterboard-2400x1200x12-5mm-pallet  /products/standard-plasterboard.html  301
 /product.html slug=fireline-plasterboard-2400x1200x12-5mm-pallet  /products/fireline-plasterboard.html  301
+
+# Sandstone duplicates: dashboard slug -> canonical static page
+/product.html slug=york-buff  /products/york-buff.html  301
+/product.html slug=camel-dust  /products/camel-dust.html  301
+/product.html slug=autumn-brown  /products/autumn-brown.html  301
+/product.html slug=fossil-mint  /products/fossil-mint.html  301
+/product.html slug=yellow-mint  /products/yellow-mint.html  301
+/product.html slug=rippon-buff  /products/rippon-buff.html  301
+/product.html slug=raj-green  /products/raj-green.html  301
+/product.html slug=kanlda-grey-sandstone  /products/kandla-grey.html  301
