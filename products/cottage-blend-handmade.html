@@ -1,44 +1,74 @@
 <!DOCTYPE html>
 <html lang="en-GB">
 <head>
+<script>
+(function(){
+  var STATIC_PAGE_MAP = {
+    'city-blend': 'city-blend-handmade-facing-bricks.html',
+    'heritage-blend': 'heritage-blend-handmade.html',
+    'village-multi-handmade': 'village-multi-handmade.html',
+    'barnstock-orange': 'barnstock-orange-handmade.html',
+    'thames-dean-stock': 'thames-dean-stock-handmade.html',
+    'renovation-multi': 'renovation-multi-pressed.html',
+    'tumbled-cheshire': 'tumbled-cheshire-handmade.html',
+    'rustic-farmhouse': 'rustic-farmhouse-handmade.html',
+    'ashgrove-orange': 'ashgrove-orange-handmade.html',
+    'weathered-yellow': 'weathered-yellow-facing-bricks.html',
+    'ashbourne-genuine-reclaimed': 'ashbourne-reclaimed-bricks.html',
+    'alford-genuine-reclaimed': 'alford-reclaimed-bricks.html',
+    'cottage-blend': 'cottage-blend-handmade.html',
+    'standard-plasterboard-2400x1200x12-5mm-pallet': 'standard-plasterboard.html',
+    'fireline-plasterboard-2400x1200x12-5mm-pallet': 'fireline-plasterboard.html'
+  };
+  var params = new URLSearchParams(window.location.search);
+  var slug = params.get('slug');
+  if (slug && STATIC_PAGE_MAP[slug]) {
+    window.location.replace('products/' + STATIC_PAGE_MAP[slug]);
+  }
+})();
+</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-
+<title>Cottage Blend | Pro Build Supplies</title>
+<meta name="description" id="pp-metadesc" content="Cottage Blend is a premium handmade brick featuring a distinctive mix of orange, red and dark accent tones, creating a rich and characterful appearance..">
+<link rel="canonical" id="pp-canonical" href="https://probuildsupplies.uk/products/cottage-blend-handmade.html">
+<meta property="og:type" content="product">
+<meta property="og:site_name" content="Pro Build Supplies">
+<meta property="og:title" id="pp-og-title" content="Cottage Blend">
+<meta property="og:description" id="pp-og-desc" content="Cottage Blend is a premium handmade brick featuring a distinctive mix of orange, red and dark accent tones, creating a rich and characterful appearance..">
+<meta property="og:image" id="pp-og-image" content="https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1785856184672-xvv543.jpg">
+<meta property="og:url" id="pp-og-url" content="https://probuildsupplies.uk/products/cottage-blend-handmade.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" id="pp-twitter-title" content="Cottage Blend">
+<meta name="twitter:description" id="pp-twitter-desc" content="Cottage Blend is a premium handmade brick featuring a distinctive mix of orange, red and dark accent tones, creating a rich and characterful appearance..">
+<meta name="twitter:image" id="pp-twitter-image" content="https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1785856184672-xvv543.jpg">
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
 
-
 <style id="snip-vars">
-/* Snipcart v3 CSS Custom Properties — must be on :root */
 :root {
   --color-default: #F55C1B;
   --color-alt: #1A1A1A;
   --color-success: #22C55E;
   --color-danger: #EF4444;
   --color-accent: #F55C1B;
-
   --bg-color: #F5F3EF;
   --bg-color-alt: #FFFFFF;
-
   --color-link: #F55C1B;
   --color-link-hover: #d94d0f;
-
   --color-input: #1A1A1A;
   --color-input-bg: #FFFFFF;
   --color-input-bg-alt: #F5F3EF;
   --color-input-border: #E8E4DC;
   --color-input-focus: #F55C1B;
   --color-input-placeholder: #888888;
-
   --color-buttonPrimary: #F55C1B;
   --color-buttonPrimary-text: #FFFFFF;
   --color-buttonPrimary-hover: #d94d0f;
   --color-buttonSecondary: #1A1A1A;
   --color-buttonSecondary-text: #FFFFFF;
   --color-buttonSecondary-hover: #333333;
-
   --border-radius: 4px;
   --font-family: 'Barlow', sans-serif;
-
   --shadow: 0 8px 32px rgba(0,0,0,0.12);
 }
 </style>
@@ -54,12 +84,8 @@ body{font-family:'Barlow',sans-serif;background:var(--lt);color:var(--dk);overfl
 a{text-decoration:none;color:inherit}
 img{max-width:100%;display:block;height:auto}
 *{-webkit-tap-highlight-color:transparent}
-
-/* ANNOUNCE */
 .ann{background:var(--y);color:var(--dk);text-align:center;padding:9px 16px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.88rem;letter-spacing:.3px;line-height:1.4}
 .ann-x{margin-left:8px}
-
-/* HEADER */
 .hdr{background:var(--dk);position:sticky;top:0;z-index:9999;border-bottom:3px solid var(--o);width:100%}
 .hdr-i{max-width:1280px;margin:0 auto;padding:0 20px;display:flex;align-items:center;height:66px;gap:14px}
 .logo{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.85rem;color:var(--wh);letter-spacing:-1px;flex-shrink:0;line-height:1}
@@ -78,8 +104,6 @@ img{max-width:100%;display:block;height:auto}
 .hbtn.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
 .hbtn.open span:nth-child(2){opacity:0}
 .hbtn.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-
-/* NAV */
 .nav{background:var(--ch);border-bottom:1px solid #444;position:relative;z-index:9998;width:100%}
 .nav-i{max-width:1280px;margin:0 auto;padding:0 20px;display:flex;overflow-x:auto}
 .nav-i::-webkit-scrollbar{height:0}
@@ -92,125 +116,52 @@ img{max-width:100%;display:block;height:auto}
 .dd a{display:block;padding:11px 18px;color:#BBB;font-size:.9rem;border-bottom:1px solid #333;border-left:3px solid transparent;text-transform:none;white-space:nowrap}
 .dd a:last-child{border-bottom:none}
 .dd a:hover{color:var(--wh);border-left-color:var(--o);border-bottom-color:#333}
-
-/* BREADCRUMB */
 .bc{background:var(--dk);padding:11px 20px}
 .bc-i{max-width:1280px;margin:0 auto;color:#888;font-size:.83rem}
 .bc-i a{color:var(--o)}
-
-/* TRUST BAR */
-.trust{background:var(--o);padding:15px 20px}
-.trust-i{max-width:1280px;margin:0 auto;display:flex;justify-content:space-around;align-items:center;gap:10px;flex-wrap:wrap}
-.ti{display:flex;align-items:center;gap:9px;color:var(--wh);min-width:0}
-.ti .ic{font-size:1.25rem;flex-shrink:0}
-.ti strong{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.97rem;display:block;white-space:nowrap}
-.ti span{font-size:.72rem;opacity:.85;white-space:nowrap}
-
-/* CAT HERO */
-.chero{background:var(--dk);padding:48px 20px;border-bottom:4px solid var(--o)}
-.chero-i{max-width:1280px;margin:0 auto}
-.chero h1{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(2.2rem,5vw,3.8rem);color:var(--wh);text-transform:uppercase;letter-spacing:-1px;line-height:1}
-.chero h1 em{color:var(--o);font-style:normal}
-.chero p{color:#AAA;margin-top:11px;font-size:.95rem;max-width:580px;line-height:1.7}
-
-/* SEC TITLE */
-.st{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(1.7rem,4vw,2.6rem);text-transform:uppercase;color:var(--dk);line-height:1}
-.st b{color:var(--o);font-weight:900}
-.ss{color:var(--mid);font-size:.92rem;margin-top:7px}
-
-/* BUTTONS */
 .btn-o{background:var(--o);color:var(--wh);padding:13px 26px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.8px;text-transform:uppercase;border-radius:4px;display:inline-block;border:none;transition:background .2s;cursor:pointer;text-align:center}
 .btn-o:hover{background:#d94d0f;color:var(--wh)}
 .btn-dk{background:var(--dk);color:var(--wh);padding:13px 26px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1rem;text-transform:uppercase;border-radius:4px;display:inline-block;border:none;transition:background .2s;cursor:pointer;text-align:center}
 .btn-dk:hover{background:#333;color:var(--wh)}
-.btn-out{background:transparent;color:var(--wh);padding:13px 26px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1rem;text-transform:uppercase;border:2px solid rgba(255,255,255,.4);border-radius:4px;display:inline-block;transition:border-color .2s;text-align:center}
-.btn-out:hover{border-color:var(--wh);color:var(--wh)}
-.btn-wh{background:var(--wh);color:var(--o);padding:13px 32px;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1.05rem;letter-spacing:.8px;text-transform:uppercase;border-radius:4px;display:inline-block;transition:transform .2s;text-align:center}
-.btn-wh:hover{transform:translateY(-2px);color:var(--o)}
-
-/* PROD GRID */
-.pgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:22px}
-.pcard{background:var(--wh);border-radius:var(--r);overflow:hidden;border:1px solid var(--bd);transition:box-shadow .25s,transform .25s;display:block}
-.pcard:hover{box-shadow:0 10px 32px rgba(0,0,0,.11);transform:translateY(-4px)}
 .pimg{aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;font-size:2.8rem;position:relative;overflow:hidden}
 .pimg img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
-.bg-b{background:linear-gradient(135deg,#C0392B20,#C0392B50)}
-.bg-p{background:linear-gradient(135deg,#62656720,#62656750)}
-.bg-s{background:linear-gradient(135deg,#C8A45A20,#C8A45A50)}
-.bg-m{background:linear-gradient(135deg,#A0522D20,#A0522D50)}
 .pinfo{padding:14px}
 .pcat{font-size:.7rem;color:var(--st);text-transform:uppercase;letter-spacing:1px;font-weight:600;margin-bottom:4px}
 .pname{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.05rem;color:var(--dk);margin-bottom:7px;line-height:1.2}
 .pprice{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.3rem;color:var(--dk);margin-bottom:10px}
 .pbtn{display:block;width:100%;background:var(--dk);color:var(--wh);border:none;padding:10px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.88rem;letter-spacing:.8px;text-transform:uppercase;cursor:pointer;border-radius:3px;text-align:center;transition:background .2s}
 .pbtn:hover{background:var(--o);color:var(--wh)}
-
-/* SUBCAT CARDS */
-.scgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
-.sccard{display:block;border-radius:8px;overflow:hidden;border:2px solid var(--bd);background:var(--wh);transition:box-shadow .25s,transform .25s,border-color .25s}
-.sccard:hover{box-shadow:0 14px 44px rgba(0,0,0,.11);transform:translateY(-5px);border-color:var(--o)}
-.scimg{height:190px;display:flex;align-items:center;justify-content:center;font-size:5.5rem}
-.sc-hm{background:linear-gradient(145deg,#C0392B,#8B1A1A)}
-.sc-rc{background:linear-gradient(145deg,#8B6914,#5C3D10)}
-.sc-pp{background:linear-gradient(145deg,#626567,#2C3233)}
-.sc-ss{background:linear-gradient(145deg,#C8A45A,#8B6914)}
-.scbody{padding:24px}
-.scname{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.65rem;text-transform:uppercase;color:var(--dk);margin-bottom:7px}
-.scdesc{font-size:.88rem;color:var(--mid);line-height:1.7;margin-bottom:18px}
-
-/* FORMS */
-.fcard{background:var(--wh);border-radius:8px;padding:28px;border:1px solid var(--bd);margin-bottom:20px}
-.fcard h2{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.7rem;text-transform:uppercase;color:var(--dk);margin-bottom:5px}
-.fcard>p{color:var(--mid);font-size:.88rem;line-height:1.7;margin-bottom:22px}
-.frow{display:grid;grid-template-columns:1fr 1fr;gap:13px;margin-bottom:13px}
-.fg{display:flex;flex-direction:column;gap:5px;margin-bottom:13px}
-.fg label{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.77rem;text-transform:uppercase;letter-spacing:.5px;color:var(--dk)}
-.fg input,.fg select,.fg textarea{padding:10px 13px;border:2px solid var(--bd);border-radius:4px;font-family:'Barlow',sans-serif;font-size:.88rem;color:var(--dk);outline:none;background:var(--lt);transition:border-color .2s;width:100%}
-.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--o);background:var(--wh)}
-.fg textarea{resize:vertical;min-height:100px}
-.fsub{background:var(--o);color:var(--wh);border:none;padding:13px 32px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.05rem;letter-spacing:.8px;text-transform:uppercase;cursor:pointer;border-radius:4px;width:100%;transition:background .2s;margin-top:5px}
-.fsub:hover{background:#d94d0f}
-.fnote{font-size:.76rem;color:#999;margin-top:6px;line-height:1.5}
-.fok{display:none;background:#E8F5E9;border:2px solid var(--gr);border-radius:6px;padding:14px;text-align:center;margin-top:12px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.95rem;color:#166534;text-transform:uppercase}
-
-/* INFO CARDS */
-.icard{background:var(--wh);border-radius:8px;padding:28px;border:1px solid var(--bd);margin-bottom:18px}
-.icard h2{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.7rem;text-transform:uppercase;color:var(--dk);margin-bottom:13px;border-bottom:3px solid var(--o);padding-bottom:9px}
-.icard h3{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1.05rem;text-transform:uppercase;color:var(--dk);margin:16px 0 7px}
-.icard p{color:var(--mid);font-size:.88rem;line-height:1.8;margin-bottom:9px}
-.icard ul{color:var(--mid);font-size:.88rem;line-height:1.8;padding-left:17px;margin-bottom:9px}
-.icard ul li{margin-bottom:4px}
-.icard a{color:var(--o)}
-
-/* CONTACT */
-.cgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:22px}
-.cdet{display:flex;align-items:flex-start;gap:13px;padding:16px;background:var(--lt);border-radius:6px;border:1px solid var(--bd)}
-.cic{font-size:1.5rem;flex-shrink:0}
-.clbl{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.77rem;text-transform:uppercase;letter-spacing:1px;color:var(--st);margin-bottom:3px;display:block}
-.cval{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1.05rem;color:var(--dk)}
-.cval a{color:var(--o)}
-
-/* BENEFITS */
-.bgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:13px;margin-bottom:26px}
-.bcard{background:var(--wh);border-radius:6px;padding:16px;border-left:4px solid var(--o)}
-.btitle{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:.97rem;text-transform:uppercase;color:var(--dk);margin-bottom:5px}
-.bcard p{font-size:.83rem;color:var(--mid);line-height:1.6}
-
-/* PRODUCT PAGE */
+.pcard{background:var(--wh);border-radius:var(--r);overflow:hidden;border:1px solid var(--bd);transition:box-shadow .25s,transform .25s;display:block}
+.pcard:hover{box-shadow:0 10px 32px rgba(0,0,0,.11);transform:translateY(-4px)}
 .pp-layout{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start;margin-bottom:52px}
 .pp-imgbox{background:var(--lt);border-radius:8px;border:2px solid var(--bd);aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;font-size:7rem;overflow:hidden}
 .pp-imgbox img{width:100%;height:100%;object-fit:cover}
+.pp-thumbs{display:flex;gap:9px;margin-top:11px;overflow-x:auto;padding-bottom:2px}
+.pp-thumbs::-webkit-scrollbar{height:5px}
+.pp-thumb{width:68px;height:68px;flex-shrink:0;border-radius:6px;border:2px solid var(--bd);overflow:hidden;cursor:pointer;background:var(--wh);transition:border-color .2s}
+.pp-thumb img{width:100%;height:100%;object-fit:cover}
+.pp-thumb.on{border-color:var(--o)}
+.pp-thumb:hover{border-color:var(--o)}
+.pp-specs-inline{margin-bottom:20px}
+.pp-specs-inline .stbl{margin-top:0}
 .pp-tag{display:inline-block;background:var(--o);color:var(--wh);font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.76rem;padding:4px 11px;letter-spacing:1.5px;text-transform:uppercase;border-radius:2px;margin-bottom:12px}
 .pp-title{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(1.7rem,3vw,2.4rem);line-height:1.05;text-transform:uppercase;color:var(--dk);margin-bottom:14px}
 .pp-pricebox{background:var(--lt);border-radius:6px;padding:16px;margin-bottom:18px;border-left:4px solid var(--o)}
 .pp-price{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:2.2rem;color:var(--dk);line-height:1}
+.pp-price-row{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.pp-price-pm2{font-size:.85rem;font-weight:600;color:var(--st);background:#fff;border-radius:4px;padding:2px 8px}
 .pp-pnote{font-size:.8rem;color:var(--st);margin-top:3px}
 .pp-short{color:var(--mid);font-size:.9rem;line-height:1.75;margin-bottom:22px}
 .pp-acts{display:flex;gap:11px;margin-bottom:18px;flex-wrap:wrap}
-.pp-acts a{flex:1;min-width:130px}
+.pp-acts a,.pp-acts button{flex:1;min-width:130px}
+.pp-qty{display:flex;align-items:stretch;border:2px solid var(--bd);border-radius:4px;overflow:hidden;flex-shrink:0;height:48px}
+.pp-qty-btn{background:var(--lt);border:none;width:40px;font-size:1.1rem;font-weight:700;color:var(--dk);cursor:pointer;transition:background .2s}
+.pp-qty-btn:hover{background:var(--o);color:var(--wh)}
+.pp-qty input{width:48px;border:none;border-left:2px solid var(--bd);border-right:2px solid var(--bd);text-align:center;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.05rem;color:var(--dk);outline:none;-moz-appearance:textfield}
+.pp-qty input::-webkit-outer-spin-button,.pp-qty input::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
+@media(max-width:768px){.pp-qty{height:44px}}
 .pp-trust{display:flex;flex-wrap:wrap;gap:9px;padding:13px 0;border-top:1px solid var(--bd)}
 .pti{display:flex;align-items:center;gap:6px;font-size:.79rem;color:var(--mid);font-weight:600}
-/* TABS */
 .pp-tabs{border-bottom:2px solid var(--bd);display:flex;margin-bottom:22px;overflow-x:auto}
 .pp-tabs::-webkit-scrollbar{height:0}
 .ptb{background:none;border:none;border-bottom:3px solid transparent;margin-bottom:-2px;padding:11px 19px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.95rem;text-transform:uppercase;cursor:pointer;color:var(--mid);white-space:nowrap;transition:color .2s}
@@ -225,106 +176,15 @@ img{max-width:100%;display:block;height:auto}
 .stbl th{background:var(--dk);color:var(--wh);padding:9px 13px;text-align:left;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.82rem;text-transform:uppercase}
 .stbl td{padding:9px 13px;border-bottom:1px solid var(--bd);font-size:.85rem;color:var(--mid)}
 .stbl tr:nth-child(even) td{background:var(--lt)}
-/* SIZE SELECT */
 .sz-wrap{margin-bottom:18px}
 .sz-wrap label{display:block;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.77rem;text-transform:uppercase;letter-spacing:.5px;color:var(--dk);margin-bottom:6px}
 .sz-wrap select{width:100%;padding:11px 13px;background:var(--lt);border:2px solid var(--bd);border-radius:4px;font-family:'Barlow',sans-serif;font-size:.9rem;color:var(--dk);outline:none;cursor:pointer;transition:border-color .2s}
 .sz-wrap select:focus{border-color:var(--o)}
-/* RELATED */
 .rel-sec{background:var(--lt);padding:44px 20px;border-top:4px solid var(--y)}
 .rel-inner{max-width:1280px;margin:0 auto}
 .rgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:22px}
-
-/* HOMEPAGE */
-.hero{background:var(--dk);display:grid;grid-template-columns:1fr 1fr;min-height:460px}
-.hero-c{padding:60px 44px 60px 36px;display:flex;flex-direction:column;justify-content:center}
-.hero-tag{display:inline-block;background:var(--o);color:var(--wh);font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.83rem;padding:4px 13px;letter-spacing:1.8px;text-transform:uppercase;margin-bottom:18px;width:fit-content}
-.hero h1{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(2.6rem,4.5vw,4.6rem);line-height:.95;color:var(--wh);text-transform:uppercase;letter-spacing:-1px;margin-bottom:16px}
-.hero h1 em{color:var(--y);font-style:normal}
-.hero-p{color:#AAA;font-size:.97rem;line-height:1.65;margin-bottom:26px;max-width:390px}
-.hero-btns{display:flex;gap:11px;flex-wrap:wrap}
-.hero-v{overflow:hidden}
-.htgrid{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;height:100%;gap:3px}
-.ht{display:flex;align-items:center;justify-content:center;flex-direction:column;gap:7px;transition:transform .3s}
-.ht:hover{transform:scale(1.03)}
-.ht-ic{font-size:2.3rem}
-.ht-nm{color:var(--wh);font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1.05rem;text-transform:uppercase}
-.ht1{background:linear-gradient(135deg,#C0392B,#8B1A1A)}
-.ht2{background:linear-gradient(135deg,#7F8C8D,#4A5568)}
-.ht3{background:linear-gradient(135deg,#8B5E3C,#5C3D1E)}
-.ht4{background:linear-gradient(135deg,#F55C1B,#C0392B)}
-
-/* CAT CARDS (homepage) */
-.csec{max-width:1280px;margin:52px auto;padding:0 20px}
-.chdr{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:26px;gap:11px;flex-wrap:wrap}
-.chdr a{color:var(--o);font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.97rem;text-transform:uppercase}
-.ccgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.cccard{position:relative;border-radius:var(--r);overflow:hidden;aspect-ratio:4/3;display:block}
-.ccbg{width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:4.2rem;transition:transform .4s}
-.cccard:hover .ccbg{transform:scale(1.05)}
-.bg-br{background:linear-gradient(145deg,#C0392B,#6B1E17)}
-.bg-pv{background:linear-gradient(145deg,#626567,#2C3233)}
-.bg-mf{background:linear-gradient(145deg,#A0522D,#5C2710)}
-.ccov{position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.75) 0%,rgba(0,0,0,.1) 60%);display:flex;flex-direction:column;justify-content:flex-end;padding:18px}
-.cclbl{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.6rem;color:var(--wh);text-transform:uppercase;display:block}
-.ccsub{color:rgba(255,255,255,.75);font-size:.8rem;margin-top:3px;display:block}
-.ccarr{color:var(--y);font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.88rem;text-transform:uppercase;margin-top:7px;display:inline-block;transition:transform .2s}
-.cccard:hover .ccarr{transform:translateX(6px)}
-
-/* PROMO */
-.promo{background:var(--dk);padding:52px 20px}
-.promo-i{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:18px}
-.pc{padding:32px;border-radius:var(--r);position:relative;overflow:hidden;min-height:190px;display:flex;flex-direction:column;justify-content:flex-end;text-decoration:none}
-.pc-o{background:var(--o)}.pc-y{background:var(--y)}
-.pc-d{position:absolute;top:-18px;right:-18px;font-size:6.5rem;opacity:.15;line-height:1}
-.pc-e{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.8rem;letter-spacing:1.8px;text-transform:uppercase;color:rgba(255,255,255,.7);margin-bottom:7px}
-.pc-y .pc-e{color:rgba(0,0,0,.55)}
-.pc h3{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.85rem;line-height:1.05;text-transform:uppercase;color:var(--wh);margin-bottom:11px}
-.pc-y h3{color:var(--dk)}
-.pc-l{color:var(--wh);font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.92rem;text-transform:uppercase;border-bottom:2px solid rgba(255,255,255,.4);padding-bottom:2px;display:inline-block}
-.pc-y .pc-l{color:var(--dk)}
-
-/* WHY */
-.why{background:var(--lt);padding:52px 20px;border-top:4px solid var(--o)}
-.why-i{max-width:1280px;margin:0 auto}
-.wgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:28px}
-.wi{text-align:center;padding:22px 14px;background:var(--wh);border-radius:var(--r);border-bottom:4px solid transparent;transition:border-color .25s,transform .25s}
-.wi:hover{border-bottom-color:var(--o);transform:translateY(-4px)}
-.wi-ic{font-size:2.1rem;margin-bottom:11px;display:block}
-.wi-t{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1.05rem;text-transform:uppercase;margin-bottom:7px;color:var(--dk)}
-.wi p{font-size:.82rem;color:var(--mid);line-height:1.6}
-
-/* REVIEWS */
-.revs{background:var(--ch);padding:52px 20px}
-.revs-i{max-width:1280px;margin:0 auto}
-.rgvgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}
-.rv{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:var(--r);padding:22px}
-.stars{color:var(--y);font-size:.97rem;letter-spacing:2px;margin-bottom:11px}
-.rv p{color:#CCC;font-size:.88rem;line-height:1.65;margin-bottom:14px}
-.rvr{display:flex;align-items:center;gap:11px}
-.av{width:36px;height:36px;border-radius:50%;background:var(--o);display:flex;align-items:center;justify-content:center;font-family:'Barlow Condensed',sans-serif;font-weight:800;color:var(--wh);font-size:.9rem;flex-shrink:0}
-.rvn{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.92rem;color:var(--wh);display:block}
-.rvl{font-size:.73rem;color:#888}
-
-/* CTA */
-.cta{background:var(--o);padding:52px 20px;text-align:center}
-.cta h2{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(1.7rem,5vw,3rem);color:var(--wh);text-transform:uppercase;margin-bottom:11px}
-.cta p{color:rgba(255,255,255,.85);font-size:.97rem;margin-bottom:22px}
-
-/* SHOP FILTER */
-.sfbar{background:var(--wh);border-bottom:2px solid var(--bd);padding:16px 20px;position:sticky;top:69px;z-index:100}
-.sf-i{max-width:1280px;margin:0 auto;display:flex;align-items:center;gap:13px;flex-wrap:wrap}
-.sflbl{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.92rem;text-transform:uppercase;color:var(--mid);white-space:nowrap}
-.sfbtns{display:flex;gap:7px;flex-wrap:wrap}
-.sfb{background:var(--lt);border:2px solid var(--bd);color:var(--mid);padding:7px 13px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.83rem;text-transform:uppercase;cursor:pointer;border-radius:3px;transition:all .2s;white-space:nowrap}
-.sfb:hover{border-color:var(--o);color:var(--o)}
-.sfb.on{background:var(--o);border-color:var(--o);color:var(--wh)}
-.sfsec{max-width:1280px;margin:32px auto 72px;padding:0 20px}
-.sfcnt{font-family:'Barlow Condensed',sans-serif;font-size:.88rem;color:var(--st);text-transform:uppercase;letter-spacing:1px;margin-bottom:16px}
-.pcard.hid{display:none}
-.no-res{grid-column:1/-1;text-align:center;padding:48px;color:var(--mid);font-family:'Barlow Condensed',sans-serif;font-size:1.05rem;text-transform:uppercase}
-
-/* FOOTER */
+.st{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(1.7rem,4vw,2.6rem);text-transform:uppercase;color:var(--dk);line-height:1}
+.st b{color:var(--o);font-weight:900}
 footer{background:#111;padding:40px 20px 18px;color:#888;width:100%}
 .ft-i{max-width:1280px;margin:0 auto}
 .ftg{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px;padding-bottom:26px;border-bottom:1px solid #2A2A2A;margin-bottom:16px}
@@ -335,39 +195,16 @@ footer{background:#111;padding:40px 20px 18px;color:#888;width:100%}
 .ft-bot{display:flex;justify-content:space-between;align-items:center;font-size:.77rem;flex-wrap:wrap;gap:9px}
 .pays{display:flex;gap:7px;flex-wrap:wrap}
 .pay{background:#222;border:1px solid #333;border-radius:3px;padding:3px 8px;font-size:.68rem;color:#888;font-weight:600}
-
-/* LAYOUT HELPERS */
 .wrap{max-width:1280px;margin:0 auto;padding:0 20px}
-.sec{max-width:1280px;margin:44px auto 80px;padding:0 20px}
-.sec-w{max-width:880px;margin:44px auto 80px;padding:0 20px}
-
-/* ═══ MOBILE RESPONSIVE ═══════════════════════════════════════ */
-@media(max-width:1024px){
-  .pgrid{grid-template-columns:repeat(3,1fr)}
-  .wgrid{grid-template-columns:repeat(2,1fr)}
-  .ftg{grid-template-columns:1fr 1fr;gap:22px}
-  .rgrid{grid-template-columns:repeat(2,1fr)}
-}
-@media(max-width:860px){
-  .hero{grid-template-columns:1fr;min-height:auto}
-  .hero-c{padding:38px 20px 28px}
-  .hero-v{height:230px}
-  .htgrid{grid-template-columns:1fr 1fr 1fr 1fr;grid-template-rows:1fr}
-  .ccgrid{grid-template-columns:1fr 1fr}
-  .promo-i{grid-template-columns:1fr}
-  .rgvgrid{grid-template-columns:1fr}
-  .pp-layout{grid-template-columns:1fr;gap:24px}
-  .bgrid{grid-template-columns:1fr 1fr}
-}
+@media(max-width:1024px){.rgrid{grid-template-columns:repeat(2,1fr)}.ftg{grid-template-columns:1fr 1fr;gap:22px}}
+@media(max-width:860px){.pp-layout{grid-template-columns:1fr;gap:24px}}
 @media(max-width:768px){
-  /* Header */
   .hdr-i{height:56px;padding:0 14px;gap:9px}
   .logo{font-size:1.35rem}
   .srch{display:none}
   .hph{display:none}
   .cart-btn{padding:7px 11px;font-size:.85rem!important}
   .hbtn{display:flex!important}
-  /* Nav mobile */
   .nav{display:none}
   .nav.mob-open{display:block}
   .nav-i{flex-direction:column;padding:0;overflow:visible;width:100%}
@@ -376,122 +213,45 @@ footer{background:#111;padding:40px 20px 18px;color:#888;width:100%}
   .dd{display:none!important;position:static;box-shadow:none;border:none;background:#161616;min-width:unset;width:100%}
   .ni.mob-open .dd{display:block!important}
   .dd a{padding:11px 28px;font-size:.97rem;border-bottom:1px solid #222}
-  /* Announce */
   .ann{font-size:.75rem;padding:7px 12px}
   .ann-x{display:none}
-  /* Hero */
-  .hero h1{font-size:2.4rem}
-  .hero-p{font-size:.9rem;margin-bottom:18px}
-  .hero-btns{flex-direction:column;gap:9px}
-  .hero-btns a{display:block;text-align:center;padding:13px 18px;font-size:.97rem;width:100%}
-  .hero-v{height:180px}
-  .ht-ic{font-size:1.7rem}
-  .ht-nm{font-size:.88rem}
-  /* Trust */
-  .trust{padding:13px 16px}
-  .trust-i{display:grid;grid-template-columns:1fr 1fr;gap:9px;justify-items:start}
-  .ti strong{font-size:.88rem}
-  .ti span{font-size:.68rem}
-  /* Cat section */
-  .csec{margin:36px auto}
-  .chdr{flex-direction:column;align-items:flex-start;gap:7px;margin-bottom:18px}
-  .ccgrid{grid-template-columns:1fr;gap:12px}
-  /* Promo */
-  .promo{padding:36px 16px}
-  .pc{padding:24px 20px;min-height:auto}
-  .pc h3{font-size:1.55rem}
-  /* Why */
-  .why{padding:40px 16px}
-  .wgrid{grid-template-columns:1fr 1fr;gap:11px}
-  .wi{padding:18px 11px}
-  .wi-ic{font-size:1.85rem;margin-bottom:8px}
-  .wi-t{font-size:.97rem}
-  /* Reviews */
-  .revs{padding:40px 16px}
-  .rgvgrid{grid-template-columns:1fr}
-  /* CTA */
-  .cta{padding:40px 16px}
-  /* Cat hero */
-  .chero{padding:32px 16px}
-  .chero h1{font-size:2rem}
-  /* Subcat */
-  .scgrid{grid-template-columns:1fr}
-  .scimg{height:155px;font-size:4.5rem}
-  /* Product grid */
-  .pgrid{grid-template-columns:repeat(2,1fr);gap:12px}
-  /* Product page */
   .pp-acts{flex-direction:column;gap:9px}
-  .pp-acts a{width:100%;display:block;text-align:center}
+  .pp-acts a,.pp-acts button{width:100%;display:block;text-align:center}
   .pp-price{font-size:1.9rem}
-  /* Forms */
-  .frow{grid-template-columns:1fr}
-  .fcard{padding:20px 16px}
-  .icard{padding:20px 16px}
-  /* Contact */
-  .cgrid{grid-template-columns:1fr}
-  /* Benefits */
-  .bgrid{grid-template-columns:1fr 1fr;gap:11px}
-  /* Shop filter */
-  .sfbar{padding:12px 16px;top:56px}
-  .sfbtns{gap:5px}
-  .sfb{padding:6px 10px;font-size:.78rem}
-  /* Footer */
   .ftg{grid-template-columns:1fr 1fr;gap:18px}
   .ft-bot{flex-direction:column;align-items:flex-start;gap:9px}
   footer{padding:34px 16px 18px}
-  /* Rel grid */
   .rgrid{grid-template-columns:1fr 1fr;gap:12px}
-  /* Sections */
-  .sec,.sec-w{margin:36px auto 60px;padding:0 16px}
   .wrap{padding:0 16px}
-  .sfsec{padding:0 16px;margin:26px auto 56px}
 }
 @media(max-width:480px){
   .logo{font-size:1.15rem}
-  .hero h1{font-size:2rem}
-  .hero-v{height:155px}
-  .pgrid{grid-template-columns:1fr}
-  .trust-i{grid-template-columns:1fr}
-  .wgrid{grid-template-columns:1fr}
   .ftg{grid-template-columns:1fr}
   .ann{display:none}
-  .sfbtns{display:grid;grid-template-columns:1fr 1fr;gap:5px}
-  .sfb{text-align:center}
-  .bgrid{grid-template-columns:1fr}
   .rgrid{grid-template-columns:1fr}
   .pp-layout{gap:18px}
 }
-
-
-
 </style>
 
-  <!-- Snipcart -->
-  <link rel="preconnect" href="https://app.snipcart.com">
-  <link rel="preconnect" href="https://cdn.snipcart.com">
-  <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.3.3/default/snipcart.css">
-<title>Cottage Blend Handmade Bricks — Pro Build Supplies</title>
-<meta name="description" content="Cottage Blend handmade brick with a distinctive mix of orange, red and dark accent tones. Free UK delivery.">
-<link rel="canonical" href="https://probuildsupplies.uk/products/cottage-blend-handmade.html">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Product",
-  "name": "Cottage Blend Handmade Bricks",
+  "name": "Cottage Blend",
   "description": "Cottage Blend is a premium handmade brick featuring a distinctive mix of orange, red and dark accent tones, creating a rich and characterful appearance. The combination of colours, along with its textured handmade finish, gives each brick a unique look that adds depth and individuality to any build.",
-  "sku": "cottage-blend-handmade",
+  "sku": "cottage-blend",
+  "category": "Handmade Bricks",
   "brand": {
     "@type": "Brand",
     "name": "Pro Build Supplies"
   },
-  "category": "Handmade Bricks",
   "offers": {
     "@type": "Offer",
     "priceCurrency": "GBP",
-    "availability": "https://schema.org/InStock",
-    "url": "https://probuildsupplies.uk/products/cottage-blend-handmade.html",
     "price": "557.09",
+    "availability": "https://schema.org/InStock",
     "itemCondition": "https://schema.org/NewCondition",
+    "url": "https://probuildsupplies.uk/products/cottage-blend-handmade.html",
     "priceValidUntil": "2027-12-31",
     "shippingDetails": {
       "@type": "OfferShippingDetails",
@@ -528,54 +288,9 @@ footer{background:#111;padding:40px 20px 18px;color:#888;width:100%}
       "returnMethod": "https://schema.org/ReturnByMail",
       "returnFees": "https://schema.org/ReturnShippingFees"
     }
-  }
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Is Cottage Blend frost resistant and suitable for outdoor use?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes \u2014 Cottage Blend is rated F2, fully frost resistant, so it's suitable for exterior facing work and UK weather conditions all year round."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can I order a free sample of Cottage Blend before I buy a full pack?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes \u2014 we offer free samples across our brick range, including Cottage Blend. We'd always recommend ordering a sample first so you can check the colour and texture in person before committing to a full pack."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is delivery really free on Cottage Blend?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, delivery is completely free to UK mainland addresses on every order, with no minimum order value. Order before 2pm Monday\u2013Friday for next-day dispatch."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Will the bricks I receive match the photos exactly?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "With Cottage Blend being a handmade bricks product, individual bricks will vary slightly from each other and from the photos shown, which is completely normal and part of the character of this style of brick."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Do you offer trade or bulk pricing on Cottage Blend?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes \u2014 we offer trade accounts and bulk order pricing on Cottage Blend. Get in touch or apply for a trade account for a quote on larger quantities."
-      }
-    }
+  },
+  "image": [
+    "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1785856184672-xvv543.jpg"
   ]
 }
 </script>
@@ -599,7 +314,7 @@ footer{background:#111;padding:40px 20px 18px;color:#888;width:100%}
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "Cottage Blend Handmade Bricks",
+      "name": "Cottage Blend",
       "item": "https://probuildsupplies.uk/products/cottage-blend-handmade.html"
     }
   ]
@@ -609,137 +324,90 @@ footer{background:#111;padding:40px 20px 18px;color:#888;width:100%}
 <body>
 <div class="ann">🚚 FREE Delivery on ALL Orders<span class="ann-x"> &nbsp;|&nbsp; 🧱 Free Brick Samples &nbsp;|&nbsp; 🏗️ Trade Accounts Available</span></div>
 <header class="hdr"><div class="hdr-i">
-  <a href="../index.html" class="logo">Pro Build <b>Supplies</b></a>
-  <div class="srch"><div><input type="text" placeholder="Search bricks, paving, insulation..."><button>🔍</button></div></div>
-  <div class="hdr-act">
-    <a href="tel:01772287622" class="hph">📞 01772 287622</a>
-    <a href="../account.html" class="hph pbs-account-btn">👤 My Account</a>
+<a href="../index.html" class="logo">Pro Build <b>Supplies</b></a>
+<div class="srch"><div><input type="text" placeholder="Search bricks, paving, insulation..."><button>🔍</button></div></div>
+<div class="hdr-act">
+<a href="tel:01772287622" class="hph">📞 01772 287622</a>
+<a href="../account.html" class="hph pbs-account-btn">👤 My Account</a>
     <a href="#" class="cart-btn snipcart-checkout">🛒 Cart <span class="snipcart-items-count" style="background:var(--y);color:var(--dk);font-size:.65rem;font-weight:700;border-radius:10px;padding:1px 5px;margin-left:3px;font-family:'Barlow Condensed',sans-serif;vertical-align:middle"></span></a>
-    <button class="hbtn" id="hbt" aria-label="Menu"><span></span><span></span><span></span></button>
-  </div>
+<button class="hbtn" id="hbt" aria-label="Menu"><span></span><span></span><span></span></button>
+</div>
 </div></header>
 <nav class="nav" id="nav"><div class="nav-i">
-  <a href="../index.html">Home</a>
-  <a href="../shop.html">🛍️ Shop All</a>
-  <div class="ni"><a href="../bricks.html">🧱 Bricks</a><div class="dd">
-    <a href="../handmade-bricks.html">Handmade Bricks</a>
-    <a href="../reclaimed-bricks.html">Reclaimed Bricks</a>
-  </div></div>
-  <div class="ni"><a href="../paving.html">🪨 Paving</a><div class="dd">
-    <a href="../porcelain-paving.html">Porcelain Paving</a>
-    <a href="../indian-sandstone.html">Indian Sandstone</a>
-  </div></div>
-  <a href="../insulation.html">❄️ Insulation</a>
-  <div class="ni"><a href="../trade-accounts.html">🏗️ Trade &amp; Bulk</a><div class="dd">
-    <a href="../trade-accounts.html">Trade Accounts</a>
-    <a href="../trade-accounts.html#bulk">Bulk Orders</a>
-  </div></div>
-  <a href="../samples.html">🧱 Free Samples</a>
-  <a href="../contact.html">📞 Contact</a>
+<a href="../index.html">Home</a>
+<a href="../shop.html">🛍️ Shop All</a>
+<div class="ni"><a href="../bricks.html">🧱 Bricks</a><div class="dd">
+<a href="../handmade-bricks.html">Handmade Bricks</a>
+<a href="../reclaimed-bricks.html">Reclaimed Bricks</a>
+</div></div>
+<div class="ni"><a href="../paving.html">🪨 Paving</a><div class="dd">
+<a href="../porcelain-paving.html">Porcelain Paving</a>
+<a href="../indian-sandstone.html">Indian Sandstone</a>
+</div></div>
+<a href="../insulation.html">❄️ Insulation</a>
+<div class="ni"><a href="../trade-accounts.html">🏗️ Trade &amp; Bulk</a><div class="dd">
+<a href="../trade-accounts.html">Trade Accounts</a>
+<a href="trade-accounts.html#bulk">Bulk Orders</a>
+</div></div>
+<a href="../samples.html">🧱 Free Samples</a>
+<a href="../contact.html">📞 Contact</a>
 </div></nav>
-<div class="bc"><div class="bc-i"><a href="../index.html">Home</a> &rsaquo; <a href="../handmade-bricks.html">Handmade Bricks</a> &rsaquo; Cottage Blend Handmade Bricks</div></div>
+<div class="bc"><div class="bc-i"><a href="../index.html">Home</a> &rsaquo; <a href="../handmade-bricks.html">Handmade Bricks</a> &rsaquo; Cottage Blend</div></div>
 <div style="max-width:1280px;margin:0 auto;padding:34px 20px 72px">
-  <div class="pp-layout">
-    <div class="pp-imgbox" id="pp-imgbox">🧱</div>
-    <div>
-      <span class="pp-tag">Handmade Bricks</span>
-      <h1 class="pp-title">Cottage Blend Handmade Bricks</h1>
-      <div class="pp-pricebox">
-        <div class="pp-price" id="pp-price">£557.09</div>
-        <div class="pp-pnote" id="pp-pnote">📦 Pack of 512 | Free delivery</div>
-      </div>
-      <p class="pp-short">Distinctive mix of orange, red and dark accent tones, with a textured handmade finish that adds depth and individuality.</p>
-      <div class="sz-wrap"><label>Select Size</label><select id="szSel" onchange="szChange(this)"><option value='{"p":"","n":"Pack of 512"}' selected>65mm — Pack of 512</option><option value='{"p":"","n":"Pack of 464"}' >73mm — Pack of 464</option></select></div>
-      <div class="pp-acts">
-        <button
-          class="btn-o snipcart-add-item"
-          id="atcBtn"
-          data-item-id="cottage-blend-handmade"
-          data-item-name="Cottage Blend Handmade Bricks"
-          data-item-price="557.09"
-          data-item-url="/products/cottage-blend-handmade.html"
-          data-item-description="Cottage Blend handmade brick with a distinctive mix of orange, red and dark accent tones."
-          data-item-has-taxes-included="true"
-          data-item-shippable='false'
-        >🛒 Add to Cart</button>
-        <a href="../samples.html" class="btn-dk">🧱 Free Sample</a>
-      </div>
-      <script>
-      (function(){
-        var sel = document.getElementById('szSel');
-        var btn = document.getElementById('atcBtn');
-        if (!sel || !btn) return;
-        sel.addEventListener('change', function(){
-          try {
-            var v = JSON.parse(this.value);
-            if (v.p > 0) {
-              btn.dataset.itemPrice = v.p.toFixed(2);
-              btn.dataset.itemCustom1Value = sel.options[sel.selectedIndex].text;
-            }
-          } catch(e) {}
-        });
-        btn.dataset.itemCustom1Name = 'Size';
-        btn.dataset.itemCustom1Value = sel.options[0].text;
-      })();
-      </script>
-      <div class="pp-trust">
-        <div class="pti"><span>🚚</span> Free Delivery</div>
-        <div class="pti"><span>📦</span> Next-Day Dispatch</div>
-        <div class="pti"><span>🧱</span> Free Samples</div>
-        <div class="pti"><span>📞</span> 01772 287622</div>
-      </div>
-    </div>
-  </div>
-  <div class="pp-tabs">
-    <button class="ptb on" data-t="d">Description</button>
-    <button class="ptb" data-t="s">Specifications</button>
-    <button class="ptb" data-t="del">Delivery</button>
-  </div>
-  <div class="ptab on" id="pt-d"><p>Cottage Blend is a premium handmade brick featuring a distinctive mix of orange, red and dark accent tones, creating a rich and characterful appearance. The combination of colours, along with its textured handmade finish, gives each brick a unique look that adds depth and individuality to any build.</p></div>
-  <div class="ptab" id="pt-s"><table class="stbl"><thead><tr><th>Specification</th><th>Details</th></tr></thead><tbody><tr><td><strong>Size</strong></td><td>215×102.5×65mm</td></tr><tr><td><strong>Pack Size</strong></td><td>512 bricks (65mm) / 464 bricks (73mm)</td></tr><tr><td><strong>Colour</strong></td><td>Orange / Red / Dark Multi</td></tr><tr><td><strong>Texture</strong></td><td>Handmade</td></tr><tr><td><strong>Frost Resistance</strong></td><td>F2 — Fully frost resistant</td></tr><tr><td><strong>Standard</strong></td><td>BS EN 771-1</td></tr></tbody></table></div>
-  <div class="ptab" id="pt-del"><h3>Free Delivery on All Orders</h3>
-<p>All orders delivered <strong>free</strong> to UK mainland. No minimum order, no surcharges.</p>
-<h3>Dispatch Times</h3>
-<ul><li>Order before <strong>2pm Mon&ndash;Fri</strong> for next-day dispatch</li>
-<li>Pallet deliveries within <strong>1&ndash;3 working days</strong></li>
-<li>Weekend orders dispatched the following Monday</li></ul>
-<h3>How Delivered</h3>
-<ul><li>Delivered on pallets via national pallet network</li>
-<li><strong>Kerbside only</strong> &mdash; ensure access for an 18-tonne vehicle</li>
-<li>Someone must be available to accept delivery</li></ul>
-<p>See our <a href="../delivery.html">full delivery page</a> for details.</p></div>
+<div class="pp-layout">
+<div><div class="pp-imgbox" id="pp-imgbox"><img src="https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1785856184672-xvv543.jpg" alt="Cottage Blend" id="pp-mainimg" style="width:100%;height:100%;object-fit:cover"></div></div>
+<div>
+<span class="pp-tag">Handmade Bricks</span>
+<h1 class="pp-title">Cottage Blend</h1>
+<div class="pp-specs-inline"><table class="stbl"><tbody><tr><td><strong>Size</strong></td><td>215×102.5×65mm</td></tr><tr><td><strong>Pack Size</strong></td><td>512 bricks (65mm) / 464 bricks (73mm)</td></tr><tr><td><strong>Colour</strong></td><td>Orange / Red / Dark Multi</td></tr><tr><td><strong>Texture</strong></td><td>Handmade</td></tr><tr><td><strong>Frost Resistance</strong></td><td>F2 — Fully frost resistant</td></tr><tr><td><strong>Standard</strong></td><td>BS EN 771-1</td></tr></tbody></table></div><div class="pp-pricebox"><div class="pp-price-row"><div class="pp-price" id="pp-price">£557.09</div><span class="pp-price-pm2" id="pp-price-pm2"></span></div><div class="pp-pnote" id="pp-pnote">📦 Pack of 512 | 65mm | Free delivery</div></div>
+<p class="pp-short">Cottage Blend is a premium handmade brick featuring a distinctive mix of orange, red and dark accent tones, creating a rich and characterful appearance. The combination of colours, along with its textured handmade finish, gives each brick a unique look that adds depth and individuality to any build.</p>
+<div class="sz-wrap" id="pp-szwrap"><label for="szSel">Choose Size</label><select id="szSel"><option value="0" data-price="£557.09" data-pm2="" data-pack="Pack of 512" data-size="65mm">65mm — Pack of 512 — £557.09</option><option value="1" data-price="£567.86" data-pm2="" data-pack="Pack of 464" data-size="73mm">73mm — Pack of 464 — £567.86</option></select></div><div class="pp-acts">
+<div class="pp-qty"><button type="button" class="pp-qty-btn" id="pp-qty-minus" aria-label="Decrease quantity">−</button><input type="number" id="pp-qty-input" value="1" min="1" step="1" inputmode="numeric"><button type="button" class="pp-qty-btn" id="pp-qty-plus" aria-label="Increase quantity">+</button></div>
+<button class="btn-o snipcart-add-item" id="pp-addbtn" data-item-id="cottage-blend" data-item-name="Cottage Blend" data-item-price="557.09" data-item-url="https://probuildsupplies.uk/products/cottage-blend-handmade.html" data-item-description="Cottage Blend is a premium handmade brick featuring a distinctive mix of orange, red and dark accent tones, creating a rich and characterful appearance. The com" data-item-image="https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1785856184672-xvv543.jpg" data-item-has-taxes-included="true" data-item-shippable="true">🛒 Add to Cart</button>
+<a href="../samples.html" class="btn-dk">🧱 Free Sample</a>
 </div>
-<div class="sec" style="max-width:1280px;margin:0 auto;padding:0 20px 60px"><h2 style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.7rem;text-transform:uppercase;color:var(--dk);margin-bottom:18px">Frequently Asked Questions</h2><div class="faqlist" style="display:grid;gap:16px"><div style="background:var(--wh);border:1px solid var(--bd);border-radius:8px;padding:18px 20px"><h3 style="font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.05rem;color:var(--dk);margin-bottom:8px">Is Cottage Blend frost resistant and suitable for outdoor use?</h3><p style="color:var(--mid);font-size:.92rem;line-height:1.7;margin:0">Yes — Cottage Blend is rated F2, fully frost resistant, so it&#x27;s suitable for exterior facing work and UK weather conditions all year round.</p></div><div style="background:var(--wh);border:1px solid var(--bd);border-radius:8px;padding:18px 20px"><h3 style="font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.05rem;color:var(--dk);margin-bottom:8px">Can I order a free sample of Cottage Blend before I buy a full pack?</h3><p style="color:var(--mid);font-size:.92rem;line-height:1.7;margin:0">Yes — we offer free samples across our brick range, including Cottage Blend. We&#x27;d always recommend ordering a sample first so you can check the colour and texture in person before committing to a full pack.</p></div><div style="background:var(--wh);border:1px solid var(--bd);border-radius:8px;padding:18px 20px"><h3 style="font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.05rem;color:var(--dk);margin-bottom:8px">Is delivery really free on Cottage Blend?</h3><p style="color:var(--mid);font-size:.92rem;line-height:1.7;margin:0">Yes, delivery is completely free to UK mainland addresses on every order, with no minimum order value. Order before 2pm Monday–Friday for next-day dispatch.</p></div><div style="background:var(--wh);border:1px solid var(--bd);border-radius:8px;padding:18px 20px"><h3 style="font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.05rem;color:var(--dk);margin-bottom:8px">Will the bricks I receive match the photos exactly?</h3><p style="color:var(--mid);font-size:.92rem;line-height:1.7;margin:0">With Cottage Blend being a handmade bricks product, individual bricks will vary slightly from each other and from the photos shown, which is completely normal and part of the character of this style of brick.</p></div><div style="background:var(--wh);border:1px solid var(--bd);border-radius:8px;padding:18px 20px"><h3 style="font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.05rem;color:var(--dk);margin-bottom:8px">Do you offer trade or bulk pricing on Cottage Blend?</h3><p style="color:var(--mid);font-size:.92rem;line-height:1.7;margin:0">Yes — we offer trade accounts and bulk order pricing on Cottage Blend. Get in touch or apply for a trade account for a quote on larger quantities.</p></div></div></div>
+<div class="pp-trust"><div class="pti"><span>🚚</span> Free Delivery</div><div class="pti"><span>📦</span> Next-Day Dispatch</div><div class="pti"><span>🧱</span> Free Samples</div><div class="pti"><span>📞</span> 01772 287622</div></div>
+</div></div>
+<div class="pp-tabs"><button class="ptb on" data-t="d">Description</button><button class="ptb" data-t="s">Specifications</button><button class="ptb" data-t="del">Delivery</button></div>
+<div class="ptab on" id="pt-d"><p>Cottage Blend is a premium handmade brick featuring a distinctive mix of orange, red and dark accent tones, creating a rich and characterful appearance. The combination of colours, along with its textured handmade finish, gives each brick a unique look that adds depth and individuality to any build.</p></div>
+<div class="ptab" id="pt-s"><table class="stbl"><thead><tr><th>Specification</th><th>Details</th></tr></thead><tbody><tr><td><strong>Size</strong></td><td>215×102.5×65mm</td></tr><tr><td><strong>Pack Size</strong></td><td>512 bricks (65mm) / 464 bricks (73mm)</td></tr><tr><td><strong>Colour</strong></td><td>Orange / Red / Dark Multi</td></tr><tr><td><strong>Texture</strong></td><td>Handmade</td></tr><tr><td><strong>Frost Resistance</strong></td><td>F2 — Fully frost resistant</td></tr><tr><td><strong>Standard</strong></td><td>BS EN 771-1</td></tr><tr><td><strong>Frost Resistance</strong></td><td>F2 — Fully frost resistant</td></tr></tbody></table><h3 style="margin-top:22px">Pack Sizes &amp; Prices</h3><table class="stbl"><thead><tr><th>Pack</th><th>Size</th><th style="text-align:right">Price</th><th style="text-align:right">Per m²</th></tr></thead><tbody><tr><td><strong>Pack of 512</strong></td><td>65mm</td><td style="text-align:right;font-weight:700;color:var(--o)">£557.09</td><td style="text-align:right">—</td></tr><tr><td><strong>Pack of 464</strong></td><td>73mm</td><td style="text-align:right;font-weight:700;color:var(--o)">£567.86</td><td style="text-align:right">—</td></tr></tbody></table></div>
+<div class="ptab" id="pt-del"><h3>Free Delivery on All Orders</h3><p>All orders delivered <strong>free</strong> to UK mainland. No minimum order, no surcharges.</p><h3>Dispatch Times</h3><ul><li>Order before <strong>2pm Mon&ndash;Sat</strong> for next-day dispatch</li><li>Pallet deliveries within <strong>1&ndash;3 working days</strong></li></ul><h3>How Delivered</h3><ul><li>Delivered on pallets via national pallet network</li><li><strong>Kerbside only</strong> &mdash; ensure access for an 18-tonne vehicle</li><li>Someone must be available to accept delivery</li></ul><p>See our <a href="../delivery.html">full delivery page</a> for details.</p></div>
+<h2 class="pp-rel-h">You Might Also <em>Like</em></h2><div class="pgrid"><a href="city-blend-handmade-facing-bricks.html" class="pcard"><div class="pimg" style="padding:0;overflow:hidden"><img src="https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1785856182311-m10sml.jpg" alt="City Blend" loading="lazy" style="width:100%;height:100%;object-fit:cover"></div><div class="pinfo"><div class="pcat">Handmade Bricks</div><div class="pname">City Blend</div><div class="pprice">£557</div></div></a><a href="heritage-blend-handmade.html" class="pcard"><div class="pimg" style="padding:0;overflow:hidden"><img src="https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1785856182714-pamsiu.jpg" alt="Heritage Blend" loading="lazy" style="width:100%;height:100%;object-fit:cover"></div><div class="pinfo"><div class="pcat">Handmade Bricks</div><div class="pname">Heritage Blend</div><div class="pprice">£543.57</div></div></a><a href="village-multi-handmade.html" class="pcard"><div class="pimg" style="padding:0;overflow:hidden"><img src="https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1785856183184-bxartz.jpg" alt="Village Multi Handmade" loading="lazy" style="width:100%;height:100%;object-fit:cover"></div><div class="pinfo"><div class="pcat">Handmade Bricks</div><div class="pname">Village Multi Handmade</div><div class="pprice">£543.57</div></div></a><a href="barnstock-orange-handmade.html" class="pcard"><div class="pimg" style="padding:0;overflow:hidden"><img src="https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1785856183618-r729kk.jpg" alt="Barnstock Orange" loading="lazy" style="width:100%;height:100%;object-fit:cover"></div><div class="pinfo"><div class="pcat">Handmade Bricks</div><div class="pname">Barnstock Orange</div><div class="pprice">£557.09</div></div></a></div>
+</div>
+<script>
+(function(){var sel=document.getElementById("szSel");if(sel){sel.addEventListener("change",function(){var o=sel.options[sel.selectedIndex];document.getElementById("pp-price").textContent=o.dataset.price||"";var pm=document.getElementById("pp-price-pm2");if(pm)pm.textContent=o.dataset.pm2?(o.dataset.pm2+" per m²"):"";document.getElementById("pp-pnote").textContent="📦 "+(o.dataset.pack||"")+(o.dataset.size?" | "+o.dataset.size:"")+" | Free delivery";var b=document.getElementById("pp-addbtn");if(b){b.setAttribute("data-item-price",(o.dataset.price||"").replace(/[^0-9.]/g,""));b.setAttribute("data-item-id","cottage-blend"+"-"+sel.selectedIndex);b.setAttribute("data-item-name","Cottage Blend"+" — "+(o.dataset.size||""));}});}var main=document.getElementById("pp-mainimg");document.querySelectorAll(".pp-thumb").forEach(function(t){t.addEventListener("click",function(){if(main)main.src=t.dataset.src;document.querySelectorAll(".pp-thumb").forEach(function(x){x.classList.remove("on");});t.classList.add("on");});});})();
+</script>
 <footer><div class="ft-i">
-  <div class="ftg">
-    <div class="ft-brand"><a href="../index.html" class="logo">Pro Build <b>Supplies</b></a><p>Premium building materials at trade prices, delivered direct to your door or site. Free delivery on every order.</p></div>
-    <div class="fc"><h4>Products</h4>
-      <a href="../handmade-bricks.html">Handmade Bricks</a>
-      <a href="../reclaimed-bricks.html">Reclaimed Bricks</a>
-      <a href="../porcelain-paving.html">Porcelain Paving</a>
-      <a href="../indian-sandstone.html">Indian Sandstone</a>
-      <a href="../insulation.html">Insulation</a>
-    </div>
-    <div class="fc"><h4>Help &amp; Info</h4>
-      <a href="../delivery-areas.html">Delivery Areas</a>
-      <a href="../delivery.html">Delivery Info</a>
-      <a href="../returns.html">Returns Policy</a>
-      <a href="../samples.html">Free Samples</a>
-      <a href="../trade-accounts.html">Trade Accounts</a>
-      <a href="../contact.html">Contact Us</a>
-    </div>
-    <div class="fc"><h4>Company</h4>
-      <a href="../about.html">About Us</a>
-      <a href="../blog/">Blog</a>
-      <a href="../privacy-policy.html">Privacy Policy</a>
-      <a href="../terms.html">Terms &amp; Conditions</a>
-    </div>
-  </div>
-  <div class="ft-bot">
-    <span>&copy; 2026 Pro Build Supplies. All rights reserved.</span>
-    <div class="pays"><span class="pay">VISA</span><span class="pay">Mastercard</span><span class="pay">PayPal</span><span class="pay">Klarna</span><span class="pay">AMEX</span></div>
-  </div>
+<div class="ftg">
+<div class="ft-brand"><a href="../index.html" class="logo">Pro Build <b>Supplies</b></a><p>Premium building materials at trade prices, delivered direct to your door or site. Free delivery on every order.</p></div>
+<div class="fc"><h4>Products</h4>
+<a href="../handmade-bricks.html">Handmade Bricks</a>
+<a href="../reclaimed-bricks.html">Reclaimed Bricks</a>
+<a href="../porcelain-paving.html">Porcelain Paving</a>
+<a href="../indian-sandstone.html">Indian Sandstone</a>
+<a href="../insulation.html">Insulation</a>
+</div>
+<div class="fc"><h4>Help &amp; Info</h4>
+<a href="../delivery-areas.html">Delivery Areas</a>
+<a href="../delivery.html">Delivery Info</a>
+<a href="../returns.html">Returns Policy</a>
+<a href="../samples.html">Free Samples</a>
+<a href="../trade-accounts.html">Trade Accounts</a>
+<a href="../contact.html">Contact Us</a>
+</div>
+<div class="fc"><h4>Company</h4>
+<a href="../about.html">About Us</a>
+<a href="blog/">Blog</a>
+<a href="../privacy-policy.html">Privacy Policy</a>
+<a href="../terms.html">Terms &amp; Conditions</a>
+</div>
+</div>
+<div class="ft-bot">
+<span>&copy; 2026 Pro Build Supplies. All rights reserved.</span>
+<div class="pays"><span class="pay">VISA</span><span class="pay">Mastercard</span><span class="pay">PayPal</span><span class="pay">Klarna</span><span class="pay">AMEX</span></div>
+</div>
 </div></footer>
+
 <script>
 (function(){
   var t=document.getElementById('hbt'),n=document.getElementById('nav');
@@ -757,6 +425,25 @@ footer{background:#111;padding:40px 20px 18px;color:#888;width:100%}
 })();
 </script>
 <script>
+(function(){
+  var input = document.getElementById('pp-qty-input');
+  var minus = document.getElementById('pp-qty-minus');
+  var plus  = document.getElementById('pp-qty-plus');
+  if (!input || !minus || !plus) return;
+  function clamp(){
+    var n = parseInt(input.value, 10);
+    if (isNaN(n) || n < 1) n = 1;
+    if (n > 999) n = 999;
+    input.value = n;
+    return n;
+  }
+  minus.addEventListener('click', function(){ input.value = clamp() - 1; clamp(); });
+  plus.addEventListener('click', function(){ input.value = clamp() + 1; clamp(); });
+  input.addEventListener('change', clamp);
+  input.addEventListener('blur', clamp);
+})();
+</script>
+<script>
 document.querySelectorAll('.ptb').forEach(function(b){
   b.addEventListener('click',function(){
     document.querySelectorAll('.ptb').forEach(function(x){x.classList.remove('on')});
@@ -765,69 +452,11 @@ document.querySelectorAll('.ptb').forEach(function(b){
     document.getElementById('pt-'+b.dataset.t).classList.add('on');
   });
 });
-</script><script>
-function szChange(s){
-  try{var v=JSON.parse(s.value);
-    var pb=document.getElementById('pp-price');
-    var pn=document.getElementById('pp-pnote');
-    if(pb&&v.p)pb.textContent=v.p;
-    if(pn&&v.n)pn.textContent='📦 '+v.n+' | Free delivery';
-  }catch(e){}
-}
 </script>
 
-<!-- Snipcart init -->
-<div hidden id="snipcart" data-api-key="MDQ0ZDg2YTQtNGJjNi00OWYxLTkxNTctZmNlMWJkZjJkNDgyNjM5MTc5OTUyNDY0MDkyMDEw" data-currency="gbp"></div>
-<script src="https://cdn.snipcart.com/themes/v3.3.3/default/snipcart.js"></script>
-
-
-
-
-<script>
-(function() {
-  // Watch for Snipcart cart opening via class change on body
-  var observer = new MutationObserver(function(mutations) {
-    mutations.forEach(function(m) {
-      if (m.type === 'attributes' && m.attributeName === 'class') {
-        var body = document.body;
-        var hdr  = document.querySelector('.hdr');
-        var nav  = document.querySelector('.nav');
-        var ann  = document.querySelector('.ann');
-        var isOpen = body.classList.contains('snipcart-sidecart-opened') ||
-                     body.classList.contains('snipcart-checkout-opened') ||
-                     document.querySelector('#snipcart[class*="visible"]') !== null;
-        if (hdr) hdr.style.zIndex  = isOpen ? '0' : '9999';
-        if (hdr) hdr.style.position = isOpen ? 'relative' : 'sticky';
-        if (nav) nav.style.zIndex  = isOpen ? '0' : '9998';
-        if (ann) ann.style.display = isOpen ? 'none' : '';
-      }
-    });
-  });
-  observer.observe(document.body, { attributes: true });
-
-  // Also hook into Snipcart events if available
-  document.addEventListener('snipcart.ready', function() {
-    Snipcart.events.on('cart.opened', function() {
-      var hdr = document.querySelector('.hdr');
-      var nav = document.querySelector('.nav');
-      var ann = document.querySelector('.ann');
-      if (hdr) { hdr.style.position = 'relative'; hdr.style.zIndex = '0'; }
-      if (nav) nav.style.zIndex = '0';
-      if (ann) ann.style.display = 'none';
-    });
-    Snipcart.events.on('cart.closed', function() {
-      var hdr = document.querySelector('.hdr');
-      var nav = document.querySelector('.nav');
-      var ann = document.querySelector('.ann');
-      if (hdr) { hdr.style.position = 'sticky'; hdr.style.zIndex = '9999'; }
-      if (nav) nav.style.zIndex = '9998';
-      if (ann) ann.style.display = '';
-    });
-  });
-})();
-</script>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="../pbs-account.js"></script>
 <script src="../pbs-products.js"></script>
+<!-- Dynamic product loader: reads ?slug= from the URL and fills in this page from products.json -->
 </body>
 </html>
