@@ -23,7 +23,44 @@
     "priceCurrency": "GBP",
     "availability": "https://schema.org/InStock",
     "url": "https://probuildsupplies.uk/products/rippon-buff.html",
-    "price": "375.65"
+    "price": "375.65",
+    "itemCondition": "https://schema.org/NewCondition",
+    "priceValidUntil": "2027-12-31",
+    "shippingDetails": {
+      "@type": "OfferShippingDetails",
+      "shippingRate": {
+        "@type": "MonetaryAmount",
+        "value": "0",
+        "currency": "GBP"
+      },
+      "shippingDestination": {
+        "@type": "DefinedRegion",
+        "addressCountry": "GB"
+      },
+      "deliveryTime": {
+        "@type": "ShippingDeliveryTime",
+        "handlingTime": {
+          "@type": "QuantitativeValue",
+          "minValue": 0,
+          "maxValue": 1,
+          "unitCode": "DAY"
+        },
+        "transitTime": {
+          "@type": "QuantitativeValue",
+          "minValue": 2,
+          "maxValue": 5,
+          "unitCode": "DAY"
+        }
+      }
+    },
+    "hasMerchantReturnPolicy": {
+      "@type": "MerchantReturnPolicy",
+      "applicableCountry": "GB",
+      "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+      "merchantReturnDays": 30,
+      "returnMethod": "https://schema.org/ReturnByMail",
+      "returnFees": "https://schema.org/ReturnShippingFees"
+    }
   }
 }
 </script>
@@ -494,6 +531,32 @@ footer{background:#111;padding:40px 20px 18px;color:#888;width:100%}
   <link rel="preconnect" href="https://app.snipcart.com">
   <link rel="preconnect" href="https://cdn.snipcart.com">
   <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.3.3/default/snipcart.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://probuildsupplies.uk/index.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Indian Sandstone",
+      "item": "https://probuildsupplies.uk/indian-sandstone.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Rippon Buff Indian Sandstone 22mm",
+      "item": "https://probuildsupplies.uk/products/rippon-buff.html"
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <div class="ann">🚚 FREE Delivery on ALL Orders<span class="ann-x"> &nbsp;|&nbsp; 🧱 Free Brick Samples &nbsp;|&nbsp; 🏗️ Trade Accounts Available</span></div>
