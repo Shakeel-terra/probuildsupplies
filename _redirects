@@ -1,19 +1,19 @@
 # Consolidate duplicate product pages onto the canonical /products/ URL
 /alford-reclaimed-bricks.html  /products/alford-reclaimed-bricks.html  301!
-/anthracite-black-20mm.html  /products/anthracite-black-20mm.html  301!
-/anthracite-grey-20mm.html  /products/anthracite-grey-20mm.html  301!
+/anthracite-black-20mm.html  /products/anthracite-black-porcelain-paving-600x900mm.html  301!
+/anthracite-grey-20mm.html  /products/20mm-anthracite-grey-porcelain-paving-600x900mm.html  301!
 /ashbourne-reclaimed-bricks.html  /products/ashbourne-reclaimed-bricks.html  301!
 /ashgrove-orange-handmade.html  /products/ashgrove-orange-handmade.html  301!
 /autumn-brown.html  /products/autumn-brown.html  301!
 /barnstock-orange-handmade.html  /products/barnstock-orange-handmade.html  301!
-/black-slate-20mm.html  /products/black-slate-20mm.html  301!
-/bodo-white-20mm.html  /products/bodo-white-20mm.html  301!
+/black-slate-20mm.html  /products/20mm-black-slate-porcelain-paving-600x900mm.html  301!
+/bodo-white-20mm.html  /products/20mm-bodo-white-porcelain-paving-600x900mm.html  301!
 /camel-dust.html  /products/camel-dust.html  301!
 /cheshire-red-handmade.html  /handmade-bricks.html  301!
 /city-blend-handmade-facing-bricks.html  /products/city-blend-handmade-facing-bricks.html  301!
-/county-lgy-light-grey-20mm.html  /products/county-lgy-light-grey-20mm.html  301!
-/earthcore-grey-20mm.html  /products/earthcore-grey-20mm.html  301!
-/everest-pearl-20mm.html  /products/everest-pearl-20mm.html  301!
+/county-lgy-light-grey-20mm.html  /products/20mm-county-light-grey-porcelain-paving-600x900mm.html  301!
+/earthcore-grey-20mm.html  /products/20mm-earthcore-grey-porcelain-paving-600x900mm.html  301!
+/everest-pearl-20mm.html  /products/20mm-everest-pearl-porcelain-paving-600x900mm.html  301!
 /fossil-mint.html  /products/fossil-mint.html  301!
 /fulford-blend-handmade.html  /handmade-bricks.html  301!
 /golden-brown.html  /indian-sandstone.html  301!
@@ -25,7 +25,7 @@
 /raj-blend.html  /indian-sandstone.html  301!
 /raj-green.html  /products/raj-green.html  301!
 /red-handmade-facing-bricks.html  /handmade-bricks.html  301!
-/renovation-multi-handmade-73mm.html  /products/renovation-multi-handmade-73mm.html  301!
+/renovation-multi-handmade-73mm.html  /products/renovation-multi-pressed.html  301!
 /renovation-multi-pressed.html  /products/renovation-multi-pressed.html  301!
 /rippon-buff.html  /products/rippon-buff.html  301!
 /rustic-farmhouse-handmade.html  /products/rustic-farmhouse-handmade.html  301!
@@ -98,3 +98,6 @@
 /product.html slug=20mm-fossil-nero-porcelain-paving-600x900mm-22-95-per-m  /products/20mm-fossil-nero-porcelain-paving-600x900mm.html  301
 /product.html slug=20mm-quartize-bianco-porcelain-paving-600x900mm-22-95-per-m  /products/20mm-quartize-bianco-porcelain-paving-600x900mm.html  301
 /product.html slug=black-sandstone  /products/black-sandstone.html  301
+
+# Superseded static pages -> dashboard-generated equivalents
+/products/20mm-crossover-grey-porcelain-paving-600x900mm.html  /products/20mm-crossover-grey-porcelain-paving-600x900mm.html  301!
