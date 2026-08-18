@@ -1345,7 +1345,7 @@
   },
   {
     "id": "p1785922273650",
-    "name": "20mm - LIMESTONE CREAMA (IVORY) - PORCELAIN PAVING - 600x900mm",
+    "name": "20mm - LIMESTONE CREAMA  (IVORY) - PORCELAIN PAVING - 600x900mm",
     "category": "Porcelain Paving",
     "price": "£495.72",
     "priceNote": "Pack of 40 Pieces | 600 x 900mm",
@@ -1447,7 +1447,7 @@
   },
   {
     "id": "p1785923562741",
-    "name": "20mm - MAXIMUS STATUARIO - PORCELAIN PAVING - 600x900mm",
+    "name": "20mm - MAXIMUS STUATARIO - PORCELAIN PAVING - 600x900mm",
     "category": "Porcelain Paving",
     "price": "£495.72",
     "priceNote": "Pack of 40 Pieces | 600 x 900mm",
@@ -1593,7 +1593,7 @@
   },
   {
     "id": "p1785927464866",
-    "name": "20mm - QUARTZITE BIANCO - PORCELAIN PAVING - 600x900mm",
+    "name": "20mm - QUARTIZE BIANCO - PORCELAIN PAVING - 600x900mm",
     "category": "Porcelain Paving",
     "price": "£495.72",
     "priceNote": "Pack of 40 Pieces | 600 x 900mm",
@@ -1617,7 +1617,7 @@
   },
   {
     "id": "p1786364463827",
-    "name": "KANDLA GREY SANDSTONE",
+    "name": "KANLDA GREY SANDSTONE",
     "category": "Indian Sandstone",
     "price": "£439.72",
     "priceNote": "Pack of 60 Pieces |  22mm CAL MIX",
@@ -1952,5 +1952,42 @@
     ],
     "createdAt": "2026-08-10T14:25:20.032825+00:00",
     "updatedAt": "2026-08-10T14:28:24.37+00:00"
+  },
+  {
+    "id": "p1787065761821",
+    "name": "ZZ TEST BRICK DELETE ME",
+    "category": "Handmade Bricks",
+    "price": "£1.00",
+    "priceNote": "",
+    "slug": "zz-test-brick-delete-me",
+    "url": "",
+    "description": "test test",
+    "colour": "",
+    "frost": "F2 — Fully frost resistant",
+    "customSpecs": "",
+    "deliveryNotes": "",
+    "visible": true,
+    "badge": "",
+    "delivery": "extra",
+    "sizeVariants": [
+      {
+        "pack": "Pack of 512",
+        "size": "65mm",
+        "price": "",
+        "coverage": ""
+      },
+      {
+        "pack": "Pack of 464",
+        "size": "73mm",
+        "price": "",
+        "coverage": ""
+      }
+    ],
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787065691766-6a8hmb.jpg",
+    "images": [
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787065691766-6a8hmb.jpg"
+    ],
+    "createdAt": "2026-08-18T15:09:22.145621+00:00",
+    "updatedAt": "2026-08-18T15:09:21.822+00:00"
   }
 ]
