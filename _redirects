@@ -111,3 +111,7 @@
 /products/earthcore-grey-20mm.html  /products/20mm-earthcore-grey-porcelain-paving-600x900mm.html  301!
 /products/everest-pearl-20mm.html  /products/20mm-everest-pearl-porcelain-paving-600x900mm.html  301!
 /products/renovation-multi-handmade-73mm.html  /products/renovation-multi-pressed.html  301!
+
+# Catch-all: any /product.html request not matched by a slug rule above
+# is a product that no longer exists. Return a real 404, not a 200 page.
+/product.html  /404.html  404
