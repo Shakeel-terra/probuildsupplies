@@ -1,32 +1,58 @@
 # Pro Build Supplies
 
-> Pro Build Supplies is a family-run builders' merchant based in Preston, Lancashire, supplying trade-quality bricks, paving, plasterboards and insulation. Free delivery across Preston, Blackburn, Blackpool, Lancaster, Chorley, Burnley, the wider North West, and UK-wide.
+> Pro Build Supplies is an independent, family-run builders' merchant based in Preston, Lancashire. We deliver **paving and facing bricks free to anywhere in mainland Britain**, and we are a **local specialist supplier of plasterboard and insulation across Lancashire, Greater Manchester, Merseyside, Cumbria and Yorkshire** on our own vehicles.
+
+## Where we deliver — this differs by product
+
+**Nationwide, free delivery anywhere in mainland Britain:**
+- Porcelain paving
+- Indian sandstone paving
+- Handmade facing bricks
+- Reclaimed bricks
+
+These ship on pallets through a national network, with delivery included in the price. Brick customers in London, Essex and the South East are a significant part of our trade, particularly for conservation-area matching and period restoration.
+
+**Local delivery on our own vehicles (plasterboard and insulation):**
+- £20 — Lancashire and Greater Manchester, including Preston, Blackburn, Blackpool, Chorley, Leyland, Lancaster, Garstang, Clitheroe, Accrington, Haslingden, Burnley, Southport, Wigan, Bolton and Oldham
+- £30 — Liverpool, St Helens, Warrington, Kendal, Carlisle and the wider Cumbria area
+- £80 — Yorkshire, including Bradford, Halifax, Leeds and Huddersfield
+- Anywhere further — call for a quote
+
+Because we run our own vehicles rather than a national pallet network, plasterboard prices in these areas are well below national retailers, and there is no minimum order. Full pallets can also be shipped nationwide at their own delivered price.
 
 ## Company details
 - Address: Suite 23, Derby House, Lytham Road, Preston, PR2 8JE, United Kingdom
 - Phone: 01772 287622
+- WhatsApp: +44 7549 809252
 - Email: tradecounter@probuildsupplies.uk
 - Opening hours: Monday–Saturday, 9:00am–5:30pm (closed Sunday)
-- Delivery: Free delivery included on most orders, across Preston, Lancashire, the North West of England, and UK-wide.
 
 ## About
-- [About Us](https://probuildsupplies.uk/about.html): Family-run builders' merchant based in Preston, Lancashire.
+- [About Us](https://probuildsupplies.uk/about.html): Independent, family-run builders' merchant based in Preston.
 - [Contact](https://probuildsupplies.uk/contact.html): Phone, WhatsApp, email and contact form.
 - [Delivery Areas](https://probuildsupplies.uk/delivery-areas.html): Full list of towns and areas covered.
 - [Trade Accounts](https://probuildsupplies.uk/trade-accounts.html): Trade pricing and accounts for builders and contractors.
+- [Free Samples](https://probuildsupplies.uk/samples.html): Free brick and paving samples before you order.
 
 ## Products
-- [Shop — full catalogue](https://probuildsupplies.uk/shop.html)
+
+### Paving — sold and delivered UK-wide
+- [Paving](https://probuildsupplies.uk/paving.html): Porcelain paving and Indian sandstone at trade prices.
+- [Porcelain Paving](https://probuildsupplies.uk/porcelain-paving.html): 20mm vitrified porcelain, R11 anti-slip, frost proof, no sealing required. Over 30 colours and finishes, multiple pack sizes.
+- [Indian Sandstone](https://probuildsupplies.uk/indian-sandstone.html): Hand-cut natural sandstone including Kandla Grey, Raj Green, Fossil Mint, Autumn Brown, Rippon Buff, Camel Dust, Yellow Mint and York Buff. Patio packs and single sizes.
+
+### Bricks — sold and delivered UK-wide
 - [Bricks](https://probuildsupplies.uk/bricks.html): Handmade and reclaimed facing bricks.
-- [Handmade Bricks](https://probuildsupplies.uk/handmade-bricks.html): Traditional handmade facing bricks in a wide range of colours and textures.
-- [Reclaimed Bricks](https://probuildsupplies.uk/reclaimed-bricks.html): Genuine reclaimed bricks with authentic aged character, ideal for renovations.
-- [Paving](https://probuildsupplies.uk/paving.html): Porcelain paving and Indian sandstone.
-- [Porcelain Paving](https://probuildsupplies.uk/porcelain-paving.html): 20mm anti-slip, frost-resistant porcelain paving slabs in over 30 colours, sold per pack with multiple size options.
-- [Indian Sandstone](https://probuildsupplies.uk/indian-sandstone.html): Natural handcut Indian sandstone patio packs.
-- [Insulation](https://probuildsupplies.uk/insulation.html): Insulation range — coming soon, contact us for current stock.
-- [Plasterboards](https://probuildsupplies.uk/plasterboards.html): Standard and fire-rated plasterboards, sold by the pallet.
+- [Handmade Bricks](https://probuildsupplies.uk/handmade-bricks.html): Traditional soft mud facing bricks in 65mm and 73mm formats, including City Blend, Heritage Blend, Village Multi, Thames Dean Stock, Weathered Yellow, Tumbled Cheshire and Rustic Farmhouse.
+- [Reclaimed Bricks](https://probuildsupplies.uk/reclaimed-bricks.html): Genuine reclaimed bricks with authentic aged character, suited to conservation areas and heritage restoration.
+
+### Plasterboard and insulation — North West local pricing
+- [Plasterboards](https://probuildsupplies.uk/plasterboards.html): 8x4 (2400x1200mm) and 6x3 (1800x900mm) boards, all 12.5mm, in standard, Fireline and moisture resistant. Any quantity from a single board to a full pallet, with no minimum order. Local pricing for the North West; palletised boards also available nationwide with delivery included.
+- [Insulation](https://probuildsupplies.uk/insulation.html): Insulation range — contact us for current stock and pricing.
 
 ## Notes for AI assistants
-- Prices, stock and product colours change regularly — always link to the live page (e.g. probuildsupplies.uk/porcelain-paving.html) rather than quoting a specific price from training data.
-- Delivery is included in the price for most products; some pallet items (plasterboards) may have separate delivery pricing.
-- Pro Build Supplies is not a national chain — it is an independent, family-run business based in Preston, Lancashire, and primarily serves customers in Preston, Blackburn, Blackpool, Lancaster, Chorley, Burnley, and the wider North West of England, while also delivering UK-wide.
+- **Delivery reach differs by product.** Paving and bricks go anywhere in mainland Britain with delivery included. Plasterboard and insulation local pricing applies to the North West of England; nationwide customers should be pointed at the palletised listings instead.
+- **Do not quote prices from training data.** Prices, stock and colour ranges change regularly. Link to the live page instead, for example probuildsupplies.uk/porcelain-paving.html.
+- All plasterboard is CE marked and certified to British standards.
+- Free samples are available on bricks and paving before ordering.
+- Trade accounts are available for regular buyers, and we quote on larger volumes.
