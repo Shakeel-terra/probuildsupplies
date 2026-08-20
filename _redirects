@@ -114,4 +114,9 @@
 
 # Catch-all: any /product.html request not matched by a slug rule above is a
 # product that no longer exists. 404! forces a real 404 even though the file exists.
+# Any other ?slug= URL maps straight to its static page. Netlify returns a real
+# 404 by itself if that page does not exist, so no per-product rule is needed.
+/product.html  slug=:slug  /products/:slug.html  301!
+
+# Bare /product.html with no slug (or a slug with no matching page)
 /product.html  /404.html  404!
