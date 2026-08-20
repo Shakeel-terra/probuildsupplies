@@ -73,18 +73,8 @@ function productUrl(p, prefix) {
     el.href = 'tel:01772287622';
     el.textContent = '📞 01772 287622';
   });
-  // Scan ALL text nodes on the page and replace the old number wherever it appears
-  (function replacePhoneText(el) {
-    el.childNodes.forEach(function(node) {
-      if (node.nodeType === 3) { // text node
-        if (node.textContent.includes('0800 123 4567')) {
-          node.textContent = node.textContent.replace(/0800 123 4567/g, '01772 287622');
-        }
-      } else if (node.nodeType === 1 && node.tagName !== 'SCRIPT' && node.tagName !== 'STYLE') {
-        replacePhoneText(node);
-      }
-    });
-  })(document.body);
+  // (Removed) The placeholder phone number no longer exists in any page, so
+  // the full-document text-node scan that used to patch it has been deleted.
 
   // 2. Center search bar + center & space nav links
   var layoutStyle = document.createElement('style');
@@ -693,7 +683,12 @@ function productUrl(p, prefix) {
     var path = window.location.pathname;
 
     if (path.includes('/products/')) {
-      initProductPage(products);
+      // Product pages are fully static: the dashboard generator writes the
+      // price, images, specs, size options and buy/enquire button straight
+      // into the HTML on publish. Re-rendering them here from products.json
+      // caused the page to visibly flip after load (Enquire -> Add to Cart,
+      // stale prices, wrong phone number). The file on disk is the source of
+      // truth, so we leave the page alone.
       return;
     }
 
