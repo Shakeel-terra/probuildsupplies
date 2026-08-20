@@ -693,5 +693,22 @@ function pbsOk(e,id){
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="pbs-account.js"></script>
 <script src="pbs-products.js"></script>
+
+<script>
+(function(){
+  // Enquiry links from product pages pass ?product=Name — prefill the form
+  // so the customer does not have to retype it and staff know the item.
+  try{
+    var p = new URLSearchParams(location.search).get('product');
+    if(!p) return;
+    var ta = document.querySelector('textarea[name="message"]');
+    if(ta && !ta.value) ta.value = 'Please can you send me a price for: ' + p + '\n\nQuantity needed: \nDelivery postcode: ';
+    var sel = document.querySelector('select[name="topic"]');
+    if(sel){ for(var i=0;i<sel.options.length;i++){ if(/quote|price|enquir|product/i.test(sel.options[i].textContent)){ sel.selectedIndex=i; break; } } }
+    var h = document.querySelector('h1');
+    if(h) h.insertAdjacentHTML('afterend','<p style="color:var(--o);font-weight:600;margin-top:-6px">Enquiry about: '+p.replace(/[<>&"]/g,'')+'</p>');
+  }catch(e){}
+})();
+</script>
 </body>
 </html>
