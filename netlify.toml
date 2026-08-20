@@ -35,15 +35,18 @@
 # ---------------------------------------------------------------
 # Static assets — cache hard
 # ---------------------------------------------------------------
+# Site scripts change whenever we ship a fix, and a stale copy silently breaks
+# behaviour (e.g. the enquiry button being replaced by Add to Cart). Revalidate
+# on every request instead of caching for a week.
 [[headers]]
   for = "/*.js"
   [headers.values]
-    Cache-Control = "public, max-age=604800"
+    Cache-Control = "public, max-age=0, must-revalidate"
 
 [[headers]]
   for = "/*.css"
   [headers.values]
-    Cache-Control = "public, max-age=604800"
+    Cache-Control = "public, max-age=3600"
 
 [[headers]]
   for = "/*.jpg"
