@@ -579,7 +579,7 @@ function productUrl(p, prefix) {
     var noteEl  = document.getElementById('pp-pnote');
 
     // Size variants dropdown
-    if (prod.sizeVariants && prod.sizeVariants.length > 0) {
+    if (prod.mode !== 'enquiry' && prod.sizeVariants && prod.sizeVariants.length > 0) {
       // Update price to first variant
       var firstV = prod.sizeVariants[0];
       if (priceEl && firstV.price) priceEl.textContent = firstV.price;
@@ -607,14 +607,14 @@ function productUrl(p, prefix) {
           } catch(e){}
         });
       }
-    } else if (prod.price) {
+    } else if (prod.price && prod.mode !== 'enquiry') {
       if (priceEl) priceEl.textContent = prod.price;
       if (noteEl && prod.priceNote) noteEl.textContent = '📦 ' + prod.priceNote;
     }
 
     // Update buy button / add to cart
     var actDiv = document.querySelector('.pp-acts');
-    if (actDiv && prod.price !== 'POA' && prod.price) {
+    if (actDiv && prod.mode !== 'enquiry' && prod.price !== 'POA' && prod.price) {
       var rawPrice = parseFloat((getPrice(prod)||'').replace(/[^0-9.]/g,''));
       if (!isNaN(rawPrice) && rawPrice > 0) {
         // Update snipcart button data
