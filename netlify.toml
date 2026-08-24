@@ -2,6 +2,18 @@
   publish = "."
 
 # ---------------------------------------------------------------
+# Netlify's "Pretty URLs" post-processing rewrites href="x.html" to
+# href="/x" at deploy time. That made every internal link disagree with
+# the canonical tags, sitemap and redirect rules — which all use .html.
+# Turning it off keeps one address per page across the whole site.
+# ---------------------------------------------------------------
+[build.processing]
+  skip_processing = false
+
+[build.processing.html]
+  pretty_urls = false
+
+# ---------------------------------------------------------------
 # Security headers — applied to every response
 # ---------------------------------------------------------------
 [[headers]]
