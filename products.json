@@ -1685,23 +1685,24 @@
         "pack": "Pack of 60 Pieces",
         "size": "22mm CAL  MIX",
         "price": "£439.72",
-        "coverage": "£23.95"
+        "coverage": "£23.95",
+        "coverageM2": "18.36"
       },
       {
         "pack": "Pack of 56 Pieces",
         "size": "22mm CAL 600x600mm",
         "price": "£439.72",
-        "coverage": "£23.95"
+        "coverage": "£23.95",
+        "coverageM2": "20.16"
       }
     ],
-    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1786364452443-62y466.jpg",
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1786364458789-v8q32e.jpg",
     "images": [
-      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1786364452443-62y466.jpg",
       "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1786364458789-v8q32e.jpg",
       "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1786364458788-b7gt7l.jpg"
     ],
     "createdAt": "2026-08-10T12:21:04.48546+00:00",
-    "updatedAt": "2026-08-19T12:06:26.34+00:00"
+    "updatedAt": "2026-08-24T09:44:36.461+00:00"
   },
   {
     "id": "p1786366518498",
@@ -2011,519 +2012,6 @@
     "updatedAt": "2026-08-10T14:28:24.37+00:00"
   },
   {
-    "id": "p1787146222549_0",
-    "name": "London Stock 68mm",
-    "category": "Handmade Bricks",
-    "price": "725.47",
-    "priceNote": "",
-    "slug": "london-stock-68mm",
-    "url": "",
-    "description": "",
-    "colour": "",
-    "frost": "F2 — Fully frost resistant",
-    "customSpecs": "[]",
-    "deliveryNotes": "",
-    "visible": true,
-    "mode": "enquiry",
-    "badge": "",
-    "delivery": "extra",
-    "sizeVariants": [
-      {
-        "pack": "",
-        "size": "68mm",
-        "price": "",
-        "coverage": ""
-      }
-    ],
-    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787146443643-gv5vsg.jpg",
-    "images": [
-      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787146443643-gv5vsg.jpg"
-    ],
-    "createdAt": "2026-08-19T13:30:22.748751+00:00",
-    "updatedAt": "2026-08-19T13:34:05.329+00:00"
-  },
-  {
-    "id": "p1787146222550_11",
-    "name": "Stratford Yellow Imperial 68mm",
-    "category": "Handmade Bricks",
-    "price": "554.88",
-    "priceNote": "",
-    "slug": "stratford-yellow-imperial-68mm",
-    "url": "",
-    "description": "",
-    "colour": "",
-    "frost": "F2 — Fully frost resistant",
-    "customSpecs": "[]",
-    "deliveryNotes": "",
-    "visible": true,
-    "mode": "enquiry",
-    "badge": "",
-    "delivery": "extra",
-    "sizeVariants": [
-      {
-        "pack": "",
-        "size": "68mm",
-        "price": "",
-        "coverage": ""
-      }
-    ],
-    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787302925148-vhmpyh.jpg",
-    "images": [
-      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787302925148-vhmpyh.jpg"
-    ],
-    "createdAt": "2026-08-19T13:30:22.748751+00:00",
-    "updatedAt": "2026-08-21T09:02:06.785+00:00"
-  },
-  {
-    "id": "p1787146222550_13",
-    "name": "Weathered Common 73mm",
-    "category": "Handmade Bricks",
-    "price": "648.48",
-    "priceNote": "",
-    "slug": "weathered-common-73mm",
-    "url": "",
-    "description": "",
-    "colour": "",
-    "frost": "F2 — Fully frost resistant",
-    "customSpecs": "[]",
-    "deliveryNotes": "",
-    "visible": true,
-    "mode": "enquiry",
-    "badge": "",
-    "delivery": "extra",
-    "sizeVariants": [
-      {
-        "pack": "",
-        "size": "73mm",
-        "price": "",
-        "coverage": ""
-      }
-    ],
-    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787147640036-qgss16.jpg",
-    "images": [
-      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787147640036-qgss16.jpg"
-    ],
-    "createdAt": "2026-08-19T13:30:22.748751+00:00",
-    "updatedAt": "2026-08-19T13:54:02.387+00:00"
-  },
-  {
-    "id": "p1787146222550_24",
-    "name": "Swanage Imperial Red 68mm",
-    "category": "Handmade Bricks",
-    "price": "799.68",
-    "priceNote": "",
-    "slug": "swanage-imperial-red-68mm",
-    "url": "",
-    "description": "",
-    "colour": "",
-    "frost": "F2 — Fully frost resistant",
-    "customSpecs": "[]",
-    "deliveryNotes": "",
-    "visible": true,
-    "mode": "enquiry",
-    "badge": "",
-    "delivery": "extra",
-    "sizeVariants": [
-      {
-        "pack": "",
-        "size": "68mm",
-        "price": "",
-        "coverage": ""
-      }
-    ],
-    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303003431-wqsrrh.png",
-    "images": [
-      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303003431-wqsrrh.png"
-    ],
-    "createdAt": "2026-08-19T13:30:22.748751+00:00",
-    "updatedAt": "2026-08-21T09:03:25.462+00:00"
-  },
-  {
-    "id": "p1787146222550_9",
-    "name": "Stratford Red Imperial 68mm",
-    "category": "Handmade Bricks",
-    "price": "444.96",
-    "priceNote": "",
-    "slug": "stratford-red-imperial-68mm",
-    "url": "",
-    "description": "",
-    "colour": "",
-    "frost": "F2 — Fully frost resistant",
-    "customSpecs": "[]",
-    "deliveryNotes": "",
-    "visible": true,
-    "mode": "enquiry",
-    "badge": "",
-    "delivery": "extra",
-    "sizeVariants": [
-      {
-        "pack": "",
-        "size": "68mm",
-        "price": "",
-        "coverage": ""
-      }
-    ],
-    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303078437-kak4k5.jpg",
-    "images": [
-      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303078437-kak4k5.jpg"
-    ],
-    "createdAt": "2026-08-19T13:30:22.748751+00:00",
-    "updatedAt": "2026-08-21T09:04:40.423+00:00"
-  },
-  {
-    "id": "p1787146222550_22",
-    "name": "Pre War Common 73mm",
-    "category": "Handmade Bricks",
-    "price": "689.47",
-    "priceNote": "",
-    "slug": "pre-war-common-73mm",
-    "url": "",
-    "description": "",
-    "colour": "",
-    "frost": "F2 — Fully frost resistant",
-    "customSpecs": "[]",
-    "deliveryNotes": "",
-    "visible": true,
-    "mode": "enquiry",
-    "badge": "",
-    "delivery": "extra",
-    "sizeVariants": [
-      {
-        "pack": "",
-        "size": "73mm",
-        "price": "",
-        "coverage": ""
-      }
-    ],
-    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303121170-d4jvon.jpg",
-    "images": [
-      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303121170-d4jvon.jpg"
-    ],
-    "createdAt": "2026-08-19T13:30:22.748751+00:00",
-    "updatedAt": "2026-08-21T09:05:22.425+00:00"
-  },
-  {
-    "id": "p1787146222550_8",
-    "name": "Original Common 73mm",
-    "category": "Handmade Bricks",
-    "price": "642.72",
-    "priceNote": "",
-    "slug": "original-common-73mm",
-    "url": "",
-    "description": "",
-    "colour": "",
-    "frost": "F2 — Fully frost resistant",
-    "customSpecs": "[]",
-    "deliveryNotes": "",
-    "visible": true,
-    "mode": "enquiry",
-    "badge": "",
-    "delivery": "extra",
-    "sizeVariants": [
-      {
-        "pack": "",
-        "size": "73mm",
-        "price": "",
-        "coverage": ""
-      }
-    ],
-    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303287909-q3fx5k.jpg",
-    "images": [
-      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303287909-q3fx5k.jpg"
-    ],
-    "createdAt": "2026-08-19T13:30:22.748751+00:00",
-    "updatedAt": "2026-08-21T09:08:09.4+00:00"
-  },
-  {
-    "id": "p1787146222550_21",
-    "name": "Birtley Olde English 73mm",
-    "category": "Handmade Bricks",
-    "price": "648.48",
-    "priceNote": "",
-    "slug": "birtley-olde-english-73mm",
-    "url": "",
-    "description": "",
-    "colour": "",
-    "frost": "F2 — Fully frost resistant",
-    "customSpecs": "[]",
-    "deliveryNotes": "",
-    "visible": true,
-    "mode": "enquiry",
-    "badge": "",
-    "delivery": "extra",
-    "sizeVariants": [
-      {
-        "pack": "",
-        "size": "73mm",
-        "price": "",
-        "coverage": ""
-      }
-    ],
-    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787302882616-ptamy7.jpg",
-    "images": [
-      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787302882616-ptamy7.jpg"
-    ],
-    "createdAt": "2026-08-19T13:30:22.748751+00:00",
-    "updatedAt": "2026-08-21T09:01:24.705+00:00"
-  },
-  {
-    "id": "p1787146222550_6",
-    "name": "Heaton Dark Red Smooth 73mm",
-    "category": "Handmade Bricks",
-    "price": "444",
-    "priceNote": "",
-    "slug": "heaton-dark-red-smooth-73mm",
-    "url": "",
-    "description": "",
-    "colour": "",
-    "frost": "F2 — Fully frost resistant",
-    "customSpecs": "[]",
-    "deliveryNotes": "",
-    "visible": true,
-    "mode": "enquiry",
-    "badge": "",
-    "delivery": "extra",
-    "sizeVariants": [
-      {
-        "pack": "",
-        "size": "73mm",
-        "price": "",
-        "coverage": ""
-      }
-    ],
-    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303385378-eurxto.png",
-    "images": [
-      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303385378-eurxto.png"
-    ],
-    "createdAt": "2026-08-19T13:30:22.748751+00:00",
-    "updatedAt": "2026-08-21T09:09:47.183+00:00"
-  },
-  {
-    "id": "p1787146222550_3",
-    "name": "K209 Class B Blue Perf 73mm",
-    "category": "Handmade Bricks",
-    "price": "653.66",
-    "priceNote": "",
-    "slug": "k209-class-b-blue-perf-73mm",
-    "url": "",
-    "description": "",
-    "colour": "",
-    "frost": "F2 — Fully frost resistant",
-    "customSpecs": "[]",
-    "deliveryNotes": "",
-    "visible": true,
-    "mode": "enquiry",
-    "badge": "",
-    "delivery": "extra",
-    "sizeVariants": [
-      {
-        "pack": "",
-        "size": "73mm",
-        "price": "",
-        "coverage": ""
-      }
-    ],
-    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303566177-6y85s4.jpg",
-    "images": [
-      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303566177-6y85s4.jpg"
-    ],
-    "createdAt": "2026-08-19T13:30:22.748751+00:00",
-    "updatedAt": "2026-08-21T09:13:08.154+00:00"
-  },
-  {
-    "id": "p1787146222550_1",
-    "name": "Perton Orange 68mm",
-    "category": "Handmade Bricks",
-    "price": "725.47",
-    "priceNote": "",
-    "slug": "perton-orange-68mm",
-    "url": "",
-    "description": "",
-    "colour": "",
-    "frost": "F2 — Fully frost resistant",
-    "customSpecs": "[]",
-    "deliveryNotes": "",
-    "visible": true,
-    "mode": "enquiry",
-    "badge": "",
-    "delivery": "extra",
-    "sizeVariants": [
-      {
-        "pack": "",
-        "size": "68mm",
-        "price": "",
-        "coverage": ""
-      }
-    ],
-    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303518545-m0wiz5.jpg",
-    "images": [
-      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303518545-m0wiz5.jpg"
-    ],
-    "createdAt": "2026-08-19T13:30:22.748751+00:00",
-    "updatedAt": "2026-08-21T09:11:59.727+00:00"
-  },
-  {
-    "id": "p1787146222550_4",
-    "name": "Red Class B Perf 73mm",
-    "category": "Handmade Bricks",
-    "price": "462.14",
-    "priceNote": "",
-    "slug": "red-class-b-perf-73mm",
-    "url": "",
-    "description": "",
-    "colour": "",
-    "frost": "F2 — Fully frost resistant",
-    "customSpecs": "[]",
-    "deliveryNotes": "",
-    "visible": true,
-    "mode": "enquiry",
-    "badge": "",
-    "delivery": "extra",
-    "sizeVariants": [
-      {
-        "pack": "",
-        "size": "73mm",
-        "price": "",
-        "coverage": ""
-      }
-    ],
-    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303436474-ro9knv.jpg",
-    "images": [
-      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303436474-ro9knv.jpg"
-    ],
-    "createdAt": "2026-08-19T13:30:22.748751+00:00",
-    "updatedAt": "2026-08-21T09:10:38.046+00:00"
-  },
-  {
-    "id": "p1787146222550_18",
-    "name": "LBC Tudor 73mm",
-    "category": "Handmade Bricks",
-    "price": "683.04",
-    "priceNote": "",
-    "slug": "lbc-tudor-73mm",
-    "url": "",
-    "description": "",
-    "colour": "",
-    "frost": "F2 — Fully frost resistant",
-    "customSpecs": "[]",
-    "deliveryNotes": "",
-    "visible": true,
-    "mode": "enquiry",
-    "badge": "",
-    "delivery": "extra",
-    "sizeVariants": [
-      {
-        "pack": "",
-        "size": "73mm",
-        "price": "",
-        "coverage": ""
-      }
-    ],
-    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303490933-aj9oyq.jpg",
-    "images": [
-      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303490933-aj9oyq.jpg"
-    ],
-    "createdAt": "2026-08-19T13:30:22.748751+00:00",
-    "updatedAt": "2026-08-21T09:11:32.492+00:00"
-  },
-  {
-    "id": "p1787146222550_2",
-    "name": "Rural Multi 68mm",
-    "category": "Handmade Bricks",
-    "price": "753.6",
-    "priceNote": "",
-    "slug": "rural-multi-68mm",
-    "url": "",
-    "description": "",
-    "colour": "",
-    "frost": "F2 — Fully frost resistant",
-    "customSpecs": "[]",
-    "deliveryNotes": "",
-    "visible": true,
-    "mode": "enquiry",
-    "badge": "",
-    "delivery": "extra",
-    "sizeVariants": [
-      {
-        "pack": "",
-        "size": "68mm",
-        "price": "",
-        "coverage": ""
-      }
-    ],
-    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303538489-7u26mu.jpg",
-    "images": [
-      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303538489-7u26mu.jpg",
-      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303542704-pmko8l.jpg"
-    ],
-    "createdAt": "2026-08-19T13:30:22.748751+00:00",
-    "updatedAt": "2026-08-21T09:12:24.172+00:00"
-  },
-  {
-    "id": "p1787146222550_15",
-    "name": "LBC Heather 73mm",
-    "category": "Handmade Bricks",
-    "price": "683.04",
-    "priceNote": "",
-    "slug": "lbc-heather-73mm",
-    "url": "",
-    "description": "",
-    "colour": "",
-    "frost": "F2 — Fully frost resistant",
-    "customSpecs": "[]",
-    "deliveryNotes": "",
-    "visible": true,
-    "mode": "enquiry",
-    "badge": "",
-    "delivery": "extra",
-    "sizeVariants": [
-      {
-        "pack": "",
-        "size": "73mm",
-        "price": "",
-        "coverage": ""
-      }
-    ],
-    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303406671-1kexy9.jpg",
-    "images": [
-      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303406671-1kexy9.jpg"
-    ],
-    "createdAt": "2026-08-19T13:30:22.748751+00:00",
-    "updatedAt": "2026-08-21T09:10:08.227+00:00"
-  },
-  {
-    "id": "p1787146222550_5",
-    "name": "Dovestone Light Red Smooth 73mm",
-    "category": "Handmade Bricks",
-    "price": "444",
-    "priceNote": "",
-    "slug": "dovestone-light-red-smooth-73mm",
-    "url": "",
-    "description": "",
-    "colour": "",
-    "frost": "F2 — Fully frost resistant",
-    "customSpecs": "[]",
-    "deliveryNotes": "",
-    "visible": true,
-    "mode": "enquiry",
-    "badge": "",
-    "delivery": "extra",
-    "sizeVariants": [
-      {
-        "pack": "",
-        "size": "73mm",
-        "price": "",
-        "coverage": ""
-      }
-    ],
-    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303363781-xbpfb4.png",
-    "images": [
-      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303363781-xbpfb4.png"
-    ],
-    "createdAt": "2026-08-19T13:30:22.748751+00:00",
-    "updatedAt": "2026-08-21T09:09:25.721+00:00"
-  },
-  {
     "id": "p1787146222550_7",
     "name": "Highgate Red 68mm",
     "category": "Handmade Bricks",
@@ -2653,6 +2141,38 @@
     "updatedAt": "2026-08-21T09:02:45.091+00:00"
   },
   {
+    "id": "p1787146222550_11",
+    "name": "Stratford Yellow Imperial 68mm",
+    "category": "Handmade Bricks",
+    "price": "554.88",
+    "priceNote": "",
+    "slug": "stratford-yellow-imperial-68mm",
+    "url": "",
+    "description": "",
+    "colour": "",
+    "frost": "F2 — Fully frost resistant",
+    "customSpecs": "[]",
+    "deliveryNotes": "",
+    "visible": true,
+    "mode": "enquiry",
+    "badge": "",
+    "delivery": "extra",
+    "sizeVariants": [
+      {
+        "pack": "",
+        "size": "68mm",
+        "price": "",
+        "coverage": ""
+      }
+    ],
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787302925148-vhmpyh.jpg",
+    "images": [
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787302925148-vhmpyh.jpg"
+    ],
+    "createdAt": "2026-08-19T13:30:22.748751+00:00",
+    "updatedAt": "2026-08-21T09:02:06.785+00:00"
+  },
+  {
     "id": "p1787146222550_10",
     "name": "Stratford Red Imperial 73mm",
     "category": "Handmade Bricks",
@@ -2685,6 +2205,231 @@
     "updatedAt": "2026-08-21T09:01:45.916+00:00"
   },
   {
+    "id": "p1787146222550_6",
+    "name": "Heaton Dark Red Smooth 73mm",
+    "category": "Handmade Bricks",
+    "price": "444",
+    "priceNote": "",
+    "slug": "heaton-dark-red-smooth-73mm",
+    "url": "",
+    "description": "",
+    "colour": "",
+    "frost": "F2 — Fully frost resistant",
+    "customSpecs": "[]",
+    "deliveryNotes": "",
+    "visible": true,
+    "mode": "enquiry",
+    "badge": "",
+    "delivery": "extra",
+    "sizeVariants": [
+      {
+        "pack": "",
+        "size": "73mm",
+        "price": "",
+        "coverage": ""
+      }
+    ],
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303385378-eurxto.png",
+    "images": [
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303385378-eurxto.png"
+    ],
+    "createdAt": "2026-08-19T13:30:22.748751+00:00",
+    "updatedAt": "2026-08-21T09:09:47.183+00:00"
+  },
+  {
+    "id": "p1787146222550_22",
+    "name": "Pre War Common 73mm",
+    "category": "Handmade Bricks",
+    "price": "689.47",
+    "priceNote": "",
+    "slug": "pre-war-common-73mm",
+    "url": "",
+    "description": "",
+    "colour": "",
+    "frost": "F2 — Fully frost resistant",
+    "customSpecs": "[]",
+    "deliveryNotes": "",
+    "visible": true,
+    "mode": "enquiry",
+    "badge": "",
+    "delivery": "extra",
+    "sizeVariants": [
+      {
+        "pack": "",
+        "size": "73mm",
+        "price": "",
+        "coverage": ""
+      }
+    ],
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303121170-d4jvon.jpg",
+    "images": [
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303121170-d4jvon.jpg"
+    ],
+    "createdAt": "2026-08-19T13:30:22.748751+00:00",
+    "updatedAt": "2026-08-21T09:05:22.425+00:00"
+  },
+  {
+    "id": "p1787146222550_5",
+    "name": "Dovestone Light Red Smooth 73mm",
+    "category": "Handmade Bricks",
+    "price": "444",
+    "priceNote": "",
+    "slug": "dovestone-light-red-smooth-73mm",
+    "url": "",
+    "description": "",
+    "colour": "",
+    "frost": "F2 — Fully frost resistant",
+    "customSpecs": "[]",
+    "deliveryNotes": "",
+    "visible": true,
+    "mode": "enquiry",
+    "badge": "",
+    "delivery": "extra",
+    "sizeVariants": [
+      {
+        "pack": "",
+        "size": "73mm",
+        "price": "",
+        "coverage": ""
+      }
+    ],
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303363781-xbpfb4.png",
+    "images": [
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303363781-xbpfb4.png"
+    ],
+    "createdAt": "2026-08-19T13:30:22.748751+00:00",
+    "updatedAt": "2026-08-21T09:09:25.721+00:00"
+  },
+  {
+    "id": "p1787146222550_2",
+    "name": "Rural Multi 68mm",
+    "category": "Handmade Bricks",
+    "price": "753.6",
+    "priceNote": "",
+    "slug": "rural-multi-68mm",
+    "url": "",
+    "description": "",
+    "colour": "",
+    "frost": "F2 — Fully frost resistant",
+    "customSpecs": "[]",
+    "deliveryNotes": "",
+    "visible": true,
+    "mode": "enquiry",
+    "badge": "",
+    "delivery": "extra",
+    "sizeVariants": [
+      {
+        "pack": "",
+        "size": "68mm",
+        "price": "",
+        "coverage": ""
+      }
+    ],
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303538489-7u26mu.jpg",
+    "images": [
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303538489-7u26mu.jpg",
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303542704-pmko8l.jpg"
+    ],
+    "createdAt": "2026-08-19T13:30:22.748751+00:00",
+    "updatedAt": "2026-08-21T09:12:24.172+00:00"
+  },
+  {
+    "id": "p1787146222550_8",
+    "name": "Original Common 73mm",
+    "category": "Handmade Bricks",
+    "price": "642.72",
+    "priceNote": "",
+    "slug": "original-common-73mm",
+    "url": "",
+    "description": "",
+    "colour": "",
+    "frost": "F2 — Fully frost resistant",
+    "customSpecs": "[]",
+    "deliveryNotes": "",
+    "visible": true,
+    "mode": "enquiry",
+    "badge": "",
+    "delivery": "extra",
+    "sizeVariants": [
+      {
+        "pack": "",
+        "size": "73mm",
+        "price": "",
+        "coverage": ""
+      }
+    ],
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303287909-q3fx5k.jpg",
+    "images": [
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303287909-q3fx5k.jpg"
+    ],
+    "createdAt": "2026-08-19T13:30:22.748751+00:00",
+    "updatedAt": "2026-08-21T09:08:09.4+00:00"
+  },
+  {
+    "id": "p1787146222550_18",
+    "name": "LBC Tudor 73mm",
+    "category": "Handmade Bricks",
+    "price": "683.04",
+    "priceNote": "",
+    "slug": "lbc-tudor-73mm",
+    "url": "",
+    "description": "",
+    "colour": "",
+    "frost": "F2 — Fully frost resistant",
+    "customSpecs": "[]",
+    "deliveryNotes": "",
+    "visible": true,
+    "mode": "enquiry",
+    "badge": "",
+    "delivery": "extra",
+    "sizeVariants": [
+      {
+        "pack": "",
+        "size": "73mm",
+        "price": "",
+        "coverage": ""
+      }
+    ],
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303490933-aj9oyq.jpg",
+    "images": [
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303490933-aj9oyq.jpg"
+    ],
+    "createdAt": "2026-08-19T13:30:22.748751+00:00",
+    "updatedAt": "2026-08-21T09:11:32.492+00:00"
+  },
+  {
+    "id": "p1787146222549_0",
+    "name": "London Stock 68mm",
+    "category": "Handmade Bricks",
+    "price": "725.47",
+    "priceNote": "",
+    "slug": "london-stock-68mm",
+    "url": "",
+    "description": "",
+    "colour": "",
+    "frost": "F2 — Fully frost resistant",
+    "customSpecs": "[]",
+    "deliveryNotes": "",
+    "visible": true,
+    "mode": "enquiry",
+    "badge": "",
+    "delivery": "extra",
+    "sizeVariants": [
+      {
+        "pack": "",
+        "size": "68mm",
+        "price": "",
+        "coverage": ""
+      }
+    ],
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787146443643-gv5vsg.jpg",
+    "images": [
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787146443643-gv5vsg.jpg"
+    ],
+    "createdAt": "2026-08-19T13:30:22.748751+00:00",
+    "updatedAt": "2026-08-19T13:34:05.329+00:00"
+  },
+  {
     "id": "p1787146222550_19",
     "name": "Old Terrace Blend 73mm",
     "category": "Handmade Bricks",
@@ -2715,6 +2460,38 @@
     ],
     "createdAt": "2026-08-19T13:30:22.748751+00:00",
     "updatedAt": "2026-08-21T09:14:22.189+00:00"
+  },
+  {
+    "id": "p1787146222550_13",
+    "name": "Weathered Common 73mm",
+    "category": "Handmade Bricks",
+    "price": "648.48",
+    "priceNote": "",
+    "slug": "weathered-common-73mm",
+    "url": "",
+    "description": "",
+    "colour": "",
+    "frost": "F2 — Fully frost resistant",
+    "customSpecs": "[]",
+    "deliveryNotes": "",
+    "visible": true,
+    "mode": "enquiry",
+    "badge": "",
+    "delivery": "extra",
+    "sizeVariants": [
+      {
+        "pack": "",
+        "size": "73mm",
+        "price": "",
+        "coverage": ""
+      }
+    ],
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787147640036-qgss16.jpg",
+    "images": [
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787147640036-qgss16.jpg"
+    ],
+    "createdAt": "2026-08-19T13:30:22.748751+00:00",
+    "updatedAt": "2026-08-19T13:54:02.387+00:00"
   },
   {
     "id": "p1787146222550_12",
@@ -2813,12 +2590,12 @@
     "updatedAt": "2026-08-21T09:00:53.977+00:00"
   },
   {
-    "id": "p1787146222550_40",
-    "name": "Benamor Blend",
+    "id": "p1787146222550_21",
+    "name": "Birtley Olde English 73mm",
     "category": "Handmade Bricks",
-    "price": "",
+    "price": "648.48",
     "priceNote": "",
-    "slug": "benamor-blend",
+    "slug": "birtley-olde-english-73mm",
     "url": "",
     "description": "",
     "colour": "",
@@ -2832,25 +2609,25 @@
     "sizeVariants": [
       {
         "pack": "",
-        "size": "65mm",
+        "size": "73mm",
         "price": "",
         "coverage": ""
       }
     ],
-    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303780235-kgvhj6.jpg",
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787302882616-ptamy7.jpg",
     "images": [
-      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303780235-kgvhj6.jpg"
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787302882616-ptamy7.jpg"
     ],
-    "createdAt": "2026-08-19T13:30:22.872211+00:00",
-    "updatedAt": "2026-08-21T09:16:21.93+00:00"
+    "createdAt": "2026-08-19T13:30:22.748751+00:00",
+    "updatedAt": "2026-08-21T09:01:24.705+00:00"
   },
   {
-    "id": "p1787146222550_47",
-    "name": "Falstaff Antique",
+    "id": "p1787146222550_3",
+    "name": "K209 Class B Blue Perf 73mm",
     "category": "Handmade Bricks",
-    "price": "777.6",
+    "price": "653.66",
     "priceNote": "",
-    "slug": "falstaff-antique",
+    "slug": "k209-class-b-blue-perf-73mm",
     "url": "",
     "description": "",
     "colour": "",
@@ -2864,89 +2641,25 @@
     "sizeVariants": [
       {
         "pack": "",
-        "size": "65mm",
+        "size": "73mm",
         "price": "",
         "coverage": ""
       }
     ],
-    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303878192-xy7jp4.jpg",
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303566177-6y85s4.jpg",
     "images": [
-      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303878192-xy7jp4.jpg"
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303566177-6y85s4.jpg"
     ],
-    "createdAt": "2026-08-19T13:30:22.872211+00:00",
-    "updatedAt": "2026-08-21T09:17:59.895+00:00"
+    "createdAt": "2026-08-19T13:30:22.748751+00:00",
+    "updatedAt": "2026-08-21T09:13:08.154+00:00"
   },
   {
-    "id": "p1787146222550_46",
-    "name": "Calverton Red Multi",
+    "id": "p1787146222550_1",
+    "name": "Perton Orange 68mm",
     "category": "Handmade Bricks",
-    "price": "450",
+    "price": "725.47",
     "priceNote": "",
-    "slug": "calverton-red-multi",
-    "url": "",
-    "description": "",
-    "colour": "",
-    "frost": "F2 — Fully frost resistant",
-    "customSpecs": "[]",
-    "deliveryNotes": "",
-    "visible": true,
-    "mode": "enquiry",
-    "badge": "",
-    "delivery": "extra",
-    "sizeVariants": [
-      {
-        "pack": "",
-        "size": "65mm",
-        "price": "",
-        "coverage": ""
-      }
-    ],
-    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303962512-yodpah.jpg",
-    "images": [
-      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303962512-yodpah.jpg"
-    ],
-    "createdAt": "2026-08-19T13:30:22.872211+00:00",
-    "updatedAt": "2026-08-21T09:19:24.503+00:00"
-  },
-  {
-    "id": "p1787146222550_48",
-    "name": "Fitzjohn Multi",
-    "category": "Handmade Bricks",
-    "price": "877.8",
-    "priceNote": "",
-    "slug": "fitzjohn-multi",
-    "url": "",
-    "description": "",
-    "colour": "",
-    "frost": "F2 — Fully frost resistant",
-    "customSpecs": "[]",
-    "deliveryNotes": "",
-    "visible": true,
-    "mode": "enquiry",
-    "badge": "",
-    "delivery": "extra",
-    "sizeVariants": [
-      {
-        "pack": "",
-        "size": "65mm",
-        "price": "",
-        "coverage": ""
-      }
-    ],
-    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787304420428-7ik8t5.jpg",
-    "images": [
-      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787304420428-7ik8t5.jpg"
-    ],
-    "createdAt": "2026-08-19T13:30:22.872211+00:00",
-    "updatedAt": "2026-08-21T09:27:01.946+00:00"
-  },
-  {
-    "id": "p1787146222550_26",
-    "name": "Tyneham Restoration Red 68mm",
-    "category": "Handmade Bricks",
-    "price": "875.28",
-    "priceNote": "",
-    "slug": "tyneham-restoration-red-68mm",
+    "slug": "perton-orange-68mm",
     "url": "",
     "description": "",
     "colour": "",
@@ -2965,20 +2678,20 @@
         "coverage": ""
       }
     ],
-    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787304387336-et77ma.jpg",
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303518545-m0wiz5.jpg",
     "images": [
-      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787304387336-et77ma.jpg"
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303518545-m0wiz5.jpg"
     ],
-    "createdAt": "2026-08-19T13:30:22.872211+00:00",
-    "updatedAt": "2026-08-21T09:26:30.475+00:00"
+    "createdAt": "2026-08-19T13:30:22.748751+00:00",
+    "updatedAt": "2026-08-21T09:11:59.727+00:00"
   },
   {
-    "id": "p1787146222550_27",
-    "name": "Civic Multi 73mm",
+    "id": "p1787146222550_4",
+    "name": "Red Class B Perf 73mm",
     "category": "Handmade Bricks",
-    "price": "579.55",
+    "price": "462.14",
     "priceNote": "",
-    "slug": "civic-multi-73mm",
+    "slug": "red-class-b-perf-73mm",
     "url": "",
     "description": "",
     "colour": "",
@@ -2997,20 +2710,20 @@
         "coverage": ""
       }
     ],
-    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787304288266-fhaqv9.jpg",
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303436474-ro9knv.jpg",
     "images": [
-      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787304288266-fhaqv9.jpg"
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303436474-ro9knv.jpg"
     ],
-    "createdAt": "2026-08-19T13:30:22.872211+00:00",
-    "updatedAt": "2026-08-21T09:24:49.507+00:00"
+    "createdAt": "2026-08-19T13:30:22.748751+00:00",
+    "updatedAt": "2026-08-21T09:10:38.046+00:00"
   },
   {
-    "id": "p1787146222550_49",
-    "name": "Forum Burgundy",
+    "id": "p1787146222550_9",
+    "name": "Stratford Red Imperial 68mm",
     "category": "Handmade Bricks",
-    "price": "733.44",
+    "price": "444.96",
     "priceNote": "",
-    "slug": "forum-burgundy",
+    "slug": "stratford-red-imperial-68mm",
     "url": "",
     "description": "",
     "colour": "",
@@ -3024,25 +2737,57 @@
     "sizeVariants": [
       {
         "pack": "",
-        "size": "65mm",
+        "size": "68mm",
         "price": "",
         "coverage": ""
       }
     ],
-    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787304437312-63usl7.jpg",
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303078437-kak4k5.jpg",
     "images": [
-      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787304437312-63usl7.jpg"
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303078437-kak4k5.jpg"
     ],
-    "createdAt": "2026-08-19T13:30:22.872211+00:00",
-    "updatedAt": "2026-08-21T09:27:20.412+00:00"
+    "createdAt": "2026-08-19T13:30:22.748751+00:00",
+    "updatedAt": "2026-08-21T09:04:40.423+00:00"
   },
   {
-    "id": "p1787146222550_25",
-    "name": "Tradesman Heather 73mm",
+    "id": "p1787146222550_24",
+    "name": "Swanage Imperial Red 68mm",
     "category": "Handmade Bricks",
-    "price": "902.5",
+    "price": "799.68",
     "priceNote": "",
-    "slug": "tradesman-heather-73mm",
+    "slug": "swanage-imperial-red-68mm",
+    "url": "",
+    "description": "",
+    "colour": "",
+    "frost": "F2 — Fully frost resistant",
+    "customSpecs": "[]",
+    "deliveryNotes": "",
+    "visible": true,
+    "mode": "enquiry",
+    "badge": "",
+    "delivery": "extra",
+    "sizeVariants": [
+      {
+        "pack": "",
+        "size": "68mm",
+        "price": "",
+        "coverage": ""
+      }
+    ],
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303003431-wqsrrh.png",
+    "images": [
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303003431-wqsrrh.png"
+    ],
+    "createdAt": "2026-08-19T13:30:22.748751+00:00",
+    "updatedAt": "2026-08-21T09:03:25.462+00:00"
+  },
+  {
+    "id": "p1787146222550_15",
+    "name": "LBC Heather 73mm",
+    "category": "Handmade Bricks",
+    "price": "683.04",
+    "priceNote": "",
+    "slug": "lbc-heather-73mm",
     "url": "",
     "description": "",
     "colour": "",
@@ -3061,12 +2806,44 @@
         "coverage": ""
       }
     ],
-    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787304067407-uhf0dc.jpg",
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303406671-1kexy9.jpg",
     "images": [
-      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787304067407-uhf0dc.jpg"
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303406671-1kexy9.jpg"
+    ],
+    "createdAt": "2026-08-19T13:30:22.748751+00:00",
+    "updatedAt": "2026-08-21T09:10:08.227+00:00"
+  },
+  {
+    "id": "p1787146222550_36",
+    "name": "Arley Red Rustic 73mm",
+    "category": "Handmade Bricks",
+    "price": "574.2",
+    "priceNote": "",
+    "slug": "arley-red-rustic-73mm",
+    "url": "",
+    "description": "",
+    "colour": "",
+    "frost": "F2 — Fully frost resistant",
+    "customSpecs": "[]",
+    "deliveryNotes": "",
+    "visible": true,
+    "mode": "enquiry",
+    "badge": "",
+    "delivery": "extra",
+    "sizeVariants": [
+      {
+        "pack": "",
+        "size": "73mm",
+        "price": "",
+        "coverage": ""
+      }
+    ],
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787304610674-grg47g.jpg",
+    "images": [
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787304610674-grg47g.jpg"
     ],
     "createdAt": "2026-08-19T13:30:22.872211+00:00",
-    "updatedAt": "2026-08-21T09:21:10.165+00:00"
+    "updatedAt": "2026-08-21T09:30:12.678+00:00"
   },
   {
     "id": "p1787146222550_34",
@@ -3101,12 +2878,12 @@
     "updatedAt": "2026-08-21T09:32:05.281+00:00"
   },
   {
-    "id": "p1787146222550_28",
-    "name": "Clayburn Civic 73mm",
+    "id": "p1787146222550_25",
+    "name": "Tradesman Heather 73mm",
     "category": "Handmade Bricks",
-    "price": "596.26",
+    "price": "902.5",
     "priceNote": "",
-    "slug": "clayburn-civic-73mm",
+    "slug": "tradesman-heather-73mm",
     "url": "",
     "description": "",
     "colour": "",
@@ -3125,203 +2902,12 @@
         "coverage": ""
       }
     ],
-    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787304269496-ihw8mi.jpg",
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787304067407-uhf0dc.jpg",
     "images": [
-      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787304269496-ihw8mi.jpg"
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787304067407-uhf0dc.jpg"
     ],
     "createdAt": "2026-08-19T13:30:22.872211+00:00",
-    "updatedAt": "2026-08-21T09:24:31.212+00:00"
-  },
-  {
-    "id": "p1787146222550_29",
-    "name": "Heather Sandfaced 73mm",
-    "category": "Handmade Bricks",
-    "price": "622.27",
-    "priceNote": "",
-    "slug": "heather-sandfaced-73mm",
-    "url": "",
-    "description": "",
-    "colour": "",
-    "frost": "F2 — Fully frost resistant",
-    "customSpecs": "[]",
-    "deliveryNotes": "",
-    "visible": true,
-    "mode": "enquiry",
-    "badge": "",
-    "delivery": "extra",
-    "sizeVariants": [
-      {
-        "pack": "",
-        "size": "73mm",
-        "price": "",
-        "coverage": ""
-      }
-    ],
-    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787304241231-l6weuw.jpg",
-    "images": [
-      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787304241231-l6weuw.jpg"
-    ],
-    "createdAt": "2026-08-19T13:30:22.872211+00:00",
-    "updatedAt": "2026-08-21T09:24:02.481+00:00"
-  },
-  {
-    "id": "p1787146222550_30",
-    "name": "Red Sandfaced 73mm",
-    "category": "Handmade Bricks",
-    "price": "496.03",
-    "priceNote": "",
-    "slug": "red-sandfaced-73mm",
-    "url": "",
-    "description": "",
-    "colour": "",
-    "frost": "F2 — Fully frost resistant",
-    "customSpecs": "[]",
-    "deliveryNotes": "",
-    "visible": true,
-    "mode": "enquiry",
-    "badge": "",
-    "delivery": "extra",
-    "sizeVariants": [
-      {
-        "pack": "",
-        "size": "73mm",
-        "price": "",
-        "coverage": ""
-      }
-    ],
-    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787304220980-918cim.jpg",
-    "images": [
-      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787304220980-918cim.jpg"
-    ],
-    "createdAt": "2026-08-19T13:30:22.872211+00:00",
-    "updatedAt": "2026-08-21T09:23:42.451+00:00"
-  },
-  {
-    "id": "p1787146222550_31",
-    "name": "Cherwell Heritage Blend 73mm",
-    "category": "Handmade Bricks",
-    "price": "648",
-    "priceNote": "",
-    "slug": "cherwell-heritage-blend-73mm",
-    "url": "",
-    "description": "",
-    "colour": "",
-    "frost": "F2 — Fully frost resistant",
-    "customSpecs": "[]",
-    "deliveryNotes": "",
-    "visible": true,
-    "mode": "enquiry",
-    "badge": "",
-    "delivery": "extra",
-    "sizeVariants": [
-      {
-        "pack": "",
-        "size": "73mm",
-        "price": "",
-        "coverage": ""
-      }
-    ],
-    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787304184160-akzaka.jpg",
-    "images": [
-      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787304184160-akzaka.jpg"
-    ],
-    "createdAt": "2026-08-19T13:30:22.872211+00:00",
-    "updatedAt": "2026-08-21T09:23:05.154+00:00"
-  },
-  {
-    "id": "p1787146222550_37",
-    "name": "Ashingdon Grey",
-    "category": "Handmade Bricks",
-    "price": "872.64",
-    "priceNote": "",
-    "slug": "ashingdon-grey",
-    "url": "",
-    "description": "",
-    "colour": "",
-    "frost": "F2 — Fully frost resistant",
-    "customSpecs": "[]",
-    "deliveryNotes": "",
-    "visible": true,
-    "mode": "enquiry",
-    "badge": "",
-    "delivery": "extra",
-    "sizeVariants": [
-      {
-        "pack": "",
-        "size": "65mm",
-        "price": "",
-        "coverage": ""
-      }
-    ],
-    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303851072-ajz4zq.jpg",
-    "images": [
-      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303851072-ajz4zq.jpg",
-      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303855463-304o26.jpg"
-    ],
-    "createdAt": "2026-08-19T13:30:22.872211+00:00",
-    "updatedAt": "2026-08-21T09:17:36.947+00:00"
-  },
-  {
-    "id": "p1787146222550_35",
-    "name": "Olde Cheshire Tumbled 73mm",
-    "category": "Handmade Bricks",
-    "price": "",
-    "priceNote": "",
-    "slug": "olde-cheshire-tumbled-73mm",
-    "url": "",
-    "description": "",
-    "colour": "",
-    "frost": "F2 — Fully frost resistant",
-    "customSpecs": "[]",
-    "deliveryNotes": "",
-    "visible": true,
-    "mode": "enquiry",
-    "badge": "",
-    "delivery": "extra",
-    "sizeVariants": [
-      {
-        "pack": "",
-        "size": "73mm",
-        "price": ""
-      }
-    ],
-    "image": "",
-    "images": [],
-    "createdAt": "2026-08-19T13:30:22.872211+00:00",
-    "updatedAt": "2026-08-19T13:30:22.55+00:00"
-  },
-  {
-    "id": "p1787146222550_32",
-    "name": "Victorian Mellow 73mm",
-    "category": "Handmade Bricks",
-    "price": "822",
-    "priceNote": "",
-    "slug": "victorian-mellow-73mm",
-    "url": "",
-    "description": "",
-    "colour": "",
-    "frost": "F2 — Fully frost resistant",
-    "customSpecs": "[]",
-    "deliveryNotes": "",
-    "visible": true,
-    "mode": "enquiry",
-    "badge": "",
-    "delivery": "extra",
-    "sizeVariants": [
-      {
-        "pack": "",
-        "size": "73mm",
-        "price": "",
-        "coverage": ""
-      }
-    ],
-    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787304164076-bkyzbn.jpg",
-    "images": [
-      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787304164076-bkyzbn.jpg",
-      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787304168352-qkqau6.jpg"
-    ],
-    "createdAt": "2026-08-19T13:30:22.872211+00:00",
-    "updatedAt": "2026-08-21T09:22:49.807+00:00"
+    "updatedAt": "2026-08-21T09:21:10.165+00:00"
   },
   {
     "id": "p1787146222550_42",
@@ -3354,6 +2940,166 @@
     ],
     "createdAt": "2026-08-19T13:30:22.872211+00:00",
     "updatedAt": "2026-08-21T09:25:06.804+00:00"
+  },
+  {
+    "id": "p1787146222550_49",
+    "name": "Forum Burgundy",
+    "category": "Handmade Bricks",
+    "price": "733.44",
+    "priceNote": "",
+    "slug": "forum-burgundy",
+    "url": "",
+    "description": "",
+    "colour": "",
+    "frost": "F2 — Fully frost resistant",
+    "customSpecs": "[]",
+    "deliveryNotes": "",
+    "visible": true,
+    "mode": "enquiry",
+    "badge": "",
+    "delivery": "extra",
+    "sizeVariants": [
+      {
+        "pack": "",
+        "size": "65mm",
+        "price": "",
+        "coverage": ""
+      }
+    ],
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787304437312-63usl7.jpg",
+    "images": [
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787304437312-63usl7.jpg"
+    ],
+    "createdAt": "2026-08-19T13:30:22.872211+00:00",
+    "updatedAt": "2026-08-21T09:27:20.412+00:00"
+  },
+  {
+    "id": "p1787146222550_48",
+    "name": "Fitzjohn Multi",
+    "category": "Handmade Bricks",
+    "price": "877.8",
+    "priceNote": "",
+    "slug": "fitzjohn-multi",
+    "url": "",
+    "description": "",
+    "colour": "",
+    "frost": "F2 — Fully frost resistant",
+    "customSpecs": "[]",
+    "deliveryNotes": "",
+    "visible": true,
+    "mode": "enquiry",
+    "badge": "",
+    "delivery": "extra",
+    "sizeVariants": [
+      {
+        "pack": "",
+        "size": "65mm",
+        "price": "",
+        "coverage": ""
+      }
+    ],
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787304420428-7ik8t5.jpg",
+    "images": [
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787304420428-7ik8t5.jpg"
+    ],
+    "createdAt": "2026-08-19T13:30:22.872211+00:00",
+    "updatedAt": "2026-08-21T09:27:01.946+00:00"
+  },
+  {
+    "id": "p1787146222550_46",
+    "name": "Calverton Red Multi",
+    "category": "Handmade Bricks",
+    "price": "450",
+    "priceNote": "",
+    "slug": "calverton-red-multi",
+    "url": "",
+    "description": "",
+    "colour": "",
+    "frost": "F2 — Fully frost resistant",
+    "customSpecs": "[]",
+    "deliveryNotes": "",
+    "visible": true,
+    "mode": "enquiry",
+    "badge": "",
+    "delivery": "extra",
+    "sizeVariants": [
+      {
+        "pack": "",
+        "size": "65mm",
+        "price": "",
+        "coverage": ""
+      }
+    ],
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303962512-yodpah.jpg",
+    "images": [
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303962512-yodpah.jpg"
+    ],
+    "createdAt": "2026-08-19T13:30:22.872211+00:00",
+    "updatedAt": "2026-08-21T09:19:24.503+00:00"
+  },
+  {
+    "id": "p1787146222550_47",
+    "name": "Falstaff Antique",
+    "category": "Handmade Bricks",
+    "price": "777.6",
+    "priceNote": "",
+    "slug": "falstaff-antique",
+    "url": "",
+    "description": "",
+    "colour": "",
+    "frost": "F2 — Fully frost resistant",
+    "customSpecs": "[]",
+    "deliveryNotes": "",
+    "visible": true,
+    "mode": "enquiry",
+    "badge": "",
+    "delivery": "extra",
+    "sizeVariants": [
+      {
+        "pack": "",
+        "size": "65mm",
+        "price": "",
+        "coverage": ""
+      }
+    ],
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303878192-xy7jp4.jpg",
+    "images": [
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303878192-xy7jp4.jpg"
+    ],
+    "createdAt": "2026-08-19T13:30:22.872211+00:00",
+    "updatedAt": "2026-08-21T09:17:59.895+00:00"
+  },
+  {
+    "id": "p1787146222550_40",
+    "name": "Benamor Blend",
+    "category": "Handmade Bricks",
+    "price": "",
+    "priceNote": "",
+    "slug": "benamor-blend",
+    "url": "",
+    "description": "",
+    "colour": "",
+    "frost": "F2 — Fully frost resistant",
+    "customSpecs": "[]",
+    "deliveryNotes": "",
+    "visible": true,
+    "mode": "enquiry",
+    "badge": "",
+    "delivery": "extra",
+    "sizeVariants": [
+      {
+        "pack": "",
+        "size": "65mm",
+        "price": "",
+        "coverage": ""
+      }
+    ],
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303780235-kgvhj6.jpg",
+    "images": [
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303780235-kgvhj6.jpg"
+    ],
+    "createdAt": "2026-08-19T13:30:22.872211+00:00",
+    "updatedAt": "2026-08-21T09:16:21.93+00:00"
   },
   {
     "id": "p1787146222550_43",
@@ -3452,12 +3198,12 @@
     "updatedAt": "2026-08-21T09:29:51.191+00:00"
   },
   {
-    "id": "p1787146222550_33",
-    "name": "Snowie Heritage Smooth 73mm",
+    "id": "p1787146222550_26",
+    "name": "Tyneham Restoration Red 68mm",
     "category": "Handmade Bricks",
-    "price": "514.13",
+    "price": "875.28",
     "priceNote": "",
-    "slug": "snowie-heritage-smooth-73mm",
+    "slug": "tyneham-restoration-red-68mm",
     "url": "",
     "description": "",
     "colour": "",
@@ -3471,17 +3217,17 @@
     "sizeVariants": [
       {
         "pack": "",
-        "size": "73mm",
+        "size": "68mm",
         "price": "",
         "coverage": ""
       }
     ],
-    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787304090576-dmmnm3.jpg",
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787304387336-et77ma.jpg",
     "images": [
-      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787304090576-dmmnm3.jpg"
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787304387336-et77ma.jpg"
     ],
     "createdAt": "2026-08-19T13:30:22.872211+00:00",
-    "updatedAt": "2026-08-21T09:21:31.787+00:00"
+    "updatedAt": "2026-08-21T09:26:30.475+00:00"
   },
   {
     "id": "p1787146222550_38",
@@ -3516,6 +3262,232 @@
     "updatedAt": "2026-08-21T09:30:29.914+00:00"
   },
   {
+    "id": "p1787146222550_27",
+    "name": "Civic Multi 73mm",
+    "category": "Handmade Bricks",
+    "price": "579.55",
+    "priceNote": "",
+    "slug": "civic-multi-73mm",
+    "url": "",
+    "description": "",
+    "colour": "",
+    "frost": "F2 — Fully frost resistant",
+    "customSpecs": "[]",
+    "deliveryNotes": "",
+    "visible": true,
+    "mode": "enquiry",
+    "badge": "",
+    "delivery": "extra",
+    "sizeVariants": [
+      {
+        "pack": "",
+        "size": "73mm",
+        "price": "",
+        "coverage": ""
+      }
+    ],
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787304288266-fhaqv9.jpg",
+    "images": [
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787304288266-fhaqv9.jpg"
+    ],
+    "createdAt": "2026-08-19T13:30:22.872211+00:00",
+    "updatedAt": "2026-08-21T09:24:49.507+00:00"
+  },
+  {
+    "id": "p1787146222550_28",
+    "name": "Clayburn Civic 73mm",
+    "category": "Handmade Bricks",
+    "price": "596.26",
+    "priceNote": "",
+    "slug": "clayburn-civic-73mm",
+    "url": "",
+    "description": "",
+    "colour": "",
+    "frost": "F2 — Fully frost resistant",
+    "customSpecs": "[]",
+    "deliveryNotes": "",
+    "visible": true,
+    "mode": "enquiry",
+    "badge": "",
+    "delivery": "extra",
+    "sizeVariants": [
+      {
+        "pack": "",
+        "size": "73mm",
+        "price": "",
+        "coverage": ""
+      }
+    ],
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787304269496-ihw8mi.jpg",
+    "images": [
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787304269496-ihw8mi.jpg"
+    ],
+    "createdAt": "2026-08-19T13:30:22.872211+00:00",
+    "updatedAt": "2026-08-21T09:24:31.212+00:00"
+  },
+  {
+    "id": "p1787146222550_29",
+    "name": "Heather Sandfaced 73mm",
+    "category": "Handmade Bricks",
+    "price": "622.27",
+    "priceNote": "",
+    "slug": "heather-sandfaced-73mm",
+    "url": "",
+    "description": "",
+    "colour": "",
+    "frost": "F2 — Fully frost resistant",
+    "customSpecs": "[]",
+    "deliveryNotes": "",
+    "visible": true,
+    "mode": "enquiry",
+    "badge": "",
+    "delivery": "extra",
+    "sizeVariants": [
+      {
+        "pack": "",
+        "size": "73mm",
+        "price": "",
+        "coverage": ""
+      }
+    ],
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787304241231-l6weuw.jpg",
+    "images": [
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787304241231-l6weuw.jpg"
+    ],
+    "createdAt": "2026-08-19T13:30:22.872211+00:00",
+    "updatedAt": "2026-08-21T09:24:02.481+00:00"
+  },
+  {
+    "id": "p1787146222550_30",
+    "name": "Red Sandfaced 73mm",
+    "category": "Handmade Bricks",
+    "price": "496.03",
+    "priceNote": "",
+    "slug": "red-sandfaced-73mm",
+    "url": "",
+    "description": "",
+    "colour": "",
+    "frost": "F2 — Fully frost resistant",
+    "customSpecs": "[]",
+    "deliveryNotes": "",
+    "visible": true,
+    "mode": "enquiry",
+    "badge": "",
+    "delivery": "extra",
+    "sizeVariants": [
+      {
+        "pack": "",
+        "size": "73mm",
+        "price": "",
+        "coverage": ""
+      }
+    ],
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787304220980-918cim.jpg",
+    "images": [
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787304220980-918cim.jpg"
+    ],
+    "createdAt": "2026-08-19T13:30:22.872211+00:00",
+    "updatedAt": "2026-08-21T09:23:42.451+00:00"
+  },
+  {
+    "id": "p1787146222550_37",
+    "name": "Ashingdon Grey",
+    "category": "Handmade Bricks",
+    "price": "872.64",
+    "priceNote": "",
+    "slug": "ashingdon-grey",
+    "url": "",
+    "description": "",
+    "colour": "",
+    "frost": "F2 — Fully frost resistant",
+    "customSpecs": "[]",
+    "deliveryNotes": "",
+    "visible": true,
+    "mode": "enquiry",
+    "badge": "",
+    "delivery": "extra",
+    "sizeVariants": [
+      {
+        "pack": "",
+        "size": "65mm",
+        "price": "",
+        "coverage": ""
+      }
+    ],
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303851072-ajz4zq.jpg",
+    "images": [
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303851072-ajz4zq.jpg",
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303855463-304o26.jpg"
+    ],
+    "createdAt": "2026-08-19T13:30:22.872211+00:00",
+    "updatedAt": "2026-08-21T09:17:36.947+00:00"
+  },
+  {
+    "id": "p1787146222550_31",
+    "name": "Cherwell Heritage Blend 73mm",
+    "category": "Handmade Bricks",
+    "price": "648",
+    "priceNote": "",
+    "slug": "cherwell-heritage-blend-73mm",
+    "url": "",
+    "description": "",
+    "colour": "",
+    "frost": "F2 — Fully frost resistant",
+    "customSpecs": "[]",
+    "deliveryNotes": "",
+    "visible": true,
+    "mode": "enquiry",
+    "badge": "",
+    "delivery": "extra",
+    "sizeVariants": [
+      {
+        "pack": "",
+        "size": "73mm",
+        "price": "",
+        "coverage": ""
+      }
+    ],
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787304184160-akzaka.jpg",
+    "images": [
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787304184160-akzaka.jpg"
+    ],
+    "createdAt": "2026-08-19T13:30:22.872211+00:00",
+    "updatedAt": "2026-08-21T09:23:05.154+00:00"
+  },
+  {
+    "id": "p1787146222550_32",
+    "name": "Victorian Mellow 73mm",
+    "category": "Handmade Bricks",
+    "price": "822",
+    "priceNote": "",
+    "slug": "victorian-mellow-73mm",
+    "url": "",
+    "description": "",
+    "colour": "",
+    "frost": "F2 — Fully frost resistant",
+    "customSpecs": "[]",
+    "deliveryNotes": "",
+    "visible": true,
+    "mode": "enquiry",
+    "badge": "",
+    "delivery": "extra",
+    "sizeVariants": [
+      {
+        "pack": "",
+        "size": "73mm",
+        "price": "",
+        "coverage": ""
+      }
+    ],
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787304164076-bkyzbn.jpg",
+    "images": [
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787304164076-bkyzbn.jpg",
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787304168352-qkqau6.jpg"
+    ],
+    "createdAt": "2026-08-19T13:30:22.872211+00:00",
+    "updatedAt": "2026-08-21T09:22:49.807+00:00"
+  },
+  {
     "id": "p1787146222550_41",
     "name": "Berkeley Handmade",
     "category": "Handmade Bricks",
@@ -3548,12 +3520,41 @@
     "updatedAt": "2026-08-21T09:29:21.896+00:00"
   },
   {
-    "id": "p1787146222550_36",
-    "name": "Arley Red Rustic 73mm",
+    "id": "p1787146222550_35",
+    "name": "Olde Cheshire Tumbled 73mm",
     "category": "Handmade Bricks",
-    "price": "574.2",
+    "price": "",
     "priceNote": "",
-    "slug": "arley-red-rustic-73mm",
+    "slug": "olde-cheshire-tumbled-73mm",
+    "url": "",
+    "description": "",
+    "colour": "",
+    "frost": "F2 — Fully frost resistant",
+    "customSpecs": "[]",
+    "deliveryNotes": "",
+    "visible": true,
+    "mode": "enquiry",
+    "badge": "",
+    "delivery": "extra",
+    "sizeVariants": [
+      {
+        "pack": "",
+        "size": "73mm",
+        "price": ""
+      }
+    ],
+    "image": "",
+    "images": [],
+    "createdAt": "2026-08-19T13:30:22.872211+00:00",
+    "updatedAt": "2026-08-19T13:30:22.55+00:00"
+  },
+  {
+    "id": "p1787146222550_33",
+    "name": "Snowie Heritage Smooth 73mm",
+    "category": "Handmade Bricks",
+    "price": "514.13",
+    "priceNote": "",
+    "slug": "snowie-heritage-smooth-73mm",
     "url": "",
     "description": "",
     "colour": "",
@@ -3572,12 +3573,12 @@
         "coverage": ""
       }
     ],
-    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787304610674-grg47g.jpg",
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787304090576-dmmnm3.jpg",
     "images": [
-      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787304610674-grg47g.jpg"
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787304090576-dmmnm3.jpg"
     ],
     "createdAt": "2026-08-19T13:30:22.872211+00:00",
-    "updatedAt": "2026-08-21T09:30:12.678+00:00"
+    "updatedAt": "2026-08-21T09:21:31.787+00:00"
   },
   {
     "id": "p1787146222550_44",
@@ -4413,38 +4414,6 @@
     "updatedAt": "2026-08-21T09:40:39.26+00:00"
   },
   {
-    "id": "p1787146222550_93",
-    "name": "Calderstone Russet",
-    "category": "Handmade Bricks",
-    "price": "792.22",
-    "priceNote": "",
-    "slug": "calderstone-russet",
-    "url": "",
-    "description": "",
-    "colour": "",
-    "frost": "F2 — Fully frost resistant",
-    "customSpecs": "[]",
-    "deliveryNotes": "",
-    "visible": true,
-    "mode": "enquiry",
-    "badge": "",
-    "delivery": "extra",
-    "sizeVariants": [
-      {
-        "pack": "",
-        "size": "65mm",
-        "price": "",
-        "coverage": ""
-      }
-    ],
-    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787305466031-yo80xy.jpg",
-    "images": [
-      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787305466031-yo80xy.jpg"
-    ],
-    "createdAt": "2026-08-19T13:30:23.192409+00:00",
-    "updatedAt": "2026-08-21T09:44:27.616+00:00"
-  },
-  {
     "id": "p1787146222550_94",
     "name": "Grampian Red Mixture",
     "category": "Handmade Bricks",
@@ -4475,6 +4444,38 @@
     ],
     "createdAt": "2026-08-19T13:30:23.192409+00:00",
     "updatedAt": "2026-08-21T09:45:07.046+00:00"
+  },
+  {
+    "id": "p1787146222550_80",
+    "name": "Birtley Olde English",
+    "category": "Handmade Bricks",
+    "price": "648.48",
+    "priceNote": "",
+    "slug": "birtley-olde-english",
+    "url": "",
+    "description": "",
+    "colour": "",
+    "frost": "F2 — Fully frost resistant",
+    "customSpecs": "[]",
+    "deliveryNotes": "",
+    "visible": true,
+    "mode": "enquiry",
+    "badge": "",
+    "delivery": "extra",
+    "sizeVariants": [
+      {
+        "pack": "",
+        "size": "65mm, 73mm",
+        "price": "",
+        "coverage": ""
+      }
+    ],
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787305603734-6xus5p.jpg",
+    "images": [
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787305603734-6xus5p.jpg"
+    ],
+    "createdAt": "2026-08-19T13:30:23.192409+00:00",
+    "updatedAt": "2026-08-21T09:46:45.85+00:00"
   },
   {
     "id": "p1787146222550_99",
@@ -4797,38 +4798,6 @@
     "updatedAt": "2026-08-21T09:47:27.095+00:00"
   },
   {
-    "id": "p1787146222550_79",
-    "name": "Crowborough Multi",
-    "category": "Handmade Bricks",
-    "price": "930",
-    "priceNote": "",
-    "slug": "crowborough-multi",
-    "url": "",
-    "description": "",
-    "colour": "",
-    "frost": "F2 — Fully frost resistant",
-    "customSpecs": "[]",
-    "deliveryNotes": "",
-    "visible": true,
-    "mode": "enquiry",
-    "badge": "",
-    "delivery": "extra",
-    "sizeVariants": [
-      {
-        "pack": "",
-        "size": "65mm",
-        "price": "",
-        "coverage": ""
-      }
-    ],
-    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787305572967-u1ep1r.jpg",
-    "images": [
-      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787305572967-u1ep1r.jpg"
-    ],
-    "createdAt": "2026-08-19T13:30:23.192409+00:00",
-    "updatedAt": "2026-08-21T09:46:15.986+00:00"
-  },
-  {
     "id": "p1787146222550_78",
     "name": "Cottage Mixture",
     "category": "Handmade Bricks",
@@ -4859,6 +4828,38 @@
     ],
     "createdAt": "2026-08-19T13:30:23.192409+00:00",
     "updatedAt": "2026-08-21T09:43:56.257+00:00"
+  },
+  {
+    "id": "p1787146222550_79",
+    "name": "Crowborough Multi",
+    "category": "Handmade Bricks",
+    "price": "930",
+    "priceNote": "",
+    "slug": "crowborough-multi",
+    "url": "",
+    "description": "",
+    "colour": "",
+    "frost": "F2 — Fully frost resistant",
+    "customSpecs": "[]",
+    "deliveryNotes": "",
+    "visible": true,
+    "mode": "enquiry",
+    "badge": "",
+    "delivery": "extra",
+    "sizeVariants": [
+      {
+        "pack": "",
+        "size": "65mm",
+        "price": "",
+        "coverage": ""
+      }
+    ],
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787305572967-u1ep1r.jpg",
+    "images": [
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787305572967-u1ep1r.jpg"
+    ],
+    "createdAt": "2026-08-19T13:30:23.192409+00:00",
+    "updatedAt": "2026-08-21T09:46:15.986+00:00"
   },
   {
     "id": "p1787146222550_77",
@@ -4955,38 +4956,6 @@
     ],
     "createdAt": "2026-08-19T13:30:23.192409+00:00",
     "updatedAt": "2026-08-21T09:45:27.547+00:00"
-  },
-  {
-    "id": "p1787146222550_88",
-    "name": "Cooksbridge Yellow Clamp Stock",
-    "category": "Handmade Bricks",
-    "price": "834.36",
-    "priceNote": "",
-    "slug": "cooksbridge-yellow-clamp-stock",
-    "url": "",
-    "description": "",
-    "colour": "",
-    "frost": "F2 — Fully frost resistant",
-    "customSpecs": "[]",
-    "deliveryNotes": "",
-    "visible": true,
-    "mode": "enquiry",
-    "badge": "",
-    "delivery": "extra",
-    "sizeVariants": [
-      {
-        "pack": "",
-        "size": "65mm",
-        "price": "",
-        "coverage": ""
-      }
-    ],
-    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787305375320-o7x9dx.jpg",
-    "images": [
-      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787305375320-o7x9dx.jpg"
-    ],
-    "createdAt": "2026-08-19T13:30:23.192409+00:00",
-    "updatedAt": "2026-08-21T09:42:56.732+00:00"
   },
   {
     "id": "p1787146222550_97",
@@ -5117,6 +5086,38 @@
     "updatedAt": "2026-08-21T09:49:49.11+00:00"
   },
   {
+    "id": "p1787146222550_88",
+    "name": "Cooksbridge Yellow Clamp Stock",
+    "category": "Handmade Bricks",
+    "price": "834.36",
+    "priceNote": "",
+    "slug": "cooksbridge-yellow-clamp-stock",
+    "url": "",
+    "description": "",
+    "colour": "",
+    "frost": "F2 — Fully frost resistant",
+    "customSpecs": "[]",
+    "deliveryNotes": "",
+    "visible": true,
+    "mode": "enquiry",
+    "badge": "",
+    "delivery": "extra",
+    "sizeVariants": [
+      {
+        "pack": "",
+        "size": "65mm",
+        "price": "",
+        "coverage": ""
+      }
+    ],
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787305375320-o7x9dx.jpg",
+    "images": [
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787305375320-o7x9dx.jpg"
+    ],
+    "createdAt": "2026-08-19T13:30:23.192409+00:00",
+    "updatedAt": "2026-08-21T09:42:56.732+00:00"
+  },
+  {
     "id": "p1787146222550_85",
     "name": "Cheddar Golden",
     "category": "Handmade Bricks",
@@ -5181,12 +5182,12 @@
     "updatedAt": "2026-08-21T09:48:26.722+00:00"
   },
   {
-    "id": "p1787146222550_80",
-    "name": "Birtley Olde English",
+    "id": "p1787146222550_93",
+    "name": "Calderstone Russet",
     "category": "Handmade Bricks",
-    "price": "648.48",
+    "price": "792.22",
     "priceNote": "",
-    "slug": "birtley-olde-english",
+    "slug": "calderstone-russet",
     "url": "",
     "description": "",
     "colour": "",
@@ -5200,17 +5201,17 @@
     "sizeVariants": [
       {
         "pack": "",
-        "size": "65mm, 73mm",
+        "size": "65mm",
         "price": "",
         "coverage": ""
       }
     ],
-    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787305603734-6xus5p.jpg",
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787305466031-yo80xy.jpg",
     "images": [
-      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787305603734-6xus5p.jpg"
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787305466031-yo80xy.jpg"
     ],
     "createdAt": "2026-08-19T13:30:23.192409+00:00",
-    "updatedAt": "2026-08-21T09:46:45.85+00:00"
+    "updatedAt": "2026-08-21T09:44:27.616+00:00"
   },
   {
     "id": "p1787146222550_107",
@@ -5437,38 +5438,6 @@
     "updatedAt": "2026-08-21T09:57:18.154+00:00"
   },
   {
-    "id": "p1787146222550_104",
-    "name": "Leicester Red Stock",
-    "category": "Handmade Bricks",
-    "price": "528",
-    "priceNote": "",
-    "slug": "leicester-red-stock",
-    "url": "",
-    "description": "",
-    "colour": "",
-    "frost": "F2 — Fully frost resistant",
-    "customSpecs": "[]",
-    "deliveryNotes": "",
-    "visible": true,
-    "mode": "enquiry",
-    "badge": "",
-    "delivery": "extra",
-    "sizeVariants": [
-      {
-        "pack": "",
-        "size": "65mm",
-        "price": "",
-        "coverage": ""
-      }
-    ],
-    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787307023556-x9l3kz.jpg",
-    "images": [
-      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787307023556-x9l3kz.jpg"
-    ],
-    "createdAt": "2026-08-19T13:30:23.353293+00:00",
-    "updatedAt": "2026-08-21T10:10:24.835+00:00"
-  },
-  {
     "id": "p1787146222550_121",
     "name": "Bradgate Red",
     "category": "Handmade Bricks",
@@ -5595,6 +5564,38 @@
     ],
     "createdAt": "2026-08-19T13:30:23.353293+00:00",
     "updatedAt": "2026-08-21T10:06:25.323+00:00"
+  },
+  {
+    "id": "p1787146222550_104",
+    "name": "Leicester Red Stock",
+    "category": "Handmade Bricks",
+    "price": "528",
+    "priceNote": "",
+    "slug": "leicester-red-stock",
+    "url": "",
+    "description": "",
+    "colour": "",
+    "frost": "F2 — Fully frost resistant",
+    "customSpecs": "[]",
+    "deliveryNotes": "",
+    "visible": true,
+    "mode": "enquiry",
+    "badge": "",
+    "delivery": "extra",
+    "sizeVariants": [
+      {
+        "pack": "",
+        "size": "65mm",
+        "price": "",
+        "coverage": ""
+      }
+    ],
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787307023556-x9l3kz.jpg",
+    "images": [
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787307023556-x9l3kz.jpg"
+    ],
+    "createdAt": "2026-08-19T13:30:23.353293+00:00",
+    "updatedAt": "2026-08-21T10:10:24.835+00:00"
   },
   {
     "id": "p1787146222550_110",
@@ -6013,38 +6014,6 @@
     "updatedAt": "2026-08-21T10:04:57.865+00:00"
   },
   {
-    "id": "p1787146222550_139",
-    "name": "Mixed Buff Rustic",
-    "category": "Handmade Bricks",
-    "price": "696",
-    "priceNote": "",
-    "slug": "mixed-buff-rustic",
-    "url": "",
-    "description": "",
-    "colour": "",
-    "frost": "F2 — Fully frost resistant",
-    "customSpecs": "[]",
-    "deliveryNotes": "",
-    "visible": true,
-    "mode": "enquiry",
-    "badge": "",
-    "delivery": "extra",
-    "sizeVariants": [
-      {
-        "pack": "",
-        "size": "65mm",
-        "price": "",
-        "coverage": ""
-      }
-    ],
-    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787307523385-qneyxk.jpg",
-    "images": [
-      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787307523385-qneyxk.jpg"
-    ],
-    "createdAt": "2026-08-19T13:30:23.523068+00:00",
-    "updatedAt": "2026-08-21T10:18:45.65+00:00"
-  },
-  {
     "id": "p1787146222550_136",
     "name": "Tyneham Blend",
     "category": "Handmade Bricks",
@@ -6075,6 +6044,38 @@
     ],
     "createdAt": "2026-08-19T13:30:23.523068+00:00",
     "updatedAt": "2026-08-21T10:17:31.364+00:00"
+  },
+  {
+    "id": "p1787146222550_144",
+    "name": "Tradesman Heather",
+    "category": "Handmade Bricks",
+    "price": "630",
+    "priceNote": "",
+    "slug": "tradesman-heather",
+    "url": "",
+    "description": "",
+    "colour": "",
+    "frost": "F2 — Fully frost resistant",
+    "customSpecs": "[]",
+    "deliveryNotes": "",
+    "visible": true,
+    "mode": "enquiry",
+    "badge": "",
+    "delivery": "extra",
+    "sizeVariants": [
+      {
+        "pack": "",
+        "size": "65mm, 73mm",
+        "price": "",
+        "coverage": ""
+      }
+    ],
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787307594074-mj8bum.jpg",
+    "images": [
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787307594074-mj8bum.jpg"
+    ],
+    "createdAt": "2026-08-19T13:30:23.523068+00:00",
+    "updatedAt": "2026-08-21T10:19:55.203+00:00"
   },
   {
     "id": "p1787146222550_131",
@@ -6557,6 +6558,38 @@
     "updatedAt": "2026-08-21T10:18:22.762+00:00"
   },
   {
+    "id": "p1787146222550_139",
+    "name": "Mixed Buff Rustic",
+    "category": "Handmade Bricks",
+    "price": "696",
+    "priceNote": "",
+    "slug": "mixed-buff-rustic",
+    "url": "",
+    "description": "",
+    "colour": "",
+    "frost": "F2 — Fully frost resistant",
+    "customSpecs": "[]",
+    "deliveryNotes": "",
+    "visible": true,
+    "mode": "enquiry",
+    "badge": "",
+    "delivery": "extra",
+    "sizeVariants": [
+      {
+        "pack": "",
+        "size": "65mm",
+        "price": "",
+        "coverage": ""
+      }
+    ],
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787307523385-qneyxk.jpg",
+    "images": [
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787307523385-qneyxk.jpg"
+    ],
+    "createdAt": "2026-08-19T13:30:23.523068+00:00",
+    "updatedAt": "2026-08-21T10:18:45.65+00:00"
+  },
+  {
     "id": "p1787146222550_141",
     "name": "Sandalwood",
     "category": "Handmade Bricks",
@@ -6653,38 +6686,6 @@
     "updatedAt": "2026-08-21T10:12:33.535+00:00"
   },
   {
-    "id": "p1787146222550_125",
-    "name": "Ivanhoe Olde Village",
-    "category": "Handmade Bricks",
-    "price": "600",
-    "priceNote": "",
-    "slug": "ivanhoe-olde-village",
-    "url": "",
-    "description": "",
-    "colour": "",
-    "frost": "F2 — Fully frost resistant",
-    "customSpecs": "[]",
-    "deliveryNotes": "",
-    "visible": true,
-    "mode": "enquiry",
-    "badge": "",
-    "delivery": "extra",
-    "sizeVariants": [
-      {
-        "pack": "",
-        "size": "65mm",
-        "price": "",
-        "coverage": ""
-      }
-    ],
-    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787307549509-uaaz8c.jpg",
-    "images": [
-      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787307549509-uaaz8c.jpg"
-    ],
-    "createdAt": "2026-08-19T13:30:23.523068+00:00",
-    "updatedAt": "2026-08-21T10:19:11.125+00:00"
-  },
-  {
     "id": "p1787146222550_147",
     "name": "Tradesman Millgate Buff",
     "category": "Handmade Bricks",
@@ -6749,6 +6750,38 @@
     "updatedAt": "2026-08-21T10:22:07.531+00:00"
   },
   {
+    "id": "p1787146222550_125",
+    "name": "Ivanhoe Olde Village",
+    "category": "Handmade Bricks",
+    "price": "600",
+    "priceNote": "",
+    "slug": "ivanhoe-olde-village",
+    "url": "",
+    "description": "",
+    "colour": "",
+    "frost": "F2 — Fully frost resistant",
+    "customSpecs": "[]",
+    "deliveryNotes": "",
+    "visible": true,
+    "mode": "enquiry",
+    "badge": "",
+    "delivery": "extra",
+    "sizeVariants": [
+      {
+        "pack": "",
+        "size": "65mm",
+        "price": "",
+        "coverage": ""
+      }
+    ],
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787307549509-uaaz8c.jpg",
+    "images": [
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787307549509-uaaz8c.jpg"
+    ],
+    "createdAt": "2026-08-19T13:30:23.523068+00:00",
+    "updatedAt": "2026-08-21T10:19:11.125+00:00"
+  },
+  {
     "id": "p1787146222550_146",
     "name": "Tradesman Light Rustic Blend",
     "category": "Handmade Bricks",
@@ -6781,44 +6814,12 @@
     "updatedAt": "2026-08-21T10:21:07.507+00:00"
   },
   {
-    "id": "p1787146222550_144",
-    "name": "Tradesman Heather",
+    "id": "p1787146222550_169",
+    "name": "Waveney Red Blend",
     "category": "Handmade Bricks",
-    "price": "630",
+    "price": "832.8",
     "priceNote": "",
-    "slug": "tradesman-heather",
-    "url": "",
-    "description": "",
-    "colour": "",
-    "frost": "F2 — Fully frost resistant",
-    "customSpecs": "[]",
-    "deliveryNotes": "",
-    "visible": true,
-    "mode": "enquiry",
-    "badge": "",
-    "delivery": "extra",
-    "sizeVariants": [
-      {
-        "pack": "",
-        "size": "65mm, 73mm",
-        "price": "",
-        "coverage": ""
-      }
-    ],
-    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787307594074-mj8bum.jpg",
-    "images": [
-      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787307594074-mj8bum.jpg"
-    ],
-    "createdAt": "2026-08-19T13:30:23.523068+00:00",
-    "updatedAt": "2026-08-21T10:19:55.203+00:00"
-  },
-  {
-    "id": "p1787146222550_167",
-    "name": "Shelford Cream Multi",
-    "category": "Handmade Bricks",
-    "price": "889.92",
-    "priceNote": "",
-    "slug": "shelford-cream-multi",
+    "slug": "waveney-red-blend",
     "url": "",
     "description": "",
     "colour": "",
@@ -6837,12 +6838,12 @@
         "coverage": ""
       }
     ],
-    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787308425508-8pziji.jpg",
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787308447132-ktm63x.jpg",
     "images": [
-      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787308425508-8pziji.jpg"
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787308447132-ktm63x.jpg"
     ],
     "createdAt": "2026-08-19T13:30:23.644367+00:00",
-    "updatedAt": "2026-08-21T10:33:47.538+00:00"
+    "updatedAt": "2026-08-21T10:34:08.54+00:00"
   },
   {
     "id": "p1787146222550_173",
@@ -6877,6 +6878,38 @@
     "updatedAt": "2026-08-21T10:45:46.391+00:00"
   },
   {
+    "id": "p1787146222550_170",
+    "name": "Audley Antique Brick Slip",
+    "category": "Handmade Bricks",
+    "price": "136.8",
+    "priceNote": "",
+    "slug": "audley-antique-brick-slip",
+    "url": "",
+    "description": "",
+    "colour": "",
+    "frost": "F2 — Fully frost resistant",
+    "customSpecs": "[]",
+    "deliveryNotes": "",
+    "visible": true,
+    "mode": "enquiry",
+    "badge": "",
+    "delivery": "extra",
+    "sizeVariants": [
+      {
+        "pack": "",
+        "size": "Brick slip",
+        "price": "",
+        "coverage": ""
+      }
+    ],
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787308465554-a9wqsz.jpg",
+    "images": [
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787308465554-a9wqsz.jpg"
+    ],
+    "createdAt": "2026-08-19T13:30:23.644367+00:00",
+    "updatedAt": "2026-08-21T10:34:27.276+00:00"
+  },
+  {
     "id": "p1787146222550_171",
     "name": "Barnhouse Blend Brick Slip",
     "category": "Handmade Bricks",
@@ -6907,38 +6940,6 @@
     ],
     "createdAt": "2026-08-19T13:30:23.644367+00:00",
     "updatedAt": "2026-08-21T10:36:34.074+00:00"
-  },
-  {
-    "id": "p1787146222550_169",
-    "name": "Waveney Red Blend",
-    "category": "Handmade Bricks",
-    "price": "832.8",
-    "priceNote": "",
-    "slug": "waveney-red-blend",
-    "url": "",
-    "description": "",
-    "colour": "",
-    "frost": "F2 — Fully frost resistant",
-    "customSpecs": "[]",
-    "deliveryNotes": "",
-    "visible": true,
-    "mode": "enquiry",
-    "badge": "",
-    "delivery": "extra",
-    "sizeVariants": [
-      {
-        "pack": "",
-        "size": "65mm",
-        "price": "",
-        "coverage": ""
-      }
-    ],
-    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787308447132-ktm63x.jpg",
-    "images": [
-      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787308447132-ktm63x.jpg"
-    ],
-    "createdAt": "2026-08-19T13:30:23.644367+00:00",
-    "updatedAt": "2026-08-21T10:34:08.54+00:00"
   },
   {
     "id": "p1787146222550_153",
@@ -7005,6 +7006,38 @@
     "updatedAt": "2026-08-21T10:36:17.827+00:00"
   },
   {
+    "id": "p1787146222550_167",
+    "name": "Shelford Cream Multi",
+    "category": "Handmade Bricks",
+    "price": "889.92",
+    "priceNote": "",
+    "slug": "shelford-cream-multi",
+    "url": "",
+    "description": "",
+    "colour": "",
+    "frost": "F2 — Fully frost resistant",
+    "customSpecs": "[]",
+    "deliveryNotes": "",
+    "visible": true,
+    "mode": "enquiry",
+    "badge": "",
+    "delivery": "extra",
+    "sizeVariants": [
+      {
+        "pack": "",
+        "size": "65mm",
+        "price": "",
+        "coverage": ""
+      }
+    ],
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787308425508-8pziji.jpg",
+    "images": [
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787308425508-8pziji.jpg"
+    ],
+    "createdAt": "2026-08-19T13:30:23.644367+00:00",
+    "updatedAt": "2026-08-21T10:33:47.538+00:00"
+  },
+  {
     "id": "p1787146222550_150",
     "name": "Tradesman Tudor Regent",
     "category": "Handmade Bricks",
@@ -7037,12 +7070,12 @@
     "updatedAt": "2026-08-21T10:38:42.644+00:00"
   },
   {
-    "id": "p1787146222550_159",
-    "name": "Maranello",
+    "id": "p1787146222550_172",
+    "name": "Birkdale Blend Brick Slip",
     "category": "Handmade Bricks",
-    "price": "1056.36",
+    "price": "119.99",
     "priceNote": "",
-    "slug": "maranello",
+    "slug": "birkdale-blend-brick-slip",
     "url": "",
     "description": "",
     "colour": "",
@@ -7056,25 +7089,25 @@
     "sizeVariants": [
       {
         "pack": "",
-        "size": "65mm",
+        "size": "Brick slip",
         "price": "",
         "coverage": ""
       }
     ],
-    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787308608832-452ai8.jpg",
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787308867227-br0ive.jpg",
     "images": [
-      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787308608832-452ai8.jpg"
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787308867227-br0ive.jpg"
     ],
     "createdAt": "2026-08-19T13:30:23.644367+00:00",
-    "updatedAt": "2026-08-21T10:36:50.68+00:00"
+    "updatedAt": "2026-08-21T10:41:08.598+00:00"
   },
   {
-    "id": "p1787146222550_161",
-    "name": "Mystique",
+    "id": "p1787146222550_151",
+    "name": "Audley Antique",
     "category": "Handmade Bricks",
-    "price": "876",
+    "price": "942.48",
     "priceNote": "",
-    "slug": "mystique",
+    "slug": "audley-antique",
     "url": "",
     "description": "",
     "colour": "",
@@ -7093,44 +7126,12 @@
         "coverage": ""
       }
     ],
-    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787308896422-fsmi5b.jpg",
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787308697902-ttq3rf.jpg",
     "images": [
-      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787308896422-fsmi5b.jpg"
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787308697902-ttq3rf.jpg"
     ],
     "createdAt": "2026-08-19T13:30:23.644367+00:00",
-    "updatedAt": "2026-08-21T10:41:37.216+00:00"
-  },
-  {
-    "id": "p1787146222550_160",
-    "name": "Middleton Blend",
-    "category": "Handmade Bricks",
-    "price": "849",
-    "priceNote": "",
-    "slug": "middleton-blend",
-    "url": "",
-    "description": "",
-    "colour": "",
-    "frost": "F2 — Fully frost resistant",
-    "customSpecs": "[]",
-    "deliveryNotes": "",
-    "visible": true,
-    "mode": "enquiry",
-    "badge": "",
-    "delivery": "extra",
-    "sizeVariants": [
-      {
-        "pack": "",
-        "size": "65mm",
-        "price": "",
-        "coverage": ""
-      }
-    ],
-    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787308882452-1829zp.jpg",
-    "images": [
-      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787308882452-1829zp.jpg"
-    ],
-    "createdAt": "2026-08-19T13:30:23.644367+00:00",
-    "updatedAt": "2026-08-21T10:41:23.366+00:00"
+    "updatedAt": "2026-08-21T10:38:19.959+00:00"
   },
   {
     "id": "p1787146222550_166",
@@ -7197,6 +7198,38 @@
     "updatedAt": "2026-08-21T10:40:00.796+00:00"
   },
   {
+    "id": "p1787146222550_162",
+    "name": "Normandy Grey",
+    "category": "Handmade Bricks",
+    "price": "1056.36",
+    "priceNote": "",
+    "slug": "normandy-grey",
+    "url": "",
+    "description": "",
+    "colour": "",
+    "frost": "F2 — Fully frost resistant",
+    "customSpecs": "[]",
+    "deliveryNotes": "",
+    "visible": true,
+    "mode": "enquiry",
+    "badge": "",
+    "delivery": "extra",
+    "sizeVariants": [
+      {
+        "pack": "",
+        "size": "65mm",
+        "price": "",
+        "coverage": ""
+      }
+    ],
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787308816240-071xyq.jpg",
+    "images": [
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787308816240-071xyq.jpg"
+    ],
+    "createdAt": "2026-08-19T13:30:23.644367+00:00",
+    "updatedAt": "2026-08-21T10:40:17.243+00:00"
+  },
+  {
     "id": "p1787146222550_165",
     "name": "Olde English Red Multi",
     "category": "Handmade Bricks",
@@ -7227,38 +7260,6 @@
     ],
     "createdAt": "2026-08-19T13:30:23.644367+00:00",
     "updatedAt": "2026-08-21T10:44:24.255+00:00"
-  },
-  {
-    "id": "p1787146222550_170",
-    "name": "Audley Antique Brick Slip",
-    "category": "Handmade Bricks",
-    "price": "136.8",
-    "priceNote": "",
-    "slug": "audley-antique-brick-slip",
-    "url": "",
-    "description": "",
-    "colour": "",
-    "frost": "F2 — Fully frost resistant",
-    "customSpecs": "[]",
-    "deliveryNotes": "",
-    "visible": true,
-    "mode": "enquiry",
-    "badge": "",
-    "delivery": "extra",
-    "sizeVariants": [
-      {
-        "pack": "",
-        "size": "Brick slip",
-        "price": "",
-        "coverage": ""
-      }
-    ],
-    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787308465554-a9wqsz.jpg",
-    "images": [
-      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787308465554-a9wqsz.jpg"
-    ],
-    "createdAt": "2026-08-19T13:30:23.644367+00:00",
-    "updatedAt": "2026-08-21T10:34:27.276+00:00"
   },
   {
     "id": "p1787146222550_155",
@@ -7357,44 +7358,12 @@
     "updatedAt": "2026-08-21T10:35:54.31+00:00"
   },
   {
-    "id": "p1787146222550_151",
-    "name": "Audley Antique",
-    "category": "Handmade Bricks",
-    "price": "942.48",
-    "priceNote": "",
-    "slug": "audley-antique",
-    "url": "",
-    "description": "",
-    "colour": "",
-    "frost": "F2 — Fully frost resistant",
-    "customSpecs": "[]",
-    "deliveryNotes": "",
-    "visible": true,
-    "mode": "enquiry",
-    "badge": "",
-    "delivery": "extra",
-    "sizeVariants": [
-      {
-        "pack": "",
-        "size": "65mm",
-        "price": "",
-        "coverage": ""
-      }
-    ],
-    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787308697902-ttq3rf.jpg",
-    "images": [
-      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787308697902-ttq3rf.jpg"
-    ],
-    "createdAt": "2026-08-19T13:30:23.644367+00:00",
-    "updatedAt": "2026-08-21T10:38:19.959+00:00"
-  },
-  {
-    "id": "p1787146222550_162",
-    "name": "Normandy Grey",
+    "id": "p1787146222550_159",
+    "name": "Maranello",
     "category": "Handmade Bricks",
     "price": "1056.36",
     "priceNote": "",
-    "slug": "normandy-grey",
+    "slug": "maranello",
     "url": "",
     "description": "",
     "colour": "",
@@ -7413,12 +7382,12 @@
         "coverage": ""
       }
     ],
-    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787308816240-071xyq.jpg",
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787308608832-452ai8.jpg",
     "images": [
-      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787308816240-071xyq.jpg"
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787308608832-452ai8.jpg"
     ],
     "createdAt": "2026-08-19T13:30:23.644367+00:00",
-    "updatedAt": "2026-08-21T10:40:17.243+00:00"
+    "updatedAt": "2026-08-21T10:36:50.68+00:00"
   },
   {
     "id": "p1787146222550_163",
@@ -7453,44 +7422,12 @@
     "updatedAt": "2026-08-21T10:40:34.682+00:00"
   },
   {
-    "id": "p1787146222550_172",
-    "name": "Birkdale Blend Brick Slip",
+    "id": "p1787146222550_164",
+    "name": "Olde English Buff Multi",
     "category": "Handmade Bricks",
-    "price": "119.99",
+    "price": "746.4",
     "priceNote": "",
-    "slug": "birkdale-blend-brick-slip",
-    "url": "",
-    "description": "",
-    "colour": "",
-    "frost": "F2 — Fully frost resistant",
-    "customSpecs": "[]",
-    "deliveryNotes": "",
-    "visible": true,
-    "mode": "enquiry",
-    "badge": "",
-    "delivery": "extra",
-    "sizeVariants": [
-      {
-        "pack": "",
-        "size": "Brick slip",
-        "price": "",
-        "coverage": ""
-      }
-    ],
-    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787308867227-br0ive.jpg",
-    "images": [
-      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787308867227-br0ive.jpg"
-    ],
-    "createdAt": "2026-08-19T13:30:23.644367+00:00",
-    "updatedAt": "2026-08-21T10:41:08.598+00:00"
-  },
-  {
-    "id": "p1787146222550_154",
-    "name": "Grantchester Blend",
-    "category": "Handmade Bricks",
-    "price": "968.76",
-    "priceNote": "",
-    "slug": "grantchester-blend",
+    "slug": "olde-english-buff-multi",
     "url": "",
     "description": "",
     "colour": "",
@@ -7509,12 +7446,76 @@
         "coverage": ""
       }
     ],
-    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787308505025-0vczwf.jpg",
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787308849245-sqa04q.jpg",
     "images": [
-      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787308505025-0vczwf.jpg"
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787308849245-sqa04q.jpg"
     ],
     "createdAt": "2026-08-19T13:30:23.644367+00:00",
-    "updatedAt": "2026-08-21T10:35:06.261+00:00"
+    "updatedAt": "2026-08-21T10:40:50.429+00:00"
+  },
+  {
+    "id": "p1787146222550_160",
+    "name": "Middleton Blend",
+    "category": "Handmade Bricks",
+    "price": "849",
+    "priceNote": "",
+    "slug": "middleton-blend",
+    "url": "",
+    "description": "",
+    "colour": "",
+    "frost": "F2 — Fully frost resistant",
+    "customSpecs": "[]",
+    "deliveryNotes": "",
+    "visible": true,
+    "mode": "enquiry",
+    "badge": "",
+    "delivery": "extra",
+    "sizeVariants": [
+      {
+        "pack": "",
+        "size": "65mm",
+        "price": "",
+        "coverage": ""
+      }
+    ],
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787308882452-1829zp.jpg",
+    "images": [
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787308882452-1829zp.jpg"
+    ],
+    "createdAt": "2026-08-19T13:30:23.644367+00:00",
+    "updatedAt": "2026-08-21T10:41:23.366+00:00"
+  },
+  {
+    "id": "p1787146222550_161",
+    "name": "Mystique",
+    "category": "Handmade Bricks",
+    "price": "876",
+    "priceNote": "",
+    "slug": "mystique",
+    "url": "",
+    "description": "",
+    "colour": "",
+    "frost": "F2 — Fully frost resistant",
+    "customSpecs": "[]",
+    "deliveryNotes": "",
+    "visible": true,
+    "mode": "enquiry",
+    "badge": "",
+    "delivery": "extra",
+    "sizeVariants": [
+      {
+        "pack": "",
+        "size": "65mm",
+        "price": "",
+        "coverage": ""
+      }
+    ],
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787308896422-fsmi5b.jpg",
+    "images": [
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787308896422-fsmi5b.jpg"
+    ],
+    "createdAt": "2026-08-19T13:30:23.644367+00:00",
+    "updatedAt": "2026-08-21T10:41:37.216+00:00"
   },
   {
     "id": "p1787146222550_168",
@@ -7581,12 +7582,12 @@
     "updatedAt": "2026-08-21T10:46:05.858+00:00"
   },
   {
-    "id": "p1787146222550_164",
-    "name": "Olde English Buff Multi",
+    "id": "p1787146222550_154",
+    "name": "Grantchester Blend",
     "category": "Handmade Bricks",
-    "price": "746.4",
+    "price": "968.76",
     "priceNote": "",
-    "slug": "olde-english-buff-multi",
+    "slug": "grantchester-blend",
     "url": "",
     "description": "",
     "colour": "",
@@ -7605,12 +7606,12 @@
         "coverage": ""
       }
     ],
-    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787308849245-sqa04q.jpg",
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787308505025-0vczwf.jpg",
     "images": [
-      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787308849245-sqa04q.jpg"
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787308505025-0vczwf.jpg"
     ],
     "createdAt": "2026-08-19T13:30:23.644367+00:00",
-    "updatedAt": "2026-08-21T10:40:50.429+00:00"
+    "updatedAt": "2026-08-21T10:35:06.261+00:00"
   },
   {
     "id": "p1787146222550_194",
@@ -7645,12 +7646,12 @@
     "updatedAt": "2026-08-21T10:54:14.267+00:00"
   },
   {
-    "id": "p1787146222550_197",
-    "name": "Peak Bordeaux",
+    "id": "p1787146222550_185",
+    "name": "Medium Surrey Blend",
     "category": "Handmade Bricks",
-    "price": "472.8",
+    "price": "940.8",
     "priceNote": "",
-    "slug": "peak-bordeaux",
+    "slug": "medium-surrey-blend",
     "url": "",
     "description": "",
     "colour": "",
@@ -7669,12 +7670,12 @@
         "coverage": ""
       }
     ],
-    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787309784536-uodlfl.jpg",
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787309705874-urp7c8.jpg",
     "images": [
-      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787309784536-uodlfl.jpg"
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787309705874-urp7c8.jpg"
     ],
     "createdAt": "2026-08-19T13:30:23.748405+00:00",
-    "updatedAt": "2026-08-21T10:56:26.368+00:00"
+    "updatedAt": "2026-08-21T10:55:07.228+00:00"
   },
   {
     "id": "p1787146222550_192",
@@ -7741,12 +7742,12 @@
     "updatedAt": "2026-08-21T10:52:52.169+00:00"
   },
   {
-    "id": "p1787146222550_175",
-    "name": "Mystique Brick Slip",
+    "id": "p1787146222550_177",
+    "name": "Traditional Red Blend Brick Slip",
     "category": "Handmade Bricks",
-    "price": "141.6",
+    "price": "119.28",
     "priceNote": "",
-    "slug": "mystique-brick-slip",
+    "slug": "traditional-red-blend-brick-slip",
     "url": "",
     "description": "",
     "colour": "",
@@ -7765,12 +7766,12 @@
         "coverage": ""
       }
     ],
-    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787309203409-h2dvp8.jpg",
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787309344208-v1mcdg.jpg",
     "images": [
-      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787309203409-h2dvp8.jpg"
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787309344208-v1mcdg.jpg"
     ],
     "createdAt": "2026-08-19T13:30:23.748405+00:00",
-    "updatedAt": "2026-08-21T10:46:44.975+00:00"
+    "updatedAt": "2026-08-21T10:49:06.794+00:00"
   },
   {
     "id": "p1787146222550_183",
@@ -7837,12 +7838,12 @@
     "updatedAt": "2026-08-21T10:50:45.023+00:00"
   },
   {
-    "id": "p1787146222550_179",
-    "name": "Corn Yellow",
+    "id": "p1787146222550_197",
+    "name": "Peak Bordeaux",
     "category": "Handmade Bricks",
-    "price": "875.52",
+    "price": "472.8",
     "priceNote": "",
-    "slug": "corn-yellow",
+    "slug": "peak-bordeaux",
     "url": "",
     "description": "",
     "colour": "",
@@ -7861,12 +7862,12 @@
         "coverage": ""
       }
     ],
-    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787309425022-g2vxy3.jpg",
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787309784536-uodlfl.jpg",
     "images": [
-      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787309425022-g2vxy3.jpg"
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787309784536-uodlfl.jpg"
     ],
     "createdAt": "2026-08-19T13:30:23.748405+00:00",
-    "updatedAt": "2026-08-21T10:50:26.466+00:00"
+    "updatedAt": "2026-08-21T10:56:26.368+00:00"
   },
   {
     "id": "p1787146222550_195",
@@ -7899,38 +7900,6 @@
     ],
     "createdAt": "2026-08-19T13:30:23.748405+00:00",
     "updatedAt": "2026-08-21T10:55:46.184+00:00"
-  },
-  {
-    "id": "p1787146222550_193",
-    "name": "Dartmoor Heather",
-    "category": "Handmade Bricks",
-    "price": "482.4",
-    "priceNote": "",
-    "slug": "dartmoor-heather",
-    "url": "",
-    "description": "",
-    "colour": "",
-    "frost": "F2 — Fully frost resistant",
-    "customSpecs": "[]",
-    "deliveryNotes": "",
-    "visible": true,
-    "mode": "enquiry",
-    "badge": "",
-    "delivery": "extra",
-    "sizeVariants": [
-      {
-        "pack": "",
-        "size": "65mm",
-        "price": "",
-        "coverage": ""
-      }
-    ],
-    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787309638841-96e7s8.jpg",
-    "images": [
-      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787309638841-96e7s8.jpg"
-    ],
-    "createdAt": "2026-08-19T13:30:23.748405+00:00",
-    "updatedAt": "2026-08-21T10:54:00.031+00:00"
   },
   {
     "id": "p1787146222550_181",
@@ -7997,12 +7966,12 @@
     "updatedAt": "2026-08-21T10:49:30.516+00:00"
   },
   {
-    "id": "p1787146222550_177",
-    "name": "Traditional Red Blend Brick Slip",
+    "id": "p1787146222550_176",
+    "name": "Old Coach House Brick Slip",
     "category": "Handmade Bricks",
-    "price": "119.28",
+    "price": "138",
     "priceNote": "",
-    "slug": "traditional-red-blend-brick-slip",
+    "slug": "old-coach-house-brick-slip",
     "url": "",
     "description": "",
     "colour": "",
@@ -8021,12 +7990,12 @@
         "coverage": ""
       }
     ],
-    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787309344208-v1mcdg.jpg",
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787309316157-4lwj8e.jpg",
     "images": [
-      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787309344208-v1mcdg.jpg"
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787309316157-4lwj8e.jpg"
     ],
     "createdAt": "2026-08-19T13:30:23.748405+00:00",
-    "updatedAt": "2026-08-21T10:49:06.794+00:00"
+    "updatedAt": "2026-08-21T10:48:38.462+00:00"
   },
   {
     "id": "p1787146222550_188",
@@ -8059,6 +8028,38 @@
     ],
     "createdAt": "2026-08-19T13:30:23.748405+00:00",
     "updatedAt": "2026-08-21T10:46:59.376+00:00"
+  },
+  {
+    "id": "p1787146222550_193",
+    "name": "Dartmoor Heather",
+    "category": "Handmade Bricks",
+    "price": "482.4",
+    "priceNote": "",
+    "slug": "dartmoor-heather",
+    "url": "",
+    "description": "",
+    "colour": "",
+    "frost": "F2 — Fully frost resistant",
+    "customSpecs": "[]",
+    "deliveryNotes": "",
+    "visible": true,
+    "mode": "enquiry",
+    "badge": "",
+    "delivery": "extra",
+    "sizeVariants": [
+      {
+        "pack": "",
+        "size": "65mm",
+        "price": "",
+        "coverage": ""
+      }
+    ],
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787309638841-96e7s8.jpg",
+    "images": [
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787309638841-96e7s8.jpg"
+    ],
+    "createdAt": "2026-08-19T13:30:23.748405+00:00",
+    "updatedAt": "2026-08-21T10:54:00.031+00:00"
   },
   {
     "id": "p1787146222550_191",
@@ -8221,12 +8222,12 @@
     "updatedAt": "2026-08-21T10:56:10+00:00"
   },
   {
-    "id": "p1787146222550_185",
-    "name": "Medium Surrey Blend",
+    "id": "p1787146222550_179",
+    "name": "Corn Yellow",
     "category": "Handmade Bricks",
-    "price": "940.8",
+    "price": "875.52",
     "priceNote": "",
-    "slug": "medium-surrey-blend",
+    "slug": "corn-yellow",
     "url": "",
     "description": "",
     "colour": "",
@@ -8245,20 +8246,20 @@
         "coverage": ""
       }
     ],
-    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787309705874-urp7c8.jpg",
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787309425022-g2vxy3.jpg",
     "images": [
-      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787309705874-urp7c8.jpg"
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787309425022-g2vxy3.jpg"
     ],
     "createdAt": "2026-08-19T13:30:23.748405+00:00",
-    "updatedAt": "2026-08-21T10:55:07.228+00:00"
+    "updatedAt": "2026-08-21T10:50:26.466+00:00"
   },
   {
-    "id": "p1787146222550_176",
-    "name": "Old Coach House Brick Slip",
+    "id": "p1787146222550_175",
+    "name": "Mystique Brick Slip",
     "category": "Handmade Bricks",
-    "price": "138",
+    "price": "141.6",
     "priceNote": "",
-    "slug": "old-coach-house-brick-slip",
+    "slug": "mystique-brick-slip",
     "url": "",
     "description": "",
     "colour": "",
@@ -8277,12 +8278,44 @@
         "coverage": ""
       }
     ],
-    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787309316157-4lwj8e.jpg",
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787309203409-h2dvp8.jpg",
     "images": [
-      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787309316157-4lwj8e.jpg"
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787309203409-h2dvp8.jpg"
     ],
     "createdAt": "2026-08-19T13:30:23.748405+00:00",
-    "updatedAt": "2026-08-21T10:48:38.462+00:00"
+    "updatedAt": "2026-08-21T10:46:44.975+00:00"
+  },
+  {
+    "id": "p1787146222550_199",
+    "name": "Sahara Buff",
+    "category": "Handmade Bricks",
+    "price": "463.2",
+    "priceNote": "",
+    "slug": "sahara-buff",
+    "url": "",
+    "description": "",
+    "colour": "",
+    "frost": "F2 — Fully frost resistant",
+    "customSpecs": "[]",
+    "deliveryNotes": "",
+    "visible": true,
+    "mode": "enquiry",
+    "badge": "",
+    "delivery": "extra",
+    "sizeVariants": [
+      {
+        "pack": "",
+        "size": "65mm",
+        "price": "",
+        "coverage": ""
+      }
+    ],
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787309238019-a6w9as.jpg",
+    "images": [
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787309238019-a6w9as.jpg"
+    ],
+    "createdAt": "2026-08-19T13:30:23.748405+00:00",
+    "updatedAt": "2026-08-21T10:47:36.491+00:00"
   },
   {
     "id": "p1787146222550_186",
@@ -8349,38 +8382,6 @@
     "updatedAt": "2026-08-21T10:54:46.138+00:00"
   },
   {
-    "id": "p1787146222550_199",
-    "name": "Sahara Buff",
-    "category": "Handmade Bricks",
-    "price": "463.2",
-    "priceNote": "",
-    "slug": "sahara-buff",
-    "url": "",
-    "description": "",
-    "colour": "",
-    "frost": "F2 — Fully frost resistant",
-    "customSpecs": "[]",
-    "deliveryNotes": "",
-    "visible": true,
-    "mode": "enquiry",
-    "badge": "",
-    "delivery": "extra",
-    "sizeVariants": [
-      {
-        "pack": "",
-        "size": "65mm",
-        "price": "",
-        "coverage": ""
-      }
-    ],
-    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787309238019-a6w9as.jpg",
-    "images": [
-      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787309238019-a6w9as.jpg"
-    ],
-    "createdAt": "2026-08-19T13:30:23.748405+00:00",
-    "updatedAt": "2026-08-21T10:47:36.491+00:00"
-  },
-  {
     "id": "p1787146222550_219",
     "name": "Kemsley Yellow",
     "category": "Handmade Bricks",
@@ -8411,6 +8412,38 @@
     ],
     "createdAt": "2026-08-19T13:30:23.871367+00:00",
     "updatedAt": "2026-08-21T11:06:41.272+00:00"
+  },
+  {
+    "id": "p1787146222550_200",
+    "name": "Windmill Orange Multi",
+    "category": "Handmade Bricks",
+    "price": "559.2",
+    "priceNote": "",
+    "slug": "windmill-orange-multi",
+    "url": "",
+    "description": "",
+    "colour": "",
+    "frost": "F2 — Fully frost resistant",
+    "customSpecs": "[]",
+    "deliveryNotes": "",
+    "visible": true,
+    "mode": "enquiry",
+    "badge": "",
+    "delivery": "extra",
+    "sizeVariants": [
+      {
+        "pack": "",
+        "size": "65mm",
+        "price": "",
+        "coverage": ""
+      }
+    ],
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787310622590-el3tlx.jpg",
+    "images": [
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787310622590-el3tlx.jpg"
+    ],
+    "createdAt": "2026-08-19T13:30:23.871367+00:00",
+    "updatedAt": "2026-08-21T11:10:23.971+00:00"
   },
   {
     "id": "p1787146222550_223",
@@ -8475,38 +8508,6 @@
     ],
     "createdAt": "2026-08-19T13:30:23.871367+00:00",
     "updatedAt": "2026-08-21T11:07:16.119+00:00"
-  },
-  {
-    "id": "p1787146222550_200",
-    "name": "Windmill Orange Multi",
-    "category": "Handmade Bricks",
-    "price": "559.2",
-    "priceNote": "",
-    "slug": "windmill-orange-multi",
-    "url": "",
-    "description": "",
-    "colour": "",
-    "frost": "F2 — Fully frost resistant",
-    "customSpecs": "[]",
-    "deliveryNotes": "",
-    "visible": true,
-    "mode": "enquiry",
-    "badge": "",
-    "delivery": "extra",
-    "sizeVariants": [
-      {
-        "pack": "",
-        "size": "65mm",
-        "price": "",
-        "coverage": ""
-      }
-    ],
-    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787310622590-el3tlx.jpg",
-    "images": [
-      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787310622590-el3tlx.jpg"
-    ],
-    "createdAt": "2026-08-19T13:30:23.871367+00:00",
-    "updatedAt": "2026-08-21T11:10:23.971+00:00"
   },
   {
     "id": "p1787146222550_224",
@@ -9181,12 +9182,12 @@
     "updatedAt": "2026-08-21T11:10:53.136+00:00"
   },
   {
-    "id": "p1787146222550_245",
-    "name": "Capelwick Multi",
+    "id": "p1787146222550_225",
+    "name": "London Stock",
     "category": "Handmade Bricks",
-    "price": "672",
+    "price": "630",
     "priceNote": "",
-    "slug": "capelwick-multi",
+    "slug": "london-stock",
     "url": "",
     "description": "",
     "colour": "",
@@ -9200,17 +9201,17 @@
     "sizeVariants": [
       {
         "pack": "",
-        "size": "65mm",
+        "size": "65mm, 68mm",
         "price": "",
         "coverage": ""
       }
     ],
-    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787311252474-za7uy0.jpg",
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787311292880-aa5f7o.jpg",
     "images": [
-      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787311252474-za7uy0.jpg"
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787311292880-aa5f7o.jpg"
     ],
     "createdAt": "2026-08-19T13:30:23.973156+00:00",
-    "updatedAt": "2026-08-21T11:20:54.099+00:00"
+    "updatedAt": "2026-08-21T11:21:33.971+00:00"
   },
   {
     "id": "p1787146222550_248",
@@ -9405,12 +9406,12 @@
     "updatedAt": "2026-08-21T11:23:18.646+00:00"
   },
   {
-    "id": "p1787146222550_225",
-    "name": "London Stock",
+    "id": "p1787146222550_245",
+    "name": "Capelwick Multi",
     "category": "Handmade Bricks",
-    "price": "630",
+    "price": "672",
     "priceNote": "",
-    "slug": "london-stock",
+    "slug": "capelwick-multi",
     "url": "",
     "description": "",
     "colour": "",
@@ -9424,17 +9425,17 @@
     "sizeVariants": [
       {
         "pack": "",
-        "size": "65mm, 68mm",
+        "size": "65mm",
         "price": "",
         "coverage": ""
       }
     ],
-    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787311292880-aa5f7o.jpg",
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787311252474-za7uy0.jpg",
     "images": [
-      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787311292880-aa5f7o.jpg"
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787311252474-za7uy0.jpg"
     ],
     "createdAt": "2026-08-19T13:30:23.973156+00:00",
-    "updatedAt": "2026-08-21T11:21:33.971+00:00"
+    "updatedAt": "2026-08-21T11:20:54.099+00:00"
   },
   {
     "id": "p1787146222550_244",
@@ -10013,6 +10014,38 @@
     "updatedAt": "2026-08-21T13:55:32.503+00:00"
   },
   {
+    "id": "p1787146222550_269",
+    "name": "Kimbolton Red Multi",
+    "category": "Handmade Bricks",
+    "price": "529.5",
+    "priceNote": "",
+    "slug": "kimbolton-red-multi",
+    "url": "",
+    "description": "",
+    "colour": "",
+    "frost": "F2 — Fully frost resistant",
+    "customSpecs": "[]",
+    "deliveryNotes": "",
+    "visible": true,
+    "mode": "enquiry",
+    "badge": "",
+    "delivery": "extra",
+    "sizeVariants": [
+      {
+        "pack": "",
+        "size": "65mm",
+        "price": "",
+        "coverage": ""
+      }
+    ],
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787311779909-551zfm.jpg",
+    "images": [
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787311779909-551zfm.jpg"
+    ],
+    "createdAt": "2026-08-19T13:30:24.072435+00:00",
+    "updatedAt": "2026-08-21T11:29:41.416+00:00"
+  },
+  {
     "id": "p1787146222550_270",
     "name": "Kirton Arden Red",
     "category": "Handmade Bricks",
@@ -10043,38 +10076,6 @@
     ],
     "createdAt": "2026-08-19T13:30:24.072435+00:00",
     "updatedAt": "2026-08-21T11:29:24.554+00:00"
-  },
-  {
-    "id": "p1787146222550_253",
-    "name": "Olde Henfield Multi",
-    "category": "Handmade Bricks",
-    "price": "732",
-    "priceNote": "",
-    "slug": "olde-henfield-multi",
-    "url": "",
-    "description": "",
-    "colour": "",
-    "frost": "F2 — Fully frost resistant",
-    "customSpecs": "[]",
-    "deliveryNotes": "",
-    "visible": true,
-    "mode": "enquiry",
-    "badge": "",
-    "delivery": "extra",
-    "sizeVariants": [
-      {
-        "pack": "",
-        "size": "65mm",
-        "price": "",
-        "coverage": ""
-      }
-    ],
-    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787311847559-t8wuoe.jpg",
-    "images": [
-      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787311847559-t8wuoe.jpg"
-    ],
-    "createdAt": "2026-08-19T13:30:24.072435+00:00",
-    "updatedAt": "2026-08-21T11:30:48.783+00:00"
   },
   {
     "id": "p1787146222550_261",
@@ -10171,6 +10172,38 @@
     ],
     "createdAt": "2026-08-19T13:30:24.072435+00:00",
     "updatedAt": "2026-08-21T13:30:43.846+00:00"
+  },
+  {
+    "id": "p1787146222550_257",
+    "name": "Rudgwick Multi",
+    "category": "Handmade Bricks",
+    "price": "744",
+    "priceNote": "",
+    "slug": "rudgwick-multi",
+    "url": "",
+    "description": "",
+    "colour": "",
+    "frost": "F2 — Fully frost resistant",
+    "customSpecs": "[]",
+    "deliveryNotes": "",
+    "visible": true,
+    "mode": "enquiry",
+    "badge": "",
+    "delivery": "extra",
+    "sizeVariants": [
+      {
+        "pack": "",
+        "size": "65mm",
+        "price": "",
+        "coverage": ""
+      }
+    ],
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787319089712-p1gvam.jpg",
+    "images": [
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787319089712-p1gvam.jpg"
+    ],
+    "createdAt": "2026-08-19T13:30:24.072435+00:00",
+    "updatedAt": "2026-08-21T13:31:30.827+00:00"
   },
   {
     "id": "p1787146222550_271",
@@ -10365,70 +10398,6 @@
     "updatedAt": "2026-08-21T13:40:29.94+00:00"
   },
   {
-    "id": "p1787146222550_268",
-    "name": "Clumber Red Mixture",
-    "category": "Handmade Bricks",
-    "price": "571.08",
-    "priceNote": "",
-    "slug": "clumber-red-mixture",
-    "url": "",
-    "description": "",
-    "colour": "",
-    "frost": "F2 — Fully frost resistant",
-    "customSpecs": "[]",
-    "deliveryNotes": "",
-    "visible": true,
-    "mode": "enquiry",
-    "badge": "",
-    "delivery": "extra",
-    "sizeVariants": [
-      {
-        "pack": "",
-        "size": "65mm",
-        "price": "",
-        "coverage": ""
-      }
-    ],
-    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787319783698-ys4mbf.jpg",
-    "images": [
-      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787319783698-ys4mbf.jpg"
-    ],
-    "createdAt": "2026-08-19T13:30:24.072435+00:00",
-    "updatedAt": "2026-08-21T13:43:05.404+00:00"
-  },
-  {
-    "id": "p1787146222550_257",
-    "name": "Rudgwick Multi",
-    "category": "Handmade Bricks",
-    "price": "744",
-    "priceNote": "",
-    "slug": "rudgwick-multi",
-    "url": "",
-    "description": "",
-    "colour": "",
-    "frost": "F2 — Fully frost resistant",
-    "customSpecs": "[]",
-    "deliveryNotes": "",
-    "visible": true,
-    "mode": "enquiry",
-    "badge": "",
-    "delivery": "extra",
-    "sizeVariants": [
-      {
-        "pack": "",
-        "size": "65mm",
-        "price": "",
-        "coverage": ""
-      }
-    ],
-    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787319089712-p1gvam.jpg",
-    "images": [
-      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787319089712-p1gvam.jpg"
-    ],
-    "createdAt": "2026-08-19T13:30:24.072435+00:00",
-    "updatedAt": "2026-08-21T13:31:30.827+00:00"
-  },
-  {
     "id": "p1787146222550_266",
     "name": "Chatsworth Grey Rustic",
     "category": "Handmade Bricks",
@@ -10525,12 +10494,12 @@
     "updatedAt": "2026-08-21T13:41:26.892+00:00"
   },
   {
-    "id": "p1787146222550_262",
-    "name": "Southdown Multi",
+    "id": "p1787146222550_253",
+    "name": "Olde Henfield Multi",
     "category": "Handmade Bricks",
-    "price": "604.13",
+    "price": "732",
     "priceNote": "",
-    "slug": "southdown-multi",
+    "slug": "olde-henfield-multi",
     "url": "",
     "description": "",
     "colour": "",
@@ -10549,12 +10518,44 @@
         "coverage": ""
       }
     ],
-    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787319662598-ukvmgo.jpg",
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787311847559-t8wuoe.jpg",
     "images": [
-      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787319662598-ukvmgo.jpg"
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787311847559-t8wuoe.jpg"
     ],
     "createdAt": "2026-08-19T13:30:24.072435+00:00",
-    "updatedAt": "2026-08-21T13:41:03.844+00:00"
+    "updatedAt": "2026-08-21T11:30:48.783+00:00"
+  },
+  {
+    "id": "p1787146222550_268",
+    "name": "Clumber Red Mixture",
+    "category": "Handmade Bricks",
+    "price": "571.08",
+    "priceNote": "",
+    "slug": "clumber-red-mixture",
+    "url": "",
+    "description": "",
+    "colour": "",
+    "frost": "F2 — Fully frost resistant",
+    "customSpecs": "[]",
+    "deliveryNotes": "",
+    "visible": true,
+    "mode": "enquiry",
+    "badge": "",
+    "delivery": "extra",
+    "sizeVariants": [
+      {
+        "pack": "",
+        "size": "65mm",
+        "price": "",
+        "coverage": ""
+      }
+    ],
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787319783698-ys4mbf.jpg",
+    "images": [
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787319783698-ys4mbf.jpg"
+    ],
+    "createdAt": "2026-08-19T13:30:24.072435+00:00",
+    "updatedAt": "2026-08-21T13:43:05.404+00:00"
   },
   {
     "id": "p1787146222550_250",
@@ -10587,6 +10588,38 @@
     ],
     "createdAt": "2026-08-19T13:30:24.072435+00:00",
     "updatedAt": "2026-08-21T11:32:45.079+00:00"
+  },
+  {
+    "id": "p1787146222550_262",
+    "name": "Southdown Multi",
+    "category": "Handmade Bricks",
+    "price": "604.13",
+    "priceNote": "",
+    "slug": "southdown-multi",
+    "url": "",
+    "description": "",
+    "colour": "",
+    "frost": "F2 — Fully frost resistant",
+    "customSpecs": "[]",
+    "deliveryNotes": "",
+    "visible": true,
+    "mode": "enquiry",
+    "badge": "",
+    "delivery": "extra",
+    "sizeVariants": [
+      {
+        "pack": "",
+        "size": "65mm",
+        "price": "",
+        "coverage": ""
+      }
+    ],
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787319662598-ukvmgo.jpg",
+    "images": [
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787319662598-ukvmgo.jpg"
+    ],
+    "createdAt": "2026-08-19T13:30:24.072435+00:00",
+    "updatedAt": "2026-08-21T13:41:03.844+00:00"
   },
   {
     "id": "p1787146222550_274",
@@ -10683,38 +10716,6 @@
     ],
     "createdAt": "2026-08-19T13:30:24.072435+00:00",
     "updatedAt": "2026-08-21T13:42:34.144+00:00"
-  },
-  {
-    "id": "p1787146222550_269",
-    "name": "Kimbolton Red Multi",
-    "category": "Handmade Bricks",
-    "price": "529.5",
-    "priceNote": "",
-    "slug": "kimbolton-red-multi",
-    "url": "",
-    "description": "",
-    "colour": "",
-    "frost": "F2 — Fully frost resistant",
-    "customSpecs": "[]",
-    "deliveryNotes": "",
-    "visible": true,
-    "mode": "enquiry",
-    "badge": "",
-    "delivery": "extra",
-    "sizeVariants": [
-      {
-        "pack": "",
-        "size": "65mm",
-        "price": "",
-        "coverage": ""
-      }
-    ],
-    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787311779909-551zfm.jpg",
-    "images": [
-      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787311779909-551zfm.jpg"
-    ],
-    "createdAt": "2026-08-19T13:30:24.072435+00:00",
-    "updatedAt": "2026-08-21T11:29:41.416+00:00"
   },
   {
     "id": "p1787146222550_272",
@@ -12924,12 +12925,12 @@
     "updatedAt": "2026-08-19T13:30:22.55+00:00"
   },
   {
-    "id": "p1787146222550_368",
-    "name": "Autumn Red",
+    "id": "p1787146222550_367",
+    "name": "Alexia",
     "category": "Handmade Bricks",
-    "price": "746.16",
+    "price": "733.73",
     "priceNote": "",
-    "slug": "autumn-red",
+    "slug": "alexia",
     "url": "",
     "description": "",
     "colour": "",
@@ -13043,12 +13044,12 @@
     "updatedAt": "2026-08-19T13:30:22.55+00:00"
   },
   {
-    "id": "p1787146222550_367",
-    "name": "Alexia",
+    "id": "p1787146222550_366",
+    "name": "Traditional English Red",
     "category": "Handmade Bricks",
-    "price": "733.73",
+    "price": "627.74",
     "priceNote": "",
-    "slug": "alexia",
+    "slug": "traditional-english-red",
     "url": "",
     "description": "",
     "colour": "",
@@ -13072,12 +13073,12 @@
     "updatedAt": "2026-08-19T13:30:22.55+00:00"
   },
   {
-    "id": "p1787146222550_366",
-    "name": "Traditional English Red",
+    "id": "p1787146222550_370",
+    "name": "Blenheim Red Multi",
     "category": "Handmade Bricks",
-    "price": "627.74",
+    "price": "728.74",
     "priceNote": "",
-    "slug": "traditional-english-red",
+    "slug": "blenheim-red-multi",
     "url": "",
     "description": "",
     "colour": "",
@@ -13159,12 +13160,12 @@
     "updatedAt": "2026-08-19T13:30:22.55+00:00"
   },
   {
-    "id": "p1787146222550_370",
-    "name": "Blenheim Red Multi",
+    "id": "p1787146222550_368",
+    "name": "Autumn Red",
     "category": "Handmade Bricks",
-    "price": "728.74",
+    "price": "746.16",
     "priceNote": "",
-    "slug": "blenheim-red-multi",
+    "slug": "autumn-red",
     "url": "",
     "description": "",
     "colour": "",
