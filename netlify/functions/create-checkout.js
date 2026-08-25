@@ -52,6 +52,7 @@ exports.handler = async function(event) {
   params.append('cancel_url', cancelUrl);
   params.append('billing_address_collection', 'required');
   params.append('shipping_address_collection[allowed_countries][]', 'GB');
+  params.append('phone_number_collection[enabled]', 'true');
   params.append('payment_method_types[]', 'card');
   params.append('customer_creation', 'always');
   if (userId) params.append('client_reference_id', String(userId));

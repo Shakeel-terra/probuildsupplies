@@ -130,10 +130,20 @@ exports.handler = async function (event) {
     );
     if (lineItemsRes.body && Array.isArray(lineItemsRes.body.data)) {
       items = lineItemsRes.body.data.map(function (li) {
+        // create-checkout.js writes the name as "Product Name — Size" when a
+        // size/variant was chosen. Split it back into two fields so the
+        // dashboard can show product and size separately.
+        const full = li.description || 'Item';
+        const sepIdx = full.indexOf(' — ');
+        const name = sepIdx > -1 ? full.slice(0, sepIdx) : full;
+        const size = sepIdx > -1 ? full.slice(sepIdx + 3) : '';
         return {
-          name: li.description || 'Item',
+          name: name,
+          size: size,
           quantity: li.quantity || 1,
           amount_total: typeof li.amount_total === 'number' ? li.amount_total / 100 : null,
+          unit_price: (typeof li.amount_total === 'number' && li.quantity)
+            ? Math.round((li.amount_total / li.quantity)) / 100 : null,
         };
       });
     }
@@ -149,7 +159,8 @@ exports.handler = async function (event) {
   const orderRow = {
     user_id: session.client_reference_id || null,
     customer_email: customerDetails.email || session.customer_email || '',
-    customer_name: customerDetails.name || null,
+    customer_name: customerDetails.name || (shipping && shipping.name) || null,
+    customer_phone: customerDetails.phone || (shipping && shipping.phone) || null,
     stripe_session_id: session.id,
     stripe_payment_intent: session.payment_intent || null,
     items: items,
