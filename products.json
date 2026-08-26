@@ -540,14 +540,14 @@
       {
         "pack": "Pack of 72 Pieces",
         "size": "MIX PATIO PACKS",
-        "price": "STOCKING COMING SOON",
+        "price": "STOCK COMING SOON",
         "coverage": "",
         "coverageM2": ""
       },
       {
         "pack": "Pack of 52 Pieces",
         "size": "16mm x 600 x 900",
-        "price": "STOCKING COMING SOON",
+        "price": "STOCK COMING SOON",
         "coverage": "",
         "coverageM2": ""
       }
@@ -559,7 +559,7 @@
       "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1785856188554-v4yogp.jpg"
     ],
     "createdAt": "2026-08-03T11:04:03.368192+00:00",
-    "updatedAt": "2026-08-26T13:37:42.618+00:00"
+    "updatedAt": "2026-08-26T13:47:25.361+00:00"
   },
   {
     "id": "p1785769941768",
