@@ -1715,7 +1715,7 @@
     "customSpecs": "Thickness: 22mm Calibrated\nSurface: Natural",
     "deliveryNotes": "",
     "visible": true,
-    "mode": "enquiry",
+    "mode": "shop",
     "badge": "New",
     "delivery": "included",
     "sizeVariants": [
@@ -1758,7 +1758,7 @@
     "customSpecs": "Thickness: 22mm Calibrated\nSurface: Natural",
     "deliveryNotes": "",
     "visible": true,
-    "mode": "enquiry",
+    "mode": "shop",
     "badge": "Best Seller",
     "delivery": "included",
     "sizeVariants": [
@@ -1800,7 +1800,7 @@
     "customSpecs": "",
     "deliveryNotes": "",
     "visible": true,
-    "mode": "enquiry",
+    "mode": "shop",
     "badge": "New",
     "delivery": "included",
     "sizeVariants": [
@@ -1844,7 +1844,7 @@
     "customSpecs": "Cut: Sawn Honed\nMultiple Sizes",
     "deliveryNotes": "",
     "visible": true,
-    "mode": "enquiry",
+    "mode": "shop",
     "badge": "In Stock",
     "delivery": "included",
     "sizeVariants": [
@@ -1886,7 +1886,7 @@
     "customSpecs": "Cut: Sawn Honed",
     "deliveryNotes": "",
     "visible": true,
-    "mode": "enquiry",
+    "mode": "shop",
     "badge": "Best Seller",
     "delivery": "included",
     "sizeVariants": [
@@ -1929,7 +1929,7 @@
     "customSpecs": "Cut: Handcut",
     "deliveryNotes": "",
     "visible": true,
-    "mode": "enquiry",
+    "mode": "shop",
     "badge": "",
     "delivery": "included",
     "sizeVariants": [
@@ -1964,7 +1964,7 @@
     "customSpecs": "Cut: Handcut",
     "deliveryNotes": "",
     "visible": true,
-    "mode": "enquiry",
+    "mode": "shop",
     "badge": "Best Seller",
     "delivery": "included",
     "sizeVariants": [
@@ -2000,7 +2000,7 @@
     "customSpecs": "",
     "deliveryNotes": "",
     "visible": true,
-    "mode": "enquiry",
+    "mode": "shop",
     "badge": "New",
     "delivery": "included",
     "sizeVariants": [
@@ -2052,7 +2052,7 @@
     "customSpecs": "Thickness: 22mm\nCut: Handcut\nMixed Sizes",
     "deliveryNotes": "",
     "visible": true,
-    "mode": "enquiry",
+    "mode": "shop",
     "badge": "",
     "delivery": "included",
     "sizeVariants": [
