@@ -1345,7 +1345,7 @@
     "id": "p1785921541428",
     "name": "20mm - COPPER RUSTIC SLATE - PORCELAIN PAVING - 600x900mm",
     "category": "Porcelain Paving",
-    "price": "£495.72",
+    "price": "£525.10",
     "priceNote": "Pack of 40 Pieces | 600 x 900mm",
     "slug": "20mm-copper-rustic-slate-porcelain-paving-600x900mm-22-95-per-m",
     "url": "",
@@ -1364,6 +1364,7 @@
         "size": "600 x 900mm",
         "price": "£525.10",
         "coverage": "£24.31",
+        "thickness": "",
         "coverageM2": "21.6"
       }
     ],
@@ -1373,7 +1374,7 @@
       "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1785921536363-ahvz9m.jpg"
     ],
     "createdAt": "2026-08-05T09:19:01.632593+00:00",
-    "updatedAt": "2026-08-27T13:16:27.768+00:00"
+    "updatedAt": "2026-08-27T15:13:13.744+00:00"
   },
   {
     "id": "p1785922138718",
@@ -1459,7 +1460,7 @@
     "id": "p1785922450279",
     "name": "20mm - COUNTY LIGHT GREY - PORCELAIN PAVING - 600x900mm",
     "category": "Porcelain Paving",
-    "price": "£495.72",
+    "price": "£525.10",
     "priceNote": "Pack of 40 Pieces | 600 x 900mm",
     "slug": "20mm-country-light-grey-porcelain-paving-600x900mm-22-95-per-m",
     "url": "",
@@ -1478,6 +1479,7 @@
         "size": "600 x 900mm",
         "price": "£525.10",
         "coverage": "£24.31",
+        "thickness": "",
         "coverageM2": "21.6"
       },
       {
@@ -1485,6 +1487,7 @@
         "size": "16mm x 600 x 900",
         "price": "STOCK COMING SOON",
         "coverage": "£17.60",
+        "thickness": "",
         "coverageM2": "28.08"
       }
     ],
@@ -1496,7 +1499,7 @@
       "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1785922446030-2wfifi.jpg"
     ],
     "createdAt": "2026-08-05T09:34:10.566937+00:00",
-    "updatedAt": "2026-08-27T14:09:01.57+00:00"
+    "updatedAt": "2026-08-27T15:13:45.534+00:00"
   },
   {
     "id": "p1785922921159",
@@ -2082,6 +2085,262 @@
     "updatedAt": "2026-08-27T14:53:49.423+00:00"
   },
   {
+    "id": "p1787146222550_19",
+    "name": "Old Terrace Blend 73mm",
+    "category": "Handmade Bricks",
+    "price": "£938.40",
+    "priceNote": "",
+    "slug": "old-terrace-blend-73mm",
+    "url": "",
+    "description": "Old Terrace Blend is made to look as though it has already spent a century in a wall. Reds, browns and darker weathered tones are blended together with an irregular, worn face, echoing the terraced streets it is named after. In a 73mm imperial format, it is a strong candidate for restoration work and for extensions that need to disappear into an existing period elevation.",
+    "colour": "",
+    "frost": "F2 — Fully frost resistant",
+    "customSpecs": "",
+    "deliveryNotes": "",
+    "visible": true,
+    "mode": "shop",
+    "badge": "",
+    "delivery": "extra",
+    "sizeVariants": [
+      {
+        "pack": "pack of 400",
+        "size": "73mm",
+        "price": "",
+        "coverage": ""
+      }
+    ],
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303659917-wwecam.jpg",
+    "images": [
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303659917-wwecam.jpg"
+    ],
+    "createdAt": "2026-08-19T13:30:22.748751+00:00",
+    "updatedAt": "2026-08-26T14:08:57.939+00:00"
+  },
+  {
+    "id": "p1787146222550_16",
+    "name": "LBC Rustic 73mm",
+    "category": "Handmade Bricks",
+    "price": "£729.84",
+    "priceNote": "",
+    "slug": "lbc-rustic-73mm",
+    "url": "",
+    "description": "LBC Rustic combines a warm red body with a textured, patterned face that catches light and shadow across an elevation. The surface treatment gives brickwork a rougher, more traditional look than a smooth brick, which is why it has been so widely specified on housing over the years.",
+    "colour": "",
+    "frost": "F2 — Fully frost resistant",
+    "customSpecs": "",
+    "deliveryNotes": "",
+    "visible": true,
+    "mode": "shop",
+    "badge": "",
+    "delivery": "extra",
+    "sizeVariants": [
+      {
+        "pack": "pack of 390",
+        "size": "73mm",
+        "price": "",
+        "coverage": ""
+      }
+    ],
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303045088-4d0x5o.jpg",
+    "images": [
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303045088-4d0x5o.jpg"
+    ],
+    "createdAt": "2026-08-19T13:30:22.748751+00:00",
+    "updatedAt": "2026-08-26T14:08:57.939+00:00"
+  },
+  {
+    "id": "p1787146222550_11",
+    "name": "Stratford Yellow Imperial 68mm",
+    "category": "Handmade Bricks",
+    "price": "£554.88",
+    "priceNote": "",
+    "slug": "stratford-yellow-imperial-68mm",
+    "url": "",
+    "description": "Stratford Yellow Imperial brings a soft, warm yellow body with gentle variation and a softly grained face. Yellow brickwork has a distinctly London and Home Counties character, and this one sits comfortably alongside genuine stock brick without pretending to be reclaimed. The 68mm imperial format makes it a straightforward option for extensions and repairs to older yellow brick properties.",
+    "colour": "",
+    "frost": "F2 — Fully frost resistant",
+    "customSpecs": "",
+    "deliveryNotes": "",
+    "visible": true,
+    "mode": "shop",
+    "badge": "",
+    "delivery": "extra",
+    "sizeVariants": [
+      {
+        "pack": "pack of 360",
+        "size": "68mm",
+        "price": "",
+        "coverage": ""
+      }
+    ],
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787302925148-vhmpyh.jpg",
+    "images": [
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787302925148-vhmpyh.jpg"
+    ],
+    "createdAt": "2026-08-19T13:30:22.748751+00:00",
+    "updatedAt": "2026-08-26T14:08:57.939+00:00"
+  },
+  {
+    "id": "p1787146222550_13",
+    "name": "Weathered Common 73mm",
+    "category": "Handmade Bricks",
+    "price": "£648.48",
+    "priceNote": "",
+    "slug": "weathered-common-73mm",
+    "url": "",
+    "description": "Weathered Common takes the plain, everyday character of a common brick and adds the darkened, uneven surface of a wall that has seen a few decades of British weather. Colours run through soft reds and browns with patchy darker tones. Useful for repair work, garden walls and extensions where a brand new brick would look conspicuous, in a 73mm imperial format.",
+    "colour": "",
+    "frost": "F2 — Fully frost resistant",
+    "customSpecs": "",
+    "deliveryNotes": "",
+    "visible": true,
+    "mode": "shop",
+    "badge": "",
+    "delivery": "extra",
+    "sizeVariants": [
+      {
+        "pack": "pack of 480",
+        "size": "73mm",
+        "price": "",
+        "coverage": ""
+      }
+    ],
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787147640036-qgss16.jpg",
+    "images": [
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787147640036-qgss16.jpg"
+    ],
+    "createdAt": "2026-08-19T13:30:22.748751+00:00",
+    "updatedAt": "2026-08-26T14:08:57.939+00:00"
+  },
+  {
+    "id": "p1787146222550_21",
+    "name": "Birtley Olde English 73mm",
+    "category": "Handmade Bricks",
+    "price": "£648.48",
+    "priceNote": "",
+    "slug": "birtley-olde-english-73mm",
+    "url": "",
+    "description": "Birtley Olde English blends warm reds and browns with a softly textured, irregular face to give brickwork an unmistakably traditional character. It builds into walls with plenty of tonal movement, at home on period extensions, cottages and rural projects. The 73mm imperial format lets it line through with older coursing rather than drifting out of gauge.",
+    "colour": "",
+    "frost": "F2 — Fully frost resistant",
+    "customSpecs": "",
+    "deliveryNotes": "",
+    "visible": true,
+    "mode": "shop",
+    "badge": "",
+    "delivery": "extra",
+    "sizeVariants": [
+      {
+        "pack": "pack of 392",
+        "size": "73mm",
+        "price": "",
+        "coverage": ""
+      }
+    ],
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787302882616-ptamy7.jpg",
+    "images": [
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787302882616-ptamy7.jpg"
+    ],
+    "createdAt": "2026-08-19T13:30:22.748751+00:00",
+    "updatedAt": "2026-08-26T14:08:57.939+00:00"
+  },
+  {
+    "id": "p1787146222550_1",
+    "name": "Perton Orange 68mm",
+    "category": "Handmade Bricks",
+    "price": "£725.47",
+    "priceNote": "",
+    "slug": "perton-orange-68mm",
+    "url": "",
+    "description": "Perton Orange is a warm, sunlit brick with a rich terracotta-to-amber body and a faintly textured face. The orange tone lifts noticeably in low sun, giving elevations a mellow glow that harder red bricks tend to miss. In a 68mm imperial format, it works well for extensions to older orange and red stock properties, garden walls and feature elevations where warmth matters more than uniformity.",
+    "colour": "",
+    "frost": "F2 — Fully frost resistant",
+    "customSpecs": "",
+    "deliveryNotes": "",
+    "visible": true,
+    "mode": "shop",
+    "badge": "",
+    "delivery": "extra",
+    "sizeVariants": [
+      {
+        "pack": "pack of 514",
+        "size": "68mm",
+        "price": "",
+        "coverage": ""
+      }
+    ],
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303518545-m0wiz5.jpg",
+    "images": [
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303518545-m0wiz5.jpg"
+    ],
+    "createdAt": "2026-08-19T13:30:22.748751+00:00",
+    "updatedAt": "2026-08-26T14:08:57.939+00:00"
+  },
+  {
+    "id": "p1787146222550_12",
+    "name": "Warrington Red 73mm",
+    "category": "Handmade Bricks",
+    "price": "£642.72",
+    "priceNote": "",
+    "slug": "warrington-red-73mm",
+    "url": "",
+    "description": "Warrington Red is a solid northern red with a faintly worked face and quiet tonal movement, giving walls warmth without heavy mottling. It is an unpretentious brick that does its job across whole elevations, extensions and boundary walls alike. The 73mm imperial format suits matching into the deeper coursing found in much older housing stock.",
+    "colour": "",
+    "frost": "F2 — Fully frost resistant",
+    "customSpecs": "",
+    "deliveryNotes": "",
+    "visible": true,
+    "mode": "shop",
+    "badge": "",
+    "delivery": "extra",
+    "sizeVariants": [
+      {
+        "pack": "pack of 480",
+        "size": "73mm",
+        "price": "",
+        "coverage": ""
+      }
+    ],
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787146473049-sinjah.jpg",
+    "images": [
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787146473049-sinjah.jpg"
+    ],
+    "createdAt": "2026-08-19T13:30:22.748751+00:00",
+    "updatedAt": "2026-08-26T14:08:57.939+00:00"
+  },
+  {
+    "id": "p1787146222550_3",
+    "name": "K209 Class B Blue Perf 73mm",
+    "category": "Handmade Bricks",
+    "price": "£653.66",
+    "priceNote": "",
+    "slug": "k209-class-b-blue-perf-73mm",
+    "url": "",
+    "description": "A perforated Class B engineering brick in classic Staffordshire blue. The dense, near-vitrified body and dark blue-grey sheen make it the traditional choice for damp proof courses, plinths, retaining walls, manholes and copings, wherever strength and low water absorption matter more than decoration. The 73mm format and clean smooth face also make it a striking contrast band against red or buff brickwork.",
+    "colour": "",
+    "frost": "F2 — Fully frost resistant",
+    "customSpecs": "",
+    "deliveryNotes": "",
+    "visible": true,
+    "mode": "shop",
+    "badge": "",
+    "delivery": "extra",
+    "sizeVariants": [
+      {
+        "pack": "pack of 368",
+        "size": "73mm",
+        "price": "",
+        "coverage": ""
+      }
+    ],
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303566177-6y85s4.jpg",
+    "images": [
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303566177-6y85s4.jpg"
+    ],
+    "createdAt": "2026-08-19T13:30:22.748751+00:00",
+    "updatedAt": "2026-08-26T14:08:57.939+00:00"
+  },
+  {
     "id": "p1787146222550_24",
     "name": "Swanage Imperial Red 68mm",
     "category": "Handmade Bricks",
@@ -2109,6 +2368,103 @@
     "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303003431-wqsrrh.png",
     "images": [
       "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303003431-wqsrrh.png"
+    ],
+    "createdAt": "2026-08-19T13:30:22.748751+00:00",
+    "updatedAt": "2026-08-26T14:08:57.939+00:00"
+  },
+  {
+    "id": "p1787146222549_0",
+    "name": "London Stock 68mm",
+    "category": "Handmade Bricks",
+    "price": "£725.47",
+    "priceNote": "",
+    "slug": "london-stock-68mm",
+    "url": "",
+    "description": "Few bricks say London quite like this one. The London Stock carries the soft yellow-to-buff body and smoky, creased face found across Georgian and Victorian terraces in the capital. Tone shifts from brick to brick, so a finished wall reads as weathered and lived-in rather than flat.",
+    "colour": "",
+    "frost": "F2 — Fully frost resistant",
+    "customSpecs": "",
+    "deliveryNotes": "",
+    "visible": true,
+    "mode": "shop",
+    "badge": "",
+    "delivery": "extra",
+    "sizeVariants": [
+      {
+        "pack": "pack of 514",
+        "size": "68mm",
+        "price": "",
+        "coverage": ""
+      }
+    ],
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787146443643-gv5vsg.jpg",
+    "images": [
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787146443643-gv5vsg.jpg"
+    ],
+    "createdAt": "2026-08-19T13:30:22.748751+00:00",
+    "updatedAt": "2026-08-26T14:08:57.939+00:00"
+  },
+  {
+    "id": "p1787146222550_2",
+    "name": "Rural Multi 68mm",
+    "category": "Handmade Bricks",
+    "price": "£753.60",
+    "priceNote": "",
+    "slug": "rural-multi-68mm",
+    "url": "",
+    "description": "Rural Multi blends reds, browns and softer buff tones into a single brick with an unhurried, countryside character. No two faces are alike, so walls build up with the gentle mottling you see on farmhouses and village cottages. The 68mm imperial format makes it a sensible option for barn conversions, rural extensions and any project where a uniform modern brick would look out of place.",
+    "colour": "",
+    "frost": "F2 — Fully frost resistant",
+    "customSpecs": "",
+    "deliveryNotes": "",
+    "visible": true,
+    "mode": "shop",
+    "badge": "",
+    "delivery": "extra",
+    "sizeVariants": [
+      {
+        "pack": "pack of 450",
+        "size": "68mm",
+        "price": "",
+        "coverage": ""
+      }
+    ],
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303538489-7u26mu.jpg",
+    "images": [
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303538489-7u26mu.jpg",
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303542704-pmko8l.jpg"
+    ],
+    "createdAt": "2026-08-19T13:30:22.748751+00:00",
+    "updatedAt": "2026-08-26T14:08:57.939+00:00"
+  },
+  {
+    "id": "p1787146222550_22",
+    "name": "Pre War Common 73mm",
+    "category": "Handmade Bricks",
+    "price": "£689.47",
+    "priceNote": "",
+    "slug": "pre-war-common-73mm",
+    "url": "",
+    "description": "Pre War Common recreates the plain, slightly irregular brick used across British housing before the Second World War. Colours run through soft reds and dusty browns with an uneven face, giving walls a modest, honest appearance rather than a polished one. A practical choice for repairs, extensions and garden structures on inter-war properties, in a 73mm imperial format.",
+    "colour": "",
+    "frost": "F2 — Fully frost resistant",
+    "customSpecs": "",
+    "deliveryNotes": "",
+    "visible": true,
+    "mode": "shop",
+    "badge": "",
+    "delivery": "extra",
+    "sizeVariants": [
+      {
+        "pack": "pack of 424",
+        "size": "73mm",
+        "price": "",
+        "coverage": ""
+      }
+    ],
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303121170-d4jvon.jpg",
+    "images": [
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303121170-d4jvon.jpg"
     ],
     "createdAt": "2026-08-19T13:30:22.748751+00:00",
     "updatedAt": "2026-08-26T14:08:57.939+00:00"
@@ -2243,6 +2599,38 @@
     "updatedAt": "2026-08-26T14:08:57.939+00:00"
   },
   {
+    "id": "p1787146222550_14",
+    "name": "LBC Common 73mm",
+    "category": "Handmade Bricks",
+    "price": "£636.96",
+    "priceNote": "",
+    "slug": "lbc-common-73mm",
+    "url": "",
+    "description": "The LBC Common is one of the most widely laid bricks in Britain, a plain, economical brick from the London Brick Company used for internal walls, rendered elevations and general building work. The face is simple and the colour sits in the pinkish red range with mild variation. Supplied here in a 73mm imperial format for matching older coursing.",
+    "colour": "",
+    "frost": "F2 — Fully frost resistant",
+    "customSpecs": "",
+    "deliveryNotes": "",
+    "visible": true,
+    "mode": "shop",
+    "badge": "",
+    "delivery": "extra",
+    "sizeVariants": [
+      {
+        "pack": "pack of 360",
+        "size": "73mm",
+        "price": "",
+        "coverage": ""
+      }
+    ],
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787302851117-ylkens.jpg",
+    "images": [
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787302851117-ylkens.jpg"
+    ],
+    "createdAt": "2026-08-19T13:30:22.748751+00:00",
+    "updatedAt": "2026-08-26T14:08:57.939+00:00"
+  },
+  {
     "id": "p1787146222550_4",
     "name": "Red Class B Perf 73mm",
     "category": "Handmade Bricks",
@@ -2275,46 +2663,14 @@
     "updatedAt": "2026-08-26T14:08:57.939+00:00"
   },
   {
-    "id": "p1787146222550_18",
-    "name": "LBC Tudor 73mm",
+    "id": "p1787146222550_5",
+    "name": "Dovestone Light Red Smooth 73mm",
     "category": "Handmade Bricks",
-    "price": "£683.04",
+    "price": "£444.00",
     "priceNote": "",
-    "slug": "lbc-tudor-73mm",
+    "slug": "dovestone-light-red-smooth-73mm",
     "url": "",
-    "description": "LBC Tudor is a long-established favourite from the London Brick Company, combining a deep red-brown body with dark mottling and a lightly rustic face. The result is a wall with real depth and an aged, traditional feel straight off the pallet. Widely specified for extensions, boundary walls and whole elevations, it is a dependable choice where a warm, characterful brick is wanted at sensible cost.",
-    "colour": "",
-    "frost": "F2 — Fully frost resistant",
-    "customSpecs": "",
-    "deliveryNotes": "",
-    "visible": true,
-    "mode": "shop",
-    "badge": "",
-    "delivery": "extra",
-    "sizeVariants": [
-      {
-        "pack": "pack of 390",
-        "size": "73mm",
-        "price": "",
-        "coverage": ""
-      }
-    ],
-    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303490933-aj9oyq.jpg",
-    "images": [
-      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303490933-aj9oyq.jpg"
-    ],
-    "createdAt": "2026-08-19T13:30:22.748751+00:00",
-    "updatedAt": "2026-08-26T14:08:57.939+00:00"
-  },
-  {
-    "id": "p1787146222550_19",
-    "name": "Old Terrace Blend 73mm",
-    "category": "Handmade Bricks",
-    "price": "£938.40",
-    "priceNote": "",
-    "slug": "old-terrace-blend-73mm",
-    "url": "",
-    "description": "Old Terrace Blend is made to look as though it has already spent a century in a wall. Reds, browns and darker weathered tones are blended together with an irregular, worn face, echoing the terraced streets it is named after. In a 73mm imperial format, it is a strong candidate for restoration work and for extensions that need to disappear into an existing period elevation.",
+    "description": "Dovestone Light Red pairs a soft, pale red body with a clean smooth face, giving crisp lines and an even finish across an elevation. It is a restrained brick, a natural fit for contemporary builds and to extensions where you want a light, tidy red rather than a heavy or rustic one. The 73mm format suits new build coursing and larger areas of unbroken brickwork.",
     "colour": "",
     "frost": "F2 — Fully frost resistant",
     "customSpecs": "",
@@ -2331,105 +2687,9 @@
         "coverage": ""
       }
     ],
-    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303659917-wwecam.jpg",
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303363781-xbpfb4.png",
     "images": [
-      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303659917-wwecam.jpg"
-    ],
-    "createdAt": "2026-08-19T13:30:22.748751+00:00",
-    "updatedAt": "2026-08-26T14:08:57.939+00:00"
-  },
-  {
-    "id": "p1787146222550_21",
-    "name": "Birtley Olde English 73mm",
-    "category": "Handmade Bricks",
-    "price": "£648.48",
-    "priceNote": "",
-    "slug": "birtley-olde-english-73mm",
-    "url": "",
-    "description": "Birtley Olde English blends warm reds and browns with a softly textured, irregular face to give brickwork an unmistakably traditional character. It builds into walls with plenty of tonal movement, at home on period extensions, cottages and rural projects. The 73mm imperial format lets it line through with older coursing rather than drifting out of gauge.",
-    "colour": "",
-    "frost": "F2 — Fully frost resistant",
-    "customSpecs": "",
-    "deliveryNotes": "",
-    "visible": true,
-    "mode": "shop",
-    "badge": "",
-    "delivery": "extra",
-    "sizeVariants": [
-      {
-        "pack": "pack of 392",
-        "size": "73mm",
-        "price": "",
-        "coverage": ""
-      }
-    ],
-    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787302882616-ptamy7.jpg",
-    "images": [
-      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787302882616-ptamy7.jpg"
-    ],
-    "createdAt": "2026-08-19T13:30:22.748751+00:00",
-    "updatedAt": "2026-08-26T14:08:57.939+00:00"
-  },
-  {
-    "id": "p1787146222550_22",
-    "name": "Pre War Common 73mm",
-    "category": "Handmade Bricks",
-    "price": "£689.47",
-    "priceNote": "",
-    "slug": "pre-war-common-73mm",
-    "url": "",
-    "description": "Pre War Common recreates the plain, slightly irregular brick used across British housing before the Second World War. Colours run through soft reds and dusty browns with an uneven face, giving walls a modest, honest appearance rather than a polished one. A practical choice for repairs, extensions and garden structures on inter-war properties, in a 73mm imperial format.",
-    "colour": "",
-    "frost": "F2 — Fully frost resistant",
-    "customSpecs": "",
-    "deliveryNotes": "",
-    "visible": true,
-    "mode": "shop",
-    "badge": "",
-    "delivery": "extra",
-    "sizeVariants": [
-      {
-        "pack": "pack of 424",
-        "size": "73mm",
-        "price": "",
-        "coverage": ""
-      }
-    ],
-    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303121170-d4jvon.jpg",
-    "images": [
-      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303121170-d4jvon.jpg"
-    ],
-    "createdAt": "2026-08-19T13:30:22.748751+00:00",
-    "updatedAt": "2026-08-26T14:08:57.939+00:00"
-  },
-  {
-    "id": "p1787146222550_12",
-    "name": "Warrington Red 73mm",
-    "category": "Handmade Bricks",
-    "price": "£642.72",
-    "priceNote": "",
-    "slug": "warrington-red-73mm",
-    "url": "",
-    "description": "Warrington Red is a solid northern red with a faintly worked face and quiet tonal movement, giving walls warmth without heavy mottling. It is an unpretentious brick that does its job across whole elevations, extensions and boundary walls alike. The 73mm imperial format suits matching into the deeper coursing found in much older housing stock.",
-    "colour": "",
-    "frost": "F2 — Fully frost resistant",
-    "customSpecs": "",
-    "deliveryNotes": "",
-    "visible": true,
-    "mode": "shop",
-    "badge": "",
-    "delivery": "extra",
-    "sizeVariants": [
-      {
-        "pack": "pack of 480",
-        "size": "73mm",
-        "price": "",
-        "coverage": ""
-      }
-    ],
-    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787146473049-sinjah.jpg",
-    "images": [
-      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787146473049-sinjah.jpg"
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303363781-xbpfb4.png"
     ],
     "createdAt": "2026-08-19T13:30:22.748751+00:00",
     "updatedAt": "2026-08-26T14:08:57.939+00:00"
@@ -2564,14 +2824,14 @@
     "updatedAt": "2026-08-26T14:08:57.939+00:00"
   },
   {
-    "id": "p1787146222550_1",
-    "name": "Perton Orange 68mm",
+    "id": "p1787146222550_18",
+    "name": "LBC Tudor 73mm",
     "category": "Handmade Bricks",
-    "price": "£725.47",
+    "price": "£683.04",
     "priceNote": "",
-    "slug": "perton-orange-68mm",
+    "slug": "lbc-tudor-73mm",
     "url": "",
-    "description": "Perton Orange is a warm, sunlit brick with a rich terracotta-to-amber body and a faintly textured face. The orange tone lifts noticeably in low sun, giving elevations a mellow glow that harder red bricks tend to miss. In a 68mm imperial format, it works well for extensions to older orange and red stock properties, garden walls and feature elevations where warmth matters more than uniformity.",
+    "description": "LBC Tudor is a long-established favourite from the London Brick Company, combining a deep red-brown body with dark mottling and a lightly rustic face. The result is a wall with real depth and an aged, traditional feel straight off the pallet. Widely specified for extensions, boundary walls and whole elevations, it is a dependable choice where a warm, characterful brick is wanted at sensible cost.",
     "colour": "",
     "frost": "F2 — Fully frost resistant",
     "customSpecs": "",
@@ -2582,79 +2842,15 @@
     "delivery": "extra",
     "sizeVariants": [
       {
-        "pack": "pack of 514",
-        "size": "68mm",
-        "price": "",
-        "coverage": ""
-      }
-    ],
-    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303518545-m0wiz5.jpg",
-    "images": [
-      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303518545-m0wiz5.jpg"
-    ],
-    "createdAt": "2026-08-19T13:30:22.748751+00:00",
-    "updatedAt": "2026-08-26T14:08:57.939+00:00"
-  },
-  {
-    "id": "p1787146222550_14",
-    "name": "LBC Common 73mm",
-    "category": "Handmade Bricks",
-    "price": "£636.96",
-    "priceNote": "",
-    "slug": "lbc-common-73mm",
-    "url": "",
-    "description": "The LBC Common is one of the most widely laid bricks in Britain, a plain, economical brick from the London Brick Company used for internal walls, rendered elevations and general building work. The face is simple and the colour sits in the pinkish red range with mild variation. Supplied here in a 73mm imperial format for matching older coursing.",
-    "colour": "",
-    "frost": "F2 — Fully frost resistant",
-    "customSpecs": "",
-    "deliveryNotes": "",
-    "visible": true,
-    "mode": "shop",
-    "badge": "",
-    "delivery": "extra",
-    "sizeVariants": [
-      {
-        "pack": "pack of 360",
+        "pack": "pack of 390",
         "size": "73mm",
         "price": "",
         "coverage": ""
       }
     ],
-    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787302851117-ylkens.jpg",
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303490933-aj9oyq.jpg",
     "images": [
-      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787302851117-ylkens.jpg"
-    ],
-    "createdAt": "2026-08-19T13:30:22.748751+00:00",
-    "updatedAt": "2026-08-26T14:08:57.939+00:00"
-  },
-  {
-    "id": "p1787146222550_5",
-    "name": "Dovestone Light Red Smooth 73mm",
-    "category": "Handmade Bricks",
-    "price": "£444.00",
-    "priceNote": "",
-    "slug": "dovestone-light-red-smooth-73mm",
-    "url": "",
-    "description": "Dovestone Light Red pairs a soft, pale red body with a clean smooth face, giving crisp lines and an even finish across an elevation. It is a restrained brick, a natural fit for contemporary builds and to extensions where you want a light, tidy red rather than a heavy or rustic one. The 73mm format suits new build coursing and larger areas of unbroken brickwork.",
-    "colour": "",
-    "frost": "F2 — Fully frost resistant",
-    "customSpecs": "",
-    "deliveryNotes": "",
-    "visible": true,
-    "mode": "shop",
-    "badge": "",
-    "delivery": "extra",
-    "sizeVariants": [
-      {
-        "pack": "pack of 400",
-        "size": "73mm",
-        "price": "",
-        "coverage": ""
-      }
-    ],
-    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303363781-xbpfb4.png",
-    "images": [
-      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303363781-xbpfb4.png"
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303490933-aj9oyq.jpg"
     ],
     "createdAt": "2026-08-19T13:30:22.748751+00:00",
     "updatedAt": "2026-08-26T14:08:57.939+00:00"
@@ -2692,303 +2888,14 @@
     "updatedAt": "2026-08-26T14:08:57.939+00:00"
   },
   {
-    "id": "p1787146222550_16",
-    "name": "LBC Rustic 73mm",
-    "category": "Handmade Bricks",
-    "price": "£729.84",
-    "priceNote": "",
-    "slug": "lbc-rustic-73mm",
-    "url": "",
-    "description": "LBC Rustic combines a warm red body with a textured, patterned face that catches light and shadow across an elevation. The surface treatment gives brickwork a rougher, more traditional look than a smooth brick, which is why it has been so widely specified on housing over the years.",
-    "colour": "",
-    "frost": "F2 — Fully frost resistant",
-    "customSpecs": "",
-    "deliveryNotes": "",
-    "visible": true,
-    "mode": "shop",
-    "badge": "",
-    "delivery": "extra",
-    "sizeVariants": [
-      {
-        "pack": "pack of 390",
-        "size": "73mm",
-        "price": "",
-        "coverage": ""
-      }
-    ],
-    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303045088-4d0x5o.jpg",
-    "images": [
-      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303045088-4d0x5o.jpg"
-    ],
-    "createdAt": "2026-08-19T13:30:22.748751+00:00",
-    "updatedAt": "2026-08-26T14:08:57.939+00:00"
-  },
-  {
-    "id": "p1787146222550_11",
-    "name": "Stratford Yellow Imperial 68mm",
-    "category": "Handmade Bricks",
-    "price": "£554.88",
-    "priceNote": "",
-    "slug": "stratford-yellow-imperial-68mm",
-    "url": "",
-    "description": "Stratford Yellow Imperial brings a soft, warm yellow body with gentle variation and a softly grained face. Yellow brickwork has a distinctly London and Home Counties character, and this one sits comfortably alongside genuine stock brick without pretending to be reclaimed. The 68mm imperial format makes it a straightforward option for extensions and repairs to older yellow brick properties.",
-    "colour": "",
-    "frost": "F2 — Fully frost resistant",
-    "customSpecs": "",
-    "deliveryNotes": "",
-    "visible": true,
-    "mode": "shop",
-    "badge": "",
-    "delivery": "extra",
-    "sizeVariants": [
-      {
-        "pack": "pack of 360",
-        "size": "68mm",
-        "price": "",
-        "coverage": ""
-      }
-    ],
-    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787302925148-vhmpyh.jpg",
-    "images": [
-      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787302925148-vhmpyh.jpg"
-    ],
-    "createdAt": "2026-08-19T13:30:22.748751+00:00",
-    "updatedAt": "2026-08-26T14:08:57.939+00:00"
-  },
-  {
-    "id": "p1787146222550_13",
-    "name": "Weathered Common 73mm",
-    "category": "Handmade Bricks",
-    "price": "£648.48",
-    "priceNote": "",
-    "slug": "weathered-common-73mm",
-    "url": "",
-    "description": "Weathered Common takes the plain, everyday character of a common brick and adds the darkened, uneven surface of a wall that has seen a few decades of British weather. Colours run through soft reds and browns with patchy darker tones. Useful for repair work, garden walls and extensions where a brand new brick would look conspicuous, in a 73mm imperial format.",
-    "colour": "",
-    "frost": "F2 — Fully frost resistant",
-    "customSpecs": "",
-    "deliveryNotes": "",
-    "visible": true,
-    "mode": "shop",
-    "badge": "",
-    "delivery": "extra",
-    "sizeVariants": [
-      {
-        "pack": "pack of 480",
-        "size": "73mm",
-        "price": "",
-        "coverage": ""
-      }
-    ],
-    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787147640036-qgss16.jpg",
-    "images": [
-      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787147640036-qgss16.jpg"
-    ],
-    "createdAt": "2026-08-19T13:30:22.748751+00:00",
-    "updatedAt": "2026-08-26T14:08:57.939+00:00"
-  },
-  {
-    "id": "p1787146222550_3",
-    "name": "K209 Class B Blue Perf 73mm",
-    "category": "Handmade Bricks",
-    "price": "£653.66",
-    "priceNote": "",
-    "slug": "k209-class-b-blue-perf-73mm",
-    "url": "",
-    "description": "A perforated Class B engineering brick in classic Staffordshire blue. The dense, near-vitrified body and dark blue-grey sheen make it the traditional choice for damp proof courses, plinths, retaining walls, manholes and copings, wherever strength and low water absorption matter more than decoration. The 73mm format and clean smooth face also make it a striking contrast band against red or buff brickwork.",
-    "colour": "",
-    "frost": "F2 — Fully frost resistant",
-    "customSpecs": "",
-    "deliveryNotes": "",
-    "visible": true,
-    "mode": "shop",
-    "badge": "",
-    "delivery": "extra",
-    "sizeVariants": [
-      {
-        "pack": "pack of 368",
-        "size": "73mm",
-        "price": "",
-        "coverage": ""
-      }
-    ],
-    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303566177-6y85s4.jpg",
-    "images": [
-      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303566177-6y85s4.jpg"
-    ],
-    "createdAt": "2026-08-19T13:30:22.748751+00:00",
-    "updatedAt": "2026-08-26T14:08:57.939+00:00"
-  },
-  {
-    "id": "p1787146222549_0",
-    "name": "London Stock 68mm",
-    "category": "Handmade Bricks",
-    "price": "£725.47",
-    "priceNote": "",
-    "slug": "london-stock-68mm",
-    "url": "",
-    "description": "Few bricks say London quite like this one. The London Stock carries the soft yellow-to-buff body and smoky, creased face found across Georgian and Victorian terraces in the capital. Tone shifts from brick to brick, so a finished wall reads as weathered and lived-in rather than flat.",
-    "colour": "",
-    "frost": "F2 — Fully frost resistant",
-    "customSpecs": "",
-    "deliveryNotes": "",
-    "visible": true,
-    "mode": "shop",
-    "badge": "",
-    "delivery": "extra",
-    "sizeVariants": [
-      {
-        "pack": "pack of 514",
-        "size": "68mm",
-        "price": "",
-        "coverage": ""
-      }
-    ],
-    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787146443643-gv5vsg.jpg",
-    "images": [
-      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787146443643-gv5vsg.jpg"
-    ],
-    "createdAt": "2026-08-19T13:30:22.748751+00:00",
-    "updatedAt": "2026-08-26T14:08:57.939+00:00"
-  },
-  {
-    "id": "p1787146222550_2",
-    "name": "Rural Multi 68mm",
-    "category": "Handmade Bricks",
-    "price": "£753.60",
-    "priceNote": "",
-    "slug": "rural-multi-68mm",
-    "url": "",
-    "description": "Rural Multi blends reds, browns and softer buff tones into a single brick with an unhurried, countryside character. No two faces are alike, so walls build up with the gentle mottling you see on farmhouses and village cottages. The 68mm imperial format makes it a sensible option for barn conversions, rural extensions and any project where a uniform modern brick would look out of place.",
-    "colour": "",
-    "frost": "F2 — Fully frost resistant",
-    "customSpecs": "",
-    "deliveryNotes": "",
-    "visible": true,
-    "mode": "shop",
-    "badge": "",
-    "delivery": "extra",
-    "sizeVariants": [
-      {
-        "pack": "pack of 450",
-        "size": "68mm",
-        "price": "",
-        "coverage": ""
-      }
-    ],
-    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303538489-7u26mu.jpg",
-    "images": [
-      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303538489-7u26mu.jpg",
-      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303542704-pmko8l.jpg"
-    ],
-    "createdAt": "2026-08-19T13:30:22.748751+00:00",
-    "updatedAt": "2026-08-26T14:08:57.939+00:00"
-  },
-  {
-    "id": "p1787146222550_29",
-    "name": "Heather Sandfaced 73mm",
-    "category": "Handmade Bricks",
-    "price": "£622.27",
-    "priceNote": "",
-    "slug": "heather-sandfaced-73mm",
-    "url": "",
-    "description": "Heather Sandfaced combines soft purple and brown heather tones with a sand-textured face, which leaves elevations with a matt, slightly grainy surface that diffuses light rather than reflecting it. The result feels traditional and understated, suiting period extensions, housing and garden walls. The 73mm imperial format allows it to course with older brickwork.",
-    "colour": "",
-    "frost": "F2 — Fully frost resistant",
-    "customSpecs": "",
-    "deliveryNotes": "",
-    "visible": true,
-    "mode": "shop",
-    "badge": "",
-    "delivery": "extra",
-    "sizeVariants": [
-      {
-        "pack": "pack of 504",
-        "size": "73mm",
-        "price": "",
-        "coverage": ""
-      }
-    ],
-    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787304241231-l6weuw.jpg",
-    "images": [
-      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787304241231-l6weuw.jpg"
-    ],
-    "createdAt": "2026-08-19T13:30:22.872211+00:00",
-    "updatedAt": "2026-08-26T14:08:57.939+00:00"
-  },
-  {
-    "id": "p1787146222550_26",
-    "name": "Tyneham Restoration Red 68mm",
-    "category": "Handmade Bricks",
-    "price": "£875.28",
-    "priceNote": "",
-    "slug": "tyneham-restoration-red-68mm",
-    "url": "",
-    "description": "Tyneham Restoration Red is built for matching work. The mellow red body, uneven face and gentle weathering are all aimed at blending new brickwork into old, rather than standing out as a modern insertion. The 68mm imperial format completes the picture for period properties laid to imperial gauge, making it a natural choice for restoration, extensions and repair.",
-    "colour": "",
-    "frost": "F2 — Fully frost resistant",
-    "customSpecs": "",
-    "deliveryNotes": "",
-    "visible": true,
-    "mode": "shop",
-    "badge": "",
-    "delivery": "extra",
-    "sizeVariants": [
-      {
-        "pack": "pack of 420",
-        "size": "68mm",
-        "price": "",
-        "coverage": ""
-      }
-    ],
-    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787304387336-et77ma.jpg",
-    "images": [
-      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787304387336-et77ma.jpg"
-    ],
-    "createdAt": "2026-08-19T13:30:22.872211+00:00",
-    "updatedAt": "2026-08-26T14:08:57.939+00:00"
-  },
-  {
-    "id": "p1787146222550_34",
-    "name": "Hemmingstone Antique 73mm",
-    "category": "Handmade Bricks",
-    "price": "£708.62",
-    "priceNote": "",
-    "slug": "hemmingstone-antique-73mm",
-    "url": "",
-    "description": "Hemmingstone Antique carries the darkened, softened tones and irregular face of brickwork that has stood for generations. Reds and browns are overlaid with weathered patches, so walls read as established from the day they are finished. Well suited to period extensions, restoration and rural projects, in a 73mm imperial format for imperial coursing.",
-    "colour": "",
-    "frost": "F2 — Fully frost resistant",
-    "customSpecs": "",
-    "deliveryNotes": "",
-    "visible": true,
-    "mode": "shop",
-    "badge": "",
-    "delivery": "extra",
-    "sizeVariants": [
-      {
-        "pack": "pack of 572",
-        "size": "73mm",
-        "price": "",
-        "coverage": ""
-      }
-    ],
-    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787304723939-vshnpv.jpg",
-    "images": [
-      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787304723939-vshnpv.jpg"
-    ],
-    "createdAt": "2026-08-19T13:30:22.872211+00:00",
-    "updatedAt": "2026-08-26T14:08:57.939+00:00"
-  },
-  {
-    "id": "p1787146222550_43",
-    "name": "Bury Red Multi Rustic",
+    "id": "p1787146222550_40",
+    "name": "Benamor Blend",
     "category": "Handmade Bricks",
     "price": "",
     "priceNote": "",
-    "slug": "bury-red-multi-rustic",
+    "slug": "benamor-blend",
     "url": "",
-    "description": "Bury Red Multi Rustic works on two fronts: a multi-toned red body running through warmer and darker shades, and a rustic textured face that breaks up light across the wall. Together they give brickwork depth and a traditional, hard-working character. Well suited to housing, extensions and boundary walls where a plain red would look too clean.",
+    "description": "Benamor Blend brings together warm reds, soft browns and lighter sandy tones in a single brick, producing walls with genuine tonal movement rather than one flat colour. The blend reads warm from a distance and varied close up, so it becomes a comfortable fit for anything from a rear extension to a full elevation alike.",
     "colour": "",
     "frost": "F2 — Fully frost resistant",
     "customSpecs": "",
@@ -2999,142 +2906,14 @@
     "delivery": "extra",
     "sizeVariants": [
       {
-        "pack": "pack of 448",
+        "pack": "pack of 640",
         "size": "65mm",
         "price": ""
       }
     ],
-    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787304334057-jl30nb.jpg",
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303780235-kgvhj6.jpg",
     "images": [
-      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787304334057-jl30nb.jpg"
-    ],
-    "createdAt": "2026-08-19T13:30:22.872211+00:00",
-    "updatedAt": "2026-08-26T14:08:57.939+00:00"
-  },
-  {
-    "id": "p1787146222550_38",
-    "name": "Aveley Buff",
-    "category": "Handmade Bricks",
-    "price": "£664.32",
-    "priceNote": "",
-    "slug": "aveley-buff",
-    "url": "",
-    "description": "Aveley Buff is a light, sandy brick in the pale yellow-buff family, bringing brightness to elevations without the starkness of a white or grey. Gentle variation across the face keeps it from looking uniform. It works well on new build housing, garden walls and extensions, and sits comfortably alongside stock brick, render and natural stone in a 65mm metric format.",
-    "colour": "",
-    "frost": "F2 — Fully frost resistant",
-    "customSpecs": "",
-    "deliveryNotes": "",
-    "visible": true,
-    "mode": "shop",
-    "badge": "",
-    "delivery": "extra",
-    "sizeVariants": [
-      {
-        "pack": "pack of 520",
-        "size": "65mm",
-        "price": "",
-        "coverage": ""
-      }
-    ],
-    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787304628464-zzu81y.jpg",
-    "images": [
-      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787304628464-zzu81y.jpg"
-    ],
-    "createdAt": "2026-08-19T13:30:22.872211+00:00",
-    "updatedAt": "2026-08-26T14:08:57.939+00:00"
-  },
-  {
-    "id": "p1787146222550_35",
-    "name": "Olde Cheshire Tumbled 73mm",
-    "category": "Handmade Bricks",
-    "price": "£938.40",
-    "priceNote": "",
-    "slug": "olde-cheshire-tumbled-73mm",
-    "url": "",
-    "description": "Olde Cheshire Tumbled is physically tumbled during production, knocking back the arrises and roughening the face so each brick arrives looking as though it has already been reclaimed from an old wall. Colours run through warm reds and browns. A strong choice for barn conversions, period extensions and any project needing convincing character, in a 73mm imperial format.",
-    "colour": "",
-    "frost": "F2 — Fully frost resistant",
-    "customSpecs": "",
-    "deliveryNotes": "",
-    "visible": true,
-    "mode": "shop",
-    "badge": "",
-    "delivery": "extra",
-    "sizeVariants": [
-      {
-        "pack": "pack of 572",
-        "size": "73mm",
-        "price": "",
-        "coverage": ""
-      }
-    ],
-    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787649293469-xd5zj7.jpg",
-    "images": [
-      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787649293469-xd5zj7.jpg"
-    ],
-    "createdAt": "2026-08-19T13:30:22.872211+00:00",
-    "updatedAt": "2026-08-26T14:08:57.939+00:00"
-  },
-  {
-    "id": "p1787146222550_49",
-    "name": "Forum Burgundy",
-    "category": "Handmade Bricks",
-    "price": "£733.44",
-    "priceNote": "",
-    "slug": "forum-burgundy",
-    "url": "",
-    "description": "Forum Burgundy is a deep, wine-toned red with purple undertones, lending walls a richer and more formal character than a standard red. The darker body suits urban and commercial settings particularly well, and holds its presence across large elevations. It works equally well across a whole elevation or as a darker banding course against a lighter brick.",
-    "colour": "",
-    "frost": "F2 — Fully frost resistant",
-    "customSpecs": "",
-    "deliveryNotes": "",
-    "visible": true,
-    "mode": "shop",
-    "badge": "",
-    "delivery": "extra",
-    "sizeVariants": [
-      {
-        "pack": "pack of 660",
-        "size": "65mm",
-        "price": "",
-        "coverage": ""
-      }
-    ],
-    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787304437312-63usl7.jpg",
-    "images": [
-      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787304437312-63usl7.jpg"
-    ],
-    "createdAt": "2026-08-19T13:30:22.872211+00:00",
-    "updatedAt": "2026-08-26T14:08:57.939+00:00"
-  },
-  {
-    "id": "p1787146222550_28",
-    "name": "Clayburn Civic 73mm",
-    "category": "Handmade Bricks",
-    "price": "£596.26",
-    "priceNote": "",
-    "slug": "clayburn-civic-73mm",
-    "url": "",
-    "description": "Clayburn Civic is a dependable blended brick running through reds and browns with a subtly textured surface, designed to hold its own across large areas of brickwork. It suits commercial, institutional and residential work alike, offering enough variation to keep an elevation interesting without becoming a feature in itself.",
-    "colour": "",
-    "frost": "F2 — Fully frost resistant",
-    "customSpecs": "",
-    "deliveryNotes": "",
-    "visible": true,
-    "mode": "shop",
-    "badge": "",
-    "delivery": "extra",
-    "sizeVariants": [
-      {
-        "pack": "pack of 464",
-        "size": "73mm",
-        "price": "",
-        "coverage": ""
-      }
-    ],
-    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787304269496-ihw8mi.jpg",
-    "images": [
-      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787304269496-ihw8mi.jpg"
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303780235-kgvhj6.jpg"
     ],
     "createdAt": "2026-08-19T13:30:22.872211+00:00",
     "updatedAt": "2026-08-26T14:08:57.939+00:00"
@@ -3174,14 +2953,14 @@
     "updatedAt": "2026-08-26T14:10:12.427+00:00"
   },
   {
-    "id": "p1787146222550_45",
-    "name": "Calverton Buff Multi",
+    "id": "p1787146222550_48",
+    "name": "Fitzjohn Multi",
     "category": "Handmade Bricks",
-    "price": "£450.00",
+    "price": "£877.80",
     "priceNote": "",
-    "slug": "calverton-buff-multi",
+    "slug": "fitzjohn-multi",
     "url": "",
-    "description": "Calverton Buff Multi blends pale sandy buffs with hints of warmer cream and light brown, giving brightness to an elevation while keeping enough movement to avoid looking flat. Buff brickwork sits well with render, stone and timber, which is why it is a useful choice for contemporary housing as well as more traditional extensions.",
+    "description": "Fitzjohn Multi blends reds, browns and softer neutral tones into brickwork with quiet, considered variation. It avoids the strong contrast of a heavy multi, and the result is easy to live with across large elevations and easy to pair with other materials. A sensible choice for housing, extensions and infill work.",
     "colour": "",
     "frost": "F2 — Fully frost resistant",
     "customSpecs": "",
@@ -3192,142 +2971,15 @@
     "delivery": "extra",
     "sizeVariants": [
       {
-        "pack": "pack of 475",
+        "pack": "pack of 450",
         "size": "65mm",
         "price": "",
         "coverage": ""
       }
     ],
-    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787304589799-h5r0ky.jpg",
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787304420428-7ik8t5.jpg",
     "images": [
-      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787304589799-h5r0ky.jpg"
-    ],
-    "createdAt": "2026-08-19T13:30:22.872211+00:00",
-    "updatedAt": "2026-08-26T14:08:57.939+00:00"
-  },
-  {
-    "id": "p1787146222550_46",
-    "name": "Calverton Red Multi",
-    "category": "Handmade Bricks",
-    "price": "£450.00",
-    "priceNote": "",
-    "slug": "calverton-red-multi",
-    "url": "",
-    "description": "Calverton Red Multi runs through warm reds with darker and lighter tones mixed across each face, so elevations come out with real depth over a large area. It is a versatile all-rounder, equally at home on a new build estate, a rear extension or a garden wall.",
-    "colour": "",
-    "frost": "F2 — Fully frost resistant",
-    "customSpecs": "",
-    "deliveryNotes": "",
-    "visible": true,
-    "mode": "shop",
-    "badge": "",
-    "delivery": "extra",
-    "sizeVariants": [
-      {
-        "pack": "pack of 475",
-        "size": "65mm",
-        "price": "",
-        "coverage": ""
-      }
-    ],
-    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303962512-yodpah.jpg",
-    "images": [
-      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303962512-yodpah.jpg"
-    ],
-    "createdAt": "2026-08-19T13:30:22.872211+00:00",
-    "updatedAt": "2026-08-26T14:08:57.939+00:00"
-  },
-  {
-    "id": "p1787146222550_40",
-    "name": "Benamor Blend",
-    "category": "Handmade Bricks",
-    "price": "",
-    "priceNote": "",
-    "slug": "benamor-blend",
-    "url": "",
-    "description": "Benamor Blend brings together warm reds, soft browns and lighter sandy tones in a single brick, producing walls with genuine tonal movement rather than one flat colour. The blend reads warm from a distance and varied close up, so it becomes a comfortable fit for anything from a rear extension to a full elevation alike.",
-    "colour": "",
-    "frost": "F2 — Fully frost resistant",
-    "customSpecs": "",
-    "deliveryNotes": "",
-    "visible": true,
-    "mode": "shop",
-    "badge": "",
-    "delivery": "extra",
-    "sizeVariants": [
-      {
-        "pack": "pack of 640",
-        "size": "65mm",
-        "price": ""
-      }
-    ],
-    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303780235-kgvhj6.jpg",
-    "images": [
-      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303780235-kgvhj6.jpg"
-    ],
-    "createdAt": "2026-08-19T13:30:22.872211+00:00",
-    "updatedAt": "2026-08-26T14:08:57.939+00:00"
-  },
-  {
-    "id": "p1787146222550_31",
-    "name": "Cherwell Heritage Blend 73mm",
-    "category": "Handmade Bricks",
-    "price": "£648.00",
-    "priceNote": "",
-    "slug": "cherwell-heritage-blend-73mm",
-    "url": "",
-    "description": "Cherwell Heritage Blend mixes warm reds, oranges and softer buff tones into brickwork with genuine tonal movement and a lightly aged face. It is aimed at heritage and sensitive work where a single flat colour would look wrong, and works equally well on rural extensions and village infill.",
-    "colour": "",
-    "frost": "F2 — Fully frost resistant",
-    "customSpecs": "",
-    "deliveryNotes": "",
-    "visible": true,
-    "mode": "shop",
-    "badge": "",
-    "delivery": "extra",
-    "sizeVariants": [
-      {
-        "pack": "pack of 400",
-        "size": "73mm",
-        "price": "",
-        "coverage": ""
-      }
-    ],
-    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787304184160-akzaka.jpg",
-    "images": [
-      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787304184160-akzaka.jpg"
-    ],
-    "createdAt": "2026-08-19T13:30:22.872211+00:00",
-    "updatedAt": "2026-08-26T14:08:57.939+00:00"
-  },
-  {
-    "id": "p1787146222550_42",
-    "name": "Brisbane Black Dragwire",
-    "category": "Handmade Bricks",
-    "price": "£562.46",
-    "priceNote": "",
-    "slug": "brisbane-black-dragwire",
-    "url": "",
-    "description": "Brisbane Black combines a deep, near-black body with a dragwire finish, where the face is torn and scored during production to create a rough, tactile surface. The result catches light unevenly and gives dark brickwork far more depth than a smooth black would. A confident choice for feature walls, contemporary housing and any scheme built around strong contrast.",
-    "colour": "",
-    "frost": "F2 — Fully frost resistant",
-    "customSpecs": "",
-    "deliveryNotes": "",
-    "visible": true,
-    "mode": "shop",
-    "badge": "",
-    "delivery": "extra",
-    "sizeVariants": [
-      {
-        "pack": "pack of 448",
-        "size": "65mm",
-        "price": "",
-        "coverage": ""
-      }
-    ],
-    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787304305478-pxhzik.jpg",
-    "images": [
-      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787304305478-pxhzik.jpg"
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787304420428-7ik8t5.jpg"
     ],
     "createdAt": "2026-08-19T13:30:22.872211+00:00",
     "updatedAt": "2026-08-26T14:08:57.939+00:00"
@@ -3366,14 +3018,14 @@
     "updatedAt": "2026-08-26T14:08:57.939+00:00"
   },
   {
-    "id": "p1787146222550_30",
-    "name": "Red Sandfaced 73mm",
+    "id": "p1787146222550_42",
+    "name": "Brisbane Black Dragwire",
     "category": "Handmade Bricks",
-    "price": "£496.03",
+    "price": "£562.46",
     "priceNote": "",
-    "slug": "red-sandfaced-73mm",
+    "slug": "brisbane-black-dragwire",
     "url": "",
-    "description": "Red Sandfaced pairs a warm red body with a fine sand-textured face, which produces walls that looks matt and traditional rather than sharp and modern. The texture softens the colour slightly, which helps new work sit alongside older brickwork. A straightforward choice for extensions, housing and boundary walls in a 73mm imperial format.",
+    "description": "Brisbane Black combines a deep, near-black body with a dragwire finish, where the face is torn and scored during production to create a rough, tactile surface. The result catches light unevenly and gives dark brickwork far more depth than a smooth black would. A confident choice for feature walls, contemporary housing and any scheme built around strong contrast.",
     "colour": "",
     "frost": "F2 — Fully frost resistant",
     "customSpecs": "",
@@ -3384,15 +3036,79 @@
     "delivery": "extra",
     "sizeVariants": [
       {
-        "pack": "pack of 464",
+        "pack": "pack of 448",
+        "size": "65mm",
+        "price": "",
+        "coverage": ""
+      }
+    ],
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787304305478-pxhzik.jpg",
+    "images": [
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787304305478-pxhzik.jpg"
+    ],
+    "createdAt": "2026-08-19T13:30:22.872211+00:00",
+    "updatedAt": "2026-08-26T14:08:57.939+00:00"
+  },
+  {
+    "id": "p1787146222550_31",
+    "name": "Cherwell Heritage Blend 73mm",
+    "category": "Handmade Bricks",
+    "price": "£648.00",
+    "priceNote": "",
+    "slug": "cherwell-heritage-blend-73mm",
+    "url": "",
+    "description": "Cherwell Heritage Blend mixes warm reds, oranges and softer buff tones into brickwork with genuine tonal movement and a lightly aged face. It is aimed at heritage and sensitive work where a single flat colour would look wrong, and works equally well on rural extensions and village infill.",
+    "colour": "",
+    "frost": "F2 — Fully frost resistant",
+    "customSpecs": "",
+    "deliveryNotes": "",
+    "visible": true,
+    "mode": "shop",
+    "badge": "",
+    "delivery": "extra",
+    "sizeVariants": [
+      {
+        "pack": "pack of 400",
         "size": "73mm",
         "price": "",
         "coverage": ""
       }
     ],
-    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787304220980-918cim.jpg",
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787304184160-akzaka.jpg",
     "images": [
-      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787304220980-918cim.jpg"
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787304184160-akzaka.jpg"
+    ],
+    "createdAt": "2026-08-19T13:30:22.872211+00:00",
+    "updatedAt": "2026-08-26T14:08:57.939+00:00"
+  },
+  {
+    "id": "p1787146222550_26",
+    "name": "Tyneham Restoration Red 68mm",
+    "category": "Handmade Bricks",
+    "price": "£875.28",
+    "priceNote": "",
+    "slug": "tyneham-restoration-red-68mm",
+    "url": "",
+    "description": "Tyneham Restoration Red is built for matching work. The mellow red body, uneven face and gentle weathering are all aimed at blending new brickwork into old, rather than standing out as a modern insertion. The 68mm imperial format completes the picture for period properties laid to imperial gauge, making it a natural choice for restoration, extensions and repair.",
+    "colour": "",
+    "frost": "F2 — Fully frost resistant",
+    "customSpecs": "",
+    "deliveryNotes": "",
+    "visible": true,
+    "mode": "shop",
+    "badge": "",
+    "delivery": "extra",
+    "sizeVariants": [
+      {
+        "pack": "pack of 420",
+        "size": "68mm",
+        "price": "",
+        "coverage": ""
+      }
+    ],
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787304387336-et77ma.jpg",
+    "images": [
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787304387336-et77ma.jpg"
     ],
     "createdAt": "2026-08-19T13:30:22.872211+00:00",
     "updatedAt": "2026-08-26T14:08:57.939+00:00"
@@ -3590,38 +3306,6 @@
     "updatedAt": "2026-08-26T14:08:57.939+00:00"
   },
   {
-    "id": "p1787146222550_41",
-    "name": "Berkeley Handmade",
-    "category": "Handmade Bricks",
-    "price": "£754.67",
-    "priceNote": "",
-    "slug": "berkeley-handmade",
-    "url": "",
-    "description": "A genuine handmade brick, sand moulded so each face carries the creases, folds and soft irregular edges that only hand production gives. Colours sit in the warm red and brown range with natural variation. This is a brick for projects where character matters more than uniformity: period extensions, conservation work, feature elevations and high-end residential builds.",
-    "colour": "",
-    "frost": "F2 — Fully frost resistant",
-    "customSpecs": "",
-    "deliveryNotes": "",
-    "visible": true,
-    "mode": "shop",
-    "badge": "",
-    "delivery": "extra",
-    "sizeVariants": [
-      {
-        "pack": "pack of 544",
-        "size": "65mm",
-        "price": "",
-        "coverage": ""
-      }
-    ],
-    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787304560184-oyexaq.jpg",
-    "images": [
-      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787304560184-oyexaq.jpg"
-    ],
-    "createdAt": "2026-08-19T13:30:22.872211+00:00",
-    "updatedAt": "2026-08-26T14:08:57.939+00:00"
-  },
-  {
     "id": "p1787146222550_25",
     "name": "Tradesman Heather 73mm",
     "category": "Handmade Bricks",
@@ -3654,14 +3338,14 @@
     "updatedAt": "2026-08-26T14:08:57.939+00:00"
   },
   {
-    "id": "p1787146222550_48",
-    "name": "Fitzjohn Multi",
+    "id": "p1787146222550_29",
+    "name": "Heather Sandfaced 73mm",
     "category": "Handmade Bricks",
-    "price": "£877.80",
+    "price": "£622.27",
     "priceNote": "",
-    "slug": "fitzjohn-multi",
+    "slug": "heather-sandfaced-73mm",
     "url": "",
-    "description": "Fitzjohn Multi blends reds, browns and softer neutral tones into brickwork with quiet, considered variation. It avoids the strong contrast of a heavy multi, and the result is easy to live with across large elevations and easy to pair with other materials. A sensible choice for housing, extensions and infill work.",
+    "description": "Heather Sandfaced combines soft purple and brown heather tones with a sand-textured face, which leaves elevations with a matt, slightly grainy surface that diffuses light rather than reflecting it. The result feels traditional and understated, suiting period extensions, housing and garden walls. The 73mm imperial format allows it to course with older brickwork.",
     "colour": "",
     "frost": "F2 — Fully frost resistant",
     "customSpecs": "",
@@ -3672,15 +3356,334 @@
     "delivery": "extra",
     "sizeVariants": [
       {
-        "pack": "pack of 450",
+        "pack": "pack of 504",
+        "size": "73mm",
+        "price": "",
+        "coverage": ""
+      }
+    ],
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787304241231-l6weuw.jpg",
+    "images": [
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787304241231-l6weuw.jpg"
+    ],
+    "createdAt": "2026-08-19T13:30:22.872211+00:00",
+    "updatedAt": "2026-08-26T14:08:57.939+00:00"
+  },
+  {
+    "id": "p1787146222550_43",
+    "name": "Bury Red Multi Rustic",
+    "category": "Handmade Bricks",
+    "price": "",
+    "priceNote": "",
+    "slug": "bury-red-multi-rustic",
+    "url": "",
+    "description": "Bury Red Multi Rustic works on two fronts: a multi-toned red body running through warmer and darker shades, and a rustic textured face that breaks up light across the wall. Together they give brickwork depth and a traditional, hard-working character. Well suited to housing, extensions and boundary walls where a plain red would look too clean.",
+    "colour": "",
+    "frost": "F2 — Fully frost resistant",
+    "customSpecs": "",
+    "deliveryNotes": "",
+    "visible": true,
+    "mode": "shop",
+    "badge": "",
+    "delivery": "extra",
+    "sizeVariants": [
+      {
+        "pack": "pack of 448",
+        "size": "65mm",
+        "price": ""
+      }
+    ],
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787304334057-jl30nb.jpg",
+    "images": [
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787304334057-jl30nb.jpg"
+    ],
+    "createdAt": "2026-08-19T13:30:22.872211+00:00",
+    "updatedAt": "2026-08-26T14:08:57.939+00:00"
+  },
+  {
+    "id": "p1787146222550_34",
+    "name": "Hemmingstone Antique 73mm",
+    "category": "Handmade Bricks",
+    "price": "£708.62",
+    "priceNote": "",
+    "slug": "hemmingstone-antique-73mm",
+    "url": "",
+    "description": "Hemmingstone Antique carries the darkened, softened tones and irregular face of brickwork that has stood for generations. Reds and browns are overlaid with weathered patches, so walls read as established from the day they are finished. Well suited to period extensions, restoration and rural projects, in a 73mm imperial format for imperial coursing.",
+    "colour": "",
+    "frost": "F2 — Fully frost resistant",
+    "customSpecs": "",
+    "deliveryNotes": "",
+    "visible": true,
+    "mode": "shop",
+    "badge": "",
+    "delivery": "extra",
+    "sizeVariants": [
+      {
+        "pack": "pack of 572",
+        "size": "73mm",
+        "price": "",
+        "coverage": ""
+      }
+    ],
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787304723939-vshnpv.jpg",
+    "images": [
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787304723939-vshnpv.jpg"
+    ],
+    "createdAt": "2026-08-19T13:30:22.872211+00:00",
+    "updatedAt": "2026-08-26T14:08:57.939+00:00"
+  },
+  {
+    "id": "p1787146222550_35",
+    "name": "Olde Cheshire Tumbled 73mm",
+    "category": "Handmade Bricks",
+    "price": "£938.40",
+    "priceNote": "",
+    "slug": "olde-cheshire-tumbled-73mm",
+    "url": "",
+    "description": "Olde Cheshire Tumbled is physically tumbled during production, knocking back the arrises and roughening the face so each brick arrives looking as though it has already been reclaimed from an old wall. Colours run through warm reds and browns. A strong choice for barn conversions, period extensions and any project needing convincing character, in a 73mm imperial format.",
+    "colour": "",
+    "frost": "F2 — Fully frost resistant",
+    "customSpecs": "",
+    "deliveryNotes": "",
+    "visible": true,
+    "mode": "shop",
+    "badge": "",
+    "delivery": "extra",
+    "sizeVariants": [
+      {
+        "pack": "pack of 572",
+        "size": "73mm",
+        "price": "",
+        "coverage": ""
+      }
+    ],
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787649293469-xd5zj7.jpg",
+    "images": [
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787649293469-xd5zj7.jpg"
+    ],
+    "createdAt": "2026-08-19T13:30:22.872211+00:00",
+    "updatedAt": "2026-08-26T14:08:57.939+00:00"
+  },
+  {
+    "id": "p1787146222550_49",
+    "name": "Forum Burgundy",
+    "category": "Handmade Bricks",
+    "price": "£733.44",
+    "priceNote": "",
+    "slug": "forum-burgundy",
+    "url": "",
+    "description": "Forum Burgundy is a deep, wine-toned red with purple undertones, lending walls a richer and more formal character than a standard red. The darker body suits urban and commercial settings particularly well, and holds its presence across large elevations. It works equally well across a whole elevation or as a darker banding course against a lighter brick.",
+    "colour": "",
+    "frost": "F2 — Fully frost resistant",
+    "customSpecs": "",
+    "deliveryNotes": "",
+    "visible": true,
+    "mode": "shop",
+    "badge": "",
+    "delivery": "extra",
+    "sizeVariants": [
+      {
+        "pack": "pack of 660",
         "size": "65mm",
         "price": "",
         "coverage": ""
       }
     ],
-    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787304420428-7ik8t5.jpg",
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787304437312-63usl7.jpg",
     "images": [
-      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787304420428-7ik8t5.jpg"
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787304437312-63usl7.jpg"
+    ],
+    "createdAt": "2026-08-19T13:30:22.872211+00:00",
+    "updatedAt": "2026-08-26T14:08:57.939+00:00"
+  },
+  {
+    "id": "p1787146222550_28",
+    "name": "Clayburn Civic 73mm",
+    "category": "Handmade Bricks",
+    "price": "£596.26",
+    "priceNote": "",
+    "slug": "clayburn-civic-73mm",
+    "url": "",
+    "description": "Clayburn Civic is a dependable blended brick running through reds and browns with a subtly textured surface, designed to hold its own across large areas of brickwork. It suits commercial, institutional and residential work alike, offering enough variation to keep an elevation interesting without becoming a feature in itself.",
+    "colour": "",
+    "frost": "F2 — Fully frost resistant",
+    "customSpecs": "",
+    "deliveryNotes": "",
+    "visible": true,
+    "mode": "shop",
+    "badge": "",
+    "delivery": "extra",
+    "sizeVariants": [
+      {
+        "pack": "pack of 464",
+        "size": "73mm",
+        "price": "",
+        "coverage": ""
+      }
+    ],
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787304269496-ihw8mi.jpg",
+    "images": [
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787304269496-ihw8mi.jpg"
+    ],
+    "createdAt": "2026-08-19T13:30:22.872211+00:00",
+    "updatedAt": "2026-08-26T14:08:57.939+00:00"
+  },
+  {
+    "id": "p1787146222550_45",
+    "name": "Calverton Buff Multi",
+    "category": "Handmade Bricks",
+    "price": "£450.00",
+    "priceNote": "",
+    "slug": "calverton-buff-multi",
+    "url": "",
+    "description": "Calverton Buff Multi blends pale sandy buffs with hints of warmer cream and light brown, giving brightness to an elevation while keeping enough movement to avoid looking flat. Buff brickwork sits well with render, stone and timber, which is why it is a useful choice for contemporary housing as well as more traditional extensions.",
+    "colour": "",
+    "frost": "F2 — Fully frost resistant",
+    "customSpecs": "",
+    "deliveryNotes": "",
+    "visible": true,
+    "mode": "shop",
+    "badge": "",
+    "delivery": "extra",
+    "sizeVariants": [
+      {
+        "pack": "pack of 475",
+        "size": "65mm",
+        "price": "",
+        "coverage": ""
+      }
+    ],
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787304589799-h5r0ky.jpg",
+    "images": [
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787304589799-h5r0ky.jpg"
+    ],
+    "createdAt": "2026-08-19T13:30:22.872211+00:00",
+    "updatedAt": "2026-08-26T14:08:57.939+00:00"
+  },
+  {
+    "id": "p1787146222550_41",
+    "name": "Berkeley Handmade",
+    "category": "Handmade Bricks",
+    "price": "£754.67",
+    "priceNote": "",
+    "slug": "berkeley-handmade",
+    "url": "",
+    "description": "A genuine handmade brick, sand moulded so each face carries the creases, folds and soft irregular edges that only hand production gives. Colours sit in the warm red and brown range with natural variation. This is a brick for projects where character matters more than uniformity: period extensions, conservation work, feature elevations and high-end residential builds.",
+    "colour": "",
+    "frost": "F2 — Fully frost resistant",
+    "customSpecs": "",
+    "deliveryNotes": "",
+    "visible": true,
+    "mode": "shop",
+    "badge": "",
+    "delivery": "extra",
+    "sizeVariants": [
+      {
+        "pack": "pack of 544",
+        "size": "65mm",
+        "price": "",
+        "coverage": ""
+      }
+    ],
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787304560184-oyexaq.jpg",
+    "images": [
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787304560184-oyexaq.jpg"
+    ],
+    "createdAt": "2026-08-19T13:30:22.872211+00:00",
+    "updatedAt": "2026-08-26T14:08:57.939+00:00"
+  },
+  {
+    "id": "p1787146222550_38",
+    "name": "Aveley Buff",
+    "category": "Handmade Bricks",
+    "price": "£664.32",
+    "priceNote": "",
+    "slug": "aveley-buff",
+    "url": "",
+    "description": "Aveley Buff is a light, sandy brick in the pale yellow-buff family, bringing brightness to elevations without the starkness of a white or grey. Gentle variation across the face keeps it from looking uniform. It works well on new build housing, garden walls and extensions, and sits comfortably alongside stock brick, render and natural stone in a 65mm metric format.",
+    "colour": "",
+    "frost": "F2 — Fully frost resistant",
+    "customSpecs": "",
+    "deliveryNotes": "",
+    "visible": true,
+    "mode": "shop",
+    "badge": "",
+    "delivery": "extra",
+    "sizeVariants": [
+      {
+        "pack": "pack of 520",
+        "size": "65mm",
+        "price": "",
+        "coverage": ""
+      }
+    ],
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787304628464-zzu81y.jpg",
+    "images": [
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787304628464-zzu81y.jpg"
+    ],
+    "createdAt": "2026-08-19T13:30:22.872211+00:00",
+    "updatedAt": "2026-08-26T14:08:57.939+00:00"
+  },
+  {
+    "id": "p1787146222550_46",
+    "name": "Calverton Red Multi",
+    "category": "Handmade Bricks",
+    "price": "£450.00",
+    "priceNote": "",
+    "slug": "calverton-red-multi",
+    "url": "",
+    "description": "Calverton Red Multi runs through warm reds with darker and lighter tones mixed across each face, so elevations come out with real depth over a large area. It is a versatile all-rounder, equally at home on a new build estate, a rear extension or a garden wall.",
+    "colour": "",
+    "frost": "F2 — Fully frost resistant",
+    "customSpecs": "",
+    "deliveryNotes": "",
+    "visible": true,
+    "mode": "shop",
+    "badge": "",
+    "delivery": "extra",
+    "sizeVariants": [
+      {
+        "pack": "pack of 475",
+        "size": "65mm",
+        "price": "",
+        "coverage": ""
+      }
+    ],
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303962512-yodpah.jpg",
+    "images": [
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787303962512-yodpah.jpg"
+    ],
+    "createdAt": "2026-08-19T13:30:22.872211+00:00",
+    "updatedAt": "2026-08-26T14:08:57.939+00:00"
+  },
+  {
+    "id": "p1787146222550_30",
+    "name": "Red Sandfaced 73mm",
+    "category": "Handmade Bricks",
+    "price": "£496.03",
+    "priceNote": "",
+    "slug": "red-sandfaced-73mm",
+    "url": "",
+    "description": "Red Sandfaced pairs a warm red body with a fine sand-textured face, which produces walls that looks matt and traditional rather than sharp and modern. The texture softens the colour slightly, which helps new work sit alongside older brickwork. A straightforward choice for extensions, housing and boundary walls in a 73mm imperial format.",
+    "colour": "",
+    "frost": "F2 — Fully frost resistant",
+    "customSpecs": "",
+    "deliveryNotes": "",
+    "visible": true,
+    "mode": "shop",
+    "badge": "",
+    "delivery": "extra",
+    "sizeVariants": [
+      {
+        "pack": "pack of 464",
+        "size": "73mm",
+        "price": "",
+        "coverage": ""
+      }
+    ],
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787304220980-918cim.jpg",
+    "images": [
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787304220980-918cim.jpg"
     ],
     "createdAt": "2026-08-19T13:30:22.872211+00:00",
     "updatedAt": "2026-08-26T14:08:57.939+00:00"
@@ -5159,38 +5162,6 @@
     "updatedAt": "2026-08-26T14:08:57.939+00:00"
   },
   {
-    "id": "p1787146222550_96",
-    "name": "Manorial Red",
-    "category": "Handmade Bricks",
-    "price": "£600.00",
-    "priceNote": "",
-    "slug": "manorial-red",
-    "url": "",
-    "description": "Manorial Red offers the warmth of the Manorial family in a more consistent red, with a gently worked surface and modest variation across each brick. It gives elevations an even, dignified appearance without tipping into uniformity, and suits housing, extensions and boundary walls. The result is warm and dependable without demanding any particular treatment or detailing.",
-    "colour": "",
-    "frost": "F2 — Fully frost resistant",
-    "customSpecs": "",
-    "deliveryNotes": "",
-    "visible": true,
-    "mode": "shop",
-    "badge": "",
-    "delivery": "extra",
-    "sizeVariants": [
-      {
-        "pack": "pack of 500",
-        "size": "65mm",
-        "price": "",
-        "coverage": ""
-      }
-    ],
-    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787305998009-hb8r73.jpg",
-    "images": [
-      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787305998009-hb8r73.jpg"
-    ],
-    "createdAt": "2026-08-19T13:30:23.192409+00:00",
-    "updatedAt": "2026-08-26T14:08:57.939+00:00"
-  },
-  {
     "id": "p1787146222550_94",
     "name": "Grampian Red Mixture",
     "category": "Handmade Bricks",
@@ -5218,6 +5189,38 @@
     "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787305505330-yft445.jpg",
     "images": [
       "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787305505330-yft445.jpg"
+    ],
+    "createdAt": "2026-08-19T13:30:23.192409+00:00",
+    "updatedAt": "2026-08-26T14:08:57.939+00:00"
+  },
+  {
+    "id": "p1787146222550_96",
+    "name": "Manorial Red",
+    "category": "Handmade Bricks",
+    "price": "£600.00",
+    "priceNote": "",
+    "slug": "manorial-red",
+    "url": "",
+    "description": "Manorial Red offers the warmth of the Manorial family in a more consistent red, with a gently worked surface and modest variation across each brick. It gives elevations an even, dignified appearance without tipping into uniformity, and suits housing, extensions and boundary walls. The result is warm and dependable without demanding any particular treatment or detailing.",
+    "colour": "",
+    "frost": "F2 — Fully frost resistant",
+    "customSpecs": "",
+    "deliveryNotes": "",
+    "visible": true,
+    "mode": "shop",
+    "badge": "",
+    "delivery": "extra",
+    "sizeVariants": [
+      {
+        "pack": "pack of 500",
+        "size": "65mm",
+        "price": "",
+        "coverage": ""
+      }
+    ],
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787305998009-hb8r73.jpg",
+    "images": [
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787305998009-hb8r73.jpg"
     ],
     "createdAt": "2026-08-19T13:30:23.192409+00:00",
     "updatedAt": "2026-08-26T14:08:57.939+00:00"
@@ -6632,38 +6635,6 @@
     "updatedAt": "2026-08-26T14:08:57.939+00:00"
   },
   {
-    "id": "p1787146222550_144",
-    "name": "Tradesman Heather",
-    "category": "Handmade Bricks",
-    "price": "£630.00",
-    "priceNote": "",
-    "slug": "tradesman-heather",
-    "url": "",
-    "description": "Tradesman Heather blends purple, brown and red tones across a face that carries a light grain, which leaves elevations with a soft, heathered depth that works as well on a whole house as on a single extension. It is a versatile, unshowy brick that sits comfortably in most settings.",
-    "colour": "",
-    "frost": "F2 — Fully frost resistant",
-    "customSpecs": "",
-    "deliveryNotes": "",
-    "visible": true,
-    "mode": "shop",
-    "badge": "",
-    "delivery": "extra",
-    "sizeVariants": [
-      {
-        "pack": "pack of 500",
-        "size": "65mm,",
-        "price": "",
-        "coverage": ""
-      }
-    ],
-    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787307594074-mj8bum.jpg",
-    "images": [
-      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787307594074-mj8bum.jpg"
-    ],
-    "createdAt": "2026-08-19T13:30:23.523068+00:00",
-    "updatedAt": "2026-08-26T14:08:57.939+00:00"
-  },
-  {
     "id": "p1787146222550_140",
     "name": "Oatmeal Textured",
     "category": "Handmade Bricks",
@@ -6691,6 +6662,38 @@
     "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787308919617-cr3uyi.jpg",
     "images": [
       "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787308919617-cr3uyi.jpg"
+    ],
+    "createdAt": "2026-08-19T13:30:23.523068+00:00",
+    "updatedAt": "2026-08-26T14:08:57.939+00:00"
+  },
+  {
+    "id": "p1787146222550_144",
+    "name": "Tradesman Heather",
+    "category": "Handmade Bricks",
+    "price": "£630.00",
+    "priceNote": "",
+    "slug": "tradesman-heather",
+    "url": "",
+    "description": "Tradesman Heather blends purple, brown and red tones across a face that carries a light grain, which leaves elevations with a soft, heathered depth that works as well on a whole house as on a single extension. It is a versatile, unshowy brick that sits comfortably in most settings.",
+    "colour": "",
+    "frost": "F2 — Fully frost resistant",
+    "customSpecs": "",
+    "deliveryNotes": "",
+    "visible": true,
+    "mode": "shop",
+    "badge": "",
+    "delivery": "extra",
+    "sizeVariants": [
+      {
+        "pack": "pack of 500",
+        "size": "65mm,",
+        "price": "",
+        "coverage": ""
+      }
+    ],
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787307594074-mj8bum.jpg",
+    "images": [
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787307594074-mj8bum.jpg"
     ],
     "createdAt": "2026-08-19T13:30:23.523068+00:00",
     "updatedAt": "2026-08-26T14:08:57.939+00:00"
@@ -7495,38 +7498,6 @@
     "updatedAt": "2026-08-26T14:08:57.94+00:00"
   },
   {
-    "id": "p1787146222550_169",
-    "name": "Waveney Red Blend",
-    "category": "Handmade Bricks",
-    "price": "£832.80",
-    "priceNote": "",
-    "slug": "waveney-red-blend",
-    "url": "",
-    "description": "Waveney Red Blend brings together warm reds and softer brown tones over a softly grained face, so elevations come out with quiet depth and an East Anglian gentleness rather than a hard industrial red. It suits period extensions, rural housing and garden walls.",
-    "colour": "",
-    "frost": "F2 — Fully frost resistant",
-    "customSpecs": "",
-    "deliveryNotes": "",
-    "visible": true,
-    "mode": "shop",
-    "badge": "",
-    "delivery": "extra",
-    "sizeVariants": [
-      {
-        "pack": "pack of 600",
-        "size": "65mm",
-        "price": "",
-        "coverage": ""
-      }
-    ],
-    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787308447132-ktm63x.jpg",
-    "images": [
-      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787308447132-ktm63x.jpg"
-    ],
-    "createdAt": "2026-08-19T13:30:23.644367+00:00",
-    "updatedAt": "2026-08-26T14:08:57.94+00:00"
-  },
-  {
     "id": "p1787146222550_168",
     "name": "Traditional Red Blend",
     "category": "Handmade Bricks",
@@ -7589,6 +7560,38 @@
     ],
     "createdAt": "2026-08-19T13:30:23.644367+00:00",
     "updatedAt": "2026-08-26T14:08:57.939+00:00"
+  },
+  {
+    "id": "p1787146222550_169",
+    "name": "Waveney Red Blend",
+    "category": "Handmade Bricks",
+    "price": "£832.80",
+    "priceNote": "",
+    "slug": "waveney-red-blend",
+    "url": "",
+    "description": "Waveney Red Blend brings together warm reds and softer brown tones over a softly grained face, so elevations come out with quiet depth and an East Anglian gentleness rather than a hard industrial red. It suits period extensions, rural housing and garden walls.",
+    "colour": "",
+    "frost": "F2 — Fully frost resistant",
+    "customSpecs": "",
+    "deliveryNotes": "",
+    "visible": true,
+    "mode": "shop",
+    "badge": "",
+    "delivery": "extra",
+    "sizeVariants": [
+      {
+        "pack": "pack of 600",
+        "size": "65mm",
+        "price": "",
+        "coverage": ""
+      }
+    ],
+    "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787308447132-ktm63x.jpg",
+    "images": [
+      "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1787308447132-ktm63x.jpg"
+    ],
+    "createdAt": "2026-08-19T13:30:23.644367+00:00",
+    "updatedAt": "2026-08-26T14:08:57.94+00:00"
   },
   {
     "id": "p1787146222550_166",
