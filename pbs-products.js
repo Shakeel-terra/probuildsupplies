@@ -135,12 +135,23 @@ function productUrl(p, prefix) {
     }
 
     function getPrice(p) {
-      if (p.sizeVariants && p.sizeVariants.length) {
-        var f = p.sizeVariants.find(function(v){ return v.price && v.price !== 'POA'; });
-        return f ? f.price : (p.price || 'POA');
+    // Pick the CHEAPEST variant with a real numeric price. The old version took
+    // the first non-POA variant, which meant a variant priced "STOCK COMING SOON"
+    // became the headline price on category cards.
+    function priceNum(v){
+      var n = parseFloat(String((v && v.price) || '').replace(/[^0-9.]/g, ''));
+      return isNaN(n) ? null : n;
+    }
+    if (p.sizeVariants && p.sizeVariants.length) {
+      var priced = p.sizeVariants.filter(function(v){ return priceNum(v) !== null; });
+      if (priced.length) {
+        priced.sort(function(a,b){ return priceNum(a) - priceNum(b); });
+        return priced[0].price;
       }
       return p.price || 'POA';
     }
+    return p.price || 'POA';
+  }
 
     var activeIdx = -1;
 
