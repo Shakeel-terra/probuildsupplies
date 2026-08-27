@@ -706,6 +706,14 @@ function productUrl(p, prefix) {
     if (path.includes('shop.html') || path.endsWith('/shop')) {
       initShop(products); return;
     }
+    // The dashboard now writes a full product grid into every category page as
+    // real HTML on publish, with correct prices and links. Re-rendering it here
+    // overwrote that with client-side logic and caused wrong prices to appear
+    // (e.g. a variant marked "STOCK COMING SOON" showing as the headline price).
+    // If a static grid is already present, leave it alone.
+    var staticGrid = document.querySelector('.pgrid');
+    var hasStaticCards = staticGrid && staticGrid.querySelector('.pcard');
+    if (!hasStaticCards) {
     if (path.includes('handmade-bricks.html') || path.endsWith('/handmade-bricks')) {
       initCategoryPage(products, 'Handmade Bricks'); return;
     }
@@ -724,6 +732,9 @@ function productUrl(p, prefix) {
     if (path.includes('plasterboards.html') || path.endsWith('/plasterboards')) {
       initCategoryPage(products, 'Plasterboards'); return;
     }
+    }
+    __reveal();
+    return;
     if (path.endsWith('/') || path.includes('index.html')) {
       initHomepage(products); return;
     }
