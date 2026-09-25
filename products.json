@@ -41,7 +41,7 @@
     "id": "p1782817085133",
     "name": "Heritage Blend",
     "category": "Handmade Bricks",
-    "price": "£810.24",
+    "price": "£543.57",
     "priceNote": "",
     "slug": "heritage-blend",
     "url": "",
@@ -58,8 +58,18 @@
       {
         "pack": "pack of 680",
         "size": "65mm",
-        "price": "",
-        "coverage": ""
+        "price": "£543.57",
+        "coverage": "",
+        "thickness": "",
+        "coverageM2": ""
+      },
+      {
+        "pack": "pack of 464",
+        "size": "73mm",
+        "price": "£567.86",
+        "coverage": "",
+        "thickness": "",
+        "coverageM2": ""
       }
     ],
     "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1785856182714-pamsiu.jpg",
@@ -67,7 +77,7 @@
       "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1785856182714-pamsiu.jpg"
     ],
     "createdAt": "2026-06-30T10:58:05.711464+00:00",
-    "updatedAt": "2026-08-26T14:08:57.94+00:00"
+    "updatedAt": "2026-09-25T11:58:22.874+00:00"
   },
   {
     "id": "p1782817174584",
