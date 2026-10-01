@@ -120,3 +120,35 @@
 
 # Bare /product.html with no slug (or a slug with no matching page)
 /product.html  /404.html  404!
+
+# ---------------------------------------------------------------
+# ONE URL PER PAGE
+# Netlify serves /delivery-areas and /delivery-areas.html as the same
+# page, which splits crawl signals between two addresses. This site uses
+# .html everywhere (450 of 452 sitemap URLs, every canonical, 103
+# existing redirect rules), so the extensionless form redirects to .html
+# rather than the other way round.
+# ---------------------------------------------------------------
+/about  /about.html  301!
+/brick-matching  /brick-matching.html  301!
+/bricks  /bricks.html  301!
+/contact  /contact.html  301!
+/delivery  /delivery.html  301!
+/delivery-areas  /delivery-areas.html  301!
+/handmade-bricks  /handmade-bricks.html  301!
+/indian-sandstone  /indian-sandstone.html  301!
+/insulation  /insulation.html  301!
+/paving  /paving.html  301!
+/plasterboards  /plasterboards.html  301!
+/porcelain-paving  /porcelain-paving.html  301!
+/privacy-policy  /privacy-policy.html  301!
+/reclaimed-bricks  /reclaimed-bricks.html  301!
+/returns  /returns.html  301!
+/samples  /samples.html  301!
+/shop  /shop.html  301!
+/terms  /terms.html  301!
+/trade-accounts  /trade-accounts.html  301!
+
+# Homepage: /index.html is a duplicate of the root. The canonical tag on
+# index.html already points at /, so send the .html form there.
+/index.html  /  301!
