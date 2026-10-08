@@ -89,7 +89,7 @@ function productUrl(p, prefix) {
     '.nav{overflow:visible!important}' +
     '.nav-i{overflow:visible!important}' +
     // Keep logo and cart visible above search on mobile
-    '@media(max-width:768px){.srch{position:static!important;transform:none!important;width:100%!important;max-width:100%!important;display:none!important}}';
+    '@media(max-width:768px){.srch{position:static!important;transform:none!important;width:100%!important;max-width:100%!important;display:flex!important;order:3;flex-basis:100%;margin-top:8px}}' + '@media(max-width:768px){.hdr-i{flex-wrap:wrap;height:auto!important;padding-bottom:10px}}' + '@media(max-width:768px){.srch input{width:100%;font-size:16px}}';
   document.head.appendChild(layoutStyle);
 
   // 3. Live search with dropdown
@@ -125,7 +125,7 @@ function productUrl(p, prefix) {
 
     function loadAndSearch() {
       if (loaded) { doSearch(); return; }
-      fetch('products.json?v=' + Date.now())
+      fetch('/products.json?v=' + Date.now())
         .then(function(r){ return r.json(); })
         .then(function(data){
           allProducts = (data || []).filter(function(p){ return p.visible !== false; });
@@ -201,6 +201,19 @@ function productUrl(p, prefix) {
     input.addEventListener('input', loadAndSearch);
     input.addEventListener('focus', function(){ if (input.value.length >= 2) drop.classList.add('open'); });
 
+    input.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter') {
+        var q = input.value.trim();
+        if (q.length >= 2) {
+          var active = drop.querySelector('.sd-item.sel, .sd-all.sel');
+          if (!active) {            // nothing highlighted — go to full results
+            e.preventDefault();
+            window.location.href = '/search.html?q=' + encodeURIComponent(q);
+            return;
+          }
+        }
+      }
+    });
     input.addEventListener('keydown', function(e) {
       var items = drop.querySelectorAll('.sd-item, .sd-all');
       if (e.key === 'ArrowDown') {
