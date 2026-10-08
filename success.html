@@ -561,8 +561,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <p style="margin-top:28px;font-size:.82rem;color:#888">Questions? Call <a href="tel:01772287622" style="color:#F55C1B">01772 287622</a> or WhatsApp <a href="https://wa.me/447549809252" style="color:#25D366">07549 809252</a></p>
 </div>
 <script>
-// Clear cart on successful payment
-try { localStorage.removeItem('pbs_cart'); } catch(e) {}
+  // Conversion tracking reads the cart to report order value, so it must run
+  // before the cart is cleared. pbs-track.js fires the purchase event on load.
+  (function(){
+    function clearCart(){ try { localStorage.removeItem('pbs_cart'); } catch(e) {} }
+    if (window.__pbsPurchaseTracked) { clearCart(); return; }
+    // give pbs-track.js a tick to read and report, then clear
+    setTimeout(clearCart, 1200);
+  })();
 </script>
   </div>
 </div></footer>
