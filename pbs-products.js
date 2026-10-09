@@ -122,6 +122,14 @@ function productUrl(p, prefix) {
 
     var allProducts = [];
     var loaded = false;
+    // esc() lives further down the file in another scope, so the search
+    // dropdown crashed with "esc is not defined" the moment it rendered a
+    // result. Local copy keeps it self-contained.
+    function sEsc(x){
+      return String(x == null ? '' : x)
+        .replace(/&/g,'&amp;').replace(/</g,'&lt;')
+        .replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+    }
 
     function loadAndSearch() {
       if (loaded) { doSearch(); return; }
@@ -167,7 +175,7 @@ function productUrl(p, prefix) {
       }).slice(0, 8);
 
       if (!results.length) {
-        drop.innerHTML = '<div class="sd-none">No products found for "' + q + '"</div>';
+        drop.innerHTML = '<div class="sd-none">No products found for "' + sEsc(q) + '"</div>';
         drop.classList.add('open');
         return;
       }
@@ -177,12 +185,12 @@ function productUrl(p, prefix) {
         a.className = 'sd-item';
         a.href = productUrl(p);
         a.innerHTML =
-          '<div class="sd-img">' + (p.image ? '<img src="' + p.image + '" alt="' + esc(p.name||'') + '">' : '📦') + '</div>' +
+          '<div class="sd-img">' + (p.image ? '<img src="' + sEsc(p.image) + '" alt="' + sEsc(p.name) + '">' : '📦') + '</div>' +
           '<div class="sd-info">' +
-            '<div class="sd-name">' + (p.name||'') + '</div>' +
-            '<div class="sd-cat">' + (p.category||'') + '</div>' +
+            '<div class="sd-name">' + sEsc(p.name) + '</div>' +
+            '<div class="sd-cat">' + sEsc(p.category) + '</div>' +
           '</div>' +
-          '<div class="sd-price">' + getPrice(p) + '</div>';
+          '<div class="sd-price">' + sEsc(getPrice(p)) + '</div>';
         drop.appendChild(a);
       });
 
