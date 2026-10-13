@@ -873,6 +873,10 @@ function productUrl(p, prefix) {
     openCart();
   }
 
+  // Exposed so pages outside this file — the samples picker, for one — can put
+  // things in the same cart rather than jumping straight to Stripe.
+  window.pbsAddToCart = function(item, qty){ addItem(item, qty || 1); };
+
   function removeItem(id, size) {
     var cart = getCart().filter(function(c){ return !(c.id===id && (c.size||'')===(size||'')); });
     saveCart(cart);
