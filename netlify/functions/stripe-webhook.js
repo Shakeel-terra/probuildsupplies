@@ -154,7 +154,18 @@ exports.handler = async function (event) {
   }
 
   const customerDetails = session.customer_details || {};
-  const shipping = session.shipping_details || session.customer_details || null;
+  // Stripe moved shipping_details into collected_information.shipping_details
+  // (API 2025-03-31) and removed the old top-level field. Reading the old one
+  // returned undefined, so this fell through to customer_details — the BILLING
+  // address — and orders were recorded for delivery to the wrong place.
+  // Order of preference: new location, old location, then billing as last resort.
+  const collected = session.collected_information || {};
+  const shipping =
+        collected.shipping_details
+     || session.shipping_details
+     || session.customer_details
+     || null;
+  const shippingIsBilling = !collected.shipping_details && !session.shipping_details;
 
   const orderRow = {
     user_id: session.client_reference_id || null,
@@ -167,6 +178,7 @@ exports.handler = async function (event) {
     total: typeof session.amount_total === 'number' ? session.amount_total / 100 : 0,
     currency: session.currency || 'gbp',
     shipping_address: shipping ? (shipping.address || null) : null,
+    shipping_is_billing: shippingIsBilling,
     billing_address: customerDetails.address || null,
     status: 'Processing',
   };
@@ -196,6 +208,51 @@ exports.handler = async function (event) {
       console.error('Supabase insert failed:', upsertRes.statusCode, upsertRes.body);
       // Return 500 so Stripe retries the webhook later.
       return { statusCode: 500, body: 'Database error' };
+    }
+
+    // ── Telegram notification ────────────────────────────────────
+    // Email was getting lost in the volume, so new orders ping a
+    // Telegram channel. Silent no-op if the env vars aren't set, and
+    // any failure is swallowed — a notification must never cost an order.
+    try {
+      const tgToken = process.env.TELEGRAM_BOT_TOKEN;
+      const tgChat  = process.env.TELEGRAM_CHAT_ID;
+      if (tgToken && tgChat) {
+        const lines = (orderRow.items || []).map(function (it) {
+          return '• ' + (it.quantity || 1) + ' x ' + (it.name || 'Item')
+               + (it.size ? ' (' + it.size + ')' : '');
+        }).join('\n');
+
+        const isSamples = (orderRow.items || []).some(function (it) {
+          return /sample/i.test(it.name || '');
+        });
+
+        const a = orderRow.shipping_address || {};
+        const addr = [a.line1, a.line2, a.city, a.postal_code]
+          .filter(Boolean).join(', ') || 'no address on session';
+
+        const text =
+            (isSamples ? '🧱 SAMPLE ORDER' : '🛒 NEW ORDER') + '\n\n'
+          + '£' + Number(orderRow.total || 0).toFixed(2) + '\n\n'
+          + lines + '\n\n'
+          + (orderRow.customer_name || 'No name') + '\n'
+          + (orderRow.customer_phone ? orderRow.customer_phone + '\n' : '')
+          + (orderRow.customer_email || '') + '\n\n'
+          + 'Deliver to: ' + addr
+          + (orderRow.shipping_is_billing
+              ? '\n\n⚠️ Billing address used — no delivery address was given'
+              : '');
+
+        await request(
+          { hostname: 'api.telegram.org',
+            path: '/bot' + tgToken + '/sendMessage',
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' } },
+          JSON.stringify({ chat_id: tgChat, text: text })
+        );
+      }
+    } catch (e) {
+      console.error('Telegram notify failed:', e.message);
     }
   } catch (e) {
     console.error('Supabase request failed:', e.message);
