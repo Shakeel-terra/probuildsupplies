@@ -774,11 +774,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       }]})
     })
     .then(function(r){return r.json();})
-    .then(function(d){ if(d&&d.url){window.location.href=d.url;return;} throw new Error('no url'); })
-    .catch(function(){
+    .then(function(d){
+      if(d&&d.url){window.location.href=d.url;return;}
+      // surface Stripe's own message — a generic failure tells nobody anything
+      throw new Error((d&&d.error) || 'no url returned');
+    })
+    .catch(function(err){
       btn.disabled=false; refreshChosen();
       warn.style.display='block';
-      warn.textContent='Something went wrong starting checkout. Please call 01772 287622 and we will take the order over the phone.';
+      warn.textContent='Could not start checkout: '+(err&&err.message?err.message:'unknown error')
+        +'. Please call 01772 287622 and we will take the order over the phone.';
     });
   });
 })();

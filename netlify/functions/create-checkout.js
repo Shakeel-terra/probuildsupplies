@@ -41,7 +41,19 @@ exports.handler = async function(event) {
   try { body = JSON.parse(event.body); }
   catch(e) { return { statusCode: 400, body: JSON.stringify({ error: 'Invalid request' }) }; }
 
-  const { items, successUrl, cancelUrl, userId, customerEmail } = body;
+  const { items, userId, customerEmail } = body;
+
+  // success_url / cancel_url used to be required from the caller, so any page
+  // that didn't send them (the samples page, for one) failed with
+  // "Invalid URL: An explicit scheme must be provided". Derive sensible
+  // defaults from the request origin so every caller works.
+  const origin =
+        (event.headers && (event.headers.origin || event.headers.Origin))
+     || (event.headers && event.headers.referer && event.headers.referer.replace(/\/[^\/]*$/, ''))
+     || 'https://probuildsupplies.uk';
+  const base = String(origin).replace(/\/+$/, '');
+  const successUrl = body.successUrl || (base + '/success.html?session_id={CHECKOUT_SESSION_ID}');
+  const cancelUrl  = body.cancelUrl  || (base + '/shop.html');
   if (!items || !items.length) {
     return { statusCode: 400, body: JSON.stringify({ error: 'No items in cart' }) };
   }
