@@ -183,7 +183,10 @@ function productUrl(p, prefix) {
       results.forEach(function(p) {
         var a = document.createElement('a');
         a.className = 'sd-item';
-        a.href = productUrl(p);
+        // Absolute, not relative: the dropdown appears on every page including
+      // /products/*, where a relative link resolved to /products/products/…
+      // and 404'd.
+      a.href = '/' + productUrl(p).replace(/^\/+/, '');
         a.innerHTML =
           '<div class="sd-img">' + (p.image ? '<img src="' + sEsc(p.image) + '" alt="' + sEsc(p.name) + '">' : '📦') + '</div>' +
           '<div class="sd-info">' +
@@ -197,7 +200,7 @@ function productUrl(p, prefix) {
       if (results.length === 8) {
         var all = document.createElement('a');
         all.className = 'sd-all';
-        all.href = 'shop.html?q=' + encodeURIComponent(q);
+        all.href = '/shop.html?q=' + encodeURIComponent(q);
         all.textContent = 'View all results →';
         drop.appendChild(all);
       }
@@ -560,7 +563,7 @@ function productUrl(p, prefix) {
         + '<button type="submit" class="btn-o">🔔 Notify Me</button>'
         + '</form>'
         + '<div id="restock-ok" style="display:none;color:var(--gr);font-weight:600;margin-bottom:10px">✅ Thanks — we\'ll email you as soon as it\'s back in stock.</div>'
-        + '<a href="contact.html" class="btn-dk" style="display:inline-block">📞 Or Call 01772 287622</a>'
+        + '<a href="/contact.html" class="btn-dk" style="display:inline-block">📞 Or Call 01772 287622</a>'
         + '</div>';
       var rf = document.getElementById('restock-form');
       if (rf) {
@@ -573,7 +576,7 @@ function productUrl(p, prefix) {
               var ok = document.getElementById('restock-ok');
               if (ok) ok.style.display = 'block';
             })
-            .catch(function(){ window.location.href = 'contact.html'; });
+            .catch(function(){ window.location.href = '/contact.html'; });
         });
       }
       __reveal();
@@ -912,7 +915,7 @@ function productUrl(p, prefix) {
     if (!cart.length) {
       itemsEl.innerHTML =
         '<div class="pbs-empty">🛒<br><p>Your cart is empty</p>' +
-        '<p style="margin-top:16px"><a href="shop.html" style="color:#F55C1B;font-weight:600">Browse products →</a></p></div>';
+        '<p style="margin-top:16px"><a href="/shop.html" style="color:#F55C1B;font-weight:600">Browse products →</a></p></div>';
       if (footEl) footEl.style.display = 'none';
       return;
     }
@@ -950,7 +953,7 @@ function productUrl(p, prefix) {
     }).join('');
 
     if (hasPOA) {
-      itemsEl.innerHTML += '<div class="pbs-poa-note">⚠️ Some items are priced on application. To enquire, please <a href="contact.html" style="color:#F55C1B">contact us</a> or call 01772 287622.</div>';
+      itemsEl.innerHTML += '<div class="pbs-poa-note">⚠️ Some items are priced on application. To enquire, please <a href="/contact.html" style="color:#F55C1B">contact us</a> or call 01772 287622.</div>';
     }
 
     if (footEl) {
