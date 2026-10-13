@@ -55,6 +55,9 @@ exports.handler = async function(event) {
   params.append('phone_number_collection[enabled]', 'true');
   params.append('payment_method_types[]', 'card');
   params.append('customer_creation', 'always');
+  // Sample orders issue a £7.99 promotion code redeemable against a later
+  // order, so the code box has to be available at checkout.
+  params.append('allow_promotion_codes', 'true');
   if (userId) params.append('client_reference_id', String(userId));
   if (customerEmail) params.append('customer_email', String(customerEmail));
 
@@ -70,7 +73,7 @@ exports.handler = async function(event) {
     params.append('line_items[' + i + '][price_data][product_data][name]',
       item.name + (item.size ? ' — ' + item.size : ''));
     params.append('line_items[' + i + '][price_data][product_data][description]',
-      'Free delivery to UK mainland. Trade prices.');
+      item.description || 'Free delivery to UK mainland. Trade prices.');
     // Note: image URLs from Supabase are too long for Stripe (2048 char limit) so omitted
     params.append('line_items[' + i + '][quantity]', String(item.quantity || 1));
   });
