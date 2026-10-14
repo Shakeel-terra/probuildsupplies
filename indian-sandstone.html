@@ -671,6 +671,176 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div></div>
 <div class="trust"><div class="trust-i"><div class="ti"><span class="ic">🚚</span><div><strong>Free Delivery</strong><span>Bricks &amp; paving, UK mainland</span></div></div><div class="ti"><span class="ic">📦</span><div><strong>Next-Day Dispatch</strong><span>Order before 1pm</span></div></div><div class="ti"><span class="ic">🏅</span><div><strong>Trade Quality</strong><span>Premium materials</span></div></div><div class="ti"><span class="ic">📞</span><div><strong>Expert Advice</strong><span>01772 287622</span></div></div></div></div>
 
+<div class="sec" style="margin-top:0;padding-bottom:0">
+<div style="max-width:1100px;margin:0 auto">
+<h2 style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.8rem;text-transform:uppercase;color:var(--dk);margin-bottom:6px">Filter Indian Sandstone</h2>
+<p style="color:var(--mid);font-size:.95rem;line-height:1.7;margin-bottom:18px">Narrow the range by slab size or pack quantity.</p>
+
+<div id="ss-groups"></div>
+
+<div style="display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-top:6px;padding-top:14px;border-top:1px solid var(--bd)">
+<label style="display:inline-flex;align-items:center;gap:8px;cursor:pointer;color:var(--mid);font-size:.92rem">
+<input type="checkbox" id="ss-soon" style="width:17px;height:17px;cursor:pointer">
+Hide items awaiting stock
+</label>
+<div style="display:flex;align-items:center;gap:12px">
+<span id="ss-count" style="color:var(--mid);font-size:.9rem"></span>
+<button type="button" id="ss-clear" style="background:none;border:1px solid var(--bd);border-radius:5px;padding:7px 14px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.85rem;text-transform:uppercase;letter-spacing:.4px;color:var(--dk);cursor:pointer">Clear</button>
+</div>
+</div>
+<div id="ss-none" style="display:none;background:var(--wh);border:1px solid var(--bd);border-radius:6px;padding:26px;margin-top:18px;text-align:center">
+<div style="font-size:1.6rem;margin-bottom:8px">🪨</div>
+<p style="color:var(--mid);font-size:.95rem;line-height:1.7;margin-bottom:14px">Nothing in stock matches that combination. Tick <strong>Hide items awaiting stock</strong> to see what is coming, remove a filter, or call <strong>01772 287622</strong> — we can often source what is not listed.</p>
+<button type="button" id="ss-clear2" class="btn-o" style="border:none;cursor:pointer">Clear filters</button>
+</div>
+</div>
+</div>
+
+<script>
+(function(){
+  var groupsEl=document.getElementById('ss-groups');
+  var countEl=document.getElementById('ss-count');
+  var noneEl=document.getElementById('ss-none');
+  var soonEl=document.getElementById('ss-soon');
+  var grid=null, cards=[], bySlug={}, active={};
+
+  var CHIP='display:inline-block;background:var(--wh);color:var(--dk);border:1px solid var(--bd);'
+    +'border-radius:22px;padding:8px 16px;font-family:\'Barlow Condensed\',sans-serif;font-weight:700;'
+    +'font-size:.9rem;letter-spacing:.3px;cursor:pointer;white-space:nowrap;transition:all .15s';
+  var CHIP_ON='display:inline-block;background:var(--o);color:#fff;border:1px solid var(--o);'
+    +'border-radius:22px;padding:8px 16px;font-family:\'Barlow Condensed\',sans-serif;font-weight:700;'
+    +'font-size:.9rem;letter-spacing:.3px;cursor:pointer;white-space:nowrap';
+
+  function esc(x){return String(x==null?'':x).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+  function priced(v){ return /\d/.test(String((v&&v.price)||'')); }
+
+  function sizeOf(v){
+    var s=String(v.size||'');
+    if(/600\s*x\s*600/i.test(s)) return '600 x 600mm';
+    if(/600\s*x\s*900/i.test(s)||/900\s*x\s*600/i.test(s)) return '600 x 900mm';
+    if(/TUMB/i.test(s)) return 'Mix Patio Pack — Calibrated & Tumbled';
+    if(/MIX/i.test(s)) return 'Mix Patio Pack';
+    return s.trim()||'Other';
+  }
+  function packOf(v){
+    var m=String(v.pack||'').match(/(\d+)/);
+    return m ? 'Pack of '+m[1] : '';
+  }
+
+  var GROUPS=[
+    {key:'size', label:'Slab Size', fn:sizeOf,
+     order:['600 x 900mm','600 x 600mm','Mix Patio Pack','Mix Patio Pack — Calibrated & Tumbled']},
+    {key:'pack', label:'Pack Size', fn:packOf, order:[]}
+  ];
+
+  function variantsOf(p){ return p.sizeVariants||[]; }
+
+  function matches(p){
+    var vs=variantsOf(p);
+    if(soonEl.checked) vs=vs.filter(priced);
+    if(!vs.length) return false;
+    // every active filter must be satisfied by the SAME variant, otherwise
+    // "16mm + 600x600" would match a product that has them separately.
+    return vs.some(function(v){
+      return GROUPS.every(function(g){
+        var want=active[g.key];
+        if(!want || !want.length) return true;
+        return want.indexOf(g.fn(v))>-1;
+      });
+    });
+  }
+
+  function apply(){
+    var shown=0;
+    cards.forEach(function(c){
+      var p=bySlug[c.slug];
+      var ok=p ? matches(p) : true;
+      c.el.style.display = ok ? '' : 'none';
+      if(ok) shown++;
+    });
+    countEl.textContent = shown + ' of ' + cards.length + ' products';
+    noneEl.style.display = shown ? 'none' : 'block';
+    if(grid) grid.style.display = shown ? '' : 'none';
+  }
+
+  function renderGroups(products){
+    var html='';
+    GROUPS.forEach(function(g){
+      var vals={};
+      products.forEach(function(p){
+        variantsOf(p).forEach(function(v){
+          var val=g.fn(v);
+          if(val) vals[val]=(vals[val]||0)+1;
+        });
+      });
+      var keys=Object.keys(vals);
+      if(!keys.length) return;
+      keys.sort(function(a,b){
+        var ia=g.order.indexOf(a), ib=g.order.indexOf(b);
+        if(ia>-1&&ib>-1) return ia-ib;
+        if(ia>-1) return -1;
+        if(ib>-1) return 1;
+        var na=parseInt(a.replace(/\D/g,''),10), nb=parseInt(b.replace(/\D/g,''),10);
+        return (isNaN(na)?0:na)-(isNaN(nb)?0:nb);
+      });
+      html+='<h3 style="font-family:\'Barlow Condensed\',sans-serif;font-weight:700;font-size:1.05rem;color:var(--dk);margin:16px 0 9px">'+esc(g.label)+'</h3>'
+        +'<div style="display:flex;flex-wrap:wrap;gap:9px">'
+        +keys.map(function(k){
+            return '<button type="button" data-g="'+esc(g.key)+'" data-v="'+esc(k)+'" style="'+CHIP+'">'+esc(k)+'</button>';
+          }).join('')
+        +'</div>';
+    });
+    groupsEl.innerHTML=html;
+  }
+
+  function init(products){
+    var porc=products.filter(function(p){
+      return p.visible!==false && /sandstone/i.test(p.category||'');
+    });
+    porc.forEach(function(p){ bySlug[p.slug]=p; });
+
+    grid=document.querySelector('.pgrid[data-cat]') || document.querySelector('.pgrid');
+    if(!grid) return;
+    Array.prototype.forEach.call(grid.querySelectorAll('a.pcard'), function(a){
+      var href=a.getAttribute('href')||'';
+      var slug=null;
+      // match the card to its product by slug in the href
+      Object.keys(bySlug).forEach(function(s){
+        if(href.indexOf(s)>-1 && (!slug || s.length>slug.length)) slug=s;
+      });
+      cards.push({el:a, slug:slug});
+    });
+
+    renderGroups(porc);
+    apply();
+
+    groupsEl.addEventListener('click', function(e){
+      var b=e.target.closest('button[data-g]');
+      if(!b) return;
+      var g=b.dataset.g, v=b.dataset.v;
+      active[g]=active[g]||[];
+      var i=active[g].indexOf(v);
+      if(i>-1){ active[g].splice(i,1); b.style.cssText=CHIP; }
+      else { active[g].push(v); b.style.cssText=CHIP_ON; }
+      apply();
+    });
+    soonEl.addEventListener('change', apply);
+    function clear(){
+      active={};
+      Array.prototype.forEach.call(groupsEl.querySelectorAll('button[data-g]'),function(b){b.style.cssText=CHIP;});
+      soonEl.checked=false;
+      apply();
+    }
+    document.getElementById('ss-clear').addEventListener('click', clear);
+    document.getElementById('ss-clear2').addEventListener('click', clear);
+  }
+
+  fetch('/products.json?v='+Date.now())
+    .then(function(r){return r.json();})
+    .then(init)
+    .catch(function(){ groupsEl.innerHTML='<p style="color:var(--mid);font-size:.9rem">Filters unavailable — call 01772 287622 and we will help you find the right slab.</p>'; });
+})();
+</script>
 <div class="sec"><!--PBS:GRID:START-->
 <div class="pgrid" data-cat="Indian Sandstone"><a href="products/kandla-grey-sandstone.html" class="pcard"><div class="pimg" style="background:linear-gradient(135deg,#C8A45A20,#C8A45A50)"><img src="https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1786364458789-v8q32e.jpg" alt="Kandla Grey Sandstone" loading="lazy" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0"></div><div class="pinfo"><div class="pcat">Indian Sandstone</div><div class="pname">Kandla Grey Sandstone</div><div class="pprice">£470.57</div></div></a><a href="products/autumn-brown.html" class="pcard"><div class="pimg" style="background:linear-gradient(135deg,#C8A45A20,#C8A45A50)"><img src="https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1786368715555-sof42m.jpg" alt="Autumn Brown Sandstone" loading="lazy" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0"></div><div class="pinfo"><div class="pcat">Indian Sandstone</div><div class="pname">Autumn Brown Sandstone</div><div class="pprice">£470.57</div></div></a><a href="products/fossil-mint.html" class="pcard"><div class="pimg" style="background:linear-gradient(135deg,#C8A45A20,#C8A45A50)"><img src="https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1786371048051-pckrvg.jpg" alt="Fossil Mint Sandstone" loading="lazy" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0"></div><div class="pinfo"><div class="pcat">Indian Sandstone</div><div class="pname">Fossil Mint Sandstone</div><div class="pprice">£526.44</div></div></a><a href="products/yellow-mint.html" class="pcard"><div class="pimg" style="background:linear-gradient(135deg,#C8A45A20,#C8A45A50)"><img src="https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1786371265029-x19yps.jpg" alt="Yellow Mint Sandstone" loading="lazy" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0"></div><div class="pinfo"><div class="pcat">Indian Sandstone</div><div class="pname">Yellow Mint Sandstone</div><div class="pprice">£458.63</div></div></a><a href="products/rippon-buff.html" class="pcard"><div class="pimg" style="background:linear-gradient(135deg,#C8A45A20,#C8A45A50)"><img src="https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1786371361382-64jn46.jpg" alt="Rippon Buff Sandstone" loading="lazy" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0"></div><div class="pinfo"><div class="pcat">Indian Sandstone</div><div class="pname">Rippon Buff Sandstone</div><div class="pprice">£494.80</div></div></a><a href="products/york-buff.html" class="pcard"><div class="pimg" style="background:linear-gradient(135deg,#C8A45A20,#C8A45A50)"><img src="https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1786371634093-b4mup5.jpg" alt="York Buff Sandstone" loading="lazy" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0"></div><div class="pinfo"><div class="pcat">Indian Sandstone</div><div class="pname">York Buff Sandstone</div><div class="pprice">£458.63</div></div></a><a href="products/camel-dust.html" class="pcard"><div class="pimg" style="background:linear-gradient(135deg,#C8A45A20,#C8A45A50)"><img src="https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1786371718216-xos3fk.jpg" alt="Camel Dust Sandstone" loading="lazy" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0"></div><div class="pinfo"><div class="pcat">Indian Sandstone</div><div class="pname">Camel Dust Sandstone</div><div class="pprice">£458.63</div></div></a><a href="products/raj-green.html" class="pcard"><div class="pimg" style="background:linear-gradient(135deg,#C8A45A20,#C8A45A50)"><img src="https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1786366742988-7g68n3.jpg" alt="Raj Green Sandstone" loading="lazy" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0"></div><div class="pinfo"><div class="pcat">Indian Sandstone</div><div class="pname">Raj Green Sandstone</div><div class="pprice">£513.71</div></div></a><a href="products/black-sandstone.html" class="pcard"><div class="pimg" style="background:linear-gradient(135deg,#C8A45A20,#C8A45A50)"><img src="https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1786371916213-fhu2w0.jpg" alt="Antique Black Sandstone" loading="lazy" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0"></div><div class="pinfo"><div class="pcat">Indian Sandstone</div><div class="pname">Antique Black Sandstone</div><div class="pprice">£568.24</div></div></a></div>
 <script type="application/ld+json">
