@@ -532,13 +532,13 @@
   },
   {
     "id": "p1785755042436",
-    "name": "20mm - HS GREY - PORCELAIN PAVING - 600x900mm",
+    "name": "HS GREY - PORCELAIN PAVING",
     "category": "Porcelain Paving",
     "price": "£513.65",
     "priceNote": "Pack of 40 Pieces | 600 x 900mm",
     "slug": "hs-grey-porcelain-paving-600x900mm",
     "url": "",
-    "description": "HS Grey porcelain paving brings a clean, contemporary grey tone with a subtle stone effect texture, giving your patio or garden a natural, timeless finish without the upkeep of real stone. Manufactured from dense, vitrified porcelain at 20mm thick, these slabs are frost proof, low porosity and highly stain resistant, making them a hard wearing choice for the UK's unpredictable weather.\n\nThe lightly textured surface offers reliable slip resistance, so it looks and performs well whether it's wet or dry, ideal for patios, pathways, driveways and pool surrounds. Easy to lay, simple to clean, and needing no sealing, HS Grey porcelain paving slabs hold their colour and finish for years to come.\n\nSearching for porcelain paving near me? We supply and deliver HS Grey porcelain paving slabs across Preston, Lancashire and throughout the UK, with fast turnaround for trade and DIY projects alike.\n\nFAQs\n\nIs HS Grey porcelain paving slip resistant?\nYes. The textured surface provides reliable grip in wet and dry conditions, making it a safe choice for patios and pathways.\n\nWill HS Grey porcelain paving fade or stain over time?\nNo. Porcelain has very low water absorption, so it resists staining, fading and algae build up far better than natural stone.\n\nIs this porcelain paving suitable for driveways?\nYes, at 20mm thick it's suitable for domestic driveways as well as patios and garden paths, when laid on a properly prepared sub base.",
+    "description": "HS Grey porcelain paving brings a clean, contemporary grey tone with a subtle stone effect texture, giving your patio or garden a natural, timeless finish without the upkeep of real stone. Manufactured from dense, vitrified porcelain at this thickness, these slabs are frost proof, low porosity and highly stain resistant, making them a hard wearing choice for the UK's unpredictable weather. The lightly textured surface offers reliable slip resistance, so it looks and performs well whether it's wet or dry, ideal for patios, pathways, driveways and pool surrounds. Easy to lay, simple to clean, and needing no sealing, HS Grey porcelain paving slabs hold their colour and finish for years to come. Searching for porcelain paving near me? We supply and deliver HS Grey porcelain paving slabs across Preston, Lancashire and throughout the UK, with fast turnaround for trade and DIY projects alike. FAQs Is HS Grey porcelain paving slip resistant?\nYes. The textured surface provides reliable grip in wet and dry conditions, making it a safe choice for patios and pathways. Will HS Grey porcelain paving fade or stain over time?\nNo. Porcelain has very low water absorption, so it resists staining, fading and algae build up far better than natural stone. Is this porcelain paving suitable for driveways?\nYes, at this thickness it's suitable for domestic driveways as well as patios and garden paths, when laid on a properly prepared sub base.",
     "colour": "",
     "frost": "F2 — Fully frost resistant",
     "customSpecs": "R11 Matt anti-slip\nVitrified Porcelain / CE Certified",
@@ -551,31 +551,35 @@
     "sizeVariants": [
       {
         "pack": "Pack of 40 Pieces",
-        "size": "600 x 900mm",
+        "size": "20mm — 600 x 900mm",
         "price": "£525.10",
         "coverage": "£24.31",
-        "coverageM2": "21.6"
+        "coverageM2": "21.6",
+        "thickness": "20mm"
       },
       {
         "pack": "Pack of 60 Pieces",
-        "size": "600 x 600mm",
+        "size": "20mm — 600 x 600mm",
         "price": "£513.65",
         "coverage": "£23.78",
-        "coverageM2": "21.6"
+        "coverageM2": "21.6",
+        "thickness": "20mm"
       },
       {
         "pack": "Pack of 72 Pieces",
-        "size": "MIX PATIO PACKS",
+        "size": "20mm — Mix Patio Packs",
         "price": "STOCK COMING SOON",
         "coverage": "",
-        "coverageM2": ""
+        "coverageM2": "",
+        "thickness": "20mm"
       },
       {
         "pack": "Pack of 52 Pieces",
-        "size": "16mm x 600 x 900",
+        "size": "16mm — 600 x 900mm",
         "price": "STOCK COMING SOON",
         "coverage": "",
-        "coverageM2": ""
+        "coverageM2": "",
+        "thickness": "16mm"
       }
     ],
     "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1785856187707-cbu6e3.jpg",
@@ -589,13 +593,13 @@
   },
   {
     "id": "p1785769941768",
-    "name": "20mm - HS BEIGE - PORCELAIN PAVING - 600x900mm",
+    "name": "HS BEIGE - PORCELAIN PAVING",
     "category": "Porcelain Paving",
     "price": "£513.65",
     "priceNote": "",
     "slug": "hs-beige-porcelain-paving-600x900mm",
     "url": "",
-    "description": "HS Beige porcelain paving brings a warm, sandstone effect finish to any outdoor space, with soft tonal veining that mimics natural stone while offering all the practical benefits of porcelain. Manufactured at 20mm thick, these slabs are frost proof, low porosity and highly resistant to staining, making them well suited to the demands of the British climate.\n\nThe subtle texture underfoot provides dependable slip resistance in wet and dry conditions, making HS Beige a versatile choice for patios, pathways, driveways and entertaining areas. It pairs particularly well with contemporary garden furniture and outdoor living spaces, creating a smooth transition between indoors and out. Low maintenance and simple to clean, it holds its warm tone for years without sealing or specialist treatment.\n\nLooking for porcelain paving near me? We supply and deliver HS Beige porcelain paving slabs across Preston, Lancashire and throughout the UK, with fast turnaround for trade and DIY projects alike.\n\nFAQs\n\nIs HS Beige porcelain paving slip resistant?\nYes. The textured surface provides reliable grip underfoot, even when wet, making it a safe choice for outdoor areas.\n\nDoes HS Beige porcelain paving fade in sunlight?\nNo. Porcelain is highly UV stable and will not fade or discolour over time, unlike many natural stone alternatives.\n\nCan HS Beige porcelain paving be used both indoors and outdoors?\nYes. Its consistent finish and durability make it suitable for creating a seamless look between indoor and outdoor living spaces.",
+    "description": "HS Beige porcelain paving brings a warm, sandstone effect finish to any outdoor space, with soft tonal veining that mimics natural stone while offering all the practical benefits of porcelain. Manufactured to these slabs are frost proof, low porosity and highly resistant to staining, making them well suited to the demands of the British climate. The subtle texture underfoot provides dependable slip resistance in wet and dry conditions, making HS Beige a versatile choice for patios, pathways, driveways and entertaining areas. It pairs particularly well with contemporary garden furniture and outdoor living spaces, creating a smooth transition between indoors and out. Low maintenance and simple to clean, it holds its warm tone for years without sealing or specialist treatment. Looking for porcelain paving near me? We supply and deliver HS Beige porcelain paving slabs across Preston, Lancashire and throughout the UK, with fast turnaround for trade and DIY projects alike. FAQs Is HS Beige porcelain paving slip resistant?\nYes. The textured surface provides reliable grip underfoot, even when wet, making it a safe choice for outdoor areas. Does HS Beige porcelain paving fade in sunlight?\nNo. Porcelain is highly UV stable and will not fade or discolour over time, unlike many natural stone alternatives. Can HS Beige porcelain paving be used both indoors and outdoors?\nYes. Its consistent finish and durability make it suitable for creating a seamless look between indoor and outdoor living spaces.",
     "colour": "",
     "frost": "F2 — Fully frost resistant",
     "customSpecs": "R11 Matt anti-slip\nVitrified Porcelain / CE Certified",
@@ -608,31 +612,35 @@
     "sizeVariants": [
       {
         "pack": "Pack of 40 Pieces",
-        "size": "600 x 900mm",
+        "size": "20mm — 600 x 900mm",
         "price": "£525.10",
         "coverage": "£24.31",
-        "coverageM2": "21.6"
+        "coverageM2": "21.6",
+        "thickness": "20mm"
       },
       {
         "pack": "Pack of 60 Pieces",
-        "size": "600 x 600mm",
+        "size": "20mm — 600 x 600mm",
         "price": "£513.65",
         "coverage": "£23.78",
-        "coverageM2": "21.6"
+        "coverageM2": "21.6",
+        "thickness": "20mm"
       },
       {
         "pack": "Pack of 72 Pieces",
-        "size": "MIX PATIO PACKS",
+        "size": "20mm — Mix Patio Packs",
         "price": "£538.71",
         "coverage": "£25.58",
-        "coverageM2": "21.06"
+        "coverageM2": "21.06",
+        "thickness": "20mm"
       },
       {
         "pack": "Pack of 52 Pieces",
-        "size": "16mm x 600 x 900",
+        "size": "16mm — 600 x 900mm",
         "price": "STOCK COMING SOON",
         "coverage": "",
-        "coverageM2": ""
+        "coverageM2": "",
+        "thickness": "16mm"
       }
     ],
     "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1785856189004-gjwip8.jpg",
@@ -646,13 +654,13 @@
   },
   {
     "id": "p1785838316404",
-    "name": "20mm - HS NERO - PORCELAIN PAVING - 600x900mm",
+    "name": "HS NERO - PORCELAIN PAVING",
     "category": "Porcelain Paving",
     "price": "£513.65",
     "priceNote": "Pack of 40 Pieces | 600 x 900mm",
     "slug": "hs-nero-porcelain-paving-600x900mm",
     "url": "",
-    "description": "HS Nero porcelain paving offers a deep charcoal grey tone with a naturally textured, stone effect finish, perfect for creating a bold, contemporary look in any garden or patio. Manufactured at 20mm thick, these slabs are frost proof, low porosity and highly resistant to staining, giving you a durable surface that stands up to the British weather year after year.\n\nThe textured surface provides dependable slip resistance in wet and dry conditions, making HS Nero a practical choice for patios, pathways, driveways and pool surrounds. Its dark tone works especially well against greenery and lighter garden furniture, adding contrast and depth to outdoor spaces. Low maintenance and simple to clean, it requires no sealing and holds its colour for years.\n\nAt just £22.95 per m², HS Nero offers excellent value without compromising on quality. Searching for porcelain paving near me? We supply and deliver HS Nero porcelain paving slabs across Preston, Lancashire and throughout the UK, with fast turnaround for trade and DIY projects alike.\n\nFAQs\n\nIs HS Nero porcelain paving slip resistant?\nYes. The textured surface provides reliable grip underfoot, even in wet conditions, making it safe for outdoor use.\n\nWill HS Nero porcelain paving show scratches or wear over time?\nNo. Porcelain is highly hard wearing and resistant to scratches, making it ideal for busy patios and high traffic areas.\n\nIs HS Nero porcelain paving suitable for driveways?\nYes, at 20mm thick it can be used for domestic driveways as well as patios and paths, when laid on a suitable sub base.",
+    "description": "HS Nero porcelain paving offers a deep charcoal grey tone with a naturally textured, stone effect finish, perfect for creating a bold, contemporary look in any garden or patio. Manufactured to these slabs are frost proof, low porosity and highly resistant to staining, giving you a durable surface that stands up to the British weather year after year. The textured surface provides dependable slip resistance in wet and dry conditions, making HS Nero a practical choice for patios, pathways, driveways and pool surrounds. Its dark tone works especially well against greenery and lighter garden furniture, adding contrast and depth to outdoor spaces. Low maintenance and simple to clean, it requires no sealing and holds its colour for years. At just £22.95 per m², HS Nero offers excellent value without compromising on quality. Searching for porcelain paving near me? We supply and deliver HS Nero porcelain paving slabs across Preston, Lancashire and throughout the UK, with fast turnaround for trade and DIY projects alike. FAQs Is HS Nero porcelain paving slip resistant?\nYes. The textured surface provides reliable grip underfoot, even in wet conditions, making it safe for outdoor use. Will HS Nero porcelain paving show scratches or wear over time?\nNo. Porcelain is highly hard wearing and resistant to scratches, making it ideal for busy patios and high traffic areas. Is HS Nero porcelain paving suitable for driveways?\nYes, at this thickness it can be used for domestic driveways as well as patios and paths, when laid on a suitable sub base.",
     "colour": "",
     "frost": "F2 — Fully frost resistant",
     "customSpecs": "R11 Matt anti-slip\nVitrified Porcelain / CE Certified",
@@ -665,17 +673,19 @@
     "sizeVariants": [
       {
         "pack": "Pack of 40 Pieces",
-        "size": "600 x 900mm",
+        "size": "20mm — 600 x 900mm",
         "price": "STOCK COMING SOON",
         "coverage": "",
-        "coverageM2": ""
+        "coverageM2": "",
+        "thickness": "20mm"
       },
       {
         "pack": "Pack of 60 Pieces",
-        "size": "600 x 600mm",
+        "size": "20mm — 600 x 600mm",
         "price": "£513.65",
         "coverage": "£23.78",
-        "coverageM2": "21.6"
+        "coverageM2": "21.6",
+        "thickness": "20mm"
       }
     ],
     "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1785856190012-h7mfyl.jpg",
@@ -690,13 +700,13 @@
   },
   {
     "id": "p1785839433181",
-    "name": "20mm - ANTHRACITE BLACK - PORCELAIN PAVING - 600x900mm",
+    "name": "ANTHRACITE BLACK - PORCELAIN PAVING",
     "category": "Porcelain Paving",
     "price": "£525.10",
     "priceNote": "Pack of 40 Pieces | 600 x 900mm",
     "slug": "anthracite-black-porcelain-paving-600x900mm",
     "url": "",
-    "description": "Anthracite Black porcelain paving delivers a rich, near black tone with subtle slate effect veining, creating a striking, modern backdrop for any garden or patio. Manufactured at 20mm thick, these slabs are frost proof, low porosity and highly resistant to staining, giving you a durable finish that copes well with the British climate all year round.\n\nThe textured surface offers reliable slip resistance in wet and dry conditions, making Anthracite Black a smart choice for patios, pathways, driveways and entertaining spaces. Its deep tone creates a strong contrast against planting, lawns and lighter furniture, adding real depth and drama to outdoor areas. Low maintenance and simple to clean, it needs no sealing and keeps its colour for years to come.\n\nAt just £22.95 per m², Anthracite Black offers a premium look at an affordable price. Searching for porcelain paving near me? We supply and deliver Anthracite Black porcelain paving slabs across Preston, Lancashire and throughout the UK, with fast turnaround for trade and DIY projects alike.\n\nFAQs\n\nIs Anthracite Black porcelain paving slip resistant?\nYes. The textured surface provides reliable grip underfoot in wet and dry conditions, making it safe for outdoor areas.\n\nDoes Anthracite Black porcelain paving fade over time?\nNo. Porcelain is highly UV stable and colourfast, so it retains its deep tone without fading or discolouring.\n\nIs Anthracite Black porcelain paving suitable for driveways?\nYes, at 20mm thick it's suitable for domestic driveways as well as patios and paths, when laid on a properly prepared sub base.",
+    "description": "Anthracite Black porcelain paving delivers a rich, near black tone with subtle slate effect veining, creating a striking, modern backdrop for any garden or patio. Manufactured to these slabs are frost proof, low porosity and highly resistant to staining, giving you a durable finish that copes well with the British climate all year round. The textured surface offers reliable slip resistance in wet and dry conditions, making Anthracite Black a smart choice for patios, pathways, driveways and entertaining spaces. Its deep tone creates a strong contrast against planting, lawns and lighter furniture, adding real depth and drama to outdoor areas. Low maintenance and simple to clean, it needs no sealing and keeps its colour for years to come. At just £22.95 per m², Anthracite Black offers a premium look at an affordable price. Searching for porcelain paving near me? We supply and deliver Anthracite Black porcelain paving slabs across Preston, Lancashire and throughout the UK, with fast turnaround for trade and DIY projects alike. FAQs Is Anthracite Black porcelain paving slip resistant?\nYes. The textured surface provides reliable grip underfoot in wet and dry conditions, making it safe for outdoor areas. Does Anthracite Black porcelain paving fade over time?\nNo. Porcelain is highly UV stable and colourfast, so it retains its deep tone without fading or discolouring. Is Anthracite Black porcelain paving suitable for driveways?\nYes, at this thickness it's suitable for domestic driveways as well as patios and paths, when laid on a properly prepared sub base.",
     "colour": "",
     "frost": "F2 — Fully frost resistant",
     "customSpecs": "Size 21.6m² Coverage\n20mm Thickness\nR11 Matt anti-slip\nVitrified Porcelain / CE Certified",
@@ -709,31 +719,35 @@
     "sizeVariants": [
       {
         "pack": "Pack of 40 Pieces",
-        "size": "600 x 900mm",
+        "size": "20mm — 600 x 900mm",
         "price": "£525.10",
         "coverage": "£24.31",
-        "coverageM2": "21.6"
+        "coverageM2": "21.6",
+        "thickness": "20mm"
       },
       {
         "pack": "Pack of 60 Pieces",
-        "size": "600 x 600mm",
+        "size": "20mm — 600 x 600mm",
         "price": "STOCK COMING SOON",
         "coverage": "",
-        "coverageM2": ""
+        "coverageM2": "",
+        "thickness": "20mm"
       },
       {
         "pack": "Pack of 72 Pieces",
-        "size": "MIX PATIO PACKS",
+        "size": "20mm — Mix Patio Packs",
         "price": "£538.71",
         "coverage": "£25.58",
-        "coverageM2": "21.06"
+        "coverageM2": "21.06",
+        "thickness": "20mm"
       },
       {
         "pack": "Pack of 52 Pieces",
-        "size": "16mm x 600 x 900",
+        "size": "16mm — 600 x 900mm",
         "price": "STOCK COMING SOON",
         "coverage": "",
-        "coverageM2": ""
+        "coverageM2": "",
+        "thickness": "16mm"
       }
     ],
     "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1785856191043-npu9vm.jpg",
@@ -747,13 +761,13 @@
   },
   {
     "id": "p1785840151615",
-    "name": "20mm - BESIDE GREY - PORCELAIN PAVING - 600x900mm",
+    "name": "BESIDE GREY - PORCELAIN PAVING",
     "category": "Porcelain Paving",
     "price": "£525.10",
     "priceNote": "Pack of 40 Pieces | 600 x 900mm",
     "slug": "beside-grey-porcelain-paving-600x900mm",
     "url": "",
-    "description": "Beside Grey porcelain paving features a cool, mid grey tone with a naturally weathered, stone effect texture, giving your patio or garden an authentic outdoor look with none of the upkeep of real stone. Manufactured at 20mm thick, these slabs are frost proof, low porosity and highly resistant to staining, making them a reliable choice for the British climate throughout the year.\n\nThe lightly textured surface provides dependable slip resistance in wet and dry conditions, making Beside Grey a practical option for patios, pathways, driveways and garden paths. Its versatile tone works well with most planting schemes and garden styles, whether traditional or contemporary. Low maintenance and simple to clean, it needs no sealing and holds its finish for years to come.\n\nAt just £22.95 per m², Beside Grey combines style and durability at a great price. Searching for porcelain paving near me? We supply and deliver Beside Grey porcelain paving slabs across Preston, Lancashire and throughout the UK, with fast turnaround for trade and DIY projects alike.\n\nFAQs\n\nIs Beside Grey porcelain paving slip resistant?\nYes. The textured surface provides reliable grip underfoot, even when wet, making it a safe choice for outdoor areas.\n\nWill Beside Grey porcelain paving stain or discolour over time?\nNo. Its low porosity means it resists staining and discolouration far better than natural stone alternatives.\n\nIs Beside Grey porcelain paving suitable for driveways?\nYes, at 20mm thick it's suitable for domestic driveways as well as patios and paths, when laid on a properly prepared sub base.",
+    "description": "Beside Grey porcelain paving features a cool, mid grey tone with a naturally weathered, stone effect texture, giving your patio or garden an authentic outdoor look with none of the upkeep of real stone. Manufactured to these slabs are frost proof, low porosity and highly resistant to staining, making them a reliable choice for the British climate throughout the year. The lightly textured surface provides dependable slip resistance in wet and dry conditions, making Beside Grey a practical option for patios, pathways, driveways and garden paths. Its versatile tone works well with most planting schemes and garden styles, whether traditional or contemporary. Low maintenance and simple to clean, it needs no sealing and holds its finish for years to come. At just £22.95 per m², Beside Grey combines style and durability at a great price. Searching for porcelain paving near me? We supply and deliver Beside Grey porcelain paving slabs across Preston, Lancashire and throughout the UK, with fast turnaround for trade and DIY projects alike. FAQs Is Beside Grey porcelain paving slip resistant?\nYes. The textured surface provides reliable grip underfoot, even when wet, making it a safe choice for outdoor areas. Will Beside Grey porcelain paving stain or discolour over time?\nNo. Its low porosity means it resists staining and discolouration far better than natural stone alternatives. Is Beside Grey porcelain paving suitable for driveways?\nYes, at this thickness it's suitable for domestic driveways as well as patios and paths, when laid on a properly prepared sub base.",
     "colour": "",
     "frost": "F2 — Fully frost resistant",
     "customSpecs": "Size 21.6m² Coverage\n20mm Thickness\nR11 Matt anti-slip\nVitrified Porcelain / CE Certified",
@@ -773,13 +787,13 @@
   },
   {
     "id": "p1785843673725",
-    "name": "20mm - ANTHRACITE GREY - PORCELAIN PAVING - 600x900mm",
+    "name": "ANTHRACITE GREY - PORCELAIN PAVING",
     "category": "Porcelain Paving",
     "price": "£525.10",
     "priceNote": "Pack of 40 Pieces | 600 x 900mm",
     "slug": "anthracite-grey-porcelain-paving-600x900mm",
     "url": "",
-    "description": "Anthracite Grey porcelain paving combines a soft, silvery grey tone with subtle natural veining, giving outdoor spaces a smart, contemporary finish that suits both modern and traditional gardens. Manufactured at 20mm thick, these slabs are frost proof, low porosity and highly resistant to staining, providing a durable surface built to handle the British climate all year round.\n\nThe textured surface delivers dependable slip resistance in wet and dry conditions, making Anthracite Grey a versatile choice for patios, pathways, driveways and garden borders. Its balanced mid tone pairs particularly well with lawns, planting and lighter paving, making it easy to work into most garden designs. Low maintenance and simple to clean, it needs no sealing and keeps its finish for years to come.\n\nAt just £22.95 per m², Anthracite Grey offers a timeless look without the higher cost of natural stone. Searching for porcelain paving near me? We supply and deliver Anthracite Grey porcelain paving slabs across Preston, Lancashire and throughout the UK, with fast turnaround for trade and DIY projects alike.\n\nFAQs\n\nIs Anthracite Grey porcelain paving slip resistant?\nYes. The textured surface provides reliable grip underfoot, even when wet, making it a safe choice for patios and paths.\n\nDoes Anthracite Grey porcelain paving fade in sunlight?\nNo. Porcelain is highly UV stable, so it retains its colour and finish without fading over time.\n\nCan Anthracite Grey porcelain paving be used for driveways?\nYes, at 20mm thick it's suitable for domestic driveways as well as patios and paths, when laid on a properly prepared sub base.",
+    "description": "Anthracite Grey porcelain paving combines a soft, silvery grey tone with subtle natural veining, giving outdoor spaces a smart, contemporary finish that suits both modern and traditional gardens. Manufactured to these slabs are frost proof, low porosity and highly resistant to staining, providing a durable surface built to handle the British climate all year round. The textured surface delivers dependable slip resistance in wet and dry conditions, making Anthracite Grey a versatile choice for patios, pathways, driveways and garden borders. Its balanced mid tone pairs particularly well with lawns, planting and lighter paving, making it easy to work into most garden designs. Low maintenance and simple to clean, it needs no sealing and keeps its finish for years to come. At just £22.95 per m², Anthracite Grey offers a timeless look without the higher cost of natural stone. Searching for porcelain paving near me? We supply and deliver Anthracite Grey porcelain paving slabs across Preston, Lancashire and throughout the UK, with fast turnaround for trade and DIY projects alike. FAQs Is Anthracite Grey porcelain paving slip resistant?\nYes. The textured surface provides reliable grip underfoot, even when wet, making it a safe choice for patios and paths. Does Anthracite Grey porcelain paving fade in sunlight?\nNo. Porcelain is highly UV stable, so it retains its colour and finish without fading over time. Can Anthracite Grey porcelain paving be used for driveways?\nYes, at this thickness it's suitable for domestic driveways as well as patios and paths, when laid on a properly prepared sub base.",
     "colour": "",
     "frost": "F2 — Fully frost resistant",
     "customSpecs": "Size 21.6m² Coverage\n20mm Thickness\nR11 Matt anti-slip\nVitrified Porcelain / CE Certified",
@@ -792,24 +806,27 @@
     "sizeVariants": [
       {
         "pack": "Pack of 40 Pieces",
-        "size": "600 x 900mm",
+        "size": "20mm — 600 x 900mm",
         "price": "£525.10",
         "coverage": "£24.31",
-        "coverageM2": "21.6"
+        "coverageM2": "21.6",
+        "thickness": "20mm"
       },
       {
         "pack": "Pack of 60 Pieces",
-        "size": "600 x 600mm",
+        "size": "20mm — 600 x 600mm",
         "price": "STOCK COMING SOON",
         "coverage": "£23.78",
-        "coverageM2": "21.6"
+        "coverageM2": "21.6",
+        "thickness": "20mm"
       },
       {
         "pack": "Pack of 52 Pieces",
-        "size": "16mm x 600 x 900",
+        "size": "16mm — 600 x 900mm",
         "price": "STOCK COMING SOON",
         "coverage": "£17.60",
-        "coverageM2": "28.08"
+        "coverageM2": "28.08",
+        "thickness": "16mm"
       }
     ],
     "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1785856192197-sv8x6p.jpg",
@@ -821,13 +838,13 @@
   },
   {
     "id": "p1785845891773",
-    "name": "20mm - QUARTZ GREY - PORCELAIN PAVING - 600x900mm",
+    "name": "QUARTZ GREY - PORCELAIN PAVING",
     "category": "Porcelain Paving",
     "price": "£525.10",
     "priceNote": "Pack of 40 Pieces | 600 x 900mm",
     "slug": "quartz-grey-porcelain-paving-600x900mm",
     "url": "",
-    "description": "Quartz Grey porcelain paving offers a light, silvery grey tone with a subtle marble effect finish, adding a bright, contemporary feel to patios and outdoor living spaces. Manufactured at 20mm thick, these slabs are frost proof, low porosity and highly resistant to staining, giving you a durable surface that performs well throughout the British seasons.\n\nThe textured surface provides dependable slip resistance in wet and dry conditions, making Quartz Grey a practical choice for patios, pathways, driveways and entertaining areas. Its light tone helps open up smaller gardens and pairs well with contemporary furniture, planting and outdoor rugs. Low maintenance and simple to clean, it needs no sealing and retains its finish for years to come.\n\nAt just £22.95 per m², Quartz Grey delivers a premium, marble inspired look at an affordable price. Searching for porcelain paving near me? We supply and deliver Quartz Grey porcelain paving slabs across Preston, Lancashire and throughout the UK, with fast turnaround for trade and DIY projects alike.\n\nFAQs\n\nIs Quartz Grey porcelain paving slip resistant?\nYes. The textured surface provides reliable grip underfoot, even when wet, making it a safe choice for outdoor areas.\n\nWill Quartz Grey porcelain paving show dirt or stains easily?\nNo. Its low porosity means it resists staining and marking far better than natural stone alternatives.\n\nIs Quartz Grey porcelain paving suitable for small gardens?\nYes, its light tone helps brighten smaller spaces while remaining durable enough for patios, paths and driveways.",
+    "description": "Quartz Grey porcelain paving offers a light, silvery grey tone with a subtle marble effect finish, adding a bright, contemporary feel to patios and outdoor living spaces. Manufactured to these slabs are frost proof, low porosity and highly resistant to staining, giving you a durable surface that performs well throughout the British seasons. The textured surface provides dependable slip resistance in wet and dry conditions, making Quartz Grey a practical choice for patios, pathways, driveways and entertaining areas. Its light tone helps open up smaller gardens and pairs well with contemporary furniture, planting and outdoor rugs. Low maintenance and simple to clean, it needs no sealing and retains its finish for years to come. At just £22.95 per m², Quartz Grey delivers a premium, marble inspired look at an affordable price. Searching for porcelain paving near me? We supply and deliver Quartz Grey porcelain paving slabs across Preston, Lancashire and throughout the UK, with fast turnaround for trade and DIY projects alike. FAQs Is Quartz Grey porcelain paving slip resistant?\nYes. The textured surface provides reliable grip underfoot, even when wet, making it a safe choice for outdoor areas. Will Quartz Grey porcelain paving show dirt or stains easily?\nNo. Its low porosity means it resists staining and marking far better than natural stone alternatives. Is Quartz Grey porcelain paving suitable for small gardens?\nYes, its light tone helps brighten smaller spaces while remaining durable enough for patios, paths and driveways.",
     "colour": "",
     "frost": "F2 — Fully frost resistant",
     "customSpecs": "R11 Matt anti-slip\nVitrified Porcelain / CE Certified",
@@ -840,17 +857,19 @@
     "sizeVariants": [
       {
         "pack": "Pack of 40 Pieces",
-        "size": "600 x 900mm",
+        "size": "20mm — 600 x 900mm",
         "price": "£525.10",
         "coverage": "£24.31",
-        "coverageM2": "21.6"
+        "coverageM2": "21.6",
+        "thickness": "20mm"
       },
       {
         "pack": "Pack of 60 Pieces",
-        "size": "600 x 600mm",
+        "size": "20mm — 600 x 600mm",
         "price": "STOCK COMING SOON",
         "coverage": "£23.78",
-        "coverageM2": "21.06"
+        "coverageM2": "21.06",
+        "thickness": "20mm"
       }
     ],
     "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1785856192532-wbianp.jpg",
@@ -862,13 +881,13 @@
   },
   {
     "id": "p1785847450504",
-    "name": "20mm - EARTHCORE GREY - PORCELAIN PAVING - 600x900mm",
+    "name": "EARTHCORE GREY - PORCELAIN PAVING",
     "category": "Porcelain Paving",
     "price": "£525.10",
     "priceNote": "Pack of 40 Pieces | 600 x 900mm",
     "slug": "earthcore-grey-porcelain-paving-600x900mm",
     "url": "",
-    "description": "Earthcore Grey porcelain paving features a rich, stone effect finish with soft tonal variation, giving patios a natural, high end look that works beautifully in mixed size laying patterns. Manufactured at 20mm thick, these slabs are frost proof, low porosity and highly resistant to staining, offering a durable finish that stands up well to the British climate.\n\nThe textured surface provides dependable slip resistance in wet and dry conditions, making Earthcore Grey a versatile choice for patios, pathways, driveways and entertaining spaces. Its varied grey tones and natural texture make it particularly effective in feature or pattern layouts, adding depth and character against brickwork and darker furniture. Low maintenance and simple to clean, it needs no sealing and holds its finish for years to come.\n\nAt just £22.95 per m², Earthcore Grey offers a premium stone look without the higher cost of natural stone. Searching for porcelain paving near me? We supply and deliver Earthcore Grey porcelain paving slabs across Preston, Lancashire and throughout the UK, with fast turnaround for trade and DIY projects alike.\n\nFAQs\n\nIs Earthcore Grey porcelain paving slip resistant?\nYes. The textured surface provides reliable grip underfoot, even when wet, making it a safe choice for patios and paths.\n\nCan Earthcore Grey porcelain paving be laid in a pattern?\nYes, its natural tonal variation makes it well suited to mixed size or feature laying patterns as well as standard single size layouts.\n\nIs Earthcore Grey porcelain paving suitable for driveways?\nYes, at 20mm thick it's suitable for domestic driveways as well as patios and paths, when laid on a properly prepared sub base.",
+    "description": "Earthcore Grey porcelain paving features a rich, stone effect finish with soft tonal variation, giving patios a natural, high end look that works beautifully in mixed size laying patterns. Manufactured to these slabs are frost proof, low porosity and highly resistant to staining, offering a durable finish that stands up well to the British climate. The textured surface provides dependable slip resistance in wet and dry conditions, making Earthcore Grey a versatile choice for patios, pathways, driveways and entertaining spaces. Its varied grey tones and natural texture make it particularly effective in feature or pattern layouts, adding depth and character against brickwork and darker furniture. Low maintenance and simple to clean, it needs no sealing and holds its finish for years to come. At just £22.95 per m², Earthcore Grey offers a premium stone look without the higher cost of natural stone. Searching for porcelain paving near me? We supply and deliver Earthcore Grey porcelain paving slabs across Preston, Lancashire and throughout the UK, with fast turnaround for trade and DIY projects alike. FAQs Is Earthcore Grey porcelain paving slip resistant?\nYes. The textured surface provides reliable grip underfoot, even when wet, making it a safe choice for patios and paths. Can Earthcore Grey porcelain paving be laid in a pattern?\nYes, its natural tonal variation makes it well suited to mixed size or feature laying patterns as well as standard single size layouts. Is Earthcore Grey porcelain paving suitable for driveways?\nYes, at this thickness it's suitable for domestic driveways as well as patios and paths, when laid on a properly prepared sub base.",
     "colour": "",
     "frost": "F2 — Fully frost resistant",
     "customSpecs": "Size 21.6m² Coverage\n20mm Thickness\nR11 Matt anti-slip\nVitrified Porcelain / CE Certified",
@@ -881,24 +900,27 @@
     "sizeVariants": [
       {
         "pack": "Pack of 40 Pieces",
-        "size": "600 x 900mm",
+        "size": "20mm — 600 x 900mm",
         "price": "£525.10",
         "coverage": "£24.31",
-        "coverageM2": "21.6"
+        "coverageM2": "21.6",
+        "thickness": "20mm"
       },
       {
         "pack": "Pack of 72 Pieces",
-        "size": "MIX PATIO PACKS",
+        "size": "20mm — Mix Patio Packs",
         "price": "£538.71",
         "coverage": "£25.58",
-        "coverageM2": "21.06"
+        "coverageM2": "21.06",
+        "thickness": "20mm"
       },
       {
         "pack": "Pack of 52 Pieces",
-        "size": "16mm x 600 x 900",
+        "size": "16mm — 600 x 900mm",
         "price": "STOCK COMING SOON",
         "coverage": "£17.60",
-        "coverageM2": "28.08"
+        "coverageM2": "28.08",
+        "thickness": "16mm"
       }
     ],
     "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1785856192858-er46ol.jpg",
@@ -912,13 +934,13 @@
   },
   {
     "id": "p1785847667860",
-    "name": "20mm - EARTHCORE BLACK - PORCELAIN PAVING - 600x900mm",
+    "name": "EARTHCORE BLACK - PORCELAIN PAVING",
     "category": "Porcelain Paving",
     "price": "£525.10",
     "priceNote": "Pack of 40 Pieces | 600 x 900mm",
     "slug": "earthcore-black-porcelain-paving-600x900mm",
     "url": "",
-    "description": "Earthcore Black porcelain paving features a deep charcoal to black tone with dramatic marbled veining, giving patios a bold, high end finish that stands out in any garden setting. Manufactured at 20mm thick, these slabs are frost proof, low porosity and highly resistant to staining, offering a durable surface built to withstand the British climate all year round.\n\nThe textured surface provides dependable slip resistance in wet and dry conditions, making Earthcore Black a striking choice for patios, pathways, driveways and entertaining spaces. Its rich, marbled tones create a dramatic backdrop against rattan furniture, greenery and lighter accessories, making it a favourite for contemporary garden designs. Low maintenance and simple to clean, it needs no sealing and holds its finish for years to come.\n\nAt just £22.95 per m², Earthcore Black offers a premium marble effect look without the higher cost of natural stone. Searching for porcelain paving near me? We supply and deliver Earthcore Black porcelain paving slabs across Preston, Lancashire and throughout the UK, with fast turnaround for trade and DIY projects alike.\n\nFAQs\n\nIs Earthcore Black porcelain paving slip resistant?\nYes. The textured surface provides reliable grip underfoot, even when wet, making it a safe choice for patios and paths.\n\nDoes Earthcore Black porcelain paving fade in sunlight?\nNo. Porcelain is highly UV stable and colourfast, so its deep tone and veining stay looking sharp over time.\n\nIs Earthcore Black porcelain paving suitable for driveways?\nYes, at 20mm thick it's suitable for domestic driveways as well as patios and paths, when laid on a properly prepared sub base.",
+    "description": "Earthcore Black porcelain paving features a deep charcoal to black tone with dramatic marbled veining, giving patios a bold, high end finish that stands out in any garden setting. Manufactured to these slabs are frost proof, low porosity and highly resistant to staining, offering a durable surface built to withstand the British climate all year round. The textured surface provides dependable slip resistance in wet and dry conditions, making Earthcore Black a striking choice for patios, pathways, driveways and entertaining spaces. Its rich, marbled tones create a dramatic backdrop against rattan furniture, greenery and lighter accessories, making it a favourite for contemporary garden designs. Low maintenance and simple to clean, it needs no sealing and holds its finish for years to come. At just £22.95 per m², Earthcore Black offers a premium marble effect look without the higher cost of natural stone. Searching for porcelain paving near me? We supply and deliver Earthcore Black porcelain paving slabs across Preston, Lancashire and throughout the UK, with fast turnaround for trade and DIY projects alike. FAQs Is Earthcore Black porcelain paving slip resistant?\nYes. The textured surface provides reliable grip underfoot, even when wet, making it a safe choice for patios and paths. Does Earthcore Black porcelain paving fade in sunlight?\nNo. Porcelain is highly UV stable and colourfast, so its deep tone and veining stay looking sharp over time. Is Earthcore Black porcelain paving suitable for driveways?\nYes, at this thickness it's suitable for domestic driveways as well as patios and paths, when laid on a properly prepared sub base.",
     "colour": "",
     "frost": "F2 — Fully frost resistant",
     "customSpecs": "Size 21.6m² Coverage\n20mm Thickness\nR11 Matt anti-slip\nVitrified Porcelain / CE Certified",
@@ -938,13 +960,13 @@
   },
   {
     "id": "p1785848532301",
-    "name": "20mm - MID GREY GRANITE - PORCELAIN PAVING - 600x900mm",
+    "name": "MID GREY GRANITE - PORCELAIN PAVING",
     "category": "Porcelain Paving",
     "price": "£525.10",
     "priceNote": "Pack of 40 Pieces | 600 x 900mm",
     "slug": "mid-grey-granite-porcelain-paving-600x900mm",
     "url": "",
-    "description": "Mid Grey Granite porcelain paving offers a fine, speckled grey finish that closely replicates the look of natural granite, giving patios a clean, contemporary feel with a consistent, even texture. Manufactured at 20mm thick, these slabs are frost proof, low porosity and highly resistant to staining, providing a durable surface that copes well with the British climate throughout the year.\n\nThe lightly textured surface delivers dependable slip resistance in wet and dry conditions, making Mid Grey Granite a practical choice for patios, pathways, driveways and garden borders. Its balanced grey tone works well against lawns and greenery, and suits both modern and traditional garden styles. Low maintenance and simple to clean, it needs no sealing and holds its finish for years to come.\n\nAt just £22.95 per m², Mid Grey Granite offers the appearance of natural granite at a fraction of the cost. Searching for porcelain paving near me? We supply and deliver Mid Grey Granite porcelain paving slabs across Preston, Lancashire and throughout the UK, with fast turnaround for trade and DIY projects alike.\n\nFAQs\n\nIs Mid Grey Granite porcelain paving slip resistant?\nYes. The textured surface provides reliable grip underfoot, even when wet, making it a safe choice for patios and paths.\n\nDoes Mid Grey Granite porcelain paving look like real granite?\nYes, its fine speckled finish closely resembles natural granite while offering the low maintenance benefits of porcelain.\n\nIs Mid Grey Granite porcelain paving suitable for driveways?\nYes, at 20mm thick it's suitable for domestic driveways as well as patios and paths, when laid on a properly prepared sub base.",
+    "description": "Mid Grey Granite porcelain paving offers a fine, speckled grey finish that closely replicates the look of natural granite, giving patios a clean, contemporary feel with a consistent, even texture. Manufactured to these slabs are frost proof, low porosity and highly resistant to staining, providing a durable surface that copes well with the British climate throughout the year. The lightly textured surface delivers dependable slip resistance in wet and dry conditions, making Mid Grey Granite a practical choice for patios, pathways, driveways and garden borders. Its balanced grey tone works well against lawns and greenery, and suits both modern and traditional garden styles. Low maintenance and simple to clean, it needs no sealing and holds its finish for years to come. At just £22.95 per m², Mid Grey Granite offers the appearance of natural granite at a fraction of the cost. Searching for porcelain paving near me? We supply and deliver Mid Grey Granite porcelain paving slabs across Preston, Lancashire and throughout the UK, with fast turnaround for trade and DIY projects alike. FAQs Is Mid Grey Granite porcelain paving slip resistant?\nYes. The textured surface provides reliable grip underfoot, even when wet, making it a safe choice for patios and paths. Does Mid Grey Granite porcelain paving look like real granite?\nYes, its fine speckled finish closely resembles natural granite while offering the low maintenance benefits of porcelain. Is Mid Grey Granite porcelain paving suitable for driveways?\nYes, at this thickness it's suitable for domestic driveways as well as patios and paths, when laid on a properly prepared sub base.",
     "colour": "",
     "frost": "F2 — Fully frost resistant",
     "customSpecs": "Size 21.6m² Coverage\n20mm Thickness\nR11 Matt anti-slip\nVitrified Porcelain / CE Certified",
@@ -965,13 +987,13 @@
   },
   {
     "id": "p1785849590070",
-    "name": "20mm - BLACK SLATE - PORCELAIN PAVING - 600x900mm",
+    "name": "BLACK SLATE - PORCELAIN PAVING",
     "category": "Porcelain Paving",
     "price": "STOCK COMING SOON",
     "priceNote": "Pack of 40 Pieces | 600 x 900mm",
     "slug": "black-slate-porcelain-paving-600x900mm",
     "url": "",
-    "description": "Black Slate porcelain paving offers a deep, dramatic finish with authentic slate effect texture and rich tonal variation, creating a bold, high end backdrop for contemporary outdoor spaces. Manufactured at 20mm thick, these slabs are frost proof, low porosity and highly resistant to staining, giving you a durable surface that performs well throughout the British seasons.\n\nThe textured surface provides dependable slip resistance in wet and dry conditions, making Black Slate a striking choice for patios, pathways, driveways and entertaining areas. Its deep tones pair beautifully with fire pits, greenery and light coloured furnishings, adding drama and depth to modern garden designs. Low maintenance and simple to clean, it needs no sealing and holds its finish for years to come.\n\nAt just £22.95 per m², Black Slate delivers an authentic slate look without the higher maintenance of natural stone. Searching for porcelain paving near me? We supply and deliver Black Slate porcelain paving slabs across Preston, Lancashire and throughout the UK, with fast turnaround for trade and DIY projects alike.\n\nFAQs\n\nIs Black Slate porcelain paving slip resistant?\nYes. The textured surface provides reliable grip underfoot, even when wet, making it a safe choice for patios and paths.\n\nDoes Black Slate porcelain paving fade over time?\nNo. Porcelain is highly UV stable and colourfast, so its deep tones stay looking sharp for years to come.\n\nIs Black Slate porcelain paving suitable for driveways?\nYes, at 20mm thick it's suitable for domestic driveways as well as patios and paths, when laid on a properly prepared sub base.",
+    "description": "Black Slate porcelain paving offers a deep, dramatic finish with authentic slate effect texture and rich tonal variation, creating a bold, high end backdrop for contemporary outdoor spaces. Manufactured to these slabs are frost proof, low porosity and highly resistant to staining, giving you a durable surface that performs well throughout the British seasons. The textured surface provides dependable slip resistance in wet and dry conditions, making Black Slate a striking choice for patios, pathways, driveways and entertaining areas. Its deep tones pair beautifully with fire pits, greenery and light coloured furnishings, adding drama and depth to modern garden designs. Low maintenance and simple to clean, it needs no sealing and holds its finish for years to come. At just £22.95 per m², Black Slate delivers an authentic slate look without the higher maintenance of natural stone. Searching for porcelain paving near me? We supply and deliver Black Slate porcelain paving slabs across Preston, Lancashire and throughout the UK, with fast turnaround for trade and DIY projects alike. FAQs Is Black Slate porcelain paving slip resistant?\nYes. The textured surface provides reliable grip underfoot, even when wet, making it a safe choice for patios and paths. Does Black Slate porcelain paving fade over time?\nNo. Porcelain is highly UV stable and colourfast, so its deep tones stay looking sharp for years to come. Is Black Slate porcelain paving suitable for driveways?\nYes, at this thickness it's suitable for domestic driveways as well as patios and paths, when laid on a properly prepared sub base.",
     "colour": "",
     "frost": "F2 — Fully frost resistant",
     "customSpecs": "Size 21.6m² Coverage\n20mm Thickness\nR11 Matt anti-slip\nVitrified Porcelain / CE Certified",
@@ -984,17 +1006,19 @@
     "sizeVariants": [
       {
         "pack": "Pack of 40 Pieces",
-        "size": "600 x 900mm",
+        "size": "20mm — 600 x 900mm",
         "price": "STOCK COMING SOON",
         "coverage": "£24.31",
-        "coverageM2": "21.6"
+        "coverageM2": "21.6",
+        "thickness": "20mm"
       },
       {
         "pack": "Pack of 52 Pieces",
-        "size": "16mm x 600 x 900",
+        "size": "16mm — 600 x 900mm",
         "price": "STOCK COMING SOON",
         "coverage": "£17.60",
-        "coverageM2": "28.08"
+        "coverageM2": "28.08",
+        "thickness": "16mm"
       }
     ],
     "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1785856194731-w21g61.jpg",
@@ -1007,13 +1031,13 @@
   },
   {
     "id": "p1785851180289",
-    "name": "20mm - QUARTZ WHITE - PORCELAIN PAVING - 600x900mm",
+    "name": "QUARTZ WHITE - PORCELAIN PAVING",
     "category": "Porcelain Paving",
     "price": "£525.10",
     "priceNote": "Pack of 40 Pieces | 600 x 900mm",
     "slug": "quartz-white-porcelain-paving-600x900mm",
     "url": "",
-    "description": "Quartz White porcelain paving offers a clean, soft white tone with a subtle stone effect texture, creating a bright, contemporary finish that suits modern patios and outdoor living spaces. Manufactured at 20mm thick, these slabs are frost proof, low porosity and highly resistant to staining, giving you a durable surface that performs well throughout the British seasons.\n\nThe textured surface provides dependable slip resistance in wet and dry conditions, making Quartz White a practical choice for patios, pathways, driveways and entertaining areas. Its light tone helps open up outdoor spaces and creates a seamless look when paired with light coloured furniture, brickwork and planting. Low maintenance and simple to clean, it needs no sealing and holds its finish for years to come.\n\nAt just £22.95 per m², Quartz White offers a bright, premium finish without the higher cost of natural stone. Searching for porcelain paving near me? We supply and deliver Quartz White porcelain paving slabs across Preston, Lancashire and throughout the UK, with fast turnaround for trade and DIY projects alike.\n\nFAQs\n\nIs Quartz White porcelain paving slip resistant?\nYes. The textured surface provides reliable grip underfoot, even when wet, making it a safe choice for patios and paths.\n\nWill Quartz White porcelain paving stain or show dirt easily?\nNo. Its low porosity means it resists staining and marking far better than natural stone alternatives.\n\nIs Quartz White porcelain paving suitable for driveways?\nYes, at 20mm thick it's suitable for domestic driveways as well as patios and paths, when laid on a properly prepared sub base.\n.",
+    "description": "Quartz White porcelain paving offers a clean, soft white tone with a subtle stone effect texture, creating a bright, contemporary finish that suits modern patios and outdoor living spaces. Manufactured to these slabs are frost proof, low porosity and highly resistant to staining, giving you a durable surface that performs well throughout the British seasons. The textured surface provides dependable slip resistance in wet and dry conditions, making Quartz White a practical choice for patios, pathways, driveways and entertaining areas. Its light tone helps open up outdoor spaces and creates a seamless look when paired with light coloured furniture, brickwork and planting. Low maintenance and simple to clean, it needs no sealing and holds its finish for years to come. At just £22.95 per m², Quartz White offers a bright, premium finish without the higher cost of natural stone. Searching for porcelain paving near me? We supply and deliver Quartz White porcelain paving slabs across Preston, Lancashire and throughout the UK, with fast turnaround for trade and DIY projects alike. FAQs Is Quartz White porcelain paving slip resistant?\nYes. The textured surface provides reliable grip underfoot, even when wet, making it a safe choice for patios and paths. Will Quartz White porcelain paving stain or show dirt easily?\nNo. Its low porosity means it resists staining and marking far better than natural stone alternatives. Is Quartz White porcelain paving suitable for driveways?\nYes, at this thickness it's suitable for domestic driveways as well as patios and paths, when laid on a properly prepared sub base.\n.",
     "colour": "",
     "frost": "F2 — Fully frost resistant",
     "customSpecs": "Size 21.6m² Coverage\n20mm Thickness\nR11 Matt anti-slip\nVitrified Porcelain / CE Certified",
@@ -1026,31 +1050,35 @@
     "sizeVariants": [
       {
         "pack": "Pack of 40 Pieces",
-        "size": "600 x 900mm",
+        "size": "20mm — 600 x 900mm",
         "price": "£525.10",
         "coverage": "£24.31",
-        "coverageM2": "21.6"
+        "coverageM2": "21.6",
+        "thickness": "20mm"
       },
       {
         "pack": "Pack of 60 Pieces",
-        "size": "600 x 600mm",
+        "size": "20mm — 600 x 600mm",
         "price": "STOCK COMING SOON",
         "coverage": "£23.78",
-        "coverageM2": "21.6"
+        "coverageM2": "21.6",
+        "thickness": "20mm"
       },
       {
         "pack": "Pack of 72 Pieces",
-        "size": "MIX PATIO PACKS",
+        "size": "20mm — Mix Patio Packs",
         "price": "£538.71",
         "coverage": "£25.58",
-        "coverageM2": "21.06"
+        "coverageM2": "21.06",
+        "thickness": "20mm"
       },
       {
         "pack": "Pack of 52 Pieces",
-        "size": "16mm x 600 x 900",
+        "size": "16mm — 600 x 900mm",
         "price": "STOCK COMING SOON",
         "coverage": "£17.60",
-        "coverageM2": "28.08"
+        "coverageM2": "28.08",
+        "thickness": "16mm"
       }
     ],
     "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1785856195389-u57zxl.jpg",
@@ -1064,13 +1092,13 @@
   },
   {
     "id": "p1785852797121",
-    "name": "20mm - KANDLA GREY - PORCELAIN PAVING - 600x900mm",
+    "name": "KANDLA GREY - PORCELAIN PAVING",
     "category": "Porcelain Paving",
     "price": "£513.65",
     "priceNote": "Pack of 40 Pieces | 600 x 900mm",
     "slug": "kandla-grey-porcelain-paving-600x900mm",
     "url": "",
-    "description": "Kandla Grey porcelain paving brings the UK's most popular sandstone shade into a low maintenance porcelain finish, with cool grey tones and subtle natural veining that suit almost any garden style. Manufactured at 20mm thick, these slabs are frost proof, low porosity and highly resistant to staining, offering a durable surface that copes well with the British climate all year round.\n\nThe textured surface provides dependable slip resistance in wet and dry conditions, making Kandla Grey a versatile choice for patios, pathways, driveways and garden borders. Its balanced tone works beautifully alongside lawns, raised planters and contemporary landscaping, making it a firm favourite for both modern and traditional gardens. Low maintenance and simple to clean, it needs no sealing and holds its finish for years to come.\n\nAt just £22.95 per m², Kandla Grey offers a timeless, sandstone inspired look without the upkeep of natural stone. Searching for porcelain paving near me? We supply and deliver Kandla Grey porcelain paving slabs across Preston, Lancashire and throughout the UK, with fast turnaround for trade and DIY projects alike.\n\nFAQs\n\nIs Kandla Grey porcelain paving slip resistant?\nYes. The textured surface provides reliable grip underfoot, even when wet, making it a safe choice for patios and paths.\n\nIs Kandla Grey porcelain paving similar to Kandla Grey sandstone?\nIt shares the same popular grey tones as the sandstone version, but with the added durability and low maintenance benefits of porcelain.\n\nIs Kandla Grey porcelain paving suitable for driveways?\nYes, at 20mm thick it's suitable for domestic driveways as well as patios and paths, when laid on a properly prepared sub base.",
+    "description": "Kandla Grey porcelain paving brings the UK's most popular sandstone shade into a low maintenance porcelain finish, with cool grey tones and subtle natural veining that suit almost any garden style. Manufactured to these slabs are frost proof, low porosity and highly resistant to staining, offering a durable surface that copes well with the British climate all year round. The textured surface provides dependable slip resistance in wet and dry conditions, making Kandla Grey a versatile choice for patios, pathways, driveways and garden borders. Its balanced tone works beautifully alongside lawns, raised planters and contemporary landscaping, making it a firm favourite for both modern and traditional gardens. Low maintenance and simple to clean, it needs no sealing and holds its finish for years to come. At just £22.95 per m², Kandla Grey offers a timeless, sandstone inspired look without the upkeep of natural stone. Searching for porcelain paving near me? We supply and deliver Kandla Grey porcelain paving slabs across Preston, Lancashire and throughout the UK, with fast turnaround for trade and DIY projects alike. FAQs Is Kandla Grey porcelain paving slip resistant?\nYes. The textured surface provides reliable grip underfoot, even when wet, making it a safe choice for patios and paths. Is Kandla Grey porcelain paving similar to Kandla Grey sandstone?\nIt shares the same popular grey tones as the sandstone version, but with the added durability and low maintenance benefits of porcelain. Is Kandla Grey porcelain paving suitable for driveways?\nYes, at this thickness it's suitable for domestic driveways as well as patios and paths, when laid on a properly prepared sub base.",
     "colour": "",
     "frost": "F2 — Fully frost resistant",
     "customSpecs": "Size 21.6m² Coverage\n20mm Thickness\nR11 Matt anti-slip\nVitrified Porcelain / CE Certified",
@@ -1083,31 +1111,35 @@
     "sizeVariants": [
       {
         "pack": "Pack of 40 Pieces",
-        "size": "600 x 900mm",
+        "size": "20mm — 600 x 900mm",
         "price": "£525.10",
         "coverage": "£24.31",
-        "coverageM2": "21.6"
+        "coverageM2": "21.6",
+        "thickness": "20mm"
       },
       {
         "pack": "Pack of 60 Pieces",
-        "size": "600 x 600mm",
+        "size": "20mm — 600 x 600mm",
         "price": "£513.65",
         "coverage": "£23.78",
-        "coverageM2": "21.6"
+        "coverageM2": "21.6",
+        "thickness": "20mm"
       },
       {
-        "pack": "Pack of 72",
-        "size": "MIX PATIO PACKS",
+        "pack": "Pack of 72 Pieces",
+        "size": "20mm — Mix Patio Packs",
         "price": "£538.71",
         "coverage": "£25.58",
-        "coverageM2": "21.06"
+        "coverageM2": "21.06",
+        "thickness": "20mm"
       },
       {
         "pack": "Pack of 52 Pieces",
-        "size": "16mm x 600 x 900",
+        "size": "16mm — 600 x 900mm",
         "price": "STOCK COMING SOON",
         "coverage": "£17.60",
-        "coverageM2": "28.08"
+        "coverageM2": "28.08",
+        "thickness": "16mm"
       }
     ],
     "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1785856196304-hsc4jb.jpg",
@@ -1121,13 +1153,13 @@
   },
   {
     "id": "p1785853658708",
-    "name": "20mm - KANDLA GREY SAWN HONED - PORCELAIN PAVING - 600x900mm",
+    "name": "KANDLA GREY SAWN HONED - PORCELAIN PAVING",
     "category": "Porcelain Paving",
     "price": "£525.10",
     "priceNote": "Pack of 40 Pieces | 600 x 900mm",
     "slug": "kandla-grey-sawn-honed-porcelain-paving-600x900mm",
     "url": "",
-    "description": "Kandla Grey Sawn Honed porcelain paving offers a smooth, refined finish with soft grey tones, giving outdoor spaces a sleek, contemporary look that pairs beautifully with modern furniture and architecture. Manufactured at 20mm thick, these slabs are frost proof, low porosity and highly resistant to staining, providing a durable surface built to handle the British climate all year round.\n\nThe honed surface carries a fine anti slip texture, keeping it safe underfoot in wet and dry conditions while still offering that clean, sawn finish look. It's a versatile choice for patios, pathways, driveways and entertaining spaces, and is available in 600x600mm, 900x600mm and 1200x600mm formats, making it easy to plan larger, more contemporary layouts. Low maintenance and simple to clean, it needs no sealing and holds its finish for years to come.\n\nAt just £22.95 per m², Kandla Grey Sawn Honed offers a premium, architectural finish without the higher cost of natural stone. Searching for porcelain paving near me? We supply and deliver Kandla Grey Sawn Honed porcelain paving slabs across Preston, Lancashire and throughout the UK, with fast turnaround for trade and DIY projects alike.\n\nFAQs\n\nIs Kandla Grey Sawn Honed porcelain paving slip resistant?\nYes. Despite its smooth, honed finish, it carries a fine anti slip texture that provides reliable grip underfoot, even when wet.\n\nWhat sizes does Kandla Grey Sawn Honed porcelain paving come in?\nIt's available in 600x600mm, 900x600mm and 1200x600mm formats, all at 20mm thick, giving flexibility for different layout designs.\n\nIs Kandla Grey Sawn Honed porcelain paving suitable for driveways?\nYes, at 20mm thick it's suitable for domestic driveways as well as patios and paths, when laid on a properly prepared sub base.",
+    "description": "Kandla Grey Sawn Honed porcelain paving offers a smooth, refined finish with soft grey tones, giving outdoor spaces a sleek, contemporary look that pairs beautifully with modern furniture and architecture. Manufactured to these slabs are frost proof, low porosity and highly resistant to staining, providing a durable surface built to handle the British climate all year round. The honed surface carries a fine anti slip texture, keeping it safe underfoot in wet and dry conditions while still offering that clean, sawn finish look. It's a versatile choice for patios, pathways, driveways and entertaining spaces, and is available in 600x600mm, 900x600mm and 1200x600mm formats, making it easy to plan larger, more contemporary layouts. Low maintenance and simple to clean, it needs no sealing and holds its finish for years to come. At just £22.95 per m², Kandla Grey Sawn Honed offers a premium, architectural finish without the higher cost of natural stone. Searching for porcelain paving near me? We supply and deliver Kandla Grey Sawn Honed porcelain paving slabs across Preston, Lancashire and throughout the UK, with fast turnaround for trade and DIY projects alike. FAQs Is Kandla Grey Sawn Honed porcelain paving slip resistant?\nYes. Despite its smooth, honed finish, it carries a fine anti slip texture that provides reliable grip underfoot, even when wet. What sizes does Kandla Grey Sawn Honed porcelain paving come in?\nIt's available in 600x600mm, 900x600mm and 1200x600mm formats, all at this thickness, giving flexibility for different layout designs. Is Kandla Grey Sawn Honed porcelain paving suitable for driveways?\nYes, at this thickness it's suitable for domestic driveways as well as patios and paths, when laid on a properly prepared sub base.",
     "colour": "",
     "frost": "F2 — Fully frost resistant",
     "customSpecs": "Size 21.6m² Coverage\n20mm Thickness\nR11 Matt anti-slip\nVitrified Porcelain / CE Certified",
@@ -1148,13 +1180,13 @@
   },
   {
     "id": "p1785854240899",
-    "name": "20mm - RAJ GREEN - PORCELAIN PAVING - 600x900mm",
+    "name": "RAJ GREEN - PORCELAIN PAVING",
     "category": "Porcelain Paving",
     "price": "£525.10",
     "priceNote": "Pack of 40 Pieces | 600 x 900mm",
     "slug": "raj-green-porcelain-paving-600x900mm",
     "url": "",
-    "description": "Raj Green porcelain paving brings the porcelain counterpart to one of the UK's bestselling sandstone shades, with warm buff and cream tones blended with subtle grey variation for a natural, characterful finish. Manufactured at 20mm thick, these slabs are frost proof, low porosity and highly resistant to staining, giving you a durable surface built to handle the British climate all year round.\n\nThe textured surface provides dependable slip resistance in wet and dry conditions, making Raj Green a practical choice for patios, pathways, driveways and garden borders. Its warm, varied tones work particularly well against brickwork and traditional garden settings, bringing all the character of natural sandstone with none of the upkeep. Low maintenance and simple to clean, it needs no sealing and holds its finish for years to come.\n\nAt just £22.95 per m², Raj Green offers the warmth of natural sandstone at a fraction of the maintenance. Searching for porcelain paving near me? We supply and deliver Raj Green porcelain paving slabs across Preston, Lancashire and throughout the UK, with fast turnaround for trade and DIY projects alike.\n\nFAQs\n\nIs Raj Green porcelain paving slip resistant?\nYes. The textured surface provides reliable grip underfoot, even when wet, making it a safe choice for patios and paths.\n\nIs Raj Green porcelain paving similar to Raj Green sandstone?\nIt shares the same warm buff and cream tones as the sandstone version, but with the added durability and low maintenance of porcelain.\n\nIs Raj Green porcelain paving suitable for driveways?\nYes, at 20mm thick it's suitable for domestic driveways as well as patios and paths, when laid on a properly prepared sub base.",
+    "description": "Raj Green porcelain paving brings the porcelain counterpart to one of the UK's bestselling sandstone shades, with warm buff and cream tones blended with subtle grey variation for a natural, characterful finish. Manufactured to these slabs are frost proof, low porosity and highly resistant to staining, giving you a durable surface built to handle the British climate all year round. The textured surface provides dependable slip resistance in wet and dry conditions, making Raj Green a practical choice for patios, pathways, driveways and garden borders. Its warm, varied tones work particularly well against brickwork and traditional garden settings, bringing all the character of natural sandstone with none of the upkeep. Low maintenance and simple to clean, it needs no sealing and holds its finish for years to come. At just £22.95 per m², Raj Green offers the warmth of natural sandstone at a fraction of the maintenance. Searching for porcelain paving near me? We supply and deliver Raj Green porcelain paving slabs across Preston, Lancashire and throughout the UK, with fast turnaround for trade and DIY projects alike. FAQs Is Raj Green porcelain paving slip resistant?\nYes. The textured surface provides reliable grip underfoot, even when wet, making it a safe choice for patios and paths. Is Raj Green porcelain paving similar to Raj Green sandstone?\nIt shares the same warm buff and cream tones as the sandstone version, but with the added durability and low maintenance of porcelain. Is Raj Green porcelain paving suitable for driveways?\nYes, at this thickness it's suitable for domestic driveways as well as patios and paths, when laid on a properly prepared sub base.",
     "colour": "",
     "frost": "F2 — Fully frost resistant",
     "customSpecs": "Size 21.6m² Coverage\n20mm Thickness\nR11 Matt anti-slip\nVitrified Porcelain / CE Certified",
@@ -1167,24 +1199,27 @@
     "sizeVariants": [
       {
         "pack": "Pack of 40 Pieces",
-        "size": "600 x 900mm",
+        "size": "20mm — 600 x 900mm",
         "price": "£525.10",
         "coverage": "£24.31",
-        "coverageM2": "21.6"
+        "coverageM2": "21.6",
+        "thickness": "20mm"
       },
       {
         "pack": "Pack of 72 Pieces",
-        "size": "MIX PATIO PACKS",
+        "size": "20mm — Mix Patio Packs",
         "price": "STOCK COMING SOON",
         "coverage": "£25.58",
-        "coverageM2": "21.06"
+        "coverageM2": "21.06",
+        "thickness": "20mm"
       },
       {
         "pack": "Pack of 52 Pieces",
-        "size": "16mm x 600 x 900",
+        "size": "16mm — 600 x 900mm",
         "price": "STOCK COMING SOON",
         "coverage": "£17.60",
-        "coverageM2": "28.08"
+        "coverageM2": "28.08",
+        "thickness": "16mm"
       }
     ],
     "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1785856197934-8n4cu5.jpg",
@@ -1198,13 +1233,13 @@
   },
   {
     "id": "p1785920203835",
-    "name": "20mm - SAGAR BLACK PORCELAIN PAVING - 600x900mm",
+    "name": "SAGAR BLACK PORCELAIN PAVING",
     "category": "Porcelain Paving",
     "price": "£525.10",
     "priceNote": "Pack of 40 Pieces | 600 x 900mm",
     "slug": "sagar-black-porcelain-paving-600x900mm",
     "url": "",
-    "description": "Sagar Black porcelain paving offers a rich, multi tonal finish blending warm greys and browns with subtle darker veining, giving patios a natural stone effect look with real depth and character. Manufactured at 20mm thick, these slabs are frost proof, low porosity and highly resistant to staining, providing a durable surface that copes well with the British climate throughout the year.\n\nThe textured surface delivers dependable slip resistance in wet and dry conditions, making Sagar Black a versatile choice for patios, pathways, driveways and garden borders. Its blended tones work particularly well in mixed size laying patterns, adding movement and interest across larger patio areas, and is available in 600x600mm, 900x600mm and 1200x600mm formats. Low maintenance and simple to clean, it needs no sealing and holds its finish for years to come.\n\nAt just £22.95 per m², Sagar Black offers a premium, multi tonal finish without the higher cost of natural stone. Searching for porcelain paving near me? We supply and deliver Sagar Black porcelain paving slabs across Preston, Lancashire and throughout the UK, with fast turnaround for trade and DIY projects alike.\n\nFAQs\n\nIs Sagar Black porcelain paving slip resistant?\nYes. The textured surface provides reliable grip underfoot, even when wet, making it a safe choice for patios and paths.\n\nWhat sizes does Sagar Black porcelain paving come in?\nIt's available in 600x600mm, 900x600mm and 1200x600mm formats, all at 20mm thick, giving flexibility for different layout designs.\n\nIs Sagar Black porcelain paving suitable for driveways?\nYes, at 20mm thick it's suitable for domestic driveways as well as patios and paths, when laid on a properly prepared sub-base.",
+    "description": "Sagar Black porcelain paving offers a rich, multi tonal finish blending warm greys and browns with subtle darker veining, giving patios a natural stone effect look with real depth and character. Manufactured to these slabs are frost proof, low porosity and highly resistant to staining, providing a durable surface that copes well with the British climate throughout the year. The textured surface delivers dependable slip resistance in wet and dry conditions, making Sagar Black a versatile choice for patios, pathways, driveways and garden borders. Its blended tones work particularly well in mixed size laying patterns, adding movement and interest across larger patio areas, and is available in 600x600mm, 900x600mm and 1200x600mm formats. Low maintenance and simple to clean, it needs no sealing and holds its finish for years to come. At just £22.95 per m², Sagar Black offers a premium, multi tonal finish without the higher cost of natural stone. Searching for porcelain paving near me? We supply and deliver Sagar Black porcelain paving slabs across Preston, Lancashire and throughout the UK, with fast turnaround for trade and DIY projects alike. FAQs Is Sagar Black porcelain paving slip resistant?\nYes. The textured surface provides reliable grip underfoot, even when wet, making it a safe choice for patios and paths. What sizes does Sagar Black porcelain paving come in?\nIt's available in 600x600mm, 900x600mm and 1200x600mm formats, all at this thickness, giving flexibility for different layout designs. Is Sagar Black porcelain paving suitable for driveways?\nYes, at this thickness it's suitable for domestic driveways as well as patios and paths, when laid on a properly prepared sub-base.",
     "colour": "",
     "frost": "F2 — Fully frost resistant",
     "customSpecs": "Size 21.6m2 Coverage\n20mm Thickness\nR11 Matt anti-slip\nVitrified Porcelain / CE Certified",
@@ -1226,13 +1261,13 @@
   },
   {
     "id": "p1785920356555",
-    "name": "20mm - SILVER GREY - PORCELAIN PAVING - 600x900mm",
+    "name": "SILVER GREY - PORCELAIN PAVING",
     "category": "Porcelain Paving",
     "price": "£525.10",
     "priceNote": "",
     "slug": "silver-grey-porcelain-paving-600x900mm",
     "url": "",
-    "description": "Silver Grey porcelain paving offers a fine, speckled finish with light and mid grey flecks, giving patios a clean, granite effect look that suits both modern and traditional garden styles. Manufactured at 20mm thick, these slabs are frost proof, low porosity and highly resistant to staining, providing a durable surface built to handle the British climate all year round.\n\nThe textured surface delivers dependable slip resistance in wet and dry conditions, making Silver Grey a practical choice for patios, pathways, driveways and garden borders. Its fine, even speckled finish brightens outdoor spaces and pairs well with greenery, brickwork and lighter furniture. Low maintenance and simple to clean, it needs no sealing and holds its finish for years to come.\n\nAt just £22.95 per m², Silver Grey offers a granite inspired look at a fraction of the cost of natural stone. Searching for porcelain paving near me? We supply and deliver Silver Grey porcelain paving slabs across Preston, Lancashire and throughout the UK, with fast turnaround for trade and DIY projects alike.\n\nFAQs\n\nIs Silver Grey porcelain paving slip resistant?\nYes. The textured surface provides reliable grip underfoot, even when wet, making it a safe choice for patios and paths.\n\nDoes Silver Grey porcelain paving look like granite?\nYes, its fine speckled finish closely resembles natural granite while offering the low maintenance benefits of porcelain.\n\nIs Silver Grey porcelain paving suitable for driveways?\nYes, at 20mm thick it's suitable for domestic driveways as well as patios and paths, when laid on a properly prepared sub base.",
+    "description": "Silver Grey porcelain paving offers a fine, speckled finish with light and mid grey flecks, giving patios a clean, granite effect look that suits both modern and traditional garden styles. Manufactured to these slabs are frost proof, low porosity and highly resistant to staining, providing a durable surface built to handle the British climate all year round. The textured surface delivers dependable slip resistance in wet and dry conditions, making Silver Grey a practical choice for patios, pathways, driveways and garden borders. Its fine, even speckled finish brightens outdoor spaces and pairs well with greenery, brickwork and lighter furniture. Low maintenance and simple to clean, it needs no sealing and holds its finish for years to come. At just £22.95 per m², Silver Grey offers a granite inspired look at a fraction of the cost of natural stone. Searching for porcelain paving near me? We supply and deliver Silver Grey porcelain paving slabs across Preston, Lancashire and throughout the UK, with fast turnaround for trade and DIY projects alike. FAQs Is Silver Grey porcelain paving slip resistant?\nYes. The textured surface provides reliable grip underfoot, even when wet, making it a safe choice for patios and paths. Does Silver Grey porcelain paving look like granite?\nYes, its fine speckled finish closely resembles natural granite while offering the low maintenance benefits of porcelain. Is Silver Grey porcelain paving suitable for driveways?\nYes, at this thickness it's suitable for domestic driveways as well as patios and paths, when laid on a properly prepared sub base.",
     "colour": "",
     "frost": "F2 — Fully frost resistant",
     "customSpecs": "Size 21.6m2 Coverage\n20mm Thickness\nR11 Matt anti-slip\nVitrified Porcelain / CE Certified",
@@ -1253,13 +1288,13 @@
   },
   {
     "id": "p1785920496024",
-    "name": "20mm - FOSSIL MINT - PORCELAIN PAVING - 600x900mm",
+    "name": "FOSSIL MINT - PORCELAIN PAVING",
     "category": "Porcelain Paving",
     "price": "£525.10",
     "priceNote": "Pack of 40 Pieces | 600 x 900mm",
     "slug": "fossil-mint-porcelain-paving-600x900mm",
     "url": "",
-    "description": "Fossil Mint porcelain paving offers a warm, sandy beige tone with soft rust coloured markings, giving patios a natural travertine effect finish that suits both period and contemporary properties. Manufactured at 20mm thick, these slabs are frost proof, low porosity and highly resistant to staining, providing a durable surface that copes well with the British climate throughout the year.\n\nThe textured surface delivers dependable slip resistance in wet and dry conditions, making Fossil Mint a versatile choice for patios, pathways, driveways and raised step edges. Its warm, blended tones work beautifully against brickwork, greenery and traditional garden settings, bringing the character of natural travertine without the ongoing maintenance. Low maintenance and simple to clean, it needs no sealing and holds its finish for years to come.\n\nAt just £22.95 per m², Fossil Mint offers a premium, travertine inspired look without the higher cost of natural stone. Searching for porcelain paving near me? We supply and deliver Fossil Mint porcelain paving slabs across Preston, Lancashire and throughout the UK, with fast turnaround for trade and DIY projects alike.\n\nFAQs\n\nIs Fossil Mint porcelain paving slip resistant?\nYes. The textured surface provides reliable grip underfoot, even when wet, making it a safe choice for patios and paths.\n\nDoes Fossil Mint porcelain paving look like travertine?\nYes, its warm sandy tones and subtle markings closely resemble natural travertine while offering the durability of porcelain.\n\nIs Fossil Mint porcelain paving suitable for steps or edges?\nYes, it can be used for raised step edges and borders as well as patios, paths and driveways, when installed correctly.",
+    "description": "Fossil Mint porcelain paving offers a warm, sandy beige tone with soft rust coloured markings, giving patios a natural travertine effect finish that suits both period and contemporary properties. Manufactured to these slabs are frost proof, low porosity and highly resistant to staining, providing a durable surface that copes well with the British climate throughout the year. The textured surface delivers dependable slip resistance in wet and dry conditions, making Fossil Mint a versatile choice for patios, pathways, driveways and raised step edges. Its warm, blended tones work beautifully against brickwork, greenery and traditional garden settings, bringing the character of natural travertine without the ongoing maintenance. Low maintenance and simple to clean, it needs no sealing and holds its finish for years to come. At just £22.95 per m², Fossil Mint offers a premium, travertine inspired look without the higher cost of natural stone. Searching for porcelain paving near me? We supply and deliver Fossil Mint porcelain paving slabs across Preston, Lancashire and throughout the UK, with fast turnaround for trade and DIY projects alike. FAQs Is Fossil Mint porcelain paving slip resistant?\nYes. The textured surface provides reliable grip underfoot, even when wet, making it a safe choice for patios and paths. Does Fossil Mint porcelain paving look like travertine?\nYes, its warm sandy tones and subtle markings closely resemble natural travertine while offering the durability of porcelain. Is Fossil Mint porcelain paving suitable for steps or edges?\nYes, it can be used for raised step edges and borders as well as patios, paths and driveways, when installed correctly.",
     "colour": "",
     "frost": "F2 — Fully frost resistant",
     "customSpecs": "Size 21.6m2 Coverage\n20mm Thickness\nR11 Matt anti-slip\nVitrified Porcelain / CE Certified",
@@ -1279,13 +1314,13 @@
   },
   {
     "id": "p1785920611087",
-    "name": "20mm - UNIVERSAL GREY - PORCELAIN PAVING - 600x900mm",
+    "name": "UNIVERSAL GREY - PORCELAIN PAVING",
     "category": "Porcelain Paving",
     "price": "£494.21",
     "priceNote": "",
     "slug": "universal-grey-porcelain-paving-600x900mm",
     "url": "",
-    "description": "Universal Grey porcelain paving offers a light, neutral grey tone with a subtle stone effect texture, giving outdoor spaces a clean, versatile finish that works with almost any garden or patio style. Manufactured at 20mm thick, these slabs are frost proof, low porosity and highly resistant to staining, providing a durable surface that performs well throughout the British seasons.\n\nThe textured surface delivers dependable slip resistance in wet and dry conditions, making Universal Grey an ideal choice for patios, pathways, driveways and pool surrounds. Its light, understated tone brightens outdoor areas and pairs easily with contemporary furniture, making it a popular option for entertaining spaces and poolside terraces. Low maintenance and simple to clean, it needs no sealing and holds its finish for years to come.\n\nAt just £22.95 per m², Universal Grey offers a timeless, adaptable finish without the higher cost of natural stone. Searching for porcelain paving near me? We supply and deliver Universal Grey porcelain paving slabs across Preston, Lancashire and throughout the UK, with fast turnaround for trade and DIY projects alike.\n\nFAQs\n\nIs Universal Grey porcelain paving slip resistant?\nYes. The textured surface provides reliable grip underfoot, even when wet, making it a safe choice for patios, paths and pool surrounds.\n\nIs Universal Grey porcelain paving suitable for pool areas?\nYes, its slip resistant surface and low porosity make it a practical choice for pool surrounds as well as patios and driveways.\n\nIs Universal Grey porcelain paving suitable for driveways?\nYes, at 20mm thick it's suitable for domestic driveways as well as patios and paths, when laid on a properly prepared sub base.",
+    "description": "Universal Grey porcelain paving offers a light, neutral grey tone with a subtle stone effect texture, giving outdoor spaces a clean, versatile finish that works with almost any garden or patio style. Manufactured to these slabs are frost proof, low porosity and highly resistant to staining, providing a durable surface that performs well throughout the British seasons. The textured surface delivers dependable slip resistance in wet and dry conditions, making Universal Grey an ideal choice for patios, pathways, driveways and pool surrounds. Its light, understated tone brightens outdoor areas and pairs easily with contemporary furniture, making it a popular option for entertaining spaces and poolside terraces. Low maintenance and simple to clean, it needs no sealing and holds its finish for years to come. At just £22.95 per m², Universal Grey offers a timeless, adaptable finish without the higher cost of natural stone. Searching for porcelain paving near me? We supply and deliver Universal Grey porcelain paving slabs across Preston, Lancashire and throughout the UK, with fast turnaround for trade and DIY projects alike. FAQs Is Universal Grey porcelain paving slip resistant?\nYes. The textured surface provides reliable grip underfoot, even when wet, making it a safe choice for patios, paths and pool surrounds. Is Universal Grey porcelain paving suitable for pool areas?\nYes, its slip resistant surface and low porosity make it a practical choice for pool surrounds as well as patios and driveways. Is Universal Grey porcelain paving suitable for driveways?\nYes, at this thickness it's suitable for domestic driveways as well as patios and paths, when laid on a properly prepared sub base.",
     "colour": "",
     "frost": "F2 — Fully frost resistant",
     "customSpecs": "Size 21.6m2 Coverage\n20mm Thickness\nR11 Matt anti-slip\nVitrified Porcelain / CE Certified",
@@ -1298,17 +1333,19 @@
     "sizeVariants": [
       {
         "pack": "Pack of 40 Pieces",
-        "size": "600 x 900mm",
+        "size": "20mm — 600 x 900mm",
         "price": "£525.10",
         "coverage": "£24.31",
-        "coverageM2": "21.6"
+        "coverageM2": "21.6",
+        "thickness": "20mm"
       },
       {
         "pack": "Pack of 52 Pieces",
-        "size": "16mm x 600 x 900",
+        "size": "16mm — 600 x 900mm",
         "price": "£494.21",
         "coverage": "£17.60",
-        "coverageM2": "28.08"
+        "coverageM2": "28.08",
+        "thickness": "16mm"
       }
     ],
     "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1785920604477-s3prym.jpg",
@@ -1321,13 +1358,13 @@
   },
   {
     "id": "p1785920918718",
-    "name": "20mm - BASALT BLACK - PORCELAIN PAVING - 600x900mm",
+    "name": "BASALT BLACK - PORCELAIN PAVING",
     "category": "Porcelain Paving",
     "price": "£525.10",
     "priceNote": "Pack of 40 Pieces | 600 x 900mm",
     "slug": "basalt-black-porcelain-paving-600x900mm",
     "url": "",
-    "description": "Basalt Black porcelain paving offers a deep, near black tone with a fine granular texture, giving patios and pool surrounds a sleek, contemporary finish inspired by natural basalt stone. Manufactured at 20mm thick, these slabs are frost proof, low porosity and highly resistant to staining, providing a durable surface built to handle the British climate all year round.\n\nThe textured surface delivers dependable slip resistance in wet and dry conditions, making Basalt Black an excellent choice for patios, pathways, driveways and poolside terraces. Its deep, consistent tone creates a striking contrast against water, glass and light coloured furniture, making it a favourite for contemporary architectural projects. Low maintenance and simple to clean, it needs no sealing and holds its finish for years to come.\n\nAt just £22.95 per m², Basalt Black offers a premium, architectural finish without the higher cost of natural stone. Searching for porcelain paving near me? We supply and deliver Basalt Black porcelain paving slabs across Preston, Lancashire and throughout the UK, with fast turnaround for trade and DIY projects alike.\n\nFAQs\n\nIs Basalt Black porcelain paving slip resistant?\nYes. The textured surface provides reliable grip underfoot, even when wet, making it a safe choice for patios, paths and pool surrounds.\n\nIs Basalt Black porcelain paving suitable for pool areas?\nYes, its slip resistant surface and low porosity make it a practical and stylish choice for pool surrounds as well as patios and driveways.\n\nIs Basalt Black porcelain paving suitable for driveways?\nYes, at 20mm thick it's suitable for domestic driveways as well as patios and paths, when laid on a properly prepared sub base.",
+    "description": "Basalt Black porcelain paving offers a deep, near black tone with a fine granular texture, giving patios and pool surrounds a sleek, contemporary finish inspired by natural basalt stone. Manufactured to these slabs are frost proof, low porosity and highly resistant to staining, providing a durable surface built to handle the British climate all year round. The textured surface delivers dependable slip resistance in wet and dry conditions, making Basalt Black an excellent choice for patios, pathways, driveways and poolside terraces. Its deep, consistent tone creates a striking contrast against water, glass and light coloured furniture, making it a favourite for contemporary architectural projects. Low maintenance and simple to clean, it needs no sealing and holds its finish for years to come. At just £22.95 per m², Basalt Black offers a premium, architectural finish without the higher cost of natural stone. Searching for porcelain paving near me? We supply and deliver Basalt Black porcelain paving slabs across Preston, Lancashire and throughout the UK, with fast turnaround for trade and DIY projects alike. FAQs Is Basalt Black porcelain paving slip resistant?\nYes. The textured surface provides reliable grip underfoot, even when wet, making it a safe choice for patios, paths and pool surrounds. Is Basalt Black porcelain paving suitable for pool areas?\nYes, its slip resistant surface and low porosity make it a practical and stylish choice for pool surrounds as well as patios and driveways. Is Basalt Black porcelain paving suitable for driveways?\nYes, at this thickness it's suitable for domestic driveways as well as patios and paths, when laid on a properly prepared sub base.",
     "colour": "",
     "frost": "F2 — Fully frost resistant",
     "customSpecs": "Size 21.6m2 Coverage\n20mm Thickness\nR11 Matt anti-slip\nVitrified Porcelain / CE Certified",
@@ -1347,13 +1384,13 @@
   },
   {
     "id": "p1785921157352",
-    "name": "20mm - HIMALAYAN WHITE - PORCELAIN PAVING - 600x900mm",
+    "name": "HIMALAYAN WHITE - PORCELAIN PAVING",
     "category": "Porcelain Paving",
     "price": "STOCK COMING SOON",
     "priceNote": "Pack of 40 Pieces | 600 x 900mm",
     "slug": "himalayan-white-porcelain-paving-600x900mm",
     "url": "",
-    "description": "Himalayan White porcelain paving offers a bright, soft white tone with subtle grey veining, giving patios and poolside terraces a clean, light and contemporary finish. Manufactured at 20mm thick, these slabs are frost proof, low porosity and highly resistant to staining, providing a durable surface that performs well throughout the British seasons.\n\nThe textured surface delivers dependable slip resistance in wet and dry conditions, making Himalayan White an excellent choice for patios, pathways, driveways and pool surrounds. Its light tone helps maximise brightness in smaller gardens and creates a fresh, seamless look against water, greenery and contemporary furniture. Low maintenance and simple to clean, it needs no sealing and holds its finish for years to come.\n\nAt just £22.95 per m², Himalayan White offers a bright, premium finish without the higher cost of natural stone. Searching for porcelain paving near me? We supply and deliver Himalayan White porcelain paving slabs across Preston, Lancashire and throughout the UK, with fast turnaround for trade and DIY projects alike.\n\nFAQs\n\nIs Himalayan White porcelain paving slip resistant?\nYes. The textured surface provides reliable grip underfoot, even when wet, making it a safe choice for patios, paths and pool surrounds.\n\nIs Himalayan White porcelain paving suitable for pool areas?\nYes, its slip resistant surface and low porosity make it a practical choice for pool surrounds as well as patios and driveways.\n\nIs Himalayan White porcelain paving suitable for small gardens?\nYes, its light tone helps brighten smaller outdoor spaces while remaining durable enough for patios, paths and driveways.",
+    "description": "Himalayan White porcelain paving offers a bright, soft white tone with subtle grey veining, giving patios and poolside terraces a clean, light and contemporary finish. Manufactured to these slabs are frost proof, low porosity and highly resistant to staining, providing a durable surface that performs well throughout the British seasons. The textured surface delivers dependable slip resistance in wet and dry conditions, making Himalayan White an excellent choice for patios, pathways, driveways and pool surrounds. Its light tone helps maximise brightness in smaller gardens and creates a fresh, seamless look against water, greenery and contemporary furniture. Low maintenance and simple to clean, it needs no sealing and holds its finish for years to come. At just £22.95 per m², Himalayan White offers a bright, premium finish without the higher cost of natural stone. Searching for porcelain paving near me? We supply and deliver Himalayan White porcelain paving slabs across Preston, Lancashire and throughout the UK, with fast turnaround for trade and DIY projects alike. FAQs Is Himalayan White porcelain paving slip resistant?\nYes. The textured surface provides reliable grip underfoot, even when wet, making it a safe choice for patios, paths and pool surrounds. Is Himalayan White porcelain paving suitable for pool areas?\nYes, its slip resistant surface and low porosity make it a practical choice for pool surrounds as well as patios and driveways. Is Himalayan White porcelain paving suitable for small gardens?\nYes, its light tone helps brighten smaller outdoor spaces while remaining durable enough for patios, paths and driveways.",
     "colour": "",
     "frost": "F2 — Fully frost resistant",
     "customSpecs": "Size 21.6m2 Coverage\n20mm Thickness\nR11 Matt anti-slip\nVitrified Porcelain / CE Certified",
@@ -1366,17 +1403,19 @@
     "sizeVariants": [
       {
         "pack": "Pack of 40 Pieces",
-        "size": "600 x 900mm",
+        "size": "20mm — 600 x 900mm",
         "price": "STOCK COMING SOON",
         "coverage": "£24.31",
-        "coverageM2": "21.6"
+        "coverageM2": "21.6",
+        "thickness": "20mm"
       },
       {
         "pack": "Pack of 52 Pieces",
-        "size": "16mm x 600 x 900",
+        "size": "16mm — 600 x 900mm",
         "price": "STOCK COMING SOON",
         "coverage": "£17.60",
-        "coverageM2": "28.08"
+        "coverageM2": "28.08",
+        "thickness": "16mm"
       }
     ],
     "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1785921112816-1eogjr.jpg",
@@ -1389,13 +1428,13 @@
   },
   {
     "id": "p1785921541428",
-    "name": "20mm - COPPER RUSTIC SLATE - PORCELAIN PAVING - 600x900mm",
+    "name": "COPPER RUSTIC SLATE - PORCELAIN PAVING",
     "category": "Porcelain Paving",
     "price": "£525.10",
     "priceNote": "Pack of 40 Pieces | 600 x 900mm",
     "slug": "copper-rustic-slate-porcelain-paving-600x900mm",
     "url": "",
-    "description": "Copper Rustic Slate Porcelain Paving 600 x 900mm 20mm\n\nCopper Rustic Slate porcelain paving brings a rich, multi tonal mix of copper, rust and grey slate effect shades, giving patios a bold, characterful finish with real natural stone appeal. Manufactured at 20mm thick, these slabs are frost proof, low porosity and highly resistant to staining, providing a durable surface built to handle the British climate all year round.\n\nThe textured surface delivers dependable slip resistance in wet and dry conditions, making Copper Rustic Slate a striking choice for patios, pathways, driveways and garden borders. Its warm, varied tones create depth and interest underfoot, pairing beautifully with greenery, timber and natural garden settings for a rustic, high end look. Low maintenance and simple to clean, it needs no sealing and holds its finish for years to come.\n\nAt just £22.95 per m², Copper Rustic Slate offers a premium, rustic slate finish without the higher cost of natural stone. Searching for porcelain paving near me? We supply and deliver Copper Rustic Slate porcelain paving slabs across Preston, Lancashire and throughout the UK, with fast turnaround for trade and DIY projects alike.\n\nFAQs\n\nIs Copper Rustic Slate porcelain paving slip resistant?\nYes. The textured surface provides reliable grip underfoot, even when wet, making it a safe choice for patios and paths.\n\nDoes Copper Rustic Slate porcelain paving fade over time?\nNo. Porcelain is highly UV stable and colourfast, so its rich copper and slate tones stay looking sharp for years to come.\n\nIs Copper Rustic Slate porcelain paving suitable for driveways?\nYes, at 20mm thick it's suitable for domestic driveways as well as patios and paths, when laid on a properly prepared sub base.",
+    "description": "Copper Rustic Slate Porcelain Paving 600 x 900mm Copper Rustic Slate porcelain paving brings a rich, multi tonal mix of copper, rust and grey slate effect shades, giving patios a bold, characterful finish with real natural stone appeal. Manufactured to these slabs are frost proof, low porosity and highly resistant to staining, providing a durable surface built to handle the British climate all year round. The textured surface delivers dependable slip resistance in wet and dry conditions, making Copper Rustic Slate a striking choice for patios, pathways, driveways and garden borders. Its warm, varied tones create depth and interest underfoot, pairing beautifully with greenery, timber and natural garden settings for a rustic, high end look. Low maintenance and simple to clean, it needs no sealing and holds its finish for years to come. At just £22.95 per m², Copper Rustic Slate offers a premium, rustic slate finish without the higher cost of natural stone. Searching for porcelain paving near me? We supply and deliver Copper Rustic Slate porcelain paving slabs across Preston, Lancashire and throughout the UK, with fast turnaround for trade and DIY projects alike. FAQs Is Copper Rustic Slate porcelain paving slip resistant?\nYes. The textured surface provides reliable grip underfoot, even when wet, making it a safe choice for patios and paths. Does Copper Rustic Slate porcelain paving fade over time?\nNo. Porcelain is highly UV stable and colourfast, so its rich copper and slate tones stay looking sharp for years to come. Is Copper Rustic Slate porcelain paving suitable for driveways?\nYes, at this thickness it's suitable for domestic driveways as well as patios and paths, when laid on a properly prepared sub base.",
     "colour": "",
     "frost": "F2 — Fully frost resistant",
     "customSpecs": "Size 21.6m2 Coverage\n20mm Thickness\nR11 Matt anti-slip\nVitrified Porcelain / CE Certified",
@@ -1408,10 +1447,10 @@
     "sizeVariants": [
       {
         "pack": "Pack of 40 Pieces",
-        "size": "600 x 900mm",
+        "size": "20mm — 600 x 900mm",
         "price": "£525.10",
         "coverage": "£24.31",
-        "thickness": "",
+        "thickness": "20mm",
         "coverageM2": "21.6"
       }
     ],
@@ -1425,13 +1464,13 @@
   },
   {
     "id": "p1785922138718",
-    "name": "20mm - LIMESTONE ASH - PORCELAIN PAVING - 600x900mm",
+    "name": "LIMESTONE ASH - PORCELAIN PAVING",
     "category": "Porcelain Paving",
     "price": "£494.21",
     "priceNote": "Pack of 40 Pieces | 600 x 900mm",
     "slug": "limestone-ash-porcelain-paving-600x900mm",
     "url": "",
-    "description": "Limestone Ash porcelain paving offers a soft, warm grey tone with a subtle limestone effect finish, giving patios and indoor outdoor spaces a smooth, contemporary look that suits modern architecture. Manufactured at 20mm thick, these slabs are frost proof, low porosity and highly resistant to staining, providing a durable surface that performs well throughout the British seasons.\n\nThe textured surface delivers dependable slip resistance in wet and dry conditions, making Limestone Ash a versatile choice for patios, pathways, driveways and entertaining spaces. Its authentic limestone look creates a seamless transition between indoor and outdoor living areas, working particularly well alongside glass doors, concrete finishes and contemporary furniture. Low maintenance and simple to clean, it needs no sealing and holds its finish for years to come.\n\nAt just £22.95 per m², Limestone Ash offers an authentic limestone look without the higher cost or upkeep of natural stone. Searching for porcelain paving near me? We supply and deliver Limestone Ash porcelain paving slabs across Preston, Lancashire and throughout the UK, with fast turnaround for trade and DIY projects alike.\n\nFAQs\n\nIs Limestone Ash porcelain paving slip resistant?\nYes. The textured surface provides reliable grip underfoot, even when wet, making it a safe choice for patios and paths.\n\nCan Limestone Ash porcelain paving be used indoors and outdoors?\nYes, its consistent finish makes it ideal for creating a seamless look between indoor and outdoor living spaces.\n\nIs Limestone Ash porcelain paving suitable for driveways?\nYes, at 20mm thick it's suitable for domestic driveways as well as patios and paths, when laid on a properly prepared sub base.",
+    "description": "Limestone Ash porcelain paving offers a soft, warm grey tone with a subtle limestone effect finish, giving patios and indoor outdoor spaces a smooth, contemporary look that suits modern architecture. Manufactured to these slabs are frost proof, low porosity and highly resistant to staining, providing a durable surface that performs well throughout the British seasons. The textured surface delivers dependable slip resistance in wet and dry conditions, making Limestone Ash a versatile choice for patios, pathways, driveways and entertaining spaces. Its authentic limestone look creates a seamless transition between indoor and outdoor living areas, working particularly well alongside glass doors, concrete finishes and contemporary furniture. Low maintenance and simple to clean, it needs no sealing and holds its finish for years to come. At just £22.95 per m², Limestone Ash offers an authentic limestone look without the higher cost or upkeep of natural stone. Searching for porcelain paving near me? We supply and deliver Limestone Ash porcelain paving slabs across Preston, Lancashire and throughout the UK, with fast turnaround for trade and DIY projects alike. FAQs Is Limestone Ash porcelain paving slip resistant?\nYes. The textured surface provides reliable grip underfoot, even when wet, making it a safe choice for patios and paths. Can Limestone Ash porcelain paving be used indoors and outdoors?\nYes, its consistent finish makes it ideal for creating a seamless look between indoor and outdoor living spaces. Is Limestone Ash porcelain paving suitable for driveways?\nYes, at this thickness it's suitable for domestic driveways as well as patios and paths, when laid on a properly prepared sub base.",
     "colour": "",
     "frost": "F2 — Fully frost resistant",
     "customSpecs": "Size 21.6m2 Coverage\n20mm Thickness\nR11 Matt anti-slip\nVitrified Porcelain / CE Certified",
@@ -1444,17 +1483,19 @@
     "sizeVariants": [
       {
         "pack": "Pack of 40 Pieces",
-        "size": "600 x 900mm",
+        "size": "20mm — 600 x 900mm",
         "price": "£525.10",
         "coverage": "£24.31",
-        "coverageM2": "21.6"
+        "coverageM2": "21.6",
+        "thickness": "20mm"
       },
       {
         "pack": "Pack of 52 Pieces",
-        "size": "16mm x 600 x 900",
+        "size": "16mm — 600 x 900mm",
         "price": "£494.21",
         "coverage": "£17.60",
-        "coverageM2": "28.08"
+        "coverageM2": "28.08",
+        "thickness": "16mm"
       }
     ],
     "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1785922134251-6w2a83.jpg",
@@ -1466,13 +1507,13 @@
   },
   {
     "id": "p1785922273650",
-    "name": "20mm - LIMESTONE CREMA (IVORY) - PORCELAIN PAVING - 600x900mm",
+    "name": "LIMESTONE CREMA (IVORY) - PORCELAIN PAVING",
     "category": "Porcelain Paving",
     "price": "£525.10",
     "priceNote": "Pack of 40 Pieces | 600 x 900mm",
     "slug": "limestone-crema-ivory-porcelain-paving-600x900mm",
     "url": "",
-    "description": "Limestone Creama porcelain paving offers a warm, ivory tone with a soft limestone effect finish, giving patios and outdoor living spaces a bright, welcoming feel that suits both contemporary and traditional settings. Manufactured at 20mm thick, these slabs are frost proof, low porosity and highly resistant to staining, providing a durable surface that performs well throughout the British seasons.\n\nThe textured surface delivers dependable slip resistance in wet and dry conditions, making Limestone Creama a versatile choice for patios, pathways, driveways and entertaining spaces. Its warm ivory tone pairs beautifully with timber furniture, greenery and light coloured walls, helping create a bright, inviting outdoor area. Low maintenance and simple to clean, it needs no sealing and holds its finish for years to come.\n\nAt just £22.95 per m², Limestone Creama offers an authentic limestone look without the higher cost or upkeep of natural stone. Searching for porcelain paving near me? We supply and deliver Limestone Creama porcelain paving slabs across Preston, Lancashire and throughout the UK, with fast turnaround for trade and DIY projects alike.\n\nFAQs\n\nIs Limestone Creama porcelain paving slip resistant?\nYes. The textured surface provides reliable grip underfoot, even when wet, making it a safe choice for patios and paths.\n\nDoes Limestone Creama porcelain paving fade in sunlight?\nNo. Porcelain is highly UV stable and colourfast, so its warm ivory tone stays looking fresh over time.\n\nIs Limestone Creama porcelain paving suitable for driveways?\nYes, at 20mm thick it's suitable for domestic driveways as well as patios and paths, when laid on a properly prepared sub base.",
+    "description": "Limestone Creama porcelain paving offers a warm, ivory tone with a soft limestone effect finish, giving patios and outdoor living spaces a bright, welcoming feel that suits both contemporary and traditional settings. Manufactured to these slabs are frost proof, low porosity and highly resistant to staining, providing a durable surface that performs well throughout the British seasons. The textured surface delivers dependable slip resistance in wet and dry conditions, making Limestone Creama a versatile choice for patios, pathways, driveways and entertaining spaces. Its warm ivory tone pairs beautifully with timber furniture, greenery and light coloured walls, helping create a bright, inviting outdoor area. Low maintenance and simple to clean, it needs no sealing and holds its finish for years to come. At just £22.95 per m², Limestone Creama offers an authentic limestone look without the higher cost or upkeep of natural stone. Searching for porcelain paving near me? We supply and deliver Limestone Creama porcelain paving slabs across Preston, Lancashire and throughout the UK, with fast turnaround for trade and DIY projects alike. FAQs Is Limestone Creama porcelain paving slip resistant?\nYes. The textured surface provides reliable grip underfoot, even when wet, making it a safe choice for patios and paths. Does Limestone Creama porcelain paving fade in sunlight?\nNo. Porcelain is highly UV stable and colourfast, so its warm ivory tone stays looking fresh over time. Is Limestone Creama porcelain paving suitable for driveways?\nYes, at this thickness it's suitable for domestic driveways as well as patios and paths, when laid on a properly prepared sub base.",
     "colour": "",
     "frost": "F2 — Fully frost resistant",
     "customSpecs": "Size 21.6m2 Coverage\n20mm Thickness\nR11 Matt anti-slip\nVitrified Porcelain / CE Certified",
@@ -1485,17 +1526,19 @@
     "sizeVariants": [
       {
         "pack": "Pack of 40 Pieces",
-        "size": "600 x 900mm",
+        "size": "20mm — 600 x 900mm",
         "price": "£525.10",
         "coverage": "£24.31",
-        "coverageM2": "21.6"
+        "coverageM2": "21.6",
+        "thickness": "20mm"
       },
       {
         "pack": "Pack of 52 Pieces",
-        "size": "16mm x 600 x 900",
+        "size": "16mm — 600 x 900mm",
         "price": "STOCK COMING SOON",
         "coverage": "£17.60",
-        "coverageM2": "28.08"
+        "coverageM2": "28.08",
+        "thickness": "16mm"
       }
     ],
     "image": "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1785922268789-1ofjb9.jpg",
@@ -1507,13 +1550,13 @@
   },
   {
     "id": "p1785922450279",
-    "name": "20mm - COUNTY LIGHT GREY - PORCELAIN PAVING - 600x900mm",
+    "name": "COUNTY LIGHT GREY - PORCELAIN PAVING",
     "category": "Porcelain Paving",
     "price": "£525.10",
     "priceNote": "Pack of 40 Pieces | 600 x 900mm",
     "slug": "country-light-grey-porcelain-paving-600x900mm",
     "url": "",
-    "description": "County Light Grey porcelain paving offers a soft, cool grey tone with a natural stone effect finish, giving patios and garden spaces a fresh, contemporary look that suits both new builds and traditional properties. Manufactured at 20mm thick, these slabs are frost proof, low porosity and highly resistant to staining, providing a durable surface that copes well with the British climate throughout the year.\n\nThe textured surface delivers dependable slip resistance in wet and dry conditions, making Country Light Grey a versatile choice for patios, pathways, driveways and garden borders. Its light, even tone works beautifully alongside lawns, artificial grass and brickwork, helping create a clean, well finished outdoor space. Low maintenance and simple to clean, it needs no sealing and holds its finish for years to come.\n\nAt just £22.95 per m², County Light Grey offers a timeless, adaptable finish without the higher cost of natural stone. Searching for porcelain paving near me? We supply and deliver County Light Grey porcelain paving slabs across Preston, Lancashire and throughout the UK, with fast turnaround for trade and DIY projects alike.\n\nFAQs\n\nIs County Light Grey porcelain paving slip resistant?\nYes. The textured surface provides reliable grip underfoot, even when wet, making it a safe choice for patios and paths.\n\nDoes County Light Grey porcelain paving pair well with artificial grass?\nYes, its light, even tone creates a clean contrast against artificial or natural lawns, making it popular for new garden landscaping.\n\nIs County Light Grey porcelain paving suitable for driveways?\nYes, at 20mm thick it's suitable for domestic driveways as well as patios and paths, when laid on a properly prepared sub base.",
+    "description": "County Light Grey porcelain paving offers a soft, cool grey tone with a natural stone effect finish, giving patios and garden spaces a fresh, contemporary look that suits both new builds and traditional properties. Manufactured to these slabs are frost proof, low porosity and highly resistant to staining, providing a durable surface that copes well with the British climate throughout the year. The textured surface delivers dependable slip resistance in wet and dry conditions, making Country Light Grey a versatile choice for patios, pathways, driveways and garden borders. Its light, even tone works beautifully alongside lawns, artificial grass and brickwork, helping create a clean, well finished outdoor space. Low maintenance and simple to clean, it needs no sealing and holds its finish for years to come. At just £22.95 per m², County Light Grey offers a timeless, adaptable finish without the higher cost of natural stone. Searching for porcelain paving near me? We supply and deliver County Light Grey porcelain paving slabs across Preston, Lancashire and throughout the UK, with fast turnaround for trade and DIY projects alike. FAQs Is County Light Grey porcelain paving slip resistant?\nYes. The textured surface provides reliable grip underfoot, even when wet, making it a safe choice for patios and paths. Does County Light Grey porcelain paving pair well with artificial grass?\nYes, its light, even tone creates a clean contrast against artificial or natural lawns, making it popular for new garden landscaping. Is County Light Grey porcelain paving suitable for driveways?\nYes, at this thickness it's suitable for domestic driveways as well as patios and paths, when laid on a properly prepared sub base.",
     "colour": "",
     "frost": "F2 — Fully frost resistant",
     "customSpecs": "Size 21.6m2 Coverage\n20mm Thickness\nR11 Matt anti-slip\nVitrified Porcelain / CE Certified",
@@ -1526,18 +1569,18 @@
     "sizeVariants": [
       {
         "pack": "Pack of 40 Pieces",
-        "size": "600 x 900mm",
+        "size": "20mm — 600 x 900mm",
         "price": "£525.10",
         "coverage": "£24.31",
-        "thickness": "",
+        "thickness": "20mm",
         "coverageM2": "21.6"
       },
       {
         "pack": "Pack of 52 Pieces",
-        "size": "16mm x 600 x 900",
+        "size": "16mm — 600 x 900mm",
         "price": "STOCK COMING SOON",
         "coverage": "£17.60",
-        "thickness": "",
+        "thickness": "16mm",
         "coverageM2": "28.08"
       }
     ],
@@ -1553,13 +1596,13 @@
   },
   {
     "id": "p1785922921159",
-    "name": "20mm - EVEREST PEARL - PORCELAIN PAVING - 600x900mm",
+    "name": "EVEREST PEARL - PORCELAIN PAVING",
     "category": "Porcelain Paving",
     "price": "£525.10",
     "priceNote": "Pack of 40 Pieces | 600 x 900mm",
     "slug": "everest-pearl-porcelain-paving-600x900mm",
     "url": "",
-    "description": "Everest Pearl porcelain paving offers a light, soft grey tone with a subtle stone effect finish, giving patios and outdoor living spaces a bright, contemporary look that pairs beautifully with timber decking and modern furniture. Manufactured at 20mm thick, these slabs are frost proof, low porosity and highly resistant to staining, providing a durable surface that performs well throughout the British seasons.\n\nThe textured surface delivers dependable slip resistance in wet and dry conditions, making Everest Pearl a versatile choice for patios, pathways, driveways and entertaining spaces. It's available in 600x600mm, 900x600mm and 1200x600mm formats, making it easy to plan larger, more contemporary layouts. Low maintenance and simple to clean, it needs no sealing and holds its finish for years to come.\n\nAt just £22.95 per m², Everest Pearl offers a bright, premium finish without the higher cost of natural stone. Searching for porcelain paving near me? We supply and deliver Everest Pearl porcelain paving slabs across Preston, Lancashire and throughout the UK, with fast turnaround for trade and DIY projects alike.\n\nFAQs\n\nIs Everest Pearl porcelain paving slip resistant?\nYes. The textured surface provides reliable grip underfoot, even when wet, making it a safe choice for patios and paths.\n\nWhat sizes does Everest Pearl porcelain paving come in?\nIt's available in 600x600mm, 900x600mm and 1200x600mm formats, all at 20mm thick, giving flexibility for different layout designs.\n\nIs Everest Pearl porcelain paving suitable for driveways?\nYes, at 20mm thick it's suitable for domestic driveways as well as patios and paths, when laid on a properly prepared sub base.",
+    "description": "Everest Pearl porcelain paving offers a light, soft grey tone with a subtle stone effect finish, giving patios and outdoor living spaces a bright, contemporary look that pairs beautifully with timber decking and modern furniture. Manufactured to these slabs are frost proof, low porosity and highly resistant to staining, providing a durable surface that performs well throughout the British seasons. The textured surface delivers dependable slip resistance in wet and dry conditions, making Everest Pearl a versatile choice for patios, pathways, driveways and entertaining spaces. It's available in 600x600mm, 900x600mm and 1200x600mm formats, making it easy to plan larger, more contemporary layouts. Low maintenance and simple to clean, it needs no sealing and holds its finish for years to come. At just £22.95 per m², Everest Pearl offers a bright, premium finish without the higher cost of natural stone. Searching for porcelain paving near me? We supply and deliver Everest Pearl porcelain paving slabs across Preston, Lancashire and throughout the UK, with fast turnaround for trade and DIY projects alike. FAQs Is Everest Pearl porcelain paving slip resistant?\nYes. The textured surface provides reliable grip underfoot, even when wet, making it a safe choice for patios and paths. What sizes does Everest Pearl porcelain paving come in?\nIt's available in 600x600mm, 900x600mm and 1200x600mm formats, all at this thickness, giving flexibility for different layout designs. Is Everest Pearl porcelain paving suitable for driveways?\nYes, at this thickness it's suitable for domestic driveways as well as patios and paths, when laid on a properly prepared sub base.",
     "colour": "",
     "frost": "F2 — Fully frost resistant",
     "customSpecs": "Size 21.6m2 Coverage\n20mm Thickness\nR11 Matt anti-slip\nVitrified Porcelain / CE Certified",
@@ -1580,13 +1623,13 @@
   },
   {
     "id": "p1785923562741",
-    "name": "20mm - MAXIMUS STATUARIO - PORCELAIN PAVING - 600x900mm",
+    "name": "MAXIMUS STATUARIO - PORCELAIN PAVING",
     "category": "Porcelain Paving",
     "price": "£525.10",
     "priceNote": "Pack of 40 Pieces | 600 x 900mm",
     "slug": "maximus-statuario-porcelain-paving-600x900mm",
     "url": "",
-    "description": "Maximus Stuatario porcelain paving offers a striking white marble effect finish with fine grey veining, giving patios a luxurious, statement look inspired by premium Italian marble. Manufactured at 20mm thick, these slabs are frost proof, low porosity and highly resistant to staining, providing a durable surface built to handle the British climate all year round.\n\nThe textured surface delivers dependable slip resistance in wet and dry conditions, making Maximus Stuatario a striking choice for patios, pathways, driveways and entertaining spaces. Its bright, marbled finish brings a high end, sophisticated feel to outdoor areas, working particularly well with contemporary planting and light coloured furniture. Low maintenance and simple to clean, it needs no sealing and holds its finish for years to come.\n\nAt just £22.95 per m², Maximus Stuatario offers a luxury marble effect look without the higher cost or upkeep of natural marble. Searching for porcelain paving near me? We supply and deliver Maximus Stuatario porcelain paving slabs across Preston, Lancashire and throughout the UK, with fast turnaround for trade and DIY projects alike.\n\nFAQs\n\nIs Maximus Stuatario porcelain paving slip resistant?\nYes. The textured surface provides reliable grip underfoot, even when wet, making it a safe choice for patios and paths.\n\nDoes Maximus Stuatario porcelain paving look like real marble?\nYes, its fine grey veining on a bright white base closely resembles natural statuario marble while offering the durability of porcelain.\n\nIs Maximus Stuatario porcelain paving suitable for driveways?\nYes, at 20mm thick it's suitable for domestic driveways as well as patios and paths, when laid on a properly prepared sub base.",
+    "description": "Maximus Stuatario porcelain paving offers a striking white marble effect finish with fine grey veining, giving patios a luxurious, statement look inspired by premium Italian marble. Manufactured to these slabs are frost proof, low porosity and highly resistant to staining, providing a durable surface built to handle the British climate all year round. The textured surface delivers dependable slip resistance in wet and dry conditions, making Maximus Stuatario a striking choice for patios, pathways, driveways and entertaining spaces. Its bright, marbled finish brings a high end, sophisticated feel to outdoor areas, working particularly well with contemporary planting and light coloured furniture. Low maintenance and simple to clean, it needs no sealing and holds its finish for years to come. At just £22.95 per m², Maximus Stuatario offers a luxury marble effect look without the higher cost or upkeep of natural marble. Searching for porcelain paving near me? We supply and deliver Maximus Stuatario porcelain paving slabs across Preston, Lancashire and throughout the UK, with fast turnaround for trade and DIY projects alike. FAQs Is Maximus Stuatario porcelain paving slip resistant?\nYes. The textured surface provides reliable grip underfoot, even when wet, making it a safe choice for patios and paths. Does Maximus Stuatario porcelain paving look like real marble?\nYes, its fine grey veining on a bright white base closely resembles natural statuario marble while offering the durability of porcelain. Is Maximus Stuatario porcelain paving suitable for driveways?\nYes, at this thickness it's suitable for domestic driveways as well as patios and paths, when laid on a properly prepared sub base.",
     "colour": "",
     "frost": "F2 — Fully frost resistant",
     "customSpecs": "Size 21.6m2 Coverage\n20mm Thickness\nR11 Matt anti-slip\nVitrified Porcelain / CE Certified",
@@ -1606,13 +1649,13 @@
   },
   {
     "id": "p1785925756541",
-    "name": "20mm - CROSSOVER GREY - PORCELAIN PAVING - 600x900mm",
+    "name": "CROSSOVER GREY - PORCELAIN PAVING",
     "category": "Porcelain Paving",
     "price": "£525.10",
     "priceNote": "Pack of 40 Pieces | 600 x 900mm",
     "slug": "crossover-grey-porcelain-paving-600x900mm",
     "url": "",
-    "description": "Crossover Grey porcelain paving offers a balanced mid grey tone with soft natural veining, giving patios and outdoor entertaining areas a smart, contemporary finish that suits a wide range of garden styles. Manufactured at 20mm thick, these slabs are frost proof, low porosity and highly resistant to staining, providing a durable surface built to handle the British climate all year round.\n\nThe textured surface delivers dependable slip resistance in wet and dry conditions, making Crossover Grey a versatile choice for patios, pathways, driveways and large entertaining spaces. Its even, understated tone works well against greenery, rattan furniture and outdoor dining sets, making it a practical option for busy garden and hospitality areas. Low maintenance and simple to clean, it needs no sealing and holds its finish for years to come.\n\nAt just £22.95 per m², Crossover Grey offers a timeless, adaptable finish without the higher cost of natural stone. Searching for porcelain paving near me? We supply and deliver Crossover Grey porcelain paving slabs across Preston, Lancashire and throughout the UK, with fast turnaround for trade and DIY projects alike.\n\nFAQs\n\nIs Crossover Grey porcelain paving slip resistant?\nYes. The textured surface provides reliable grip underfoot, even when wet, making it a safe choice for patios and paths.\n\nIs Crossover Grey porcelain paving suitable for larger patio areas?\nYes, its consistent, even tone makes it a practical choice for larger entertaining spaces and busy outdoor seating areas.\n\nIs Crossover Grey porcelain paving suitable for driveways?\nYes, at 20mm thick it's suitable for domestic driveways as well as patios and paths, when laid on a properly prepared sub base.",
+    "description": "Crossover Grey porcelain paving offers a balanced mid grey tone with soft natural veining, giving patios and outdoor entertaining areas a smart, contemporary finish that suits a wide range of garden styles. Manufactured to these slabs are frost proof, low porosity and highly resistant to staining, providing a durable surface built to handle the British climate all year round. The textured surface delivers dependable slip resistance in wet and dry conditions, making Crossover Grey a versatile choice for patios, pathways, driveways and large entertaining spaces. Its even, understated tone works well against greenery, rattan furniture and outdoor dining sets, making it a practical option for busy garden and hospitality areas. Low maintenance and simple to clean, it needs no sealing and holds its finish for years to come. At just £22.95 per m², Crossover Grey offers a timeless, adaptable finish without the higher cost of natural stone. Searching for porcelain paving near me? We supply and deliver Crossover Grey porcelain paving slabs across Preston, Lancashire and throughout the UK, with fast turnaround for trade and DIY projects alike. FAQs Is Crossover Grey porcelain paving slip resistant?\nYes. The textured surface provides reliable grip underfoot, even when wet, making it a safe choice for patios and paths. Is Crossover Grey porcelain paving suitable for larger patio areas?\nYes, its consistent, even tone makes it a practical choice for larger entertaining spaces and busy outdoor seating areas. Is Crossover Grey porcelain paving suitable for driveways?\nYes, at this thickness it's suitable for domestic driveways as well as patios and paths, when laid on a properly prepared sub base.",
     "colour": "",
     "frost": "F2 — Fully frost resistant",
     "customSpecs": "Size 21.6m2 Coverage\n20mm Thickness\nR11 Matt anti-slip\nVitrified Porcelain / CE Certified",
@@ -1632,13 +1675,13 @@
   },
   {
     "id": "p1785925870302",
-    "name": "20mm - CROSSOVER WHITE - PORCELAIN PAVING - 600x900mm",
+    "name": "CROSSOVER WHITE - PORCELAIN PAVING",
     "category": "Porcelain Paving",
     "price": "£525.10",
     "priceNote": "Pack of 40 Pieces | 600 x 900mm",
     "slug": "crossover-white-porcelain-paving-600x900mm",
     "url": "",
-    "description": "Crossover White porcelain paving offers a soft, bright white tone with subtle natural veining, giving patios and entertaining spaces a fresh, contemporary finish that works beautifully with modern outdoor furniture. Manufactured at 20mm thick, these slabs are frost proof, low porosity and highly resistant to staining, providing a durable surface built to handle the British climate all year round.\n\nThe textured surface delivers dependable slip resistance in wet and dry conditions, making Crossover White a versatile choice for patios, pathways, driveways and entertaining spaces. Its light, airy tone brightens outdoor areas and pairs beautifully with planting, timber accents and fire pit seating areas, helping create an inviting outdoor room. Low maintenance and simple to clean, it needs no sealing and holds its finish for years to come.\n\nAt just £22.95 per m², Crossover White offers a bright, premium finish without the higher cost of natural stone. Searching for porcelain paving near me? We supply and deliver Crossover White porcelain paving slabs across Preston, Lancashire and throughout the UK, with fast turnaround for trade and DIY projects alike.\n\nFAQs\n\nIs Crossover White porcelain paving slip resistant?\nYes. The textured surface provides reliable grip underfoot, even when wet, making it a safe choice for patios and paths.\n\nDoes Crossover White porcelain paving brighten smaller gardens?\nYes, its light, bright tone helps open up smaller outdoor spaces while remaining durable enough for patios and driveways.\n\nIs Crossover White porcelain paving suitable for driveways?\nYes, at 20mm thick it's suitable for domestic driveways as well as patios and paths, when laid on a properly prepared sub base.",
+    "description": "Crossover White porcelain paving offers a soft, bright white tone with subtle natural veining, giving patios and entertaining spaces a fresh, contemporary finish that works beautifully with modern outdoor furniture. Manufactured to these slabs are frost proof, low porosity and highly resistant to staining, providing a durable surface built to handle the British climate all year round. The textured surface delivers dependable slip resistance in wet and dry conditions, making Crossover White a versatile choice for patios, pathways, driveways and entertaining spaces. Its light, airy tone brightens outdoor areas and pairs beautifully with planting, timber accents and fire pit seating areas, helping create an inviting outdoor room. Low maintenance and simple to clean, it needs no sealing and holds its finish for years to come. At just £22.95 per m², Crossover White offers a bright, premium finish without the higher cost of natural stone. Searching for porcelain paving near me? We supply and deliver Crossover White porcelain paving slabs across Preston, Lancashire and throughout the UK, with fast turnaround for trade and DIY projects alike. FAQs Is Crossover White porcelain paving slip resistant?\nYes. The textured surface provides reliable grip underfoot, even when wet, making it a safe choice for patios and paths. Does Crossover White porcelain paving brighten smaller gardens?\nYes, its light, bright tone helps open up smaller outdoor spaces while remaining durable enough for patios and driveways. Is Crossover White porcelain paving suitable for driveways?\nYes, at this thickness it's suitable for domestic driveways as well as patios and paths, when laid on a properly prepared sub base.",
     "colour": "",
     "frost": "F2 — Fully frost resistant",
     "customSpecs": "Size 21.6m2 Coverage\n20mm Thickness\nR11 Matt anti-slip\nVitrified Porcelain / CE Certified",
@@ -1658,13 +1701,13 @@
   },
   {
     "id": "p1785926043702",
-    "name": "20mm - GETAFE BEIGE - PORCELAIN PAVING - 600x900mm",
+    "name": "GETAFE BEIGE - PORCELAIN PAVING",
     "category": "Porcelain Paving",
     "price": "£525.10",
     "priceNote": "Pack of 40 Pieces | 600 x 900mm",
     "slug": "getafe-beige-porcelain-paving-600x900mm",
     "url": "",
-    "description": "Getafe Beige porcelain paving offers a warm, sandy beige tone with a soft limestone effect finish, giving poolside terraces and patios a bright, luxurious feel that pairs beautifully with timber and tropical planting. Manufactured at 20mm thick, these slabs are frost proof, low porosity and highly resistant to staining, providing a durable surface built to handle the British climate all year round.\n\nThe textured surface delivers dependable slip resistance in wet and dry conditions, making Getafe Beige an excellent choice for patios, pathways, driveways and pool surrounds. Its warm, inviting tone creates a resort style feel around water, working particularly well with wood accents, glazed doors and lush greenery. Low maintenance and simple to clean, it needs no sealing and holds its finish for years to come.\n\nAt just £22.95 per m², Getafe Beige offers a premium, resort style finish without the higher cost of natural stone. Searching for porcelain paving near me? We supply and deliver Getafe Beige porcelain paving slabs across Preston, Lancashire and throughout the UK, with fast turnaround for trade and DIY projects alike.\n\nFAQs\n\nIs Getafe Beige porcelain paving slip resistant?\nYes. The textured surface provides reliable grip underfoot, even when wet, making it a safe choice for patios, paths and pool surrounds.\n\nIs Getafe Beige porcelain paving suitable for pool areas?\nYes, its slip resistant surface and low porosity make it a practical and stylish choice for pool surrounds as well as patios and driveways.\n\nIs Getafe Beige porcelain paving suitable for driveways?\nYes, at 20mm thick it's suitable for domestic driveways as well as patios and paths, when laid on a properly prepared sub base.",
+    "description": "Getafe Beige porcelain paving offers a warm, sandy beige tone with a soft limestone effect finish, giving poolside terraces and patios a bright, luxurious feel that pairs beautifully with timber and tropical planting. Manufactured to these slabs are frost proof, low porosity and highly resistant to staining, providing a durable surface built to handle the British climate all year round. The textured surface delivers dependable slip resistance in wet and dry conditions, making Getafe Beige an excellent choice for patios, pathways, driveways and pool surrounds. Its warm, inviting tone creates a resort style feel around water, working particularly well with wood accents, glazed doors and lush greenery. Low maintenance and simple to clean, it needs no sealing and holds its finish for years to come. At just £22.95 per m², Getafe Beige offers a premium, resort style finish without the higher cost of natural stone. Searching for porcelain paving near me? We supply and deliver Getafe Beige porcelain paving slabs across Preston, Lancashire and throughout the UK, with fast turnaround for trade and DIY projects alike. FAQs Is Getafe Beige porcelain paving slip resistant?\nYes. The textured surface provides reliable grip underfoot, even when wet, making it a safe choice for patios, paths and pool surrounds. Is Getafe Beige porcelain paving suitable for pool areas?\nYes, its slip resistant surface and low porosity make it a practical and stylish choice for pool surrounds as well as patios and driveways. Is Getafe Beige porcelain paving suitable for driveways?\nYes, at this thickness it's suitable for domestic driveways as well as patios and paths, when laid on a properly prepared sub base.",
     "colour": "",
     "frost": "F2 — Fully frost resistant",
     "customSpecs": "Size 21.6m2 Coverage\n20mm Thickness\nR11 Matt anti-slip\nVitrified Porcelain / CE Certified",
@@ -1684,13 +1727,13 @@
   },
   {
     "id": "p1785926396982",
-    "name": "20mm - BODO WHITE - PORCELAIN PAVING - 600x900mm",
+    "name": "BODO WHITE - PORCELAIN PAVING",
     "category": "Porcelain Paving",
     "price": "£525.10",
     "priceNote": "Pack of 40 Pieces | 600 x 900mm",
     "slug": "bodo-white-porcelain-paving-600x900mm",
     "url": "",
-    "description": "Bodo White porcelain paving offers a soft, warm white tone with subtle marble effect veining, giving patios and entertaining spaces a bright, contemporary finish that pairs beautifully with modern outdoor furniture and tropical planting. Manufactured at 20mm thick, these slabs are frost proof, low porosity and highly resistant to staining, providing a durable surface built to handle the British climate all year round.\n\nThe textured surface delivers dependable slip resistance in wet and dry conditions, making Bodo White a versatile choice for patios, pathways, driveways and entertaining spaces. Its light, elegant tone brightens outdoor areas and creates a calm, sophisticated backdrop for relaxed seating and dining areas. Low maintenance and simple to clean, it needs no sealing and holds its finish for years to come.\n\nAt just £22.95 per m², Bodo White offers a bright, premium finish without the higher cost of natural stone. Searching for porcelain paving near me? We supply and deliver Bodo White porcelain paving slabs across Preston, Lancashire and throughout the UK, with fast turnaround for trade and DIY projects alike.\n\nFAQs\n\nIs Bodo White porcelain paving slip resistant?\nYes. The textured surface provides reliable grip underfoot, even when wet, making it a safe choice for patios and paths.\n\nDoes Bodo White porcelain paving look like marble?\nYes, its soft veining and warm white tone give it a marble inspired look while offering the durability of porcelain.\n\nIs Bodo White porcelain paving suitable for driveways?\nYes, at 22mm thick it's suitable for domestic driveways as well as patios and paths, when laid on a properly prepared sub base.",
+    "description": "Bodo White porcelain paving offers a soft, warm white tone with subtle marble effect veining, giving patios and entertaining spaces a bright, contemporary finish that pairs beautifully with modern outdoor furniture and tropical planting. Manufactured to these slabs are frost proof, low porosity and highly resistant to staining, providing a durable surface built to handle the British climate all year round. The textured surface delivers dependable slip resistance in wet and dry conditions, making Bodo White a versatile choice for patios, pathways, driveways and entertaining spaces. Its light, elegant tone brightens outdoor areas and creates a calm, sophisticated backdrop for relaxed seating and dining areas. Low maintenance and simple to clean, it needs no sealing and holds its finish for years to come. At just £22.95 per m², Bodo White offers a bright, premium finish without the higher cost of natural stone. Searching for porcelain paving near me? We supply and deliver Bodo White porcelain paving slabs across Preston, Lancashire and throughout the UK, with fast turnaround for trade and DIY projects alike. FAQs Is Bodo White porcelain paving slip resistant?\nYes. The textured surface provides reliable grip underfoot, even when wet, making it a safe choice for patios and paths. Does Bodo White porcelain paving look like marble?\nYes, its soft veining and warm white tone give it a marble inspired look while offering the durability of porcelain. Is Bodo White porcelain paving suitable for driveways?\nYes, at 22mm thick it's suitable for domestic driveways as well as patios and paths, when laid on a properly prepared sub base.",
     "colour": "",
     "frost": "F2 — Fully frost resistant",
     "customSpecs": "Size 21.6m2 Coverage\n20mm Thickness\nR11 Matt anti-slip\nVitrified Porcelain / CE Certified",
@@ -1710,13 +1753,13 @@
   },
   {
     "id": "p1785927309222",
-    "name": "20mm - FOSSIL NERO - PORCELAIN PAVING - 600x900mm",
+    "name": "FOSSIL NERO - PORCELAIN PAVING",
     "category": "Porcelain Paving",
     "price": "£525.10",
     "priceNote": "Pack of 40 Pieces | 600 x 900mm",
     "slug": "fossil-nero-porcelain-paving-600x900mm",
     "url": "",
-    "description": "Fossil Nero porcelain paving offers a deep charcoal black tone with a fine stone effect texture, giving patios and terraces a bold, sophisticated finish that suits period and contemporary properties alike. Manufactured at 20mm thick, these slabs are frost proof, low porosity and highly resistant to staining, providing a durable surface built to handle the British climate all year round.\n\nThe textured surface delivers dependable slip resistance in wet and dry conditions, making Fossil Nero a striking choice for patios, pathways, driveways and entertaining spaces. Its deep tone pairs beautifully against light coloured walls, wicker furniture and traditional architecture, adding contrast and elegance to outdoor areas. Low maintenance and simple to clean, it needs no sealing and holds its finish for years to come.\n\nAt just £22.95 per m², Fossil Nero offers a premium, dramatic finish without the higher cost of natural stone. Searching for porcelain paving near me? We supply and deliver Fossil Nero porcelain paving slabs across Preston, Lancashire and throughout the UK, with fast turnaround for trade and DIY projects alike.\n\nFAQs\n\nIs Fossil Nero porcelain paving slip resistant?\nYes. The textured surface provides reliable grip underfoot, even when wet, making it a safe choice for patios and paths.\n\nDoes Fossil Nero porcelain paving fade over time?\nNo. Porcelain is highly UV stable and colourfast, so its deep charcoal tone stays looking sharp for years to come.\n\nIs Fossil Nero porcelain paving suitable for driveways?\nYes, at 20mm thick it's suitable for domestic driveways as well as patios and paths, when laid on a properly prepared sub base.",
+    "description": "Fossil Nero porcelain paving offers a deep charcoal black tone with a fine stone effect texture, giving patios and terraces a bold, sophisticated finish that suits period and contemporary properties alike. Manufactured to these slabs are frost proof, low porosity and highly resistant to staining, providing a durable surface built to handle the British climate all year round. The textured surface delivers dependable slip resistance in wet and dry conditions, making Fossil Nero a striking choice for patios, pathways, driveways and entertaining spaces. Its deep tone pairs beautifully against light coloured walls, wicker furniture and traditional architecture, adding contrast and elegance to outdoor areas. Low maintenance and simple to clean, it needs no sealing and holds its finish for years to come. At just £22.95 per m², Fossil Nero offers a premium, dramatic finish without the higher cost of natural stone. Searching for porcelain paving near me? We supply and deliver Fossil Nero porcelain paving slabs across Preston, Lancashire and throughout the UK, with fast turnaround for trade and DIY projects alike. FAQs Is Fossil Nero porcelain paving slip resistant?\nYes. The textured surface provides reliable grip underfoot, even when wet, making it a safe choice for patios and paths. Does Fossil Nero porcelain paving fade over time?\nNo. Porcelain is highly UV stable and colourfast, so its deep charcoal tone stays looking sharp for years to come. Is Fossil Nero porcelain paving suitable for driveways?\nYes, at this thickness it's suitable for domestic driveways as well as patios and paths, when laid on a properly prepared sub base.",
     "colour": "",
     "frost": "F2 — Fully frost resistant",
     "customSpecs": "Size 21.6m2 Coverage\n20mm Thickness\nR11 Matt anti-slip\nVitrified Porcelain / CE Certified",
@@ -1738,13 +1781,13 @@
   },
   {
     "id": "p1785927464866",
-    "name": "20mm - QUARTZITE BIANCO - PORCELAIN PAVING - 600x900mm",
+    "name": "QUARTZITE BIANCO - PORCELAIN PAVING",
     "category": "Porcelain Paving",
     "price": "£525.10",
     "priceNote": "Pack of 40 Pieces | 600 x 900mm",
     "slug": "quartzite-bianco-porcelain-paving-600x900mm",
     "url": "",
-    "description": "Quartize Bianco porcelain paving offers a soft, warm cream tone with a fine quartzite effect finish, giving patios and seating areas a bright, natural look that pairs beautifully with timber decking and lush planting. Manufactured at 20mm thick, these slabs are frost proof, low porosity and highly resistant to staining, providing a durable surface built to handle the British climate all year round.\n\nThe textured surface delivers dependable slip resistance in wet and dry conditions, making Quartize Bianco a versatile choice for patios, pathways, driveways and built in seating areas. Its warm, sandy tone creates a relaxed, natural feel underfoot, working particularly well against timber, greenery and decorative stone borders. Low maintenance and simple to clean, it needs no sealing and holds its finish for years to come.\n\nAt just £22.95 per m², Quartize Bianco offers a premium, quartzite inspired look without the higher cost of natural stone. Searching for porcelain paving near me? We supply and deliver Quartize Bianco porcelain paving slabs across Preston, Lancashire and throughout the UK, with fast turnaround for trade and DIY projects alike.\n\nFAQs\n\nIs Quartize Bianco porcelain paving slip resistant?\nYes. The textured surface provides reliable grip underfoot, even when wet, making it a safe choice for patios and paths.\n\nDoes Quartize Bianco porcelain paving look like natural quartzite?\nYes, its fine textured finish and warm tone closely resemble natural quartzite while offering the durability of porcelain.\n\nIs Quartize Bianco porcelain paving suitable for driveways?\nYes, at 20mm thick it's suitable for domestic driveways as well as patios and paths, when laid on a properly prepared sub base.",
+    "description": "Quartize Bianco porcelain paving offers a soft, warm cream tone with a fine quartzite effect finish, giving patios and seating areas a bright, natural look that pairs beautifully with timber decking and lush planting. Manufactured to these slabs are frost proof, low porosity and highly resistant to staining, providing a durable surface built to handle the British climate all year round. The textured surface delivers dependable slip resistance in wet and dry conditions, making Quartize Bianco a versatile choice for patios, pathways, driveways and built in seating areas. Its warm, sandy tone creates a relaxed, natural feel underfoot, working particularly well against timber, greenery and decorative stone borders. Low maintenance and simple to clean, it needs no sealing and holds its finish for years to come. At just £22.95 per m², Quartize Bianco offers a premium, quartzite inspired look without the higher cost of natural stone. Searching for porcelain paving near me? We supply and deliver Quartize Bianco porcelain paving slabs across Preston, Lancashire and throughout the UK, with fast turnaround for trade and DIY projects alike. FAQs Is Quartize Bianco porcelain paving slip resistant?\nYes. The textured surface provides reliable grip underfoot, even when wet, making it a safe choice for patios and paths. Does Quartize Bianco porcelain paving look like natural quartzite?\nYes, its fine textured finish and warm tone closely resemble natural quartzite while offering the durability of porcelain. Is Quartize Bianco porcelain paving suitable for driveways?\nYes, at this thickness it's suitable for domestic driveways as well as patios and paths, when laid on a properly prepared sub base.",
     "colour": "",
     "frost": "F2 — Fully frost resistant",
     "customSpecs": "Size 21.6m2 Coverage\n20mm Thickness\nR11 Matt anti-slip\nVitrified Porcelain / CE Certified",
