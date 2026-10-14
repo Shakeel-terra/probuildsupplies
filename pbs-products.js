@@ -789,11 +789,14 @@ function productUrl(p, prefix) {
       initCategoryPage(products, 'Plasterboards'); return;
     }
     }
-    __reveal();
-    return;
-    if (path.endsWith('/') || path.includes('index.html')) {
-      initHomepage(products); return;
-    }
+      // The homepage check used to sit AFTER an unconditional return, so
+  // initHomepage never ran and the featured grid stayed empty.
+  if (path === '/' || path.endsWith('/index.html') || path.endsWith('/index')) {
+    initHomepage(products);
+  }
+
+  __reveal();
+  return;
   });
 
 })();
