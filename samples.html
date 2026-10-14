@@ -710,10 +710,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   fetch('/products.json?v='+Date.now())
     .then(function(r){return r.json();})
     .then(function(d){
+      function hasRealPrice(p){
+        function num(v){
+          var n = parseFloat(String(v == null ? '' : v).replace(/[^0-9.]/g,''));
+          return isNaN(n) ? null : n;
+        }
+        if(num(p.price) !== null) return true;
+        return (p.sizeVariants||[]).some(function(v){ return num(v.price) !== null; });
+      }
       var raw=(d||[]).filter(function(p){
         if(p.visible===false) return false;
         if(!/brick/i.test(p.category||'')) return false;
-        return p.sampleAvailable !== false;
+        if(p.sampleAvailable === false) return false;
+        // A brick on enquiry, or with no price at all, is one we can't
+        // currently supply — so we can't send a sample of it either.
+        if(p.mode === 'enquiry') return false;
+        if(!hasRealPrice(p)) return false;
+        return true;
       });
       // A brick sold in 65mm and 73mm becomes two options. Coursing depth is
       // the thing people are matching, so sending the wrong one is useless.
