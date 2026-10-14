@@ -697,21 +697,53 @@ function productUrl(p, prefix) {
 
   // ── HOMEPAGE FEATURED PRODUCTS ────────────────────────────
   function initHomepage(products) {
-    // Look for a featured products grid on the homepage
-    var featGrid = document.getElementById('featuredGrid');
-    if (!featGrid) return;
-    var visible = products.filter(function(p){ return p.visible !== false; });
-    // 2 products from each category, in this fixed order
-    var categoryOrder = ['Handmade Bricks', 'Plasterboards', 'Porcelain Paving', 'Indian Sandstone'];
-    var featured = [];
-    categoryOrder.forEach(function(cat){
-      var fromCat = visible.filter(function(p){ return p.category === cat; }).slice(0, 2);
-      featured = featured.concat(fromCat);
-    });
-    featGrid.innerHTML = featured.map(function(p){ return makeCard(p, ''); }).join('');
+  var featGrid = document.getElementById('featuredGrid');
+  if (!featGrid) return;
+
+  // Featured should be things we can actually sell, so drop anything with no
+  // real price — a homepage full of "stock coming soon" helps nobody.
+  function isBuyable(p){
+    function num(v){
+      var n = parseFloat(String(v == null ? '' : v).replace(/[^0-9.]/g, ''));
+      return isNaN(n) ? null : n;
+    }
+    if (num(p.price) !== null) return true;
+    return (p.sizeVariants || []).some(function(v){ return num(v.price) !== null; });
   }
 
-  // ── INIT ──────────────────────────────────────────────────
+  var visible = products.filter(function(p){
+    return p.visible !== false && isBuyable(p);
+  });
+
+  function pick(cat, n){
+    var pool = visible.filter(function(p){ return p.category === cat; });
+    // Fisher-Yates on a copy, so the homepage isn't the same eight products
+    // every visit and the deeper range gets seen.
+    for (var i = pool.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var t = pool[i]; pool[i] = pool[j]; pool[j] = t;
+    }
+    return pool.slice(0, n);
+  }
+
+  var featured = []
+    .concat(pick('Handmade Bricks', 3))
+    .concat(pick('Reclaimed Bricks', 1))
+    .concat(pick('Porcelain Paving', 2))
+    .concat(pick('Indian Sandstone', 2));
+
+  // If a category is short, top up from bricks rather than leave a gap.
+  if (featured.length < 8) {
+    var used = {};
+    featured.forEach(function(p){ used[p.slug] = true; });
+    var extra = pick('Handmade Bricks', 8).filter(function(p){ return !used[p.slug]; });
+    featured = featured.concat(extra.slice(0, 8 - featured.length));
+  }
+
+  featGrid.innerHTML = featured.map(function(p){ return makeCard(p, ''); }).join('');
+}
+
+// ── INIT ──────────────────────────────────────────────────
   loadProducts(function(err, products) {
     if (err || !products.length) { __reveal(); return; }
 
