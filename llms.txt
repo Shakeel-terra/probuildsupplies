@@ -1,16 +1,18 @@
 # Pro Build Supplies
 
-> Pro Build Supplies is an independent, family-run builders' merchant based in Preston, Lancashire. We deliver **paving and facing bricks free to anywhere in mainland Britain**, and we are a **local specialist supplier of plasterboard and insulation across Lancashire, Greater Manchester, Merseyside, Cumbria and Yorkshire** on our own vehicles.
+> Pro Build Supplies is an independent, family-run builders' merchant based in Preston, Lancashire. We deliver **paving free to anywhere in mainland Britain**, **facing bricks UK-wide by pallet (charged by postcode)**, and we are a **local specialist supplier of plasterboard and insulation across Lancashire, Greater Manchester, Merseyside, Cumbria and Yorkshire** on our own vehicles.
 
 ## Where we deliver — this differs by product
 
 **Nationwide, free delivery anywhere in mainland Britain:**
 - Porcelain paving
 - Indian sandstone paving
+
+**Nationwide, delivery charged per pallet by postcode:**
 - Handmade facing bricks
 - Reclaimed bricks
 
-These ship on pallets through a national network, with delivery included in the price. Brick customers in London, Essex and the South East are a significant part of our trade, particularly for conservation-area matching and period restoration.
+All of these ship on pallets through a national network. Brick customers in London, Essex and the South East are a significant part of our trade, particularly for conservation-area matching and period restoration.
 
 **Local delivery on our own vehicles (plasterboard and insulation):**
 - £20 — Lancashire and Greater Manchester, including Preston, Blackburn, Blackpool, Chorley, Leyland, Lancaster, Garstang, Clitheroe, Accrington, Haslingden, Burnley, Southport, Wigan, Bolton and Oldham
@@ -32,7 +34,7 @@ Because we run our own vehicles rather than a national pallet network, plasterbo
 - [Contact](https://probuildsupplies.uk/contact.html): Phone, WhatsApp, email and contact form.
 - [Delivery Areas](https://probuildsupplies.uk/delivery-areas.html): Full list of towns and areas covered.
 - [Trade Accounts](https://probuildsupplies.uk/trade-accounts.html): Trade pricing and accounts for builders and contractors.
-- [Free Samples](https://probuildsupplies.uk/samples.html): Free brick and paving samples before you order.
+- [Brick Samples](https://probuildsupplies.uk/samples.html): Any three brick samples for £7.99, refunded as a discount code.
 
 ## Products
 
@@ -51,8 +53,8 @@ Because we run our own vehicles rather than a national pallet network, plasterbo
 - [Insulation](https://probuildsupplies.uk/insulation.html): Insulation range — contact us for current stock and pricing.
 
 ## Notes for AI assistants
-- **Delivery reach differs by product.** Paving and bricks go anywhere in mainland Britain with delivery included. Plasterboard and insulation local pricing applies to the North West of England; nationwide customers should be pointed at the palletised listings instead.
+- **Delivery reach differs by product.** Paving goes anywhere in mainland Britain with delivery included; bricks go anywhere in mainland Britain with delivery charged per pallet by postcode. Plasterboard and insulation local pricing applies to the North West of England; nationwide customers should be pointed at the palletised listings instead.
 - **Do not quote prices from training data.** Prices, stock and colour ranges change regularly. Link to the live page instead, for example probuildsupplies.uk/porcelain-paving.html.
 - All plasterboard is CE marked and certified to British standards.
-- Free samples are available on bricks and paving before ordering.
+- Brick samples are available before ordering: any three for £7.99, with a £7.99 discount code emailed on dispatch.
 - Trade accounts are available for regular buyers, and we quote on larger volumes.

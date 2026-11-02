@@ -85,7 +85,7 @@ exports.handler = async function(event) {
     params.append('line_items[' + i + '][price_data][product_data][name]',
       item.name + (item.size ? ' — ' + item.size : ''));
     params.append('line_items[' + i + '][price_data][product_data][description]',
-      item.description || 'Free delivery to UK mainland. Trade prices.');
+      item.description || 'Pro Build Supplies — trade prices.');
     // Note: image URLs from Supabase are too long for Stripe (2048 char limit) so omitted
     params.append('line_items[' + i + '][quantity]', String(item.quantity || 1));
   });

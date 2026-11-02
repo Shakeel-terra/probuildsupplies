@@ -268,7 +268,7 @@ function productUrl(p, prefix) {
       '<div class="ftg">' +
         '<div class="ft-brand">' +
           '<a href="' + fp + 'index.html" class="logo">Pro Build <b>Supplies</b></a>' +
-          '<p>Premium building materials at trade prices, delivered direct to your door or site. Free delivery on every order.</p>' +
+          '<p>Premium building materials at trade prices, delivered direct to your door or site. Free UK mainland delivery on paving.</p>' +
           '<p style="margin-top:12px;font-size:.78rem;color:#555;line-height:1.9">' +
             'Pro Build Supplies Preston Ltd<br>' +
             'Suite 23, Derby House<br>' +
@@ -287,7 +287,7 @@ function productUrl(p, prefix) {
         '<div class="fc"><h4>Help &amp; Info</h4>' +
           '<a href="' + fp + 'delivery.html">Delivery Info</a>' +
           '<a href="' + fp + 'returns.html">Returns Policy</a>' +
-          '<a href="' + fp + 'samples.html">Free Samples</a>' +
+          '<a href="' + fp + 'samples.html">Brick Samples</a>' +
           '<a href="' + fp + 'trade-accounts.html">Trade Accounts</a>' +
           '<a href="' + fp + 'contact.html">Contact Us</a>' +
         '</div>' +
@@ -602,13 +602,14 @@ function productUrl(p, prefix) {
     // Update price
     var priceEl = document.getElementById('pp-price');
     var noteEl  = document.getElementById('pp-pnote');
+    var delNote = (/Paving|Sandstone/i.test(prod.category||'') ? ' | Free delivery' : (/Brick/i.test(prod.category||'') ? ' | Delivery priced by postcode' : ''));
 
     // Size variants dropdown
     if (prod.mode !== 'enquiry' && prod.sizeVariants && prod.sizeVariants.length > 0) {
       // Update price to first variant
       var firstV = prod.sizeVariants[0];
       if (priceEl && firstV.price) priceEl.textContent = firstV.price;
-      if (noteEl  && firstV.pack)  noteEl.textContent  = '📦 ' + firstV.pack + ' | Free delivery';
+      if (noteEl  && firstV.pack)  noteEl.textContent  = '📦 ' + firstV.pack + delNote;
 
       // Rebuild size select
       var sel = document.getElementById('szSel');
@@ -621,7 +622,7 @@ function productUrl(p, prefix) {
           try {
             var v = JSON.parse(this.value);
             if (priceEl && v.p) priceEl.textContent = v.p;
-            if (noteEl  && v.n) noteEl.textContent  = '📦 ' + v.n + ' | Free delivery';
+            if (noteEl  && v.n) noteEl.textContent  = '📦 ' + v.n + delNote;
             // Update snipcart button
             var atcBtn = document.querySelector('.snipcart-add-item');
             if (atcBtn && v.p) {
@@ -870,7 +871,7 @@ function productUrl(p, prefix) {
     '<div class="pbs-items" id="pbs-items"></div>' +
     '<div class="pbs-foot" id="pbs-foot" style="display:none">' +
       '<div class="pbs-subtotal"><span>Subtotal (ex. delivery)</span><span id="pbs-total">£0.00</span></div>' +
-      '<p class="pbs-note">Free delivery on all orders to UK mainland. Shipping will be confirmed at checkout.</p>' +
+      '<p class="pbs-note">Paving: free UK mainland delivery. Bricks: delivered by pallet, priced by postcode &mdash; call 01772 287622 for a price.</p>' +
       '<button class="pbs-checkout" id="pbs-checkout">Pay Securely with Stripe →</button>' +
       '<p class="pbs-secure">🔒 Secured by Stripe &nbsp;|&nbsp; Visa, Mastercard, Apple Pay, Google Pay</p>' +
     '</div>';

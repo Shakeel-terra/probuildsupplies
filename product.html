@@ -252,7 +252,7 @@ footer{background:#111;padding:40px 20px 18px;color:#888;width:100%}
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
-<div class="ann">🚚 FREE UK Mainland Delivery on Bricks &amp; Paving<span class="ann-x"> &nbsp;|&nbsp; 🧱 Free Brick Samples &nbsp;|&nbsp; 🏗️ Trade Accounts Available</span></div>
+<div class="ann">🚚 FREE UK Mainland Delivery on Paving<span class="ann-x"> &nbsp;|&nbsp; 🧱 Brick Samples — Any 3 for £7.99 &nbsp;|&nbsp; 🏗️ Trade Accounts Available</span></div>
 <header class="hdr"><div class="hdr-i">
 <a href="index.html" class="logo">Pro Build <b>Supplies</b></a>
 <div class="srch"><div><input type="text" placeholder="Search bricks, paving, insulation..."><button>🔍</button></div></div>
@@ -326,12 +326,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           data-item-has-taxes-included="true"
           data-item-shippable="true"
         >🛒 Add to Cart</button>
-        <a href="samples.html" class="btn-dk" id="pp-sample-btn" style="display:none">🧱 Free Sample</a>
+        <a href="samples.html" class="btn-dk" id="pp-sample-btn" style="display:none">🧱 Order a Sample</a>
       </div>
       <div class="pp-trust">
-        <div class="pti"><span>🚚</span> Free Delivery</div>
+        <div class="pti"><span>🚚</span> UK-Wide Delivery</div>
         <div class="pti"><span>📦</span> Next-Day Dispatch</div>
-        <div class="pti"><span>🧱</span> Free Samples</div>
+        <div class="pti"><span>🧱</span> Samples 3 for £7.99</div>
         <div class="pti"><span>📞</span> 01772 287622</div>
       </div>
     </div>
@@ -342,8 +342,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <button class="ptb" data-t="del">Delivery</button>
   </div>
   <div class="ptab on" id="pt-d"><div id="pp-desc-full"><p>Loading description…</p></div></div>
-  <div class="ptab" id="pt-del"><h3>Free UK Mainland Delivery</h3>
-<p>All orders delivered <strong>free</strong> to UK mainland. No minimum order, no surcharges.</p>
+  <div class="ptab" id="pt-del"><h3>UK Mainland Delivery</h3>
+<p>Paving is delivered <strong>free</strong> to UK mainland addresses, with no minimum order. Bricks are delivered by pallet, with the charge based on your postcode and the number of pallets &mdash; call 01772 287622 for a price.</p>
 <h3>Dispatch Times</h3>
 <ul><li>Order before <strong>2pm Mon–Fri</strong> for next-day dispatch</li>
 <li>Pallet deliveries within <strong>1–3 working days</strong></li>
@@ -358,7 +358,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <footer><div class="ft-i">
 <div class="ftg">
-<div class="ft-brand"><a href="index.html" class="logo">Pro Build <b>Supplies</b></a><p>Premium building materials at trade prices, delivered direct to your door or site. Free UK mainland delivery on bricks and paving.</p></div>
+<div class="ft-brand"><a href="index.html" class="logo">Pro Build <b>Supplies</b></a><p>Premium building materials at trade prices, delivered direct to your door or site. Free UK mainland delivery on paving.</p></div>
 <div class="fc"><h4>Products</h4>
 <a href="handmade-bricks.html">Handmade Bricks</a>
 <a href="reclaimed-bricks.html">Reclaimed Bricks</a>
@@ -370,7 +370,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <a href="delivery-areas.html">Delivery Areas</a>
 <a href="delivery.html">Delivery Info</a>
 <a href="returns.html">Returns Policy</a>
-<a href="samples.html">Free Samples</a>
+<a href="samples.html">Brick Samples</a>
 <a href="trade-accounts.html">Trade Accounts</a>
 <a href="contact.html">Contact Us</a>
 </div>
@@ -660,7 +660,7 @@ document.querySelectorAll('.ptb').forEach(function(b){
         }).join('');
         var first = prod.sizeVariants[0];
         priceEl.textContent = fmtPrice(first.price);
-        noteEl.textContent = '📦 ' + (first.pack||'') + (prod.delivery === 'included' ? ' | Free delivery' : '');
+        noteEl.textContent = '📦 ' + (first.pack||'') + (/Paving|Sandstone/i.test(prod.category||'') ? ' | Free delivery' : (/Brick/i.test(prod.category||'') ? ' | Delivery priced by postcode' : ''));
         setAddButton(first.price, (first.size||'') + ' / ' + (first.pack||''));
         currentPackPrice = parseFloat(String(first.price||'').replace(/[^0-9.]/g,'')) || 0;
         updateTitleForVariant(first);
@@ -668,7 +668,7 @@ document.querySelectorAll('.ptb').forEach(function(b){
           try {
             var v = JSON.parse(this.value);
             priceEl.textContent = fmtPrice(v.p);
-            noteEl.textContent = '📦 ' + (v.n||'') + (prod.delivery === 'included' ? ' | Free delivery' : '');
+            noteEl.textContent = '📦 ' + (v.n||'') + (/Paving|Sandstone/i.test(prod.category||'') ? ' | Free delivery' : (/Brick/i.test(prod.category||'') ? ' | Delivery priced by postcode' : ''));
             setAddButton(v.p, (v.s||'') + ' / ' + (v.n||''));
             currentPackPrice = parseFloat(String(v.p||'').replace(/[^0-9.]/g,'')) || 0;
             updateTitleForVariant({price:v.p, coverage:v.c, size:v.s});
@@ -677,7 +677,7 @@ document.querySelectorAll('.ptb').forEach(function(b){
       } else {
         var price = prod.price || 'POA';
         priceEl.textContent = fmtPrice(price);
-        noteEl.textContent = (prod.priceNote ? '📦 ' + prod.priceNote : '') + (prod.delivery === 'included' ? ' | Free delivery' : '');
+        noteEl.textContent = (prod.priceNote ? '📦 ' + prod.priceNote : '') + (/Paving|Sandstone/i.test(prod.category||'') ? ' | Free delivery' : (/Brick/i.test(prod.category||'') ? ' | Delivery priced by postcode' : ''));
         setAddButton(price, '');
         currentPackPrice = parseFloat(String(price||'').replace(/[^0-9.]/g,'')) || 0;
 
