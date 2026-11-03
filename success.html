@@ -559,7 +559,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   // Conversion tracking reads the cart to report order value, so it must run
   // before the cart is cleared. pbs-track.js fires the purchase event on load.
   (function(){
-    function clearCart(){ try { localStorage.removeItem('pbs_cart'); } catch(e) {} }
+    function clearCart(){ try { localStorage.removeItem('pbs_cart'); localStorage.removeItem('pbs_delivery'); } catch(e) {} }
     if (window.__pbsPurchaseTracked) { clearCart(); return; }
     // give pbs-track.js a tick to read and report, then clear
     setTimeout(clearCart, 1200);

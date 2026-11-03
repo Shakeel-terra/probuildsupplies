@@ -67,12 +67,20 @@
       return sum + (it.price * it.quantity);
     }, 0);
 
+    // Brick delivery is charged on top, worked out on checkout.html.
+    var shipping = 0;
+    try {
+      var del = JSON.parse(localStorage.getItem('pbs_delivery') || 'null');
+      if (del && del.total && Date.now() - (del.at || 0) < 86400000) shipping = del.total / 100;
+    } catch (e) {}
+
     push({ ecommerce: null });   // clear any previous ecommerce object
     push({
       event: 'purchase',
       ecommerce: {
         transaction_id: sessionId || ('pbs-' + Date.now()),
-        value: Math.round(value * 100) / 100,
+        value: Math.round((value + shipping) * 100) / 100,
+        shipping: Math.round(shipping * 100) / 100,
         currency: 'GBP',
         items: items
       }

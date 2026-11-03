@@ -849,7 +849,7 @@ function productUrl(p, prefix) {
     '.pbs-subtotal span:first-child{font-size:.85rem;color:#888}',
     '.pbs-subtotal span:last-child{font-family:"Barlow Condensed",sans-serif;font-weight:900;font-size:1.3rem;color:#1A1A1A}',
     '.pbs-note{font-size:.75rem;color:#888;margin-bottom:14px;line-height:1.5}',
-    '.pbs-checkout{display:block;width:100%;background:#F55C1B;color:#fff;border:none;padding:15px;font-family:"Barlow Condensed",sans-serif;font-weight:900;font-size:1.1rem;letter-spacing:.8px;text-transform:uppercase;border-radius:4px;cursor:pointer;transition:background .2s}',
+    '.pbs-checkout{display:block;box-sizing:border-box;text-align:center;text-decoration:none;width:100%;background:#F55C1B;color:#fff;border:none;padding:15px;font-family:"Barlow Condensed",sans-serif;font-weight:900;font-size:1.1rem;letter-spacing:.8px;text-transform:uppercase;border-radius:4px;cursor:pointer;transition:background .2s}',
     '.pbs-checkout:hover{background:#d94d0f}',
     '.pbs-checkout:disabled{background:#ccc;cursor:not-allowed}',
     '.pbs-secure{text-align:center;font-size:.73rem;color:#888;margin-top:10px}',
@@ -871,8 +871,8 @@ function productUrl(p, prefix) {
     '<div class="pbs-items" id="pbs-items"></div>' +
     '<div class="pbs-foot" id="pbs-foot" style="display:none">' +
       '<div class="pbs-subtotal"><span>Subtotal (ex. delivery)</span><span id="pbs-total">£0.00</span></div>' +
-      '<p class="pbs-note">Paving: free UK mainland delivery. Bricks: delivered by pallet, priced by postcode &mdash; call 01772 287622 for a price.</p>' +
-      '<button class="pbs-checkout" id="pbs-checkout">Pay Securely with Stripe →</button>' +
+      '<p class="pbs-note">Paving delivers free to the UK mainland. Brick delivery is priced by postcode at checkout.</p>' +
+      '<a class="pbs-checkout" id="pbs-checkout" href="/checkout.html" data-pbs-checkout>Checkout</a>' +
       '<p class="pbs-secure">🔒 Secured by Stripe &nbsp;|&nbsp; Visa, Mastercard, Apple Pay, Google Pay</p>' +
     '</div>';
   document.body.appendChild(drawer);
@@ -1034,54 +1034,13 @@ function productUrl(p, prefix) {
 
   // ── GLOBAL HELPERS (called from inline onclick) ───────────────
   window.pbsRem = removeItem;
+  window.pbsUpdateCount = updateCount;
   window.pbsQty = changeQty;
 
-  // ── CHECKOUT ─────────────────────────────────────────────────
-  document.getElementById('pbs-checkout').addEventListener('click', async function() {
-    var cart = getCart().filter(function(c){ return c.price && c.price!=='POA'; });
-    if (!cart.length) return;
-    var btn = this;
-    btn.disabled = true;
-    btn.textContent = 'Redirecting to Stripe…';
+  // ── CHECKOUT ─────────────────────────────────
+  // The basket's Checkout link goes to /checkout.html, which works out
+  // delivery by postcode and then hands over to Stripe.
 
-    // If the customer is logged into their account, tie this order to it
-    // so it shows up automatically in their order history.
-    var userId = null, customerEmail = null;
-    if (window.pbsAccount) {
-      try {
-        var user = await window.pbsAccount.getUser();
-        if (user) { userId = user.id; customerEmail = user.email; }
-      } catch (e) { /* not logged in / Supabase unreachable — proceed as guest */ }
-    }
-
-    var base = window.location.origin;
-    fetch('/.netlify/functions/create-checkout', {
-      method: 'POST',
-      headers: {'Content-Type':'application/json'},
-      body: JSON.stringify({
-        items: cart,
-        successUrl: base + '/success.html?session_id={CHECKOUT_SESSION_ID}',
-        cancelUrl: base + window.location.pathname + window.location.search,
-        userId: userId,
-        customerEmail: customerEmail,
-      })
-    })
-    .then(function(r){ return r.json(); })
-    .then(function(data){
-      if (data.url) {
-        window.location = data.url;
-      } else {
-        alert('Sorry, there was a problem starting checkout. Please call us on 01772 287622.');
-        btn.disabled = false;
-        btn.textContent = 'Pay Securely with Stripe →';
-      }
-    })
-    .catch(function(){
-      alert('Sorry, there was a problem. Please call us on 01772 287622.');
-      btn.disabled = false;
-      btn.textContent = 'Pay Securely with Stripe →';
-    });
-  });
 
   // ── INTERCEPT CART BUTTON IN HEADER ──────────────────────────
   document.addEventListener('click', function(e) {

@@ -231,6 +231,21 @@ exports.handler = async function (event) {
         const addr = [a.line1, a.line2, a.city, a.postal_code]
           .filter(Boolean).join(', ') || 'no address on session';
 
+        // Brick delivery was priced on the checkout page from the postcode the
+        // customer typed there. Flag it if Stripe's delivery address differs,
+        // because the delivery charge may then be wrong.
+        const meta = session.metadata || {};
+        const norm = function (pc) { return String(pc || '').toUpperCase().replace(/[^A-Z0-9]/g, ''); };
+        const pallets = parseInt(meta.pallets, 10) || 0;
+        const deliveryLine = pallets > 0
+          ? '🚚 ' + (meta.delivery_service === 'nextDay' ? 'NEXT DAY' : 'Economy') + ' — '
+            + pallets + (pallets === 1 ? ' pallet' : ' pallets')
+            + (meta.tail_lift === 'yes' ? ' + TAIL-LIFT' : '')
+            + ' — £' + (meta.delivery_total || '0.00') + ' (zone ' + (meta.delivery_zone || '?') + ')'
+          : '';
+        const quoted = norm(meta.quoted_postcode), actual = norm(a.postal_code);
+        const mismatch = pallets > 0 && quoted && actual && quoted !== actual;
+
         const text =
             (isSamples ? '🧱 SAMPLE ORDER' : '🛒 NEW ORDER') + '\n\n'
           + '£' + Number(orderRow.total || 0).toFixed(2) + '\n\n'
@@ -239,6 +254,11 @@ exports.handler = async function (event) {
           + (orderRow.customer_phone ? orderRow.customer_phone + '\n' : '')
           + (orderRow.customer_email || '') + '\n\n'
           + 'Deliver to: ' + addr
+          + (deliveryLine ? '\n' + deliveryLine : '')
+          + (mismatch
+              ? '\n\n⚠️ POSTCODE MISMATCH — delivery was priced for ' + meta.quoted_postcode
+                + ' but the address given is ' + a.postal_code + '. Check the charge before booking Bacton.'
+              : '')
           + (orderRow.shipping_is_billing
               ? '\n\n⚠️ Billing address used — no delivery address was given'
               : '');
