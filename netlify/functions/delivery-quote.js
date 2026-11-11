@@ -2,6 +2,7 @@
 // GET  /.netlify/functions/delivery-quote?postcode=PR2%208JE&pallets=3&service=economy&tailLift=1
 // POST { postcode, pallets, service: 'economy'|'nextDay', tailLift: true|false }
 const { quote } = require('../lib/bacton-rates');
+const { getFuel, publicBreakdown } = require('../lib/order-pricing');
 
 exports.handler = async function (event) {
   let input = event.queryStringParameters || {};
@@ -11,7 +12,10 @@ exports.handler = async function (event) {
   } else if (event.httpMethod !== 'GET') {
     return respond(405, { ok: false, message: 'Method Not Allowed' });
   }
-  return respond(200, quote(input));
+  const f = await getFuel();
+  const q = quote(Object.assign({}, input, { fuelPct: f.pct }));
+  if (q.breakdown) q.breakdown = publicBreakdown(q.breakdown);
+  return respond(200, q);
 };
 
 function respond(status, body) {

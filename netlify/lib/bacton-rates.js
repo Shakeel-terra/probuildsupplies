@@ -9,7 +9,11 @@
 
 const TARIFF_VALID_UNTIL = '2027-03-31';
 const VAT_RATE = 0.20;
-const FUEL_SURCHARGE_PCT = 0;        // parked for now — set when fuel is added
+// Fuel surcharge on brick pallets. Set at 19% — the highest Bacton figure
+// expected — so delivery is never undercharged. It can be changed in the
+// dashboard (Settings → Bacton Fuel Surcharge); this is used when nothing
+// has been saved there.
+const FUEL_SURCHARGE_PCT = 19;
 const TAIL_LIFT_PER_PALLET = 4.00;   // ex VAT, per pallet
 
 // Multiple pallets to one consignee
@@ -178,7 +182,9 @@ function quote(opts) {
   const palletsP   = rateP * pallets;
   const discPct    = volumeDiscountPct(pallets);
   const discP      = Math.round(palletsP * discPct / 100);
-  const fuelP      = Math.round((palletsP - discP) * FUEL_SURCHARGE_PCT / 100);
+  // Fuel applies to the pallet charge after the volume discount, not to tail-lift.
+  const fuelPct    = (opts && isFinite(parseFloat(opts.fuelPct))) ? parseFloat(opts.fuelPct) : FUEL_SURCHARGE_PCT;
+  const fuelP      = Math.round((palletsP - discP) * fuelPct / 100);
   const tailP      = tailLift ? pence(TAIL_LIFT_PER_PALLET) * pallets : 0;
   const netP       = palletsP - discP + fuelP + tailP;
   const vatP       = Math.round(netP * VAT_RATE);
@@ -192,7 +198,7 @@ function quote(opts) {
       palletsSubtotal: pounds(palletsP),
       volumeDiscountPct: discPct,
       volumeDiscount: pounds(discP),
-      fuelSurchargePct: FUEL_SURCHARGE_PCT,
+      fuelSurchargePct: fuelPct,
       fuelSurcharge: pounds(fuelP),
       tailLift: pounds(tailP),
       netExVat: pounds(netP),

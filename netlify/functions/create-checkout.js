@@ -7,7 +7,7 @@
 // postcode is stored in metadata so the webhook can check the delivery
 // address the customer gives Stripe matches it.
 const https = require('https');
-const { priceOrder } = require('../lib/order-pricing');
+const { priceOrder, publicView } = require('../lib/order-pricing');
 
 function stripePost(params, secretKey) {
   return new Promise(function (resolve, reject) {
@@ -59,11 +59,11 @@ exports.handler = async function (event) {
   if (!order.canPay) {
     const bad = order.lines.find(function (l) { return l.kind === 'unavailable'; });
     return json(409, { error: bad ? (bad.name + ': ' + bad.message)
-                                  : (order.delivery.message || 'Please enter your delivery postcode.'), order });
+                                  : (order.delivery.message || 'Please enter your delivery postcode.'), order: publicView(order) });
   }
   // The customer must have seen the total they are about to pay.
   if (body.expectedTotal != null && Math.round(Number(body.expectedTotal)) !== order.total) {
-    return json(409, { error: 'Prices have changed since this page loaded. Please check the updated total.', order });
+    return json(409, { error: 'Prices have changed since this page loaded. Please check the updated total.', order: publicView(order) });
   }
 
   const base = 'https://probuildsupplies.uk';
@@ -114,6 +114,7 @@ exports.handler = async function (event) {
     tail_lift: d.tailLift && d.pallets > 0 ? 'yes' : 'no',
     delivery_total: (d.total / 100).toFixed(2),
     delivery_zone: d.zone || '',
+    fuel_pct: d.pallets > 0 ? String(d.fuelPct) : '',
   };
   Object.keys(meta).forEach(function (k) { params.append('metadata[' + k + ']', meta[k]); });
 

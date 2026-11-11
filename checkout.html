@@ -532,6 +532,13 @@ footer{background:#111;padding:40px 20px 18px;color:#888;width:100%}
 .co-tail input{width:20px;height:20px;margin-top:2px;accent-color:var(--o);flex-shrink:0}
 .co-tail .co-help{margin-top:3px}
 .co-kerb{margin-top:14px}
+.co-brk{margin-top:16px;padding:14px 16px;background:var(--lt);border-radius:6px}
+.co-brkh{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1.05rem;color:var(--dk);margin:0 0 8px}
+.co-brkl{margin:0}
+.co-brkl div{display:flex;justify-content:space-between;gap:12px;padding:4px 0;font-size:.9rem;color:var(--mid)}
+.co-brkl dd{margin:0;font-variant-numeric:tabular-nums;color:var(--dk)}
+.co-brkl .sv dd{color:#15803d}
+.co-brkl .tot{border-top:1px solid var(--bd);margin-top:6px;padding-top:8px;font-weight:700;color:var(--dk);font-size:.95rem}
 .co-sum{position:sticky;top:96px}
 .co-sumbox{background:var(--dk);color:var(--wh);border-radius:var(--r);padding:22px;border-top:4px solid var(--o)}
 .co-sumh{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1.35rem;margin:0 0 14px;color:var(--wh)}
@@ -676,6 +683,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <span class="co-help">The driver lowers each pallet to the ground. Choose this if there is no forklift on site.</span>
           </span>
         </label>
+
+        <div class="co-brk" id="co-brk" hidden>
+          <h3 class="co-brkh" id="co-brkh">How your delivery price is worked out</h3>
+          <dl class="co-brkl" id="co-brkl"></dl>
+        </div>
 
         <p class="co-help co-kerb" id="co-kerb" hidden>All pallet deliveries are kerbside on an 18-tonne vehicle. Someone must be there to accept the delivery, or re-delivery charges apply.</p>
       </section>
@@ -835,7 +847,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     var msg = $('co-delmsg'); msg.className = 'co-delmsg'; msg.innerHTML = '';
     var showOpts = d.status === 'ok' && d.pallets > 0;
-    $('co-opts').hidden = !showOpts; $('co-tail').hidden = !showOpts; $('co-kerb').hidden = !(d.status === 'ok');
+    $('co-opts').hidden = !showOpts; $('co-tail').hidden = !showOpts; $('co-brk').hidden = !showOpts; $('co-kerb').hidden = !(d.status === 'ok');
 
     if (d.status === 'invalid') { msg.classList.add('warn'); msg.innerHTML = esc(d.message); }
     if (d.status === 'quote')   { msg.classList.add('warn'); msg.innerHTML = esc(d.message.replace(/Please call.*$|please call.*$/, '')) + ' ' + CALL; }
@@ -859,6 +871,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       document.querySelector('input[name="service"][value="' + d.service + '"]').checked = true;
       if (d.service !== state.service && !o.nextDay) { state.service = 'economy'; savePrefs(); }
       $('co-taillift').checked = !!d.tailLift;
+      renderBreakdown(d);
       $('co-tailprice').textContent = '+' + gbp(d.tailLiftPerPallet) + (d.pallets > 1 ? ' per pallet (' + gbp(d.tailLiftPerPallet * d.pallets) + ')' : '');
     }
 
@@ -891,6 +904,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     var note = $('co-addrnote');
     note.hidden = !(q.canPay && d.pallets > 0);
     if (!note.hidden) note.innerHTML = 'Delivery is priced for <strong>' + esc(d.postcode) + '</strong>. Use an address with this postcode on the next page.';
+  }
+
+  // Delivery breakdown for the chosen service. Parts are ex VAT, then VAT,
+  // so every line adds up exactly to the delivery price shown.
+  function renderBreakdown(d) {
+    var b = d.breakdown, n = d.pallets, P = function (x) { return Math.round(x * 100); };
+    var rows = [];
+    rows.push(['Delivery rate' + (n > 1 ? ' (' + n + ' pallets)' : ''), gbp(P(b.deliveryRate))]);
+    if (b.volumeDiscount) rows.push(['Multi-pallet saving (' + b.volumeDiscountPct + '%)', '−' + gbp(P(b.volumeDiscount)), 'sv']);
+    if (b.tailLift) rows.push(['Tail-lift' + (n > 1 ? ' (' + n + ' × £4.00)' : ''), gbp(P(b.tailLift))]);
+    rows.push(['VAT (20%)', gbp(P(b.vat))]);
+    rows.push([(d.service === 'nextDay' ? 'Next Day' : 'Economy') + ' delivery', gbp(P(b.total)), 'tot']);
+    $('co-brkh').textContent = 'How your ' + (d.service === 'nextDay' ? 'Next Day' : 'Economy') + ' delivery price is worked out';
+    $('co-brkl').innerHTML = rows.map(function (r) {
+      return '<div' + (r[2] ? ' class="' + r[2] + '"' : '') + '><dt>' + esc(r[0]) + '</dt><dd>' + r[1] + '</dd></div>';
+    }).join('');
   }
 
   function showError(t) { var e = $('co-err'); e.textContent = t; e.hidden = false; }

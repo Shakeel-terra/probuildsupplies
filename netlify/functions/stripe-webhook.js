@@ -241,7 +241,8 @@ exports.handler = async function (event) {
           ? '🚚 ' + (meta.delivery_service === 'nextDay' ? 'NEXT DAY' : 'Economy') + ' — '
             + pallets + (pallets === 1 ? ' pallet' : ' pallets')
             + (meta.tail_lift === 'yes' ? ' + TAIL-LIFT' : '')
-            + ' — £' + (meta.delivery_total || '0.00') + ' (zone ' + (meta.delivery_zone || '?') + ')'
+            + ' — £' + (meta.delivery_total || '0.00') + ' (zone ' + (meta.delivery_zone || '?')
+            + (meta.fuel_pct ? ', fuel ' + meta.fuel_pct + '%' : '') + ')'
           : '';
         const quoted = norm(meta.quoted_postcode), actual = norm(a.postal_code);
         const mismatch = pallets > 0 && quoted && actual && quoted !== actual;

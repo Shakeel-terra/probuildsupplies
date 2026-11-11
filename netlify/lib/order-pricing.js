@@ -19,7 +19,7 @@
 //     pallet, so offshore/POA areas are caught before payment.
 // =====================================================================
 const https = require('https');
-const { quote, parsePostcode, findZone, QUOTE_ONLY_ZONES } = require('./bacton-rates');
+const { quote, parsePostcode, findZone, QUOTE_ONLY_ZONES, FUEL_SURCHARGE_PCT } = require('./bacton-rates');
 
 const SITE_URL = (process.env.URL || 'https://probuildsupplies.uk').replace(/\/+$/, '');
 const SAMPLE_PRICE_PENCE = 799;
@@ -43,6 +43,46 @@ async function loadProducts() {
   const list = await getJSON(SITE_URL + '/products.json?t=' + Date.now());
   cache = { at: Date.now(), list: Array.isArray(list) ? list : (list.products || []) };
   return cache.list;
+}
+
+// ── Bacton fuel surcharge, set weekly in the dashboard ────────────────
+// Stored in the Supabase `settings` table as fuel_surcharge_pct. Read with
+// the service-role key (server only). If it can't be read we keep the last
+// figure we saw, and before that the fallback in bacton-rates.js — never 0.
+const SUPA_HOST = 'kiifrcsqsxlumteoyenf.supabase.co';
+let fuel = { at: 0, pct: null, updated: null, source: 'fallback' };
+function getSettings(keys) {
+  const key = process.env.SUPABASE_SERVICE_ROLE_KEY;
+  if (!key) return Promise.reject(new Error('SUPABASE_SERVICE_ROLE_KEY not set'));
+  const path = '/rest/v1/settings?select=key,value&key=in.(' + keys.join(',') + ')';
+  return new Promise(function (resolve, reject) {
+    https.get({ hostname: SUPA_HOST, path: path, headers: { apikey: key, Authorization: 'Bearer ' + key } }, function (res) {
+      let data = '';
+      res.on('data', function (c) { data += c; });
+      res.on('end', function () {
+        if (res.statusCode !== 200) return reject(new Error('settings HTTP ' + res.statusCode));
+        try { const out = {}; JSON.parse(data).forEach(function (r) { out[r.key] = r.value; }); resolve(out); }
+        catch (e) { reject(e); }
+      });
+    }).on('error', reject).setTimeout(4000, function () { this.destroy(new Error('settings timeout')); });
+  });
+}
+async function getFuel() {
+  if (fuel.pct != null && Date.now() - fuel.at < 60 * 1000) return fuel;
+  try {
+    const s = await getSettings(['fuel_surcharge_pct', 'fuel_surcharge_updated']);
+    const pct = parseFloat(s.fuel_surcharge_pct);
+    if (isFinite(pct) && pct >= 0 && pct <= 60) {
+      fuel = { at: Date.now(), pct: pct, updated: s.fuel_surcharge_updated || null, source: 'dashboard' };
+    } else if (fuel.pct == null) {
+      fuel = { at: Date.now(), pct: FUEL_SURCHARGE_PCT, updated: null, source: 'fallback' };
+    }
+  } catch (e) {
+    console.error('Fuel surcharge setting unavailable:', e.message);
+    if (fuel.pct == null) fuel = { at: Date.now(), pct: FUEL_SURCHARGE_PCT, updated: null, source: 'fallback' };
+    else fuel.at = Date.now();
+  }
+  return fuel;
 }
 
 // ── helpers ───────────────────────────────────────────────────────────
@@ -133,6 +173,7 @@ function resolve(item, products) {
  */
 async function priceOrder(input) {
   const products = await loadProducts();
+  const f = await getFuel();
   const raw = Array.isArray(input && input.items) ? input.items.slice(0, 99) : [];
   const lines = raw.map(function (it) { return resolve(it, products); });
   lines.forEach(function (l) { if (l.unit != null) l.total = l.unit * l.qty; });
@@ -145,7 +186,7 @@ async function priceOrder(input) {
 
   const service  = /^next/i.test(String(input && input.service)) ? 'nextDay' : 'economy';
   const tailLift = !!(input && input.tailLift);
-  const delivery = { status: 'none', pallets, service, tailLift, total: 0, options: null, message: '' };
+  const delivery = { status: 'none', pallets, service, tailLift, total: 0, options: null, message: '', fuelPct: f.pct };
 
   if (needsPostcode) {
     const pc = parsePostcode(input && input.postcode);
@@ -162,12 +203,12 @@ async function priceOrder(input) {
         delivery.status = 'quote';
         delivery.message = 'We quote delivery individually for orders over 50 pallets. Please ' + CONTACT + '.';
       } else if (pallets > 0) {
-        const eco = quote({ postcode: input.postcode, pallets, service: 'economy', tailLift });
+        const eco = quote({ postcode: input.postcode, pallets, service: 'economy', tailLift, fuelPct: f.pct });
         if (!eco.ok) {
           delivery.status = 'quote';
           delivery.message = eco.message;
         } else {
-          const nd = quote({ postcode: input.postcode, pallets, service: 'nextDay', tailLift });
+          const nd = quote({ postcode: input.postcode, pallets, service: 'nextDay', tailLift, fuelPct: f.pct });
           delivery.options = {
             economy: { total: Math.round(eco.breakdown.total * 100), breakdown: eco.breakdown },
             nextDay: nd.ok ? { total: Math.round(nd.breakdown.total * 100), breakdown: nd.breakdown } : null,
@@ -203,5 +244,32 @@ async function priceOrder(input) {
   };
 }
 
-module.exports = { priceOrder, loadProducts, resolve, toPence, SAMPLE_PRICE_PENCE,
-  _setProductsForTest: function (list) { cache = { at: Date.now() + 1e12, list: list }; } };
+// ── What the browser is allowed to see ───────────────────────────────
+// The fuel surcharge is never shown or sent to customers. It is folded
+// into the delivery rate, and the percentage is removed entirely.
+function publicBreakdown(b) {
+  if (!b) return b;
+  return {
+    deliveryRate: Math.round((b.palletsSubtotal + (b.fuelSurcharge || 0)) * 100) / 100,
+    volumeDiscountPct: b.volumeDiscountPct,
+    volumeDiscount: b.volumeDiscount,
+    tailLift: b.tailLift,
+    netExVat: b.netExVat,
+    vat: b.vat,
+    total: b.total,
+  };
+}
+function publicView(order) {
+  const o = JSON.parse(JSON.stringify(order));
+  const d = o.delivery || {};
+  delete d.fuelPct;
+  if (d.breakdown) d.breakdown = publicBreakdown(d.breakdown);
+  if (d.options) Object.keys(d.options).forEach(function (k) {
+    if (d.options[k]) d.options[k].breakdown = publicBreakdown(d.options[k].breakdown);
+  });
+  return o;
+}
+
+module.exports = { priceOrder, publicView, publicBreakdown, loadProducts, resolve, toPence, SAMPLE_PRICE_PENCE, getFuel, getSettings,
+  _setProductsForTest: function (list) { cache = { at: Date.now() + 1e12, list: list }; },
+  _setFuelForTest: function (pct) { fuel = { at: Date.now() + 1e12, pct: pct, updated: null, source: 'test' }; } };
