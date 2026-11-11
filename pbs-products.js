@@ -55,12 +55,21 @@ var STATIC_PAGE_MAP = {
     '20mm-quartize-bianco-porcelain-paving-600x900mm-22-95-per-m': '20mm-quartize-bianco-porcelain-paving-600x900mm.html',
     'black-sandstone': 'black-sandstone.html',
   };
+// Every product has a static page written by the dashboard on Publish.
+// Its filename follows the dashboard's pgCleanSlug rule (price suffix
+// removed, old "country-light-grey" typo corrected), except for the
+// hand-built legacy pages listed in STATIC_PAGE_MAP.
+function pbsCleanSlug(s) {
+  s = String(s || '').replace(/-\d+-\d+-per-[a-z0-9]+$/, '').replace('country-light-grey', 'county-light-grey');
+  return s.replace(/-+/g, '-').replace(/^-|-$/g, '');
+}
 function productUrl(p, prefix) {
   prefix = prefix || '';
   var staticPage = STATIC_PAGE_MAP[p.slug];
   if (staticPage) return prefix + 'products/' + staticPage;
-  return prefix + 'product.html?slug=' + encodeURIComponent(p.slug || '');
+  return prefix + 'products/' + pbsCleanSlug(p.slug) + '.html';
 }
+window.pbsProductUrl = function (p) { return productUrl(p, '/'); };
 
 // ── GLOBAL SITE FIXES (runs on every page) ───────────────────
 (function() {
@@ -85,12 +94,64 @@ function productUrl(p, prefix) {
     // Center and evenly space nav
     '.nav-i{justify-content:center!important}' +
     '.nav a{padding:11px 20px!important}' +
+    // Menu spacing comes from CSS variables that fitNav() (below) tightens
+    // until the menu fits the screen, instead of spilling off both edges.
+    '@media(min-width:769px){.nav a{padding:11px var(--pbs-nav-pad,20px)!important;font-size:var(--pbs-nav-fs,.97rem)!important}}' +
+    '.nav-i{justify-content:safe center!important}' +
     // Fix dropdown clipping — nav container must not clip overflow
     '.nav{overflow:visible!important}' +
     '.nav-i{overflow:visible!important}' +
     // Keep logo and cart visible above search on mobile
     '@media(max-width:768px){.srch{position:static!important;transform:none!important;width:100%!important;max-width:100%!important;display:flex!important;order:3;flex-basis:100%;margin-top:8px}}' + '@media(max-width:768px){.hdr-i{flex-wrap:wrap;height:auto!important;padding-bottom:10px}}' + '@media(max-width:768px){.srch input{width:100%;font-size:16px}}';
   document.head.appendChild(layoutStyle);
+
+  // Fit the desktop menu to the screen: start at the normal spacing and
+  // tighten padding, then text size, until every item is visible.
+  (function fitNav() {
+    var navI = document.querySelector('.nav-i');
+    if (!navI) return;
+    var root = document.documentElement;
+    function run() {
+      root.style.removeProperty('--pbs-nav-pad');
+      root.style.removeProperty('--pbs-nav-fs');
+      if (window.innerWidth <= 768) return;              // phone menu
+      var pad = 20, fs = 0.97, guard = 0;
+      function fits() { return navI.scrollWidth <= navI.clientWidth + 1; }
+      root.classList.remove('pbs-nav-compact');
+      while (!fits() && guard++ < 40) {
+        if (pad > 6) pad -= 1; else if (fs > 0.74) fs = Math.round((fs - 0.02) * 100) / 100; else break;
+        root.style.setProperty('--pbs-nav-pad', pad + 'px');
+        root.style.setProperty('--pbs-nav-fs', fs + 'rem');
+      }
+      // Still too wide (tablets): use the phone-style ☰ menu instead
+      if (!fits()) root.classList.add('pbs-nav-compact');
+    }
+    var cs = document.createElement('style');
+    cs.textContent =
+      'html.pbs-nav-compact .hbtn{display:flex!important}' +
+      'html.pbs-nav-compact .nav{display:none}' +
+      'html.pbs-nav-compact .nav.mob-open{display:block}' +
+      'html.pbs-nav-compact .nav-i{flex-direction:column;padding:0;overflow:visible;width:100%}' +
+      'html.pbs-nav-compact .nav a{padding:13px 18px!important;border-bottom:1px solid #333;font-size:1.02rem!important;width:100%}' +
+      'html.pbs-nav-compact .ni>a::after{float:right}' +
+      'html.pbs-nav-compact .dd{display:none!important;position:static;box-shadow:none;border:none;background:#161616;min-width:unset;width:100%}' +
+      'html.pbs-nav-compact .ni.mob-open .dd{display:block!important}' +
+      'html.pbs-nav-compact .dd a{padding:11px 28px!important;font-size:.97rem!important;border-bottom:1px solid #222}';
+    document.head.appendChild(cs);
+    // In the ☰ menu, tapping Bricks / Paving / Trade opens its sub-menu (as on phones)
+    navI.addEventListener('click', function (e) {
+      if (!root.classList.contains('pbs-nav-compact') || window.innerWidth <= 768) return;
+      var a = e.target.closest('.ni > a'); if (!a) return;
+      var ni = a.parentElement; if (!ni.querySelector('.dd')) return;
+      e.preventDefault();
+      navI.querySelectorAll('.ni').forEach(function (x) { if (x !== ni) x.classList.remove('mob-open'); });
+      ni.classList.toggle('mob-open');
+    }, true);
+    var t; window.addEventListener('resize', function () { clearTimeout(t); t = setTimeout(run, 120); });
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(run);
+    window.addEventListener('load', run);
+    run();
+  })();
 
   // 3. Live search with dropdown
   (function() {
@@ -262,8 +323,8 @@ function productUrl(p, prefix) {
   (function() {
     var footer = document.querySelector('footer .ft-i');
     if (!footer) return;
-    // Pages inside /products/ need "../" prepended to every root-relative link
-    var fp = (window.location.pathname.includes('/products/') || window.location.pathname.includes('/blog/')) ? '../' : '';
+    // Absolute links work from every folder (/products/, /bricks/, /blog/ …)
+    var fp = '/';
     footer.innerHTML =
       '<div class="ftg">' +
         '<div class="ft-brand">' +
@@ -311,9 +372,9 @@ function productUrl(p, prefix) {
     var navI = document.querySelector('.nav-i');
     if (!navI) return;
     // Don't add twice
-    if (navI.querySelector('a[href="plasterboards.html"]') || navI.querySelector('a[href="../plasterboards.html"]')) return;
+    if (navI.querySelector('a[href="plasterboards.html"]') || navI.querySelector('a[href="../plasterboards.html"]') || navI.querySelector('a[href="/plasterboards.html"]')) return;
     var pb = document.createElement('a');
-    var navPrefix = (window.location.pathname.includes('/products/') || window.location.pathname.includes('/blog/')) ? '../' : '';
+    var navPrefix = '/';
     pb.href = navPrefix + 'plasterboards.html';
     pb.textContent = '📋 Plasterboards';
     if (window.location.pathname.endsWith('/plasterboards') ||
@@ -377,9 +438,9 @@ function productUrl(p, prefix) {
 (function() {
   'use strict';
 
-  var BASE = '';
+  // Absolute paths so data and links work from any folder
+  var BASE = '/';
   var isProductPage = window.location.pathname.includes('/products/');
-  if (isProductPage) BASE = '../';
 
   // ── ANTI-FLASH: hide the static grid immediately so the old hardcoded
   // products never appear on screen (or get clicked) before the real
@@ -458,7 +519,7 @@ function productUrl(p, prefix) {
     prefix = prefix || '';
     var staticPage = STATIC_PAGE_MAP[p.slug];
     if (staticPage) return prefix + 'products/' + staticPage;
-    return prefix + 'product.html?slug=' + encodeURIComponent(p.slug || '');
+    return prefix + 'products/' + pbsCleanSlug(p.slug) + '.html';
   }
 
   // ── STATIC PAGE FILENAME -> REAL PRODUCT SLUG ──────────────
@@ -519,7 +580,7 @@ function productUrl(p, prefix) {
     if (!grid) return;
 
     var vis = products.filter(function(p){ return p.visible !== false; });
-    grid.innerHTML = vis.map(function(p){ return makeCard(p, ''); }).join('');
+    grid.innerHTML = vis.map(function(p){ return makeCard(p, '/'); }).join('');
     if (cnt) cnt.textContent = 'Showing all ' + vis.length + ' products';
     __reveal();
 
@@ -582,7 +643,7 @@ function productUrl(p, prefix) {
       __reveal();
       return;
     }
-    grid.innerHTML = filtered.map(function(p){ return makeCard(p, ''); }).join('');
+    grid.innerHTML = filtered.map(function(p){ return makeCard(p, '/'); }).join('');
     __reveal();
   }
 
@@ -741,7 +802,7 @@ function productUrl(p, prefix) {
     featured = featured.concat(extra.slice(0, 8 - featured.length));
   }
 
-  featGrid.innerHTML = featured.map(function(p){ return makeCard(p, ''); }).join('');
+  featGrid.innerHTML = featured.map(function(p){ return makeCard(p, '/'); }).join('');
 }
 
 // ── INIT ──────────────────────────────────────────────────

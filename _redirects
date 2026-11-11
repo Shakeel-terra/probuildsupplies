@@ -1,24 +1,24 @@
 # Consolidate duplicate product pages onto the canonical /products/ URL
 /alford-reclaimed-bricks.html  /products/alford-reclaimed-bricks.html  301!
 /anthracite-black-20mm.html  /products/anthracite-black-porcelain-paving-600x900mm.html  301!
-/anthracite-grey-20mm.html  /products/20mm-anthracite-grey-porcelain-paving-600x900mm.html  301!
+/anthracite-grey-20mm.html  /products/anthracite-grey-porcelain-paving-600x900mm.html  301!
 /ashbourne-reclaimed-bricks.html  /products/ashbourne-reclaimed-bricks.html  301!
 /ashgrove-orange-handmade.html  /products/ashgrove-orange-handmade.html  301!
 /autumn-brown.html  /products/autumn-brown.html  301!
 /barnstock-orange-handmade.html  /products/barnstock-orange-handmade.html  301!
-/black-slate-20mm.html  /products/20mm-black-slate-porcelain-paving-600x900mm.html  301!
-/bodo-white-20mm.html  /products/20mm-bodo-white-porcelain-paving-600x900mm.html  301!
+/black-slate-20mm.html  /products/black-slate-porcelain-paving-600x900mm.html  301!
+/bodo-white-20mm.html  /products/bodo-white-porcelain-paving-600x900mm.html  301!
 /camel-dust.html  /products/camel-dust.html  301!
 /cheshire-red-handmade.html  /handmade-bricks.html  301!
 /city-blend-handmade-facing-bricks.html  /products/city-blend-handmade-facing-bricks.html  301!
-/county-lgy-light-grey-20mm.html  /products/20mm-county-light-grey-porcelain-paving-600x900mm.html  301!
-/earthcore-grey-20mm.html  /products/20mm-earthcore-grey-porcelain-paving-600x900mm.html  301!
-/everest-pearl-20mm.html  /products/20mm-everest-pearl-porcelain-paving-600x900mm.html  301!
+/county-lgy-light-grey-20mm.html  /products/county-light-grey-porcelain-paving-600x900mm.html  301!
+/earthcore-grey-20mm.html  /products/earthcore-grey-porcelain-paving-600x900mm.html  301!
+/everest-pearl-20mm.html  /products/everest-pearl-porcelain-paving-600x900mm.html  301!
 /fossil-mint.html  /products/fossil-mint.html  301!
 /fulford-blend-handmade.html  /handmade-bricks.html  301!
 /golden-brown.html  /indian-sandstone.html  301!
 /heritage-blend-handmade.html  /products/heritage-blend-handmade.html  301!
-/kandla-grey.html  /products/kandla-grey.html  301!
+/kandla-grey.html  /products/kandla-grey-sandstone.html  301!
 /modak.html  /indian-sandstone.html  301!
 /plain-yellow-facing-bricks.html  /handmade-bricks.html  301!
 /pulford-blend-handmade.html  /handmade-bricks.html  301!
@@ -61,55 +61,55 @@
 /product.html slug=yellow-mint  /products/yellow-mint.html  301!
 /product.html slug=rippon-buff  /products/rippon-buff.html  301!
 /product.html slug=raj-green  /products/raj-green.html  301!
-/product.html slug=kanlda-grey-sandstone  /products/kandla-grey.html  301!
+/product.html slug=kanlda-grey-sandstone  /products/kandla-grey-sandstone.html  301!
 
 # Generated product pages: query-string URL -> static page
 /product.html slug=hs-grey-porcelain-paving-600x900mm-21-95-per-m  /products/hs-grey-porcelain-paving-600x900mm.html  301!
 /product.html slug=hs-beige-porcelain-paving-600x900mm-21-95-per-m  /products/hs-beige-porcelain-paving-600x900mm.html  301!
 /product.html slug=hs-nero-porcelain-paving-600x900mm-21-95-per-m  /products/hs-nero-porcelain-paving-600x900mm.html  301!
 /product.html slug=anthracite-black-porcelain-paving-600x900mm-21-95-per-m  /products/anthracite-black-porcelain-paving-600x900mm.html  301!
-/product.html slug=20mm-beside-grey-porcelain-paving-600x900mm-21-95-per-m  /products/20mm-beside-grey-porcelain-paving-600x900mm.html  301!
-/product.html slug=20mm-anthracite-grey-porcelain-paving-600x900mm-21-95-per-m  /products/20mm-anthracite-grey-porcelain-paving-600x900mm.html  301!
-/product.html slug=20mm-quartz-grey-porcelain-paving-600x900mm-21-95-per-m  /products/20mm-quartz-grey-porcelain-paving-600x900mm.html  301!
-/product.html slug=20mm-earthcore-grey-porcelain-paving-600x900mm-21-95-per-m  /products/20mm-earthcore-grey-porcelain-paving-600x900mm.html  301!
-/product.html slug=20mm-earthcore-black-porcelain-paving-600x900mm-21-95-per-m  /products/20mm-earthcore-black-porcelain-paving-600x900mm.html  301!
-/product.html slug=20mm-mid-grey-granite-porcelain-paving-600x900mm-21-95-per-m  /products/20mm-mid-grey-granite-porcelain-paving-600x900mm.html  301!
-/product.html slug=20mm-black-slate-porcelain-paving-600x900mm-21-95-per-m  /products/20mm-black-slate-porcelain-paving-600x900mm.html  301!
-/product.html slug=20mm-quartz-white-porcelain-paving-600x900mm-22-95-per-m  /products/20mm-quartz-white-porcelain-paving-600x900mm.html  301!
-/product.html slug=20mm-kandla-grey-porcelain-paving-600x900mm-22-95-per-m  /products/20mm-kandla-grey-porcelain-paving-600x900mm.html  301!
-/product.html slug=20mm-kandla-grey-sawn-honed-porcelain-paving-600x900mm-22-95-per-m  /products/20mm-kandla-grey-sawn-honed-porcelain-paving-600x900mm.html  301!
-/product.html slug=20mm-raj-green-porcelain-paving-600x900mm-22-95-per-m  /products/20mm-raj-green-porcelain-paving-600x900mm.html  301!
-/product.html slug=20mm-sagar-black-porcelain-porcelain-paving-600x900mm-22-95-per-m  /products/20mm-sagar-black-porcelain-porcelain-paving-600x900mm.html  301!
-/product.html slug=20mm-silver-grey-porcelain-paving-600x900mm-22-95-per-m  /products/20mm-silver-grey-porcelain-paving-600x900mm.html  301!
-/product.html slug=20mm-fossil-mint-porcelain-paving-600x900mm-22-95-per-m  /products/20mm-fossil-mint-porcelain-paving-600x900mm.html  301!
-/product.html slug=20mm-universal-grey-porcelain-paving-600x900mm-22-95-per-m  /products/20mm-universal-grey-porcelain-paving-600x900mm.html  301!
-/product.html slug=20mm-basalt-black-porcelain-paving-600x900mm-22-95-per-m  /products/20mm-basalt-black-porcelain-paving-600x900mm.html  301!
-/product.html slug=20mm-himalayan-white-porcelain-paving-600x900mm-22-95-per-m  /products/20mm-himalayan-white-porcelain-paving-600x900mm.html  301!
-/product.html slug=20mm-copper-rustic-slate-porcelain-paving-600x900mm-22-95-per-m  /products/20mm-copper-rustic-slate-porcelain-paving-600x900mm.html  301!
-/product.html slug=20mm-limestone-ash-porcelain-paving-600x900mm-22-95-per-m  /products/20mm-limestone-ash-porcelain-paving-600x900mm.html  301!
-/product.html slug=20mm-limestone-creama-ivory-porcelain-paving-600x900mm-22-95-per-m  /products/20mm-limestone-creama-ivory-porcelain-paving-600x900mm.html  301!
-/product.html slug=20mm-country-light-grey-porcelain-paving-600x900mm-22-95-per-m  /products/20mm-county-light-grey-porcelain-paving-600x900mm.html  301!
-/product.html slug=20mm-everest-pearl-porcelain-paving-600x900mm-22-95-per-m  /products/20mm-everest-pearl-porcelain-paving-600x900mm.html  301!
-/product.html slug=20mm-maximus-stuatario-porcelain-paving-600x900mm-22-95-per-m  /products/20mm-maximus-stuatario-porcelain-paving-600x900mm.html  301!
-/product.html slug=20mm-crossover-grey-porcelain-paving-600x900mm-22-95-per-m  /products/20mm-crossover-grey-porcelain-paving-600x900mm.html  301!
-/product.html slug=20mm-crossover-white-porcelain-paving-600x900mm-22-95-per-m  /products/20mm-crossover-white-porcelain-paving-600x900mm.html  301!
-/product.html slug=20mm-getafe-beige-porcelain-paving-600x900mm-22-95-per-m  /products/20mm-getafe-beige-porcelain-paving-600x900mm.html  301!
-/product.html slug=20mm-bodo-white-porcelain-paving-600x900mm-22-95-per-m  /products/20mm-bodo-white-porcelain-paving-600x900mm.html  301!
-/product.html slug=20mm-fossil-nero-porcelain-paving-600x900mm-22-95-per-m  /products/20mm-fossil-nero-porcelain-paving-600x900mm.html  301!
-/product.html slug=20mm-quartize-bianco-porcelain-paving-600x900mm-22-95-per-m  /products/20mm-quartize-bianco-porcelain-paving-600x900mm.html  301!
+/product.html slug=20mm-beside-grey-porcelain-paving-600x900mm-21-95-per-m  /products/beside-grey-porcelain-paving-600x900mm.html  301!
+/product.html slug=20mm-anthracite-grey-porcelain-paving-600x900mm-21-95-per-m  /products/anthracite-grey-porcelain-paving-600x900mm.html  301!
+/product.html slug=20mm-quartz-grey-porcelain-paving-600x900mm-21-95-per-m  /products/quartz-grey-porcelain-paving-600x900mm.html  301!
+/product.html slug=20mm-earthcore-grey-porcelain-paving-600x900mm-21-95-per-m  /products/earthcore-grey-porcelain-paving-600x900mm.html  301!
+/product.html slug=20mm-earthcore-black-porcelain-paving-600x900mm-21-95-per-m  /products/earthcore-black-porcelain-paving-600x900mm.html  301!
+/product.html slug=20mm-mid-grey-granite-porcelain-paving-600x900mm-21-95-per-m  /products/mid-grey-granite-porcelain-paving-600x900mm.html  301!
+/product.html slug=20mm-black-slate-porcelain-paving-600x900mm-21-95-per-m  /products/black-slate-porcelain-paving-600x900mm.html  301!
+/product.html slug=20mm-quartz-white-porcelain-paving-600x900mm-22-95-per-m  /products/quartz-white-porcelain-paving-600x900mm.html  301!
+/product.html slug=20mm-kandla-grey-porcelain-paving-600x900mm-22-95-per-m  /products/kandla-grey-porcelain-paving-600x900mm.html  301!
+/product.html slug=20mm-kandla-grey-sawn-honed-porcelain-paving-600x900mm-22-95-per-m  /products/kandla-grey-sawn-honed-porcelain-paving-600x900mm.html  301!
+/product.html slug=20mm-raj-green-porcelain-paving-600x900mm-22-95-per-m  /products/raj-green-porcelain-paving-600x900mm.html  301!
+/product.html slug=20mm-sagar-black-porcelain-porcelain-paving-600x900mm-22-95-per-m  /products/sagar-black-porcelain-paving-600x900mm.html  301!
+/product.html slug=20mm-silver-grey-porcelain-paving-600x900mm-22-95-per-m  /products/silver-grey-porcelain-paving-600x900mm.html  301!
+/product.html slug=20mm-fossil-mint-porcelain-paving-600x900mm-22-95-per-m  /products/fossil-mint-porcelain-paving-600x900mm.html  301!
+/product.html slug=20mm-universal-grey-porcelain-paving-600x900mm-22-95-per-m  /products/universal-grey-porcelain-paving-600x900mm.html  301!
+/product.html slug=20mm-basalt-black-porcelain-paving-600x900mm-22-95-per-m  /products/basalt-black-porcelain-paving-600x900mm.html  301!
+/product.html slug=20mm-himalayan-white-porcelain-paving-600x900mm-22-95-per-m  /products/himalayan-white-porcelain-paving-600x900mm.html  301!
+/product.html slug=20mm-copper-rustic-slate-porcelain-paving-600x900mm-22-95-per-m  /products/copper-rustic-slate-porcelain-paving-600x900mm.html  301!
+/product.html slug=20mm-limestone-ash-porcelain-paving-600x900mm-22-95-per-m  /products/limestone-ash-porcelain-paving-600x900mm.html  301!
+/product.html slug=20mm-limestone-creama-ivory-porcelain-paving-600x900mm-22-95-per-m  /products/limestone-crema-ivory-porcelain-paving-600x900mm.html  301!
+/product.html slug=20mm-country-light-grey-porcelain-paving-600x900mm-22-95-per-m  /products/county-light-grey-porcelain-paving-600x900mm.html  301!
+/product.html slug=20mm-everest-pearl-porcelain-paving-600x900mm-22-95-per-m  /products/everest-pearl-porcelain-paving-600x900mm.html  301!
+/product.html slug=20mm-maximus-stuatario-porcelain-paving-600x900mm-22-95-per-m  /products/maximus-statuario-porcelain-paving-600x900mm.html  301!
+/product.html slug=20mm-crossover-grey-porcelain-paving-600x900mm-22-95-per-m  /products/crossover-grey-porcelain-paving-600x900mm.html  301!
+/product.html slug=20mm-crossover-white-porcelain-paving-600x900mm-22-95-per-m  /products/crossover-white-porcelain-paving-600x900mm.html  301!
+/product.html slug=20mm-getafe-beige-porcelain-paving-600x900mm-22-95-per-m  /products/getafe-beige-porcelain-paving-600x900mm.html  301!
+/product.html slug=20mm-bodo-white-porcelain-paving-600x900mm-22-95-per-m  /products/bodo-white-porcelain-paving-600x900mm.html  301!
+/product.html slug=20mm-fossil-nero-porcelain-paving-600x900mm-22-95-per-m  /products/fossil-nero-porcelain-paving-600x900mm.html  301!
+/product.html slug=20mm-quartize-bianco-porcelain-paving-600x900mm-22-95-per-m  /products/quartzite-bianco-porcelain-paving-600x900mm.html  301!
 /product.html slug=black-sandstone  /products/black-sandstone.html  301!
 
 # Superseded static pages -> dashboard-generated equivalents
 
 # Superseded static pages -> dashboard-generated equivalents
 /products/anthracite-black-20mm.html  /products/anthracite-black-porcelain-paving-600x900mm.html  301!
-/products/anthracite-grey-20mm.html  /products/20mm-anthracite-grey-porcelain-paving-600x900mm.html  301!
-/products/black-slate-20mm.html  /products/20mm-black-slate-porcelain-paving-600x900mm.html  301!
-/products/bodo-white-20mm.html  /products/20mm-bodo-white-porcelain-paving-600x900mm.html  301!
-/products/county-lgy-light-grey-20mm.html  /products/20mm-county-light-grey-porcelain-paving-600x900mm.html  301!
-/products/crossover-grey-20mm.html  /products/20mm-crossover-grey-porcelain-paving-600x900mm.html  301!
-/products/earthcore-grey-20mm.html  /products/20mm-earthcore-grey-porcelain-paving-600x900mm.html  301!
-/products/everest-pearl-20mm.html  /products/20mm-everest-pearl-porcelain-paving-600x900mm.html  301!
+/products/anthracite-grey-20mm.html  /products/anthracite-grey-porcelain-paving-600x900mm.html  301!
+/products/black-slate-20mm.html  /products/black-slate-porcelain-paving-600x900mm.html  301!
+/products/bodo-white-20mm.html  /products/bodo-white-porcelain-paving-600x900mm.html  301!
+/products/county-lgy-light-grey-20mm.html  /products/county-light-grey-porcelain-paving-600x900mm.html  301!
+/products/crossover-grey-20mm.html  /products/crossover-grey-porcelain-paving-600x900mm.html  301!
+/products/earthcore-grey-20mm.html  /products/earthcore-grey-porcelain-paving-600x900mm.html  301!
+/products/everest-pearl-20mm.html  /products/everest-pearl-porcelain-paving-600x900mm.html  301!
 /products/renovation-multi-handmade-73mm.html  /products/renovation-multi-pressed.html  301!
 
 # Catch-all: any /product.html request not matched by a slug rule above is a
@@ -181,7 +181,7 @@
 /products/20mm-copper-rustic-slate-porcelain-paving-600x900mm-22-95-per-m.html  /products/copper-rustic-slate-porcelain-paving-600x900mm.html  301!
 /products/20mm-limestone-ash-porcelain-paving-600x900mm-22-95-per-m.html  /products/limestone-ash-porcelain-paving-600x900mm.html  301!
 /products/20mm-limestone-creama-ivory-porcelain-paving-600x900mm-22-95-per-m.html  /products/limestone-crema-ivory-porcelain-paving-600x900mm.html  301!
-/products/20mm-country-light-grey-porcelain-paving-600x900mm-22-95-per-m.html  /products/country-light-grey-porcelain-paving-600x900mm.html  301!
+/products/20mm-country-light-grey-porcelain-paving-600x900mm-22-95-per-m.html  /products/county-light-grey-porcelain-paving-600x900mm.html  301!
 /products/20mm-everest-pearl-porcelain-paving-600x900mm-22-95-per-m.html  /products/everest-pearl-porcelain-paving-600x900mm.html  301!
 /products/20mm-maximus-stuatario-porcelain-paving-600x900mm-22-95-per-m.html  /products/maximus-statuario-porcelain-paving-600x900mm.html  301!
 /products/20mm-crossover-grey-porcelain-paving-600x900mm-22-95-per-m.html  /products/crossover-grey-porcelain-paving-600x900mm.html  301!
@@ -191,3 +191,77 @@
 /products/20mm-fossil-nero-porcelain-paving-600x900mm-22-95-per-m.html  /products/fossil-nero-porcelain-paving-600x900mm.html  301!
 /products/20mm-quartize-bianco-porcelain-paving-600x900mm-22-95-per-m.html  /products/quartzite-bianco-porcelain-paving-600x900mm.html  301!
 /products/kanlda-grey-sandstone.html  /products/kandla-grey-sandstone.html  301!
+
+# Retired product pages (stale copies). Forced, so they redirect even though the old files still exist.
+/products/20mm-anthracite-grey-porcelain-paving-600x900mm.html  /products/anthracite-grey-porcelain-paving-600x900mm.html  301!
+/products/20mm-anthracite-grey-porcelain-paving-600x900mm  /products/anthracite-grey-porcelain-paving-600x900mm.html  301!
+/products/20mm-basalt-black-porcelain-paving-600x900mm.html  /products/basalt-black-porcelain-paving-600x900mm.html  301!
+/products/20mm-basalt-black-porcelain-paving-600x900mm  /products/basalt-black-porcelain-paving-600x900mm.html  301!
+/products/20mm-beside-grey-porcelain-paving-600x900mm.html  /products/beside-grey-porcelain-paving-600x900mm.html  301!
+/products/20mm-beside-grey-porcelain-paving-600x900mm  /products/beside-grey-porcelain-paving-600x900mm.html  301!
+/products/20mm-black-slate-porcelain-paving-600x900mm.html  /products/black-slate-porcelain-paving-600x900mm.html  301!
+/products/20mm-black-slate-porcelain-paving-600x900mm  /products/black-slate-porcelain-paving-600x900mm.html  301!
+/products/20mm-bodo-white-porcelain-paving-600x900mm.html  /products/bodo-white-porcelain-paving-600x900mm.html  301!
+/products/20mm-bodo-white-porcelain-paving-600x900mm  /products/bodo-white-porcelain-paving-600x900mm.html  301!
+/products/20mm-copper-rustic-slate-porcelain-paving-600x900mm.html  /products/copper-rustic-slate-porcelain-paving-600x900mm.html  301!
+/products/20mm-copper-rustic-slate-porcelain-paving-600x900mm  /products/copper-rustic-slate-porcelain-paving-600x900mm.html  301!
+/products/20mm-county-light-grey-porcelain-paving-600x900mm.html  /products/county-light-grey-porcelain-paving-600x900mm.html  301!
+/products/20mm-county-light-grey-porcelain-paving-600x900mm  /products/county-light-grey-porcelain-paving-600x900mm.html  301!
+/products/20mm-crossover-grey-porcelain-paving-600x900mm.html  /products/crossover-grey-porcelain-paving-600x900mm.html  301!
+/products/20mm-crossover-grey-porcelain-paving-600x900mm  /products/crossover-grey-porcelain-paving-600x900mm.html  301!
+/products/20mm-crossover-white-porcelain-paving-600x900mm.html  /products/crossover-white-porcelain-paving-600x900mm.html  301!
+/products/20mm-crossover-white-porcelain-paving-600x900mm  /products/crossover-white-porcelain-paving-600x900mm.html  301!
+/products/20mm-earthcore-black-porcelain-paving-600x900mm.html  /products/earthcore-black-porcelain-paving-600x900mm.html  301!
+/products/20mm-earthcore-black-porcelain-paving-600x900mm  /products/earthcore-black-porcelain-paving-600x900mm.html  301!
+/products/20mm-earthcore-grey-porcelain-paving-600x900mm.html  /products/earthcore-grey-porcelain-paving-600x900mm.html  301!
+/products/20mm-earthcore-grey-porcelain-paving-600x900mm  /products/earthcore-grey-porcelain-paving-600x900mm.html  301!
+/products/20mm-everest-pearl-porcelain-paving-600x900mm.html  /products/everest-pearl-porcelain-paving-600x900mm.html  301!
+/products/20mm-everest-pearl-porcelain-paving-600x900mm  /products/everest-pearl-porcelain-paving-600x900mm.html  301!
+/products/20mm-fossil-mint-porcelain-paving-600x900mm.html  /products/fossil-mint-porcelain-paving-600x900mm.html  301!
+/products/20mm-fossil-mint-porcelain-paving-600x900mm  /products/fossil-mint-porcelain-paving-600x900mm.html  301!
+/products/20mm-fossil-nero-porcelain-paving-600x900mm.html  /products/fossil-nero-porcelain-paving-600x900mm.html  301!
+/products/20mm-fossil-nero-porcelain-paving-600x900mm  /products/fossil-nero-porcelain-paving-600x900mm.html  301!
+/products/20mm-getafe-beige-porcelain-paving-600x900mm.html  /products/getafe-beige-porcelain-paving-600x900mm.html  301!
+/products/20mm-getafe-beige-porcelain-paving-600x900mm  /products/getafe-beige-porcelain-paving-600x900mm.html  301!
+/products/20mm-himalayan-white-porcelain-paving-600x900mm.html  /products/himalayan-white-porcelain-paving-600x900mm.html  301!
+/products/20mm-himalayan-white-porcelain-paving-600x900mm  /products/himalayan-white-porcelain-paving-600x900mm.html  301!
+/products/20mm-kandla-grey-porcelain-paving-600x900mm.html  /products/kandla-grey-porcelain-paving-600x900mm.html  301!
+/products/20mm-kandla-grey-porcelain-paving-600x900mm  /products/kandla-grey-porcelain-paving-600x900mm.html  301!
+/products/20mm-kandla-grey-sawn-honed-porcelain-paving-600x900mm.html  /products/kandla-grey-sawn-honed-porcelain-paving-600x900mm.html  301!
+/products/20mm-kandla-grey-sawn-honed-porcelain-paving-600x900mm  /products/kandla-grey-sawn-honed-porcelain-paving-600x900mm.html  301!
+/products/20mm-limestone-ash-porcelain-paving-600x900mm.html  /products/limestone-ash-porcelain-paving-600x900mm.html  301!
+/products/20mm-limestone-ash-porcelain-paving-600x900mm  /products/limestone-ash-porcelain-paving-600x900mm.html  301!
+/products/20mm-limestone-creama-ivory-porcelain-paving-600x900mm.html  /products/limestone-crema-ivory-porcelain-paving-600x900mm.html  301!
+/products/20mm-limestone-creama-ivory-porcelain-paving-600x900mm  /products/limestone-crema-ivory-porcelain-paving-600x900mm.html  301!
+/products/20mm-maximus-stuatario-porcelain-paving-600x900mm.html  /products/maximus-statuario-porcelain-paving-600x900mm.html  301!
+/products/20mm-maximus-stuatario-porcelain-paving-600x900mm  /products/maximus-statuario-porcelain-paving-600x900mm.html  301!
+/products/20mm-mid-grey-granite-porcelain-paving-600x900mm.html  /products/mid-grey-granite-porcelain-paving-600x900mm.html  301!
+/products/20mm-mid-grey-granite-porcelain-paving-600x900mm  /products/mid-grey-granite-porcelain-paving-600x900mm.html  301!
+/products/20mm-quartize-bianco-porcelain-paving-600x900mm.html  /products/quartzite-bianco-porcelain-paving-600x900mm.html  301!
+/products/20mm-quartize-bianco-porcelain-paving-600x900mm  /products/quartzite-bianco-porcelain-paving-600x900mm.html  301!
+/products/20mm-quartz-grey-porcelain-paving-600x900mm.html  /products/quartz-grey-porcelain-paving-600x900mm.html  301!
+/products/20mm-quartz-grey-porcelain-paving-600x900mm  /products/quartz-grey-porcelain-paving-600x900mm.html  301!
+/products/20mm-quartz-white-porcelain-paving-600x900mm.html  /products/quartz-white-porcelain-paving-600x900mm.html  301!
+/products/20mm-quartz-white-porcelain-paving-600x900mm  /products/quartz-white-porcelain-paving-600x900mm.html  301!
+/products/20mm-raj-green-porcelain-paving-600x900mm.html  /products/raj-green-porcelain-paving-600x900mm.html  301!
+/products/20mm-raj-green-porcelain-paving-600x900mm  /products/raj-green-porcelain-paving-600x900mm.html  301!
+/products/20mm-sagar-black-porcelain-porcelain-paving-600x900mm.html  /products/sagar-black-porcelain-paving-600x900mm.html  301!
+/products/20mm-sagar-black-porcelain-porcelain-paving-600x900mm  /products/sagar-black-porcelain-paving-600x900mm.html  301!
+/products/20mm-silver-grey-porcelain-paving-600x900mm.html  /products/silver-grey-porcelain-paving-600x900mm.html  301!
+/products/20mm-silver-grey-porcelain-paving-600x900mm  /products/silver-grey-porcelain-paving-600x900mm.html  301!
+/products/20mm-universal-grey-porcelain-paving-600x900mm.html  /products/universal-grey-porcelain-paving-600x900mm.html  301!
+/products/20mm-universal-grey-porcelain-paving-600x900mm  /products/universal-grey-porcelain-paving-600x900mm.html  301!
+/products/british-standard-brick-specials.html  /handmade-bricks.html  301!
+/products/british-standard-brick-specials  /handmade-bricks.html  301!
+/products/first-quality-handmade.html  /handmade-bricks.html  301!
+/products/first-quality-handmade  /handmade-bricks.html  301!
+/products/first-quality-multi.html  /handmade-bricks.html  301!
+/products/first-quality-multi  /handmade-bricks.html  301!
+/products/kandla-grey.html  /products/kandla-grey-sandstone.html  301!
+/products/kandla-grey  /products/kandla-grey-sandstone.html  301!
+/products/red-creasing-tiles.html  /handmade-bricks.html  301!
+/products/red-creasing-tiles  /handmade-bricks.html  301!
+/products/selected-darks.html  /handmade-bricks.html  301!
+/products/selected-darks  /handmade-bricks.html  301!
+/products/selected-lights.html  /handmade-bricks.html  301!
+/products/selected-lights  /handmade-bricks.html  301!
