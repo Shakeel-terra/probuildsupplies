@@ -115,7 +115,8 @@ img{max-width:100%;display:block;height:auto}
 .pbtn:hover{background:var(--o);color:var(--wh)}
 .pcard{background:var(--wh);border-radius:var(--r);overflow:hidden;border:1px solid var(--bd);transition:box-shadow .25s,transform .25s;display:block}
 .pcard:hover{box-shadow:0 10px 32px rgba(0,0,0,.11);transform:translateY(-4px)}
-.pp-layout{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start;margin-bottom:52px}
+.pp-layout>*{min-width:0}
+.pp-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:44px;align-items:start;margin-bottom:52px}
 .pp-imgbox{background:var(--lt);border-radius:8px;border:2px solid var(--bd);aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;font-size:7rem;overflow:hidden}
 .pp-imgbox img{width:100%;height:100%;object-fit:cover}
 .pp-thumbs{display:flex;gap:9px;margin-top:11px;overflow-x:auto;padding-bottom:2px}
@@ -179,7 +180,7 @@ footer{background:#111;padding:40px 20px 18px;color:#888;width:100%}
 .pay{background:#222;border:1px solid #333;border-radius:3px;padding:3px 8px;font-size:.68rem;color:#888;font-weight:600}
 .wrap{max-width:1280px;margin:0 auto;padding:0 20px}
 @media(max-width:1024px){.rgrid{grid-template-columns:repeat(2,1fr)}.ftg{grid-template-columns:1fr 1fr;gap:22px}}
-@media(max-width:860px){.pp-layout{grid-template-columns:1fr;gap:24px}}
+@media(max-width:860px){.pp-layout{grid-template-columns:minmax(0,1fr);gap:24px}}
 @media(max-width:768px){
   .hdr-i{height:56px;padding:0 14px;gap:9px}
   .logo{font-size:1.35rem}
@@ -336,7 +337,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="ni"><a href="../bricks.html">🧱 Bricks</a><div class="dd">
 <a href="../handmade-bricks.html">Handmade Bricks</a>
 <a href="../reclaimed-bricks.html">Reclaimed Bricks</a>
-<a href="bricks/all-bricks.html">Browse All Bricks →</a>
+<a href="/bricks/all-bricks.html">Browse All Bricks →</a>
 </div></div>
 <div class="ni"><a href="../paving.html">🪨 Paving</a><div class="dd">
 <a href="../porcelain-paving.html">Porcelain Paving</a>
@@ -345,7 +346,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <a href="../insulation.html">❄️ Insulation</a>
 <div class="ni"><a href="../trade-accounts.html">🏗️ Trade &amp; Bulk</a><div class="dd">
 <a href="../trade-accounts.html">Trade Accounts</a>
-<a href="trade-accounts.html#bulk">Bulk Orders</a>
+<a href="/trade-accounts.html#bulk">Bulk Orders</a>
 </div></div>
 <a href="../brick-matching.html">🧱 Brick Matching</a>
 <a href="../contact.html">📞 Contact</a>
@@ -394,7 +395,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 <div class="fc"><h4>Company</h4>
 <a href="../about.html">About Us</a>
-<a href="blog/">Blog</a>
+<a href="/blog/">Blog</a>
 <a href="../privacy-policy.html">Privacy Policy</a>
 <a href="../terms.html">Terms &amp; Conditions</a>
 </div>
