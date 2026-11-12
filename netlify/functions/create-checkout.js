@@ -91,8 +91,8 @@ exports.handler = async function (event) {
   }
 
   order.lines.forEach(function (l) {
-    const desc = l.kind === 'brick' ? 'Price excludes delivery, which is shown as a separate line.'
-               : l.kind === 'samples' ? 'Sent by DPD.' : 'Delivery included.';
+    const desc = l.kind === 'brick' ? 'Price excludes delivery, which is shown as a separate line. Delivered within 72 hours once payment has cleared.'
+               : l.kind === 'samples' ? 'Sent by DPD.' : 'Free delivery, within 72 hours once payment has cleared.';
     addLine(l.name + (l.size ? ' — ' + l.size : ''), desc, l.unit, l.qty);
   });
 
@@ -103,7 +103,7 @@ exports.handler = async function (event) {
                    'to ' + d.postcode];
     if (d.tailLift) parts.push('tail-lift');
     const desc = (b.volumeDiscountPct ? b.volumeDiscountPct + '% multi-pallet discount applied. ' : '')
-               + 'Kerbside delivery. Inc VAT.';
+               + 'Economy service: delivered within 72 hours once payment has cleared, Monday to Friday. Kerbside. Inc VAT.';
     addLine('Pallet delivery — ' + parts.join(', '), desc, d.total, 1);
   }
 

@@ -98,6 +98,8 @@ window.pbsProductUrl = function (p) { return productUrl(p, '/'); };
     // until the menu fits the screen, instead of spilling off both edges.
     '@media(min-width:769px){.nav a{padding:11px var(--pbs-nav-pad,20px)!important;font-size:var(--pbs-nav-fs,.97rem)!important}}' +
     '.nav-i{justify-content:safe center!important}' +
+    // Show the delivery message on phones too (the page CSS hides the bar under 480px)
+    '@media(max-width:480px){.ann{display:block!important;font-size:.74rem!important;padding:6px 10px!important;line-height:1.35!important}}' +
     // Fix dropdown clipping — nav container must not clip overflow
     '.nav{overflow:visible!important}' +
     '.nav-i{overflow:visible!important}' +
@@ -329,7 +331,7 @@ window.pbsProductUrl = function (p) { return productUrl(p, '/'); };
       '<div class="ftg">' +
         '<div class="ft-brand">' +
           '<a href="' + fp + 'index.html" class="logo">Pro Build <b>Supplies</b></a>' +
-          '<p>Premium building materials at trade prices, delivered direct to your door or site. Free UK mainland delivery on paving.</p>' +
+          '<p>Premium building materials at trade prices, delivered direct to your door or site. Free UK mainland delivery on paving. All orders delivered within 72 hours once payment has cleared.</p>' +
           '<p style="margin-top:12px;font-size:.78rem;color:#555;line-height:1.9">' +
             'Pro Build Supplies Preston Ltd<br>' +
             'Suite 23, Derby House<br>' +
@@ -932,7 +934,7 @@ window.pbsProductUrl = function (p) { return productUrl(p, '/'); };
     '<div class="pbs-items" id="pbs-items"></div>' +
     '<div class="pbs-foot" id="pbs-foot" style="display:none">' +
       '<div class="pbs-subtotal"><span>Subtotal (ex. delivery)</span><span id="pbs-total">£0.00</span></div>' +
-      '<p class="pbs-note">Paving delivers free to the UK mainland. Brick delivery is priced by postcode at checkout.</p>' +
+      '<p class="pbs-note">All orders are delivered within 72 hours once payment has cleared. Paving delivers free to the UK mainland; brick delivery is priced by postcode at checkout.</p>' +
       '<a class="pbs-checkout" id="pbs-checkout" href="/checkout.html" data-pbs-checkout>Checkout</a>' +
       '<p class="pbs-secure">🔒 Secured by Stripe &nbsp;|&nbsp; Visa, Mastercard, Apple Pay, Google Pay</p>' +
     '</div>';

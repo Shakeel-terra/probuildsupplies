@@ -513,7 +513,7 @@ footer{background:#111;padding:40px 20px 18px;color:#888;width:100%}
 .co-delmsg.ok{background:#ECFDF3;border:1px solid #A6E9C1}
 .co-delmsg.warn{background:#FFF4ED;border:1px solid #FDBA8C}
 .co-delmsg a{color:var(--o);font-weight:600}
-.co-opts{border:0;padding:0;margin:20px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.co-opts{border:0;padding:0;margin:20px 0 0;display:grid;grid-template-columns:1fr;gap:12px}
 .co-leg{font-weight:600;margin-bottom:10px;padding:0;grid-column:1/-1}
 .co-opt{position:relative;display:block;cursor:pointer}
 .co-opt input{position:absolute;opacity:0;pointer-events:none}
@@ -550,7 +550,8 @@ footer{background:#111;padding:40px 20px 18px;color:#888;width:100%}
 .co-total{display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid #444;margin-top:10px;padding-top:14px;font-family:'Barlow Condensed',sans-serif;font-weight:900}
 .co-total span:first-child{font-size:1.3rem}
 .co-total span:last-child{font-size:2.3rem;color:var(--y);line-height:1}
-.co-vat{font-size:.8rem;color:#aaa;margin:6px 0 16px;text-align:right}
+.co-vat{font-size:.8rem;color:#aaa;margin:6px 0 10px;text-align:right}
+.co-72{font-size:.85rem;color:#e8e8e8;background:#2C2C2C;border-left:3px solid var(--y);padding:9px 11px;margin:0 0 14px;line-height:1.45}
 .co-pay{width:100%;padding:16px;border:0;border-radius:4px;background:var(--o);color:var(--wh);font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.3rem;cursor:pointer}
 .co-pay:hover:not(:disabled){background:#d94d0f}
 .co-pay:disabled{background:#555;color:#bbb;cursor:not-allowed}
@@ -589,7 +590,7 @@ button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid var(-
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
-<div class="ann">🚚 FREE UK Mainland Delivery on Paving<span class="ann-x"> &nbsp;|&nbsp; 🧱 Brick Samples — Any 3 for £7.99 &nbsp;|&nbsp; 🏗️ Trade Accounts Available</span></div>
+<div class="ann">🚚 All Orders Delivered Within 72 Hours Once Payment Has Cleared · FREE on Paving<span class="ann-x"> &nbsp;|&nbsp; 🧱 Brick Samples — Any 3 for £7.99 &nbsp;|&nbsp; 🏗️ Trade Accounts Available</span></div>
 <header class="hdr"><div class="hdr-i">
   <a href="index.html" class="logo">Pro Build <b>Supplies</b></a>
   <div class="srch"><div><input type="text" placeholder="Search bricks, paving, insulation..."><button>🔍</button></div></div>
@@ -663,15 +664,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <span class="co-optbody">
               <span class="co-optname">Economy</span>
               <span class="co-optprice" id="co-price-economy"></span>
-              <span class="co-optdesc">Up to 72 hours once payment clears.</span>
-            </span>
-          </label>
-          <label class="co-opt" id="co-opt-nextDay">
-            <input type="radio" name="service" value="nextDay">
-            <span class="co-optbody">
-              <span class="co-optname">Next Day</span>
-              <span class="co-optprice" id="co-price-nextDay"></span>
-              <span class="co-optdesc" id="co-desc-nextDay">Delivered the working day after dispatch. Order before 1pm Mon–Fri for same-day dispatch.</span>
+              <span class="co-optdesc">Delivered within <strong>72 hours once payment has cleared</strong>, Monday to Friday. We don&rsquo;t offer next-day delivery.</span>
             </span>
           </label>
         </fieldset>
@@ -703,6 +696,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </dl>
         <div class="co-total"><span>Total</span><span id="co-total" aria-live="polite">—</span></div>
         <p class="co-vat">Prices include VAT.</p>
+        <p class="co-72">🚚 Delivered within <strong>72 hours once payment has cleared</strong>, Monday to Friday. No next-day delivery.</p>
         <button type="button" class="co-pay" id="co-pay" disabled>Continue to payment</button>
         <p class="co-why" id="co-why"></p>
         <p class="co-err" id="co-err" role="alert" hidden></p>
@@ -852,24 +846,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     if (d.status === 'invalid') { msg.classList.add('warn'); msg.innerHTML = esc(d.message); }
     if (d.status === 'quote')   { msg.classList.add('warn'); msg.innerHTML = esc(d.message.replace(/Please call.*$|please call.*$/, '')) + ' ' + CALL; }
     if (d.status === 'ok' && d.pallets === 0) {
-      msg.classList.add('ok'); msg.innerHTML = '<strong>Free delivery to ' + esc(d.postcode) + '.</strong> Everything in your basket delivers free.';
+      msg.classList.add('ok'); msg.innerHTML = '<strong>Free delivery to ' + esc(d.postcode) + '.</strong> Everything in your basket delivers free, within 72 hours once payment has cleared (Monday to Friday).';
     }
     if (showOpts) {
       var o = d.options;
       $('co-pallets').textContent = d.pallets + (d.pallets === 1 ? ' pallet of bricks' : ' pallets of bricks') + ' to ' + d.postcode;
       $('co-price-economy').textContent = gbp(o.economy.total);
-      var nd = $('co-opt-nextDay'), ndIn = nd.querySelector('input');
-      if (o.nextDay) {
-        nd.classList.remove('off'); ndIn.disabled = false;
-        $('co-price-nextDay').textContent = gbp(o.nextDay.total);
-        $('co-desc-nextDay').textContent = 'Delivered the working day after dispatch. Order before 1pm Mon–Fri for same-day dispatch.';
-      } else {
-        nd.classList.add('off'); ndIn.disabled = true;
-        $('co-price-nextDay').textContent = 'Not available';
-        $('co-desc-nextDay').textContent = 'Next Day is not offered to ' + d.outward + '. Economy is the only service here.';
-      }
-      document.querySelector('input[name="service"][value="' + d.service + '"]').checked = true;
-      if (d.service !== state.service && !o.nextDay) { state.service = 'economy'; savePrefs(); }
+      document.querySelector('input[name="service"][value="economy"]').checked = true;
+      if (state.service !== 'economy') { state.service = 'economy'; savePrefs(); }
       $('co-taillift').checked = !!d.tailLift;
       renderBreakdown(d);
       $('co-tailprice').textContent = '+' + gbp(d.tailLiftPerPallet) + (d.pallets > 1 ? ' per pallet (' + gbp(d.tailLiftPerPallet * d.pallets) + ')' : '');
@@ -915,8 +899,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     if (b.volumeDiscount) rows.push(['Multi-pallet saving (' + b.volumeDiscountPct + '%)', '−' + gbp(P(b.volumeDiscount)), 'sv']);
     if (b.tailLift) rows.push(['Tail-lift' + (n > 1 ? ' (' + n + ' × £4.00)' : ''), gbp(P(b.tailLift))]);
     rows.push(['VAT (20%)', gbp(P(b.vat))]);
-    rows.push([(d.service === 'nextDay' ? 'Next Day' : 'Economy') + ' delivery', gbp(P(b.total)), 'tot']);
-    $('co-brkh').textContent = 'How your ' + (d.service === 'nextDay' ? 'Next Day' : 'Economy') + ' delivery price is worked out';
+    rows.push(['Economy delivery', gbp(P(b.total)), 'tot']);
+    $('co-brkh').textContent = 'How your delivery price is worked out';
     $('co-brkl').innerHTML = rows.map(function (r) {
       return '<div' + (r[2] ? ' class="' + r[2] + '"' : '') + '><dt>' + esc(r[0]) + '</dt><dd>' + r[1] + '</dd></div>';
     }).join('');

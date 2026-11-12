@@ -184,7 +184,8 @@ async function priceOrder(input) {
                           .reduce(function (s, l) { return s + l.qty; }, 0);
   const needsPostcode = buyable.some(function (l) { return l.kind === 'brick' || l.kind === 'included'; });
 
-  const service  = /^next/i.test(String(input && input.service)) ? 'nextDay' : 'economy';
+  // Economy only: Next Day is not offered (most orders can't be fulfilled next day).
+  const service  = 'economy';
   const tailLift = !!(input && input.tailLift);
   const delivery = { status: 'none', pallets, service, tailLift, total: 0, options: null, message: '', fuelPct: f.pct };
 
@@ -211,11 +212,11 @@ async function priceOrder(input) {
           const nd = quote({ postcode: input.postcode, pallets, service: 'nextDay', tailLift, fuelPct: f.pct });
           delivery.options = {
             economy: { total: Math.round(eco.breakdown.total * 100), breakdown: eco.breakdown },
-            nextDay: nd.ok ? { total: Math.round(nd.breakdown.total * 100), breakdown: nd.breakdown } : null,
+            nextDay: null,
           };
           delivery.zone = eco.zone;
           delivery.tailLiftPerPallet = 480; // £4.00 + VAT
-          const chosen = (service === 'nextDay' && delivery.options.nextDay) ? 'nextDay' : 'economy';
+          const chosen = 'economy';
           delivery.service = chosen;
           delivery.total = delivery.options[chosen].total;
           delivery.breakdown = delivery.options[chosen].breakdown;

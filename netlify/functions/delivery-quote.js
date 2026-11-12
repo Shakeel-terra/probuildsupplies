@@ -13,7 +13,7 @@ exports.handler = async function (event) {
     return respond(405, { ok: false, message: 'Method Not Allowed' });
   }
   const f = await getFuel();
-  const q = quote(Object.assign({}, input, { fuelPct: f.pct }));
+  const q = quote(Object.assign({}, input, { fuelPct: f.pct, service: 'economy' }));  // Economy only
   if (q.breakdown) q.breakdown = publicBreakdown(q.breakdown);
   return respond(200, q);
 };
