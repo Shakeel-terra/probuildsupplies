@@ -218,6 +218,19 @@ footer{background:#111;padding:40px 20px 18px;color:#888;width:100%}
 </style>
 
 <script src="../pbs-track.js" defer></script>
+<style id="pbs-mega">
+@media(min-width:769px){
+html:not(.pbs-nav-compact) .ni .dd.dd-mega{left:-120px;width:min(1040px,94vw);padding:18px 22px 0}
+html:not(.pbs-nav-compact) .dd-mega .mm-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:6px 22px}
+html:not(.pbs-nav-compact) .nav .dd-mega .mm-col a{padding:7px 0!important;border:none;font-size:.9rem!important;white-space:normal}
+html:not(.pbs-nav-compact) .nav .dd-mega .mm-col a:hover{padding-left:4px!important}
+html:not(.pbs-nav-compact) .nav .dd-mega a.mm-all{margin:14px -22px 0;padding:12px 22px!important;border-top:1px solid #333;border-bottom:none;font-weight:600;color:var(--wh,#fff)}
+}
+.dd-mega .mm-h{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.95rem;text-transform:uppercase;letter-spacing:.6px;color:var(--o,#F55C1B);padding:0 0 8px;border-bottom:1px solid #333;margin-bottom:4px}
+@media(max-width:768px){.dd-mega .mm-grid{display:block}.dd-mega .mm-h{padding:12px 28px 6px;font-size:.85rem;border-bottom:none;margin:0}}
+html.pbs-nav-compact .dd-mega .mm-grid{display:block}
+html.pbs-nav-compact .dd-mega .mm-h{padding:12px 28px 6px;font-size:.85rem;border-bottom:none;margin:0}
+</style>
 <style>
 /* Product grid - restores the layout product.html's own stylesheet lacks */
 .pgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:22px}
@@ -236,7 +249,11 @@ footer{background:#111;padding:40px 20px 18px;color:#888;width:100%}
   "category": "Handmade Bricks",
   "brand": {
     "@type": "Brand",
-    "name": "Pro Build Supplies"
+    "name": "Forterra"
+  },
+  "manufacturer": {
+    "@type": "Organization",
+    "name": "Forterra"
   },
   "offers": {
     "@type": "Offer",
@@ -246,33 +263,6 @@ footer{background:#111;padding:40px 20px 18px;color:#888;width:100%}
     "itemCondition": "https://schema.org/NewCondition",
     "url": "https://probuildsupplies.uk/products/chatsworth-grey-rustic.html",
     "priceValidUntil": "2027-12-31",
-    "shippingDetails": {
-      "@type": "OfferShippingDetails",
-      "shippingRate": {
-        "@type": "MonetaryAmount",
-        "value": "0",
-        "currency": "GBP"
-      },
-      "shippingDestination": {
-        "@type": "DefinedRegion",
-        "addressCountry": "GB"
-      },
-      "deliveryTime": {
-        "@type": "ShippingDeliveryTime",
-        "handlingTime": {
-          "@type": "QuantitativeValue",
-          "minValue": 0,
-          "maxValue": 1,
-          "unitCode": "DAY"
-        },
-        "transitTime": {
-          "@type": "QuantitativeValue",
-          "minValue": 2,
-          "maxValue": 5,
-          "unitCode": "DAY"
-        }
-      }
-    },
     "hasMerchantReturnPolicy": {
       "@type": "MerchantReturnPolicy",
       "applicableCountry": "GB",
@@ -334,11 +324,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <nav class="nav" id="nav"><div class="nav-i">
 <a href="../index.html">Home</a>
 <a href="../shop.html">🛍️ Shop All</a>
-<div class="ni"><a href="../bricks.html">🧱 Bricks</a><div class="dd">
-<a href="../handmade-bricks.html">Handmade Bricks</a>
-<a href="../reclaimed-bricks.html">Reclaimed Bricks</a>
-<a href="/bricks/all-bricks.html">Browse All Bricks →</a>
-</div></div>
+<div class="ni"><a href="../bricks.html">🧱 Bricks</a><div class="dd dd-mega"><div class="mm-grid"><div class="mm-col"><div class="mm-h">Shop Bricks</div><a href="/handmade-bricks.html">Handmade Bricks</a><a href="/reclaimed-bricks.html">Reclaimed Bricks</a><a href="/brick-matching.html">Free Brick Matching</a><a href="/samples.html">Brick Samples</a></div><div class="mm-col"><div class="mm-h">By Size</div><a href="/bricks/65mm-bricks.html">65mm Bricks</a><a href="/bricks/68mm-bricks.html">68mm Bricks</a><a href="/bricks/73mm-bricks.html">73mm Bricks</a><a href="/bricks/imperial-bricks.html">Imperial Bricks</a></div><div class="mm-col"><div class="mm-h">By Finish</div><a href="/bricks/tumbled-bricks.html">Tumbled Bricks</a><a href="/bricks/weathered-bricks.html">Weathered Bricks</a><a href="/bricks/smooth-bricks.html">Smooth Bricks</a><a href="/bricks/rustic-bricks.html">Rustic Bricks</a><a href="/bricks/pressed-bricks.html">Pressed Bricks</a></div><div class="mm-col"><div class="mm-h">By Project</div><a href="/bricks/bricks-for-extensions.html">Extensions</a><a href="/bricks/victorian-house-bricks.html">Victorian Houses</a><a href="/bricks/georgian-style-bricks.html">Georgian Style</a><a href="/bricks/conservation-bricks.html">Conservation</a><a href="/bricks/garden-wall-bricks.html">Garden Walls</a></div><div class="mm-col"><div class="mm-h">By Manufacturer</div><a href="/bricks/ibstock-bricks.html">Ibstock</a><a href="/bricks/wienerberger-bricks.html">Wienerberger</a><a href="/bricks/forterra-bricks.html">Forterra</a><a href="/bricks/michelmersh-bricks.html">Michelmersh</a><a href="/bricks/tbs-bricks.html">Traditional Brick & Stone</a><a href="/bricks/vandersanden-bricks.html">Vandersanden</a><a href="/bricks/terra-brick-bricks.html">Terra Brick</a></div></div><a class="mm-all" href="/bricks/all-bricks.html">Browse All Bricks →</a></div></div>
 <div class="ni"><a href="../paving.html">🪨 Paving</a><div class="dd">
 <a href="../porcelain-paving.html">Porcelain Paving</a>
 <a href="../indian-sandstone.html">Indian Sandstone</a>
@@ -358,7 +344,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div>
 <span class="pp-tag">Handmade Bricks</span>
 <h1 class="pp-title">Forterra Chatsworth Grey Rustic</h1>
-<div class="pp-pricebox"><div class="pp-price-row"><div class="pp-price" id="pp-price">£613.91</div><span class="pp-price-pm2" id="pp-price-pm2">£1.24 per brick (ex delivery)</span></div><div class="pp-pnote" id="pp-pnote">📦 Pack of 495 | 65mm | Delivery priced by postcode, within 72 hrs once payment clears</div></div>
+<div class="pp-specs-inline"><table class="stbl"><tbody><tr><td><strong>Manufacturer</strong></td><td>Forterra</td></tr></tbody></table></div><div class="pp-pricebox"><div class="pp-price-row"><div class="pp-price" id="pp-price">£613.91</div><span class="pp-price-pm2" id="pp-price-pm2">£1.24 per brick (ex delivery)</span></div><div class="pp-pnote" id="pp-pnote">📦 Pack of 495 | 65mm | Delivery priced by postcode, within 72 hrs once payment clears</div></div>
 <p class="pp-short">Soft grey with a roughened, textured face, which is an unusual pairing and a useful one. The texture stops grey brickwork reading as the flat modern plane it often becomes, giving an elevation depth while keeping the contemporary colour. Useful where a contemporary colour has to sit alongside older buildings without looking newly dropped in.</p>
 <div class="sz-wrap" id="pp-szwrap"><label for="szSel">Choose Size</label><select id="szSel"><option value="0" selected data-price="£613.91" data-pm2="" data-cov="" data-thick="" data-pack="Pack of 495" data-pb="£1.24 per brick" data-size="65mm">65mm — Pack of 495 — £613.91 (£1.24/brick)</option></select></div><div class="pp-acts">
 <div class="pp-qty"><button type="button" class="pp-qty-btn" id="pp-qty-minus" aria-label="Decrease quantity">−</button><input type="number" id="pp-qty-input" value="1" min="1" step="1" inputmode="numeric"><button type="button" class="pp-qty-btn" id="pp-qty-plus" aria-label="Increase quantity">+</button></div>
@@ -369,7 +355,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div></div>
 <div class="pp-tabs"><button class="ptb on" data-t="d">Description</button><button class="ptb" data-t="s">Specifications</button><button class="ptb" data-t="del">Delivery</button></div>
 <div class="ptab on" id="pt-d"><p>Soft grey with a roughened, textured face, which is an unusual pairing and a useful one. The texture stops grey brickwork reading as the flat modern plane it often becomes, giving an elevation depth while keeping the contemporary colour. Useful where a contemporary colour has to sit alongside older buildings without looking newly dropped in.</p></div>
-<div class="ptab" id="pt-s"><table class="stbl"><thead><tr><th>Specification</th><th>Details</th></tr></thead><tbody><tr><td><strong>Frost Resistance</strong></td><td>F2 — Fully frost resistant</td></tr></tbody></table><h3 style="margin-top:22px">Pack Sizes &amp; Prices</h3><table class="stbl"><thead><tr><th>Pack</th><th>Size</th><th style="text-align:right">Coverage</th><th style="text-align:right">Price</th><th style="text-align:right">Per m²</th></tr></thead><tbody><tr><td><strong>Pack of 495</strong></td><td>65mm</td><td style="text-align:right">—</td><td style="text-align:right;font-weight:700;color:var(--o)">£613.91</td><td style="text-align:right">—</td></tr></tbody></table></div>
+<div class="ptab" id="pt-s"><table class="stbl"><thead><tr><th>Specification</th><th>Details</th></tr></thead><tbody><tr><td><strong>Manufacturer</strong></td><td>Forterra</td></tr><tr><td><strong>Frost Resistance</strong></td><td>F2 — Fully frost resistant</td></tr></tbody></table><h3 style="margin-top:22px">Pack Sizes &amp; Prices</h3><table class="stbl"><thead><tr><th>Pack</th><th>Size</th><th style="text-align:right">Coverage</th><th style="text-align:right">Price</th><th style="text-align:right">Per m²</th></tr></thead><tbody><tr><td><strong>Pack of 495</strong></td><td>65mm</td><td style="text-align:right">—</td><td style="text-align:right;font-weight:700;color:var(--o)">£613.91</td><td style="text-align:right">—</td></tr></tbody></table></div>
 <div class="ptab" id="pt-del"><h3>Pallet Delivery Across the UK</h3><p>Bricks are delivered by pallet to UK mainland addresses. The delivery charge depends on your postcode and the number of pallets &mdash; you&rsquo;ll see the exact price at checkout when you enter your postcode, with tail-lift if you need it. Delivered within 72 hours once payment has cleared.</p><h3>Delivery Times</h3><ul><li>All deliveries sent on an <strong>economy service with a pallet line</strong> &mdash; delivered within <strong>72 hours once payment has cleared</strong></li><li>Deliveries take place <strong>Monday to Friday</strong></li><li><strong>We don&rsquo;t offer next-day delivery.</strong> Need it sooner? Call 01772 287622 or WhatsApp 07549 809252 and we&rsquo;ll check what&rsquo;s possible</li></ul><h3>How It Arrives</h3><ul><li>Delivered on <strong>pallets via a national pallet network</strong></li><li><strong>Kerbside delivery only</strong> &mdash; please ensure access for an 18-tonne vehicle</li><li><strong>Someone must be available to accept the delivery.</strong> If nobody is present and we have to re-attempt, re-delivery charges will apply</li></ul><p>See our <a href="../delivery.html">full delivery page</a> for details.</p></div>
 <h2 class="pp-rel-h">You Might Also <em>Like</em></h2><div class="pgrid"><a href="city-blend-handmade-facing-bricks.html" class="pcard"><div class="pimg" style="background:linear-gradient(135deg,#C0392B20,#C0392B50)"><img src="https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1785856182311-m10sml.jpg" alt="Terra Brick City Blend" loading="lazy" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0"></div><div class="pinfo"><div class="pcat">Handmade Bricks</div><div class="pname">Terra Brick City Blend</div><div class="pprice">£473.09</div><div class="pprice-unit" style="font-size:.8rem;color:var(--mid,#666);margin-top:2px">£0.92 per brick (ex delivery)</div></div></a><a href="heritage-blend-handmade.html" class="pcard"><div class="pimg" style="background:linear-gradient(135deg,#C0392B20,#C0392B50)"><img src="https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1785856182714-pamsiu.jpg" alt="Terra Brick Heritage Blend" loading="lazy" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0"></div><div class="pinfo"><div class="pcat">Handmade Bricks</div><div class="pname">Terra Brick Heritage Blend</div><div class="pprice">£460.80</div><div class="pprice-unit" style="font-size:.8rem;color:var(--mid,#666);margin-top:2px">£0.90 per brick (ex delivery)</div></div></a><a href="village-multi-handmade.html" class="pcard"><div class="pimg" style="background:linear-gradient(135deg,#C0392B20,#C0392B50)"><img src="https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1785856183184-bxartz.jpg" alt="Terra Brick Village Multi Handmade" loading="lazy" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0"></div><div class="pinfo"><div class="pcat">Handmade Bricks</div><div class="pname">Terra Brick Village Multi Handmade</div><div class="pprice">STOCK COMING SOON</div></div></a><a href="barnstock-orange-handmade.html" class="pcard"><div class="pimg" style="background:linear-gradient(135deg,#C0392B20,#C0392B50)"><img src="https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1785856183618-r729kk.jpg" alt="Terra Brick Barnstock Orange" loading="lazy" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0"></div><div class="pinfo"><div class="pcat">Handmade Bricks</div><div class="pname">Terra Brick Barnstock Orange</div><div class="pprice">£473.09</div><div class="pprice-unit" style="font-size:.8rem;color:var(--mid,#666);margin-top:2px">£0.92 per brick (ex delivery)</div></div></a></div>
 </div>
