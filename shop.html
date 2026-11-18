@@ -582,7 +582,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   }
   window.addEventListener('hashchange', applyHash);
   setTimeout(applyHash, 0);
-  var cards=document.querySelectorAll('#sfgrid .pcard');
   var cnt=document.getElementById('sfcnt');
   btns.forEach(function(b){
     b.addEventListener('click',function(){
@@ -590,6 +589,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       btns.forEach(function(x){x.classList.remove('on')});
       b.classList.add('on');
       var v=0;
+      // Look the cards up on every click: they are added after the page loads.
+      var cards=document.querySelectorAll('#sfgrid .pcard');
+      if(!cards.length) return; // products still loading; pbs-products.js applies the filter once they arrive
       cards.forEach(function(c){
         var cat=c.querySelector('.pcat');
         var cm=cat?cat.textContent:'';

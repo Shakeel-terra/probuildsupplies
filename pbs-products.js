@@ -556,6 +556,17 @@ window.pbsProductUrl = function (p) { return productUrl(p, '/'); };
     return p.price || 'POA';
   }
 
+  function perUnit(p) {
+    if (!p || !/Brick/i.test(p.category || '') || p.mode === 'enquiry') return '';
+    var vs = p.sizeVariants || [], price = getPrice(p);
+    var v = vs.filter(function(x){ return x.price === price; })[0];
+    if (!v) return '';
+    var n = parseFloat(String(v.price || '').replace(/[^0-9.]/g, '')), m = String(v.pack || '').match(/\d+/);
+    if (isNaN(n) || !m) return '';
+    var unit = /slip/i.test((p.name || '') + ' ' + (v.size || '')) ? 'slip' : 'brick';
+    return '<div class="pprice-unit" style="font-size:.8rem;color:var(--mid,#666);margin-top:2px">\u00a3' + (n / parseInt(m[0], 10)).toFixed(2) + ' per ' + unit + ' (ex delivery)</div>';
+  }
+
   // ── PRODUCT CARD HTML ─────────────────────────────────────
   function makeCard(p, prefix) {
     prefix = prefix || '';
@@ -571,7 +582,7 @@ window.pbsProductUrl = function (p) { return productUrl(p, '/'); };
       + '<div class="pinfo">'
       + '<div class="pcat">'+esc(p.category)+'</div>'
       + '<div class="pname">'+esc(p.name)+'</div>'
-      + '<div class="pprice">'+esc(price)+'</div>'
+      + '<div class="pprice">'+esc(price)+'</div>' + perUnit(p)
       + '</div></a>';
   }
 
@@ -595,13 +606,19 @@ window.pbsProductUrl = function (p) { return productUrl(p, '/'); };
         var shown = 0;
         grid.querySelectorAll('.pcard').forEach(function(card, i) {
           var cat = vis[i] ? vis[i].category : '';
-          var show = f === 'all' || cat === f;
+          var show = f === 'all' || (f === 'bricks' ? /brick/i.test(cat) : cat === f);
           card.style.display = show ? '' : 'none';
+          card.classList.remove('hid');
           if (show) shown++;
         });
         if (cnt) cnt.textContent = (f === 'all' ? 'Showing all ' : 'Showing ') + shown + ' products';
+        var old = document.querySelector('.no-res'); if (old) old.remove();
+        if (shown === 0) { var m = document.createElement('div'); m.className = 'no-res'; m.textContent = 'No products in this category'; grid.appendChild(m); }
       });
     });
+    // If a filter was chosen before the products loaded (e.g. shop.html#bricks), apply it now.
+    var on = document.querySelector('.sfb.on');
+    if (on && on.dataset.f !== 'all') on.click();
   }
 
   // ── CATEGORY LISTING PAGES ────────────────────────────────
@@ -753,7 +770,7 @@ window.pbsProductUrl = function (p) { return productUrl(p, '/'); };
           return '<a href="'+r.slug+'.html" class="pcard">'
             +'<div class="pimg" style="'+catBg(r.category)+'">'+img2+'</div>'
             +'<div class="pinfo"><div class="pcat">'+esc(r.category)+'</div><div class="pname">'+esc(r.name)+'</div>'
-            +'<div class="pprice">'+esc(getPrice(r))+'</div><span class="pbtn">View Product</span></div></a>';
+            +'<div class="pprice">'+esc(getPrice(r))+'</div>'+perUnit(r)+'<span class="pbtn">View Product</span></div></a>';
         }).join('');
       }
     }
