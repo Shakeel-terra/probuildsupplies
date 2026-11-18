@@ -53,10 +53,10 @@
     "sampleAvailable": true,
     "mode": "shop",
     "badge": "New",
-    "delivery": "included",
+    "delivery": "extra",
     "sizeVariants": [
       {
-        "pack": "pack of 680",
+        "pack": "pack of 512",
         "size": "65mm",
         "price": "£543.57",
         "coverage": "",
@@ -77,7 +77,7 @@
       "https://kiifrcsqsxlumteoyenf.supabase.co/storage/v1/object/public/product-images/products/1785856182714-pamsiu.jpg"
     ],
     "createdAt": "2026-06-30T10:58:05.711464+00:00",
-    "updatedAt": "2026-11-18T13:02:31.621+00:00"
+    "updatedAt": "2026-11-18T13:45:33.198+00:00"
   },
   {
     "id": "p1782817174584",
