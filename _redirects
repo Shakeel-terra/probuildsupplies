@@ -265,3 +265,33 @@
 /products/selected-darks  /handmade-bricks.html  301!
 /products/selected-lights.html  /handmade-bricks.html  301!
 /products/selected-lights  /handmade-bricks.html  301!
+
+# --- Added 19 Nov 2026: old broken addresses reported by Google Search Console (404) ---
+# Pages that were once linked with the wrong folder in front (e.g. /bricks/products/...)
+/bricks/products/*            /products/:splat              301!
+/reclaimed-bricks/products/*  /products/:splat              301!
+/reclaimed-bricks/*           /:splat                       301!
+/samples/*                    /:splat                       301!
+/bricks/about.html            /about.html                   301!
+/bricks/contact.html          /contact.html                 301!
+/bricks/delivery-areas.html   /delivery-areas.html          301!
+/bricks/handmade-bricks.html  /handmade-bricks.html         301!
+/bricks/paving.html           /paving.html                  301!
+/bricks/returns.html          /returns.html                 301!
+/bricks/samples.html          /samples.html                 301!
+/bricks/trade-accounts.html   /trade-accounts.html          301!
+/bricks/index.html            /bricks.html                  301!
+/bricks/blog/                 /blog/                        301!
+/products/blog/               /blog/                        301!
+/blog/about.html              /about.html                   301!
+/blog/terms.html              /terms.html                   301!
+# Discontinued products (same targets as the existing rules for their old root addresses)
+/products/cheshire-red-handmade.html       /handmade-bricks.html     301!
+/products/fulford-blend-handmade.html      /handmade-bricks.html     301!
+/products/pulford-blend-handmade.html      /handmade-bricks.html     301!
+/products/plain-yellow-facing-bricks.html  /handmade-bricks.html     301!
+/products/red-handmade-facing-bricks.html  /handmade-bricks.html     301!
+/products/golden-brown.html                /indian-sandstone.html    301!
+/products/modak.html                       /indian-sandstone.html    301!
+/products/raj-blend.html                   /indian-sandstone.html    301!
+/mdf                                       /shop.html                301!
